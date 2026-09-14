@@ -26,6 +26,7 @@ var state = {
   revisoes: [],
   treinoOuvido: null,
   habilidades: {},
+  anotacoes: {},
   legado: { assistidos: [], praticados: [], notas: {} }
 };
 
@@ -199,6 +200,16 @@ function validarEsquemaBackup(obj) {
       }
 
       // Validação de Legado (se fornecido)
+      let anotacoesValidadas = {};
+      if (obj.anotacoes) {
+        if (typeof obj.anotacoes !== 'object' || Array.isArray(obj.anotacoes) || obj.anotacoes === null) {
+          throw new Error('Campo "anotacoes" deve ser um objeto.');
+        }
+        anotacoesValidadas = Object.fromEntries(
+          Object.entries(obj.anotacoes).filter(([k, v]) => typeof k === 'string' && typeof v === 'string')
+        );
+      }
+
       let legadoValidado = { assistidos: [], praticados: [], notas: {} };
       if (obj.legado) {
         if (typeof obj.legado !== 'object' || Array.isArray(obj.legado) || obj.legado === null) {
@@ -267,6 +278,7 @@ function validarEsquemaBackup(obj) {
           revisoes: obj.revisoes,
           treinoOuvido: validarSerieOuvido(obj.treinoOuvido),
           habilidades: (obj.habilidades && typeof obj.habilidades === 'object') ? obj.habilidades : {},
+          anotacoes: anotacoesValidadas,
           legado: legadoValidado
         }
       };
@@ -427,6 +439,7 @@ async function processarArquivoBackup(event) {
             revisoes: Array.from(revsMap.values()),
             treinoOuvido: state.treinoOuvido || d.treinoOuvido,
             habilidades: { ...d.habilidades, ...state.habilidades }, // local ganha habilidades
+            anotacoes: { ...d.anotacoes, ...state.anotacoes }, // local ganha anotacoes
             legado: {
               assistidos: [...new Set([...state.legado.assistidos, ...d.legado.assistidos])],
               praticados: [...new Set([...state.legado.praticados, ...d.legado.praticados])],
@@ -467,7 +480,7 @@ function recuperarRegistrosValidos(original) {
     nivelExercicioAtual: NIVEIS_VALIDOS.has(original.nivelExercicioAtual) ? original.nivelExercicioAtual : seguro.nivelExercicioAtual };
   base.sessao = novaSessao(base.atividadeAtualId, base.nivelExercicioAtual);
   tentar(base);
-  for (const campo of ['perfil', 'sessao', 'legado', 'treinoOuvido']) if (original[campo]) tentar({ ...seguro, [campo]: original[campo] });
+  for (const campo of ['perfil', 'sessao', 'anotacoes', 'legado', 'treinoOuvido']) if (original[campo]) tentar({ ...seguro, [campo]: original[campo] });
   for (const campo of ['tentativas', 'dificuldades', 'revisoes']) {
     for (const registro of Array.isArray(original[campo]) ? original[campo] : []) tentar({ ...seguro, [campo]: [...seguro[campo], registro] });
   }

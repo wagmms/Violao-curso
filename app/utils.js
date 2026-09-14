@@ -86,3 +86,22 @@ function atividadeTemSessao(ativ) {
 function novoId(prefixo) {
   return prefixo + '-' + (window.crypto?.randomUUID?.() || (Date.now() + '-' + Math.random().toString(36).slice(2)));
 }
+
+function sanitizarAnotacaoPratica(texto) {
+  return escapeHTML(texto);
+}
+
+function salvarAnotacaoPratica(atividadeId, texto) {
+  if (!state.anotacoes || typeof state.anotacoes !== 'object') state.anotacoes = {};
+  const notaSanitizada = sanitizarAnotacaoPratica(texto);
+  if (notaSanitizada.trim().length === 0) {
+    delete state.anotacoes[atividadeId];
+  } else {
+    state.anotacoes[atividadeId] = notaSanitizada;
+  }
+  if (typeof salvarEstado === 'function') salvarEstado();
+}
+
+function atividadeTemAnotacao(atividadeId) {
+  return state.anotacoes && typeof state.anotacoes[atividadeId] === 'string' && state.anotacoes[atividadeId].trim().length > 0;
+}
