@@ -551,13 +551,13 @@ function renderizarFerramentaInterativa(ativ) {
         <div class="metronomo-box">
           <div class="metronomo-header">
             <h5>Metrônomo de Estudo (Web Audio API)</h5>
-            <div class="metronomo-bpm-readout"><span id="metro-bpm-val">${bpmAtual}</span> BPM</div>
+            <div class="metronomo-bpm-readout"><span id="metro-bpm-val">${escapeHTML(bpmAtual)}</span> BPM</div>
           </div>
 
           <div class="metronomo-controls">
             <div class="bpm-slider-wrap">
               <span style="font-size: 0.8rem; font-family: var(--font-mono);">40</span>
-              <input type="range" id="metro-slider" class="bpm-slider" min="40" max="180" value="${bpmAtual}">
+              <input type="range" id="metro-slider" class="bpm-slider" min="40" max="180" value="${escapeHTML(bpmAtual)}">
               <span style="font-size: 0.8rem; font-family: var(--font-mono);">180</span>
             </div>
 
