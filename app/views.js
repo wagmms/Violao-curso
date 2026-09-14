@@ -1976,10 +1976,12 @@ function filtrarBiblioteca() {
     for (const mod of catalogoDados.catalogoOriginal) {
       if (modId !== 'todos' && mod.id !== modId) continue;
 
+      const modNomeLower = query ? mod.nome.toLowerCase() : '';
+
       const aulasFiltradas = mod.aulas.filter(aula => {
         if (query) {
           const matchQuery = aula.grupo_aula.toLowerCase().includes(query) ||
-            mod.nome.toLowerCase().includes(query) ||
+            modNomeLower.includes(query) ||
             aula.materiais.some(m => m.titulo.toLowerCase().includes(query));
           if (!matchQuery) return false;
         }
