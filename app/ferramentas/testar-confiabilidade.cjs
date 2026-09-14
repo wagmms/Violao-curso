@@ -6,7 +6,7 @@ const {JSDOM, VirtualConsole} = require('jsdom');
 const dir = path.resolve(__dirname, '..');
 const scripts = [...fs.readFileSync(path.join(dir,'index.html'),'utf8').matchAll(/<script src="([^"]+)"/g)].map(m=>m[1]);
 const results=[];
-async function ambiente(){
+async function ambiente(opts = {mockAlerta: true}){
  const dom = new JSDOM(fs.readFileSync(path.join(dir,'index.html'),'utf8').replace(/<script[\s\S]*?<\/script>/g,''),{url:'https://curso.test/',runScripts:'outside-only',virtualConsole:new VirtualConsole()});
  const w=dom.window;
  w.scrollTo=()=>{};
@@ -16,11 +16,13 @@ async function ambiente(){
  w.HTMLAnchorElement.prototype.click=function(){};
  for(const script of scripts)new vm.Script(fs.readFileSync(path.join(dir,script),'utf8'),{filename:script}).runInContext(dom.getInternalVMContext());
  await new Promise(r=>setImmediate(r));
- w.mostrarAlerta=async(msg)=>{w.ultimoAlerta=msg;return true};
+ if (opts.mockAlerta) {
+   w.mostrarAlerta=async(msg)=>{w.ultimoAlerta=msg;return true};
+ }
  w.mostrarConfirmacao=async()=>true;
  return {dom,w,run:code=>vm.runInContext(code,dom.getInternalVMContext())};
 }
-async function teste(nome,fn){let a;try{a=await ambiente();await fn(a);results.push({nome,ok:true});}catch(e){results.push({nome,ok:false,erro:e.stack});}finally{a?.dom.window.close();}}
+async function teste(nome,fn,opts){let a;try{a=await ambiente(opts);await fn(a);results.push({nome,ok:true});}catch(e){results.push({nome,ok:false,erro:e.stack});}finally{a?.dom.window.close();}}
 function avaliar(a,nivel,status,bpm='60'){
  a.run(`trocarAtividade('ativ-1','${nivel}');abrirModalResultado(atividadesDados[0])`);
  a.w.document.getElementById('select-res-status').value=status;
@@ -74,6 +76,44 @@ async function main(){
   a.w.document.getElementById('btn-salvar-resultado').click();assert.equal(a.run('state.tentativas.length'),0);
  });
  await teste('Fontes canônicas nunca produzem link vazio',a=>{a.run(`navegarPara('aprender')`);for(const link of a.w.document.querySelectorAll('#aprender-conteudo a'))assert.ok(link.href.startsWith('https://drive.google.com/'));});
+
+ await teste('mostrarAlerta resolve com alert nativo se modal não existir', async a => {
+  a.w.document.getElementById('modal-alerta').remove();
+  let alertaDisparado = false;
+  a.w.alert = msg => { alertaDisparado = msg === 'Mensagem Teste'; };
+  const resultado = await a.run('mostrarAlerta("Mensagem Teste")');
+  assert.equal(alertaDisparado, true);
+  assert.equal(resultado, true);
+ }, { mockAlerta: false });
+
+ await teste('mostrarAlerta abre modal, aplica escapeHTML e resolve true ao clicar OK', async a => {
+  const promise = a.run('mostrarAlerta("Linha1\\nLinha2 <script>", "Atenção")');
+
+  const modal = a.w.document.getElementById('modal-alerta');
+  assert.equal(modal.open, true);
+  assert.equal(a.w.document.getElementById('alerta-titulo').textContent, 'Atenção');
+  assert.equal(a.w.document.getElementById('alerta-corpo').innerHTML, 'Linha1<br>Linha2 &lt;script&gt;');
+  assert.equal(a.w.document.getElementById('btn-alerta-cancelar').style.display, 'none');
+
+  a.w.document.getElementById('btn-alerta-ok').onclick();
+  const resultado = await promise;
+
+  assert.equal(modal.open, false);
+  assert.equal(resultado, true);
+ }, { mockAlerta: false });
+
+ await teste('mostrarAlerta resolve false ao clicar em fechar', async a => {
+  const promise = a.run('mostrarAlerta("Msg")');
+  const modal = a.w.document.getElementById('modal-alerta');
+  assert.equal(modal.open, true);
+
+  a.w.document.getElementById('btn-fechar-alerta').onclick();
+  const resultado = await promise;
+
+  assert.equal(modal.open, false);
+  assert.equal(resultado, false);
+ }, { mockAlerta: false });
+
  const report={data:new Date().toISOString(),tipo:'JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte',total:results.length,aprovados:results.filter(t=>t.ok).length,resultados:results};
  fs.writeFileSync(path.resolve(dir,'../revisao-bloco-a-2026-09-13/testes-confiabilidade.json'),JSON.stringify(report,null,2));
  console.log(`${report.aprovados}/${report.total} aprovados`);for(const r of results.filter(t=>!t.ok))console.error(r.nome,r.erro);
