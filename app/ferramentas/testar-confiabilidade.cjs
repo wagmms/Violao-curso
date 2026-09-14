@@ -29,6 +29,23 @@ function avaliar(a,nivel,status,bpm='60'){
  a.w.document.getElementById('btn-salvar-resultado').click();
 }
 async function main(){
+  await teste('novaSessao cria objeto com valores iniciais corretos', a => {
+    const s1 = a.run("novaSessao('ativ-teste')");
+    assert.ok(s1.id.startsWith('sessao'));
+    assert.equal(s1.atividadeId, 'ativ-teste');
+    assert.equal(s1.nivel, 'preparacao');
+    assert.equal(s1.passoIndex, 0);
+    assert.equal(s1.elapsedMs, 0);
+    assert.equal(s1.totalMs, 2400000);
+    assert.equal(s1.ativa, false);
+    assert.equal(s1.concluida, false);
+    assert.equal(s1.ultimoTimestamp, null);
+    assert.equal(s1.intervalId, null);
+
+    const s2 = a.run("novaSessao('ativ-teste-2', 'alvo')");
+    assert.equal(s2.atividadeId, 'ativ-teste-2');
+    assert.equal(s2.nivel, 'alvo');
+  });
  await teste('11 atividades: selecionar, serializar e restaurar',a=>{for(let i=1;i<=11;i++){a.run(`trocarAtividade('ativ-${i}')`);const d=a.run('validarEsquemaBackup(serializarEstado()).dados');assert.equal(d.atividadeAtualId,`ativ-${i}`);assert.equal(d.sessao.nivel,d.nivelExercicioAtual);}});
  await teste('Interrupção ativa sem elapsed consolidado permanece no backup',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=60000;trocarAtividade('ativ-2');carregarEstadoInicial()`);assert.equal(a.run('state.tentativas.length'),1);assert.equal(a.run('state.tentativas[0].status'),'interrompida');assert.ok(a.run('state.tentativas[0].duracaoMs')>=60000);});
  await teste('Rascunhos não iniciam; timer tolera roteiro vazio',a=>{for(let i=7;i<=11;i++){a.run(`trocarAtividade('ativ-${i}');atualizarTimer()`);assert.equal(a.run('iniciarSessao()'),false);assert.equal(a.run('state.sessao.ativa'),false);}a.run(`navegarPara('praticar')`);assert.equal(a.w.document.querySelectorAll('.btn-iniciar-ativ:disabled').length,5);});
