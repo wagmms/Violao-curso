@@ -756,7 +756,8 @@ window.PILOTO_ATIVIDADES = [
 
   {
     "id": "ativ-7",
-    "statusOperacional": "rascunho",
+    "statusOperacional": "em_revisao",
+    "emElaboracao": false,
     "slug": "bossa-nova-basica",
     "titulo": "Bossa Nova Básica: Baixo Antecipado e Acordes em Bloco",
     "area": "Rítmica e Coordenação",
@@ -766,336 +767,446 @@ window.PILOTO_ATIVIDADES = [
       "bossa-nova",
       "ritmo",
       "baixo-antecipado",
-      "sincope"
+      "sincope",
+      "mpb"
     ],
-    "habilidade": "Execução do padrão básico de Bossa Nova com baixo alternado e acordes sincopados.",
-    "metaObservavel": "Tocar 8 compassos do padrão de Bossa Nova a 70 BPM em 2/4, cravando a antecipação do baixo.",
-    "prerequisito": "Domínio de acordes com sétima (ex: C7M, Dm7) e independência básica do polegar.",
-    "explicacao": "Na Bossa Nova, o ritmo é construído pela interação entre um baixo constante em semínimas (ou colcheias, no 2/4) e acordes tocados de forma sincopada pelos dedos indicador, médio e anelar (i, m, a). A característica principal é o baixo antecipado ou a síncope nos acordes, criando o balanço típico.",
-    "fontes": [],
+    "habilidade": "Execução do padrão rítmico clássico de Bossa Nova com baixo alternado de polegar e acordes sincopados em bloco (i-m-a).",
+    "metaObservavel": "Tocar 8 compassos contínuos do padrão de Bossa Nova a 70 BPM em 2/4 sobre C7M e Dm7(9), cravando a síncope e a antecipação rítmica sem oscilar o pulso.",
+    "prerequisito": "Domínio de acordes com sétima (ex: C7M, Dm7) e independência básica entre polegar e dedos articuladores.",
+    "explicacao": "Na Bossa Nova (escola João Gilberto e Roberto Menescal), o violão funciona como uma bateria de bolso: o polegar faz o papel do surdo marcando os tempos fundamentais, enquanto os dedos indicador, médio e anelar (i, m, a) pinçam as primas em bloco, simulando o tamborim com antecipações rítmicas nas colcheias fracas.",
+    "fontes": [
+      {
+        "aulaId": "aula-mod-9-10",
+        "observacao": "Referência de Bossa Nova: Garota de Ipanema e levada sincopada no Método Tríade.",
+        "autoria": "Método Tríade (acervo) / Mapeamento com Acompanhamento de Bossa Nova do Curso Kaiser"
+      },
+      {
+        "aulaId": "aula-mod-1-8",
+        "observacao": "Métrica e pulso de compasso binário no violão.",
+        "autoria": "Método Tríade (acervo)"
+      }
+    ],
     "exercicio": {
       "bpmSugerido": 70,
-      "bpmMinimo": 50,
-      "bpmAlvo": 90,
-      "compasso": "2/4",
-      "contagem": "1 e 2 e",
-      "dedilhacaoMD": "p nos baixos; i, m, a em bloco nos acordes",
-      "instrucoes": "Mantenha o pulso estável. O polegar ataca nos tempos fortes, enquanto o bloco (i,m,a) preenche as subdivisões sincopadas. Pratique lentamente até o padrão motor se tornar automático.",
-      "niveis": {
-        "preparacao": {
-          "nome": "Preparação (Baixo e Acorde no Tempo)",
-          "descricao": "Sem síncope. Polegar no tempo 1, bloco no tempo 2. Use o acorde C7M.",
-          "bpm": 60,
-          "repeticoes": "8 compassos",
-          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [C7M]           |                 |\nE|-------------------|-------------------|\nB|--------0----------|-------0-----------|\nG|--------0----------|-------0-----------|\nD|--------2----------|-------2-----------|\nA|----3--------------|---3---------------|\nE|-------------------|-------------------|\n      p   ima            p   ima\n      ♩   ♩              ♩   ♩",
-          "dica": "Assegure que o bloco de dedos ataque junto, sem arpejar.",
-          "instrucoesRodape": "Concentre-se na clareza do som."
-        },
-        "alvo": {
-          "nome": "Alvo (Padrão Clássico de Bossa Nova)",
-          "descricao": "Padrão com o bloco antecipado e no contratempo.",
-          "bpm": 70,
-          "repeticoes": "8 compassos",
-          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [C7M]           |                 |\nE|-------------------|-------------------|\nB|----0-------0---0--|-------0---0-------|\nG|----0-------0---0--|-------0---0-------|\nD|----2-------2---2--|-------2---2-------|\nA|----3--------------|---3---------------|\nE|------------3------|-----------3-------|\n      p+b     p   b      p   b   p\n      ♪   ♪   ♪   ♪      ♪   ♪   ♪   ♪",
-          "dica": "b = bloco (ima). Cante a levada: pá, pá-pá, pá-pá.",
-          "instrucoesRodape": "O segundo baixo cai na sexta corda (G)."
-        },
-        "variacao": {
-          "nome": "Variação (Progressão C7M - Dm7)",
-          "descricao": "Aplicando o padrão trocando de acordes a cada 2 compassos.",
-          "bpm": 80,
-          "repeticoes": "8 compassos",
-          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [C7M]           | [Dm7]           |\nE|-------------------|-------------------|\nB|----0-------0---0--|----6-------6---6--|\nG|----0-------0---0--|----5-------5---5--|\nD|----2-------2---2--|----7-------7---7--|\nA|----3--------------|----5--------------|\nE|------------3------|------------5------|\n      p+b     p   b       p+b     p   b",
-          "dica": "Antecipe a troca do acorde mentalmente.",
-          "instrucoesRodape": "Mantenha o suingue inalterado na troca."
-        }
-      }
-    },
-    "errosComuns": [
-      {
-        "erro": "Acelerar nos acordes sincopados.",
-        "correcao": "Use o metrônomo rigorosamente, sentindo a síncope contra o clique."
-      }
-    ],
-    "aplicacaoMusical": "Acompanhamento padrão para repertório de Bossa Nova e MPB.",
-    "criterioSaida": "Tocar 8 compassos a 70 BPM de forma relaxada, sem perder a antecipação.",
-    "recuperacao": "Se embolar o ritmo, toque apenas o baixo primeiro, depois cante os acordes por cima, antes de tentar tudo junto.",
-    "sessao40min": [],
-    "ferramentaSugerida": "metronomo"
-  },
-  {
-    "id": "ativ-8",
-    "statusOperacional": "rascunho",
-    "slug": "independencia-ritmica-samba",
-    "titulo": "Independência Rítmica: Baixo em 2/4 com Melodia Sincopada",
-    "area": "Rítmica e Coordenação",
-    "nivelDificuldade": "Intermediário",
-    "statusProntidao": "em_revisao",
-    "tags": [
-      "samba",
-      "independencia",
-      "poliritmia"
-    ],
-    "habilidade": "Manter o pulso constante no baixo enquanto articula melodias no contratempo.",
-    "metaObservavel": "Tocar uma variação rítmica onde o baixo marca o tempo e a melodia ocorre apenas nas colcheias fracas.",
-    "prerequisito": "Atividade de Bossa Nova básica consolidada.",
-    "explicacao": "No Samba e no Choro, a independência entre o polegar e os outros dedos precisa ser ainda maior. O baixo age como o surdo marcando o 1 e 2 (frequentemente com acento no 2), enquanto a melodia brinca pelas semicolcheias e síncopes.",
-    "fontes": [],
-    "exercicio": {
-      "bpmSugerido": 65,
       "bpmMinimo": 50,
       "bpmAlvo": 80,
       "compasso": "2/4",
       "contagem": "1 e 2 e",
-      "dedilhacaoMD": "p marcando os tempos, i m articulando a melodia",
-      "instrucoes": "O polegar (p) toca notas curtas ou longas estritamente nos cliques do metrônomo. Os dedos i/m tocam a melodia.",
+      "dedilhacaoMD": "p nos baixos (cordas 5 e 6); bloco i, m, a nas cordas 4, 3 e 2",
+      "instrucoes": "Mantenha a mão direita relaxada em formato de concha. O polegar desce tocando a tônica no tempo 1; no contratempo do 1 ('e') e na cabeça do 2, o bloco i-m-a puxa as cordas agudas simultaneamente. Cante a levada: 'TUM... tá-tá... TUM... tá-tá'.",
       "niveis": {
         "preparacao": {
-          "nome": "Preparação (Melodia Estrita no Contratempo)",
-          "descricao": "Baixo no tempo, nota aguda no contratempo.",
-          "bpm": 50,
-          "repeticoes": "8 compassos",
-          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Am]            |                 |\nE|--------0-------0--|--------0-------0--|\nB|-------------------|-------------------|\nG|-------------------|-------------------|\nD|-------------------|-------------------|\nA|----0--------------|----0--------------|\nE|------------0------|------------0------|\n      p   i   p   i       p   i   p   i",
-          "dica": "Não deixe o baixo engolir a nota aguda.",
-          "instrucoesRodape": "As notas não devem se encavalar."
+          "nome": "Preparação (Baixo e Bloco nos Tempos Fortes)",
+          "descricao": "Toque a tônica no tempo 1 com polegar (p) e o bloco de acordes no tempo 2 com (i-m-a) no acorde C7M. Sem síncope inicial, focando na sonoridade limpa do bloco.",
+          "bpm": 60,
+          "repeticoes": "4 compassos completos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [C7M]           |                 |\nE|-------------------|-------------------|\nB|--------0----------|-------0-----------|\nG|--------0----------|-------0-----------|\nD|--------2----------|-------2-----------|\nA|----3--------------|---3---------------|\nE|-------------------|-------------------|\n      p   ima             p   ima\n      ♩   ♩               ♩   ♩",
+          "dica": "Os dedos i, m, a devem fechar juntos em direção à palma, produzindo um som aveludado e uniforme.",
+          "instrucoesRodape": "Clareza polifônica: ouça a nota mais aguda (B solta) soar límpida."
         },
         "alvo": {
-          "nome": "Alvo (Melodia Sincopada Original)",
-          "descricao": "Composição original didática onde a melodia antecipa os baixos.",
-          "bpm": 65,
-          "repeticoes": "8 compassos",
-          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Am]            | [E7]            |\nE|--------0---0------|------------0------|\nB|----------------3--|--------3-------3--|\nG|-------------------|-------------------|\nD|-------------------|-------------------|\nA|----0-------0------|-------------------|\nE|-------------------|----0-------0------|\n      p   i   p   m       p   i   p   m\n      ♩   ♪   ♪   ♪       ♪   ♪   ♪   ♪",
-          "dica": "Sinta o balanço da síncope na passagem do compasso.",
-          "instrucoesRodape": "Mantenha a fluidez."
+          "nome": "Alvo (Levada Clássica de Bossa Nova com Antecipação)",
+          "descricao": "Padrão rítmico oficial de 2 compassos com ataque sincopado no contratempo e alternância de baixo na 5ª corda (Dó) e 6ª corda (Sol).",
+          "bpm": 70,
+          "repeticoes": "8 compassos contínuos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [C7M]           |                 |\nE|-------------------|-------------------|\nB|----0-------0---0--|-------0---0-------|\nG|----0-------0---0--|-------0---0-------|\nD|----2-------2---2--|-------2---2-------|\nA|----3--------------|---3---------------|\nE|------------3------|-----------3-------|\n      p+b     p   b      p   b   p\n      ♪   ♪   ♪   ♪      ♪   ♪   ♪   ♪",
+          "dica": "O segundo toque de polegar cai na 6ª corda (Sol, traste 3). Não apoie o polegar com força excessiva.",
+          "instrucoesRodape": "O suingue reside na precisão da síncope: nunca atrase o acorde."
         },
         "variacao": {
-          "nome": "Variação (Samba Rápido)",
-          "descricao": "Mesmo padrão, mas com acento dinâmico no baixo do tempo 2.",
-          "bpm": 85,
-          "repeticoes": "8 compassos",
-          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Am]            | [E7]            |\nE|--------0---0------|------------0------|\nB|----------------3--|--------3-------3--|\nG|-------------------|-------------------|\nD|-------------------|-------------------|\nA|----0-------0------|-------------------|\nE|-------------------|----0-------0------|\n      p       p>          p       p>",
-          "dica": "Acentue o segundo tempo do compasso com o polegar.",
-          "instrucoesRodape": "Típico do surdo de segunda no samba."
+          "nome": "Variação (Transição Harmônica C7M para Dm7(9))",
+          "descricao": "Aplique a levada completa alternando entre C7M (2 compassos) e Dm7(9) (2 compassos), mantendo a fluidez rítmica ininterrupta na troca.",
+          "bpm": 75,
+          "repeticoes": "8 compassos contínuos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [C7M]           | [Dm7(9)]        |\nE|-------------------|-------------------|\nB|----0-------0---0--|----5-------5---5--|\nG|----0-------0---0--|----5-------5---5--|\nD|----2-------2---2--|----3-------3---3--|\nA|----3--------------|----5--------------|\nE|------------3------|------------5------|\n      p+b     p   b       p+b     p   b",
+          "dica": "Antecipe o formato do Dm7(9) visualizando a pestana no 5º traste antes de descer a mão.",
+          "instrucoesRodape": "Mantenha o mesmo volume dinâmico em ambos os acordes."
         }
       }
     },
     "errosComuns": [
       {
-        "erro": "O polegar começar a seguir o ritmo da melodia.",
-        "correcao": "Pratique o polegar isoladamente cantando a melodia."
+        "erro": "Arpejar o bloco de notas em vez de pinçar todas as três cordas exatamente no mesmo milissegundo.",
+        "correcao": "Cole as pontas dos dedos i-m-a nas cordas antes de puxar, disparando o movimento a partir da articulação dos nós dos dedos."
+      },
+      {
+        "erro": "Acelerar o andamento quando os acordes entram no contratempo.",
+        "correcao": "Toque acompanhando a Máquina de Ritmos do app no preset Bossa Nova (80 BPM) para travar a grade rítmica."
       }
     ],
-    "aplicacaoMusical": "Base para violão solo em estilos brasileiros.",
-    "criterioSaida": "Executar o alvo a 65 BPM com independência cristalina.",
-    "recuperacao": "Se falhar, volte à atividade de Bossa Nova preparatória.",
-    "sessao40min": [],
+    "aplicacaoMusical": "Levada fundamental de 'Garota de Ipanema', 'O Barquinho', 'Wave' e da maior parte da discografia de Tom Jobim e João Gilberto.",
+    "criterioSaida": "Executar os 8 compassos do nível Alvo a 70 BPM de forma relaxada, sem engolir notas nem oscilar o pulso.",
+    "recuperacao": "Se perder a coordenação, desative o metrônomo e pratique o ciclo rítmico apenas em cordas abafadas por 2 minutos.",
+    "sessao40min": [
+      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e afinação", "instrucao": "Afine o violão com o afinador cromático do app e relaxe a musculatura do ombro direito." },
+      { "fase": "Recuperar", "minutos": 5, "objetivo": "Mecânica de bloco", "instrucao": "Treine o pinçamento em bloco i-m-a em cordas soltas com firmeza e sem arpejo." },
+      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Interiorização rítmica", "instrucao": "Ligue a Máquina de Ritmos do app em Bossa Nova e vocalize a levada sincopada antes de tocar." },
+      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Execução progressiva", "instrucao": "Pratique a Preparação (60 BPM) e avance para o Alvo (70 BPM) com metrônomo contínuo." },
+      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Aplicação em cadência", "instrucao": "Execute a Variação alternando C7M e Dm7(9) sentindo o balanço característico." },
+      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote seu BPM estável e eventuais tensões no caderno de notas do app." }
+    ],
     "ferramentaSugerida": "metronomo"
   },
+
+  {
+    "id": "ativ-8",
+    "statusOperacional": "em_revisao",
+    "emElaboracao": false,
+    "slug": "levada-baden-powell",
+    "titulo": "As Levadas de Baden Powell: Mão Direita Percussiva e Dinâmica",
+    "area": "Violão Brasileiro",
+    "nivelDificuldade": "Intermediário",
+    "statusProntidao": "em_revisao",
+    "tags": [
+      "baden-powell",
+      "samba",
+      "mao-direita",
+      "violao-brasileiro",
+      "levada"
+    ],
+    "habilidade": "Execução da emblemática Levada 1 de Baden Powell, integrando batida percussiva, rasgueio suave e acentuação sincopada de polegar.",
+    "metaObservavel": "Tocar 8 compassos contínuos da Levada 1 de Baden Powell a 75 BPM em 2/4 sobre Em e B7, mantendo a sonoridade enérgica e o balanço afro-samba.",
+    "prerequisito": "Atividade 7 (Bossa Nova Básica) e boa articulação livre do polegar nos bordões.",
+    "explicacao": "Baden Powell revolucionou a linguagem do violão moderno ao fundir a harmonia da Bossa Nova com o batuque percussivo dos terreiros e do samba de roda. A sua mão direita não apenas toca as notas, mas 'percute' o instrumento através de toques apoiados potentes do polegar intercalados com puxadas rápidas dos dedos e abafamentos rítmicos.",
+    "fontes": [
+      {
+        "aulaId": "aula-mod-7-1",
+        "observacao": "Exercícios fundamentais de técnica de mão direita e coordenação motora no Método Tríade.",
+        "autoria": "Método Tríade (acervo) / Mapeamento com Módulo 'As Levadas da Mão Direita de Baden Powell' do Curso Kaiser"
+      },
+      {
+        "aulaId": "aula-mod-7-6",
+        "observacao": "Preparação e independência motora para fingerstyle e violão solo.",
+        "autoria": "Método Tríade (acervo)"
+      }
+    ],
+    "exercicio": {
+      "bpmSugerido": 75,
+      "bpmMinimo": 60,
+      "bpmAlvo": 90,
+      "compasso": "2/4",
+      "contagem": "1 e 2 e",
+      "dedilhacaoMD": "p no bordão grave; i, m, a puxando e percutindo nas primas",
+      "instrucoes": "Mantenha o pulso solto. O polegar ataca a 6ª corda (Em) com energia, e os dedos i-m-a respondem com um toque vivo e ligeiramente estalado nas três primeiras cordas, criando o característico balanço afro-brasileiro.",
+      "niveis": {
+        "preparacao": {
+          "nome": "Preparação (Ataque Fundamental Polegar e Resposta)",
+          "descricao": "Polegar no tempo 1 (Mi grave solto) e resposta do bloco i-m-a no tempo 2 sobre o acorde Em, focando no contraste de peso.",
+          "bpm": 60,
+          "repeticoes": "4 compassos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Em]            |                 |\nE|--------0----------|-------0-----------|\nB|--------0----------|-------0-----------|\nG|--------0----------|-------0-----------|\nD|--------2----------|-------2-----------|\nA|--------2----------|-------2-----------|\nE|----0--------------|---0---------------|\n      p   ima             p   ima",
+          "dica": "Deixe o polegar repousar na 5ª corda após o ataque no bordão (toque apoiado).",
+          "instrucoesRodape": "Ouça o contraste: o grave pesado contra o agudo brilhante."
+        },
+        "alvo": {
+          "nome": "Alvo (Levada 1 de Baden Powell Completa)",
+          "descricao": "Padrão de 2 compassos com a síncope característica de Baden: baixo forte no tempo 1, corte seco e contratempo acentuado.",
+          "bpm": 75,
+          "repeticoes": "8 compassos contínuos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Em]            |                 |\nE|----0-------0---0--|-------0---0-------|\nB|----0-------0---0--|-------0---0-------|\nG|----0-------0---0--|-------0---0-------|\nD|----2-------2---2--|-------2---2-------|\nA|-------------------|-------------------|\nE|----0-------0------|---0-------0-------|\n      p+b     p   b      p   b   p   b",
+          "dica": "Imite a sonoridade de um atabaque e pandeiro dialogando no mesmo instrumento.",
+          "instrucoesRodape": "O ritmo deve ser pulsante e nunca letárgico."
+        },
+        "variacao": {
+          "nome": "Variação (Progressão Em - B7/F# com Acento Afro-Samba)",
+          "descricao": "Aplique a levada alternando entre Em e B7/F# com condução do baixo no 2º traste da 6ª corda.",
+          "bpm": 85,
+          "repeticoes": "8 compassos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Em]            | [B7/F#]         |\nE|----0-------0---0--|----2-------2---2--|\nB|----0-------0---0--|----0-------0---0--|\nG|----0-------0---0--|----2-------2---2--|\nD|----2-------2---2--|----1-------1---1--|\nA|-------------------|-------------------|\nE|----0-------0------|----2-------2------|\n      p+b     p   b       p+b     p   b",
+          "dica": "O acorde B7/F# usa o dedo 2 na 6ª corda; mantenha a pressão firme na ponta do dedo.",
+          "instrucoesRodape": "Troca precisa sem interrupção do pulso de 2/4."
+        }
+      }
+    },
+    "errosComuns": [
+      {
+        "erro": "Tocar com timidez ou excesso de suavidade clássica.",
+        "correcao": "O estilo Baden Powell exige pegada firme, usando a unha da mão direita para dar brilho metálico ao nylon."
+      }
+    ],
+    "aplicacaoMusical": "Base de 'Samba da Bênção', 'Berimbau', 'Canto de Ossanha' e de toda a estética dos Afro-Sambas de Baden e Vinicius.",
+    "criterioSaida": "Executar os 8 compassos a 75 BPM com firmeza rítmica e clareza percussiva.",
+    "recuperacao": "Isole o movimento da mão direita batendo o ritmo no corpo do violão antes de aplicar nas cordas.",
+    "sessao40min": [
+      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e alongamento", "instrucao": "Alongue os tendões dos flexores dos dedos e posicione o violão com apoio firme." },
+      { "fase": "Recuperar", "minutos": 5, "objetivo": "Apoio de polegar", "instrucao": "Toque a 6ª corda com apoio dinâmico sentindo a ressonância do grave." },
+      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Audição comparativa", "instrucao": "Ouça a gravação de 'Samba da Bênção' prestando atenção exclusiva ao ataque da mão direita de Baden." },
+      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Estudo metronômico", "instrucao": "Pratique a Levada 1 no nível Alvo a 65 BPM e suba gradativamente até 75 BPM." },
+      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Fluência harmônica", "instrucao": "Aplique a transição Em para B7/F# sustentando o suingue contínuo." },
+      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Registre no app se conseguiu a pegada percussiva sem tensionar o trapézio." }
+    ],
+    "ferramentaSugerida": "metronomo"
+  },
+
   {
     "id": "ativ-9",
-    "statusOperacional": "rascunho",
-    "slug": "melodia-acompanhada-2-vozes",
-    "titulo": "Melodia Acompanhada: Composição Original em 2 Vozes",
+    "statusOperacional": "em_revisao",
+    "emElaboracao": false,
+    "slug": "baixarias-choro-samba",
+    "titulo": "Baixarias de Choro e Samba: Condução Melódica nos Bordões",
+    "area": "Violão Brasileiro",
+    "nivelDificuldade": "Avançado",
+    "statusProntidao": "em_revisao",
+    "tags": [
+      "choro",
+      "samba",
+      "baixarias",
+      "bordao",
+      "violao-7-cordas",
+      "contraponto"
+    ],
+    "habilidade": "Execução de frases de baixaria nos bordões graves (cordas 4, 5 e 6) conectando cadências harmônicas tradicionais de Choro e Samba.",
+    "metaObservavel": "Tocar uma linha de baixaria contínua de 4 compassos em Lá Menor a 70 BPM, unindo os acordes Am -> Dm -> E7 -> Am com clareza melódica de polegar.",
+    "prerequisito": "Fluência em escalas diatônicas nos bordões e independência de polegar consolidada na Atividade 8.",
+    "explicacao": "A 'baixaria' é a grande marca registrada do violão brasileiro no Choro e no Samba de raiz (escola Dino 7 Cordas e Raphael Rabello). Trata-se de um contracanto melódico executado pelo polegar nos bordões graves que costura os vazios da melodia principal e conduz o ouvido de um acorde para o próximo.",
+    "fontes": [
+      {
+        "aulaId": "aula-mod-7-2",
+        "observacao": "Inversões e condução de baixo na prática no Método Tríade.",
+        "autoria": "Método Tríade (acervo) / Mapeamento com Módulo 'BAIXARIAS DE 6 E 7 CORDAS' do Curso Kaiser"
+      },
+      {
+        "aulaId": "aula-mod-7-3",
+        "observacao": "Condução de baixos e transições harmônicas aplicadas.",
+        "autoria": "Método Tríade (acervo)"
+      }
+    ],
+    "exercicio": {
+      "bpmSugerido": 70,
+      "bpmMinimo": 55,
+      "bpmAlvo": 85,
+      "compasso": "2/4",
+      "contagem": "1 e 2 e",
+      "dedilhacaoMD": "Polegar (p) com apoio firme em todas as notas da frase de baixaria",
+      "instrucoes": "Cada nota da baixaria deve ser tocada com apoio do polegar sobre a corda imediatamente inferior, garantindo timbre encorpado, volume sonoro dominante e sustentação legato entre as notas.",
+      "niveis": {
+        "preparacao": {
+          "nome": "Preparação (Escala Descendente Conduzida pelo Polegar)",
+          "descricao": "Frase de 2 compassos descendo de Lá (5ª corda solta) até Mi grave (6ª corda solta) em semínimas.",
+          "bpm": 60,
+          "repeticoes": "4 repetições",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\nE|-------------------|-------------------|\nB|-------------------|-------------------|\nG|-------------------|-------------------|\nD|-------------------|-------------------|\nA|----0--------------|-------------------|\nE|--------3---1---0--|---0---------------|\n      A   G   F   E       E\n      p   p   p   p       p",
+          "dica": "Use os dedos 3 e 1 da mão esquerda para as casas 3 e 1 da 6ª corda.",
+          "instrucoesRodape": "Apoie o polegar com peso natural."
+        },
+        "alvo": {
+          "nome": "Alvo (Baixaria Clássica em Am Conectando para E7)",
+          "descricao": "Frase tradicional de choro em colcheias ligando Am a E7 com cromatismo de aproximação (Ré# -> Mi).",
+          "bpm": 70,
+          "repeticoes": "8 compassos contínuos",
+          "tablatura": "2/4 | 1   e   2   e   | 1   e   2   e   |\n    | [Am]            | [E7]            |\nE|-------------------|-------------------|\nB|--------1----------|--------3----------|\nG|--------2----------|--------1----------|\nD|--------2----------|--------2----------|\nA|----0-------0---2--|----3---2---1---0--|\nE|-------------------|-------------------|\n      p   ima p   p       p   p   p   p\n             (baixaria: A - B - C - B - Bb - A)",
+          "dica": "Mantenha o acorde Am armado enquanto o polegar caminha nas cordas graves.",
+          "instrucoesRodape": "O cromatismo Bb -> A dá o típico sabor de Choro antigo."
+        },
+        "variacao": {
+          "nome": "Variação (Ciclo Completo Am -> Dm -> E7 -> Am com Baixaria de Resolução)",
+          "descricao": "Cadência completa de 4 compassos com frase arpejada no baixo fechando no tempo 1 do acorde de tônica.",
+          "bpm": 80,
+          "repeticoes": "4 ciclos completos",
+          "tablatura": "2/4 | [Am]      | [Dm]      | [E7]      | [Am]      |\nE|-----------|-----------|-----------|-----------|\nB|----1------|----3------|----3------|----1------|\nG|----2------|----2------|----1------|----2------|\nD|----2------|0---0------|----2------|----2------|\nA|0---0--2-3-|-------3-2-|-------1-2-|0---0------|\nE|-----------|-----------|0---0------|-----------|",
+          "dica": "Cante as notas do baixo em voz alta para memorizar a linha melódica.",
+          "instrucoesRodape": "Fluidez contínua: nunca interrompa o tempo para procurar a nota."
+        }
+      }
+    },
+    "errosComuns": [
+      {
+        "erro": "Tocar a baixaria com volume fraco ou abafada em relação aos acordes.",
+        "correcao": "Lembre-se que a baixaria É a melodia do momento. O polegar deve soar mais alto e encorpado que qualquer outra nota."
+      }
+    ],
+    "aplicacaoMusical": "Linguagem obrigatória para tocar Choro ('Noites Cariocas', 'Brasileirinho') e acompanhar Samba de mesa tradicional.",
+    "criterioSaida": "Executar os 4 compassos do nível Alvo a 70 BPM com timbre limpo de polegar e sem esbarrar nas primas.",
+    "recuperacao": "Pratique a linha do baixo isoladamente sem tocar os acordes até decorar a digitação de ouvido.",
+    "sessao40min": [
+      { "fase": "Preparar", "minutos": 3, "objetivo": "Afinação e aquecimento", "instrucao": "Verifique a afinação precisa dos bordões 4, 5 e 6 com o afinador." },
+      { "fase": "Recuperar", "minutos": 5, "objetivo": "Escala cromática no bordão", "instrucao": "Pratique digitação 1-2-3-4 na 5ª corda com apoio do polegar." },
+      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Percepção contrapontística", "instrucao": "Ouça o clássico 'Noites Cariocas' de Jacob do Bandolim focando a atenção no violão de 7 cordas ao fundo." },
+      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Estudo metronômico", "instrucao": "Execute o nível Alvo a 60 BPM focando na precisão milimétrica dos ataques." },
+      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Ciclo completo", "instrucao": "Toque a Variação encadeando Am -> Dm -> E7 -> Am com fluidez e suingue de choro." },
+      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote suas impressões no caderno de notas e confirme a ausência de dor no polegar." }
+    ],
+    "ferramentaSugerida": "metronomo"
+  },
+
+  {
+    "id": "ativ-10",
+    "statusOperacional": "em_revisao",
+    "emElaboracao": false,
+    "slug": "melodia-acompanhada-violao-solo",
+    "titulo": "Violão Solo: Melodia Acompanhada e Hierarquia Dinâmica",
     "area": "Violão Solo",
-    "nivelDificuldade": "Intermediário",
+    "nivelDificuldade": "Avançado",
     "statusProntidao": "em_revisao",
     "tags": [
       "violao-solo",
-      "arranjo",
       "fingerstyle",
-      "contraponto"
+      "arranjo",
+      "polifonia",
+      "dinamica"
     ],
-    "habilidade": "Tocar uma peça completa em 2 vozes, distinguindo sonoramente a melodia do acompanhamento.",
-    "metaObservavel": "Tocar a peça didática original de 8 compassos com equilíbrio dinâmico e legato.",
-    "prerequisito": "Atividade 6 (Melodia e Acompanhamento Integrados).",
-    "explicacao": "No violão clássico e fingerstyle, a ilusão de múltiplas guitarras é criada controlando a intensidade (dinâmica) de cada dedo. A melodia (nas primas) deve cantar mais alto que o arpejo de acompanhamento.",
-    "fontes": [],
-    "exercicio": {
-      "bpmSugerido": 80,
-      "bpmMinimo": 60,
-      "bpmAlvo": 100,
-      "compasso": "4/4",
-      "contagem": "1 e 2 e 3 e 4 e",
-      "dedilhacaoMD": "pimba",
-      "instrucoes": "Composição Didática Original \"Rio Manso\". Melodia sustentada na 1a corda, arpejo suave nas internas.",
-      "niveis": {
-        "preparacao": {
-          "nome": "Preparação (Apenas a Melodia)",
-          "descricao": "Toque apenas as notas da melodia com apoio (apoyando).",
-          "bpm": 70,
-          "repeticoes": "4 compassos",
-          "tablatura": "4/4 | 1   2   3   4   | 1   2   3   4   |\n    | [G]             | [C]             |\nE|----3---2---3---5--|----0-------0------|\nB|-------------------|--------3----------|\nG|-------------------|-------------------|\nD|-------------------|-------------------|\nA|-------------------|-------------------|\nE|-------------------|-------------------|",
-          "dica": "Assegure o legato perfeito.",
-          "instrucoesRodape": "Notas com duração de semínima."
-        },
-        "alvo": {
-          "nome": "Alvo (Melodia + Baixo)",
-          "descricao": "Adiciona os baixos no tempo 1 de cada compasso.",
-          "bpm": 80,
-          "repeticoes": "4 compassos",
-          "tablatura": "4/4 | 1   2   3   4   | 1   2   3   4   |\n    | [G]             | [C]             |\nE|----3---2---3---5--|----0-------0------|\nB|-------------------|--------3----------|\nG|-------------------|-------------------|\nD|-------------------|-------------------|\nA|-------------------|----3--------------|\nE|----3--------------|-------------------|\n      p+m i   m   i       p+m i   m",
-          "dica": "O baixo dura o compasso inteiro (semibreve).",
-          "instrucoesRodape": "Deixe o baixo ressoar."
-        },
-        "variacao": {
-          "nome": "Variação (Composição Completa a 2 Vozes)",
-          "descricao": "Melodia, baixo, e notas de preenchimento (arpejo interno).",
-          "bpm": 80,
-          "repeticoes": "8 compassos (mostrando 2 iniciais)",
-          "tablatura": "4/4 | 1 e 2 e 3 e 4 e | 1 e 2 e 3 e 4 e |\n    | [G]             | [C]             |\nE|----3---2---3---5--|----0-------0------|\nB|------0-------0----|------1-3-----1----|\nG|----------0--------|----------0--------|\nD|-------------------|-------------------|\nA|-------------------|----3--------------|\nE|----3--------------|-------------------|\n      p m i m i m a       p a i m a i",
-          "dica": "Destaque a nota aguda, deixe o arpejo em segundo plano sonoro (piano).",
-          "instrucoesRodape": "A melodia é o foco."
-        }
-      }
-    },
-    "errosComuns": [
+    "habilidade": "Controle simultâneo de duas camadas sonoras (melodia cantante na prima vs baixo e arpejo de acompanhamento em plano secundário).",
+    "metaObservavel": "Executar uma peça didática de 8 compassos a 70 BPM com separação dinâmica evidente: soprano cantante (forte) e harmonia de fundo (piano).",
+    "prerequisito": "Atividade 6 (Melodia e Acompanhamento Integrados) e fluência de dedilhado P-I-M-A.",
+    "explicacao": "No violão clássico e no fingerstyle brasileiro, o grande segredo para soar como uma orquestra é a hierarquia dinâmica: a melodia nas primas precisa cantar livre e sustentada, enquanto o polegar e os arpejos internos funcionam como o tapete harmônico suave.",
+    "fontes": [
       {
-        "erro": "Tocar todas as notas na mesma intensidade.",
-        "correcao": "Use toque apoiado na melodia e toque livre nas internas."
+        "aulaId": "aula-mod-8-2",
+        "observacao": "Arranjo e melodia acompanhada no violão: O Poderoso Chefão no Método Tríade.",
+        "autoria": "Método Tríade (acervo) / Mapeamento com Módulo 'ARRANJO: Comece pelo Simples' do Curso Kaiser"
+      },
+      {
+        "aulaId": "aula-mod-9-4",
+        "observacao": "Arranjo fingerstyle e violão solo em peças consagradas.",
+        "autoria": "Método Tríade (acervo)"
       }
     ],
-    "aplicacaoMusical": "Desenvolvimento de técnica para peças instrumentais.",
-    "criterioSaida": "Executar com distinção clara de volumes entre a melodia e o acompanhamento.",
-    "recuperacao": "Pratique apenas a mão direita nas cordas soltas focando na diferença de força.",
-    "sessao40min": [],
-    "ferramentaSugerida": "gravador"
-  },
-  {
-    "id": "ativ-10",
-    "statusOperacional": "rascunho",
-    "slug": "baixo-caminhante-melodia-fixa",
-    "titulo": "Baixo Caminhante com Melodia Fixa",
-    "area": "Harmonia e Violão Solo",
-    "nivelDificuldade": "Intermediário",
-    "statusProntidao": "em_revisao",
-    "tags": [
-      "walking-bass",
-      "contraponto",
-      "independencia"
-    ],
-    "habilidade": "Movimentar a linha de baixo compasso a compasso ou semínima a semínima sob notas agudas estáticas.",
-    "metaObservavel": "Tocar uma linha de walking bass (4 semínimas) sob um acorde fixo ou melodia sustentada no tempo 1.",
-    "prerequisito": "Fluência em escalas no registro grave (cordas 6, 5 e 4).",
-    "explicacao": "O \"Walking Bass\" é uma técnica oriunda do Jazz e Blues onde o baixo \"caminha\" em semínimas (1-2-3-4), desenhando a harmonia e o ritmo. O desafio mecânico no violão é manter os dedos que tocam os acordes agudos travados enquanto os outros dedos da mão esquerda realizam a caminhada do baixo.",
-    "fontes": [],
     "exercicio": {
       "bpmSugerido": 70,
-      "bpmMinimo": 60,
-      "bpmAlvo": 90,
-      "compasso": "4/4",
-      "contagem": "1 2 3 4",
-      "dedilhacaoMD": "p para os baixos em semínima, bloco ima para os acordes",
-      "instrucoes": "Composição didática original \"Blues Escada\". O bloco toca no tempo 1 e 3. O baixo caminha nos tempos 1, 2, 3, 4.",
+      "bpmMinimo": 55,
+      "bpmAlvo": 80,
+      "compasso": "3/4",
+      "contagem": "1 - 2 - 3",
+      "dedilhacaoMD": "p no baixo (tempo 1); i, m nas cordas médias; a cantando a melodia na 1ª corda",
+      "instrucoes": "O anelar (a) ataca a 1ª corda com toque firme e apoiado (ou toque livre com peso de braço), enquanto i e m apenas acariciam as cordas 2 e 3 sem roubar a cena da melodia.",
       "niveis": {
         "preparacao": {
-          "nome": "Preparação (Apenas o Baixo)",
-          "descricao": "Toque a linha de baixo do Blues em E.",
+          "nome": "Preparação (Isolamento da Melodia Cantante)",
+          "descricao": "Toque apenas a linha melódica da 1ª corda com o dedo anelar (a), prestando atenção no timbre aveludado e na duração inteira de cada nota.",
           "bpm": 60,
           "repeticoes": "4 compassos",
-          "tablatura": "4/4 | 1   2   3   4   | 1   2   3   4   |\n    | [E7]            | [A7]            |\nE|-------------------|-------------------|\nB|-------------------|-------------------|\nG|-------------------|-------------------|\nD|-------------------|----2---4---5---4--|\nA|----2---4---5---4--|--0---0---0---0----|\nE|--0---0---0---0----|-------------------|",
-          "dica": "As notas devem ser ligadas, sem buracos sonoros entre as semínimas.",
-          "instrucoesRodape": "Observe as dedilhações na mão esquerda."
+          "tablatura": "3/4 | 1 . 2 . 3 . | 1 . 2 . 3 . |\nE|----0---2---3---|---5-------3---|\nB|----------------|---------------|\nG|----------------|---------------|\nD|----------------|---------------|\nA|----------------|---------------|\nE|----------------|---------------|\n      a   a   a       a       a",
+          "dica": "Cante a melodia com a voz enquanto toca para imprimir intenção lírica ao fraseado.",
+          "instrucoesRodape": "Sustente o som de cada nota até o instante exato da seguinte."
         },
         "alvo": {
-          "nome": "Alvo (Baixo + Acorde no 1)",
-          "descricao": "Sustente a terça e sétima do acorde no tempo 1.",
+          "nome": "Alvo (Melodia Integrada ao Baixo e Arpejo a 2 Vozes)",
+          "descricao": "Peça didática clássica a 2 vozes: baixo no tempo 1, arpejo de preenchimento nos tempos 2 e 3, e melodia flutuando no soprano.",
           "bpm": 70,
-          "repeticoes": "4 compassos",
-          "tablatura": "4/4 | 1   2   3   4   | 1   2   3   4   |\n    | [E7]            | [A7]            |\nE|-------------------|-------------------|\nB|----3--------------|----2--------------|\nG|----1--------------|----0--------------|\nD|-------------------|----2---4---5---4--|\nA|----2---4---5---4--|--0---0---0---0----|\nE|--0---0---0---0----|-------------------|",
-          "dica": "Não levante os dedos do acorde agudo enquanto o baixo caminha.",
-          "instrucoesRodape": "Independência da mão esquerda é a chave."
+          "repeticoes": "8 compassos contínuos",
+          "tablatura": "3/4 | 1 . . 2 . . 3 . . | 1 . . 2 . . 3 . . |\n    | [Em]              | [Am]              |\nE|----3-----------------|---0---------------|\nB|----------0-----0-----|---------1-----1---|\nG|--------0-----0-------|-------2-----2-----|\nD|----------------------|-------------------|\nA|----------------------|---0---------------|\nE|----0-----------------|-------------------|\n      p+a   i m   i m       p+a   i m   i m\n     (forte) (piano)       (forte) (piano)",
+          "dica": "A nota Mi grave e a nota Sol da 1ª corda atacam juntas no tempo 1. O anelar deve soar com o dobro do volume dos dedos médios.",
+          "instrucoesRodape": "O arpejo i-m deve ser quase sussurrado."
         },
         "variacao": {
-          "nome": "Variação (Síncope no Acorde)",
-          "descricao": "O acorde entra no tempo 2 (ou no contra-tempo do 1).",
-          "bpm": 80,
-          "repeticoes": "4 compassos",
-          "tablatura": "4/4 | 1   2   3   4   | 1   2   3   4   |\n    | [E7]            | [A7]            |\nE|-------------------|-------------------|\nB|--------3----------|--------2----------|\nG|--------1----------|--------0----------|\nD|-------------------|----2---4---5---4--|\nA|----2---4---5---4--|--0---0---0---0----|\nE|--0---0---0---0----|-------------------|",
-          "dica": "Preste atenção para que o baixo não sofra oscilação rítmica quando o acorde é tocado.",
-          "instrucoesRodape": "Mantenha a caminhada inexorável."
+          "nome": "Variação (Condução Polifônica com Mudança de Registro)",
+          "descricao": "Extensão do arranjo introduzindo nota melódica no tempo 3 contra o baixo pedal sustentado.",
+          "bpm": 75,
+          "repeticoes": "8 compassos",
+          "tablatura": "3/4 | 1 . . 2 . . 3 . . | 1 . . 2 . . 3 . . |\n    | [Em]              | [B7]              |\nE|----0-----------2-----|---3-----------2---|\nB|----------0-----------|---------0---------|\nG|--------0-----0-------|-------2-----2-----|\nD|----------------------|-------------------|\nA|----------------------|---2---------------|\nE|----0-----------------|-------------------|",
+          "dica": "Mantenha o baixo soando durante todo o compasso sem cortar prematuramente.",
+          "instrucoesRodape": "Sensação de duas pessoas tocando juntas no mesmo violão."
         }
       }
     },
     "errosComuns": [
       {
-        "erro": "Parar o baixo quando a mão se atrapalha no acorde.",
-        "correcao": "Priorize o baixo sempre. Erre o acorde, mas não o baixo."
+        "erro": "Tocar todas as notas com a mesma intensidade, resultando em uma massa sonora embolada onde a música não se destaca.",
+        "correcao": "Pratique tocar o arpejo intermediário tão baixo que quase não se ouça, enquanto toca a melodia forte."
       }
     ],
-    "aplicacaoMusical": "Base para Blues, Jazz, e Bossa Nova complexa.",
-    "criterioSaida": "Fluidez e continuidade ininterrupta do baixo a 70 BPM.",
-    "recuperacao": "Isole a linha do baixo até poder tocá-la de olhos fechados.",
-    "sessao40min": [],
+    "aplicacaoMusical": "A base de todo arranjo fingerstyle, peças renascentistas/barrocas e arranjos solos de MPB.",
+    "criterioSaida": "Executar os 8 compassos a 70 BPM com clara distinção auditiva entre a melodia principal e o acompanhamento.",
+    "recuperacao": "Isole a mão direita nas cordas abafadas, praticando o peso diferenciado do anelar sobre o indicador e médio.",
+    "sessao40min": [
+      { "fase": "Preparar", "minutos": 3, "objetivo": "Afinação e postura", "instrucao": "Apoie o pé esquerdo (ou suporte ergonômico) elevando a mão esquerda na altura do peito." },
+      { "fase": "Recuperar", "minutos": 5, "objetivo": "Equalização de toque", "instrucao": "Treine tocar a 1ª corda forte e a 2ª corda piano alternadamente." },
+      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Apreciação musical", "instrucao": "Ouça o 'Prelúdio em Dó' de Bach ao violão e identifique como a voz soprano guia a escuta." },
+      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Estudo metronômico", "instrucao": "Pratique a peça do nível Alvo a 60 BPM garantindo que a melodia cante sem interrupção." },
+      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Interpretação e dinâmica", "instrucao": "Toque a Variação adicionando dinâmica expressiva nos pontos culminantes da melodia." },
+      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote seu resultado no app e grave 30 segundos no celular para avaliar a clareza da melodia." }
+    ],
     "ferramentaSugerida": "metronomo"
   },
+
   {
     "id": "ativ-11",
-    "statusOperacional": "rascunho",
-    "slug": "voice-leading-basico",
-    "titulo": "Voice Leading Básico: Condução de Vozes entre I-IV-V",
-    "area": "Harmonia Avançada",
-    "nivelDificuldade": "Intermediário",
+    "statusOperacional": "em_revisao",
+    "emElaboracao": false,
+    "slug": "voice-leading-voicings-drop2",
+    "titulo": "Voice Leading e Voicings Drop 2: Condução Suave II-V-I",
+    "area": "Harmonia e Teoria",
+    "nivelDificuldade": "Avançado",
     "statusProntidao": "em_revisao",
     "tags": [
+      "harmonia",
       "voice-leading",
-      "conducao-de-vozes",
-      "triades",
-      "inversoes"
+      "drop-2",
+      "ii-v-i",
+      "bossa-nova",
+      "jazz"
     ],
-    "habilidade": "Conectar acordes movendo cada nota (voz) para a nota mais próxima do próximo acorde.",
-    "metaObservavel": "Tocar uma cadência I-IV-V-I nas três primeiras cordas movendo os dedos no máximo um tom em cada troca.",
-    "prerequisito": "Atividade 5 (Montagem de Tríades) consolidada.",
-    "explicacao": "\"Voice Leading\" (condução de vozes) é o princípio de encadear acordes com o mínimo de movimento possível. Em vez de saltar pelo braço inteiro, usamos inversões das tríades para que as notas comuns sejam mantidas e as outras se movam por grau conjunto (semitom ou tom), gerando uma harmonia densa, fluida e orquestral.",
-    "fontes": [],
+    "habilidade": "Condução harmônica de vozes (voice leading) com movimento mínimo de dedos através de voicings Drop 2 no grupo de cordas 4-3-2-1.",
+    "metaObservavel": "Tocar a cadência II-V-I em Dó Maior (Dm7 -> G7 -> C7M) movendo as vozes por grau conjunto (máximo 1 tom por voz) a 70 BPM.",
+    "prerequisito": "Atividade 5 (Tríades e Acordes) e familiaridade com pestanas nas primeiras casas.",
+    "explicacao": "Voice Leading (condução de vozes) é o princípio mestre da harmonia refinada: em vez de saltar com a mão inteira pelo braço, mantemos as notas comuns e movemos as outras pelo caminho mais curto possível (semitom ou tom). O resultado é uma textura harmônica contínua, densa e sofisticada típica da Bossa Nova e do Jazz.",
+    "fontes": [
+      {
+        "aulaId": "aula-mod-9-8",
+        "observacao": "Tétrades com 9ª e condução harmônica no Método Tríade.",
+        "autoria": "Método Tríade (acervo) / Mapeamento com Módulo 'Inversões e Aberturas de Acordes' do Curso Kaiser"
+      },
+      {
+        "aulaId": "aula-mod-9-11",
+        "observacao": "Acordes dominantes sofisticados X7(13) e voice leading.",
+        "autoria": "Método Tríade (acervo)"
+      }
+    ],
     "exercicio": {
-      "bpmSugerido": 60,
+      "bpmSugerido": 70,
       "bpmMinimo": 50,
-      "bpmAlvo": 70,
+      "bpmAlvo": 85,
       "compasso": "4/4",
-      "contagem": "1 2 3 4",
-      "dedilhacaoMD": "Arpejos suaves ou plaqué (bloco)",
-      "instrucoes": "Cadência C - F - G - C nas cordas 1, 2, e 3. Observe como cada voz se move pouco.",
+      "contagem": "1 - 2 - 3 - 4",
+      "dedilhacaoMD": "p na 4ª corda; i na 3ª; m na 2ª; a na 1ª corda (bloco de 4 notas)",
+      "instrucoes": "Monte o acorde Dm7 nas quatro primeiras cordas. Para ir para G7, observe que apenas dois dedos se movem por um semitom. Para ir para C7M, apenas uma voz desce meio tom. Mantenha os dedos colados na escala.",
       "niveis": {
         "preparacao": {
-          "nome": "Preparação (Estudo das Posições Isoladas)",
-          "descricao": "Monte as três tríades nas primas: C (estado fundamental), F (2a inversão), G (1a inversão).",
-          "bpm": 50,
-          "repeticoes": "4 ciclos",
-          "tablatura": "    [C (T-3-5)]       [F (5-T-3)]       [G (3-5-T)]\nE|---0---------------|---1-------------|---3-------------|\nB|---1---------------|---1-------------|---3-------------|\nG|---0---------------|---2-------------|---4-------------|",
-          "dica": "Observe que o dedo 1 fica plantado na corda 2 (nota Dó) ao passar do C para o F.",
-          "instrucoesRodape": "Notas comuns são âncoras."
+          "nome": "Preparação (Transição Estática Dm7 para G7)",
+          "descricao": "Isole a troca entre Dm7 (xx0211) e G7 (xx0001) sentindo as notas comuns e o movimento de semitom do Fá para Mi.",
+          "bpm": 60,
+          "repeticoes": "4 repetições de 2 compassos",
+          "tablatura": "4/4 | 1 . . . 2 . . . 3 . . . 4 . . . | 1 . . . 2 . . . 3 . . . 4 . . . |\n    | [Dm7]                           | [G7]                            |\nE|----1-------------------------------|---1-----------------------------|\nB|----1-------------------------------|---0-----------------------------|\nG|----2-------------------------------|---0-----------------------------|\nD|----0-------------------------------|---0-----------------------------|\nA|------------------------------------|---------------------------------|\nE|------------------------------------|---------------------------------|",
+          "dica": "A 4ª corda solta (Dó ou Ré) serve de âncora fixa. Não levante a mão da escala.",
+          "instrucoesRodape": "Economia máxima de movimento."
         },
         "alvo": {
-          "nome": "Alvo (Cadência Contínua I-IV-I-V-I)",
-          "descricao": "Toque as tríades em semínimas, prestando atenção no som das linhas internas.",
-          "bpm": 60,
-          "repeticoes": "8 compassos",
-          "tablatura": "4/4 | 1   2   3   4   | 1   2   3   4   |\n    | [C]     [F]     | [G]     [C]     |\nE|----0-------1------|----3-------0------|\nB|----1-------1------|----3-------1------|\nG|----0-------2------|----4-------0------|\nD|-------------------|-------------------|\nA|-------------------|-------------------|\nE|-------------------|-------------------|",
-          "dica": "Faça os movimentos deslizarem suavemente.",
-          "instrucoesRodape": "Som legato."
+          "nome": "Alvo (Cadência II-V-I Completa nas Cordas 4-3-2-1)",
+          "descricao": "Cadência completa Dm7 (xx3535) -> G7(13) (xx3453) -> C7M (xx2413) com condução suave de vozes.",
+          "bpm": 70,
+          "repeticoes": "4 ciclos de 4 compassos",
+          "tablatura": "4/4 | [Dm7]   | [G7(13)] | [C7M]   | [C7M]   |\nE|----5-------|----3-----|----3----|----3----|\nB|----6-------|----5-----|----5----|----5----|\nG|----5-------|----4-----|----4----|----4----|\nD|----7-------|----5-----|----5----|----5----|\nA|----5-------|----------|----3----|----3----|\nE|------------|----3-----|---------|---------|",
+          "dica": "Repare como a nota soprano desce elegantemente: Lá (5) -> Sol (3) -> Sol (3).",
+          "instrucoesRodape": "Sonoridade orquestral imediata sob os dedos."
         },
         "variacao": {
-          "nome": "Variação (Arpejo Contrapontístico)",
-          "descricao": "Composição didática \"Coral em Dó\", arpejando o voice leading.",
-          "bpm": 70,
-          "repeticoes": "4 compassos",
-          "tablatura": "4/4 | 1 e 2 e 3 e 4 e | 1 e 2 e 3 e 4 e |\n    | [C]     [F]     | [G]     [C]     |\nE|--------0-------1--|--------3-------0--|\nB|------1-------1----|------3-------1----|\nG|----0-------2------|----4-------0------|\nD|-------------------|-------------------|\nA|-------------------|-------------------|\nE|-------------------|-------------------|",
-          "dica": "Deixe as cordas soarem umas sobre as outras.",
-          "instrucoesRodape": "Evite abafar acidentalmente."
+          "nome": "Variação (Cadência com Ritmo de Bossa Nova)",
+          "descricao": "Aplique a levada de Bossa Nova sincopada sobre a cadência II-V-I a 80 BPM.",
+          "bpm": 80,
+          "repeticoes": "4 ciclos",
+          "tablatura": "2/4 | [Dm7] | [G7]  | [C7M] | [C7M] |\n    | levada sincopada contínua     |",
+          "dica": "Conecte com o Laboratório Harmônico do app para visualizar os voicings montados.",
+          "instrucoesRodape": "A harmonia da MPB se desvenda neste exercício."
         }
       }
     },
     "errosComuns": [
       {
-        "erro": "Saltar para a posição de acorde fundamental básica em vez de usar as inversões.",
-        "correcao": "Siga rigorosamente a tablatura."
+        "erro": "Tirar todos os dedos da escala a cada troca de acorde e recolocá-los do zero.",
+        "correcao": "Identifique a 'nota guia' que permanece no mesmo traste e use-a como pivô imóvel."
       }
     ],
-    "aplicacaoMusical": "Arranjos elaborados, Chord Melody e harmonia para violão.",
-    "criterioSaida": "Movimentação fluida sem ruído excessivo dos dedos deslizando.",
-    "recuperacao": "Pratique a transição de um par de acordes (ex: C para F) repetidamente sem a mão direita.",
-    "sessao40min": [],
-    "ferramentaSugerida": "metronomo"
+    "aplicacaoMusical": "A espinha dorsal de 90% do cancioneiro da Bossa Nova, MPB e Jazz Standards ('Chega de Saudade', 'Autumn Leaves', 'Wave').",
+    "criterioSaida": "Executar a cadência do nível Alvo a 70 BPM com troca silenciosa e condução perfeita de vozes.",
+    "recuperacao": "Pratique a transição de apenas dois acordes por 3 minutos sem palhetar, focando apenas no movimento mínimo da mão esquerda.",
+    "sessao40min": [
+      { "fase": "Preparar", "minutos": 3, "objetivo": "Alongamento e afinação", "instrucao": "Verifique a afinação precisa das primas (cordas 1 a 4) com o afinador." },
+      { "fase": "Recuperar", "minutos": 5, "objetivo": "Mapeamento das notas guia", "instrucao": "Toque apenas as notas que se movem por semitom entre Dm7 e G7." },
+      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Compreensão harmônica", "instrucao": "Abra o Laboratório Harmônico do app e compare o som do Dm7(9) com o G7." },
+      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Estudo metronômico", "instrucao": "Treine a cadência no nível Alvo a 60 BPM até a transição se tornar invisível aos olhos." },
+      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Aplicação musical", "instrucao": "Toque com a Máquina de Ritmos em Bossa Nova a 75 BPM sentindo a resolução no C7M." },
+      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote seu BPM no progresso e celebre o domínio do voice leading!" }
+    ],
+    "ferramentaSugerida": "laboratorio"
   }
-
 ];

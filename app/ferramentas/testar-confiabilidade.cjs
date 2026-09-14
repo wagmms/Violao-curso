@@ -67,7 +67,24 @@ async function main(){
 
  await teste('11 atividades: selecionar, serializar e restaurar',a=>{for(let i=1;i<=11;i++){a.run(`trocarAtividade('ativ-${i}')`);const d=a.run('validarEsquemaBackup(serializarEstado()).dados');assert.equal(d.atividadeAtualId,`ativ-${i}`);assert.equal(d.sessao.nivel,d.nivelExercicioAtual);}});
  await teste('Interrupção ativa sem elapsed consolidado permanece no backup',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=60000;trocarAtividade('ativ-2');carregarEstadoInicial()`);assert.equal(a.run('state.tentativas.length'),1);assert.equal(a.run('state.tentativas[0].status'),'interrompida');assert.ok(a.run('state.tentativas[0].duracaoMs')>=60000);});
- await teste('Rascunhos não iniciam; timer tolera roteiro vazio',a=>{for(let i=7;i<=11;i++){a.run(`trocarAtividade('ativ-${i}');atualizarTimer()`);assert.equal(a.run('iniciarSessao()'),false);assert.equal(a.run('state.sessao.ativa'),false);}a.run(`navegarPara('praticar')`);assert.equal(a.w.document.querySelectorAll('.btn-iniciar-ativ:disabled').length,5);});
+  await teste('Rascunhos não iniciam; timer tolera roteiro vazio',a=>{
+    a.run(`
+      pausarSessao();
+      const rascunhoMock = { id: 'ativ-mock-rascunho', titulo: 'Rascunho Teste', statusOperacional: 'rascunho', sessao40min: [] };
+      atividadesDados.push(rascunhoMock);
+      ATIVIDADES_VALIDAS_IDS.add('ativ-mock-rascunho');
+      trocarAtividade('ativ-mock-rascunho');
+      atualizarTimer();
+    `);
+    assert.equal(a.run('iniciarSessao()'), false);
+    assert.equal(a.run('state.sessao.ativa'), false);
+    a.run(`
+      atividadesDados.pop();
+      ATIVIDADES_VALIDAS_IDS.delete('ativ-mock-rascunho');
+      trocarAtividade('ativ-1');
+      atualizarTimer();
+    `);
+  });
  await teste('Checkpoint e exportação usam o tempo ativo consolidado',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=600000;ultimoCheckpoint=0;atualizarTimer()`);const saved=JSON.parse(a.w.localStorage.getItem('metodo_triade_v2'));assert.ok(saved.sessao.elapsedMs>=600000);assert.ok(Math.abs(saved.sessao.elapsedMs-a.run('serializarEstado().sessao.elapsedMs'))<50);});
  await teste('pagehide salva e pausa antes de fechar',a=>{a.run('iniciarSessao();state.sessao.ultimoTimestamp-=600000');a.w.dispatchEvent(new a.w.Event('pagehide'));assert.ok(JSON.parse(a.w.localStorage.getItem('metodo_triade_v2')).sessao.elapsedMs>=600000);assert.equal(a.run('state.sessao.ativa'),false);});
  await teste('Relógio regressivo não duplica tempo nem aceita delta negativo',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=10000`);let ms=a.run('tempoDecorrido()');a.run('atualizarTimer();atualizarTimer();pausarSessao()');assert.ok(a.run('state.sessao.elapsedMs')<ms+50);a.run('state.sessao.ativa=true;state.sessao.ultimoTimestamp=Date.now()+60000');assert.equal(a.run('tempoDecorrido()'),a.run('state.sessao.elapsedMs'));});

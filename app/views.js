@@ -1318,6 +1318,161 @@ function renderizarFerramentaInterativa(ativ) {
           muted: []
         }
       }
+    },
+    Fsm7b5: {
+      name: "Fá Sustenido Meio-Diminuto (F#m7(b5))",
+      desc: "Acorde meio-diminuto fundamental do violão brasileiro (F# - A - C - E). Preparação suprema para B7 e resolução em Mi menor em Choros e Bossa Nova.",
+      formula: [
+        { label: "F#", degree: "1", role: "root" },
+        { label: "A", degree: "b3", role: "third" },
+        { label: "C", degree: "b5", role: "fifth" },
+        { label: "E", degree: "b7", role: "seventh" }
+      ],
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Clássica de Bossa Nova na 2ª casa",
+          tab: "2 - X - 2 - 2 - 1 - X",
+          tag: "Voicing Bossa / Choro",
+          caged: "Modelo Am6 / F#",
+          desc: "Polegar na 6ª corda casa 2 (F#), dedo 2 na 4ª corda casa 2 (Mi), dedo 3 na 3ª corda casa 2 (Lá) e dedo 1 na 2ª corda casa 1 (Dó). Sonoridade misteriosa e elegante.",
+          notes: [
+            { str: 1, fret: 1, note: "C", degree: "b5", finger: "1", role: "fifth" },
+            { str: 2, fret: 2, note: "A", degree: "b3", finger: "3", role: "third" },
+            { str: 3, fret: 2, note: "E", degree: "b7", finger: "2", role: "seventh" },
+            { str: 5, fret: 2, note: "F#", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [0, 4]
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Drop 2 na 9ª casa (Baixo na 5ª corda)",
+          tab: "X - 9 - 10 - 9 - 10 - X",
+          tag: "Drop 2 Jazz / MPB",
+          caged: "Modelo Em7(b5)",
+          desc: "Baixo na 5ª corda casa 9 (F#), dedo 3 na 4ª corda casa 10 (Dó), dedo 2 na 3ª corda casa 9 (Mi) e dedo 4 na 2ª corda casa 10 (Lá).",
+          notes: [
+            { str: 1, fret: 10, note: "A", degree: "b3", finger: "4", role: "third" },
+            { str: 2, fret: 9, note: "E", degree: "b7", finger: "2", role: "seventh" },
+            { str: 3, fret: 10, note: "C", degree: "b5", finger: "3", role: "fifth" },
+            { str: 4, fret: 9, note: "F#", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [0, 5]
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (F#m7(b5))",
+          tab: "Visão Panorâmica",
+          tag: "Mapa Completo",
+          caged: "Todas as Ocorrências",
+          desc: "Todas as ocorrências de F#, A, C e E pelo braço do violão.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "b7", finger: "0", role: "seventh" },
+            { str: 0, fret: 2, note: "F#", degree: "1", finger: "1", role: "root" },
+            { str: 0, fret: 5, note: "A", degree: "b3", finger: "3", role: "third" },
+            { str: 0, fret: 8, note: "C", degree: "b5", finger: "4", role: "fifth" },
+            { str: 1, fret: 1, note: "C", degree: "b5", finger: "1", role: "fifth" },
+            { str: 1, fret: 5, note: "E", degree: "b7", finger: "3", role: "seventh" },
+            { str: 1, fret: 7, note: "F#", degree: "1", finger: "4", role: "root" },
+            { str: 1, fret: 10, note: "A", degree: "b3", finger: "1", role: "third" },
+            { str: 2, fret: 2, note: "A", degree: "b3", finger: "2", role: "third" },
+            { str: 2, fret: 5, note: "C", degree: "b5", finger: "4", role: "fifth" },
+            { str: 2, fret: 9, note: "E", degree: "b7", finger: "1", role: "seventh" },
+            { str: 2, fret: 11, note: "F#", degree: "1", finger: "3", role: "root" },
+            { str: 3, fret: 2, note: "E", degree: "b7", finger: "2", role: "seventh" },
+            { str: 3, fret: 4, note: "F#", degree: "1", finger: "4", role: "root" },
+            { str: 3, fret: 7, note: "A", degree: "b3", finger: "1", role: "third" },
+            { str: 3, fret: 10, note: "C", degree: "b5", finger: "3", role: "fifth" },
+            { str: 4, fret: 0, note: "A", degree: "b3", finger: "0", role: "third" },
+            { str: 4, fret: 3, note: "C", degree: "b5", finger: "2", role: "fifth" },
+            { str: 4, fret: 7, note: "E", degree: "b7", finger: "1", role: "seventh" },
+            { str: 4, fret: 9, note: "F#", degree: "1", finger: "3", role: "root" },
+            { str: 5, fret: 0, note: "E", degree: "b7", finger: "0", role: "seventh" },
+            { str: 5, fret: 2, note: "F#", degree: "1", finger: "1", role: "root" },
+            { str: 5, fret: 5, note: "A", degree: "b3", finger: "3", role: "third" },
+            { str: 5, fret: 8, note: "C", degree: "b5", finger: "4", role: "fifth" }
+          ],
+          muted: []
+        }
+      }
+    },
+    B7b13: {
+      name: "Si com Sétima e 13ª Menor (B7(b13))",
+      desc: "O acorde dominante alterado mais poético da MPB (B - D# - G - A). Cria a tensão dramática perfeita para resolver em Em ou Em7.",
+      formula: [
+        { label: "B", degree: "1", role: "root" },
+        { label: "D#", degree: "3M", role: "third" },
+        { label: "G", degree: "b13", role: "ext" },
+        { label: "A", degree: "b7", role: "seventh" }
+      ],
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Voicing Bossa Nova na 7ª casa",
+          tab: "7 - X - 7 - 8 - 8 - X",
+          tag: "Voicing Tom Jobim",
+          caged: "Modelo E7 Alterado",
+          desc: "Baixo na 6ª corda casa 7 (Si) com o polegar, dedo 2 na 4ª corda casa 7 (Lá), dedo 3 na 3ª corda casa 8 (Ré#) e dedo 4 na 2ª corda casa 8 (Sol/b13).",
+          notes: [
+            { str: 1, fret: 8, note: "G", degree: "b13", finger: "4", role: "ext" },
+            { str: 2, fret: 8, note: "D#", degree: "3M", finger: "3", role: "third" },
+            { str: 3, fret: 7, note: "A", degree: "b7", finger: "2", role: "seventh" },
+            { str: 5, fret: 7, note: "B", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [0, 4]
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Posição Aberta na 2ª casa",
+          tab: "X - 2 - 1 - 2 - 0 - 3",
+          tag: "Acorde Aberto",
+          caged: "Modelo B7 Aberto",
+          desc: "Dedo 2 na 5ª corda casa 2 (Si), dedo 1 na 4ª corda casa 1 (Ré#), dedo 3 na 3ª corda casa 2 (Lá), 2ª corda solta (Si) e dedo 4 na 1ª corda casa 3 (Sol/b13).",
+          notes: [
+            { str: 0, fret: 3, note: "G", degree: "b13", finger: "4", role: "ext" },
+            { str: 1, fret: 0, note: "B", degree: "1", finger: "0", role: "root" },
+            { str: 2, fret: 2, note: "A", degree: "b7", finger: "3", role: "seventh" },
+            { str: 3, fret: 1, note: "D#", degree: "3M", finger: "1", role: "third" },
+            { str: 4, fret: 2, note: "B", degree: "1", finger: "2", role: "root" }
+          ],
+          muted: [5]
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (B7(b13))",
+          tab: "Visão Panorâmica",
+          tag: "Mapa Completo",
+          caged: "Todas as Ocorrências",
+          desc: "Todas as notas de B, D#, G e A pelo braço.",
+          notes: [
+            { str: 0, fret: 3, note: "G", degree: "b13", finger: "3", role: "ext" },
+            { str: 0, fret: 5, note: "A", degree: "b7", finger: "1", role: "seventh" },
+            { str: 0, fret: 7, note: "B", degree: "1", finger: "2", role: "root" },
+            { str: 0, fret: 11, note: "D#", degree: "3M", finger: "4", role: "third" },
+            { str: 1, fret: 0, note: "B", degree: "1", finger: "0", role: "root" },
+            { str: 1, fret: 4, note: "D#", degree: "3M", finger: "3", role: "third" },
+            { str: 1, fret: 8, note: "G", degree: "b13", finger: "4", role: "ext" },
+            { str: 1, fret: 10, note: "A", degree: "b7", finger: "1", role: "seventh" },
+            { str: 2, fret: 0, note: "G", degree: "b13", finger: "0", role: "ext" },
+            { str: 2, fret: 2, note: "A", degree: "b7", finger: "2", role: "seventh" },
+            { str: 2, fret: 4, note: "B", degree: "1", finger: "3", role: "root" },
+            { str: 2, fret: 8, note: "D#", degree: "3M", finger: "1", role: "third" },
+            { str: 3, fret: 1, note: "D#", degree: "3M", finger: "1", role: "third" },
+            { str: 3, fret: 5, note: "G", degree: "b13", finger: "1", role: "ext" },
+            { str: 3, fret: 7, note: "A", degree: "b7", finger: "3", role: "seventh" },
+            { str: 3, fret: 9, note: "B", degree: "1", finger: "4", role: "root" },
+            { str: 4, fret: 0, note: "A", degree: "b7", finger: "0", role: "seventh" },
+            { str: 4, fret: 2, note: "B", degree: "1", finger: "2", role: "root" },
+            { str: 4, fret: 6, note: "D#", degree: "3M", finger: "1", role: "third" },
+            { str: 4, fret: 10, note: "G", degree: "b13", finger: "4", role: "ext" },
+            { str: 5, fret: 3, note: "G", degree: "b13", finger: "3", role: "ext" },
+            { str: 5, fret: 5, note: "A", degree: "b7", finger: "1", role: "seventh" },
+            { str: 5, fret: 7, note: "B", degree: "1", finger: "2", role: "root" },
+            { str: 5, fret: 11, note: "D#", degree: "3M", finger: "4", role: "third" }
+          ],
+          muted: []
+        }
+      }
     }
   };
 
@@ -1341,6 +1496,8 @@ function renderizarFerramentaInterativa(ativ) {
             <option value="Dm79" ${lhPresetKey === 'Dm79' ? 'selected' : ''}>Dm7(9) • Ré Menor com 9ª (Bossa Nova)</option>
             <option value="G7" ${lhPresetKey === 'G7' ? 'selected' : ''}>G7 • Sol Dominante (Mixolídio)</option>
             <option value="EmPent" ${lhPresetKey === 'EmPent' ? 'selected' : ''}>Em7 • Mi Menor com 7ª</option>
+            <option value="Fsm7b5" ${lhPresetKey === 'Fsm7b5' ? 'selected' : ''}>F#m7(b5) • Meio-Diminuto (Bossa e Choro)</option>
+            <option value="B7b13" ${lhPresetKey === 'B7b13' ? 'selected' : ''}>B7(b13) • Si Dominante Alterado (Baden / Jobim)</option>
           </select>
         </div>
 
@@ -2099,13 +2256,18 @@ function filtrarBiblioteca() {
             return `
             <div class="aula-item">
               <div class="aula-item-info">
-                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}${hasAnotacao ? ' 📝' : ''}</span>
+                <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+                  <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}${hasAnotacao ? ' 📝' : ''}</span>
+                  ${aula.cursoOrigem === 'Kaiserplay' ? '<span style="background:rgba(217,119,6,0.15); color:var(--warning); font-size:0.65rem; font-weight:600; padding:1px 6px; border-radius:4px;">Kaiserplay</span>' : '<span style="background:rgba(59,130,246,0.15); color:var(--accent); font-size:0.65rem; font-weight:600; padding:1px 6px; border-radius:4px;">Tríade</span>'}
+                </div>
                 <div class="aula-item-links">
                   ${aula.materiais.map(mat => {
                     if (mat.utilizavel && mat.url && mat.url.startsWith('https://drive.google.com')) {
                       return `<a href="${escapeHTML(mat.url)}" target="_blank" rel="noopener noreferrer">↗ ${escapeHTML(mat.tipo.toUpperCase())}: ${escapeHTML(mat.titulo)}</a>`;
+                    } else if (mat.caminhoLocal || mat.status_verificacao === 'local_katomart') {
+                      return `<span style="color: var(--secondary); font-size: 0.75rem;">📁 ${escapeHTML(mat.tipo.toUpperCase())}: ${escapeHTML(mat.titulo)} (Local)</span>`;
                     } else {
-                      return `<span style="color: var(--text-dim); font-size: 0.75rem;">${escapeHTML(mat.tipo)}: ${escapeHTML(mat.titulo)} (indisponível)</span>`;
+                      return `<span style="color: var(--text-dim); font-size: 0.75rem;">${escapeHTML(mat.tipo)}: ${escapeHTML(mat.titulo)}</span>`;
                     }
                   }).join(' · ')}
                 </div>
