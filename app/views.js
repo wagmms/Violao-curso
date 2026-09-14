@@ -353,6 +353,11 @@ function renderizarTelaHoje() {
               `).join('')}
             </ul>
           </div>
+
+          <details class="bloco-card" ${atividadeTemAnotacao(ativ.id) ? 'open' : ''}>
+            <summary style="font-weight: 600; cursor: pointer; color: var(--text-main); margin-bottom: 8px;">Minhas Anotações de Prática</summary>
+            <textarea id="textarea-anotacoes-${ativ.id}" style="width: 100%; height: 120px; padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); resize: vertical; background: var(--bg-surface); color: var(--text-main); font-family: inherit; font-size: 0.9rem; margin-top: 8px;" placeholder="Ex: Relaxar o polegar esquerdo no compasso 3; usar unha com ângulo de 45° no indicador.">${state.anotacoes && state.anotacoes[ativ.id] ? state.anotacoes[ativ.id] : ''}</textarea>
+          </details>
         </div>
 
         <!-- Coluna Direita: Exercício Visual e Ferramentas -->
@@ -425,6 +430,19 @@ function renderizarTelaHoje() {
         renderizarTelaAprender();
       };
     });
+
+    const textareaAnotacoes = $('textarea-anotacoes-' + ativ.id);
+    if (textareaAnotacoes) {
+      let timeoutId;
+      const saveAnotacao = () => {
+        salvarAnotacaoPratica(ativ.id, textareaAnotacoes.value);
+      };
+      textareaAnotacoes.addEventListener('input', () => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(saveAnotacao, 500);
+      });
+      textareaAnotacoes.addEventListener('blur', saveAnotacao);
+    }
 
     $('btn-trocar-atividade').onclick = () => navegarPara('praticar');
     $('btn-registrar-dificuldade-rapida').onclick = () => abrirModalDificuldade(ativ);
@@ -1642,7 +1660,7 @@ function renderizarFerramentaInterativa(ativ) {
             <div class="card-atividade">
               <div class="card-atividade-topo">
                 <span class="card-area-badge">${escapeHTML(a.area)}</span>
-                <h4>${escapeHTML(a.titulo)}</h4>
+                <h4>${escapeHTML(a.titulo)}${atividadeTemAnotacao(a.id) ? ' 📝' : ''}</h4>
                 <p>${escapeHTML(a.metaObservavel)}</p>
                 <div class="card-tags">
                   ${a.tags.map(t => `<span class="tag-pill">#${escapeHTML(t)}</span>`).join('')}
@@ -2074,10 +2092,12 @@ function filtrarBiblioteca() {
       accordion.innerHTML = `
         <summary>${escapeHTML(mod.nome)} (${aulasFiltradas.length} aulas)</summary>
         <div class="modulo-aulas-container">
-          ${aulasFiltradas.map(aula => `
+          ${aulasFiltradas.map(aula => {
+            const hasAnotacao = atividadesDados.some(at => atividadeTemAnotacao(at.id) && at.fontes && at.fontes.some(f => f.aulaId === aula.id));
+            return `
             <div class="aula-item">
               <div class="aula-item-info">
-                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}</span>
+                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}${hasAnotacao ? ' 📝' : ''}</span>
                 <div class="aula-item-links">
                   ${aula.materiais.map(mat => {
                     if (mat.utilizavel && mat.url && mat.url.startsWith('https://drive.google.com')) {
@@ -2090,7 +2110,8 @@ function filtrarBiblioteca() {
               </div>
               <span style="font-size: 0.75rem; color: var(--text-dim);">ID: ${escapeHTML(aula.id)}</span>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
       `;
 
