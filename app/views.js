@@ -1469,6 +1469,19 @@ function renderizarFerramentaInterativa(ativ) {
       const btn = $(`lh-mode-${m}`);
       if (btn) btn.classList.toggle('ativo', lhViewMode === m);
     });
+
+    // P1-7: Minhas Anotações de Prática
+    const divAnotacoes = document.createElement('div');
+    divAnotacoes.style.marginTop = '20px';
+    divAnotacoes.innerHTML = `<details style="border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 8px;">
+      <summary style="font-weight: bold; cursor: pointer; display: list-item;">Minhas Anotações de Prática</summary>
+      <textarea id="anotacoes-pratica-aprender" rows="4" style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); resize: vertical;" placeholder="Ex: Relaxar o polegar esquerdo no compasso 3..."></textarea>
+    </details>`;
+    containerPrinc.appendChild(divAnotacoes);
+
+    const txtAnot = divAnotacoes.querySelector('#anotacoes-pratica-aprender');
+    txtAnot.value = state.anotacoes?.[atividade.id] || '';
+    txtAnot.onblur = () => { if (!state.anotacoes) state.anotacoes = {}; state.anotacoes[atividade.id] = escapeHTML(txtAnot.value); salvarEstado(); };
   }
 
   function desenharNotasLaboratorio() {
@@ -1641,7 +1654,8 @@ function renderizarFerramentaInterativa(ativ) {
             <div class="card-atividade">
               <div class="card-atividade-topo">
                 <span class="card-area-badge">${escapeHTML(a.area)}</span>
-                <h4>${escapeHTML(a.titulo)}</h4>
+                <h4>${escapeHTML(a.titulo)}
+                ${state.anotacoes && state.anotacoes[a.id] && state.anotacoes[a.id].trim() !== '' ? '<span style="font-size: 0.9em;" title="Possui anotações">📝</span>' : ''}</h4>
                 <p>${escapeHTML(a.metaObservavel)}</p>
                 <div class="card-tags">
                   ${a.tags.map(t => `<span class="tag-pill">#${escapeHTML(t)}</span>`).join('')}
@@ -2005,7 +2019,8 @@ function filtrarBiblioteca() {
           ${aulasFiltradas.map(aula => `
             <div class="aula-item">
               <div class="aula-item-info">
-                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}</span>
+                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}
+                ${state.anotacoes && state.anotacoes[aula.id] && state.anotacoes[aula.id].trim() !== '' ? '<span style="font-size: 0.9em;" title="Possui anotações">📝</span>' : ''}</span>
                 <div class="aula-item-links">
                   ${aula.materiais.map(mat => {
                     if (mat.utilizavel && mat.url && mat.url.startsWith('https://drive.google.com')) {

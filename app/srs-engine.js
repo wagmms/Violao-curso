@@ -73,6 +73,15 @@ function abrirModalResultado(ativ) {
   $('select-res-status').value = '';
   $('input-res-bpm').value = '';
   $('input-res-obs').value = '';
+  const txtModalAnot = $('anotacoes-pratica-modal');
+  if (txtModalAnot) {
+    txtModalAnot.value = state.anotacoes?.[ativ.id] || '';
+    txtModalAnot.onblur = () => {
+      if (!state.anotacoes) state.anotacoes = {};
+      state.anotacoes[ativ.id] = txtModalAnot.value;
+      salvarEstado();
+    };
+  }
   $('res-compassos').value = '';
   $('res-tentativas').value = '';
   for (const id of ['chk-pulso','chk-notas','chk-encerramento']) $(id).checked = false;
@@ -113,6 +122,11 @@ function abrirModalResultado(ativ) {
         checklistExecutado: {pulso: $('chk-pulso').checked, notas: $('chk-notas').checked, encerramento: $('chk-encerramento').checked},
         criterioConfirmado: criterio.querySelector('input').checked, observacoes: $('input-res-obs').value.trim()};
       if (serie) tentativa.serieOuvido = JSON.parse(JSON.stringify(serie));
+      // Salva anotações caso não tenha saído o blur
+      if (txtModalAnot) {
+        if (!state.anotacoes) state.anotacoes = {};
+        state.anotacoes[ativ.id] = txtModalAnot.value;
+      }
       // Todas as validações precedem a primeira mutação do histórico.
       state.tentativas.push(tentativa);
       if (status === 'consegui' && nivel === 'alvo') state.habilidades[ativ.slug] = {status:'alvo_demonstrado',data:obterDataLocal(),tentativaId:tentativa.id};

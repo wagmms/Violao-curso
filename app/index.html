@@ -202,8 +202,14 @@
           <label style="display: block; margin-top: 5px;"><input type="checkbox" id="chk-notas" class="criterio-check-meta"> Todas as notas soaram limpas</label>
           <label style="display: block; margin-top: 5px;"><input type="checkbox" id="chk-encerramento" class="criterio-check-meta"> Encerramento deliberado</label>
         </fieldset>
-        <div>
-          <label for="input-res-obs"><strong>Anotações / Próximo passo pessoal:</strong></label>
+
+        <details style="margin-top: 12px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 8px;">
+          <summary style="font-weight: bold; cursor: pointer;">Minhas Anotações de Prática</summary>
+          <textarea id="anotacoes-pratica-modal" rows="3" style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); resize: vertical;" placeholder="Ex: Relaxar o polegar esquerdo no compasso 3..."></textarea>
+        </details>
+
+        <div style="margin-top: 12px;">
+          <label for="input-res-obs"><strong>Próximo passo pessoal (nesta tentativa):</strong></label>
           <textarea id="input-res-obs" rows="2" style="width: 100%; padding: 8px; margin-top: 4px;" placeholder="Ex: Sentir o peso do braço e antecipar o dedo-guia."></textarea>
         </div>
       </div>

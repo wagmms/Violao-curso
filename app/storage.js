@@ -26,7 +26,8 @@ var state = {
   revisoes: [],
   treinoOuvido: null,
   habilidades: {},
-  legado: { assistidos: [], praticados: [], notas: {} }
+  legado: { assistidos: [], praticados: [], notas: {} },
+  anotacoes: {}
 };
 
 var isStorageDisponivel = true;
@@ -267,7 +268,8 @@ function validarEsquemaBackup(obj) {
           revisoes: obj.revisoes,
           treinoOuvido: validarSerieOuvido(obj.treinoOuvido),
           habilidades: (obj.habilidades && typeof obj.habilidades === 'object') ? obj.habilidades : {},
-          legado: legadoValidado
+          legado: legadoValidado,
+          anotacoes: (obj.anotacoes && typeof obj.anotacoes === 'object') ? obj.anotacoes : {}
         }
       };
     }
@@ -431,7 +433,8 @@ async function processarArquivoBackup(event) {
               assistidos: [...new Set([...state.legado.assistidos, ...d.legado.assistidos])],
               praticados: [...new Set([...state.legado.praticados, ...d.legado.praticados])],
               notas: { ...d.legado.notas, ...state.legado.notas } // local ganha notas
-            }
+            },
+            anotacoes: { ...d.anotacoes, ...state.anotacoes }
           };
           normalizarRevisoes(state.revisoes);
           treinoOuvido = state.treinoOuvido;
