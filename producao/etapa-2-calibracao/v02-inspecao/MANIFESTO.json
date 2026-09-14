@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v02-inspecao",
+  "etapa": "etapa-2-calibracao-inspecao",
+  "dataGeracao": "2026-09-14",
+  "produtor": "Antigravity",
+  "revisor": "Codex",
+  "candidatoCalibradoPrincipal": "cand-004",
+  "statusGeralLote": "aguardando_revisao",
+  "candidatos": [
+    {
+      "id": "cand-004",
+      "nome": "Leitura de Partitura na Pauta (Brilha Brilha Estrelinha)",
+      "dominio": "leitura_notacao",
+      "aulaPropostaId": "aula-prop-014",
+      "habilidadePrincipalId": "hab-not-001",
+      "entradaPrincipal": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+      "fontesOrigem": [
+        "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+      ],
+      "arquivosFisicosAuditados": [
+        "arq-0408",
+        "arq-0415"
+      ],
+      "totalReferencias": 2,
+      "totalArquivosUnicos": 2,
+      "statusProdutor": "aprovado_para_revisao_codex",
+      "justificativa": "Método visual rigoroso aplicado: conferida imagem arq-0408.png, notas mapeadas na 1ª posição (cordas 5, 4 e 3), convenção transpositora explicada, soma de durações 4/4 validada e plano didático específico de leitura estruturado."
+    },
+    {
+      "id": "cand-001",
+      "nome": "Balada: Ritmo com Polegar e Dedos",
+      "dominio": "ritmo_levadas",
+      "statusProdutor": "em_coleta_e_correcao_origens",
+      "nota": "Origem canônica real sendo alinhada com aula-mod-1-17 conforme apontado no parecer I-01."
+    },
+    {
+      "id": "cand-002",
+      "nome": "Mecanismo de Troca Fluida: Acordes Lá Maior e Ré Maior",
+      "dominio": "harmonia",
+      "statusProdutor": "em_coleta_e_correcao_origens",
+      "nota": "Origem canônica real sendo alinhada com aula-mod-1-10; ressalva sobre pivô e identidade dos acordes em refinamento."
+    },
+    {
+      "id": "cand-003",
+      "nome": "Treinamento Auditivo: Reconhecimento de Intervalos Diatônicos",
+      "dominio": "percepcao_auditiva",
+      "statusProdutor": "em_coleta_e_correcao_oitavas",
+      "nota": "Correção de frequências (C4 = 261,63 Hz na corda 2 casa 1 vs C3 = 130,81 Hz na corda 5 casa 3) e separação de áudio da fonte."
+    },
+    {
+      "id": "cand-005",
+      "nome": "Técnica Percussiva / Acompanhamento Básico",
+      "dominio": "acompanhamento",
+      "statusProdutor": "em_reavaliacao_de_escopo",
+      "nota": "Thumb Slap mantido como técnica intermediária futura; avaliando inclusão de fonte de acompanhamento básico observável."
+    },
+    {
+      "id": "cand-006",
+      "nome": "Violão Solo: Pequena Valsa (F. Carulli)",
+      "dominio": "solo/arranjo",
+      "statusProdutor": "em_reconstrucao_compasso_3_8",
+      "nota": "Reconstrução métrica em compasso 3/8 com baixo em semínima pontuada e acordes agudos em colcheias a partir de arq-0460.png."
+    }
+  ]
+}

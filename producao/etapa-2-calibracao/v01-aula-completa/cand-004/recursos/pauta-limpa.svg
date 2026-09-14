@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" width="1600" height="300">
+  <rect width="1600" height="300" fill="#ffffff"/>
+  <text x="800" y="32" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#0f172a">Brilha Brilha Estrelinha (Adaptação para Leitura na 1ª Posição)</text>
+  <text x="800" y="58" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle" fill="#475569">Pauta de Estudo / Saída de Leitura | Clave de Sol | Fórmula: 4/4 | Alvo: 60 BPM</text>
+  <line x1="80" y1="130" x2="1520" y2="130" stroke="#000000" stroke-width="1.5"/>
+  <line x1="80" y1="146" x2="1520" y2="146" stroke="#000000" stroke-width="1.5"/>
+  <line x1="80" y1="162" x2="1520" y2="162" stroke="#000000" stroke-width="1.5"/>
+  <line x1="80" y1="178" x2="1520" y2="178" stroke="#000000" stroke-width="1.5"/>
+  <line x1="80" y1="194" x2="1520" y2="194" stroke="#000000" stroke-width="1.5"/>
+  <line x1="80" y1="130" x2="80" y2="194" stroke="#000000" stroke-width="2.5"/>
+  <text x="104" y="178" font-family="Segoe UI Symbol, serif" font-size="54" text-anchor="middle" fill="#000000">&#x1D11E;</text>
+  <text x="152" y="154" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#000000">4</text>
+  <text x="152" y="186" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#000000">4</text>
+  <!-- Barras de compasso -->
+  <line x1="522" y1="130" x2="522" y2="194" stroke="#000000" stroke-width="1.5"/>
+  <line x1="854" y1="130" x2="854" y2="194" stroke="#000000" stroke-width="1.5"/>
+  <line x1="1187" y1="130" x2="1187" y2="194" stroke="#000000" stroke-width="1.5"/>
+  <line x1="1514" y1="130" x2="1514" y2="194" stroke="#000000" stroke-width="1.5"/>
+  <line x1="1520" y1="130" x2="1520" y2="194" stroke="#000000" stroke-width="5"/>
+  <text x="202" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#64748b">c. 1</text>
+  <text x="534" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#64748b">c. 2</text>
+  <text x="866" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#64748b">c. 3</text>
+  <text x="1199" y="114" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#64748b">c. 4</text>
+  <!-- Compasso 1: C4 C4 G4 G4 -->
+  <line x1="226" y1="210" x2="258" y2="210" stroke="#000000" stroke-width="1.5"/>
+  <ellipse cx="242" cy="210" rx="8" ry="6" transform="rotate(-15 242 210)" fill="#000000"/>
+  <line x1="249.5" y1="210" x2="249.5" y2="162" stroke="#000000" stroke-width="2"/>
+  <line x1="309" y1="210" x2="341" y2="210" stroke="#000000" stroke-width="1.5"/>
+  <ellipse cx="325" cy="210" rx="8" ry="6" transform="rotate(-15 325 210)" fill="#000000"/>
+  <line x1="332.5" y1="210" x2="332.5" y2="162" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="408" cy="178" rx="8" ry="6" transform="rotate(-15 408 178)" fill="#000000"/>
+  <line x1="415.5" y1="178" x2="415.5" y2="130" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="491" cy="178" rx="8" ry="6" transform="rotate(-15 491 178)" fill="#000000"/>
+  <line x1="498.5" y1="178" x2="498.5" y2="130" stroke="#000000" stroke-width="2"/>
+  <!-- Compasso 2: A4 A4 G4(2) -->
+  <ellipse cx="589" cy="170" rx="8" ry="6" transform="rotate(-15 589 170)" fill="#000000"/>
+  <line x1="596.5" y1="170" x2="596.5" y2="122" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="688" cy="170" rx="8" ry="6" transform="rotate(-15 688 170)" fill="#000000"/>
+  <line x1="695.5" y1="170" x2="695.5" y2="122" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="788" cy="178" rx="8" ry="6" transform="rotate(-15 788 178)" fill="#ffffff" stroke="#000000" stroke-width="2.5"/>
+  <line x1="795.5" y1="178" x2="795.5" y2="130" stroke="#000000" stroke-width="2"/>
+  <!-- Compasso 3: F4 F4 E4 E4 -->
+  <ellipse cx="904" cy="186" rx="8" ry="6" transform="rotate(-15 904 186)" fill="#000000"/>
+  <line x1="911.5" y1="186" x2="911.5" y2="138" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="987" cy="186" rx="8" ry="6" transform="rotate(-15 987 186)" fill="#000000"/>
+  <line x1="994.5" y1="186" x2="994.5" y2="138" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="1070" cy="194" rx="8" ry="6" transform="rotate(-15 1070 194)" fill="#000000"/>
+  <line x1="1077.5" y1="194" x2="1077.5" y2="146" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="1153" cy="194" rx="8" ry="6" transform="rotate(-15 1153 194)" fill="#000000"/>
+  <line x1="1160.5" y1="194" x2="1160.5" y2="146" stroke="#000000" stroke-width="2"/>
+  <!-- Compasso 4: D4 D4 C4(2) -->
+  <ellipse cx="1254" cy="202" rx="8" ry="6" transform="rotate(-15 1254 202)" fill="#000000"/>
+  <line x1="1261.5" y1="202" x2="1261.5" y2="154" stroke="#000000" stroke-width="2"/>
+  <ellipse cx="1353" cy="202" rx="8" ry="6" transform="rotate(-15 1353 202)" fill="#000000"/>
+  <line x1="1360.5" y1="202" x2="1360.5" y2="154" stroke="#000000" stroke-width="2"/>
+  <line x1="1437" y1="210" x2="1469" y2="210" stroke="#000000" stroke-width="1.5"/>
+  <ellipse cx="1453" cy="210" rx="8" ry="6" transform="rotate(-15 1453 210)" fill="#ffffff" stroke="#000000" stroke-width="2.5"/>
+  <line x1="1460.5" y1="210" x2="1460.5" y2="162" stroke="#000000" stroke-width="2"/>
+  <text x="800" y="280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#64748b">Convenção Violonística: Alturas soam 1 oitava abaixo do escrito. Executar na 1ª posição (cordas 5, 4 e 3 nas casas 0 a 3).</text>
+</svg>

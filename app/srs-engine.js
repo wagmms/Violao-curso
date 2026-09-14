@@ -23,6 +23,7 @@ function obterRecomendacao() {
 function trocarAtividade(novaId, nivel) {
   if (!ATIVIDADES_VALIDAS_IDS.has(novaId)) return false;
   if (nivel && !NIVEIS_VALIDOS.has(nivel)) return false;
+  if (state.aprendizagemCurso) state.aprendizagemCurso.aulaAtualId = null;
   const nivelFinal = nivel || (state.atividadeAtualId === novaId && state.nivelExercicioAtual ? state.nivelExercicioAtual : 'preparacao');
   if (state.atividadeAtualId !== novaId || state.sessao.concluida) {
     registrarInterrupcao('Sessão interrompida para trocar de atividade.');

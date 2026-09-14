@@ -1,0 +1,121 @@
+{
+  "data": "2026-09-14T20:37:24.778Z",
+  "candidatos": [
+    {
+      "id": "cand-001",
+      "origem": "aula-mod-6-29",
+      "origemExiste": true,
+      "referencias": 5,
+      "erros": [
+        {
+          "id": "arq-1375",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1380",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1381",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1382",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1383",
+          "erro": "fora_origem_manifesto"
+        }
+      ]
+    },
+    {
+      "id": "cand-002",
+      "origem": "aula-mod-5-10",
+      "origemExiste": true,
+      "referencias": 5,
+      "erros": [
+        {
+          "id": "arq-1320",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1324",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1326",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1327",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-1331",
+          "erro": "fora_origem_manifesto"
+        }
+      ]
+    },
+    {
+      "id": "cand-003",
+      "origem": "aula-mod-1-15",
+      "origemExiste": true,
+      "referencias": 5,
+      "erros": []
+    },
+    {
+      "id": "cand-004",
+      "origem": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+      "origemExiste": true,
+      "referencias": 8,
+      "erros": []
+    },
+    {
+      "id": "cand-005",
+      "origem": "aula-kaiser-24-5-thumb-slap-batida-fingerstyle",
+      "origemExiste": false,
+      "referencias": 3,
+      "erros": [
+        {
+          "id": "arq-0068",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-0071",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-0073",
+          "erro": "fora_origem_manifesto"
+        }
+      ]
+    },
+    {
+      "id": "cand-006",
+      "origem": "aula-kaiser-138-10-pequena-valsa-ferdinando-carulli-violao",
+      "origemExiste": false,
+      "referencias": 3,
+      "erros": [
+        {
+          "id": "arq-0460",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-0461",
+          "erro": "fora_origem_manifesto"
+        },
+        {
+          "id": "arq-0462",
+          "erro": "fora_origem_manifesto"
+        }
+      ]
+    }
+  ],
+  "conferenciaVisual": {
+    "arq-0408": "Página 1 renderizada e vista; notas da melodia começam Dó Dó Sol Sol Lá Lá Sol; mapa de cordas do dossiê incorreto",
+    "arq-0460": "Página 1 renderizada e vista; fórmula 3/8, não 3/4; baixo inicial é semínima pontuada e agudos são colcheias"
+  },
+  "avisosRender": "Poppler avisou fontes Symbol/ArialUnicode; notação central visível; não comprova todos os detalhes tipográficos",
+  "totalReferencias": 29
+}

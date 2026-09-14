@@ -1,0 +1,79 @@
+{
+  "escopo": "Eventos, MusicXML e frequência dominante do WAV por análise numérica; não escuta humana",
+  "erros": [],
+  "eventos": 14,
+  "notasMusicXML": 14,
+  "duracaoWavSegundos": 16.0,
+  "audio": [
+    {
+      "evento": "ev-001",
+      "picoHz": 130.0,
+      "nominalHz": 130.81
+    },
+    {
+      "evento": "ev-002",
+      "picoHz": 130.0,
+      "nominalHz": 130.81
+    },
+    {
+      "evento": "ev-003",
+      "picoHz": 196.67,
+      "nominalHz": 196.0
+    },
+    {
+      "evento": "ev-004",
+      "picoHz": 196.67,
+      "nominalHz": 196.0
+    },
+    {
+      "evento": "ev-005",
+      "picoHz": 220.0,
+      "nominalHz": 220.0
+    },
+    {
+      "evento": "ev-006",
+      "picoHz": 220.0,
+      "nominalHz": 220.0
+    },
+    {
+      "evento": "ev-007",
+      "picoHz": 196.67,
+      "nominalHz": 196.0
+    },
+    {
+      "evento": "ev-008",
+      "picoHz": 175.0,
+      "nominalHz": 174.61
+    },
+    {
+      "evento": "ev-009",
+      "picoHz": 175.0,
+      "nominalHz": 174.61
+    },
+    {
+      "evento": "ev-010",
+      "picoHz": 165.0,
+      "nominalHz": 164.81
+    },
+    {
+      "evento": "ev-011",
+      "picoHz": 165.0,
+      "nominalHz": 164.81
+    },
+    {
+      "evento": "ev-012",
+      "picoHz": 146.67,
+      "nominalHz": 146.83
+    },
+    {
+      "evento": "ev-013",
+      "picoHz": 146.67,
+      "nominalHz": 146.83
+    },
+    {
+      "evento": "ev-014",
+      "picoHz": 130.0,
+      "nominalHz": 130.81
+    }
+  ]
+}

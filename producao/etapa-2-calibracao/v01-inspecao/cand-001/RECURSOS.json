@@ -1,0 +1,56 @@
+{
+  "candidatoId": "cand-001",
+  "versao": "v01-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-1375",
+      "nome": "00000928 - 1. Aula.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 186227176,
+      "sha256": "3edfa8f6c21b4eb4ad70aa2bf5c96c05956b95915a6132980505901fe475e529"
+    },
+    {
+      "arquivoId": "arq-1380",
+      "nome": "00000929 - descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 1539,
+      "sha256": "61dd55b88d422739714af882f23f46cd9ce2bfd3b113baf8fc6d579b7da2061c"
+    },
+    {
+      "arquivoId": "arq-1381",
+      "nome": "00000930 - 1. Aula.pt_br.vtt",
+      "tipo": "legenda",
+      "tamanhoBytes": 17466,
+      "sha256": "c66e42598dcb12219e2064b3fc01bc9fb9e8656135ec69e7b7e9f425835d8dd4"
+    },
+    {
+      "arquivoId": "arq-1382",
+      "nome": "00000931 - 2. Aula.pt_br.vtt",
+      "tipo": "legenda",
+      "tamanhoBytes": 19002,
+      "sha256": "83ec17f80b6d656540d9804faf58433bf965d9ebb17136c73d7c3574f0e89263"
+    },
+    {
+      "arquivoId": "arq-1383",
+      "nome": "00000932 - 2. Aula.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 287990597,
+      "sha256": "2bda31fa8fe866cd0f8ea98a4d2d49b236e336e0aeccc26f1f37f31eb22ca3c7"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand-001-partitura",
+      "tipo": "diagrama_ou_partitura",
+      "obrigatorio": true,
+      "descricao": "Material de apoio visual para prática"
+    },
+    {
+      "id": "rec-cand-001-audio",
+      "tipo": "audio_referencia",
+      "obrigatorio": true,
+      "descricao": "Áudio de referência ou metrônomo"
+    }
+  ]
+}

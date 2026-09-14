@@ -1,0 +1,292 @@
+{
+  "data": "2026-09-14T19:48:32.046Z",
+  "limites": "Revisão documental e referencial; nenhum vídeo reproduzido ou PDF renderizado",
+  "etapa0": {
+    "arquivos": 2090,
+    "tamanhosDivergentes": [],
+    "idsArquivosDuplicados": 0,
+    "referencesDivergentes": [],
+    "hashesAmostra": [
+      {
+        "id": "arq-0408",
+        "real": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+        "declarado": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+        "confere": true
+      },
+      {
+        "id": "arq-0409",
+        "real": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+        "declarado": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+        "confere": true
+      },
+      {
+        "id": "arq-0410",
+        "real": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+        "declarado": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+        "confere": true
+      },
+      {
+        "id": "arq-0411",
+        "real": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+        "declarado": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+        "confere": true
+      },
+      {
+        "id": "arq-0412",
+        "real": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+        "declarado": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+        "confere": true
+      },
+      {
+        "id": "arq-0413",
+        "real": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+        "declarado": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+        "confere": true
+      },
+      {
+        "id": "arq-0414",
+        "real": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+        "declarado": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+        "confere": true
+      }
+    ]
+  },
+  "etapa1": {
+    "habilidades": 26,
+    "aulas": 13,
+    "dominiosReais": [
+      "ritmo",
+      "ouvido",
+      "leitura",
+      "tecnica",
+      "acompanhamento",
+      "harmonia",
+      "solo/arranjo"
+    ],
+    "grafoHabilidades": [],
+    "grafoAulas": [],
+    "matriz": {
+      "linhas": 631,
+      "entradasUnicas": 631,
+      "semDestinoReal": 611,
+      "habilidadesInexistentes": 611,
+      "evidenciasInexistentes": 631,
+      "arquivosIncompativeis": []
+    },
+    "habilidadesSemAula": [
+      {
+        "id": "hab-rit-005",
+        "nome": "Levada de Bossa Nova Básica (Estilo João Gilberto)"
+      },
+      {
+        "id": "hab-rit-006",
+        "nome": "Levada de Samba e Choro"
+      },
+      {
+        "id": "hab-rit-007",
+        "nome": "As Levadas de Baden Powell (Mão Direita)"
+      },
+      {
+        "id": "hab-ouv-004",
+        "nome": "Reconhecimento de Tríades Maiores e Menores"
+      },
+      {
+        "id": "hab-ouv-005",
+        "nome": "Tirar Frase Melódica Curta de Ouvido"
+      },
+      {
+        "id": "hab-aco-002",
+        "nome": "Condução de Baixos nos Acordes (Baixo Alternado / Inversões)"
+      },
+      {
+        "id": "hab-har-001",
+        "nome": "Compreensão e Aplicação do Campo Harmônico Maior"
+      },
+      {
+        "id": "hab-har-002",
+        "nome": "Sistema CAGED e Formatos Móveis de Acordes"
+      },
+      {
+        "id": "hab-sol-002",
+        "nome": "Arranjo Fingerstyle Completo (Melodia, Baixo e Harmonia)"
+      }
+    ],
+    "fontesPropostasAusentes": [],
+    "relacoesPropostasAusentes": [],
+    "estadosMatriz": [
+      "legenda_indexada",
+      "metadados_catalogo",
+      "nao_inspecionado"
+    ],
+    "arquivosCitadosCalibracao": [
+      {
+        "id": "arq-0056",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/3. Batida de Frevo e Marcha/1. Aula.mp4",
+        "bytes": 28306964,
+        "sha256": "315d97f2ed172c1b046d817d336e39135395f1249f7bfc39ad08cd7ebbf34ba2"
+      },
+      {
+        "id": "arq-0057",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/3. Batida de Frevo e Marcha/1. Aula.mp4.en.vtt",
+        "bytes": 11586,
+        "sha256": "b1a03ac0356c594cab8564a14a6fa3348dc0441ec2ba4cee7839a4778d84cd84"
+      },
+      {
+        "id": "arq-0036",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/19. Wave (Bossa Nova)/1. Aula.en.vtt",
+        "bytes": 1488,
+        "sha256": "bd7c8e835a8bbde14e45247470e5e7a71c21be44fbfb6623a086c1a2fc5e933c"
+      },
+      {
+        "id": "arq-0037",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/19. Wave (Bossa Nova)/1. Aula.mp4",
+        "bytes": 96242153,
+        "sha256": "b4f7cb8a74acc0acf6de3e9d183750c54eefe28afb292f1ab02e86f80bbab23a"
+      },
+      {
+        "id": "arq-0038",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/19. Wave (Bossa Nova)/2. Aula.mp4",
+        "bytes": 4058818,
+        "sha256": "9512ece4ddfaf7ede45a61341d509ee78f2c0e1848cbf06fa077ebc6fed73ff7"
+      },
+      {
+        "id": "arq-0039",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/19. Wave (Bossa Nova)/2. Aula.mp4.pt-orig.vtt",
+        "bytes": 8077,
+        "sha256": "2dba7f24f21494986ecb37f13f58447f0f0c0ece85b0014a2d1d155bb34410dd"
+      },
+      {
+        "id": "arq-0046",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/2. Batida de Choro/1. Aula.mp4.pt.vtt",
+        "bytes": 17408,
+        "sha256": "8dc2e43172a2f6ec6c95d7912eb21ab712e28a2e5cc702dde8dcfcb6bd46241f"
+      },
+      {
+        "id": "arq-0048",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/20. Chega de Saudade (Bossa Nova)/1. Aula.mp4",
+        "bytes": 39781736,
+        "sha256": "4ae8fa22cb5394a36f18d85c4990d7c66b6113e738e9f0900fd30cb4ed27e724"
+      },
+      {
+        "id": "arq-0050",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/20. Chega de Saudade (Bossa Nova)/descricao.md",
+        "bytes": 156,
+        "sha256": "0ecdd3e719c3714eb4d32275f312d5982b819d68f9cf463f855726c8e21ca9b7"
+      },
+      {
+        "id": "arq-0052",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/21. Noites Cariocas (Samba - Choro)/descricao.md",
+        "bytes": 340,
+        "sha256": "2919b665c9cfcd4e6c5d7dd3647a7a0b9c5a83bd9f8c0d8964c11416c31b3f1f"
+      },
+      {
+        "id": "arq-0047",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/2. Batida de Choro/descricao.md",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "arq-0049",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/20. Chega de Saudade (Bossa Nova)/2. Aula.mp4",
+        "bytes": 4107056,
+        "sha256": "cad45c9bd039a74b2b9a32fcd68824b312f24dac5b796e07236cadfaae854f6a"
+      },
+      {
+        "id": "arq-0051",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/21. Noites Cariocas (Samba - Choro)/1. Aula.mp4",
+        "bytes": 61843620,
+        "sha256": "eec4b6356cf14f08ec85a13756b34f93df9caa18edc24cb77ec6a912969be8b3"
+      },
+      {
+        "id": "arq-0053",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/22. Contracanto (Paulinho Nogueira) - Samba/1. Aula.mp4",
+        "bytes": 235343437,
+        "sha256": "1906b8ccbb052e0665d25fdbffebc6a2949c306c28cac31d4856e8bda1d94ce7"
+      },
+      {
+        "id": "arq-0803",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/2. Piratas do Caribe (Tema do Filme) - Fingerstyle/descricao.md",
+        "bytes": 194,
+        "sha256": "62d8ca058da2799693c68e53c09729efe324f5f9a8b8fb9106036d3573d9a1d8"
+      },
+      {
+        "id": "arq-0804",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/20. Trem das Onze (Samba)/1. Aula.en.vtt",
+        "bytes": 2481,
+        "sha256": "1cbd66351dcdd09fc6799110f937e0d82e2f30a2e022d7f478f1ba242b0e4ba7"
+      },
+      {
+        "id": "arq-0805",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/20. Trem das Onze (Samba)/1. Aula.mp4",
+        "bytes": 114419110,
+        "sha256": "d830b745fc0cbb35b5230443a24fc00a91b59e220b059bc5b2f65b4b3d72a18d"
+      },
+      {
+        "id": "arq-0806",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/20. Trem das Onze (Samba)/2. Aula.mp4",
+        "bytes": 14319711,
+        "sha256": "f28e5d7b268b2836862ad467e63adca71cfca335e25381c1429e9a0242fa4eaa"
+      },
+      {
+        "id": "arq-0807",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/20. Trem das Onze (Samba)/2. Aula.mp4.pt.vtt",
+        "bytes": 1217,
+        "sha256": "cc62593e013cf4a5635b2699c4639e43a2b8114b456382a404fbc0053f230fba"
+      },
+      {
+        "id": "arq-0808",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/20. Trem das Onze (Samba)/descricao.md",
+        "bytes": 172,
+        "sha256": "764306d0de56582831a10a251d659077f098f4edf12363b3ed3e283a343ddc8d"
+      },
+      {
+        "id": "arq-0809",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/21. Sonata ao Luar (Beethoven)/1. Aula.mp4",
+        "bytes": 211314678,
+        "sha256": "d5b407b875e0694abcacf9e5eecd25671eb60cdf3598f5c11b389272e54cb63c"
+      },
+      {
+        "id": "arq-0810",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/21. Sonata ao Luar (Beethoven)/1. Aula.pt-x-autogen.vtt",
+        "bytes": 3325,
+        "sha256": "0ac83fdf31a30c49440fccf33301dde5909fd645e117f1389e6586c268bb20e4"
+      },
+      {
+        "id": "arq-0811",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/21. Sonata ao Luar (Beethoven)/2. Aula.mp4",
+        "bytes": 68857526,
+        "sha256": "e0ef9ae959a374f9047266303077f480addf2a688da777a98e590bc41bb4bb24"
+      },
+      {
+        "id": "arq-0447",
+        "real": "Curso Kaiser/OS SEGREDOS DO BLUES/1. OS SEGREDOS DO BLUES/7. Exercício de Blues/1. Aula.mp4",
+        "bytes": 97266403,
+        "sha256": "274321c353081760d871eb8d5330e4ef064a887dbe438dc6afdb36b52d2e7876"
+      },
+      {
+        "id": "arq-0448",
+        "real": "Curso Kaiser/OS SEGREDOS DO BLUES/1. OS SEGREDOS DO BLUES/7. Exercício de Blues/2. Aula.mp4",
+        "bytes": 30492010,
+        "sha256": "d8e19272d786b718df16dc2df1e407f83f1eff29f48841268e29d82e11b75c21"
+      },
+      {
+        "id": "arq-0879",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/36. Choro N.1 (Villa-Lobos)/descricao.md",
+        "bytes": 604,
+        "sha256": "eea86a7f7cfe9d31395011a393fa6b29f0fedf96d81157571d54d58079847cde"
+      },
+      {
+        "id": "arq-0880",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/37. Noites Cariocas (Jacob do Bandolim)/1. Aula.mp4",
+        "bytes": 194621291,
+        "sha256": "e8e894aab997549191feeae0935e600f2f41eaa77bc557d9dc1eb15b8f14a0f8"
+      },
+      {
+        "id": "arq-0881",
+        "real": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/37. Noites Cariocas (Jacob do Bandolim)/2. Aula.mp4",
+        "bytes": 34600137,
+        "sha256": "79e0810c4b97372d1b9e0436a37cec8c5451de2823f3c15001e2170e69bc8b68"
+      }
+    ]
+  }
+}

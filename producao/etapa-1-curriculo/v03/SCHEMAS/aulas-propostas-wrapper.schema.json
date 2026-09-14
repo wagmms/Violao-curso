@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AulasPropostasWrapper",
+  "type": "object",
+  "required": [
+    "$schema",
+    "versao",
+    "dataGeracao",
+    "modulosPedagogicos",
+    "totalAulasPropostas",
+    "aulasPropostas"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "versao": {
+      "type": "string"
+    },
+    "dataGeracao": {
+      "type": "string"
+    },
+    "modulosPedagogicos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "nome",
+          "descricao"
+        ]
+      }
+    },
+    "totalAulasPropostas": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "aulasPropostas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "titulo",
+          "moduloPedagogicoId",
+          "habilidadePrincipalId",
+          "prerequisitosAulas",
+          "fontesCandidatas",
+          "decisaoEditorial",
+          "justificativa",
+          "nivel",
+          "praticaSaidaPlanejada",
+          "inspecaoPendente"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^aula-prop-[0-9]{3}$",
+            "minLength": 1
+          },
+          "titulo": {
+            "type": "string",
+            "minLength": 1
+          },
+          "moduloPedagogicoId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "habilidadePrincipalId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "habilidadesSecundarias": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prerequisitosAulas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fontesCandidatas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "decisaoEditorial": {
+            "type": "string",
+            "minLength": 1
+          },
+          "justificativa": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nivel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "praticaSaidaPlanejada": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inspecaoPendente": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

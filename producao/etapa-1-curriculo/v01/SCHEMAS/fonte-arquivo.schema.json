@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FonteArquivoFisico",
+  "type": "object",
+  "required": [
+    "arquivoId",
+    "caminhoRelativo",
+    "nomeArquivo",
+    "extensao",
+    "tamanhoBytes",
+    "sha256",
+    "tipo",
+    "cursoOrigem",
+    "statusAssociacao"
+  ],
+  "properties": {
+    "arquivoId": {
+      "type": "string",
+      "pattern": "^arq-[0-9]{4}$"
+    },
+    "caminhoRelativo": {
+      "type": "string"
+    },
+    "nomeArquivo": {
+      "type": "string"
+    },
+    "extensao": {
+      "type": "string"
+    },
+    "tamanhoBytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "video",
+        "legenda",
+        "pdf",
+        "audio",
+        "imagem",
+        "outro"
+      ]
+    },
+    "cursoOrigem": {
+      "type": "string",
+      "enum": [
+        "Triade",
+        "Kaiser",
+        "Raiz"
+      ]
+    },
+    "statusAssociacao": {
+      "type": "string",
+      "enum": [
+        "associado",
+        "nao_associado_redundante",
+        "nao_associado_fragmento",
+        "nao_associado_sistema",
+        "nao_associado_desconhecido"
+      ]
+    },
+    "motivoNaoAssociacao": {
+      "type": "string"
+    },
+    "entradasVinculadas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

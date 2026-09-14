@@ -1,0 +1,1780 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v03",
+  "dataGeracao": "2026-09-14T17:00:00-03:00",
+  "modulosPedagogicos": [
+    {
+      "id": "mod-ped-01",
+      "nome": "01. Fundamentos Ergonômicos, Postura e Primeiros Sons",
+      "descricao": "Postura sem lesão, anatomia do violão, afinação e toques com polegar e indicador."
+    },
+    {
+      "id": "mod-ped-02",
+      "nome": "02. Mecânica de Acordes Abertos e Fluência de Troca",
+      "descricao": "Acordes A, D, E, Em, C, G; transições com dedo guia; pulso contínuo sem paradas."
+    },
+    {
+      "id": "mod-ped-03",
+      "nome": "03. Pulso, Subdivisão e Levadas Fundamentais",
+      "descricao": "Batida balada, pop/swing, acentos métricos e repertório inicial simples."
+    },
+    {
+      "id": "mod-ped-04",
+      "nome": "04. Percepção Auditiva e Reconhecimento de Intervalos",
+      "descricao": "Ouvido relativo, diferenciação de alturas, 2ªs e 3ªs, tríades maiores e menores."
+    },
+    {
+      "id": "mod-ped-05",
+      "nome": "05. Leitura Musical Integrada (Cifra, Tablatura e Partitura)",
+      "descricao": "Notação em primeira posição, cordas e casas, figuras rítmicas e melodias simples."
+    },
+    {
+      "id": "mod-ped-06",
+      "nome": "06. Pestana sem Sobrecarga e Acordes com Sétima",
+      "descricao": "Princípios de alavanca para pestana, tétrades fundamentais (X7, X7M, Xm7) e repertório."
+    },
+    {
+      "id": "mod-ped-07",
+      "nome": "07. A Alma Brasileira I — Bossa Nova e João Gilberto",
+      "descricao": "Levadas de Bossa Nova, síncopa brasileira, acordes invertidos e repertório Jobim."
+    },
+    {
+      "id": "mod-ped-08",
+      "nome": "08. A Alma Brasileira II — Samba, Choro e Baião",
+      "descricao": "Levada de samba batucado, baião com polegar marcado, choro básico e acentos rítmicos."
+    },
+    {
+      "id": "mod-ped-09",
+      "nome": "09. O Universo de Baden Powell (Levadas e Afrosambas)",
+      "descricao": "As levadas de Baden, afrosambas, expressividade percussiva e ataque."
+    },
+    {
+      "id": "mod-ped-10",
+      "nome": "10. Condução de Baixos e Baixarias (6 e 7 Cordas)",
+      "descricao": "Conexões melódicas nos bordões, cromatismos e contracanto de choro."
+    },
+    {
+      "id": "mod-ped-11",
+      "nome": "11. O Braço Panorâmico — Sistema CAGED e Voicings Drop 2",
+      "descricao": "5 regiões de acordes, arpejos, tétrades invertidas em 4 cordas e harmonia aplicada."
+    },
+    {
+      "id": "mod-ped-12",
+      "nome": "12. Violão Solo e Arranjo Fingerstyle",
+      "descricao": "Polifonia a duas vozes, melodia com baixo independente, thumb slap e arranjos solo."
+    },
+    {
+      "id": "mod-ped-13",
+      "nome": "13. Nível Master — Expressão, Blues e Harmonização",
+      "descricao": "Dinâmica expressiva, blues progressivo, escala pentatônica e harmonização avançada."
+    }
+  ],
+  "totalAulasPropostas": 33,
+  "aulasPropostas": [
+    {
+      "id": "aula-prop-001",
+      "titulo": "Postura Estável, Empunhadura e Apoios",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-tec-001",
+      "habilidadesSecundarias": [],
+      "prerequisitosAulas": [],
+      "fontesCandidatas": [
+        "aula-mod-1-4"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Fundamento ergonômico indispensável antes do contato instrumental com carga motora.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Sustentar a posição correta por 3 minutos tocando cordas soltas com som limpo.",
+      "inspecaoPendente": "Observar minutos iniciais de aula-mod-1-4 para validar orientação de punho e antebraço.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-4 (Método Tríade: 04 - Violão - 1.1 - Postura)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Postura Estável, Empunhadura e Apoios conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-tec-001.",
+      "proximaAcaoRecomendada": "Consolidar o movimento e explorar o repertório livre correspondente.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-4"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Postura Estável, Empunhadura e Apoios.",
+          "recursoId": "aula-mod-1-4"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-4"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-002",
+      "titulo": "Como Afinar as Seis Cordas do Violão",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-lei-001",
+      "habilidadesSecundarias": [
+        "hab-ouv-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-001"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-7"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Procedimento operacional essencial para qualquer estudo musical.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Afinar as 6 cordas utilizando afinador eletrônico conferindo estabilidade da 6ª à 1ª.",
+      "inspecaoPendente": "Conferir tarraxas e sentido de afinação no vídeo de aula-mod-1-7.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-7 (Método Tríade: 07 - Violão - 1.3 - Como Afinar)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Como Afinar as Seis Cordas do Violão conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-lei-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-7"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Como Afinar as Seis Cordas do Violão.",
+          "recursoId": "aula-mod-1-7"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-7"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-003",
+      "titulo": "Primeiros Sons com Polegar e Indicador",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-tec-002",
+      "habilidadesSecundarias": [
+        "hab-rit-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-001"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-5"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Mecânica inicial de ataque nas cordas sem tensão nos dedos.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Tocar sequência p-i-m-i em cordas soltas com som límpido.",
+      "inspecaoPendente": "Observar gesto de toque livre do polegar sem repouso forçado.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-5 (Método Tríade: 05 - Violão - 1.2.1 - Exercícios Preliminares)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Primeiros Sons com Polegar e Indicador conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-tec-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-5"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Primeiros Sons com Polegar e Indicador.",
+          "recursoId": "aula-mod-1-5"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-5"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-004",
+      "titulo": "Pulso Isócrono e Noções Métricas Fundamentais",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-rit-001",
+      "habilidadesSecundarias": [
+        "hab-rit-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-003"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-2",
+        "aula-mod-1-8"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Unificação de conceitos de ritmo elementar e contagem quaternária em uma única aula prática.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Contar 4 tempos marcando o pulso e subdivisão em cordas abafadas a 60 BPM.",
+      "inspecaoPendente": "Inspecionar exemplos rítmicos no vídeo de aula-mod-1-2.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-2 (Método Tríade: 02 - H P - 1.1 Noções Básicas de Ritmo)",
+        "aula-mod-1-8 (Método Tríade: 08 - H P - 2 Compassos)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Pulso Isócrono e Noções Métricas Fundamentais conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-2"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Pulso Isócrono e Noções Métricas Fundamentais.",
+          "recursoId": "aula-mod-1-2"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-2"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-005",
+      "titulo": "Fluência e Troca de Acordes: Lá e Ré com Dedo Guia",
+      "moduloPedagogicoId": "mod-ped-02",
+      "habilidadePrincipalId": "hab-tec-003",
+      "habilidadesSecundarias": [
+        "hab-rit-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-004"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-10",
+        "aula-mod-1-11"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Integração do formato de A e D com o trabalho mecânico de fluência de transição.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Executar 8 trocas A - D sem interrupção no tempo 1 a 60 BPM.",
+      "inspecaoPendente": "Conferir uso do dedo pivô na 3ª corda (Lá) demonstrado no vídeo 00000905.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-10 (Método Tríade: 10 - Violão - 2.2 - Inovação - Fluência no A e D)",
+        "aula-mod-1-11 (Método Tríade: 11 - Violão - 2.3 - Inovação - Trabalho de Fluência)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Fluência e Troca de Acordes: Lá e Ré com Dedo Guia conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-tec-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-10"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Fluência e Troca de Acordes: Lá e Ré com Dedo Guia.",
+          "recursoId": "aula-mod-1-10"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-10"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-006",
+      "titulo": "Acordes Mi e Mi Menor e Eliminação de Ruídos",
+      "moduloPedagogicoId": "mod-ped-02",
+      "habilidadePrincipalId": "hab-tec-003",
+      "habilidadesSecundarias": [],
+      "prerequisitosAulas": [
+        "aula-prop-005"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-13",
+        "aula-mod-1-14"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Posicionamento correto das pontas dos dedos próximo aos trastes nos acordes E e Em.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Tocar E e Em conferindo a clareza das 6 cordas sem abafamento acidental.",
+      "inspecaoPendente": "Verificar orientações sobre polegar posterior no braço.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-13 (Método Tríade: 13 - UPGRADE 7.0 Violão 2.5 Chiado na troca)",
+        "aula-mod-1-14 (Método Tríade: 14 - UPGRADE 7.0 Violão 2.6 UPGRADE 7.0 Um dedo por vez)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Acordes Mi e Mi Menor e Eliminação de Ruídos conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-tec-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-13"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Acordes Mi e Mi Menor e Eliminação de Ruídos.",
+          "recursoId": "aula-mod-1-13"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-13"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-007",
+      "titulo": "Acordes Dó e Sol e Ampliação da Fluência",
+      "moduloPedagogicoId": "mod-ped-02",
+      "habilidadePrincipalId": "hab-tec-003",
+      "habilidadesSecundarias": [
+        "hab-aco-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-005"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-23",
+        "aula-mod-1-24"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Consolidação dos acordes abertos com abertura maior entre os dedos (C e G).",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Alternar C e G mantendo pulso contínuo a 60 BPM.",
+      "inspecaoPendente": "Inspecionar transição com dedo 3 ancorado no Sol agudo.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-23 (Método Tríade: 23 - Violão - 3.7- Apresentando G e C)",
+        "aula-mod-1-24 (Método Tríade: 24 - Violão - 3.8 - 'A sua' Usando G e C)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Acordes Dó e Sol e Ampliação da Fluência conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-tec-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-23"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Acordes Dó e Sol e Ampliação da Fluência.",
+          "recursoId": "aula-mod-1-23"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-23"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-008",
+      "titulo": "A Batida Balada Básica e o Pêndulo Contínuo",
+      "moduloPedagogicoId": "mod-ped-03",
+      "habilidadePrincipalId": "hab-rit-003",
+      "habilidadesSecundarias": [
+        "hab-rit-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-005"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-17"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração didática do domínio rítmico fundamental de acompanhamento.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Executar 8 ciclos da levada de balada a 65 BPM com acordes A e D.",
+      "inspecaoPendente": "Inspecionar vídeos 00000928 e 00000932 para mapear direção e acentos dos toques.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-17 (Método Tríade: 17 - Violão - 3.1 - Batida Balada Básica)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de A Batida Balada Básica e o Pêndulo Contínuo conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-17"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de A Batida Balada Básica e o Pêndulo Contínuo.",
+          "recursoId": "aula-mod-1-17"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-17"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-009",
+      "titulo": "Primeiro Repertório Acompanhado: Let It Be",
+      "moduloPedagogicoId": "mod-ped-03",
+      "habilidadePrincipalId": "hab-aco-001",
+      "habilidadesSecundarias": [
+        "hab-rit-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-008"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-19",
+        "aula-mod-1-20"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Aplicação direta da balada básica na progressão harmônica clássica.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Acompanhar a estrofe completa da canção sem interrupção de pulso.",
+      "inspecaoPendente": "Verificar simplificação do acorde de Fá utilizado no vídeo.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-19 (Método Tríade: 19 - Violão - 3.3 - Let it Be ! Aplicando a Balada Básica!)",
+        "aula-mod-1-20 (Método Tríade: 20 - Violão - 3.4 - Chama o flautista! - Let it be)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Primeiro Repertório Acompanhado: Let It Be conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-aco-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-19"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Primeiro Repertório Acompanhado: Let It Be.",
+          "recursoId": "aula-mod-1-19"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-19"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-010",
+      "titulo": "Variações da Levada Pop e Acentos Rítmicos",
+      "moduloPedagogicoId": "mod-ped-03",
+      "habilidadePrincipalId": "hab-rit-002",
+      "habilidadesSecundarias": [
+        "hab-exp-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-008"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-21"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Desenvolvimento da flexibilidade rítmica através de acentuações deliberadas.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Tocar levada com acento sonoro distinto nos tempos 2 e 4.",
+      "inspecaoPendente": "Verificar dinâmica da mão direita.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-21 (Método Tríade: 21 - UPGRADE 8.0 Violão - 3.5 - Acordes E A D - Born this w)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Variações da Levada Pop e Acentos Rítmicos conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-21"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Variações da Levada Pop e Acentos Rítmicos.",
+          "recursoId": "aula-mod-1-21"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-21"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-011",
+      "titulo": "Discriminação de Alturas e Sensações Sonoras",
+      "moduloPedagogicoId": "mod-ped-04",
+      "habilidadePrincipalId": "hab-ouv-001",
+      "habilidadesSecundarias": [],
+      "prerequisitosAulas": [
+        "aula-prop-001"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-6"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Fundamento da percepção auditiva: identificar direção do movimento melódico.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Acertar 9 de 10 testes de grave vs agudo.",
+      "inspecaoPendente": "Conferir exercícios propostos na introdução de percepção.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-6 (Método Tríade: 06 - Violão - 1.2.2 - Nível Exigido)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Discriminação de Alturas e Sensações Sonoras conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-ouv-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-6"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Discriminação de Alturas e Sensações Sonoras.",
+          "recursoId": "aula-mod-1-6"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-6"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-012",
+      "titulo": "Reconhecimento Auditivo de Intervalos de 2ª e 3ª Maior",
+      "moduloPedagogicoId": "mod-ped-04",
+      "habilidadePrincipalId": "hab-ouv-002",
+      "habilidadesSecundarias": [
+        "hab-ouv-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-011"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-15",
+        "aula-mod-1-16"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Aula de calibração auditiva com explicação conceitual e prática de ditado sensorial.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Identificar 8 de 10 intervalos soados aleatoriamente.",
+      "inspecaoPendente": "Auditar áudios do vídeo 00000919 para extrair as notas de referência e conferir errata do min 10:10.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-15 (Método Tríade: 15 - H P - 3.1 Intervalos Diatônicos (pág 07) UPGRADE ESTÚD)",
+        "aula-mod-1-16 (Método Tríade: 16 - H P - 3.2 Intervalos Diatônicos (Site para praticar))"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Reconhecimento Auditivo de Intervalos de 2ª e 3ª Maior conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-ouv-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-15"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Reconhecimento Auditivo de Intervalos de 2ª e 3ª Maior.",
+          "recursoId": "aula-mod-1-15"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-15"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-013",
+      "titulo": "Entoação Vocal de Intervalos Diatônicos com o Violão",
+      "moduloPedagogicoId": "mod-ped-04",
+      "habilidadePrincipalId": "hab-ouv-003",
+      "habilidadesSecundarias": [
+        "hab-ouv-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-012"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-15"
+      ],
+      "decisaoEditorial": "suplementar",
+      "justificativa": "Separação expressa entre identificação auditiva e emissão vocal afinada.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Cantar a 2ªM e 3ªM a partir de nota de referência com conferência instrumental.",
+      "inspecaoPendente": "Planejar exercícios de entoação orientada.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-1-15 (Método Tríade: 15 - H P - 3.1 Intervalos Diatônicos (pág 07) UPGRADE ESTÚD)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Entoação Vocal de Intervalos Diatônicos com o Violão conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-ouv-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-1-15"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Entoação Vocal de Intervalos Diatônicos com o Violão.",
+          "recursoId": "aula-mod-1-15"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-1-15"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-014",
+      "titulo": "Percepção de Tríades Maiores e Menores",
+      "moduloPedagogicoId": "mod-ped-04",
+      "habilidadePrincipalId": "hab-ouv-004",
+      "habilidadesSecundarias": [
+        "hab-ouv-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-012"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-6-5"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Diferenciação auditiva da terça maior vs menor em contexto de acordes.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Identificar 9 de 10 acordes como maiores ou menores.",
+      "inspecaoPendente": "Inspecionar exemplos de áudio em aula-mod-6-5.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-6-5 (Método Tríade: H_P - 21 _ Id. X7, X e Xm (Pág 54))"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Percepção de Tríades Maiores e Menores conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-ouv-004.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-6-5"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Percepção de Tríades Maiores e Menores.",
+          "recursoId": "aula-mod-6-5"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-6-5"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-015",
+      "titulo": "Tirando Pequenas Frases Melódicas de Ouvido",
+      "moduloPedagogicoId": "mod-ped-04",
+      "habilidadePrincipalId": "hab-ouv-005",
+      "habilidadesSecundarias": [
+        "hab-ouv-003",
+        "hab-lei-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-013"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-164-7-cai-cai-balao"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aplicação prática do ouvido relativo para encontrar notas no braço.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Reproduzir no violão melodia de 4 compassos ouvida sem partitura.",
+      "inspecaoPendente": "Verificar melodia e tonalidade em aula-kaiser-164-7.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-164-7-cai-cai-balao (Kaiserplay: 7. Cai Cai Balão)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Tirando Pequenas Frases Melódicas de Ouvido conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-ouv-005.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-164-7-cai-cai-balao"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Tirando Pequenas Frases Melódicas de Ouvido.",
+          "recursoId": "aula-kaiser-164-7-cai-cai-balao"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-164-7-cai-cai-balao"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-016",
+      "titulo": "Leitura de Tablatura em Primeira Posição",
+      "moduloPedagogicoId": "mod-ped-05",
+      "habilidadePrincipalId": "hab-lei-002",
+      "habilidadesSecundarias": [
+        "hab-lei-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-002"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-2-26"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Notação prática espacial relacionando linha da pauta com corda do instrumento.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Executar exercício de 4 compassos tabulado em primeira posição.",
+      "inspecaoPendente": "Inspecionar digitação em aula-mod-2-26.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-2-26 (Método Tríade: 27 - Violão - 8.8 - Bônus 4 solos fáceis)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Leitura de Tablatura em Primeira Posição conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-lei-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-2-26"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Leitura de Tablatura em Primeira Posição.",
+          "recursoId": "aula-mod-2-26"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-2-26"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-017",
+      "titulo": "Iniciação à Clave de Sol: As Sete Partituras Fáceis",
+      "moduloPedagogicoId": "mod-ped-05",
+      "habilidadePrincipalId": "hab-lei-003",
+      "habilidadesSecundarias": [
+        "hab-lei-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-016"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração de leitura notacional utilizando as 7 partituras PDF validadas.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Ler e tocar a primeira partitura melódica (Brilha Brilha Estrelinha) no metrônomo.",
+      "inspecaoPendente": "Confirmar ausência de vídeo e estruturar instruções de autoestudo com metrônomo.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-124-3-partituras-faceis-para-iniciantes (Kaiserplay: 3. Partituras fáceis para iniciantes)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Iniciação à Clave de Sol: As Sete Partituras Fáceis conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-lei-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Iniciação à Clave de Sol: As Sete Partituras Fáceis.",
+          "recursoId": "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-018",
+      "titulo": "Mecânica de Pestana com Princípio de Alavanca",
+      "moduloPedagogicoId": "mod-ped-06",
+      "habilidadePrincipalId": "hab-tec-005",
+      "habilidadesSecundarias": [
+        "hab-tec-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-005"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-3-23",
+        "aula-mod-5-1"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Técnica de alavanca para pestana sem apertar o polegar contra o braço.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Montar pestana na 1ª casa obtendo som limpo nas 6 cordas sem dor.",
+      "inspecaoPendente": "Verificar posicionamento do indicador estendido no vídeo.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-3-23 (Método Tríade: 24 - UPGRADE 7.0 Violão - 11.6 - Ajuda EXTRA na POP TCHAC)",
+        "aula-mod-5-1 (Método Tríade: 07 - Violão - 17.6 - A OITAVA)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Mecânica de Pestana com Princípio de Alavanca conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-tec-005.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-3-23"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Mecânica de Pestana com Princípio de Alavanca.",
+          "recursoId": "aula-mod-3-23"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-3-23"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-019",
+      "titulo": "Acordes com Sétima Dominante (X7) e Menor (Xm7)",
+      "moduloPedagogicoId": "mod-ped-06",
+      "habilidadePrincipalId": "hab-har-001",
+      "habilidadesSecundarias": [
+        "hab-tec-005"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-018"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-3-24"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Introdução às tétrades e tensão harmônica essencial para MPB e Bossa.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Tocar cadência Dm7 - G7 - Cmaj7 com som límpido.",
+      "inspecaoPendente": "Inspecionar digitações no vídeo de aula-mod-3-24.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-3-24 (Método Tríade: 25 - UPGRADE 7.0 Violão - 11.7 - NUNCA faça isso)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Acordes com Sétima Dominante (X7) e Menor (Xm7) conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-har-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-3-24"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Acordes com Sétima Dominante (X7) e Menor (Xm7).",
+          "recursoId": "aula-mod-3-24"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-3-24"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-020",
+      "titulo": "A Levada Fundamental da Bossa Nova (Escola João Gilberto)",
+      "moduloPedagogicoId": "mod-ped-07",
+      "habilidadePrincipalId": "hab-rit-005",
+      "habilidadesSecundarias": [
+        "hab-tec-004"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-008"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-5-30",
+        "aula-kaiser-1-1-batida-de-samba-e-bossa-nova"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Fusão da técnica mecânica de dedilhado com a síncopa brasileira característica.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Sustentar a levada de bossa durante 8 compassos com polegar independente.",
+      "inspecaoPendente": "Inspecionar fraseado rítmico em aula-kaiser-1-1.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-5-30 (Método Tríade: Violão - 20.1 - Batida Bossa Variação (Pag 52))",
+        "aula-kaiser-1-1-batida-de-samba-e-bossa-nova (Kaiserplay: 1. Batida de Samba e Bossa Nova)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de A Levada Fundamental da Bossa Nova (Escola João Gilberto) conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-005.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-5-30"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de A Levada Fundamental da Bossa Nova (Escola João Gilberto).",
+          "recursoId": "aula-mod-5-30"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-5-30"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-021",
+      "titulo": "Acompanhamento de Bossa Nova com Acordes Invertidos",
+      "moduloPedagogicoId": "mod-ped-07",
+      "habilidadePrincipalId": "hab-rit-005",
+      "habilidadesSecundarias": [
+        "hab-aco-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-020"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-6-1",
+        "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aplicação da levada em repertório de Tom Jobim com condução de baixo.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Executar acompanhamento de trecho de Garota de Ipanema ou Corcovado.",
+      "inspecaoPendente": "Verificar voicings utilizados.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-6-1 (Método Tríade: 12 - UPGRADE 7.0 Violão - 22.2 - Fluência na PESTANA - Pupi)",
+        "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co (Kaiserplay: 4. Aula da Levada 1 (Exercício 2) - (Batida completa com par)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Acompanhamento de Bossa Nova com Acordes Invertidos conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-005.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-6-1"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Acompanhamento de Bossa Nova com Acordes Invertidos.",
+          "recursoId": "aula-mod-6-1"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-6-1"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-022",
+      "titulo": "A Condução de Samba Batucado e Choro ao Violão",
+      "moduloPedagogicoId": "mod-ped-08",
+      "habilidadePrincipalId": "hab-rit-006",
+      "habilidadesSecundarias": [
+        "hab-aco-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-020"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-6-6",
+        "aula-kaiser-12-2-batida-de-choro"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Estudo do balanço do samba e acentuações percussivas no violão.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Tocar 8 compassos de samba com síncopa e marcação firme no tempo 2.",
+      "inspecaoPendente": "Inspecionar levada de choro em aula-kaiser-2-2.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-6-6 (Método Tríade: Violão - 21.1 - Apresentação)",
+        "aula-kaiser-12-2-batida-de-choro (Kaiserplay: 2. Batida de Choro)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de A Condução de Samba Batucado e Choro ao Violão conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-006.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-6-6"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de A Condução de Samba Batucado e Choro ao Violão.",
+          "recursoId": "aula-mod-6-6"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-6-6"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-023",
+      "titulo": "A Levada Nordestina de Baião no Violão",
+      "moduloPedagogicoId": "mod-ped-08",
+      "habilidadePrincipalId": "hab-rit-006",
+      "habilidadesSecundarias": [
+        "hab-tec-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-020"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-17-4-batida-de-baiao"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Ritmo brasileiro essencial com marcação de zabumba no polegar.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Executar a célula rítmica do baião a 80 BPM de forma estável.",
+      "inspecaoPendente": "Verificar padrão de mão direita no vídeo do Kaiser.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-17-4-batida-de-baiao (Kaiserplay: 4. Batida de Baião)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de A Levada Nordestina de Baião no Violão conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-006.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-17-4-batida-de-baiao"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de A Levada Nordestina de Baião no Violão.",
+          "recursoId": "aula-kaiser-17-4-batida-de-baiao"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-17-4-batida-de-baiao"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-024",
+      "titulo": "As Levadas Características de Baden Powell",
+      "moduloPedagogicoId": "mod-ped-09",
+      "habilidadePrincipalId": "hab-rit-007",
+      "habilidadesSecundarias": [
+        "hab-exp-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-022"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Estudo dos padrões rítmicos percussivos e dinâmicos de Baden Powell.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Executar a levada afro de Baden com ataque firme e dinâmico.",
+      "inspecaoPendente": "Inspecionar acentos de mão direita.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co (Kaiserplay: 4. Aula da Levada 1 (Exercício 2) - (Batida completa com par)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de As Levadas Características de Baden Powell conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-007.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de As Levadas Características de Baden Powell.",
+          "recursoId": "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-025",
+      "titulo": "O Toque dos Afrosambas: Berimbau e Canto de Ossanha",
+      "moduloPedagogicoId": "mod-ped-09",
+      "habilidadePrincipalId": "hab-rit-007",
+      "habilidadesSecundarias": [
+        "hab-sol-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-024"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-172-14-berimbau-baden-powell-afro-samba"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Repertório mestre da escola violonística brasileira.",
+      "nivel": "intermediario_2",
+      "praticaSaidaPlanejada": "Tocar o tema de Berimbau integrando ostinato rítmico e melodia.",
+      "inspecaoPendente": "Conferir arranjo no vídeo.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-172-14-berimbau-baden-powell-afro-samba (Kaiserplay: 14. Berimbau (Baden Powell) - Afro-Samba)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de O Toque dos Afrosambas: Berimbau e Canto de Ossanha conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-007.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-172-14-berimbau-baden-powell-afro-samba"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de O Toque dos Afrosambas: Berimbau e Canto de Ossanha.",
+          "recursoId": "aula-kaiser-172-14-berimbau-baden-powell-afro-samba"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-172-14-berimbau-baden-powell-afro-samba"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-026",
+      "titulo": "Baixo Alternado e Conexões Melódicas nos Bordões",
+      "moduloPedagogicoId": "mod-ped-10",
+      "habilidadePrincipalId": "hab-aco-002",
+      "habilidadesSecundarias": [
+        "hab-tec-004"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-008"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-7-1",
+        "aula-kaiser-49-1-juntanto-todas-as-levadas-deixa"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Trabalho de independência de polegar e condução de baixarias melódicas.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Executar progressão alternando fundamentais e notas de passagem cromáticas.",
+      "inspecaoPendente": "Inspecionar baixarias propostas.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-7-1 (Método Tríade: 03 - Violão 25.2 - UPGRADE 6.0 QUATRO exercícios de TÉCNICA)",
+        "aula-kaiser-49-1-juntanto-todas-as-levadas-deixa (Kaiserplay: 1. Juntanto todas as LEVADAS - DEIXA)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Baixo Alternado e Conexões Melódicas nos Bordões conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-aco-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-7-1"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Baixo Alternado e Conexões Melódicas nos Bordões.",
+          "recursoId": "aula-mod-7-1"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-7-1"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-027",
+      "titulo": "Campo Harmônico Maior e Funções Tonais",
+      "moduloPedagogicoId": "mod-ped-11",
+      "habilidadePrincipalId": "hab-har-001",
+      "habilidadesSecundarias": [
+        "hab-ouv-004"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-019"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-4-37",
+        "aula-mod-5-29"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Mapeamento das famílias de acordes e funções de tônica, subdominante e dominante.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Montar e tocar os acordes do campo harmônico de Sol Maior e Dó Maior.",
+      "inspecaoPendente": "Verificar cadências aplicadas.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-4-37 (Método Tríade: BÔNUS H_P - 16 - Campo Harmônico I (AO VIVO))",
+        "aula-mod-5-29 (Método Tríade: H_P - 20 - Campo Harm. III (Pág 50 na apostila de H_P)))"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Campo Harmônico Maior e Funções Tonais conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-har-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-4-37"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Campo Harmônico Maior e Funções Tonais.",
+          "recursoId": "aula-mod-4-37"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-4-37"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-028",
+      "titulo": "Sistema CAGED: Cinco Regiões de Acordes Móveis",
+      "moduloPedagogicoId": "mod-ped-11",
+      "habilidadePrincipalId": "hab-har-002",
+      "habilidadesSecundarias": [
+        "hab-har-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-027"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-3-9",
+        "aula-kaiser-305-4-o-metodo-esquecido-de-harmonia-popular"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Visualização panorâmica do braço conectando os 5 modelos fundamentais.",
+      "nivel": "intermediario_2",
+      "praticaSaidaPlanejada": "Tocar o acorde de Ré Maior nas 5 regiões do braço identificando tônicas.",
+      "inspecaoPendente": "Inspecionar diagramas CAGED.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-3-9 (Método Tríade: 10 - H P - 10 - UPGRADE 5.0 Escala Maior - Pág 26)",
+        "aula-kaiser-305-4-o-metodo-esquecido-de-harmonia-popular (Kaiserplay: 4. O Método Esquecido de Harmonia Popular)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Sistema CAGED: Cinco Regiões de Acordes Móveis conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-har-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-3-9"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Sistema CAGED: Cinco Regiões de Acordes Móveis.",
+          "recursoId": "aula-mod-3-9"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-3-9"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-029",
+      "titulo": "Polifonia a Duas Vozes: Pequena Valsa de Carulli",
+      "moduloPedagogicoId": "mod-ped-12",
+      "habilidadePrincipalId": "hab-sol-001",
+      "habilidadesSecundarias": [
+        "hab-tec-004"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-016"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração de violão solo com melodia cantabile e baixo simultâneo.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Tocar a Seção A da Pequena Valsa mantendo a melodia destacada sobre o baixo.",
+      "inspecaoPendente": "Inspecionar vídeo 00000452 e PDF 0. Pequena Valsa.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol (Kaiserplay: 10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Polifonia a Duas Vozes: Pequena Valsa de Carulli conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-sol-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Polifonia a Duas Vozes: Pequena Valsa de Carulli.",
+          "recursoId": "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-030",
+      "titulo": "Thumb Slap e Percussão no Fingerstyle Moderno",
+      "moduloPedagogicoId": "mod-ped-12",
+      "habilidadePrincipalId": "hab-rit-004",
+      "habilidadesSecundarias": [
+        "hab-tec-004"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-008"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-18-5-thumb-slap-batida-fingerstyle"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração de técnica percussiva de mão direita no contexto fingerstyle.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Executar 8 compassos de levada com slap nos tempos 2 e 4 a 70 BPM.",
+      "inspecaoPendente": "Inspecionar legenda pt-orig e vídeo 00000057.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-18-5-thumb-slap-batida-fingerstyle (Kaiserplay: 5. THUMB SLAP _ Batida Fingerstyle)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Thumb Slap e Percussão no Fingerstyle Moderno conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-rit-004.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-18-5-thumb-slap-batida-fingerstyle"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Thumb Slap e Percussão no Fingerstyle Moderno.",
+          "recursoId": "aula-kaiser-18-5-thumb-slap-batida-fingerstyle"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-18-5-thumb-slap-batida-fingerstyle"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-031",
+      "titulo": "Arranjo Fingerstyle Completo: Melodia, Baixo e Harmonia",
+      "moduloPedagogicoId": "mod-ped-12",
+      "habilidadePrincipalId": "hab-sol-002",
+      "habilidadesSecundarias": [
+        "hab-sol-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-029"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-156-28-saudades-de-marcia-baden-powell"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Consolidação da independência a três camadas sonoras simultâneas.",
+      "nivel": "intermediario_2",
+      "praticaSaidaPlanejada": "Executar arranjo solo completo mantendo andamento e expressividade.",
+      "inspecaoPendente": "Inspecionar partitura e vídeo do arranjo.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-156-28-saudades-de-marcia-baden-powell (Kaiserplay: 28. Saudades de Márcia (Baden Powell))"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Arranjo Fingerstyle Completo: Melodia, Baixo e Harmonia conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-sol-002.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-156-28-saudades-de-marcia-baden-powell"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Arranjo Fingerstyle Completo: Melodia, Baixo e Harmonia.",
+          "recursoId": "aula-kaiser-156-28-saudades-de-marcia-baden-powell"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-156-28-saudades-de-marcia-baden-powell"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-032",
+      "titulo": "Dinâmica Expressiva e Fraseado Cantabile",
+      "moduloPedagogicoId": "mod-ped-13",
+      "habilidadePrincipalId": "hab-exp-001",
+      "habilidadesSecundarias": [
+        "hab-sol-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-029"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-8-1"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Refinamento interpretativo, controle de toque suave vs incisivo e rubato musical.",
+      "nivel": "avancado",
+      "praticaSaidaPlanejada": "Tocar peça com variação expressiva de dinâmica p / mf / f.",
+      "inspecaoPendente": "Inspecionar conceitos de interpretação.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-mod-8-1 (Método Tríade: 01 - H P - 29 Ditados Lacuna (UPGRADE 8.0 - 2025))"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Dinâmica Expressiva e Fraseado Cantabile conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-exp-001.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-mod-8-1"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Dinâmica Expressiva e Fraseado Cantabile.",
+          "recursoId": "aula-mod-8-1"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-mod-8-1"
+        }
+      ]
+    },
+    {
+      "id": "aula-prop-033",
+      "titulo": "Improvisação Melódica e Escala Pentatônica no Blues",
+      "moduloPedagogicoId": "mod-ped-13",
+      "habilidadePrincipalId": "hab-exp-003",
+      "habilidadesSecundarias": [
+        "hab-har-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-027"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-128-1-formatos-do-blues",
+        "aula-mod-8-15"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Criação autoral de solos e frases expressivas sobre estrutura de 12 compassos.",
+      "nivel": "avancado",
+      "praticaSaidaPlanejada": "Improvisar 12 compassos de blues aplicando a pentatônica com resolução tonal.",
+      "inspecaoPendente": "Inspecionar estrutura de blues e backing track.",
+      "autoria": "Antigravity (Curadoria Integrada Tríade + Kaiser)",
+      "status": "proposta_arquitetura_nucleo_inicial",
+      "origemFontes": [
+        "aula-kaiser-128-1-formatos-do-blues (Kaiserplay: 1. Formatos do Blues)",
+        "aula-mod-8-15 (Método Tríade: Violão 30.2 - Caetano! Sampa)"
+      ],
+      "criteriosSaida": "Executar com clareza e sem interrupções o objetivo de Improvisação Melódica e Escala Pentatônica no Blues conforme rubrica da habilidade.",
+      "resultadoEsperado": "Assimilação motora e cognitiva da habilidade hab-exp-003.",
+      "proximaAcaoRecomendada": "Avançar para prática instrumental de fixação e autoavaliação.",
+      "passosPratica": [
+        {
+          "ordem": 1,
+          "nome": "Aquecimento e Posicionamento",
+          "duracaoMinutos": 5,
+          "descricao": "Preparação postural e checagem de afinação.",
+          "recursoId": "aula-kaiser-128-1-formatos-do-blues"
+        },
+        {
+          "ordem": 2,
+          "nome": "Desenvolvimento Mecânico/Conceitual",
+          "duracaoMinutos": 15,
+          "descricao": "Estudo guiado do gesto principal de Improvisação Melódica e Escala Pentatônica no Blues.",
+          "recursoId": "aula-kaiser-128-1-formatos-do-blues"
+        },
+        {
+          "ordem": 3,
+          "nome": "Aplicação Musical e Verificação",
+          "duracaoMinutos": 10,
+          "descricao": "Aplicação prática em contexto musical com metrônomo ou playback.",
+          "recursoId": "aula-kaiser-128-1-formatos-do-blues"
+        }
+      ]
+    }
+  ],
+  "dataAtualizacao": "2026-09-14"
+}

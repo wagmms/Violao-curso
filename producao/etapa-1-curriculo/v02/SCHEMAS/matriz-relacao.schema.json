@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatrizFonteAulaRelacao",
+  "type": "object",
+  "required": [
+    "entradaOrigemId",
+    "tipoRelacao",
+    "decisaoProvisoria",
+    "justificativa",
+    "nivelInspecao",
+    "evidenciaId"
+  ],
+  "properties": {
+    "entradaOrigemId": {
+      "type": "string"
+    },
+    "arquivoId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "aulaPropostaId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "habilidadeId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "destinoEditorialId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tipoRelacao": {
+      "type": "string",
+      "enum": [
+        "conteudo_principal",
+        "recurso_complementar",
+        "pratica_alternativa",
+        "destino_editorial_suporte",
+        "destino_editorial_quiz",
+        "destino_editorial_aguardando",
+        "destino_editorial_expansao"
+      ]
+    },
+    "decisaoProvisoria": {
+      "type": "string"
+    },
+    "justificativa": {
+      "type": "string"
+    },
+    "nivelInspecao": {
+      "type": "string",
+      "enum": [
+        "metadados_catalogo",
+        "legenda_indexada",
+        "amostragem_manual",
+        "inspecao_integral",
+        "sem_inspecao",
+        "nao_inspecionado"
+      ]
+    },
+    "evidenciaId": {
+      "type": "string"
+    },
+    "pendenciaId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

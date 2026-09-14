@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "1.0.0",
+  "dataGeracao": "2026-09-14T14:00:00-03:00",
+  "modulosPedagogicos": [
+    {
+      "id": "mod-ped-01",
+      "nome": "01. Fundamentos Ergonômicos, Postura e Primeiros Sons",
+      "descricao": "Postura sem lesão, anatomia do violão, afinação e toques com polegar e indicador."
+    },
+    {
+      "id": "mod-ped-02",
+      "nome": "02. Mecânica de Acordes Abertos e Fluência de Troca",
+      "descricao": "Acordes A, D, E, Em, C, G; transições com dedo guia; pulso contínuo sem paradas."
+    },
+    {
+      "id": "mod-ped-03",
+      "nome": "03. Pulso, Subdivisão e Levadas Fundamentais",
+      "descricao": "Batida balada, pop/swing, acentos métricos e repertório inicial simples."
+    },
+    {
+      "id": "mod-ped-04",
+      "nome": "04. Percepção Auditiva e Reconhecimento de Intervalos",
+      "descricao": "Ouvido relativo, diferenciação de alturas, 2ªs e 3ªs, tríades maiores e menores."
+    },
+    {
+      "id": "mod-ped-05",
+      "nome": "05. Leitura Musical Integrada (Cifra, Tablatura e Partitura)",
+      "descricao": "Notação em primeira posição, cordas e casas, figuras rítmicas e melodias simples."
+    },
+    {
+      "id": "mod-ped-06",
+      "nome": "06. Pestana sem Lesão e Acordes com Sétima",
+      "descricao": "Princípios de alavanca para pestana, tétrades fundamentais (X7, X7M, Xm7) e repertório."
+    },
+    {
+      "id": "mod-ped-07",
+      "nome": "07. A Alma Brasileira I — Bossa Nova e João Gilberto",
+      "descricao": "Levadas de Bossa Nova, síncopa brasileira, acordes invertidos e repertório Jobim."
+    },
+    {
+      "id": "mod-ped-08",
+      "nome": "08. A Alma Brasileira II — Samba, Choro e Baião",
+      "descricao": "Levada de samba batucado, baião com polegar marcado, choro básico e acentos rítmicos."
+    },
+    {
+      "id": "mod-ped-09",
+      "nome": "09. O Universo de Baden Powell (Levadas e Afrosambas)",
+      "descricao": "As 5 levadas de Baden, afrosambas, expressividade percussiva e ataque."
+    },
+    {
+      "id": "mod-ped-10",
+      "nome": "10. Condução de Baixos e Baixarias (6 e 7 Cordas)",
+      "descricao": "Conexões melódicas nos bordões, cromatismos e contracanto de choro."
+    },
+    {
+      "id": "mod-ped-11",
+      "nome": "11. O Braço Panorâmico — Sistema CAGED e Voicings Drop 2",
+      "descricao": "5 regiões de acordes, arpejos, tétrades invertidas em 4 cordas e harmonia aplicada."
+    },
+    {
+      "id": "mod-ped-12",
+      "nome": "12. Violão Solo e Arranjo Fingerstyle",
+      "descricao": "Polifonia a duas vozes, melodia com baixo independente e arranjos de MPB."
+    },
+    {
+      "id": "mod-ped-13",
+      "nome": "13. Nível Master — Expressão, Blues e Harmonização",
+      "descricao": "Dinâmica expressiva, blues progressivo, escala pentatônica e harmonização avançada."
+    }
+  ],
+  "totalAulasPropostas": 13,
+  "aulasPropostas": [
+    {
+      "id": "aula-prop-001",
+      "titulo": "Postura Estável, Empunhadura e Apoios",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-tec-001",
+      "habilidadesSecundarias": [],
+      "prerequisitosAulas": [],
+      "fontesCandidatas": [
+        "aula-mod-1-4"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Fundamento ergonômico indispensável antes do contato instrumental com carga.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Sustentar a posição correta por 3 minutos tocando cordas soltas com som limpo.",
+      "inspecaoPendente": "Observar minutos 01:30 a 05:00 de aula-mod-1-4 para validar orientação de punho."
+    },
+    {
+      "id": "aula-prop-002",
+      "titulo": "Como Afinar as Seis Cordas do Violão",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-lei-001",
+      "habilidadesSecundarias": [
+        "hab-ouv-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-001"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-7"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Procedimento operacional essencial para qualquer estudo musical.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Afinar as 6 cordas utilizando afinador eletrônico conferindo estabilidade da 6ª à 1ª.",
+      "inspecaoPendente": "Conferir tarraxas e sentido de afinação no vídeo de aula-mod-1-7."
+    },
+    {
+      "id": "aula-prop-003",
+      "titulo": "Primeiros Sons com Polegar e Indicador",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-tec-002",
+      "habilidadesSecundarias": [
+        "hab-rit-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-002"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-5"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Mecânica inicial de ataque nas cordas sem tensão nos dedos.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Tocar sequência p-i-m-i em cordas soltas com som limpo.",
+      "inspecaoPendente": "Observar gesto de toque livre do polegar."
+    },
+    {
+      "id": "aula-prop-004",
+      "titulo": "Noções Básicas de Pulso e Compasso Quaternário",
+      "moduloPedagogicoId": "mod-ped-01",
+      "habilidadePrincipalId": "hab-rit-001",
+      "habilidadesSecundarias": [
+        "hab-rit-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-003"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-2",
+        "aula-mod-1-8"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Unificação de conceitos de ritmo elementar e contagem quaternária em uma única aula prática.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Contar 4 tempos marcando o pulso e subdivisão em cordas abafadas.",
+      "inspecaoPendente": "Inspecionar exemplos rítmicos no vídeo de aula-mod-1-2."
+    },
+    {
+      "id": "aula-prop-005",
+      "titulo": "Fluência e Troca Instantânea: Acordes A e D",
+      "moduloPedagogicoId": "mod-ped-02",
+      "habilidadePrincipalId": "hab-tec-003",
+      "habilidadesSecundarias": [
+        "hab-rit-001"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-004"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-10",
+        "aula-mod-1-11"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Integração do formato de A e D com o trabalho mecânico de fluência de transição.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Executar 8 trocas A - D sem interrupção no tempo 1 a 60 BPM.",
+      "inspecaoPendente": "Conferir uso do dedo guia demonstrado no vídeo 00000905."
+    },
+    {
+      "id": "aula-prop-006",
+      "titulo": "Eliminação de Chiados e Acordes E e Em",
+      "moduloPedagogicoId": "mod-ped-02",
+      "habilidadePrincipalId": "hab-tec-003",
+      "habilidadesSecundarias": [],
+      "prerequisitosAulas": [
+        "aula-prop-005"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-13",
+        "aula-mod-1-14"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Correção postural para toque limpo próximo ao traste acoplada aos formatos E e Em.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Tocar E e Em conferindo a clareza das 6 cordas sem chiado.",
+      "inspecaoPendente": "Verificar dicas de posicionamento do polegar posterior."
+    },
+    {
+      "id": "aula-prop-007",
+      "titulo": "A Batida Balada Básica e sua Mecânica",
+      "moduloPedagogicoId": "mod-ped-03",
+      "habilidadePrincipalId": "hab-rit-003",
+      "habilidadesSecundarias": [
+        "hab-rit-002"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-005"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-17"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração didática do domínio rítmico fundamental.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Executar 8 ciclos da levada de balada a 65 BPM com acordes A e D.",
+      "inspecaoPendente": "Inspecionar vídeo 00000932 para mapear direção e acentos dos toques."
+    },
+    {
+      "id": "aula-prop-008",
+      "titulo": "Primeiro Repertório Acompanhado: Let It Be",
+      "moduloPedagogicoId": "mod-ped-03",
+      "habilidadePrincipalId": "hab-aco-001",
+      "habilidadesSecundarias": [
+        "hab-rit-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-007"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-19",
+        "aula-mod-1-20"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Aplicação direta da balada básica na progressão harmônica clássica.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Acompanhar a estrofe completa da canção sem interrupção de pulso.",
+      "inspecaoPendente": "Verificar simplificação do acorde de Fá utilizado no vídeo."
+    },
+    {
+      "id": "aula-prop-009",
+      "titulo": "Percepção de Alturas e Intervalos de 2ª e 3ª Maior",
+      "moduloPedagogicoId": "mod-ped-04",
+      "habilidadePrincipalId": "hab-ouv-002",
+      "habilidadesSecundarias": [
+        "hab-ouv-001",
+        "hab-ouv-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-004"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-1-15",
+        "aula-mod-1-16"
+      ],
+      "decisaoEditorial": "fundir",
+      "justificativa": "Aula de calibração auditiva com explicação conceitual e prática de ditado.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Identificar 8 de 10 intervalos soados e cantar a nota de resolução.",
+      "inspecaoPendente": "Auditar áudios do vídeo 00000919 para extrair as notas de referência."
+    },
+    {
+      "id": "aula-prop-010",
+      "titulo": "Leitura de Tablatura e Partituras Iniciais",
+      "moduloPedagogicoId": "mod-ped-05",
+      "habilidadePrincipalId": "hab-lei-002",
+      "habilidadesSecundarias": [
+        "hab-lei-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-004"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+        "aula-mod-1-26"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração de leitura utilizando as 7 partituras PDF validadas.",
+      "nivel": "basico_1",
+      "praticaSaidaPlanejada": "Ler e tocar a primeira partitura melódica completa sem interrupção.",
+      "inspecaoPendente": "Inspecionar o arquivo PDF 0. 1 para validar digitação e compasso."
+    },
+    {
+      "id": "aula-prop-011",
+      "titulo": "Princípios da Pestana sem Lesão e Acorde de Fá",
+      "moduloPedagogicoId": "mod-ped-06",
+      "habilidadePrincipalId": "hab-tec-005",
+      "habilidadesSecundarias": [
+        "hab-tec-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-005",
+        "aula-prop-006"
+      ],
+      "fontesCandidatas": [
+        "aula-mod-3-23",
+        "aula-mod-5-1"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Fundamento essencial de transição para o nível intermediário.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Montar pestana na 1ª casa obtendo som claro nas 6 cordas sem fadiga.",
+      "inspecaoPendente": "Verificar método de alavanca demonstrado pelo professor."
+    },
+    {
+      "id": "aula-prop-012",
+      "titulo": "A Batida de Thumb Slap e Acompanhamento Fingerstyle",
+      "moduloPedagogicoId": "mod-ped-03",
+      "habilidadePrincipalId": "hab-rit-004",
+      "habilidadesSecundarias": [
+        "hab-tec-004"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-007"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-18-5-thumb-slap-batida-fingerstyle"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração de acompanhamento com elemento percussivo.",
+      "nivel": "basico_2",
+      "praticaSaidaPlanejada": "Executar 8 compassos da levada com thumb slap no tempo 2 e 4.",
+      "inspecaoPendente": "Checar se o movimento percussivo não provoca dor no punho."
+    },
+    {
+      "id": "aula-prop-013",
+      "titulo": "Pequena Valsa: Melodia com Baixo Simultâneo",
+      "moduloPedagogicoId": "mod-ped-12",
+      "habilidadePrincipalId": "hab-sol-001",
+      "habilidadesSecundarias": [
+        "hab-tec-004",
+        "hab-lei-003"
+      ],
+      "prerequisitosAulas": [
+        "aula-prop-010"
+      ],
+      "fontesCandidatas": [
+        "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol"
+      ],
+      "decisaoEditorial": "manter_aula_individual",
+      "justificativa": "Aula de calibração de violão solo a duas vozes em nível básico/intermediário.",
+      "nivel": "intermediario_1",
+      "praticaSaidaPlanejada": "Tocar a peça completa destacando a voz melódica sobre os baixos.",
+      "inspecaoPendente": "Inspecionar o vídeo da Pequena Valsa e o PDF para validar a partitura."
+    }
+  ]
+}

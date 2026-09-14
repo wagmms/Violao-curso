@@ -1,0 +1,42 @@
+{
+  "candidatoId": "cand-004",
+  "versao": "v02-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "entradaPrincipal": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-0408",
+      "nome": "0. 1",
+      "tipo": "pdf",
+      "tamanhoBytes": 51500,
+      "sha256": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+      "descricao": "Partitura da Peça 1: Brilha Brilha Estrelinha (Página 1 observada em revisao-codex/arq-0408.png)"
+    },
+    {
+      "arquivoId": "arq-0415",
+      "nome": "descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 882,
+      "sha256": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e",
+      "descricao": "Orientações pedagógicas de Marcos Kaiser para leitura autodirigida"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand004-partitura-recorte",
+      "tipo": "imagem_partitura",
+      "obrigatorio": true,
+      "descricao": "Recorte visual de alta resolução dos compassos 1 a 4 de arq-0408.png"
+    },
+    {
+      "id": "rec-cand004-metronomo",
+      "tipo": "metronomo_interativo",
+      "obrigatorio": true,
+      "descricao": "Metrônomo calibrado em 60 bpm no compasso 4/4 com acentuação no tempo 1"
+    }
+  ],
+  "bloqueiosTecnicos": {
+    "video": "Inexistente no acervo original (entrada puramente gráfica)",
+    "audioGravado": "Inexistente no acervo original (requer metrônomo interativo ou playback autoral)"
+  }
+}

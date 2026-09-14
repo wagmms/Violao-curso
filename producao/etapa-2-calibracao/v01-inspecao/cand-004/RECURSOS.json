@@ -1,0 +1,77 @@
+{
+  "candidatoId": "cand-004",
+  "versao": "v01-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-0408",
+      "nome": "0. 1 (Brilha Brilha Estrelinha)",
+      "tipo": "pdf",
+      "tamanhoBytes": 51500,
+      "sha256": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8"
+    },
+    {
+      "arquivoId": "arq-0409",
+      "nome": "0. 2 (Parabéns pra Você)",
+      "tipo": "pdf",
+      "tamanhoBytes": 46488,
+      "sha256": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822"
+    },
+    {
+      "arquivoId": "arq-0410",
+      "nome": "0. 3 (Atirei o Pau no Gato)",
+      "tipo": "pdf",
+      "tamanhoBytes": 38108,
+      "sha256": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e"
+    },
+    {
+      "arquivoId": "arq-0411",
+      "nome": "0. 4 (Escravos de Jó)",
+      "tipo": "pdf",
+      "tamanhoBytes": 66155,
+      "sha256": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd"
+    },
+    {
+      "arquivoId": "arq-0412",
+      "nome": "0. 5 (Noite Feliz)",
+      "tipo": "pdf",
+      "tamanhoBytes": 67826,
+      "sha256": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35"
+    },
+    {
+      "arquivoId": "arq-0413",
+      "nome": "0. 6 (O Cravo Brigou com a Rosa)",
+      "tipo": "pdf",
+      "tamanhoBytes": 47791,
+      "sha256": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c"
+    },
+    {
+      "arquivoId": "arq-0414",
+      "nome": "0. 7 (Cai Cai Balão)",
+      "tipo": "pdf",
+      "tamanhoBytes": 52762,
+      "sha256": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295"
+    },
+    {
+      "arquivoId": "arq-0415",
+      "nome": "descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 882,
+      "sha256": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand-004-partitura",
+      "tipo": "diagrama_ou_partitura",
+      "obrigatorio": true,
+      "descricao": "Material de apoio visual para prática"
+    },
+    {
+      "id": "rec-cand-004-audio",
+      "tipo": "audio_referencia",
+      "obrigatorio": true,
+      "descricao": "Áudio de referência ou metrônomo"
+    }
+  ]
+}

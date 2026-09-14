@@ -1,0 +1,508 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v03",
+  "dataGeracao": "2026-09-14T17:00:00-03:00",
+  "totalHabilidades": 29,
+  "dominios": [
+    "ritmo",
+    "ouvido",
+    "leitura",
+    "tecnica",
+    "acompanhamento",
+    "harmonia",
+    "solo/arranjo",
+    "expressao/criacao"
+  ],
+  "habilidades": [
+    {
+      "id": "hab-rit-001",
+      "nome": "Manutenção de Pulso Isócrono",
+      "dominio": "ritmo",
+      "acaoObservavel": "Bater e contar o pulso em 4/4 de forma contínua e uniforme a 60 BPM",
+      "condicoes": "Sem instrumento ou em cordas abafadas, com metrônomo de referência ou contagem verbal",
+      "evidenciaEsperada": "16 compassos consecutivos sem aceleração, desaceleração involuntária ou parada",
+      "prerequisitos": [],
+      "tarefaDiagnostica": "Ligue o metrônomo a 60 BPM. Conte '1, 2, 3, 4' em voz alta batendo o pé ou a mão no tempo.",
+      "rotaRecuperacao": "Reduzir o andamento para 50 BPM e praticar caminhada sincronizada com o pulso.",
+      "fontesCandidatas": [
+        "aula-mod-1-2",
+        "aula-mod-1-8"
+      ]
+    },
+    {
+      "id": "hab-rit-002",
+      "nome": "Subdivisão Rítmica de Colcheias",
+      "dominio": "ritmo",
+      "acaoObservavel": "Subdividir o tempo em duas partes iguais pronunciando '1 e 2 e 3 e 4 e'",
+      "condicoes": "Marcando o tempo principal com o pé e o contratempo com as mãos em cordas abafadas",
+      "evidenciaEsperada": "8 compassos mantendo a distância temporal simétrica entre o tempo e o contratempo",
+      "prerequisitos": [
+        "hab-rit-001"
+      ],
+      "tarefaDiagnostica": "Com metrônomo a 60 BPM, marque o pulso e toque toques alternados para baixo e para cima por tempo.",
+      "rotaRecuperacao": "Falar a contagem sem o violão até automatizar a divisão simétrica do tempo.",
+      "fontesCandidatas": [
+        "aula-mod-1-2",
+        "aula-mod-4-35"
+      ]
+    },
+    {
+      "id": "hab-rit-003",
+      "nome": "Execução da Levada Balada Básica",
+      "dominio": "ritmo",
+      "acaoObservavel": "Executar o padrão rítmico de balada mantendo o movimento contínuo de pêndulo da mão direita",
+      "condicoes": "Violão afinado, cordas abafadas ou acordes simples em andamento de 60 a 72 BPM",
+      "evidenciaEsperada": "8 repetições contínuas do ciclo da levada sem interrupção de pulso na virada do compasso",
+      "prerequisitos": [
+        "hab-rit-002"
+      ],
+      "tarefaDiagnostica": "Toque o ciclo da levada 4 vezes consecutivas em cordas abafadas mantendo o movimento contínuo.",
+      "rotaRecuperacao": "Isolar o movimento do braço no ar antes de tocar as cordas em andamento reduzido (50 BPM).",
+      "fontesCandidatas": [
+        "aula-mod-1-17"
+      ]
+    },
+    {
+      "id": "hab-rit-004",
+      "nome": "Levada com Elemento Percussivo (Thumb Slap)",
+      "dominio": "ritmo",
+      "acaoObservavel": "Executar levada rítmica aplicando o golpe percussivo da base do polegar nos tempos 2 e 4",
+      "condicoes": "Violão com cordas de aço ou nylon, andamento moderado (60 a 75 BPM)",
+      "evidenciaEsperada": "8 compassos contínuos sustentando a percussão nos tempos 2 e 4 sem tensão muscular no punho",
+      "prerequisitos": [
+        "hab-rit-003",
+        "hab-tec-004"
+      ],
+      "tarefaDiagnostica": "Execute 4 compassos aplicando o slap do polegar nos tempos 2 e 4 em cordas abafadas.",
+      "rotaRecuperacao": "Treinar a rotação do antebraço de forma relaxada sem bater com força excessiva.",
+      "fontesCandidatas": [
+        "aula-kaiser-18-5-thumb-slap-batida-fingerstyle"
+      ]
+    },
+    {
+      "id": "hab-rit-005",
+      "nome": "Levada de Bossa Nova Básica (Estilo João Gilberto)",
+      "dominio": "ritmo",
+      "acaoObservavel": "Executar a célula rítmica de bossa nova com polegar no baixo e dedos i-m-a no acorde",
+      "condicoes": "Síncopa característica com baixo marcando tempos 1 e 3 e acorde antecipado",
+      "evidenciaEsperada": "8 compassos contínuos preservando a independência entre baixo uniforme e acorde sincopado",
+      "prerequisitos": [
+        "hab-rit-003",
+        "hab-tec-004"
+      ],
+      "tarefaDiagnostica": "Isole o polegar marcando o tempo 1 e 3 enquanto os dedos puxam o acorde nos contratempos.",
+      "rotaRecuperacao": "Praticar primeiro somente o polegar em semínimas e depois adicionar um único acorde sincopado.",
+      "fontesCandidatas": [
+        "aula-mod-5-30",
+        "aula-mod-6-1"
+      ]
+    },
+    {
+      "id": "hab-rit-006",
+      "nome": "Levada de Samba e Condução de Choro",
+      "dominio": "ritmo",
+      "acaoObservavel": "Executar o tamborim rítmico do samba e a condução de choro ao violão",
+      "condicoes": "Andamento moderado de samba (70 a 85 BPM), violão de nylon",
+      "evidenciaEsperada": "Execução com clareza dos acentos no segundo tempo do compasso binário",
+      "prerequisitos": [
+        "hab-rit-005"
+      ],
+      "tarefaDiagnostica": "Toque levada de samba em 2/4 em sequência C - G7 mantendo o molho rítmico.",
+      "rotaRecuperacao": "Ouvir a faixa de percussão e bater a caixa rítmica no tampo do violão.",
+      "fontesCandidatas": [
+        "aula-mod-6-6",
+        "aula-kaiser-167-1-samba-da-bencao-baden-powell"
+      ]
+    },
+    {
+      "id": "hab-rit-007",
+      "nome": "As Levadas de Baden Powell (Mão Direita)",
+      "dominio": "ritmo",
+      "acaoObservavel": "Executar os padrões rítmicos afro-brasileiros de Baden Powell com ataque percussivo",
+      "condicoes": "Violão de nylon, uso do polegar pesado e rasgueado leve com dedos",
+      "evidenciaEsperada": "Execução das levadas características mantendo pulso firme e dinâmica expressiva",
+      "prerequisitos": [
+        "hab-rit-006"
+      ],
+      "tarefaDiagnostica": "Toque o padrão de Berimbau ou Canto de Ossanha em andamento estável.",
+      "rotaRecuperacao": "Isole o movimento de abafamento da mão esquerda combinado ao rasgueado da direita.",
+      "fontesCandidatas": [
+        "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co",
+        "aula-kaiser-172-14-berimbau-baden-powell-afro-samba"
+      ]
+    },
+    {
+      "id": "hab-ouv-001",
+      "nome": "Discriminação de Alturas Relativas (Grave vs. Agudo)",
+      "dominio": "ouvido",
+      "acaoObservavel": "Identificar corretamente se a segunda nota soada é mais aguda ou mais grave que a primeira",
+      "condicoes": "Teste auditivo cego com 10 pares de notas no violão ou áudio de referência",
+      "evidenciaEsperada": "Mínimo de 9 acertos em 10 tentativas",
+      "prerequisitos": [],
+      "tarefaDiagnostica": "Ouça 5 pares de notas sem olhar para o braço e anote 'subiu' ou 'desceu'.",
+      "rotaRecuperacao": "Praticar com extremos do violão (6ª corda solta vs. 1ª corda solta) até refinar a percepção.",
+      "fontesCandidatas": [
+        "aula-mod-1-15"
+      ]
+    },
+    {
+      "id": "hab-ouv-002",
+      "nome": "Reconhecimento Auditivo de Intervalos Diatônicos (2ªM e 3ªM)",
+      "dominio": "ouvido",
+      "acaoObservavel": "Identificar por escuta se o intervalo ascendente tocado é uma 2ª Maior (tom) ou 3ª Maior (dois tons)",
+      "condicoes": "Áudio sem pista visual, notas soadas consecutivamente",
+      "evidenciaEsperada": "Mínimo de 8 acertos em 10 comparações",
+      "prerequisitos": [
+        "hab-ouv-001"
+      ],
+      "tarefaDiagnostica": "Escute 10 intervalos tocados e classifique cada um como 2ª Maior ou 3ª Maior.",
+      "rotaRecuperacao": "Associar o som da 2ªM ao início de 'Parabéns pra Você' e da 3ªM ao início de 'Brahms Lullaby'.",
+      "fontesCandidatas": [
+        "aula-mod-1-15",
+        "aula-mod-1-16"
+      ]
+    },
+    {
+      "id": "hab-ouv-003",
+      "nome": "Entoação Vocal de Intervalos Diatônicos",
+      "dominio": "ouvido",
+      "acaoObservavel": "Cantar a nota de destino (2ªM ou 3ªM) a partir de uma nota fundamental soada no violão",
+      "condicoes": "Violão toca uma nota de referência, o aluno canta a nota superior e confere tocando no instrumento",
+      "evidenciaEsperada": "Afinar a nota cantada em uníssono com a conferência no instrumento em 4 de 5 tentativas",
+      "prerequisitos": [
+        "hab-ouv-002"
+      ],
+      "tarefaDiagnostica": "Toque a nota Dó na 5ª corda (3ª casa), cante a 2ª Maior (Ré) e depois confira na 4ª corda solta.",
+      "rotaRecuperacao": "Tocar a nota junto com a voz antes de tentar cantar antes de tocar.",
+      "fontesCandidatas": [
+        "aula-mod-1-15"
+      ]
+    },
+    {
+      "id": "hab-ouv-004",
+      "nome": "Reconhecimento de Tríades Maiores e Menores",
+      "dominio": "ouvido",
+      "acaoObservavel": "Distinguir auditivamente a sonoridade de um acorde Maior de um acorde Menor",
+      "condicoes": "Áudio com 10 acordes soados de forma arpejada ou em bloco",
+      "evidenciaEsperada": "Mínimo de 9 acertos em 10 acordes apresentados",
+      "prerequisitos": [
+        "hab-ouv-002"
+      ],
+      "tarefaDiagnostica": "Classifique 10 acordes ouvidos como 'Maior' (solar/aberto) ou 'Menor' (melancólico/fechado).",
+      "rotaRecuperacao": "Ouvir o arpejo lento destacando a 3ª do acorde (maior vs menor).",
+      "fontesCandidatas": [
+        "aula-mod-6-5",
+        "aula-kaiser-23-1-comece-pelo-simples"
+      ]
+    },
+    {
+      "id": "hab-ouv-005",
+      "nome": "Tirar Frase Melódica Curta de Ouvido",
+      "dominio": "ouvido",
+      "acaoObservavel": "Localizar e tocar no violão uma melodia de 4 a 6 notas ouvida sem partitura",
+      "condicoes": "Frase gravada em primeira posição, em tonalidade de Dó Maior ou Sol Maior",
+      "evidenciaEsperada": "Reproduzir a melodia correta no violão após no máximo 5 tentativas de escuta",
+      "prerequisitos": [
+        "hab-ouv-003",
+        "hab-lei-002"
+      ],
+      "tarefaDiagnostica": "Ouça a melodia de 'Cai Cai Balão' e encontre as notas na 1ª e 2ª cordas do violão.",
+      "rotaRecuperacao": "Cantarolar a frase antes de colocar os dedos nas cordas para fixar o desenho melódico.",
+      "fontesCandidatas": [
+        "aula-kaiser-164-7-cai-cai-balao"
+      ]
+    },
+    {
+      "id": "hab-lei-001",
+      "nome": "Identificação das Cordas Soltas e Cifras Básicas",
+      "dominio": "leitura",
+      "acaoObservavel": "Nomear as 6 cordas do violão e ler cifras alfanuméricas básicas (C, D, E, F, G, A, B e menores)",
+      "condicoes": "Apresentação visual de cifras e diagrama de braço",
+      "evidenciaEsperada": "Reconhecimento imediato (<3 segundos por acorde) das notas fundamentais e cifras",
+      "prerequisitos": [],
+      "tarefaDiagnostica": "Nomeie rapidamente a afinação: E, A, D, G, B, E e traduza C, Dm, Em, G, Am.",
+      "rotaRecuperacao": "Praticar cartões de associação nota-letra (A=Lá, B=Si, etc.).",
+      "fontesCandidatas": [
+        "aula-mod-1-7",
+        "aula-mod-1-26"
+      ]
+    },
+    {
+      "id": "hab-lei-002",
+      "nome": "Leitura de Tablatura em Primeira Posição",
+      "dominio": "leitura",
+      "acaoObservavel": "Decodificar tablatura identificando a corda (linha) e a casa (número) sem confundir ordem vertical",
+      "condicoes": "Trecho musical de 4 compassos nas cordas 1, 2 e 3 nas casas 0 a 3",
+      "evidenciaEsperada": "Tocar as notas indicadas na tablatura no ritmo proposto sem erros de corda invertida",
+      "prerequisitos": [
+        "hab-lei-001"
+      ],
+      "tarefaDiagnostica": "Toque o trecho tabulado identificando corda 1 (linha superior) e corda 6 (linha inferior).",
+      "rotaRecuperacao": "Desenhar as 6 cordas no papel e assinalar cordas soltas até automatizar a leitura espacial.",
+      "fontesCandidatas": [
+        "aula-mod-2-26",
+        "aula-kaiser-123-2-partitura-leitura-ritmica"
+      ]
+    },
+    {
+      "id": "hab-lei-003",
+      "nome": "Leitura de Partitura Musical (Clave de Sol na 1ª Posição)",
+      "dominio": "leitura",
+      "acaoObservavel": "Ler alturas na clave de sol (Mi3 a Sol4) e valores de semibreve, mínima e semínima",
+      "condicoes": "Partitura simples em compasso 4/4 em primeira posição",
+      "evidenciaEsperada": "Execução contínua de 8 compassos com alturas e durações corretas",
+      "prerequisitos": [
+        "hab-rit-002",
+        "hab-lei-001"
+      ],
+      "tarefaDiagnostica": "Solfeje o nome das notas da Partitura nº 1 antes de tocar no violão.",
+      "rotaRecuperacao": "Isole a leitura do ritmo batendo palmas antes de adicionar as notas nas cordas.",
+      "fontesCandidatas": [
+        "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+      ]
+    },
+    {
+      "id": "hab-tec-001",
+      "nome": "Postura Ergonômica e Apoios do Violão",
+      "dominio": "tecnica",
+      "acaoObservavel": "Posicionar o violão com apoio estável no corpo mantendo ombros e punhos relaxados",
+      "condicoes": "Sentado em cadeira sem braços, violão apoiado na perna com estabilidade",
+      "evidenciaEsperada": "Tocar cordas soltas durante 3 minutos sem elevação do ombro nem flexão forçada do punho",
+      "prerequisitos": [],
+      "tarefaDiagnostica": "Ajuste o violão, toque as cordas da 6ª à 1ª e solte a mão esquerda para verificar estabilidade.",
+      "rotaRecuperacao": "Ajustar a altura do assento ou usar apoio de pé para elevar o braço do instrumento.",
+      "fontesCandidatas": [
+        "aula-mod-1-4"
+      ]
+    },
+    {
+      "id": "hab-tec-002",
+      "nome": "Toque da Mão Direita com Polegar e Dedos Indicador/Médio",
+      "dominio": "tecnica",
+      "acaoObservavel": "Produzir som limpo e definido com polegar (toque livre) e dedos i-m alternados",
+      "condicoes": "Cordas soltas, ataque perpendicular sem esbarrar nas cordas vizinhas",
+      "evidenciaEsperada": "Sequência de 12 toques sem ruído de unha rasgando ou som abafado",
+      "prerequisitos": [
+        "hab-tec-001"
+      ],
+      "tarefaDiagnostica": "Toque a sequência p-i-m-i nas cordas 4, 3, 2, 3 mantendo volume uniforme.",
+      "rotaRecuperacao": "Reduzir o movimento da mão, deixando apenas as articulações dos dedos trabalharem.",
+      "fontesCandidatas": [
+        "aula-mod-1-5"
+      ]
+    },
+    {
+      "id": "hab-tec-003",
+      "nome": "Troca Mecânica Fluente de Acordes (Dedo Guia / Pivô)",
+      "dominio": "tecnica",
+      "acaoObservavel": "Realizar a transição entre dois formatos de acordes utilizando dedo pivô sem tirar todos os dedos",
+      "condicoes": "Exemplo: transição Lá Maior (A) para Ré Maior (D) mantendo a referência na 3ª corda (Lá, casa 2)",
+      "evidenciaEsperada": "8 trocas consecutivas em tempo estrito sem interrupção do som a 60 BPM",
+      "prerequisitos": [
+        "hab-tec-002",
+        "hab-lei-001"
+      ],
+      "tarefaDiagnostica": "Execute 10 trocas entre A e D contando 4 tempos para cada acorde no metrônomo.",
+      "rotaRecuperacao": "Praticar o movimento no ar bem devagar, observando a acomodação simultânea dos dedos 2 e 3.",
+      "fontesCandidatas": [
+        "aula-mod-1-10",
+        "aula-mod-1-11"
+      ]
+    },
+    {
+      "id": "hab-tec-004",
+      "nome": "Dedilhado Básico p-i-m-a (Arpejos Simples)",
+      "dominio": "tecnica",
+      "acaoObservavel": "Executar arpejo de 4 notas (p nos bordões, i na 3ª, m na 2ª, a na 1ª corda)",
+      "condicoes": "Andamento uniforme, sem acelerar a subida dos dedos",
+      "evidenciaEsperada": "4 ciclos completos do dedilhado com som límpido em cada corda",
+      "prerequisitos": [
+        "hab-tec-002"
+      ],
+      "tarefaDiagnostica": "Arpeje o acorde de Em em p-i-m-a mantendo cada corda soando até o final do compasso.",
+      "rotaRecuperacao": "Apoiar o polegar suavemente no bordão para estabilizar a mão antes do arpejo.",
+      "fontesCandidatas": [
+        "aula-kaiser-322-15-15-como-fazer-dedilhados"
+      ]
+    },
+    {
+      "id": "hab-tec-005",
+      "nome": "Montagem de Pestana Mecânica com Alavanca",
+      "dominio": "tecnica",
+      "acaoObservavel": "Montar pestana de Fá Maior (F) ou Si menor (Bm) com indicador estendido próximo ao traste",
+      "condicoes": "Uso do peso do braço e apoio de alavanca, sem apertar o polegar em pinça forçada",
+      "evidenciaEsperada": "Todas as 6 cordas (ou 5 no Bm) soando com clareza sem chiado e sem dor na mão",
+      "prerequisitos": [
+        "hab-tec-003"
+      ],
+      "tarefaDiagnostica": "Monte a pestana na 5ª casa (Lá), toque corda por corda e depois mova para a 1ª casa (Fá).",
+      "rotaRecuperacao": "Treinar a meia-pestana (3 cordas) e pestana nas casas mais altas (5ª a 7ª) antes da 1ª casa.",
+      "fontesCandidatas": [
+        "aula-mod-3-23",
+        "aula-mod-5-1"
+      ]
+    },
+    {
+      "id": "hab-aco-001",
+      "nome": "Acompanhamento de Repertório com Acordes Abertos",
+      "dominio": "acompanhamento",
+      "acaoObservavel": "Tocar o acompanhamento completo de uma canção de 3 ou 4 acordes mantendo a levada",
+      "condicoes": "Música do repertório inicial (ex: Let It Be, Stand By Me ou Parabéns pra Você)",
+      "evidenciaEsperada": "Executar a canção do início ao fim sem pausas involuntárias entre as trocas de acordes",
+      "prerequisitos": [
+        "hab-rit-003",
+        "hab-tec-003"
+      ],
+      "tarefaDiagnostica": "Acompanhe a sequência C - G - Am - F (ou versão simplificada sem pestana) a 60 BPM.",
+      "rotaRecuperacao": "Tocar apenas uma batida para baixo por compasso até sincronizar as trocas com o pulso.",
+      "fontesCandidatas": [
+        "aula-mod-1-19",
+        "aula-mod-1-20"
+      ]
+    },
+    {
+      "id": "hab-aco-002",
+      "nome": "Condução de Baixos nos Acordes (Baixo Alternado / Inversões)",
+      "dominio": "acompanhamento",
+      "acaoObservavel": "Tocar a fundamental no tempo 1 e alternar com a quinta ou nota de passagem no tempo 3",
+      "condicoes": "Progressão I - IV - V em tonalidade maior, violão de nylon",
+      "evidenciaEsperada": "Destacar claramente o bordão com o polegar sem interromper o som do restante do acorde",
+      "prerequisitos": [
+        "hab-aco-001",
+        "hab-tec-004"
+      ],
+      "tarefaDiagnostica": "Toque o acorde de C alternando o baixo entre a 5ª corda (Dó) e a 6ª corda (Sol).",
+      "rotaRecuperacao": "Tocar apenas os baixos no metrônomo antes de recolocar os dedos do acorde.",
+      "fontesCandidatas": [
+        "aula-mod-7-1",
+        "aula-kaiser-49-1-juntanto-todas-as-levadas-deixa"
+      ]
+    },
+    {
+      "id": "hab-har-001",
+      "nome": "Compreensão e Aplicação do Campo Harmônico Maior",
+      "dominio": "harmonia",
+      "acaoObservavel": "Identificar e montar as tríades e tétrades dos graus I, ii, iii, IV, V, vi de uma tonalidade",
+      "condicoes": "Aplicação prática nas tonalidades de Dó Maior e Sol Maior",
+      "evidenciaEsperada": "Tocar a cadência I - vi - ii - V - I identificando as funções tônica, subdominante e dominante",
+      "prerequisitos": [
+        "hab-aco-001",
+        "hab-ouv-004"
+      ],
+      "tarefaDiagnostica": "Monte a sequência de acordes C - Am - Dm - G7 explicando a função de cada acorde.",
+      "rotaRecuperacao": "Revisar a escala maior e a sobreposição de terças diatônicas.",
+      "fontesCandidatas": [
+        "aula-mod-4-37",
+        "aula-mod-5-29"
+      ]
+    },
+    {
+      "id": "hab-har-002",
+      "nome": "Sistema CAGED e Formatos Móveis de Acordes",
+      "dominio": "harmonia",
+      "acaoObservavel": "Localizar e montar o mesmo acorde maior em 3 regiões diferentes do braço utilizando o sistema CAGED",
+      "condicoes": "Exemplo: Acorde de Dó Maior nos modelos de C, A e G no braço do violão",
+      "evidenciaEsperada": "Tocar os três modelos nomeando a tônica e a terça em cada região",
+      "prerequisitos": [
+        "hab-tec-005",
+        "hab-har-001"
+      ],
+      "tarefaDiagnostica": "Toque o acorde de Mi Maior usando o modelo aberto de E, o modelo de C na 4ª casa e o modelo de A na 7ª casa.",
+      "rotaRecuperacao": "Mapear a localização das tônicas nas 6ª, 5ª e 4ª cordas.",
+      "fontesCandidatas": [
+        "aula-mod-3-9",
+        "aula-kaiser-305-4-o-metodo-esquecido-de-harmonia-popular"
+      ]
+    },
+    {
+      "id": "hab-sol-001",
+      "nome": "Melodia com Baixo Simultâneo (Textura Polifônica a Duas Vozes)",
+      "dominio": "solo/arranjo",
+      "acaoObservavel": "Executar peça curta mantendo a voz melódica cantabile na primeira corda e o baixo sustentado nos bordões",
+      "condicoes": "Peça de repertório clássico ou MPB simples (ex: Pequena Valsa de Carulli ou Andantino)",
+      "evidenciaEsperada": "Execução de 8 compassos com melodia destacada em volume superior ao baixo",
+      "prerequisitos": [
+        "hab-tec-004",
+        "hab-lei-002"
+      ],
+      "tarefaDiagnostica": "Toque os primeiros 4 compassos da Pequena Valsa garantindo que o baixo soe no tempo 1.",
+      "rotaRecuperacao": "Praticar apenas a linha melódica e depois apenas a linha de baixo separadamente.",
+      "fontesCandidatas": [
+        "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol",
+        "aula-kaiser-139-12-andantino-antonio-cano-violao-classic"
+      ]
+    },
+    {
+      "id": "hab-sol-002",
+      "nome": "Arranjo Fingerstyle Completo (Melodia, Baixo e Harmonia)",
+      "dominio": "solo/arranjo",
+      "acaoObservavel": "Executar arranjo solo de música brasileira sustentando melodia, acompanhamento harmônico e condução de baixo",
+      "condicoes": "Repertório intermediário (ex: Saudades de Márcia, Samba da Benção ou Menos é Mais)",
+      "evidenciaEsperada": "Performance completa do arranjo sem quedas no andamento e com dinâmica expressiva",
+      "prerequisitos": [
+        "hab-sol-001",
+        "hab-rit-006",
+        "hab-aco-002"
+      ],
+      "tarefaDiagnostica": "Execute a seção A de Saudades de Márcia de Baden Powell com clareza instrumental.",
+      "rotaRecuperacao": "Isole a transição dos acordes com baixo cromático compasso por compasso.",
+      "fontesCandidatas": [
+        "aula-kaiser-156-28-saudades-de-marcia-baden-powell",
+        "aula-kaiser-167-1-samba-da-bencao-baden-powell"
+      ]
+    },
+    {
+      "id": "hab-exp-001",
+      "nome": "Dinâmica e Fraseado Expressivo",
+      "dominio": "expressao/criacao",
+      "acaoObservavel": "Aplicar variações deliberadas de intensidade sonora (piano, mezzoforte, forte) e acentos melódicos em trecho musical",
+      "condicoes": "Repertório de violão solo ou acompanhamento vocal",
+      "evidenciaEsperada": "Executar 8 compassos demonstrando contraste auditivo perceptível entre seções suaves e acentuadas",
+      "prerequisitos": [
+        "hab-tec-002"
+      ],
+      "tarefaDiagnostica": "Toque uma frase simples alternando toques suaves (p) e fortes (f) mantendo o mesmo andamento.",
+      "rotaRecuperacao": "Controlar a pressão do toque com a mão direita mantendo o pulso relaxado.",
+      "fontesCandidatas": [
+        "aula-kaiser-36-4-aula-da-levada-1-exercicio-2-batida-co",
+        "aula-mod-8-1"
+      ]
+    },
+    {
+      "id": "hab-exp-002",
+      "nome": "Variação de Levada e Ornamentação Rítmica",
+      "dominio": "expressao/criacao",
+      "acaoObservavel": "Inserir pequenas variações rítmicas e antecipações autorais na levada sem perder a quadratura do compasso",
+      "condicoes": "Acompanhando progressão harmônica conhecida em 4/4 ou 2/4",
+      "evidenciaEsperada": "Sustentar 16 compassos variando o padrão rítmico no 4º e no 8º compasso sem hesitação no tempo 1",
+      "prerequisitos": [
+        "hab-rit-003"
+      ],
+      "tarefaDiagnostica": "Toque 4 compassos de balada introduzindo uma síncopa ou toque percussivo no último tempo.",
+      "rotaRecuperacao": "Praticar primeiro batendo a variação na mesa antes de aplicar ao instrumento.",
+      "fontesCandidatas": [
+        "aula-kaiser-18-5-thumb-slap-batida-fingerstyle",
+        "aula-mod-6-25"
+      ]
+    },
+    {
+      "id": "hab-exp-003",
+      "nome": "Improvisação Melódica sobre Blues / I-IV-V",
+      "dominio": "expressao/criacao",
+      "acaoObservavel": "Construir frases melódicas autorais utilizando a escala pentatônica menor sobre base de blues de 12 compassos",
+      "condicoes": "Playback ou base harmônica em Lá menor ou Mi maior (estrutura I-IV-V)",
+      "evidenciaEsperada": "Executar improvisação de 12 compassos resolvendo as frases nas notas do acorde da base",
+      "prerequisitos": [
+        "hab-har-001",
+        "hab-ouv-003"
+      ],
+      "tarefaDiagnostica": "Toque 3 frases distintas com a pentatônica menor resolvendo na tônica da base de blues.",
+      "rotaRecuperacao": "Limitar o improviso a apenas 3 notas vizinhas para focar no ritmo da frase.",
+      "fontesCandidatas": [
+        "aula-kaiser-128-1-formatos-do-blues",
+        "aula-mod-8-15"
+      ]
+    }
+  ],
+  "dataAtualizacao": "2026-09-14"
+}

@@ -1,0 +1,155 @@
+{
+  "data": "2026-09-14T20:36:47.531Z",
+  "limites": "Revisão documental e referencial; nenhum vídeo reproduzido ou PDF renderizado",
+  "etapa0": {
+    "arquivos": 2090,
+    "tamanhosDivergentes": [],
+    "idsArquivosDuplicados": 0,
+    "referencesDivergentes": [],
+    "hashesAmostra": [
+      {
+        "id": "arq-0408",
+        "real": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+        "declarado": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+        "confere": true
+      },
+      {
+        "id": "arq-0409",
+        "real": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+        "declarado": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+        "confere": true
+      },
+      {
+        "id": "arq-0410",
+        "real": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+        "declarado": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+        "confere": true
+      },
+      {
+        "id": "arq-0411",
+        "real": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+        "declarado": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+        "confere": true
+      },
+      {
+        "id": "arq-0412",
+        "real": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+        "declarado": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+        "confere": true
+      },
+      {
+        "id": "arq-0413",
+        "real": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+        "declarado": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+        "confere": true
+      },
+      {
+        "id": "arq-0414",
+        "real": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+        "declarado": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+        "confere": true
+      }
+    ]
+  },
+  "etapa1": {
+    "habilidades": 29,
+    "aulas": 33,
+    "dominiosReais": [
+      "ritmo",
+      "ouvido",
+      "leitura",
+      "tecnica",
+      "acompanhamento",
+      "harmonia",
+      "solo/arranjo",
+      "expressao/criacao"
+    ],
+    "grafoHabilidades": [],
+    "grafoAulas": [],
+    "matriz": {
+      "linhas": 633,
+      "entradasUnicas": 631,
+      "semDestinoReal": 586,
+      "habilidadesInexistentes": 586,
+      "evidenciasInexistentes": 0,
+      "arquivosIncompativeis": []
+    },
+    "habilidadesSemAula": [],
+    "fontesPropostasAusentes": [],
+    "relacoesPropostasAusentes": [],
+    "estadosMatriz": [
+      "legenda_indexada",
+      "metadados_catalogo",
+      "nao_inspecionado"
+    ],
+    "arquivosCitadosCalibracao": [
+      {
+        "id": "arq-1375",
+        "real": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4",
+        "bytes": 186227176,
+        "sha256": "3edfa8f6c21b4eb4ad70aa2bf5c96c05956b95915a6132980505901fe475e529"
+      },
+      {
+        "id": "arq-1320",
+        "real": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4",
+        "bytes": 41206063,
+        "sha256": "288387f1f2a9370570a52baab7e0cf295f0ea2f627f4ed5eafdc864d5f7b493a"
+      },
+      {
+        "id": "arq-1354",
+        "real": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4",
+        "bytes": 425540268,
+        "sha256": "98f0847dc1fd7905a6cc5e6cf0d2f94b8e7d52cc8edb4e0fa05ac12d6dc99d19"
+      },
+      {
+        "id": "arq-0408",
+        "real": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 1",
+        "bytes": 51500,
+        "sha256": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8"
+      },
+      {
+        "id": "arq-0414",
+        "real": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 7",
+        "bytes": 52762,
+        "sha256": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295"
+      },
+      {
+        "id": "arq-0415",
+        "real": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/descricao.md",
+        "bytes": 882,
+        "sha256": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e"
+      },
+      {
+        "id": "arq-0068",
+        "real": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/5. THUMB SLAP _ Batida Fingerstyle/1. Aula.mp4",
+        "bytes": 44538073,
+        "sha256": "53c77cbc8f1eab1f75d24db49c264dc0c8c8ad4bfa5b0c45d81cacd724a0b5b4"
+      },
+      {
+        "id": "arq-0460",
+        "real": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/0. Pequena Valsa",
+        "bytes": 128104,
+        "sha256": "8a6ab1739f7eec07f758aec998244e82d891b280ba43bf87b003e78328252b32"
+      },
+      {
+        "id": "arq-0461",
+        "real": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/1. Aula.mp4",
+        "bytes": 90448442,
+        "sha256": "4df1e08013c7d19c68c54f9356feb1651a177ebdd48e9deef36b0bfbb62ae395"
+      },
+      {
+        "id": "arq-0462",
+        "real": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/descricao.md",
+        "bytes": 322,
+        "sha256": "5b7237e1159714da2601a65dfc9ad2663aeaf8bf60e55e42187890118bd3d5d2"
+      }
+    ],
+    "destinosModelados": {
+      "linhasComDestino": 586,
+      "linhasSemAulaNemDestino": 0,
+      "habilidadesPreenchidasInexistentes": 0,
+      "nota": "Contagens anteriores de semDestinoReal/ habilidadesInexistentes incluem campos vazios legítimos; usar estas contagens para versões com destinos modelados"
+    },
+    "candidatosDivergentes": []
+  }
+}

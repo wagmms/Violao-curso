@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v03",
+  "dataGeracao": "2026-09-14T17:00:00-03:00",
+  "destinos": [
+    {
+      "id": "dest-expansao-curadoria",
+      "nome": "Acervo Geral em Fila de Expansão Curatorial",
+      "categoria": "conteudo_a_curar",
+      "descricao": "Aulas e materiais do acervo físico mantidos no inventário para incorporação em lotes curriculares subsequentes após a calibração.",
+      "criterioAlocacao": "Entrada com arquivos locais de vídeo/áudio/PDF que aborda tópicos a serem detalhados na expansão do curso."
+    },
+    {
+      "id": "dest-descarte-admin",
+      "nome": "Suporte Administrativo / Boas-Vindas da Plataforma",
+      "categoria": "fora_do_curriculo",
+      "descricao": "Mensagens de boas-vindas, orientações operacionais de acesso a grupos ou avisos de plataforma sem conteúdo instrumental.",
+      "criterioAlocacao": "Classificação editorial suporte_administrativo ou comunicado sem instrumento musical."
+    },
+    {
+      "id": "dest-quiz-plataforma",
+      "nome": "Quiz Interativo Nativo da Plataforma Hotmart",
+      "categoria": "avaliacao_plataforma",
+      "descricao": "Questionários interativos de múltipla escolha nativos da plataforma Hotmart sem arquivos de mídia locais.",
+      "criterioAlocacao": "Entradas de quiz nativo identificadas no catálogo original."
+    },
+    {
+      "id": "dest-aguardando-backup",
+      "nome": "Entrada sem Arquivo no Backup Local (Pendente Auditoria Remota)",
+      "categoria": "pendencia_material",
+      "descricao": "Itens canônicos do catálogo cujos arquivos não estavam presentes na pasta física de download local; aguardam auditoria no Google Drive.",
+      "criterioAlocacao": "Status local sem_material no inventário."
+    },
+    {
+      "id": "dest-recurso-complementar",
+      "nome": "Recurso Complementar / Playback / Material de Apoio",
+      "categoria": "recurso_apoio",
+      "descricao": "Playbacks, arquivos de áudio de apoio ou PDFs de cifras complementares associados a aulas do currículo.",
+      "criterioAlocacao": "Arquivo acessório de apoio vinculado a uma unidade pedagógica."
+    }
+  ]
+}

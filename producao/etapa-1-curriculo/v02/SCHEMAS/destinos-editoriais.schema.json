@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DestinosEditoriaisModelo",
+  "type": "object",
+  "required": [
+    "$schema",
+    "versao",
+    "destinos"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "versao": {
+      "type": "string"
+    },
+    "destinos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "nome",
+          "categoria",
+          "descricao",
+          "criterioAlocacao"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^dest-[a-z0-9-]+$"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "criterioAlocacao": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

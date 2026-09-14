@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v01-aula-completa",
+  "candidatoId": "cand-004",
+  "aulaPedagogicaId": "aula-ped-017-leitura-clave-sol",
+  "aulaPropostaId": "aula-prop-017",
+  "moduloPedagogicoId": "mod-ped-05",
+  "habilidadePrincipalId": "hab-lei-003",
+  "fontesOrigemAcervo": [
+    {
+      "arquivoId": "arq-0408",
+      "nome": "0. 1",
+      "tipo": "pdf",
+      "tamanhoBytes": 51500,
+      "sha256": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+      "papel": "referencia_documental_historica_partitura_kaiser",
+      "observacaoMetrica": "Apresenta grupos delimitados por barras com início incompleto (Grupo 1 com 2 tempos). Não alterado no acervo."
+    },
+    {
+      "arquivoId": "arq-0415",
+      "nome": "descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 882,
+      "sha256": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e",
+      "papel": "orientacao_pedagogica_original_autoestudo"
+    }
+  ],
+  "recursosAulaProduzidos": [
+    {
+      "id": "rec-pauta-limpa-png",
+      "caminhoRelativo": "recursos/pauta-limpa.png",
+      "formato": "png",
+      "papelPedagogico": "estudo_e_saida_de_leitura",
+      "descricao": "Pauta de alta resolução sem legendas de notas ou dedos, garantindo leitura pura na saída avaliativa."
+    },
+    {
+      "id": "rec-pauta-limpa-svg",
+      "caminhoRelativo": "recursos/pauta-limpa.svg",
+      "formato": "svg",
+      "papelPedagogico": "fonte_vetorial_editavel_limpa",
+      "descricao": "Código SVG vetorial da pauta limpa de estudo."
+    },
+    {
+      "id": "rec-pauta-anotada-png",
+      "caminhoRelativo": "recursos/pauta-anotada.png",
+      "formato": "png",
+      "papelPedagogico": "apoio_didatico_e_gabarito",
+      "descricao": "Pauta com legendas de alturas, cordas, casas e digitação para consulta em caso de dúvida."
+    },
+    {
+      "id": "rec-pauta-celular-png",
+      "caminhoRelativo": "recursos/pauta-celular.png",
+      "formato": "png",
+      "papelPedagogico": "acessibilidade_mobile",
+      "descricao": "Formatação em 2 sistemas verticais com tipografia ampliada para leitura em smartphones."
+    },
+    {
+      "id": "rec-audio-sintese-principal",
+      "caminhoRelativo": "recursos/referencia-audio-sintese.wav",
+      "formato": "wav",
+      "papelPedagogico": "referencia_sonora_sintetizada",
+      "rotulo": "referencia_metrico_frequencial_senoidal",
+      "duracaoSegundos": 16,
+      "andamentoBpm": 60,
+      "descricao": "Síntese senoidal precisa para checagem de afinação e andamento; não substitui o som real do violão."
+    },
+    {
+      "id": "rec-musicxml-adaptada",
+      "caminhoRelativo": "recursos/pauta-adaptada.musicxml",
+      "formato": "musicxml",
+      "papelPedagogico": "fonte_notacao_musical_padrao",
+      "descricao": "Partitura em formato MusicXML 3.1 editável em MuseScore/Sibelius."
+    },
+    {
+      "id": "rec-transf-pauta-limpa",
+      "caminhoRelativo": "recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "formato": "png",
+      "papelPedagogico": "desafio_leitura_inedito_transferencia",
+      "descricao": "Pauta limpa da frase inédita (Mi Fá Sol Mi | Ré Ré Dó) para provar leitura sem vício de memória."
+    },
+    {
+      "id": "rec-transf-pauta-gabarito",
+      "caminhoRelativo": "recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "formato": "png",
+      "papelPedagogico": "gabarito_separado_transferencia",
+      "descricao": "Pauta anotada da tarefa de transferência para autocorreção após a tentativa."
+    },
+    {
+      "id": "rec-transf-audio-sintese",
+      "caminhoRelativo": "recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "formato": "wav",
+      "papelPedagogico": "referencia_sonora_transferencia",
+      "duracaoSegundos": 8,
+      "andamentoBpm": 60,
+      "descricao": "Síntese senoidal da tarefa de transferência a 60 BPM."
+    }
+  ],
+  "bloqueiosTecnicosAtestados": {
+    "videoGravado": "Inexistente no acervo original (aula projetada com recursos gráficos e auditivos integrados)",
+    "microfoneObrigatorio": "Não exigido: avaliação baseada em rubrica de autoavaliação guiada e metrônomo"
+  }
+}

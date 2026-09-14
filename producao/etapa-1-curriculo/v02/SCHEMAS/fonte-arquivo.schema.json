@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FonteArquivoFisico",
+  "type": "object",
+  "required": [
+    "arquivoId",
+    "caminhoRelativo",
+    "nomeArquivo",
+    "tamanhoBytes",
+    "sha256",
+    "tipo",
+    "statusAssociacao"
+  ],
+  "properties": {
+    "arquivoId": {
+      "type": "string",
+      "pattern": "^arq-[0-9]{4}$"
+    },
+    "caminhoRelativo": {
+      "type": "string"
+    },
+    "nomeArquivo": {
+      "type": "string"
+    },
+    "tamanhoBytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "statusAssociacao": {
+      "type": "string"
+    }
+  }
+}

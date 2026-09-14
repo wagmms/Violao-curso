@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v03-inspecao",
+  "etapa": "etapa-2-calibracao-inspecao",
+  "dataGeracao": "2026-09-14",
+  "produtor": "Antigravity",
+  "revisor": "Codex",
+  "candidatoCalibradoPrincipal": "cand-004",
+  "statusGeralLote": "aguardando_revisao",
+  "observacaoLote": "cand-004 com calibração fechada em v03 para aprovação do revisor Codex. Demais 5 candidatos permanecem em coleta/ajuste de origens.",
+  "candidatos": [
+    {
+      "id": "cand-004",
+      "nome": "Leitura de Partitura na Pauta (Brilha Brilha Estrelinha)",
+      "dominio": "leitura_notacao",
+      "aulaPropostaId": "aula-prop-017",
+      "moduloPedagogicoId": "mod-ped-05",
+      "habilidadePrincipalId": "hab-lei-003",
+      "entradaPrincipal": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+      "fontesOrigem": [
+        "aula-kaiser-124-3-partituras-faceis-para-iniciantes"
+      ],
+      "arquivosFisicosAuditados": [
+        "arq-0408",
+        "arq-0415"
+      ],
+      "recursosAutoraisGerados": [
+        "pauta-adaptada.png",
+        "pauta-adaptada.pdf",
+        "pauta-adaptada.svg",
+        "pauta-adaptada.musicxml",
+        "pauta-adaptada.ly",
+        "referencia-audio-sintese.wav",
+        "EVENTOS.json",
+        "validar-cand004.cjs"
+      ],
+      "statusProdutor": "aprovado_para_revisao_codex",
+      "justificativa": "Vínculos corrigidos para aula-prop-017 / mod-ped-05 / hab-lei-003; fonte com início incompleto descrita com honestidade; adaptação autoral regularizada em 4 compassos (14 eventos, 16 tempos) com pauta própria publicada; contagem 1-2-3-4 e encerramento da mínima corrigidos; diagnóstico em 4 etapas estruturado; validação automatizada com zero erros."
+    },
+    {
+      "id": "cand-001",
+      "nome": "Balada: Ritmo com Polegar e Dedos",
+      "dominio": "ritmo_levadas",
+      "statusProdutor": "em_coleta_e_correcao_origens"
+    },
+    {
+      "id": "cand-002",
+      "nome": "Mecanismo de Troca Fluida: Acordes Lá Maior e Ré Maior",
+      "dominio": "harmonia",
+      "statusProdutor": "em_coleta_e_correcao_origens"
+    },
+    {
+      "id": "cand-003",
+      "nome": "Treinamento Auditivo: Reconhecimento de Intervalos Diatônicos",
+      "dominio": "percepcao_auditiva",
+      "statusProdutor": "em_coleta_e_correcao_oitavas"
+    },
+    {
+      "id": "cand-005",
+      "nome": "Técnica Percussiva / Acompanhamento Básico",
+      "dominio": "acompanhamento",
+      "statusProdutor": "em_reavaliacao_de_escopo"
+    },
+    {
+      "id": "cand-006",
+      "nome": "Violão Solo: Pequena Valsa (F. Carulli)",
+      "dominio": "solo/arranjo",
+      "statusProdutor": "em_reconstrucao_compasso_3_8"
+    }
+  ]
+}

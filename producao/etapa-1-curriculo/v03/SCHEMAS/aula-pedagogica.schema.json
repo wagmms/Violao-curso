@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cursodeviolao.com.br/schemas/v03/aula-pedagogica.schema.json",
+  "title": "AulaPedagogica",
+  "description": "Schema para unidade pedagógica do curso integrado Tríade + Kaiser com autoria, regras de disciplina e passos com duração.",
+  "type": "object",
+  "required": [
+    "id",
+    "titulo",
+    "moduloId",
+    "fase",
+    "dominioPedagogico",
+    "habilidadePrincipalId",
+    "fontesCandidatas",
+    "decisaoEditorial",
+    "justificativa",
+    "autoria",
+    "status",
+    "criteriosSaida",
+    "resultadoEsperado",
+    "proximaAcaoRecomendada",
+    "passosPratica"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^aula-prop-[0-9]{3}$",
+      "minLength": 1
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "moduloId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fase": {
+      "type": "string",
+      "enum": [
+        "fundamentos",
+        "consolidacao",
+        "expansao",
+        "avancado"
+      ]
+    },
+    "dominioPedagogico": {
+      "type": "string",
+      "enum": [
+        "postura_mecanica",
+        "ritmo_levadas",
+        "harmonia",
+        "percepcao_auditiva",
+        "leitura_notacao",
+        "repertorio_pratica",
+        "tecnica_solos",
+        "expressao_criacao"
+      ]
+    },
+    "habilidadePrincipalId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "habilidadesSecundarias": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "prerequisitosAulas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "fontesCandidatas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "decisaoEditorial": {
+      "type": "string",
+      "enum": [
+        "manter_aula_individual",
+        "fundir",
+        "reestruturar",
+        "exercicio_pratico"
+      ]
+    },
+    "justificativa": {
+      "type": "string",
+      "minLength": 1
+    },
+    "autoria": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origemFontes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "criteriosSaida": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resultadoEsperado": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proximaAcaoRecomendada": {
+      "type": "string",
+      "minLength": 1
+    },
+    "passosPratica": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "ordem",
+          "nome",
+          "duracaoMinutos",
+          "descricao",
+          "recursoId"
+        ],
+        "properties": {
+          "ordem": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "nome": {
+            "type": "string",
+            "minLength": 1
+          },
+          "duracaoMinutos": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "descricao": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recursoId": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "especificacaoAuditiva": {
+      "type": "object",
+      "required": [
+        "referenciaSonora",
+        "gabarito"
+      ],
+      "properties": {
+        "referenciaSonora": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gabarito": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "pergunta",
+              "respostaEsperada"
+            ],
+            "properties": {
+              "pergunta": {
+                "type": "string",
+                "minLength": 1
+              },
+              "respostaEsperada": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "especificacaoRitmica": {
+      "type": "object",
+      "required": [
+        "formulaCompasso",
+        "subdivisao",
+        "padraoContagem"
+      ],
+      "properties": {
+        "formulaCompasso": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subdivisao": {
+          "type": "string",
+          "minLength": 1
+        },
+        "padraoContagem": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "dominioPedagogico": {
+            "const": "percepcao_auditiva"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "especificacaoAuditiva"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "dominioPedagogico": {
+            "const": "ritmo_levadas"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "especificacaoRitmica"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1628 @@
+{
+  "data": "2026-09-14T16:53:09.373Z",
+  "escopo": "Todos os IDs, links, referências e tamanhos; SHA-256 de amostra explícita; sem reprodução de vídeos/PDFs",
+  "totaisDeclarados": {
+    "totalEntradas": 631,
+    "totalTriade": 300,
+    "totalKaiser": 331,
+    "comMaterialLocal": 520,
+    "semMaterialLocal": 103,
+    "parcialMaterialLocal": 8,
+    "comVideoLocal": 519,
+    "comPdfLocal": 85,
+    "comLegendasLocais": 288,
+    "comLinksRemotosPreservados": 194,
+    "totalArquivosIndexados": 1814
+  },
+  "erros": [],
+  "hashesAmostra": [
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000859 - 01_1_Módulo_1_01_1_APOSTILAS_e_Apresentação_Descricao.md",
+      "declarado": "83c2d625f2a7dd1de88e0f375be2f088fcb6c893bd3f26d4660141fe448ffdf1",
+      "real": "83c2d625f2a7dd1de88e0f375be2f088fcb6c893bd3f26d4660141fe448ffdf1",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000862 - 01_1_Módulo_1_01_1_APOSTILAS_e_Apresentação_Legenda_pt_BR.vtt",
+      "declarado": "02f3158d50bae1fbb8c03714bad1395d89bce39dc48c1a4ee9c60d239436a509",
+      "real": "02f3158d50bae1fbb8c03714bad1395d89bce39dc48c1a4ee9c60d239436a509",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000863 - 01_1_Módulo_1_01_1_APOSTILAS_e_Apresentação_Legenda_pt_BR.vtt",
+      "declarado": "4868ca9b99fdffb7bb0a88f447d850fa6a5e360da6c2c3003f14112c0f8fb0ec",
+      "real": "4868ca9b99fdffb7bb0a88f447d850fa6a5e360da6c2c3003f14112c0f8fb0ec",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000860 - 01_1_Módulo_1_01_1_APOSTILAS_e_Apresentação_1_00_Apostila_Violao.pdf",
+      "declarado": "f19bc03976d56b1f8865eac03fd5165badf149e1d5b8e7a14aabd02c2f847625",
+      "real": "f19bc03976d56b1f8865eac03fd5165badf149e1d5b8e7a14aabd02c2f847625",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000861 - 01_1_Módulo_1_01_1_APOSTILAS_e_Apresentação_2_00_Apostila_HP1_meses.pdf",
+      "declarado": "9db9f9632e51706362e488fa71504ecba6a2d31b860465bf15ced0e236577c80",
+      "real": "9db9f9632e51706362e488fa71504ecba6a2d31b860465bf15ced0e236577c80",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000858 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação.mp4",
+      "declarado": "d2ed309efd6af98d8b644c87f37c8eab6f521e4c409066acdc36c34db06ed7c5",
+      "real": "d2ed309efd6af98d8b644c87f37c8eab6f521e4c409066acdc36c34db06ed7c5",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000865 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação - Aula.mp4",
+      "declarado": "a3809ab90853d03c0c0173c63266b129a2bd7ef9caa3db772581bbcf540d63d4",
+      "real": "a3809ab90853d03c0c0173c63266b129a2bd7ef9caa3db772581bbcf540d63d4",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000867 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Descricao.md",
+      "declarado": "d12eaff65e6d9030b64f6a1782bb525c8889d26c899b48f15df13176b5b68ef3",
+      "real": "d12eaff65e6d9030b64f6a1782bb525c8889d26c899b48f15df13176b5b68ef3",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000868 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Legenda_pt_BR.vtt",
+      "declarado": "ed3be74968df9efd6a1702260c1a5939b03cacb910ee4de4fa56b26a7ce2791f",
+      "real": "ed3be74968df9efd6a1702260c1a5939b03cacb910ee4de4fa56b26a7ce2791f",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000869 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Legenda_pt_BR.vtt",
+      "declarado": "948a8868308fb99db05a6f593b12710a7ca43995927951421305784e45b76c62",
+      "real": "948a8868308fb99db05a6f593b12710a7ca43995927951421305784e45b76c62",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000870 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Legenda_pt_BR.vtt",
+      "declarado": "bb7be23a9ceba81acab0206fdd1a3b28c56c7caab4ef40a3fa783bda39f41e47",
+      "real": "bb7be23a9ceba81acab0206fdd1a3b28c56c7caab4ef40a3fa783bda39f41e47",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000866 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo.mp4",
+      "declarado": "9d7a1dcb3901414d6bfaded6748b259c543d89feef4d706680518077ddacef01",
+      "real": "9d7a1dcb3901414d6bfaded6748b259c543d89feef4d706680518077ddacef01",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000906 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_Descricao.md",
+      "declarado": "7caa85b3714e9115d6f23d0aa19f6ea4dcc8f968d520345ff57e4d8499abb6d5",
+      "real": "7caa85b3714e9115d6f23d0aa19f6ea4dcc8f968d520345ff57e4d8499abb6d5",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000908 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_1_primeira.pdf",
+      "declarado": "8108013575c71d1f2901fe6b09c2e9bea7069f84e581c3495dff8783d25a4fa9",
+      "real": "8108013575c71d1f2901fe6b09c2e9bea7069f84e581c3495dff8783d25a4fa9",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4",
+      "declarado": "288387f1f2a9370570a52baab7e0cf295f0ea2f627f4ed5eafdc864d5f7b493a",
+      "real": "288387f1f2a9370570a52baab7e0cf295f0ea2f627f4ed5eafdc864d5f7b493a",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000920 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.md",
+      "declarado": "227d407c81e6c9db7e69f24b9c8abe2d788e78c38367afbdfd1d3e9565be71a4",
+      "real": "227d407c81e6c9db7e69f24b9c8abe2d788e78c38367afbdfd1d3e9565be71a4",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000921 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.vtt",
+      "declarado": "ada54def6cc98e316e5ab64761e6214b62536ae48f987199ee065956dba0ba9f",
+      "real": "ada54def6cc98e316e5ab64761e6214b62536ae48f987199ee065956dba0ba9f",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000922 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.vtt",
+      "declarado": "925d2bb15975cc0242b2c03ea9c306bf89e4a2a636642c3961aae7716a11d7a7",
+      "real": "925d2bb15975cc0242b2c03ea9c306bf89e4a2a636642c3961aae7716a11d7a7",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000923 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.vtt",
+      "declarado": "084ab9e9898bdcb14cc5c447cf35a7b72523634088ca025217ad0d1490563f7b",
+      "real": "084ab9e9898bdcb14cc5c447cf35a7b72523634088ca025217ad0d1490563f7b",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4",
+      "declarado": "98f0847dc1fd7905a6cc5e6cf0d2f94b8e7d52cc8edb4e0fa05ac12d6dc99d19",
+      "real": "98f0847dc1fd7905a6cc5e6cf0d2f94b8e7d52cc8edb4e0fa05ac12d6dc99d19",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000929 - descricao.md",
+      "declarado": "61dd55b88d422739714af882f23f46cd9ce2bfd3b113baf8fc6d579b7da2061c",
+      "real": "61dd55b88d422739714af882f23f46cd9ce2bfd3b113baf8fc6d579b7da2061c",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000930 - 1. Aula.pt_br.vtt",
+      "declarado": "c66e42598dcb12219e2064b3fc01bc9fb9e8656135ec69e7b7e9f425835d8dd4",
+      "real": "c66e42598dcb12219e2064b3fc01bc9fb9e8656135ec69e7b7e9f425835d8dd4",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000931 - 2. Aula.pt_br.vtt",
+      "declarado": "83ec17f80b6d656540d9804faf58433bf965d9ebb17136c73d7c3574f0e89263",
+      "real": "83ec17f80b6d656540d9804faf58433bf965d9ebb17136c73d7c3574f0e89263",
+      "confere": true
+    },
+    {
+      "caminho": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4",
+      "declarado": "3edfa8f6c21b4eb4ad70aa2bf5c96c05956b95915a6132980505901fe475e529",
+      "real": "3edfa8f6c21b4eb4ad70aa2bf5c96c05956b95915a6132980505901fe475e529",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/descricao.md",
+      "declarado": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e",
+      "real": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 1",
+      "declarado": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+      "real": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 2",
+      "declarado": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+      "real": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 3",
+      "declarado": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+      "real": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 4",
+      "declarado": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+      "real": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 5",
+      "declarado": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+      "real": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 6",
+      "declarado": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+      "real": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+      "confere": true
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 7",
+      "declarado": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+      "real": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+      "confere": true
+    }
+  ],
+  "ids": {
+    "catalogo": 631,
+    "inventario": 631,
+    "unicos": 631
+  },
+  "arquivos": {
+    "referencias": 1814,
+    "unicosReferenciados": 1814,
+    "fisicos": 2090,
+    "bytesFisicos": 88796249116,
+    "naoReferenciados": [
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000858 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000858 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000858 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000858 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000864 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação - Aula.mp4",
+        "tamanhoBytes": 97632431
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000864 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000864 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000864 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000864 - 01 1. Módulo 1 - 01 1. APOSTILAS e Apresentação - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000866 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000866 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000866 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000866 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000871 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4",
+        "tamanhoBytes": 258704409
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000871 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000871 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000871 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000871 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000872 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000872 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000872 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000872 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000873 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000873 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000873 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000873 - 01_1_Módulo_1_02_2_H_P_1_1_Noções_Básicas_de_Ritmo_Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000874 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000874 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000874 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000874 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000876 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades - Aula.mp4",
+        "tamanhoBytes": 55228172
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000876 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000876 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000876 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000876 - 01 1. Módulo 1 - 03 3. H_P - 1.2 _ Curiosidades - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000877 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000877 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000877 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000877 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000879 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura - Aula.mp4",
+        "tamanhoBytes": 122225211
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000879 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000879 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000879 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000879 - 01 1. Módulo 1 - 04 4. Violão - 1.1 - Postura - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000880 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000880 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000880 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000880 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000883 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares_Aula.mp4",
+        "tamanhoBytes": 521241756
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000883 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares_Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000883 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares_Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000883 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares_Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000883 - 01_1_Módulo_1_05_5_Violão_1_2_1_Exercícios_Preliminares_Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000884 - 01 1. Módulo 1 - 06 6. Violão - 1.2.2 - Nível Exigido.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000884 - 01 1. Módulo 1 - 06 6. Violão - 1.2.2 - Nível Exigido.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000886 - 01_1_Módulo_1_06_6_Violão_1_2_2_Nível_Exigido_Aula.mp4",
+        "tamanhoBytes": 31357784
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000886 - 01_1_Módulo_1_06_6_Violão_1_2_2_Nível_Exigido_Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000886 - 01_1_Módulo_1_06_6_Violão_1_2_2_Nível_Exigido_Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000887 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000887 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000887 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000887 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000889 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4",
+        "tamanhoBytes": 109915536
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000889 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000889 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000889 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000889 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000890 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000890 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000890 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000890 - 01 1. Módulo 1 - 07 7. Violão - 1.3 - Como Afinar - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000891 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000891 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000891 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000891 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000896 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4",
+        "tamanhoBytes": 560644819
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000896 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000896 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000896 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000896 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000897 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000897 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000897 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000897 - 01 1. Módulo 1 - 08 8. H_P - 2 _ Compassos - Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000899 - 01 1. Módulo 1 - 09 9. Violão - 2.1 - Tríades Maiores.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000899 - 01 1. Módulo 1 - 09 9. Violão - 2.1 - Tríades Maiores.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000899 - 01 1. Módulo 1 - 09 9. Violão - 2.1 - Tríades Maiores.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000899 - 01 1. Módulo 1 - 09 9. Violão - 2.1 - Tríades Maiores.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000903 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4",
+        "tamanhoBytes": 290282086
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000903 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000903 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000903 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000903 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000904 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000904 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000904 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000904 - 01_1_Módulo_1_09_9_Violão_2_1_Tríades_Maiores_Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4.parte-01-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4.parte-02-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4.parte-03-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000907 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_1_primeira.pdf",
+        "tamanhoBytes": 1402800
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000909 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência.mp4.parte-01-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000909 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência.mp4.parte-02-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000909 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência.mp4.parte-03-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000911 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência_Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000911 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência_Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000912 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência_Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000912 - 01_1_Módulo_1_11_11_Violão_2_3_Inovação_Trabalho_de_Fluência_Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000913 - 01_1_Módulo_1_12_12_Violão_2_4_Inovação_Fluência_Bruno_Mars.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000913 - 01_1_Módulo_1_12_12_Violão_2_4_Inovação_Fluência_Bruno_Mars.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000915 - 01_1_Módulo_1_12_12_Violão_2_4_Inovação_Fluência_Bruno_Mars_Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000915 - 01_1_Módulo_1_12_12_Violão_2_4_Inovação_Fluência_Bruno_Mars_Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000917 - 01_1_Módulo_1_13_13_UPGRADE_7_0_Violão_2_5_Chiado_na_troca_.mp4.parte-01-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000917 - 01_1_Módulo_1_13_13_UPGRADE_7_0_Violão_2_5_Chiado_na_troca_.mp4.parte-02-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000917 - 01_1_Módulo_1_13_13_UPGRADE_7_0_Violão_2_5_Chiado_na_troca_.mp4.parte-03-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000918 - 01_1_Módulo_1_14_14_UPGRADE_7_0_Violão_2_6_UPGRADE_7_0_Um_dedo_por.mp4.parte-01-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000918 - 01_1_Módulo_1_14_14_UPGRADE_7_0_Violão_2_6_UPGRADE_7_0_Um_dedo_por.mp4.parte-02-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000918 - 01_1_Módulo_1_14_14_UPGRADE_7_0_Violão_2_6_UPGRADE_7_0_Um_dedo_por.mp4.parte-03-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000924 - 2. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000924 - 2. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000924 - 2. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000924 - 2. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000925 - 3. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000925 - 3. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000925 - 3. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000925 - 3. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000932 - 2. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000932 - 2. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000932 - 2. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000932 - 2. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000933 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000933 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000933 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000933 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000936 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000936 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000936 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000936 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000939 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000939 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000939 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000939 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000942 - 2. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000942 - 2. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000942 - 2. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000942 - 2. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000943 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000943 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000943 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000943 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000947 - 2. Aula.mp4.parte-01-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000947 - 2. Aula.mp4.parte-02-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000947 - 2. Aula.mp4.parte-03-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000948 - 3. Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000948 - 3. Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000949 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000949 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000949 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000949 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000952 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000952 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000952 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000952 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000955 - 2. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000955 - 2. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000955 - 2. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000955 - 2. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000958 - 2. Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000958 - 2. Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000959 - 1. Aula.mp4.parte-01-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000959 - 1. Aula.mp4.parte-02-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000959 - 1. Aula.mp4.parte-03-de-03",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000963 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000963 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000963 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000963 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000968 - 2. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000968 - 2. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000968 - 2. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000968 - 2. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000969 - 3. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000969 - 3. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000969 - 3. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000969 - 3. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000970 - 1. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000970 - 1. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000970 - 1. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000970 - 1. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000974 - 2. Aula.mp4.parte-01-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000974 - 2. Aula.mp4.parte-02-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000974 - 2. Aula.mp4.parte-03-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000974 - 2. Aula.mp4.parte-04-de-04",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000975 - 1. Aula.mp4.parte-01-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000975 - 1. Aula.mp4.parte-02-de-02",
+        "tamanhoBytes": 0
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001412 - 1. Aula.pt_br.vtt.part-Frag114",
+        "tamanhoBytes": 300
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001413 - 1. Aula.pt_br.vtt.part-Frag115",
+        "tamanhoBytes": 247
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001414 - 1. Aula.pt_br.vtt.part-Frag116",
+        "tamanhoBytes": 139
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001415 - 1. Aula.pt_br.vtt.part-Frag117",
+        "tamanhoBytes": 138
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001416 - 1. Aula.pt_br.vtt.part-Frag118",
+        "tamanhoBytes": 139
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001417 - 1. Aula.pt_br.vtt.part-Frag119",
+        "tamanhoBytes": 139
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001418 - 1. Aula.pt_br.vtt.part-Frag120",
+        "tamanhoBytes": 261
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001419 - 1. Aula.pt_br.vtt.part-Frag121",
+        "tamanhoBytes": 177
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001420 - 1. Aula.pt_br.vtt.part-Frag122",
+        "tamanhoBytes": 179
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001421 - 1. Aula.pt_br.vtt.part-Frag123",
+        "tamanhoBytes": 179
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001422 - 1. Aula.pt_br.vtt.part-Frag124",
+        "tamanhoBytes": 179
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001423 - 1. Aula.pt_br.vtt.part-Frag125",
+        "tamanhoBytes": 178
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001424 - 1. Aula.pt_br.vtt.part-Frag126",
+        "tamanhoBytes": 427
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001425 - 1. Aula.pt_br.vtt.part-Frag127",
+        "tamanhoBytes": 301
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001426 - 1. Aula.pt_br.vtt.part-Frag128",
+        "tamanhoBytes": 309
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001427 - 1. Aula.pt_br.vtt.part-Frag129",
+        "tamanhoBytes": 311
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001428 - 1. Aula.pt_br.vtt.part-Frag130",
+        "tamanhoBytes": 433
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001429 - 1. Aula.pt_br.vtt.part-Frag131",
+        "tamanhoBytes": 184
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001430 - 1. Aula.pt_br.vtt.part-Frag132",
+        "tamanhoBytes": 184
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001431 - 1. Aula.pt_br.vtt.part-Frag133",
+        "tamanhoBytes": 184
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001432 - 1. Aula.pt_br.vtt.part-Frag134",
+        "tamanhoBytes": 184
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001433 - 1. Aula.pt_br.vtt.part-Frag135",
+        "tamanhoBytes": 303
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001434 - 1. Aula.pt_br.vtt.part-Frag136",
+        "tamanhoBytes": 178
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001435 - 1. Aula.pt_br.vtt.part-Frag137",
+        "tamanhoBytes": 177
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001436 - 1. Aula.pt_br.vtt.part-Frag138",
+        "tamanhoBytes": 178
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001437 - 1. Aula.pt_br.vtt.part-Frag139",
+        "tamanhoBytes": 178
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001438 - 1. Aula.pt_br.vtt.part-Frag140",
+        "tamanhoBytes": 177
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001439 - 1. Aula.pt_br.vtt.part-Frag141",
+        "tamanhoBytes": 295
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001440 - 1. Aula.pt_br.vtt.part-Frag142",
+        "tamanhoBytes": 304
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001441 - 1. Aula.pt_br.vtt.part-Frag143",
+        "tamanhoBytes": 186
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001442 - 1. Aula.pt_br.vtt.part-Frag144",
+        "tamanhoBytes": 301
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001443 - 1. Aula.pt_br.vtt.part-Frag145",
+        "tamanhoBytes": 301
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001444 - 1. Aula.pt_br.vtt.part-Frag146",
+        "tamanhoBytes": 426
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001445 - 1. Aula.pt_br.vtt.part-Frag147",
+        "tamanhoBytes": 311
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001446 - 1. Aula.pt_br.vtt.part-Frag148",
+        "tamanhoBytes": 182
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001447 - 1. Aula.pt_br.vtt.part-Frag149",
+        "tamanhoBytes": 183
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001448 - 1. Aula.pt_br.vtt.part-Frag150",
+        "tamanhoBytes": 425
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001449 - 1. Aula.pt_br.vtt.part-Frag151",
+        "tamanhoBytes": 180
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001450 - 1. Aula.pt_br.vtt.part-Frag152",
+        "tamanhoBytes": 257
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001451 - 1. Aula.pt_br.vtt.part-Frag153",
+        "tamanhoBytes": 133
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001452 - 1. Aula.pt_br.vtt.part-Frag154",
+        "tamanhoBytes": 133
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001453 - 1. Aula.pt_br.vtt.part-Frag155",
+        "tamanhoBytes": 142
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001454 - 1. Aula.pt_br.vtt.part-Frag156",
+        "tamanhoBytes": 141
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001455 - 1. Aula.pt_br.vtt.part-Frag157",
+        "tamanhoBytes": 142
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001456 - 1. Aula.pt_br.vtt.part-Frag158",
+        "tamanhoBytes": 142
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001485 - 1. Aula.pt_br.vtt.part-Frag55",
+        "tamanhoBytes": 308
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001492 - 1. Aula.pt_br.vtt.part-Frag40",
+        "tamanhoBytes": 229
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001493 - 1. Aula.pt_br.vtt.part-Frag41",
+        "tamanhoBytes": 229
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001494 - 1. Aula.pt_br.vtt.part-Frag42",
+        "tamanhoBytes": 464
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001495 - 1. Aula.pt_br.vtt.part-Frag43",
+        "tamanhoBytes": 229
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001496 - 1. Aula.pt_br.vtt.part-Frag44",
+        "tamanhoBytes": 346
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001497 - 1. Aula.pt_br.vtt.part-Frag45",
+        "tamanhoBytes": 337
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001498 - 1. Aula.pt_br.vtt.part-Frag46",
+        "tamanhoBytes": 221
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001509 - 2. Aula.pt_br.vtt.part-Frag132",
+        "tamanhoBytes": 176
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001510 - 2. Aula.pt_br.vtt.part-Frag133",
+        "tamanhoBytes": 180
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001511 - 2. Aula.pt_br.vtt.part-Frag134",
+        "tamanhoBytes": 179
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001512 - 2. Aula.pt_br.vtt.part-Frag135",
+        "tamanhoBytes": 251
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001513 - 2. Aula.pt_br.vtt.part-Frag136",
+        "tamanhoBytes": 130
+      },
+      {
+        "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00001571 - katomart_manifest_curso_de_violao_metodo_triade_completo_h_df1da73f.json",
+        "tamanhoBytes": 292000
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/1. 00 Apostila-Violao-Mese.pdf",
+        "tamanhoBytes": 10027285
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/1. Aula.mp4",
+        "tamanhoBytes": 97632431
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/1. Aula.pt_br.vtt",
+        "tamanhoBytes": 13800
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/2. 00 Apostila HP1 meses 1.pdf",
+        "tamanhoBytes": 10459399
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/2. Aula.mp4",
+        "tamanhoBytes": 14929973
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/2. Aula.pt_br.vtt",
+        "tamanhoBytes": 102
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/0. 1. APOSTILAS e Apresentação/descricao.md",
+        "tamanhoBytes": 6212
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/1. Aula.mp4",
+        "tamanhoBytes": 258704409
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/1. Aula.pt_br.vtt",
+        "tamanhoBytes": 25891
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/2. Aula.mp4",
+        "tamanhoBytes": 186244678
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/2. Aula.pt_br.vtt",
+        "tamanhoBytes": 14615
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/3. Aula.mp4",
+        "tamanhoBytes": 314012446
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/3. Aula.pt_br.vtt",
+        "tamanhoBytes": 27803
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/1. 2. H_P - 1.1 _ Noções Básicas de Ritmo/descricao.md",
+        "tamanhoBytes": 3113
+      },
+      {
+        "caminhoRelativo": "Curso Kaiser/Curso de Violão Método Tríade COMPLETO -/0. 1. Módulo 1/2. 3. H_P - 1.2 _ Curiosidades/1. Aula.mp4",
+        "tamanhoBytes": 7077888
+      }
+    ]
+  },
+  "recontagem": {
+    "comVideo": 519,
+    "comPdf": 85,
+    "comMaterial": 520,
+    "comLegenda": 288
+  },
+  "classificacoes": {
+    "orientacao": 13,
+    "percepcao_auditiva": 49,
+    "aula_pratica": 358,
+    "aula_teorica": 29,
+    "suporte_administrativo": 4,
+    "repertorio": 55,
+    "leitura_notacao": 20,
+    "quiz": 3,
+    "sem_material_local": 100
+  },
+  "manifesto": {
+    "entradasTriade": 300,
+    "referenciasConferidas": 645,
+    "divergencias": []
+  },
+  "duplicatasPorHashesDeclarados": {
+    "grupos": 86,
+    "bytesRedundantes": 336607323,
+    "limite": "Agrupamento dos hashes entregues, não recálculo integral"
+  },
+  "candidatosCitados": [
+    {
+      "id": "aula-kaiser-5-5-thumb-slap-batida-fingerstyle",
+      "existe": false
+    },
+    {
+      "id": "aula-kaiser-134-3-pequena-valsa",
+      "existe": false
+    }
+  ],
+  "pdfsSemExtensao": [
+    {
+      "caminho": "Curso Kaiser/Violão do Zero/1. Violão do Zero/15. 15 - Como fazer dedilhados/0. Se Essa Rua Fosse Minha (de",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Violão do Zero/1. Violão do Zero/7. 7 - Aprenda a primeira música_ Brilha Brilha Estrelinha/0. brilha brilha estrelinha",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Violão do Zero/1. Violão do Zero/8. 8 - Escravos de Jó/0. Escravos de Jó",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Violão do Zero/1. Violão do Zero/9. 9 - Parabéns pra Você/0. parabens-pra-voce",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/2. Partitura_ Leitura RÍTMICA/0. Dicionario Partitura",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/2. Partitura_ Leitura RÍTMICA/0. Tecnicas Notação",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 1",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 2",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 3",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 4",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 5",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 6",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 7",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/4. ANDANTE (H. Pinto)_ Partituras de Nível Médio/0. andantehpinto",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/5. ALLEGRETTO (H. Pinto)_ Partituras de Nível Médio/0. allegrettohpinto",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/6. ANDANTE RELIGIOSO_ Partitura de Nível Médio/0. andantereligiosocarcassi",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/1. IMPORTANTE ! Saiba como assistir as aulas de Repertório/0. 3-habilidades-fundamentais",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/1. IMPORTANTE ! Saiba como assistir as aulas de Repertório/0. como-estudar-kaiserplay",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/1. IMPORTANTE ! Saiba como assistir as aulas de Repertório/0. como-estudar-violao",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/0. Pequena Valsa",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/12. Andantino (Antonio Cano) - Violão Clássico/0. Andantino",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/23. O Menos é Mais (Choro)/0. O menos é Mais (Choro de Ma",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/26. Tema do Harry Potter - Violão Clássico/0. Harry Potter",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/28. Saudades de Márcia (Baden Powell)/0. Saudade de Márcia (Baden Po",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/29. Eu Não Existo Sem Você (Tom Jobim) - MPB/0. Eu não existo sem você (Tab",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/7. Cai Cai Balão/0. Cai Cai Balão",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/8. 9ª Sinfonia, Ode à Alegria (Beethoven) - Violão Clássico/0. 9 sinfonia",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/9. Valsa em Dó Maior (Pequeno Estudo) - Marcos Kaiser/0. Valsa em Dó Maior (pequeno",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/As Levadas da Mão Direita de Baden Powel/1. LEVADA 1/4. Aula da Levada 1 (Exercício 2) - (Batida completa com par/0. Levada 1 Baden Powell",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/As Levadas da Mão Direita de Baden Powel/2. LEVADA 2/2. Aula da Levada 2 (com partitura)/0. Levada 2 Baden Powell",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/As Levadas da Mão Direita de Baden Powel/3. LEVADA 3/2. Aula da Levada 3 (com partitura)/0. Levada 3 Baden Powell",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/As Levadas da Mão Direita de Baden Powel/4. LEVADA 4/2. Aula da Levada 4 (com partitura)/0. Levada 4 Baden Powell",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/As Levadas da Mão Direita de Baden Powel/5. LEVADA 5/2. Aula da Levada 5 (com partitura)/0. Levada 5 Baden Powell",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/As Levadas da Mão Direita de Baden Powel/6. APLICANDO NAS MÚSICAS/1. Juntanto todas as LEVADAS - DEIXA/0. Levadas de Mão Direita do B",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/TEORIA MUSICAL COMPLETA/2. Harmonia Funcional/4. O Método Esquecido de Harmonia Popular/0. Método de Violão Canhoto",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/ARRANJO/1. Arranjo/1. Comece pelo Simples/0. Parabens Dó Maior",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/ARRANJO/1. Arranjo/1. Comece pelo Simples/0. Parabens Mi Maior",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/ARRANJO/1. Arranjo/4. Os Princípios Básicos para se fazer arranjos para Violão/0. Honor Him Gladiator",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/1. Samba da Benção (Baden Powell)/0. Samba da Benção (Baden e Vi",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/12. Noturno (Marangoni) - Choro/0. Noturno versão original (Ta",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/14. Berimbau (Baden Powell) - Afro-Samba/0. Berimbau",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/19. Bourrée (J. S. Bach) - Violão Clássico/0. Bourré",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/20. Canto de Ossanha (Baden Powell) - Samba/0. Canto de Ossanha",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/22. Gente Humilde (Garoto) - MPB/0. Gente Humilde (Garoto)",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/3. Pantera Cor de Rosa - FINGERSTYLE/0. Pantera Cor de Rosa",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/32. The Doctor Blues (Marcos Kaiser) - FINGERSTYLE/0. Fingerstyle Blues",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/35. Canon in D (Pachelbel) - Violão Clássico/0. Canon in D",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/40. Malagueña (Flamenco)/0. Malagueña",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/41. Zorro (Flamenco)/0. Zorro Theme",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/43. ESTUDO para Mão Direita (Marcos Kaiser)/0. Estudo n",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/44. ESTUDO de Arpejos (Marcos Kaiser)/0. Estudo n",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/5. Mortal Kombat - (Fingerstyle)/0. Mortal Kombat",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 2/1. Repertório Nível 2/8. Estudo n.1 (Carcassi) - Violão Clássico/0. Estudo n",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/1. Prelúdio em Dó (Bach)/0. Preludio em Dó (Bach)",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/10. Qui Nem Jiló (Luiz Gonzaga)/0. Qui nem Jiló",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/23. Baião do Meio-Dia (Marcos Kaiser)/0. Baião do Meio-Dia",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/24. Saudosa Maloca (Samba)/0. Saudosa Maloca",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/25. Preciso Me Encontrar (Versão Cartola)/0. Preciso Me Encontrar (Samba",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/25. Preciso Me Encontrar (Versão Cartola)/0. Preciso Me Encontrar 7 cord",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/27. O Astronauta (Baden Powell)/0. O Astronauta",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/30. On the Road (Blues)/0. ON THE ROAD (Blues)",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/32. Regra Três (Toquinho & Vinicius)/0. Regra Três (Toquinho)",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/6. Blues in the Woods/0. Onion Rings (Blues)",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/Repertório Nível 3/1. Repertório Nível 3/7. Na Mosca (Marcos Kaiser) - Choro/0. Na Mosca (chôro)",
+      "cabecalho": "%PDF-1.7"
+    },
+    {
+      "caminho": "Curso Kaiser/OS SEGREDOS DO BLUES/1. OS SEGREDOS DO BLUES/5. Turnarounds/0. turnarounds",
+      "cabecalho": "%PDF-1.7"
+    }
+  ]
+}

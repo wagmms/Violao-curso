@@ -1,28 +1,22 @@
-# Curso de Violão — Método Tríade
+# Curso de Violão — Tríade e Kaiser integrados
 
-**Decisão Vigente (13/09/2026):** O Método Tríade é a **plataforma LMS principal**. O catálogo original e as sessões de estudo do acervo formam o núcleo do produto.
+## Estrutura vigente em 14/09/2026
 
-A experiência de aprendizagem prioriza interface elaborada, didática direcionada e recursos interativos (como metrônomo, revisão espaçada e caderno de dificuldades) conforme `PLANO-EXPERIENCIA-APRENDIZAGEM.md`. O aluno tem nível básico/intermediário, usa violão de nylon, gosta de MPB e deseja desenvolver violão solo. Essas características moldam as recomendações, mas sem excluir o conteúdo original do acervo.
+O catálogo em `app/dados-catalogo.js` organiza 631 entradas em 12 módulos progressivos: 300 do Método Tríade e 331 do Kaiserplay. Os IDs de aula preservam sua origem; não representam a numeração do novo módulo.
 
-## Histórico Arquivado
+O perfil de estudo continua básico/intermediário, violão de nylon, MPB, acompanhamento e solo. A organização preserva o acervo original e acrescenta roteiros autorais, com fontes e estado de revisão explícitos.
 
-A antiga rota personalizada de "MPB/solo/48 semanas" não é mais o produto central e foi convertida em rota complementar. O documento `CURSO-VIOLAO-SOLO-MPB.md` passa a servir como referência histórica.
+## Percursos
 
-## O que estamos construindo
+- **Curso:** Biblioteca → aula → Aprender, com materiais, roteiro por tema, transcrições quando disponíveis, progresso e notas por aula.
+- **Prática complementar:** Hoje/Praticar → atividade de 40 minutos, com níveis, ferramentas e autoavaliação independente do registro de aula.
 
-Uma organização de estudo e interface HTML para o **curso geral Método Tríade presente no Drive**, preservando módulos, aulas, conteúdos e materiais originais com navegação estruturada.
+Há 12 orientações de módulo, roteiros para as 631 entradas e 11 atividades complementares. Os roteiros reutilizam perfis pedagógicos por tema e precisam de curadoria integral dos vídeos/PDFs antes da homologação.
 
-## Duas organizações complementares
+## Preservação e disponibilidade
 
-1. **Curso original:** biblioteca principal com a estrutura e sequência catalogadas do Método Tríade, incluindo aulas, vídeos complementares e materiais utilizáveis.
-2. **Meu plano de estudo:** diagnóstico, rotina de 40 minutos (Sessão Hoje/Aprender), recomendações baseadas no perfil (Nylon/MPB) e exercícios originais.
+Mantêm-se títulos, IDs, origem e links do catálogo. A distribuição editorial dos módulos ainda precisa de revisão temática. Fragmentos de download não são aulas utilizáveis. Itens sem material ficam explícitos, sem inventar demonstrações ou avaliações.
 
-## Critérios de preservação
+O acervo local fornecido pelo usuário está em `C:\Users\wmors\Videos\KatoMart Acelerado`. A raiz é configurável no aplicativo. Disponibilidade local e acesso ao Drive são condições distintas.
 
-- Utilizar índice, inventário revisado e mapa de fontes.
-- Preservar os módulos 1–9. Aulas sem arquivos continuam como indisponíveis no backup. Fragmentos .part-Frag não são aulas utilizáveis.
-- Preservar exercícios já homologados como complementos.
-
-## Próxima entrega
-
-A interface local incluirá o catálogo utilizável, as atividades complementares de 40 minutos (piloto de 6 atividades) e a orquestração de recomendação de ensino, testada e validada em HTML sem necessidade de backend.
+Consulte `IMPLEMENTACAO-CURSO-INTEGRADO.md` para o estado efetivo e `PROXIMOS-PASSOS.md` para a curadoria restante. A antiga rota de 48 semanas e documentos de lotes são referências históricas.

@@ -17,6 +17,7 @@ function navegarPara(viewId, atividadeId) {
     if (AudioMotor) AudioMotor.pararTodosSons();
 
     if (atividadeId) {
+      if (state.aprendizagemCurso) state.aprendizagemCurso.aulaAtualId = null;
       trocarAtividade(atividadeId);
     }
 
@@ -168,121 +169,8 @@ function renderizarTelaHoje() {
     $('card-alt-biblioteca').onclick = () => navegarPara('biblioteca');
   }
 
-  function gerarDiagramaBracoSVG(nivelAtual, ativ) {
-    return `
-      <div class="fretboard-card" style="margin-bottom: 16px;">
-        <div class="fretboard-header">
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <div style="background: var(--bg-surface-highest); color: var(--accent); font-family: var(--font-mono); font-weight: 700; padding: 4px 10px; border-radius: var(--radius-sm); font-size: 1.1rem;">
-              ${escapeHTML(ativ.id === 'ativ-1' ? 'Am' : ativ.id === 'ativ-4' ? 'C / F' : 'Posição 1')}
-            </div>
-            <div>
-              <h5 style="margin: 0; font-size: 0.95rem; font-weight: 600; color: var(--text-main);">${escapeHTML(ativ.titulo)}</h5>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Mapeamento Físico das Cordas e Casas • Posição Aberta</span>
-            </div>
-          </div>
-          <div style="background: var(--bg-surface-subtle); padding: 4px 10px; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-dim);">
-            <strong style="color: var(--secondary); font-family: var(--font-mono);">Fórmula:</strong> 1 - b3 - 5 (A - C - E)
-          </div>
-        </div>
-
-        <div class="fretboard-viewport">
-          <svg class="fretboard-svg" viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="fretWireGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#554339" />
-                <stop offset="50%" stop-color="#a38c80" />
-                <stop offset="100%" stop-color="#373433" />
-              </linearGradient>
-            </defs>
-            <!-- Madeira do Braço (Rosewood escuro) -->
-            <rect x="80" y="25" width="540" height="150" rx="4" fill="#1b1816" />
-            <!-- Pestana de Marfim (Nut) -->
-            <rect x="74" y="21" width="10" height="158" rx="2" fill="#e7e1df" opacity="0.95" />
-            <text x="79" y="17" fill="#d5c3b7" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="600" text-anchor="middle">NUT</text>
-            
-            <!-- Trastes Verticais (Casas 1 a 5) -->
-            <line x1="190" y1="25" x2="190" y2="175" stroke="url(#fretWireGrad)" stroke-width="3" />
-            <text x="135" y="195" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Casa 1</text>
-            
-            <line x1="300" y1="25" x2="300" y2="175" stroke="url(#fretWireGrad)" stroke-width="3" />
-            <text x="245" y="195" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Casa 2</text>
-            
-            <line x1="410" y1="25" x2="410" y2="175" stroke="url(#fretWireGrad)" stroke-width="3" />
-            <circle cx="355" cy="100" r="5" fill="#373433" />
-            <circle cx="355" cy="100" r="3.5" fill="#d5c3b7" opacity="0.6" />
-            <text x="355" y="195" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Casa 3 •</text>
-            
-            <line x1="515" y1="25" x2="515" y2="175" stroke="url(#fretWireGrad)" stroke-width="3" />
-            <text x="462" y="195" fill="#554339" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Casa 4</text>
-            
-            <line x1="615" y1="25" x2="615" y2="175" stroke="url(#fretWireGrad)" stroke-width="3" />
-            <circle cx="565" cy="100" r="5" fill="#373433" />
-            <circle cx="565" cy="100" r="3.5" fill="#d5c3b7" opacity="0.6" />
-            <text x="565" y="195" fill="#554339" font-family="Plus Jakarta Sans, sans-serif" font-size="11" text-anchor="middle">Casa 5 •</text>
-            
-            <!-- 6 Cordas do Violão com calibres proporcionais -->
-            <!-- 6ª corda: Mi Grave (E2) - 3.2px -->
-            <line x1="80" y1="35" x2="620" y2="35" stroke="#756960" stroke-width="3.2" />
-            <text x="50" y="39" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle">6 (E)</text>
-            <circle cx="20" cy="35" r="9" fill="#2c2928" />
-            <text x="20" y="39" fill="#ffb4ab" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">✕</text>
-            
-            <!-- 5ª corda: Lá (A2) - Baixo Fundamental - 2.6px -->
-            <line x1="80" y1="61" x2="620" y2="61" stroke="#9e8e83" stroke-width="2.6" />
-            <text x="50" y="65" fill="#ffb68c" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700" text-anchor="middle">5 (A)</text>
-            <circle cx="20" cy="61" r="10" fill="#d97736" stroke="#ffb68c" stroke-width="1.5" />
-            <text x="20" y="65" fill="#151312" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" text-anchor="middle">P</text>
-            
-            <!-- 4ª corda: Ré (D3) - 2.0px -->
-            <line x1="80" y1="87" x2="620" y2="87" stroke="#a38c80" stroke-width="2.0" />
-            <text x="50" y="91" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle">4 (D)</text>
-            <circle cx="245" cy="87" r="12" fill="#d97736" />
-            <text x="245" y="91" fill="#151312" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" text-anchor="middle">2</text>
-            
-            <!-- 3ª corda: Sol (G3) - 1.6px -->
-            <line x1="80" y1="113" x2="620" y2="113" stroke="#dbc1b4" stroke-width="1.6" />
-            <text x="50" y="117" fill="#ffddb8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle">3 (G)</text>
-            <circle cx="245" cy="113" r="12" fill="#ee9800" />
-            <text x="245" y="117" fill="#151312" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" text-anchor="middle">3</text>
-            <rect x="14" y="104" width="16" height="16" rx="3" fill="#2c2928" stroke="#ee9800" stroke-width="1" />
-            <text x="22" y="116" fill="#ffddb8" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700" text-anchor="middle">I</text>
-            
-            <!-- 2ª corda: Si (B3) - 1.2px -->
-            <line x1="80" y1="139" x2="620" y2="139" stroke="#e7e1df" stroke-width="1.2" />
-            <text x="50" y="143" fill="#ffddb8" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle">2 (B)</text>
-            <circle cx="135" cy="139" r="12" fill="#ffb68c" />
-            <text x="135" y="143" fill="#532200" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" text-anchor="middle">1</text>
-            <rect x="14" y="130" width="16" height="16" rx="3" fill="#2c2928" stroke="#ffb68c" stroke-width="1" />
-            <text x="22" y="142" fill="#ffdbc9" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700" text-anchor="middle">M</text>
-            
-            <!-- 1ª corda: Mi Agudo (E4) - 0.9px -->
-            <line x1="80" y1="165" x2="620" y2="165" stroke="#e7e1df" stroke-width="0.9" />
-            <text x="50" y="169" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle">1 (e)</text>
-            <circle cx="20" cy="165" r="8" fill="none" stroke="#a38c80" stroke-width="1.8" />
-            <text x="20" y="168.5" fill="#a38c80" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="600" text-anchor="middle">O</text>
-          </svg>
-        </div>
-
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-dim);">
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <span style="color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Mão Esquerda:</span>
-            <span><strong style="color: var(--accent); font-family: var(--font-mono);">1</strong> Indicador</span>
-            <span><strong style="color: var(--secondary); font-family: var(--font-mono);">2</strong> Médio</span>
-            <span><strong style="color: #ee9800; font-family: var(--font-mono);">3</strong> Anelar</span>
-          </div>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <span style="color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Mão Direita:</span>
-            <span><strong style="color: var(--accent); font-family: var(--font-mono);">P</strong> Polegar</span>
-            <span><strong style="color: var(--secondary); font-family: var(--font-mono);">I</strong> Indicador</span>
-            <span><strong style="color: #ffb68c; font-family: var(--font-mono);">M</strong> Médio</span>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
   function renderizarTelaAprender() {
+    if (renderizarAulaCurso()) return;
     const ativ = atividadesDados.find(a => a.id === state.atividadeAtualId) || atividadesDados[0];
     const container = $('aprender-conteudo');
     if (!container) return;
@@ -305,6 +193,7 @@ function renderizarTelaHoje() {
             <p><strong>Meta Observável:</strong> ${escapeHTML(ativ.metaObservavel)}</p>
           </div>
           <button id="btn-trocar-atividade" class="btn btn-secondary btn-sm">Trocar Atividade</button>
+          <button id="btn-aprender-curso" class="btn btn-primary btn-sm">Escolher aula do curso</button>
         </div>
       </div>
 
@@ -375,7 +264,7 @@ function renderizarTelaHoje() {
               <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2px;">${escapeHTML(nivelAtual.descricao)}</p>
             </div>
 
-            ${gerarDiagramaBracoSVG(nivelAtual, ativ)}
+            ${gerarDiagramaExercicio(nivelAtual, ativ)}
 
             ${window.renderizarTablatura(nivelAtual.tablatura, "tab-container-" + ativ.id)}
             ${nivelAtual.instrucoesRodape ? `<div class="instrucoes-rodape">${escapeHTML(nivelAtual.instrucoesRodape)}</div>` : ''}
@@ -431,6 +320,7 @@ function renderizarTelaHoje() {
       };
     });
 
+    $('btn-aprender-curso').onclick = () => abrirAulaCurso(catalogoDados.catalogoOriginal[0].aulas[0].id);
     const textareaAnotacoes = $('textarea-anotacoes-' + ativ.id);
     if (textareaAnotacoes) {
       let timeoutId;
@@ -2175,7 +2065,7 @@ function renderizarTelaBiblioteca() {
     container.innerHTML = `
       <div class="view-header">
         <h2>Biblioteca e Acervo de Referência</h2>
-        <p>Os 11 módulos e 300 aulas originais do Método Tríade catalogados no Google Drive.</p>
+        <p>${catalogoDados.meta.totalModulos} módulos e ${catalogoDados.meta.totalAulas} aulas de Tríade e Kaiser. Escolha uma aula para aprender.</p>
       </div>
 
       <div class="biblioteca-toolbar">
@@ -2261,18 +2151,10 @@ function filtrarBiblioteca() {
                   ${aula.cursoOrigem === 'Kaiserplay' ? '<span style="background:rgba(217,119,6,0.15); color:var(--warning); font-size:0.65rem; font-weight:600; padding:1px 6px; border-radius:4px;">Kaiserplay</span>' : '<span style="background:rgba(59,130,246,0.15); color:var(--accent); font-size:0.65rem; font-weight:600; padding:1px 6px; border-radius:4px;">Tríade</span>'}
                 </div>
                 <div class="aula-item-links">
-                  ${aula.materiais.map(mat => {
-                    if (mat.utilizavel && mat.url && mat.url.startsWith('https://drive.google.com')) {
-                      return `<a href="${escapeHTML(mat.url)}" target="_blank" rel="noopener noreferrer">↗ ${escapeHTML(mat.tipo.toUpperCase())}: ${escapeHTML(mat.titulo)}</a>`;
-                    } else if (mat.caminhoLocal || mat.status_verificacao === 'local_katomart') {
-                      return `<span style="color: var(--secondary); font-size: 0.75rem;">📁 ${escapeHTML(mat.tipo.toUpperCase())}: ${escapeHTML(mat.titulo)} (Local)</span>`;
-                    } else {
-                      return `<span style="color: var(--text-dim); font-size: 0.75rem;">${escapeHTML(mat.tipo)}: ${escapeHTML(mat.titulo)}</span>`;
-                    }
-                  }).join(' · ')}
+                  ${aula.materiais.map(renderizarMaterialCurso).join(' · ')}
                 </div>
               </div>
-              <span style="font-size: 0.75rem; color: var(--text-dim);">ID: ${escapeHTML(aula.id)}</span>
+              <button class="btn btn-secondary bib-aprender" data-aula="${escapeHTML(aula.id)}">Aprender esta aula</button>
             </div>
           `;
           }).join('')}
@@ -2280,6 +2162,7 @@ function filtrarBiblioteca() {
       `;
 
       listaContainer.appendChild(accordion);
+      accordion.querySelectorAll('.bib-aprender').forEach(b => b.onclick = () => abrirAulaCurso(b.dataset.aula));
     }
 
     if (totalEncontrado === 0) {

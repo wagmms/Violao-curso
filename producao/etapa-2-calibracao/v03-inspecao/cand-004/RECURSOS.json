@@ -1,0 +1,80 @@
+{
+  "candidatoId": "cand-004",
+  "versao": "v03-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "vinculosCurricularesEtapa1v03": {
+    "aulaPropostaId": "aula-prop-017",
+    "moduloPedagogicoId": "mod-ped-05",
+    "habilidadePrincipalId": "hab-lei-003",
+    "linhaMatriz": "aula-kaiser-124-3-partituras-faceis-para-iniciantes,arq-0415,aula-prop-017,hab-lei-003"
+  },
+  "arquivosFisicosFonte": [
+    {
+      "arquivoId": "arq-0408",
+      "nome": "0. 1",
+      "tipo": "pdf",
+      "tamanhoBytes": 51500,
+      "sha256": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+      "metodoVerificacao": "fs.statSync e crypto.createHash no disco local em 14/09/2026",
+      "descricao": "Partitura original da Peça 1 (referência de origem; não alterada)"
+    },
+    {
+      "arquivoId": "arq-0415",
+      "nome": "descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 882,
+      "sha256": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e",
+      "metodoVerificacao": "fs.statSync e crypto.createHash no disco local em 14/09/2026",
+      "descricao": "Instruções pedagógicas de Marcos Kaiser para leitura autônoma"
+    }
+  ],
+  "recursosAutoraisProduzidos": [
+    {
+      "id": "rec-cand004-pauta-png",
+      "arquivo": "pauta-adaptada.png",
+      "tipo": "imagem_renderizada",
+      "descricao": "Renderização gráfica da partitura adaptada em 4 compassos regulares (300 DPI eq.)"
+    },
+    {
+      "id": "rec-cand004-pauta-pdf",
+      "arquivo": "pauta-adaptada.pdf",
+      "tipo": "documento_vetorial",
+      "descricao": "Documento PDF da partitura autoral adaptada para impressão e estudo"
+    },
+    {
+      "id": "rec-cand004-pauta-svg",
+      "arquivo": "pauta-adaptada.svg",
+      "tipo": "fonte_editavel_vetorial",
+      "descricao": "Código SVG vetorial da partitura autoral adaptada"
+    },
+    {
+      "id": "rec-cand004-pauta-musicxml",
+      "arquivo": "pauta-adaptada.musicxml",
+      "tipo": "fonte_editavel_musical",
+      "descricao": "Arquivo MusicXML 3.1 com notas, cordas, casas e digitação"
+    },
+    {
+      "id": "rec-cand004-pauta-lilypond",
+      "arquivo": "pauta-adaptada.ly",
+      "tipo": "fonte_editavel_lilypond",
+      "descricao": "Código fonte LilyPond da partitura adaptada"
+    },
+    {
+      "id": "rec-cand004-audio-sintese",
+      "arquivo": "referencia-audio-sintese.wav",
+      "tipo": "referencia_sonora_sintetizada",
+      "rotulo": "referencia_sintese_metrico_frequencial",
+      "descricao": "Áudio WAV senoidal com envoltória ADSR a 60 BPM para comparação de alturas e andamento"
+    },
+    {
+      "id": "rec-cand004-eventos-json",
+      "arquivo": "EVENTOS.json",
+      "tipo": "dados_estruturados",
+      "descricao": "Mapeamento JSON exato dos 14 eventos com durações, MIDI, cordas e casas"
+    }
+  ],
+  "bloqueiosTecnicosAtestados": {
+    "video": "Inexistente no acervo original (entrada puramente notacional)",
+    "audioHumano": "Inexistente no acervo original (substituído pedagogicamente por síntese referencial e metrônomo)"
+  }
+}

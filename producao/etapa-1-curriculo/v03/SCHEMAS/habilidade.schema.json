@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HabilidadePedagogica",
+  "type": "object",
+  "required": [
+    "id",
+    "nome",
+    "dominio",
+    "acaoObservavel",
+    "condicoes",
+    "evidenciaEsperada",
+    "prerequisitos",
+    "tarefaDiagnostica",
+    "rotaRecuperacao",
+    "fontesCandidatas"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^hab-[a-z]{3}-[0-9]{3}$"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "dominio": {
+      "type": "string",
+      "enum": [
+        "ritmo",
+        "ouvido",
+        "leitura",
+        "tecnica",
+        "acompanhamento",
+        "harmonia",
+        "solo/arranjo",
+        "expressao/criacao"
+      ]
+    },
+    "acaoObservavel": {
+      "type": "string"
+    },
+    "condicoes": {
+      "type": "string"
+    },
+    "evidenciaEsperada": {
+      "type": "string"
+    },
+    "prerequisitos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tarefaDiagnostica": {
+      "type": "string"
+    },
+    "rotaRecuperacao": {
+      "type": "string"
+    },
+    "fontesCandidatas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AulaCuradaContratoDidatico",
+  "type": "object",
+  "required": [
+    "id",
+    "versao",
+    "titulo",
+    "moduloPedagogicoId",
+    "habilidadePrincipalId",
+    "nivel",
+    "fontesOrigem",
+    "objetivoObservavel",
+    "disciplina",
+    "entrada",
+    "explicacao",
+    "demonstracao",
+    "praticaGuiada",
+    "preparacaoAlvoVariacao",
+    "exercicioExecutavel",
+    "feedback",
+    "aplicacao",
+    "saida",
+    "recuperacao",
+    "retencaoTransferencia",
+    "sessaoRegistro"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "versao": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "moduloPedagogicoId": {
+      "type": "string"
+    },
+    "habilidadePrincipalId": {
+      "type": "string"
+    },
+    "habilidadesSecundarias": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "nivel": {
+      "type": "string",
+      "enum": [
+        "basico_1",
+        "basico_2",
+        "intermediario_1",
+        "intermediario_2",
+        "avancado"
+      ]
+    },
+    "disciplina": {
+      "type": "string",
+      "enum": [
+        "instrumental",
+        "percepcao_ouvido",
+        "leitura_notacao",
+        "harmonia_teoria",
+        "expressao_criacao"
+      ]
+    },
+    "fontesOrigem": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "objetivoObservavel": {
+      "type": "string"
+    },
+    "entrada": {
+      "type": "object",
+      "required": [
+        "tarefaVerificacao",
+        "respostaEsperada",
+        "rotaAlternativa"
+      ],
+      "properties": {
+        "tarefaVerificacao": {
+          "type": "string"
+        },
+        "respostaEsperada": {
+          "type": "string"
+        },
+        "rotaAlternativa": {
+          "type": "string"
+        }
+      }
+    },
+    "explicacao": {
+      "type": "object",
+      "required": [
+        "conceito",
+        "exemploConcreto",
+        "termosDefinidos",
+        "ligacaoMusical"
+      ],
+      "properties": {
+        "conceito": {
+          "type": "string"
+        },
+        "exemploConcreto": {
+          "type": "string"
+        },
+        "termosDefinidos": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ligacaoMusical": {
+          "type": "string"
+        }
+      }
+    },
+    "demonstracao": {
+      "type": "object",
+      "required": [
+        "recursoId",
+        "orientacaoEscutaObservacao",
+        "trechoOuPagina"
+      ],
+      "properties": {
+        "recursoId": {
+          "type": "string"
+        },
+        "orientacaoEscutaObservacao": {
+          "type": "string"
+        },
+        "trechoOuPagina": {
+          "type": "string"
+        }
+      }
+    },
+    "praticaGuiada": {
+      "type": "object",
+      "required": [
+        "exemploResolvido",
+        "tentativaComAjuda",
+        "tentativaIndependente"
+      ],
+      "properties": {
+        "exemploResolvido": {
+          "type": "string"
+        },
+        "tentativaComAjuda": {
+          "type": "string"
+        },
+        "tentativaIndependente": {
+          "type": "string"
+        }
+      }
+    },
+    "preparacaoAlvoVariacao": {
+      "type": "object",
+      "required": [
+        "preparacao",
+        "alvo",
+        "variacao"
+      ],
+      "properties": {
+        "preparacao": {
+          "type": "string"
+        },
+        "alvo": {
+          "type": "string"
+        },
+        "variacao": {
+          "type": "string"
+        }
+      }
+    },
+    "exercicioExecutavel": {
+      "type": "object",
+      "required": [
+        "notasOuAcordes",
+        "cordasCasas",
+        "ritmoCompasso",
+        "andamentoBPM",
+        "dedosMao"
+      ],
+      "properties": {
+        "notasOuAcordes": {
+          "type": "string"
+        },
+        "cordasCasas": {
+          "type": "string"
+        },
+        "ritmoCompasso": {
+          "type": "string"
+        },
+        "andamentoBPM": {
+          "type": "string"
+        },
+        "dedosMao": {
+          "type": "string"
+        }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "required": [
+        "errosPlausiveis"
+      ],
+      "properties": {
+        "errosPlausiveis": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "erro",
+              "sinalObservavel",
+              "causaProvavel",
+              "intervencao"
+            ],
+            "properties": {
+              "erro": {
+                "type": "string"
+              },
+              "sinalObservavel": {
+                "type": "string"
+              },
+              "causaProvavel": {
+                "type": "string"
+              },
+              "intervencao": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "aplicacao": {
+      "type": "object",
+      "required": [
+        "contextoMusical"
+      ],
+      "properties": {
+        "contextoMusical": {
+          "type": "string"
+        }
+      }
+    },
+    "saida": {
+      "type": "object",
+      "required": [
+        "tarefaIndependente",
+        "rubricaObservavel",
+        "proximaAcao"
+      ],
+      "properties": {
+        "tarefaIndependente": {
+          "type": "string"
+        },
+        "rubricaObservavel": {
+          "type": "string"
+        },
+        "proximaAcao": {
+          "type": "string"
+        }
+      }
+    },
+    "recuperacao": {
+      "type": "object",
+      "required": [
+        "simplificacao",
+        "alertaErgonomia"
+      ],
+      "properties": {
+        "simplificacao": {
+          "type": "string"
+        },
+        "alertaErgonomia": {
+          "type": "string"
+        }
+      }
+    },
+    "retencaoTransferencia": {
+      "type": "object",
+      "required": [
+        "tarefaPosterior",
+        "transferenciaNovoContexto"
+      ],
+      "properties": {
+        "tarefaPosterior": {
+          "type": "string"
+        },
+        "transferenciaNovoContexto": {
+          "type": "string"
+        }
+      }
+    },
+    "sessaoRegistro": {
+      "type": "object",
+      "required": [
+        "duracaoSugeridaMinutos",
+        "fasesSessao",
+        "registroResultadoEstudante"
+      ],
+      "properties": {
+        "duracaoSugeridaMinutos": {
+          "type": "integer"
+        },
+        "fasesSessao": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "registroResultadoEstudante": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

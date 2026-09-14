@@ -1,0 +1,42 @@
+{
+  "candidatoId": "cand-005",
+  "versao": "v01-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-0068",
+      "nome": "1. Aula.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 44538073,
+      "sha256": "53c77cbc8f1eab1f75d24db49c264dc0c8c8ad4bfa5b0c45d81cacd724a0b5b4"
+    },
+    {
+      "arquivoId": "arq-0071",
+      "nome": "1. Aula.mp4.pt-orig.vtt",
+      "tipo": "legenda",
+      "tamanhoBytes": 16139,
+      "sha256": "1336474f123e6f0273511b9e6fd29f33d3f0fdfc453a51347da55a9ff97dd24a"
+    },
+    {
+      "arquivoId": "arq-0073",
+      "nome": "descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 168,
+      "sha256": "2f2a80e2ac1f0da2a57fa641cee0f16c965544bcf25f99014b8b58b9b036c1a4"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand-005-partitura",
+      "tipo": "diagrama_ou_partitura",
+      "obrigatorio": true,
+      "descricao": "Material de apoio visual para prática"
+    },
+    {
+      "id": "rec-cand-005-audio",
+      "tipo": "audio_referencia",
+      "obrigatorio": true,
+      "descricao": "Áudio de referência ou metrônomo"
+    }
+  ]
+}

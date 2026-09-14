@@ -8,6 +8,7 @@ let state = {
     meta: 'MPB / Solo e Acompanhamento',
     dataCriacao: obterDataLocal ? obterDataLocal() : '2026-09-13'
   },
+  aprendizagemCurso: { aulaAtualId: null, progresso: {} },
   atividadeAtualId: 'ativ-1',
   nivelExercicioAtual: 'alvo',
   sessao: {
@@ -279,6 +280,7 @@ function validarEsquemaBackup(obj) {
           treinoOuvido: validarSerieOuvido(obj.treinoOuvido),
           habilidades: (obj.habilidades && typeof obj.habilidades === 'object') ? obj.habilidades : {},
           anotacoes: anotacoesValidadas,
+          aprendizagemCurso: validarAprendizagemCurso(obj.aprendizagemCurso),
           legado: legadoValidado
         }
       };
@@ -431,6 +433,10 @@ async function processarArquivoBackup(event) {
 
           state = {
             ...state,
+            aprendizagemCurso: {
+              aulaAtualId: state.aprendizagemCurso?.aulaAtualId || d.aprendizagemCurso.aulaAtualId,
+              progresso: {...d.aprendizagemCurso.progresso, ...state.aprendizagemCurso?.progresso}
+            },
             atividadeAtualId: sessaoFinal.atividadeId,
             nivelExercicioAtual: sessaoFinal.nivel,
             sessao: sessaoFinal,

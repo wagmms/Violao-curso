@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v01-inspecao",
+  "etapa": "etapa-2-calibracao-inspecao",
+  "dataGeracao": "2026-09-14",
+  "produtor": "Antigravity",
+  "revisor": "Codex",
+  "totalCandidatos": 6,
+  "candidatos": [
+    {
+      "id": "cand-001",
+      "nome": "Balada: Ritmo com Polegar e Dedos",
+      "dominio": "ritmo_levadas",
+      "entradaPrincipal": "aula-mod-6-29",
+      "totalArquivosFisicos": 5,
+      "statusProdutor": "aprovado_para_revisao_etapa_2b",
+      "justificativa": "Fontes físicas auditadas no disco byte a byte, conteúdo curricular sustentado e limitações de reprodução transparentemente documentadas."
+    },
+    {
+      "id": "cand-002",
+      "nome": "Mecanismo de Troca Fluida: Acordes Lá Maior e Ré Maior",
+      "dominio": "harmonia",
+      "entradaPrincipal": "aula-mod-5-10",
+      "totalArquivosFisicos": 5,
+      "statusProdutor": "aprovado_para_revisao_etapa_2b",
+      "justificativa": "Fontes físicas auditadas no disco byte a byte, conteúdo curricular sustentado e limitações de reprodução transparentemente documentadas."
+    },
+    {
+      "id": "cand-003",
+      "nome": "Treinamento Auditivo: Reconhecimento de Intervalos Diatônicos",
+      "dominio": "percepcao_auditiva",
+      "entradaPrincipal": "aula-mod-1-15",
+      "totalArquivosFisicos": 5,
+      "statusProdutor": "aprovado_para_revisao_etapa_2b",
+      "justificativa": "Fontes físicas auditadas no disco byte a byte, conteúdo curricular sustentado e limitações de reprodução transparentemente documentadas."
+    },
+    {
+      "id": "cand-004",
+      "nome": "Leitura de Partitura: Peças Fáceis para Iniciantes",
+      "dominio": "leitura_notacao",
+      "entradaPrincipal": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+      "totalArquivosFisicos": 8,
+      "statusProdutor": "aprovado_para_revisao_etapa_2b",
+      "justificativa": "Fontes físicas auditadas no disco byte a byte, conteúdo curricular sustentado e limitações de reprodução transparentemente documentadas."
+    },
+    {
+      "id": "cand-005",
+      "nome": "Técnica Percussiva: Introdução ao Thumb Slap",
+      "dominio": "acompanhamento",
+      "entradaPrincipal": "aula-kaiser-24-5-thumb-slap-batida-fingerstyle",
+      "totalArquivosFisicos": 3,
+      "statusProdutor": "aprovado_para_revisao_etapa_2b",
+      "justificativa": "Fontes físicas auditadas no disco byte a byte, conteúdo curricular sustentado e limitações de reprodução transparentemente documentadas."
+    },
+    {
+      "id": "cand-006",
+      "nome": "Violão Solo e Repertório: Pequena Valsa (Ferdinando Carulli)",
+      "dominio": "solo/arranjo",
+      "entradaPrincipal": "aula-kaiser-138-10-pequena-valsa-ferdinando-carulli-violao",
+      "totalArquivosFisicos": 3,
+      "statusProdutor": "aprovado_para_revisao_etapa_2b",
+      "justificativa": "Fontes físicas auditadas no disco byte a byte, conteúdo curricular sustentado e limitações de reprodução transparentemente documentadas."
+    }
+  ]
+}

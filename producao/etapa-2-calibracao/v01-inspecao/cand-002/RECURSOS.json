@@ -1,0 +1,56 @@
+{
+  "candidatoId": "cand-002",
+  "versao": "v01-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-1320",
+      "nome": "00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 41206063,
+      "sha256": "288387f1f2a9370570a52baab7e0cf295f0ea2f627f4ed5eafdc864d5f7b493a"
+    },
+    {
+      "arquivoId": "arq-1324",
+      "nome": "00000906 - ...Descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 901,
+      "sha256": "7caa85b3714e9115d6f23d0aa19f6ea4dcc8f968d520345ff57e4d8499abb6d5"
+    },
+    {
+      "arquivoId": "arq-1326",
+      "nome": "00000908 - ...1_primeira.pdf",
+      "tipo": "pdf",
+      "tamanhoBytes": 1402800,
+      "sha256": "8108013575c71d1f2901fe6b09c2e9bea7069f84e581c3495dff8783d25a4fa9"
+    },
+    {
+      "arquivoId": "arq-1327",
+      "nome": "00000909 - ...Trabalho_de_Fluência.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 36193788,
+      "sha256": "d6ff2b27ee0e0e453aa624389506d150e1285072abf0572ea9d7f43bb735cf70"
+    },
+    {
+      "arquivoId": "arq-1331",
+      "nome": "00000910 - ...Descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 1543,
+      "sha256": "a167003092643e2a19feac95f9b86f0571831fe9d23ceb06fd3362ebb8d2561f"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand-002-partitura",
+      "tipo": "diagrama_ou_partitura",
+      "obrigatorio": true,
+      "descricao": "Material de apoio visual para prática"
+    },
+    {
+      "id": "rec-cand-002-audio",
+      "tipo": "audio_referencia",
+      "obrigatorio": true,
+      "descricao": "Áudio de referência ou metrônomo"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CandidatosCalibracaoManifesto",
+  "type": "object",
+  "required": [
+    "$schema",
+    "versao",
+    "dataGeracao",
+    "totalCandidatos",
+    "candidatos"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "versao": {
+      "type": "string"
+    },
+    "dataGeracao": {
+      "type": "string"
+    },
+    "totalCandidatos": {
+      "type": "integer"
+    },
+    "candidatos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidatoId",
+          "aulaPropostaId",
+          "entradaOrigemId",
+          "titulo",
+          "dominio",
+          "habilidadePrincipalId",
+          "arquivosFisicos",
+          "nivelInspecaoAtual",
+          "inspecaoRealizada",
+          "recursosNecessarios",
+          "hipoteseInspecao",
+          "bloqueiosOuLimitacoes"
+        ],
+        "properties": {
+          "candidatoId": {
+            "type": "string"
+          },
+          "aulaPropostaId": {
+            "type": "string"
+          },
+          "entradaOrigemId": {
+            "type": "string"
+          },
+          "titulo": {
+            "type": "string"
+          },
+          "dominio": {
+            "type": "string"
+          },
+          "habilidadePrincipalId": {
+            "type": "string"
+          },
+          "arquivosFisicos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "arquivoId",
+                "caminhoRelativo",
+                "nomeArquivo",
+                "tamanhoBytes",
+                "sha256",
+                "tipoDetectado"
+              ],
+              "properties": {
+                "arquivoId": {
+                  "type": "string"
+                },
+                "caminhoRelativo": {
+                  "type": "string"
+                },
+                "nomeArquivo": {
+                  "type": "string"
+                },
+                "tamanhoBytes": {
+                  "type": "integer"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "tipoDetectado": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "nivelInspecaoAtual": {
+            "type": "string"
+          },
+          "inspecaoRealizada": {
+            "type": "string"
+          },
+          "recursosNecessarios": {
+            "type": "string"
+          },
+          "hipoteseInspecao": {
+            "type": "string"
+          },
+          "bloqueiosOuLimitacoes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Ambiente de Aprendizagem de Violão — Método Tríade
 
-Sistema de estudo e prática deliberada de violão (nylon, acompanhamento e MPB solo) baseado no acervo do Método Tríade.
+Sistema de estudo e prática deliberada de violão (nylon, acompanhamento e MPB solo) com acervos do Método Tríade e Kaiser integrados em 12 módulos e 631 entradas.
 Funciona 100% offline via navegador (protocolo `file://`), sem necessidade de servidores, compilações ou instalação de dependências.
 
 ---
@@ -11,8 +11,10 @@ Funciona 100% offline via navegador (protocolo `file://`), sem necessidade de se
 ├── app/                      # O aplicativo principal (HTML5, Web Audio, CSS e JS modular)
 │   ├── index.html            # Ponto de entrada (abra com duplo clique no navegador)
 │   ├── estilo.css            # Estilos visuais e temas
-│   ├── dados-catalogo.js     # Catálogo oficial das 300 aulas do Drive
-│   ├── dados-atividades.js   # Banco de atividades didáticas de 40 minutos
+│   ├── dados-catalogo.js     # Catálogo integrado: 631 entradas Tríade + Kaiser
+│   ├── dados-atividades.js   # 11 atividades complementares de 40 minutos
+│   ├── dados-guias-aulas.js  # Roteiros e fontes locais das 631 entradas, em revisão
+│   ├── curso-aprender.js    # Percurso por módulo/aula e orientações dos 12 módulos
 │   ├── audio-motor.js        # Motor de áudio nativo (metrônomo preciso e sintetizador)
 │   ├── srs-engine.js         # Algoritmo de repetição espaçada (SRS de 2, 7 e 21 dias)
 │   └── ferramentas/          # Scripts de validação estática e testes CDP
@@ -39,6 +41,9 @@ Funciona 100% offline via navegador (protocolo `file://`), sem necessidade de se
    ```bash
    # Validação estática de contratos didáticos e catálogo:
    node app/ferramentas/validar-piloto.cjs
+
+   # Navegação por aula, fontes locais, progresso e diagramas:
+   node app/ferramentas/testar-curso-aprender.cjs
 
    # Execução da suíte de testes de interface via Chrome DevTools Protocol:
    node app/ferramentas/testar-interface-v2.cjs

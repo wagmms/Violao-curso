@@ -1,0 +1,42 @@
+{
+  "candidatoId": "cand-006",
+  "versao": "v01-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-0460",
+      "nome": "0. Pequena Valsa (PDF)",
+      "tipo": "pdf",
+      "tamanhoBytes": 128104,
+      "sha256": "8a6ab1739f7eec07f758aec998244e82d891b280ba43bf87b003e78328252b32"
+    },
+    {
+      "arquivoId": "arq-0461",
+      "nome": "1. Aula.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 90448442,
+      "sha256": "4df1e08013c7d19c68c54f9356feb1651a177ebdd48e9deef36b0bfbb62ae395"
+    },
+    {
+      "arquivoId": "arq-0462",
+      "nome": "descricao.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 322,
+      "sha256": "5b7237e1159714da2601a65dfc9ad2663aeaf8bf60e55e42187890118bd3d5d2"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand-006-partitura",
+      "tipo": "diagrama_ou_partitura",
+      "obrigatorio": true,
+      "descricao": "Material de apoio visual para prática"
+    },
+    {
+      "id": "rec-cand-006-audio",
+      "tipo": "audio_referencia",
+      "obrigatorio": true,
+      "descricao": "Áudio de referência ou metrônomo"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "declaracaoCanonica": "AULA.md é o texto-mestre pedagógico dirigido ao aluno; aula.json é a representação canônica estruturada de dados para o motor de aprendizagem do curso.",
+  "versao": "v01-aula-completa",
+  "status": "aguardando_revisao",
+  "dataProducao": "2026-09-14",
+  "produtor": "Antigravity",
+  "revisor": "Codex",
+  "metadadosPedagogicos": {
+    "id": "aula-ped-017-leitura-clave-sol",
+    "titulo": "Iniciação à Clave de Sol: Primeiras Notas na 1ª Posição",
+    "aulaPropostaId": "aula-prop-017",
+    "moduloPedagogicoId": "mod-ped-05",
+    "moduloNome": "05. Leitura Musical Integrada: Cifra, Tablatura e Partitura",
+    "habilidadePrincipalId": "hab-lei-003",
+    "habilidadeNome": "Leitura de Partitura Musical (Clave de Sol na 1ª Posição)",
+    "nivel": "basico_1",
+    "tempoEstimadoMinutos": 40,
+    "tempoVersaoCurtaMinutos": 20
+  },
+  "fontesAcervo": {
+    "entradaCanonica": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+    "arquivoPartitura": "arq-0408",
+    "arquivoDescricao": "arq-0415",
+    "tipoAdaptacao": "adaptacao_autoral_leitura_quatro_compassos_regulares",
+    "justificativaAdaptacao": "A fonte original apresenta grupos com início incompleto (2 tempos) de causa desconhecida; a presente adaptação regulariza a frase em 4 compassos isócronos de 4/4 com pauta própria, garantindo progressão didática segura."
+  },
+  "objetivoObservavel": "Ler na pauta em Clave de Sol e executar no violão os 4 compassos regulares da melodia adaptada (14 notas) na 1ª posição (cordas 5, 4 e 3) a 60 BPM com metrônomo, sem interrupções entre compassos e aplicando amortecimento de cordas.",
+  "diagnosticoEntrada": [
+    {
+      "etapa": "D1",
+      "nome": "IdentificacaoCordas",
+      "pergunta": "Nomes das cordas 5ª, 4ª e 3ª",
+      "respostaEsperada": "5ª=Lá, 4ª=Ré, 3ª=Sol",
+      "rota": "Revisar numeração de baixo para cima (1ª mais fina a 6ª mais grossa)."
+    },
+    {
+      "etapa": "D2",
+      "nome": "AfinacaoInstrumental",
+      "pergunta": "Checagem com afinador",
+      "respostaEsperada": "Cordas 5, 4 e 3 centradas em A2, D3 e G3",
+      "rota": "Ajustar cravelhas antes da leitura."
+    },
+    {
+      "etapa": "D3",
+      "nome": "SomLimpoSeisNotas",
+      "pergunta": "Execução isolada de C3, D3, E3, F3, G3, A3",
+      "respostaEsperada": "Som limpo sem trastejamento",
+      "rota": "Posicionar dedo próximo ao traste, em martelo, com pressão mínima necessária."
+    },
+    {
+      "etapa": "D4",
+      "nome": "DiscriminacaoRitmica",
+      "pergunta": "Diferença entre semínima e mínima",
+      "respostaEsperada": "Semínima dura 1 tempo; mínima dura 2 tempos",
+      "rota": "Revisar cabeças preenchidas vs vazadas e contagem com metrônomo."
+    }
+  ],
+  "andamentos": {
+    "preparatorioBpm": 48,
+    "alvoBpm": 60
+  },
+  "rubricaSaida": {
+    "alturasExatas": "14/14 notas corretas na 1ª posição",
+    "precisaoRitmica": "12 semínimas de 1 tempo e 2 mínimas de 2 tempos",
+    "continuidadeMetrica": "Transições fluidas em todas as mudanças de compasso (c.1->c.2, c.2->c.3, c.3->c.4)",
+    "amortecimento": "Ressonâncias cruzadas controladas sem sobreposição indesejada de cordas soltas"
+  },
+  "tarefaTransferencia": {
+    "nome": "Novo Estudo Melódico",
+    "frase": "Mi Fá Sol Mi | Ré Ré Dó(2)",
+    "compassos": 2,
+    "eventos": 7,
+    "tempos": 8,
+    "recursos": {
+      "pautaLimpa": "recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "pautaGabarito": "recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "audioSintese": "recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "eventosJson": "recursos/tarefa-transferencia/transferencia-eventos.json",
+      "gabaritoMd": "recursos/tarefa-transferencia/transferencia-gabarito.md"
+    }
+  },
+  "recursosPrincipais": {
+    "pautaLimpa": "recursos/pauta-limpa.png",
+    "pautaAnotada": "recursos/pauta-anotada.png",
+    "pautaCelular": "recursos/pauta-celular.png",
+    "audioSintese": "recursos/referencia-audio-sintese.wav",
+    "musicxml": "recursos/pauta-adaptada.musicxml",
+    "eventosJson": "EVENTOS.json"
+  }
+}

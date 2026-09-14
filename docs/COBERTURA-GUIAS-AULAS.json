@@ -1,0 +1,1055 @@
+{
+  "data": "2026-09-14T15:41:02.625Z",
+  "aulas": 631,
+  "comMaterialLocal": 422,
+  "comLegendas": 207,
+  "semMaterialLocal": [
+    {
+      "id": "aula-mod-1-2",
+      "titulo": "02 - H P - 1.1 Noções Básicas de Ritmo",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-3",
+      "titulo": "03 - H P - 1.2 Curiosidades",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-4",
+      "titulo": "04 - Violão - 1.1 - Postura",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-5",
+      "titulo": "05 - Violão - 1.2.1 - Exercícios Preliminares",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-6",
+      "titulo": "06 - Violão - 1.2.2 - Nível Exigido",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-7",
+      "titulo": "07 - Violão - 1.3 - Como Afinar",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-9",
+      "titulo": "09 - Violão - 2.1 - Tríades Maiores",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-kaiser-64-1-como-estudar-no-kaiserplay",
+      "titulo": "Kaiser: 1. Como estudar no Kaiserplay",
+      "tipo": "orientacao"
+    },
+    {
+      "id": "aula-kaiser-65-2-como-cancelar-a-sua-assinatura-e-pedir",
+      "titulo": "Kaiser: 2. Como cancelar a sua ASSINATURA e pedir REEMBOLSO",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-11",
+      "titulo": "11 - Violão - 2.3 - Inovação - Trabalho de Fluência",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-43",
+      "titulo": "43 - BÔNUS versão AO VIVO H P - Aula 3.1 Intervalos Diatôni",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-20",
+      "titulo": "20 - Violão - 3.4 - Chama o flautista! - Let it be",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-21",
+      "titulo": "21 - UPGRADE 8.0 Violão - 3.5 - Acordes E A D - Born this w",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-22",
+      "titulo": "22 - Violão - 3.6 - É o Amor",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-24",
+      "titulo": "24 - Violão - 3.8 - 'A sua' Usando G e C",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-25",
+      "titulo": "25 - Violão - 3.9 - Fluência - Born This Way (Praticando C e",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-26",
+      "titulo": "26 - H P - 4 As Notas Musicais (Pág 08)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-27",
+      "titulo": "27 - Violão - 4.1 - Aplicando o G e C - Patience e Ovelha Neg",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-30",
+      "titulo": "30 - Violão - 4.4 - HIPER DETALHAMENTO- Ovelha Negra (2 de 2)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-31",
+      "titulo": "31 - Violão - 4.5 - Batida POP Básica",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-13",
+      "titulo": "14 - H P - 7.1 - Id. Acordes Maiores e Menores (Pág 18) UPGRA",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-14",
+      "titulo": "15 - H P - 7.2 - Id. Acordes Maiores e Menores (Correção) UPG",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-15",
+      "titulo": "16 - Violão - 7.1 - Que País é Esse - Como eu Quero",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-16",
+      "titulo": "17 - Violão - 7.2 Chama o flautista! - Como eu Quero",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-17",
+      "titulo": "18 - UPGRADE 7.0 Violão - 7.3 Principais Elementos de Inte",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-19",
+      "titulo": "20 - Violão - 8.1 - Batida Rock Inglês",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-20",
+      "titulo": "21 - Violão - 8.2 - O Sol - Rock Inglês",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-12",
+      "titulo": "13 - Violão -10.3 - A Pestana e o Paralelismo",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-13",
+      "titulo": "14 - Violão -10.4 - PRATICANDO Bm com Wicked Game - Apresenta",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-15",
+      "titulo": "16 - Violão - 10.6 TOCA que eu CANTO - Wonderwall",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-16",
+      "titulo": "17 - 10.7 - Pra que serve o capotraste",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-17",
+      "titulo": "18 - H P -11 - Semínima, Pausa e Colchêia - Pág 29",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-18",
+      "titulo": "19 - Violão -11.1 - Eu Sei (Pág 30)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-19",
+      "titulo": "20 - Violão - 11.2 - Leitura C D E F G",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-20",
+      "titulo": "21 - Violão - 11.3 - Batida POP Básica Variação (TCHAC)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-21",
+      "titulo": "22 - Violão - 11.4 - Revisão de Notas no Braço",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-22",
+      "titulo": "23 - Violão - 11.5 - Intensivão Pestana!",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-13",
+      "titulo": "Quiz para ir para o Mês 4",
+      "tipo": "orientacao"
+    },
+    {
+      "id": "aula-mod-4-15",
+      "titulo": "Mega-Bônus_ 38.235 Cifras!",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-1",
+      "titulo": "04 - 13 - Colcheia I UPGRADE 8.0 (Pág 36)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-16",
+      "titulo": "_UPGRADE 7.0_ Violão - 13.1 - Revisão",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-17",
+      "titulo": "_UPGRADE 7.0_ Violão - 13.2 - Acorde X7M na Prática (Pág",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-18",
+      "titulo": "Violão - 13.3 -  Batida Bossanova (Pág 40)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-19",
+      "titulo": "Violão - 13.4 TOCA que eu CANTO - Faz Parte do meu Show",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-2",
+      "titulo": "09 - UPGRADE 7.0 H P - 14 - Form de Acordes II (Pág 37)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-3",
+      "titulo": "10 - UPGRADE 7.0 H P - 14 - Form de Acordes II - Trabalho d",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-20",
+      "titulo": "Violão - 14.1 - Tablatura",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-21",
+      "titulo": "Violão - 14.2 - Seu primeiro FINGERSTYLE - Águas de Març",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-22",
+      "titulo": "Violão - 14.3 - BÔNUS_ FINGERSTYLE FÁCIL!  TOCANDO EM FR",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-24",
+      "titulo": "Violão - 15.2 _UPGRADE 5.0_ Batida de Guarânia",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-25",
+      "titulo": "Violão - 15.3 _UPGRADE 5.0_ Chama o Flautista - Guarânia",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+      "titulo": "Kaiser: 3. Partituras fáceis para iniciantes",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-23",
+      "titulo": "24 - UPGRADE 7.0 Violão - 11.6 - Ajuda EXTRA na POP TCHAC",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-24",
+      "titulo": "25 - UPGRADE 7.0 Violão - 11.7 - NUNCA faça isso",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-25",
+      "titulo": "26 - H P - 12 - Formação de Acordes - Pág 31 (UPGRADE 2023)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-26",
+      "titulo": "27 - Violão - 12.1 - Seus PRIMEIROS Dedilhados I (batida)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-27",
+      "titulo": "28 - Violão - 12.2 - Seus PRIMEIROS Dedilhados II (batida)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-28",
+      "titulo": "29 - Violão - 12.3 - Dedilhado Direto (batida)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-30",
+      "titulo": "31 - Violão - 12.5 - BÔNUS O Solinho de 'O SOL'",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-31",
+      "titulo": "32 - Violão - 12.6 - BÔNUS Técnica da ELIPSE na Palheta",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-32",
+      "titulo": "33 - Violão - 12.7 - BÔNUS Introdução DEVOLVA-ME",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-33",
+      "titulo": "34 - Violão - 12.8 UPGRADE 5.0 Batida Baião",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-34",
+      "titulo": "35 - Violão - 12.9 UPGRADE 5.0 TOCA que eu CANTO - WICKED G",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-40",
+      "titulo": "41 - BÔNUS H P -11 - Semínima, Pausa e Colchêia - Pág 29 (AO",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-44",
+      "titulo": "VIOLÁO - ACONTECEU ALGUMA COISA_",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-26",
+      "titulo": "_UPGRADE 6.0_ 15.4  - Upgrade na harmonia de Encosta sua",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-27",
+      "titulo": "15.5 _UPGRADE 6.0_ Dedilhado Wake me up",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-5",
+      "titulo": "21 - UPGRADE 7.0 H P - 16.2 A Aula + importante da sua VID",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-6",
+      "titulo": "22 - UPGRADE 7.0 Violão - 16.1 - Batida Balada ECM (Pág 41)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-7",
+      "titulo": "23 - UPGRADE 7.0 Violão - 16.2 - Balada ECM FLUÊNCIA! Acim",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-8",
+      "titulo": "24 - UPGRADE 7.0 Violão - 16.3 - Como DIVIDIR a Balada ECM",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-9",
+      "titulo": "25 - UPGRADE 7.0 Violão - 16.4 - Balada ECM - Meu Eu em Voc",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-10",
+      "titulo": "26 - UPGRADE 7.0 Violão - 16.5 - Balada ECM - A Estrada",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-29",
+      "titulo": "Violão - 16.6 - Balada ECM Exemplos",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-32",
+      "titulo": "Violão - 16.10 - Técnica do DEDO ÂNCORA",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-33",
+      "titulo": "Violão - 16.11 - De janeiro a Janeiro (Balada ECM)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-34",
+      "titulo": "Violão - 16.12 Janeiro - TOCA que eu CANTO",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-4-12",
+      "titulo": "34 - Você pode me ajudar São só 3 perguntinhas!",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-24",
+      "titulo": "Violão - 18.3 -  Acorde X7  (pág 48)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-26",
+      "titulo": "Violão - 19.3 - Exemplos X7 (Depois, Guita, Me Chama)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-33",
+      "titulo": "Violão - 20.4 - BÔNUS Toque MAIS no Acorde X7",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-1",
+      "titulo": "12 - UPGRADE 7.0 Violão - 22.2 - Fluência na PESTANA - Pupi",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-9",
+      "titulo": "17 - VERSÁO 4.0 Violão - 34 Acorde X7(13) e X7(b13)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-11",
+      "titulo": "15 - Violão 40.1 - Apresentando o X7(13) e o X7(b13)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-12",
+      "titulo": "16 - Violão 40.2 - Apresentando o X7(9) e o X7(b9)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-13",
+      "titulo": "17 - Violão 40.3 - A Intercambialidade do X7(9) - (13) e X7",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-19",
+      "titulo": "Violão 41.1 -  Subida Harmônica de voicings X7(9)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-30",
+      "titulo": "Violão - 20.1 - Batida Bossa Variação (Pag 52)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-10",
+      "titulo": "13 - Violão 40 - UPGRADE 6.0 Garota de Ipanema em 3 níveis",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-6",
+      "titulo": "Violão - 21.1 - Apresentação",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-7",
+      "titulo": "Violão - 21.2 - Batida Samba Básico (pág 55)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-9",
+      "titulo": "Violão - 21.4 - Norweagian Wood",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-10",
+      "titulo": "Violão - 21.5 - Nothing Else Matters",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-11",
+      "titulo": "Violão - 21.6 - A Thousand Years (pág 58)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-16",
+      "titulo": "Violão - 22.3 - Na Rua na Chuva, na fazenda",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-17",
+      "titulo": "Violão - 22.4 - O Tempo não para",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-18",
+      "titulo": "Violão - 22.5 - Há tempos",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-2",
+      "titulo": "16 - UPGRADE 7.0 Violão 22.5 Esse acorde existe",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-19",
+      "titulo": "Violão - 32 _ TOCA que eu CANTO  - Samba de Verão",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-6",
+      "titulo": "19 - Violão - 28.4 - UPGRADE 4.0 - Preparação para FINGERSTYL",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-2",
+      "titulo": "07 - Violão - 26.3 - Inversões na Prática",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-10-8",
+      "titulo": "12 - 12 Desenho 1 - Exercício 1",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-10-9",
+      "titulo": "13 - 13 Desenho 1 - Exercício 2",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-10-10",
+      "titulo": "14 - 14 Desenho 3 - Exercício 1",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-10-11",
+      "titulo": "15 - 15 Desenho 3 - Exercício 2",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-kaiser-288-29-informacao-importante-antes-de-seguir",
+      "titulo": "Kaiser: 29. INFORMAÇÃO IMPORTANTE antes de seguir em frente",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-26",
+      "titulo": "27 - Violão - 8.8 - Bônus 4 solos fáceis",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-10",
+      "titulo": "Violão - 26.1 - Batida Rock Inglês em swing",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-11",
+      "titulo": "Violão - 26.2 - Batida Pop Básica em swing (video TEMPORÁ",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-4",
+      "titulo": "09 - UPGRADE 7.0 Violão - 26.3 Meu dedo mínimo é 'morto'!",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-13",
+      "titulo": "Violão - 27.1 - Batida Dedilhado Swing",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-14",
+      "titulo": "Violão - 27.2 - Sozinho - Ex. Dedilhado Swing (Pág 69)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-15",
+      "titulo": "Violão - 27.3 - Exemplos Dedilhado Swing (Pág 69)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-16",
+      "titulo": "Violão - 27.4 - ALONGAMENTO e prevenção de Lesões para M",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-18",
+      "titulo": "Violão - 28.1 - Minueto em Sol (Y. S. Bach)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-19",
+      "titulo": "Violão - 28.2 - Leitura Região Grave",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-7-5",
+      "titulo": "18 - Violão 28.3 - A batida SERTANEJA mais usada!",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-12",
+      "titulo": "Violão - 29.1 _ Romance Anônimo",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-2",
+      "titulo": "03 - 29.2 UPGRADE 6.0 O Poderoso Chefão (Parte 1 simplificad",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-3",
+      "titulo": "04 - 29.3 UPGRADE 6.0 O Poderoso Chefão (UPGRADE)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-14",
+      "titulo": "Violão - 30.1 _ Acorde Xm7(b5)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-15",
+      "titulo": "Violão 30.2 - Caetano! Sampa",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-4",
+      "titulo": "08 - Violão 30.3 - Caetano! Você é Linda",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-17",
+      "titulo": "Violão - 31 _ Conscientização de Graus",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-5",
+      "titulo": "13 - VERSÁO 4.0 Violão 33.1 - o 'Paraiso' em 4 dias - FING",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-6",
+      "titulo": "14 - VERSÁO 4.0 Violão 33.2 - o 'Paraiso' em 4 dias - FIN",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-7",
+      "titulo": "15 - VERSÁO 4.0 Violão 33.3 - o 'Paraiso' em 4 dias - FIN",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-8",
+      "titulo": "16 - VERSÁO 4.0 Violão 33.4 - o 'Paraiso' em 4 dias - FING",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-10",
+      "titulo": "18 - VERSÁO 4.0 35.1 - SOFRENCIA - Parte 1",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-8-11",
+      "titulo": "19 - VERSÁO 4.0 35.2 - SOFRENCIA - Parte 2",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-4",
+      "titulo": "06 - Violão - 38 UPGRADE 5.0 Certas Coisas FINGERSTYLE",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-kaiser-207-46-por-una-cabeza-tango",
+      "titulo": "Kaiser: 46. Por Una Cabeza (Tango)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-15",
+      "titulo": "Violão - 17.1 - Leitura C D E (pág 45)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-16",
+      "titulo": "Violão - 17.2 - Leitura C D E F e G",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-17",
+      "titulo": "Violão - 17.3 - Leitura Região Média (ág 46)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-18",
+      "titulo": "Violão - 17.4 - Região Aguda",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-19",
+      "titulo": "Violão - 17.5 - Aceleração de Leitura de Partituras",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-1",
+      "titulo": "07 - Violão - 17.6 - A OITAVA",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-22",
+      "titulo": "Violão - 18.1 - Dedilhado Vai e Vem (Pág 47) (batida)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-23",
+      "titulo": "Violão - 18.2 - Dedilhado vai e vem - Você (Pág 47)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-2",
+      "titulo": "13 - Violão - 18.4 - A Notação mais FÁCIL do mundo",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-3",
+      "titulo": "14 - Violão - 18.5 - UPGRADE 6.0 simplificando acordes",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-4",
+      "titulo": "15 - UPGRADE 7.0 Violão - 18.6 Quais cordas dedilhar",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-5",
+      "titulo": "16 - UPGRADE 7.0 Violão 18.7 Momento GOSPEL - Aleluia",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-6",
+      "titulo": "17 - UPGRADE 7.0 Violão 18.8 Aleluia com I.A",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-7",
+      "titulo": "19 - Violão - 19.1 - VILAREJO",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-8",
+      "titulo": "20 - Violão - 19.2 - TOCA que EU CANTO! - VILAREJO",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-27",
+      "titulo": "Violão - 19.4 - Leitura Oitava Completa (Pág 51)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-28",
+      "titulo": "Violão - 19.5 - Trenzinho C. Villa Lobos  (Pág 51)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-9",
+      "titulo": "24 - 19.6 UPGRADE 6.0 Revisão DOMINE o BRAÇO - Onde está a",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-10",
+      "titulo": "25 - UPGRADE 5.0 19.6 - MOMENTO GOSPEL Lindo és (+Variaçã",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-31",
+      "titulo": "Violão - 20.2 - FINGERSTYLE (Natalina)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-34",
+      "titulo": "Violão - 20.5 - BÔNUS! Fingerstyle de _LINDA_ (Roupa Nov",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-35",
+      "titulo": "20.6 - HIPER DETALHAMENTO- Me Chama",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-11",
+      "titulo": "33 - UPGRADE 7.0 20.7 - VIOLÁO - Como DECORAR",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-12",
+      "titulo": "34 - UPGRADE 8.0 Pra Melhorar - Marisa monte",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-5-13",
+      "titulo": "35 - UPGRADE 8.0 TOCA QUE EU CANTO - Pra Melhorar",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-1",
+      "titulo": "02 - Violão - 36.1 Dedilhado BLOCADO 1 - Careless UPGRADE 5",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-2",
+      "titulo": "03 - Violão - 36.2 Dedilhado BLOCADO 1 Variação Final UPGR",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-3",
+      "titulo": "04 - Violão - 36.3 CHAMA o SAX! - Levada Blocada 01 UPGRADE",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-15",
+      "titulo": "Violão - 37 _Explicação da Prova Prática",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-5",
+      "titulo": "08 - UPGRADE 8.0 - 2025 38.2 Sofrência Avançada (Bolero!) Tu",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-6",
+      "titulo": "09 - UPGRADE 8.0 - 2025 38.3 Fluência na Sofrência Avançada",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-7",
+      "titulo": "10 - VERSÁO 4.0 Violão 39.1 - Revisão Intevalos no Braço",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-9-9",
+      "titulo": "12 - Violão - 39.3 - 9's em TRÍADES de 5a corda",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-11-1",
+      "titulo": "01 - SORTEIO VIOLÁO [30 07 2026]",
+      "tipo": "orientacao"
+    },
+    {
+      "id": "aula-mod-11-2",
+      "titulo": "02 - AULA LIVE [30 07 2026]",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-kaiser-115-1-209-arranjos-pra-violao",
+      "titulo": "Kaiser: 1. 209 arranjos pra violão",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-kaiser-116-1-ebook-a-arte-auditiva-do-violao",
+      "titulo": "Kaiser: 1. Ebook_ A Arte Auditiva do Violão",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-32",
+      "titulo": "32 - Violão - 4.6 - Com qual dedo",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-33",
+      "titulo": "33 - Violão - 4.7 - TOCA que eu CANTO - POP Básica (Wicked Ga",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-34",
+      "titulo": "34 - Violão - 4.8 - BÔNUS - MOMENTO GOSPEL -",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-35",
+      "titulo": "35 - Violão - 4.9 - Bônus - Músicas inteiras",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-36",
+      "titulo": "36 - Violão - 4.10 - Bônus - Knocking on Heavens Door (Pág 05",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-37",
+      "titulo": "37 - Violão - 4.11- Bônus - É o Amor (Pág 06)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-38",
+      "titulo": "38 - Violão - 4.12 - Bônus - Let it Be (Pág 06)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-39",
+      "titulo": "39 - Violão - 4.13 - Bônus - Ovelha Negra (Pág 08)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-40",
+      "titulo": "40 - Violão - 4.14 - Bônus - Patience (Pág 09)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-41",
+      "titulo": "41 - BÔNUS versão AO VIVO H P - Aula 1 Noções Básicas de Ri",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-42",
+      "titulo": "42 - BÔNUS versão AO VIVO H P - Aula 2 - H P Compassos",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-44",
+      "titulo": "44 - BÔNUS versão AO VIVO H P - Aula 4 As Notas Musicais (P",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-45",
+      "titulo": "45 - Você é CANHOTO Qual a forma CERTA de aprender (UPGRADE",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-1-46",
+      "titulo": "46 - Trilhas",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-27",
+      "titulo": "28 - Violão - 8.9.2 - Bônus Como Eu Quero",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-28",
+      "titulo": "29 - Violão - 8.9.2 - Bônus Menina Veneno",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-29",
+      "titulo": "30 - Violão - 8.9.3 - Bônus Natasha",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-30",
+      "titulo": "31 - Violão - 8.9.4 - Bônus Que País é esse",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-31",
+      "titulo": "32 - 08.10 - Hiper detalhamento - Batida Rock Inglês - Mais u",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-35",
+      "titulo": "36 - BÔNUS versão AO VIVO H P - 7 - Id. Acordes Maiores e Men",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-2-37",
+      "titulo": "38 - UPGRADE 6.0 Parabéns pra Você em 3 Níveis de Complexid",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-43",
+      "titulo": "Quiz para ir ao mês 3",
+      "tipo": "orientacao"
+    },
+    {
+      "id": "aula-mod-3-1",
+      "titulo": "02 - Violão - 9.1 - O que veremos no mês 3",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-2",
+      "titulo": "03 - H P - 9.1 - Revisão id. Acordes Maiores e Menores",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-3",
+      "titulo": "04 - H P - 9.2 - Figuras Rítmicas (todas) Pág 23",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-5",
+      "titulo": "06 - Violão - 9.3 TOCA que eu CANTO Mais uma de Amor",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-6",
+      "titulo": "07 - Violão - 9.4 Batida Rock Inglês Variação",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-7",
+      "titulo": "08 - Violão - 9.5 - VOCÊ SABIA -",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-3-8",
+      "titulo": "09 - Violão 9.6 BÔNUS Solinho Aonde quer que eu vá (Letra na",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-20",
+      "titulo": "Violão - 23.1 - Campo Harmômico na Prática",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-21",
+      "titulo": "Violão - 23.2 - Reggae (pág 62)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-22",
+      "titulo": "_UPGRADE 5.0_ 23.3 Dedihado SIMPLES e acordes de UM dedo",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-23",
+      "titulo": "_UPGRADE 5.0_ 23.4 Entendendo os acordes 'simplificados'",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-25",
+      "titulo": "Violão - 24.1 - Levada Pop Swing",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-4",
+      "titulo": "25 - Violão - 24.2 - Chama o FLAUTISTA - Mentiras (Dedilhado)",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-26",
+      "titulo": "Violão - 24.3 - BÔNUS! Conheça o macete 151351",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-27",
+      "titulo": "Violão - 24.4 - BÔNUS_ Macete 151351 - AULA  2",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-28",
+      "titulo": "Violão - 24.5 - IMPRESSIONE a todos com este ROCK CLÁSSI",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-29",
+      "titulo": "Violão - 24.6 - LIMPEZA DEDILHADO MOTIVAÇÁO",
+      "tipo": "sem_material"
+    },
+    {
+      "id": "aula-mod-6-30",
+      "titulo": "Violão - 24.7 - BÔNUS_ Escala PENTATÔNICA",
+      "tipo": "sem_material"
+    }
+  ],
+  "materiaisLocais": 1486,
+  "observacao": "Existência conferida no disco. Vídeos e PDFs não foram integralmente revisados. Roteiros autorais em revisão."
+}

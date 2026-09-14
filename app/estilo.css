@@ -1687,3 +1687,12 @@ body.modo-estante #timer-regressivo {
   color: #ffaa00 !important;
   font-weight: bold;
 }
+
+#aprender-conteudo .biblioteca-toolbar label { flex: 1; min-width: 200px; }
+#aprender-conteudo .biblioteca-toolbar select { display: block; width: 100%; }
+#aprender-conteudo li { margin: 8px 0; overflow-wrap: anywhere; }
+#aprender-conteudo .curso-transcricao { max-height: 360px; overflow: auto; }
+#aprender-conteudo details summary { cursor: pointer; font-weight: 600; }
+#aprender-conteudo .curso-atividade { margin: 6px 0; white-space: normal; }
+#aprender-conteudo svg { width: 100%; height: auto; }
+#curso-pasta { width: 100%; margin: 8px 0; }

@@ -1,0 +1,7 @@
+evidenciaId,candidatoId,arquivoId,tipoEvidencia,paginaPdf,compassoTrecho,elementoObservado,interpretacaoMusical,metodoVerificacao,nivelConfianca
+evid-cand004-fis-01,cand-004,arq-0408,fisica,1,N/A,"Arquivo 0. 1 tem 51.500 bytes e hash decfdf2e34bb...","Arquivo PDF íntegro no disco local",buffer_sha256,absoluta
+evid-cand004-mus-01,cand-004,arq-0408,musical_visual,1,1,"2 semínimas em C4 escrito e 2 semínimas em G4 escrito","Compasso 1 em 4/4: Dó C3 (corda 5 casa 3) e Sol G3 (corda 3 solta)",inspecao_visual_png,alta
+evid-cand004-mus-02,cand-004,arq-0408,musical_visual,1,2,"2 semínimas em A4 escrito e 1 mínima em G4 escrito","Compasso 2 em 4/4: Lá A3 (corda 3 casa 2) e Sol G3 mínima sustentada 2 tempos",inspecao_visual_png,alta
+evid-cand004-mus-03,cand-004,arq-0408,musical_visual,1,3,"2 semínimas em F4 escrito e 2 semínimas em E4 escrito","Compasso 3 em 4/4: Fá F3 (corda 4 casa 3) e Mi E3 (corda 4 casa 2)",inspecao_visual_png,alta
+evid-cand004-mus-04,cand-004,arq-0408,musical_visual,1,4,"2 semínimas em D4 escrito e 1 mínima em C4 escrito","Compasso 4 em 4/4: Ré D3 (corda 4 solta) e Dó C3 mínima sustentada 2 tempos",inspecao_visual_png,alta
+evid-cand004-doc-01,cand-004,arq-0415,documental,N/A,N/A,"Instrução original: leia sozinho e pratique com metrônomo","Entrada desenhada para leitura autônoma sem vídeo de apoio",leitura_texto_html,alta

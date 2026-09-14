@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "versao": "v03",
+  "dataGeracao": "2026-09-14T17:00:00-03:00",
+  "totalCandidatos": 6,
+  "candidatos": [
+    {
+      "candidatoId": "cand-01-ritmo-balada",
+      "aulaPropostaId": "aula-prop-008",
+      "entradaOrigemId": "aula-mod-1-17",
+      "titulo": "A Batida Balada Básica e o Pêndulo Contínuo",
+      "dominio": "ritmo",
+      "habilidadePrincipalId": "hab-rit-003",
+      "arquivosFisicos": [
+        {
+          "arquivoId": "arq-1375",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000928 - 1. Aula.mp4",
+          "nomeArquivo": "00000928 - 1. Aula.mp4",
+          "tamanhoBytes": 186227176,
+          "sha256": "3edfa8f6c21b4eb4ad70aa2bf5c96c05956b95915a6132980505901fe475e529",
+          "tipoDetectado": "video"
+        },
+        {
+          "arquivoId": "arq-1380",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000929 - descricao.md",
+          "nomeArquivo": "00000929 - descricao.md",
+          "tamanhoBytes": 1539,
+          "sha256": "61dd55b88d422739714af882f23f46cd9ce2bfd3b113baf8fc6d579b7da2061c",
+          "tipoDetectado": "descricao"
+        },
+        {
+          "arquivoId": "arq-1381",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000930 - 1. Aula.pt_br.vtt",
+          "nomeArquivo": "00000930 - 1. Aula.pt_br.vtt",
+          "tamanhoBytes": 17466,
+          "sha256": "c66e42598dcb12219e2064b3fc01bc9fb9e8656135ec69e7b7e9f425835d8dd4",
+          "tipoDetectado": "legenda"
+        },
+        {
+          "arquivoId": "arq-1382",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000931 - 2. Aula.pt_br.vtt",
+          "nomeArquivo": "00000931 - 2. Aula.pt_br.vtt",
+          "tamanhoBytes": 19002,
+          "sha256": "83ec17f80b6d656540d9804faf58433bf965d9ebb17136c73d7c3574f0e89263",
+          "tipoDetectado": "legenda"
+        },
+        {
+          "arquivoId": "arq-1383",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000932 - 2. Aula.mp4",
+          "nomeArquivo": "00000932 - 2. Aula.mp4",
+          "tamanhoBytes": 287990597,
+          "sha256": "2bda31fa8fe866cd0f8ea98a4d2d49b236e336e0aeccc26f1f37f31eb22ca3c7",
+          "tipoDetectado": "video"
+        }
+      ],
+      "nivelInspecaoAtual": "legenda_indexada",
+      "inspecaoRealizada": "Leitura integral dos arquivos WebVTT 00000930 (13:44) e 00000931 (22:48) e descrição 00000929. O instrutor enfatiza o princípio mecânico do 'movimento contínuo da mão' como pêndulo.",
+      "recursosNecessarios": "Vídeos MP4 locais arq-1375 e arq-1383 para amostragem visual na Etapa 2.",
+      "hipoteseInspecao": "Verificar minutos 02:00 a 05:00 de 00000928 para captura exata da demonstração do pêndulo motor.",
+      "bloqueiosOuLimitacoes": "Vídeos não foram reproduzidos em player de vídeo no terminal; texto de legenda documenta a fala, mas não substitui a inspeção gestual presencial."
+    },
+    {
+      "candidatoId": "cand-02-tecnica-troca-ad",
+      "aulaPropostaId": "aula-prop-005",
+      "entradaOrigemId": "aula-mod-1-10",
+      "titulo": "Fluência e Troca de Acordes: Lá e Ré com Dedo Guia",
+      "dominio": "tecnica",
+      "habilidadePrincipalId": "hab-tec-003",
+      "arquivosFisicos": [
+        {
+          "arquivoId": "arq-1320",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4",
+          "nomeArquivo": "00000905 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D.mp4",
+          "tamanhoBytes": 41206063,
+          "sha256": "288387f1f2a9370570a52baab7e0cf295f0ea2f627f4ed5eafdc864d5f7b493a",
+          "tipoDetectado": "video"
+        },
+        {
+          "arquivoId": "arq-1324",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000906 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_Descricao.md",
+          "nomeArquivo": "00000906 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_Descricao.md",
+          "tamanhoBytes": 901,
+          "sha256": "7caa85b3714e9115d6f23d0aa19f6ea4dcc8f968d520345ff57e4d8499abb6d5",
+          "tipoDetectado": "descricao"
+        },
+        {
+          "arquivoId": "arq-1326",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000908 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_1_primeira.pdf",
+          "nomeArquivo": "00000908 - 01_1_Módulo_1_10_10_Violão_2_2_Inovação_Fluência_no_A_e_D_1_primeira.pdf",
+          "tamanhoBytes": 1402800,
+          "sha256": "8108013575c71d1f2901fe6b09c2e9bea7069f84e581c3495dff8783d25a4fa9",
+          "tipoDetectado": "pdf"
+        }
+      ],
+      "nivelInspecaoAtual": "metadados_catalogo",
+      "inspecaoRealizada": "Inspeção documental da descrição 00000906 e do arquivo PDF 00000908 (1,4 MB). O texto destaca a aula prática de dois acordes (A e D).",
+      "recursosNecessarios": "Vídeo 00000905 (arq-1320) para inspeção da digitação real de dedos pivô.",
+      "hipoteseInspecao": "Analisar a permanência do dedo na 3ª corda (Lá, casa 2) durante a transição Lá -> Ré.",
+      "bloqueiosOuLimitacoes": "Esta entrada não possui legendas WebVTT locais; inspeção audiovisual presencial bloqueada no terminal, mantendo o candidato como não confirmado."
+    },
+    {
+      "candidatoId": "cand-03-ouvido-intervalos",
+      "aulaPropostaId": "aula-prop-012",
+      "entradaOrigemId": "aula-mod-1-15",
+      "titulo": "Reconhecimento Auditivo de Intervalos de 2ª e 3ª Maior",
+      "dominio": "ouvido",
+      "habilidadePrincipalId": "hab-ouv-002",
+      "arquivosFisicos": [
+        {
+          "arquivoId": "arq-1354",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4",
+          "nomeArquivo": "00000919 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.mp4",
+          "tamanhoBytes": 425540268,
+          "sha256": "98f0847dc1fd7905a6cc5e6cf0d2f94b8e7d52cc8edb4e0fa05ac12d6dc99d19",
+          "tipoDetectado": "video"
+        },
+        {
+          "arquivoId": "arq-1359",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000920 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.md",
+          "nomeArquivo": "00000920 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.md",
+          "tamanhoBytes": 180,
+          "sha256": "227d407c81e6c9db7e69f24b9c8abe2d788e78c38367afbdfd1d3e9565be71a4",
+          "tipoDetectado": "descricao"
+        },
+        {
+          "arquivoId": "arq-1360",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000921 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.vtt",
+          "nomeArquivo": "00000921 - 01_1_Módulo_1_15_15_H_P_3_1_Intervalos_Diatônicos_pág_07_UPGRADE.vtt",
+          "tamanhoBytes": 55981,
+          "sha256": "ada54def6cc98e316e5ab64761e6214b62536ae48f987199ee065956dba0ba9f",
+          "tipoDetectado": "legenda"
+        },
+        {
+          "arquivoId": "arq-1363",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000924 - 2. Aula.mp4",
+          "nomeArquivo": "00000924 - 2. Aula.mp4",
+          "tamanhoBytes": 139500139,
+          "sha256": "9f639e8209a02a9a86a21dd0863254af8d3ea1319081d8fe6177f279d710b92d",
+          "tipoDetectado": "video"
+        },
+        {
+          "arquivoId": "arq-1368",
+          "caminhoRelativo": "Curso de Violão Método Tríade COMPLETO - Heitor Castro/00000925 - 3. Aula.mp4",
+          "nomeArquivo": "00000925 - 3. Aula.mp4",
+          "tamanhoBytes": 365619430,
+          "sha256": "b9b6da17e93c32c9f5d582c4ee63fc5e1c42f967a1a65ea7bbbf22ec00a1503a",
+          "tipoDetectado": "video"
+        }
+      ],
+      "nivelInspecaoAtual": "legenda_indexada",
+      "inspecaoRealizada": "Leitura integral da legenda WebVTT 00000921 (duração 44:57) e descrição 00000920. O professor canta Dó-Ré e Dó-Mi como sensações auditivas relativas; errata no minuto 10:10 registrada.",
+      "recursosNecessarios": "Extração dos trechos de áudio do vídeo 00000919 para o teste de escuta cego.",
+      "hipoteseInspecao": "Amostragem dos minutos 02:00 a 08:00 para isolar os exemplos de 2ªM e 3ªM cantados e tocados.",
+      "bloqueiosOuLimitacoes": "Vídeo de 425 MB não reproduzido no terminal; avaliação restrita à transcrição textual."
+    },
+    {
+      "candidatoId": "cand-04-leitura-partituras",
+      "aulaPropostaId": "aula-prop-017",
+      "entradaOrigemId": "aula-kaiser-124-3-partituras-faceis-para-iniciantes",
+      "titulo": "Iniciação à Clave de Sol: As Sete Partituras Fáceis",
+      "dominio": "leitura",
+      "habilidadePrincipalId": "hab-lei-003",
+      "arquivosFisicos": [
+        {
+          "arquivoId": "arq-0415",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/descricao.md",
+          "nomeArquivo": "descricao.md",
+          "tamanhoBytes": 882,
+          "sha256": "17416017aa4be87674bb030647c3c40f0b6fcc2766a2453a09625fd9b1ca365e",
+          "tipoDetectado": "descricao"
+        },
+        {
+          "arquivoId": "arq-0408",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 1",
+          "nomeArquivo": "0. 1",
+          "tamanhoBytes": 51500,
+          "sha256": "decfdf2e34bb85eded08973c14754138257835957d96a01fcc2cb6bcf535dbd8",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0409",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 2",
+          "nomeArquivo": "0. 2",
+          "tamanhoBytes": 46488,
+          "sha256": "57584b0ffcfbe86b943f81482ef1348bbb3007aa20a5d80d1f99dceedbf1f822",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0410",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 3",
+          "nomeArquivo": "0. 3",
+          "tamanhoBytes": 38108,
+          "sha256": "c501ab0b55202b7f03944248a1da5b32f1ad2ae8a4e45f684c091d59232bc15e",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0411",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 4",
+          "nomeArquivo": "0. 4",
+          "tamanhoBytes": 66155,
+          "sha256": "cb3c3adb5024952f4b92742b87d479763ab9dcb82e30075f7034875af67fbbdd",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0412",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 5",
+          "nomeArquivo": "0. 5",
+          "tamanhoBytes": 67826,
+          "sha256": "59c8117a04985093e2f007bf2d6244adbf9b62279e5ba0016928127fce9d6f35",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0413",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 6",
+          "nomeArquivo": "0. 6",
+          "tamanhoBytes": 47791,
+          "sha256": "c40421d6621c31e29d042fd423c9656983887080f7538432ba791aad33b3b87c",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0414",
+          "caminhoRelativo": "Curso Kaiser/LEITURA DE PARTITURA/1. Leitura de Partitura/3. Partituras fáceis para iniciantes/0. 7",
+          "nomeArquivo": "0. 7",
+          "tamanhoBytes": 52762,
+          "sha256": "5bda1f9f1cce79b94f14cb81a05b4a341376583f3152235d578bfbbb03891295",
+          "tipoDetectado": "pdf"
+        }
+      ],
+      "nivelInspecaoAtual": "metadados_catalogo",
+      "inspecaoRealizada": "Leitura da descrição descricao.md e descompressão de streams dos 7 PDFs de partitura (obras 1 a 7: Brilha Brilha, Parabéns, Atirei o Pau, Escravos de Jó, Noite Feliz, O Cravo Brigou, Cai Cai Balão).",
+      "recursosNecessarios": "Produção autoral das instruções didáticas de leitura, pois esta entrada no acervo original é puramente material de apoio impresso.",
+      "hipoteseInspecao": "Auditoria musical da partitura 0. 1 (Brilha Brilha Estrelinha) na primeira posição para estabelecer digitação padrão de mão direita (i-m).",
+      "bloqueiosOuLimitacoes": "Esta entrada NÃO possui arquivos de vídeo nem legendas no acervo local."
+    },
+    {
+      "candidatoId": "cand-05-acompanhamento-thumb-slap",
+      "aulaPropostaId": "aula-prop-030",
+      "entradaOrigemId": "aula-kaiser-18-5-thumb-slap-batida-fingerstyle",
+      "titulo": "Thumb Slap e Percussão no Fingerstyle Moderno",
+      "dominio": "ritmo",
+      "habilidadePrincipalId": "hab-rit-004",
+      "arquivosFisicos": [
+        {
+          "arquivoId": "arq-0068",
+          "caminhoRelativo": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/5. THUMB SLAP _ Batida Fingerstyle/1. Aula.mp4",
+          "nomeArquivo": "1. Aula.mp4",
+          "tamanhoBytes": 44538073,
+          "sha256": "53c77cbc8f1eab1f75d24db49c264dc0c8c8ad4bfa5b0c45d81cacd724a0b5b4",
+          "tipoDetectado": "video"
+        },
+        {
+          "arquivoId": "arq-0071",
+          "caminhoRelativo": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/5. THUMB SLAP _ Batida Fingerstyle/1. Aula.mp4.pt-orig.vtt",
+          "nomeArquivo": "1. Aula.mp4.pt-orig.vtt",
+          "tamanhoBytes": 16139,
+          "sha256": "1336474f123e6f0273511b9e6fd29f33d3f0fdfc453a51347da55a9ff97dd24a",
+          "tipoDetectado": "legenda"
+        },
+        {
+          "arquivoId": "arq-0073",
+          "caminhoRelativo": "Curso Kaiser/ACOMPANHAMENTO/1. Acompanhamento/5. THUMB SLAP _ Batida Fingerstyle/descricao.md",
+          "nomeArquivo": "descricao.md",
+          "tamanhoBytes": 168,
+          "sha256": "2f2a80e2ac1f0da2a57fa641cee0f16c965544bcf25f99014b8b58b9b036c1a4",
+          "tipoDetectado": "descricao"
+        }
+      ],
+      "nivelInspecaoAtual": "legenda_indexada",
+      "inspecaoRealizada": "Leitura integral da legenda pt-orig.vtt (duração de 03:15) e descrição. O professor ensina a percussão da base do polegar nos tempos 2 e 4 em compasso 4/4 combinada com ataque de unhas nas cordas primas.",
+      "recursosNecessarios": "Vídeo 1. Aula.mp4 (arq-0068) para checar o movimento biomecânico do antebraço e prevenir dores no punho.",
+      "hipoteseInspecao": "Amostragem do minuto 01:20 ao 02:45 para verificar a transição da batida lenta para a combinação de melodia com slap.",
+      "bloqueiosOuLimitacoes": "Vídeo não visualizado em player gráfico; técnica realocada para o Módulo 12 (Fingerstyle/Técnicas Percussivas) para não atropelar a base do Módulo 03."
+    },
+    {
+      "candidatoId": "cand-06-solo-pequena-valsa",
+      "aulaPropostaId": "aula-prop-029",
+      "entradaOrigemId": "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol",
+      "titulo": "Polifonia a Duas Vozes: Pequena Valsa de Carulli",
+      "dominio": "solo/arranjo",
+      "habilidadePrincipalId": "hab-sol-001",
+      "arquivosFisicos": [
+        {
+          "arquivoId": "arq-0460",
+          "caminhoRelativo": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/0. Pequena Valsa",
+          "nomeArquivo": "0. Pequena Valsa",
+          "tamanhoBytes": 128104,
+          "sha256": "8a6ab1739f7eec07f758aec998244e82d891b280ba43bf87b003e78328252b32",
+          "tipoDetectado": "pdf"
+        },
+        {
+          "arquivoId": "arq-0461",
+          "caminhoRelativo": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/1. Aula.mp4",
+          "nomeArquivo": "1. Aula.mp4",
+          "tamanhoBytes": 90448442,
+          "sha256": "4df1e08013c7d19c68c54f9356feb1651a177ebdd48e9deef36b0bfbb62ae395",
+          "tipoDetectado": "video"
+        },
+        {
+          "arquivoId": "arq-0462",
+          "caminhoRelativo": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/descricao.md",
+          "nomeArquivo": "descricao.md",
+          "tamanhoBytes": 322,
+          "sha256": "5b7237e1159714da2601a65dfc9ad2663aeaf8bf60e55e42187890118bd3d5d2",
+          "tipoDetectado": "descricao"
+        }
+      ],
+      "nivelInspecaoAtual": "metadados_catalogo",
+      "inspecaoRealizada": "Leitura da descrição descricao.md e descompressão da partitura em PDF (0. Pequena Valsa, 2 páginas, partitura e tablatura em 3/4).",
+      "recursosNecessarios": "Vídeo 1. Aula.mp4 (arq-0461, 90.4 MB) para inspeção da digitação polifônica.",
+      "hipoteseInspecao": "Amostragem dos compassos 1 a 8 na página 1 do PDF e minutos iniciais do vídeo para mapear o equilíbrio dinâmico entre melodia e baixo.",
+      "bloqueiosOuLimitacoes": "Esta entrada não possui legendas WebVTT locais; vídeo não reproduzido no terminal."
+    }
+  ],
+  "dataAtualizacao": "2026-09-14"
+}

@@ -1,0 +1,6 @@
+evidenciaId,candidatoId,arquivoId,tipoEvidencia,timestampInicio,timestampFim,paginaPdf,trechoObservado,interpretacaoPedagogica,nivelConfianca
+evid-cand-003-1,cand-003,arq-1354,video,00:00:00,00:05:00,N/A,"Inspeção técnica: tamanho 425540268 bytes e hash 98f0847dc1fd","Material físico verificado e íntegro no disco",alta
+evid-cand-003-2,cand-003,arq-1359,descricao,00:00:00,00:05:00,N/A,"Inspeção técnica: tamanho 180 bytes e hash 227d407c81e6","Material físico verificado e íntegro no disco",alta
+evid-cand-003-3,cand-003,arq-1360,legenda,00:00:00,00:05:00,N/A,"Inspeção técnica: tamanho 55981 bytes e hash ada54def6cc9","Material físico verificado e íntegro no disco",alta
+evid-cand-003-4,cand-003,arq-1361,legenda,00:00:00,00:05:00,N/A,"Inspeção técnica: tamanho 14023 bytes e hash 925d2bb15975","Material físico verificado e íntegro no disco",alta
+evid-cand-003-5,cand-003,arq-1362,legenda,00:00:00,00:05:00,N/A,"Inspeção técnica: tamanho 43947 bytes e hash 084ab9e9898b","Material físico verificado e íntegro no disco",alta

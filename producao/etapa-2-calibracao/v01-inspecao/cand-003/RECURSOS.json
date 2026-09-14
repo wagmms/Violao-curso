@@ -1,0 +1,56 @@
+{
+  "candidatoId": "cand-003",
+  "versao": "v01-inspecao",
+  "dataAuditoria": "2026-09-14",
+  "arquivosFisicos": [
+    {
+      "arquivoId": "arq-1354",
+      "nome": "00000919 - ...Intervalos_Diatônicos_pág_07_UPGRADE.mp4",
+      "tipo": "video",
+      "tamanhoBytes": 425540268,
+      "sha256": "98f0847dc1fd7905a6cc5e6cf0d2f94b8e7d52cc8edb4e0fa05ac12d6dc99d19"
+    },
+    {
+      "arquivoId": "arq-1359",
+      "nome": "00000920 - ...pág_07_UPGRADE.md",
+      "tipo": "descricao",
+      "tamanhoBytes": 180,
+      "sha256": "227d407c81e6c9db7e69f24b9c8abe2d788e78c38367afbdfd1d3e9565be71a4"
+    },
+    {
+      "arquivoId": "arq-1360",
+      "nome": "00000921 - ...pág_07_UPGRADE.vtt",
+      "tipo": "legenda",
+      "tamanhoBytes": 55981,
+      "sha256": "ada54def6cc98e316e5ab64761e6214b62536ae48f987199ee065956dba0ba9f"
+    },
+    {
+      "arquivoId": "arq-1361",
+      "nome": "00000922 - ...pág_07_UPGRADE.vtt",
+      "tipo": "legenda",
+      "tamanhoBytes": 14023,
+      "sha256": "925d2bb15975cc0242b2c03ea9c306bf89e4a2a636642c3961aae7716a11d7a7"
+    },
+    {
+      "arquivoId": "arq-1362",
+      "nome": "00000923 - ...pág_07_UPGRADE.vtt",
+      "tipo": "legenda",
+      "tamanhoBytes": 43947,
+      "sha256": "084ab9e9898bdcb14cc5c447cf35a7b72523634088ca025217ad0d1490563f7b"
+    }
+  ],
+  "recursosPedagogicosNecessarios": [
+    {
+      "id": "rec-cand-003-partitura",
+      "tipo": "diagrama_ou_partitura",
+      "obrigatorio": true,
+      "descricao": "Material de apoio visual para prática"
+    },
+    {
+      "id": "rec-cand-003-audio",
+      "tipo": "audio_referencia",
+      "obrigatorio": true,
+      "descricao": "Áudio de referência ou metrônomo"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatrizFonteAulaRelacao",
+  "type": "object",
+  "required": [
+    "entradaOrigemId",
+    "aulaPropostaId",
+    "habilidadeId",
+    "tipoRelacao",
+    "decisaoProvisoria",
+    "justificativa",
+    "nivelInspecao"
+  ],
+  "properties": {
+    "entradaOrigemId": {
+      "type": "string"
+    },
+    "arquivoId": {
+      "type": "string"
+    },
+    "aulaPropostaId": {
+      "type": "string"
+    },
+    "habilidadeId": {
+      "type": "string"
+    },
+    "tipoRelacao": {
+      "type": "string",
+      "enum": [
+        "conteudo_principal",
+        "recurso_complementar",
+        "pratica_alternativa",
+        "descarte_administrativo",
+        "fora_do_curriculo",
+        "fonte_pendente",
+        "fonte_candidata"
+      ]
+    },
+    "decisaoProvisoria": {
+      "type": "string"
+    },
+    "justificativa": {
+      "type": "string"
+    },
+    "nivelInspecao": {
+      "type": "string",
+      "enum": [
+        "nivel_0_metadados",
+        "nivel_1_sumario_tecnico",
+        "nivel_2_amostragem_manual",
+        "nivel_3_inspecao_integral"
+      ]
+    },
+    "evidenciaId": {
+      "type": "string"
+    },
+    "pendenciaId": {
+      "type": "string"
+    }
+  }
+}
