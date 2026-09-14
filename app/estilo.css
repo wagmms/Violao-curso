@@ -1646,3 +1646,44 @@ dialog::backdrop {
 @media (min-width: 640px) and (max-width: 1024px) {
   .tablatura-container { font-size: 0.85rem; }
 }
+
+/* Modo Estante */
+body.modo-estante .app-sidebar,
+body.modo-estante .view-header,
+body.modo-estante .aprender-painel-esquerda {
+  display: none !important;
+}
+
+body.modo-estante .aprender-layout {
+  grid-template-columns: 1fr !important;
+}
+
+body.modo-estante .layout-container {
+  max-width: 100% !important;
+}
+
+body.modo-estante .app-main {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 24px 5% !important;
+}
+
+body.modo-estante .tablatura-container {
+  font-size: 1.8rem !important;
+  line-height: 1.8 !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.modo-estante .fretboard-svg {
+  min-width: 800px; /* Force minimum larger size */
+}
+
+body.modo-estante #timer-regressivo {
+  font-size: 2rem !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  color: #ffaa00 !important;
+  font-weight: bold;
+}
