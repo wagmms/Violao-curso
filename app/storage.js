@@ -324,7 +324,7 @@ function exportarBackupJSON() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `metodo-triade-v2-backup-${obterDataLocal()}.json`;
+    a.download = `meu-progresso-violao-${obterDataLocal()}.json`;
     document.body.appendChild(a);
     a.click();
     a.remove();

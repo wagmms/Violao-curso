@@ -1872,9 +1872,9 @@ function renderizarFerramentaInterativa(ativ) {
           Seus registros ficam guardados no navegador sob chave isolada. Você pode exportar uma cópia completa em JSON ou importar backups anteriores.
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
-          <button id="btn-exportar-backup" class="btn btn-secondary" type="button">💾 Exportar Backup Completo (JSON)</button>
+          <button id="btn-exportar-backup" class="btn btn-secondary" type="button">💾 Exportar Progresso</button>
           <label class="btn btn-secondary" style="cursor: pointer;">
-            📁 Carregar Arquivo de Backup
+            📁 Importar Progresso
             <input type="file" id="input-importar-backup" accept=".json,application/json" style="display: none;">
           </label>
           <button id="btn-migrar-v1-explicito" class="btn btn-ghost btn-sm" type="button">🔄 Importar dados da interface anterior (v1)</button>
