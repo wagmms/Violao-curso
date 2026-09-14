@@ -1,5 +1,5 @@
-var timerWorker = null;
-var ultimoCheckpoint = 0;
+let timerWorker = null;
+let ultimoCheckpoint = 0;
 try {
   timerWorker = new Worker('timer-worker.js');
   timerWorker.onmessage = () => atualizarTimer();
