@@ -131,15 +131,19 @@
   <!-- Modais do Aplicativo -->
 
   <!-- Modal 1: Diagnóstico de Nível -->
-  <dialog id="modal-diagnostico">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Diagnóstico Rápido de Ponto de Partida</h3>
-        <button id="btn-fechar-diagnostico" class="btn btn-ghost btn-sm" type="button">✕</button>
+  <dialog id="modal-diagnostico" class="modal-dialog-wide">
+    <div class="modal-content modal-diag-content">
+      <div class="modal-header modal-diag-header">
+        <div class="modal-header-info">
+          <span class="modal-header-badge">🎯 Avaliação Pedagógica Individual</span>
+          <h3>Diagnóstico de Ponto de Partida</h3>
+        </div>
+        <button id="btn-fechar-diagnostico" class="btn btn-ghost btn-sm" type="button" aria-label="Fechar diagnóstico">✕</button>
       </div>
-      <div id="corpo-diagnostico" class="modal-body"></div>
-      <div class="modal-footer">
-        <button id="btn-salvar-diagnostico" class="btn btn-primary" type="button">Atualizar Meu Ponto Inicial</button>
+      <div id="corpo-diagnostico" class="modal-body modal-diag-body"></div>
+      <div class="modal-footer modal-diag-footer">
+        <button id="btn-cancelar-diagnostico" class="btn btn-secondary" type="button">Cancelar</button>
+        <button id="btn-salvar-diagnostico" class="btn btn-primary" type="button">Salvar Ponto de Partida e Praticar →</button>
       </div>
     </div>
   </dialog>

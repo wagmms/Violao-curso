@@ -1609,6 +1609,498 @@ dialog::backdrop {
   border-top: 1px solid var(--border-subtle);
 }
 
+/* ==========================================================================
+   Diagnóstico de Ponto de Partida Pedagógico (Wizard & Live Preview)
+   ========================================================================== */
+
+#modal-diagnostico {
+  max-width: 880px;
+  width: 94%;
+  max-height: 92vh;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-lg), 0 24px 48px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+#modal-diagnostico .modal-diag-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 92vh;
+  padding: 0;
+}
+
+#modal-diagnostico .modal-diag-header {
+  padding: 18px 24px;
+  background: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal-diagnostico .modal-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#modal-diagnostico .modal-header-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: rgba(217, 119, 54, 0.12);
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(217, 119, 54, 0.25);
+}
+
+#modal-diagnostico .modal-diag-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+#modal-diagnostico .modal-diag-body {
+  padding: 22px 24px;
+  overflow-y: auto;
+  max-height: calc(92vh - 150px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#modal-diagnostico .modal-diag-footer {
+  padding: 14px 24px;
+  background: var(--bg-surface-elevated);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0;
+}
+
+/* Banner explicativo */
+.diag-intro-banner {
+  display: flex;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-inset);
+  border: 1px solid var(--border-subtle);
+  align-items: flex-start;
+}
+
+.diag-intro-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.diag-intro-text strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.diag-intro-text p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Lista de etapas / perguntas */
+.diag-form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.diag-step-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  transition: border-color 0.2s ease;
+}
+
+.diag-step-card:hover {
+  border-color: var(--border-strong);
+}
+
+.diag-step-header {
+  margin-bottom: 14px;
+}
+
+.diag-step-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.diag-step-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(217, 119, 54, 0.12);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.diag-step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Grid de opções interativas (Cards / Tiles) */
+.diag-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.diag-choice-tile {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.18s ease;
+  min-height: 82px;
+}
+
+.diag-choice-tile:hover {
+  background: var(--bg-surface-inset);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.diag-choice-tile.ativo {
+  background: rgba(217, 119, 54, 0.08);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.diag-tile-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.diag-tile-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.diag-tile-check {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: transparent;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  transition: all 0.18s ease;
+}
+
+.diag-choice-tile.ativo .diag-tile-check {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.diag-tile-desc {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.diag-choice-tile.ativo .diag-tile-desc {
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+/* Painel de resultado dinâmico / Live preview */
+.diag-live-preview {
+  background: linear-gradient(135deg, var(--bg-surface-elevated), var(--bg-surface-inset));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+.diag-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.diag-preview-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--accent);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.diag-preview-header h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.diag-preview-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .diag-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diag-level-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.diag-level-subtitle {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.diag-level-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.diag-score-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.diag-score-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.diag-bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-surface-inset);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.diag-bar-track.mini {
+  height: 5px;
+}
+
+.diag-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.diag-meters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.diag-meter-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.diag-meter-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.diag-meter-header strong {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+/* Coluna direita da preview */
+.diag-bottleneck-card {
+  background: rgba(217, 119, 54, 0.08);
+  border: 1px solid rgba(217, 119, 54, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.diag-bottleneck-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.diag-bottleneck-desc {
+  font-size: 0.82rem;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.diag-recommendation-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diag-rec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.diag-rec-icon {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.diag-rec-item strong {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.diag-rec-item p {
+  font-size: 0.84rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin: 2px 0 0 0;
+}
+
+.diag-rec-justificativa {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-surface-inset);
+  padding: 8px 10px;
+  border-radius: 4px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* Badges de diagnóstico no painel Hoje */
+.hero-diag-pill {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(217, 119, 54, 0.12);
+  border: 1px solid rgba(217, 119, 54, 0.28);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.hero-modulo-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface-inset);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.hero-gargalo-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(217, 119, 54, 0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.hero-gargalo-icon {
+  font-size: 1rem;
+}
+
+.hero-gargalo-banner strong {
+  color: var(--text-main);
+}
+
 /* Alerta de Armazenamento / Aviso Geral */
 .storage-notice {
   background-color: var(--warning-bg);
