@@ -1629,6 +1629,7 @@ function renderizarFerramentaInterativa(ativ) {
         <div class="lh-tabs" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
           <button id="tab-praticar-atividades" class="lh-tab-btn ${abaAtiva === 'atividades' ? 'ativo' : ''}" type="button">Atividades Guiadas (11)</button>
           <button id="tab-praticar-laboratorio" class="lh-tab-btn ${abaAtiva === 'laboratorio' ? 'ativo' : ''}" type="button">Laboratório Harmônico (12 Trastes)</button>
+          <button id="tab-praticar-bateria" class="lh-tab-btn ${abaAtiva === 'bateria' ? 'ativo' : ''}" type="button">Bateria e Ritmos</button>
         </div>
       </div>
 
@@ -1655,8 +1656,35 @@ function renderizarFerramentaInterativa(ativ) {
         </div>
       </div>
 
-      <div id="painel-praticar-laboratorio" style="display: ${abaAtiva === 'laboratorio' ? 'block' : 'none'};">
+      <div id="painel-praticar-laboratorio" style="display: ${abaAtiva === 'laboratorio' ? 'block' : 'none'};"><br>
         ${renderizarLaboratorioHarmonicoHTML()}
+      </div>
+
+      <div id="painel-praticar-bateria" style="display: ${abaAtiva === 'bateria' ? 'block' : 'none'};">
+        <div class="bloco-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h3 style="margin-bottom: 20px;">Máquina de Ritmos</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+            Desenvolva a sensação de balanço e síncope acompanhando bases rítmicas tradicionais em tempo real.
+          </p>
+          <div style="margin-bottom: 20px;">
+            <label for="ritmo-seletor" style="display: block; margin-bottom: 8px; font-weight: bold;">Estilo Musical:</label>
+            <select id="ritmo-seletor" class="form-select" style="width: 100%; max-width: 300px; margin: 0 auto; display: block; padding: 10px;">
+              ${Object.keys(AudioMotor.padroesRitmicos || {}).map(id => `<option value="${id}">${AudioMotor.padroesRitmicos[id].nome}</option>`).join('')}
+            </select>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <label for="ritmo-bpm" style="display: block; margin-bottom: 8px; font-weight: bold;">BPM (Andamento): <span id="ritmo-bpm-display">80</span></label>
+            <input type="range" id="ritmo-bpm" min="30" max="200" value="80" style="width: 100%; max-width: 300px;">
+          </div>
+          <div style="display: flex; gap: 15px; justify-content: center;">
+            <button id="btn-play-ritmo" class="btn btn-primary" style="min-width: 120px;" type="button">
+              Tocar
+            </button>
+            <button id="btn-pause-ritmo" class="btn btn-secondary" style="min-width: 120px;" type="button">
+              Pausar
+            </button>
+          </div>
+        </div>
       </div>
     `;
 
@@ -1666,6 +1694,10 @@ function renderizarFerramentaInterativa(ativ) {
     };
     $('tab-praticar-laboratorio').onclick = () => {
       state.praticarAba = 'laboratorio';
+      renderizarTelaPraticar();
+    };
+    $('tab-praticar-bateria').onclick = () => {
+      state.praticarAba = 'bateria';
       renderizarTelaPraticar();
     };
 
@@ -1679,8 +1711,48 @@ function renderizarFerramentaInterativa(ativ) {
 
     if (abaAtiva === 'laboratorio') {
       inicializarLaboratorioHarmonico();
+    } else if (abaAtiva === 'bateria') {
+      iniciarEventosBateria();
     }
   }
+
+
+  function iniciarEventosBateria() {
+    const btnPlay = $('btn-play-ritmo');
+    const btnPause = $('btn-pause-ritmo');
+    const seletor = $('ritmo-seletor');
+    const slider = $('ritmo-bpm');
+    const displayBpm = $('ritmo-bpm-display');
+
+    if (AudioMotor.isRitmoAtivo()) {
+      seletor.value = AudioMotor.getRitmoAtual();
+      slider.value = AudioMotor.getRitmoBpm();
+      displayBpm.textContent = slider.value;
+    }
+
+    slider.oninput = (e) => {
+      displayBpm.textContent = e.target.value;
+      if (AudioMotor.isRitmoAtivo()) {
+        AudioMotor.setRitmoBpm(e.target.value);
+      }
+    };
+
+    btnPlay.onclick = () => {
+      AudioMotor.init();
+      AudioMotor.iniciarRitmo(seletor.value, slider.value);
+    };
+
+    btnPause.onclick = () => {
+      AudioMotor.pararRitmo();
+    };
+
+    seletor.onchange = (e) => {
+      if (AudioMotor.isRitmoAtivo()) {
+        AudioMotor.iniciarRitmo(e.target.value, slider.value);
+      }
+    };
+  }
+
 
   function renderizarTelaProgresso() {
     const container = $('progresso-conteudo');
