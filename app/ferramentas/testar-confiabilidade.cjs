@@ -35,6 +35,14 @@ async function main(){
  await teste('Checkpoint e exportação usam o tempo ativo consolidado',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=600000;ultimoCheckpoint=0;atualizarTimer()`);const saved=JSON.parse(a.w.localStorage.getItem('metodo_triade_v2'));assert.ok(saved.sessao.elapsedMs>=600000);assert.ok(Math.abs(saved.sessao.elapsedMs-a.run('serializarEstado().sessao.elapsedMs'))<50);});
  await teste('pagehide salva e pausa antes de fechar',a=>{a.run('iniciarSessao();state.sessao.ultimoTimestamp-=600000');a.w.dispatchEvent(new a.w.Event('pagehide'));assert.ok(JSON.parse(a.w.localStorage.getItem('metodo_triade_v2')).sessao.elapsedMs>=600000);assert.equal(a.run('state.sessao.ativa'),false);});
  await teste('Relógio regressivo não duplica tempo nem aceita delta negativo',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=10000`);let ms=a.run('tempoDecorrido()');a.run('atualizarTimer();atualizarTimer();pausarSessao()');assert.ok(a.run('state.sessao.elapsedMs')<ms+50);a.run('state.sessao.ativa=true;state.sessao.ultimoTimestamp=Date.now()+60000');assert.equal(a.run('tempoDecorrido()'),a.run('state.sessao.elapsedMs'));});
+ await teste('tempoDecorrido lida com edge cases usando mocks diretos',a=>{
+  assert.equal(a.run('tempoDecorrido({ativa: false, ultimoTimestamp: 1000, elapsedMs: 500, totalMs: 1000}, 2000)'), 500);
+  assert.equal(a.run('tempoDecorrido({ativa: true, ultimoTimestamp: null, elapsedMs: 500, totalMs: 1000}, 2000)'), 500);
+  assert.equal(a.run('tempoDecorrido({ativa: true, ultimoTimestamp: 3000, elapsedMs: 500, totalMs: 1000}, 2000)'), 500);
+  assert.equal(a.run('tempoDecorrido({ativa: true, ultimoTimestamp: 1000, elapsedMs: 500, totalMs: 1000}, 2000)'), 1000);
+  assert.equal(a.run('tempoDecorrido({ativa: false, ultimoTimestamp: null, elapsedMs: -500, totalMs: 1000}, 2000)'), 0);
+  assert.equal(a.run('tempoDecorrido({ativa: true, ultimoTimestamp: 1000, elapsedMs: -500, totalMs: 1000}, 2000)'), 500);
+ });
  for(const nivel of ['preparacao','alvo','variacao'])for(const status of ['consegui','repetir','dificuldade']){
   await teste(`SRS: ${nivel}/${status}; revisão vencida`,a=>{
    a.run(`state.revisoes=[{id:'r',atividadeId:'ativ-1',ciclo:1,intervaloDias:2,dataPrevista:obterDataLocal(-1),concluida:false}];iniciarSessao();state.sessao.ultimoTimestamp-=10000`);

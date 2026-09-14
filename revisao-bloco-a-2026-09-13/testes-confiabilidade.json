@@ -1,0 +1,136 @@
+{
+  "data": "2026-09-14T03:55:17.563Z",
+  "tipo": "JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte",
+  "total": 32,
+  "aprovados": 32,
+  "resultados": [
+    {
+      "nome": "11 atividades: selecionar, serializar e restaurar",
+      "ok": true
+    },
+    {
+      "nome": "Interrupção ativa sem elapsed consolidado permanece no backup",
+      "ok": true
+    },
+    {
+      "nome": "Rascunhos não iniciam; timer tolera roteiro vazio",
+      "ok": true
+    },
+    {
+      "nome": "Checkpoint e exportação usam o tempo ativo consolidado",
+      "ok": true
+    },
+    {
+      "nome": "pagehide salva e pausa antes de fechar",
+      "ok": true
+    },
+    {
+      "nome": "Relógio regressivo não duplica tempo nem aceita delta negativo",
+      "ok": true
+    },
+    {
+      "nome": "tempoDecorrido lida com edge cases usando mocks diretos",
+      "ok": true
+    },
+    {
+      "nome": "SRS: preparacao/consegui; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: preparacao/repetir; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: preparacao/dificuldade; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: alvo/consegui; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: alvo/repetir; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: alvo/dificuldade; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: variacao/consegui; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: variacao/repetir; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "SRS: variacao/dificuldade; revisão vencida",
+      "ok": true
+    },
+    {
+      "nome": "Sucessos no mesmo dia não aceleram revisão e conclusão não duplica tentativa",
+      "ok": true
+    },
+    {
+      "nome": "Avaliação rejeita sucesso com BPM \"-9\"",
+      "ok": true
+    },
+    {
+      "nome": "Avaliação rejeita sucesso com BPM \"0\"",
+      "ok": true
+    },
+    {
+      "nome": "Avaliação rejeita sucesso com BPM \"241\"",
+      "ok": true
+    },
+    {
+      "nome": "Avaliação rejeita sucesso com BPM \"60.5\"",
+      "ok": true
+    },
+    {
+      "nome": "Avaliação rejeita sucesso com BPM \"\"",
+      "ok": true
+    },
+    {
+      "nome": "Campos de avaliação limpos e critérios próprios da Preparação",
+      "ok": true
+    },
+    {
+      "nome": "Hoje recupera em Preparação e continuar não pausa sessão ativa",
+      "ok": true
+    },
+    {
+      "nome": "Histórico parcialmente inválido recupera registros válidos e preserva original",
+      "ok": true
+    },
+    {
+      "nome": "Sem espaço para cópia de recuperação, escrita não sobrescreve original",
+      "ok": true
+    },
+    {
+      "nome": "Datas impossíveis rejeitadas",
+      "ok": true
+    },
+    {
+      "nome": "Merge preserva sessão ativa, notas e uma revisão pendente; idempotência",
+      "ok": true
+    },
+    {
+      "nome": "Legado v1 é mesclado sem marcar domínio",
+      "ok": true
+    },
+    {
+      "nome": "Ouvido: primeira resposta, retomada, reload, resultado vinculado",
+      "ok": true
+    },
+    {
+      "nome": "Ouvido: sucesso sem série ou com 7/10 não aprova",
+      "ok": true
+    },
+    {
+      "nome": "Fontes canônicas nunca produzem link vazio",
+      "ok": true
+    }
+  ]
+}
