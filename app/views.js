@@ -55,13 +55,28 @@ function renderizarTelaHoje() {
     const dataHoje = (typeof window !== 'undefined' && window.obterDataLocal) ? window.obterDataLocal() : obterDataLocal();
     const revHoje = state.revisoes ? state.revisoes.filter(r => !r.concluida && r.dataPrevista <= dataHoje).length : 0;
 
+    const nivelBadgeHtml = (state.perfil && state.perfil.nivelLabel)
+      ? `<span class="hero-diag-pill" title="Nível calculado pelo diagnóstico pedagógico">🎓 ${escapeHTML(state.perfil.nivelLabel)}</span>`
+      : '';
+    const moduloBadgeHtml = (state.perfil && state.perfil.pontoPartida && state.perfil.pontoPartida.moduloNome)
+      ? `<span class="hero-modulo-pill" title="Módulo recomendado de partida">📍 ${escapeHTML(state.perfil.pontoPartida.moduloNome)}</span>`
+      : '';
+    const gargaloHtml = (state.perfil && state.perfil.pontoPartida && state.perfil.pontoPartida.gargalo)
+      ? `<div class="hero-gargalo-banner"><span class="hero-gargalo-icon">🚨</span><div><strong>Gargalo Técnico Prioritário:</strong> <span>${escapeHTML(state.perfil.pontoPartida.gargalo)}</span></div></div>`
+      : '';
+
     container.innerHTML = `
       <div class="hoje-hero">
         <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; margin-bottom:16px;">
           <div>
-            <div class="hero-recommendation-tag">🎯 Sessão Personalizada do Dia</div>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+              <span class="hero-recommendation-tag">🎯 Sessão do Dia</span>
+              ${nivelBadgeHtml}
+              ${moduloBadgeHtml}
+            </div>
             <h3>${escapeHTML(rec.atividade.titulo)}</h3>
             <p class="justificativa">${escapeHTML(rec.motivo)}</p>
+            ${gargaloHtml}
           </div>
           <!-- Anel de Progresso da Meta Semanal (Stitch) -->
           <div style="background:var(--bg-surface-inset); padding:10px 16px; border-radius:var(--radius-lg); border:1px solid var(--border-subtle); display:flex; align-items:center; gap:14px; flex-shrink:0;">
@@ -134,7 +149,7 @@ function renderizarTelaHoje() {
 
         <div class="hero-actions">
           <button id="btn-comecar-40" class="btn btn-primary btn-lg">⏱ Começar meus 40 minutos</button>
-          <button id="btn-diagnostico-abrir" class="btn btn-secondary">Ajustar Nível (Diagnóstico)</button>
+          <button id="btn-diagnostico-abrir" class="btn btn-secondary">${state.perfil && state.perfil.diagnostico ? '📊 Ajustar Diagnóstico' : '🎯 Diagnóstico de Ponto de Partida'}</button>
         </div>
       </div>
 
