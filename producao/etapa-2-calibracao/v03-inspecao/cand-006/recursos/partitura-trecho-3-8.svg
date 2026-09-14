@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold; text-anchor: middle; fill: #111; }
+      .subtitle { font-family: 'Arial', sans-serif; font-size: 12px; fill: #444; text-anchor: middle; }
+      .meta { font-family: 'Arial', sans-serif; font-size: 11px; fill: #666; }
+      .staff-line { stroke: #222; stroke-width: 1.2; }
+      .bar-line { stroke: #222; stroke-width: 1.5; }
+      .heavy-bar { stroke: #222; stroke-width: 3.5; }
+      .tab-line { stroke: #777; stroke-width: 1.0; }
+      .clef { font-family: 'Arial', sans-serif; font-size: 38px; font-weight: bold; fill: #111; }
+      .time-sig { font-family: 'Times New Roman', serif; font-size: 24px; font-weight: bold; fill: #111; text-anchor: middle; }
+      .notehead-v1 { fill: #1a56db; }
+      .notehead-v2 { fill: #c81e1e; }
+      .stem-v1 { stroke: #1a56db; stroke-width: 1.8; }
+      .stem-v2 { stroke: #c81e1e; stroke-width: 1.8; }
+      .beam-v1 { stroke: #1a56db; stroke-width: 4.0; stroke-linecap: round; }
+      .tab-text { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: bold; fill: #111; text-anchor: middle; }
+      .tab-text-v1 { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: bold; fill: #1a56db; text-anchor: middle; }
+      .tab-text-v2 { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: bold; fill: #c81e1e; text-anchor: middle; }
+      .rest-text { font-family: 'Times New Roman', serif; font-size: 22px; fill: #1a56db; text-anchor: middle; font-style: italic; }
+      .legend { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Fundo branco -->
+  <rect width="900" height="380" fill="#ffffff"/>
+
+  <!-- Título e Metadados -->
+  <text x="450" y="30" class="title">Pequena Valsa (Ferdinando Carulli) — Trecho Didático de Calibração</text>
+  <text x="450" y="50" class="subtitle">Compassos 1 a 4 | Compasso 3/8 | Polifonia a Duas Vozes (Baixo Sustentado + Melodia/Bicordes)</text>
+
+  <!-- Legenda de Cores -->
+  <circle cx="280" cy="72" r="5" fill="#c81e1e" />
+  <text x="292" y="76" class="legend" fill="#c81e1e">Voz 2: Baixo (Bordão / Polegar)</text>
+  <circle cx="530" cy="72" r="5" fill="#1a56db" />
+  <text x="542" y="76" class="legend" fill="#1a56db">Voz 1: Agudos (Bicordes e Frase Melódica)</text>
+
+  <!-- Linhas da Pauta (Y: 100, 114, 128, 142, 156) -->
+  <line x1="50" y1="100" x2="850" y2="100" class="staff-line" />
+  <line x1="50" y1="114" x2="850" y2="114" class="staff-line" />
+  <line x1="50" y1="128" x2="850" y2="128" class="staff-line" />
+  <line x1="50" y1="142" x2="850" y2="142" class="staff-line" />
+  <line x1="50" y1="156" x2="850" y2="156" class="staff-line" />
+
+  <!-- Clave de Sol e 3/8 -->
+  <text x="65" y="146" class="clef">𝄞</text>
+  <text x="105" y="122" class="time-sig">3</text>
+  <text x="105" y="148" class="time-sig">8</text>
+
+  <!-- Linhas da Tablatura (Y: 220, 235, 250, 265, 280, 295) -->
+  <line x1="50" y1="220" x2="850" y2="220" class="tab-line" />
+  <line x1="50" y1="235" x2="850" y2="235" class="tab-line" />
+  <line x1="50" y1="250" x2="850" y2="250" class="tab-line" />
+  <line x1="50" y1="265" x2="850" y2="265" class="tab-line" />
+  <line x1="50" y1="280" x2="850" y2="280" class="tab-line" />
+  <line x1="50" y1="295" x2="850" y2="295" class="tab-line" />
+
+  <!-- Letras TAB -->
+  <text x="60" y="240" font-family="Arial" font-size="14" font-weight="bold" fill="#555">T</text>
+  <text x="60" y="260" font-family="Arial" font-size="14" font-weight="bold" fill="#555">A</text>
+  <text x="60" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#555">B</text>
+
+  <!-- Barras de Compasso -->
+  <!-- Início com repetição (c.1) -->
+  <line x1="125" y1="100" x2="125" y2="156" class="heavy-bar" />
+  <line x1="130" y1="100" x2="130" y2="156" class="bar-line" />
+  <circle cx="136" cy="121" r="2.5" fill="#222" />
+  <circle cx="136" cy="135" r="2.5" fill="#222" />
+
+  <line x1="125" y1="220" x2="125" y2="295" class="heavy-bar" />
+  <line x1="130" y1="220" x2="130" y2="295" class="bar-line" />
+  <circle cx="136" cy="242" r="2.5" fill="#222" />
+  <circle cx="136" cy="272" r="2.5" fill="#222" />
+
+  <!-- Barra c.1 / c.2 -->
+  <line x1="310" y1="100" x2="310" y2="156" class="bar-line" />
+  <line x1="310" y1="220" x2="310" y2="295" class="bar-line" />
+
+  <!-- Barra c.2 / c.3 -->
+  <line x1="490" y1="100" x2="490" y2="156" class="bar-line" />
+  <line x1="490" y1="220" x2="490" y2="295" class="bar-line" />
+
+  <!-- Barra c.3 / c.4 -->
+  <line x1="670" y1="100" x2="670" y2="156" class="bar-line" />
+  <line x1="670" y1="220" x2="670" y2="295" class="bar-line" />
+
+  <!-- Fim c.4 -->
+  <line x1="850" y1="100" x2="850" y2="156" class="bar-line" />
+  <line x1="850" y1="220" x2="850" y2="295" class="bar-line" />
+
+  <!-- Rótulos de Compasso -->
+  <text x="145" y="92" class="meta" font-weight="bold">c.1 (C)</text>
+  <text x="325" y="92" class="meta" font-weight="bold">c.2 (G7/D)</text>
+  <text x="505" y="92" class="meta" font-weight="bold">c.3 (C)</text>
+  <text x="685" y="92" class="meta" font-weight="bold">c.4 (Melodia)</text>
+
+  <!-- ================= COMPASSO 1 ================= -->
+  <!-- Voz 2: Baixo C4 escrito (1ª linha suplementar Y: 170) -->
+  <line x1="160" y1="170" x2="184" y2="170" stroke="#222" stroke-width="1.2" />
+  <ellipse cx="172" cy="170" rx="6" ry="4.5" class="notehead-v2" />
+  <circle cx="182" cy="170" r="2" class="notehead-v2" />
+  <line x1="166" y1="170" x2="166" y2="198" class="stem-v2" />
+  <text x="172" y="285" class="tab-text-v2">3.</text>
+
+  <!-- Voz 1: Tempo 1 Pausa colcheia -->
+  <text x="172" y="132" class="rest-text">𝄾</text>
+
+  <!-- Voz 1: Beam conectando tempo 2 e 3 -->
+  <line x1="222" y1="82" x2="272" y2="82" class="beam-v1" />
+
+  <!-- Voz 1: Tempo 2 Bicorde [C5, E5] (Y: 128, Y: 107) -->
+  <ellipse cx="222" cy="128" rx="6" ry="4.5" class="notehead-v1" />
+  <ellipse cx="222" cy="107" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="228" y1="128" x2="228" y2="82" class="stem-v1" />
+  <text x="222" y="240" class="tab-text-v1">1</text>
+  <text x="222" y="225" class="tab-text-v1">0</text>
+
+  <!-- Voz 1: Tempo 3 Bicorde [C5, E5] -->
+  <ellipse cx="272" cy="128" rx="6" ry="4.5" class="notehead-v1" />
+  <ellipse cx="272" cy="107" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="278" y1="128" x2="278" y2="82" class="stem-v1" />
+  <text x="272" y="240" class="tab-text-v1">1</text>
+  <text x="272" y="225" class="tab-text-v1">0</text>
+
+  <!-- ================= COMPASSO 2 ================= -->
+  <!-- Voz 2: Baixo D4 escrito (abaixo da 1ª linha Y: 163) -->
+  <ellipse cx="352" cy="163" rx="6" ry="4.5" class="notehead-v2" />
+  <circle cx="362" cy="163" r="2" class="notehead-v2" />
+  <line x1="346" y1="163" x2="346" y2="192" class="stem-v2" />
+  <text x="352" y="270" class="tab-text-v2">0.</text>
+
+  <!-- Voz 1: Tempo 1 Pausa colcheia -->
+  <text x="352" y="132" class="rest-text">𝄾</text>
+
+  <!-- Voz 1: Beam conectando tempo 2 e 3 -->
+  <line x1="402" y1="82" x2="452" y2="82" class="beam-v1" />
+
+  <!-- Voz 1: Tempo 2 Bicorde [B4, F5] (Y: 128-3rd line is 128? Y=128 is line 3, B4! F5 is top line Y=100!) -->
+  <ellipse cx="402" cy="128" rx="6" ry="4.5" class="notehead-v1" />
+  <ellipse cx="402" cy="100" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="408" y1="128" x2="408" y2="82" class="stem-v1" />
+  <text x="402" y="240" class="tab-text-v1">0</text>
+  <text x="402" y="225" class="tab-text-v1">1</text>
+
+  <!-- Voz 1: Tempo 3 Bicorde [B4, F5] -->
+  <ellipse cx="452" cy="128" rx="6" ry="4.5" class="notehead-v1" />
+  <ellipse cx="452" cy="100" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="458" y1="128" x2="458" y2="82" class="stem-v1" />
+  <text x="452" y="240" class="tab-text-v1">0</text>
+  <text x="452" y="225" class="tab-text-v1">1</text>
+
+  <!-- ================= COMPASSO 3 ================= -->
+  <!-- Voz 2: Baixo C4 escrito -->
+  <line x1="520" y1="170" x2="544" y2="170" stroke="#222" stroke-width="1.2" />
+  <ellipse cx="532" cy="170" rx="6" ry="4.5" class="notehead-v2" />
+  <circle cx="542" cy="170" r="2" class="notehead-v2" />
+  <line x1="526" y1="170" x2="526" y2="198" class="stem-v2" />
+  <text x="532" y="285" class="tab-text-v2">3.</text>
+
+  <!-- Voz 1: Tempo 1 Pausa colcheia -->
+  <text x="532" y="132" class="rest-text">𝄾</text>
+
+  <!-- Voz 1: Beam conectando tempo 2 e 3 -->
+  <line x1="582" y1="82" x2="632" y2="82" class="beam-v1" />
+
+  <!-- Voz 1: Tempo 2 Bicorde [C5, E5] -->
+  <ellipse cx="582" cy="128" rx="6" ry="4.5" class="notehead-v1" />
+  <ellipse cx="582" cy="107" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="588" y1="128" x2="588" y2="82" class="stem-v1" />
+  <text x="582" y="240" class="tab-text-v1">1</text>
+  <text x="582" y="225" class="tab-text-v1">0</text>
+
+  <!-- Voz 1: Tempo 3 Bicorde [C5, E5] -->
+  <ellipse cx="632" cy="128" rx="6" ry="4.5" class="notehead-v1" />
+  <ellipse cx="632" cy="107" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="638" y1="128" x2="638" y2="82" class="stem-v1" />
+  <text x="632" y="240" class="tab-text-v1">1</text>
+  <text x="632" y="225" class="tab-text-v1">0</text>
+
+  <!-- ================= COMPASSO 4 ================= -->
+  <!-- Voz 1: Melodia em 3 colcheias unidas por barra -->
+  <line x1="712" y1="70" x2="812" y2="84" class="beam-v1" />
+
+  <!-- Tempo 1: G5 (espaço acima da linha 5 Y: 93) -->
+  <ellipse cx="712" cy="93" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="718" y1="93" x2="718" y2="71" class="stem-v1" />
+  <text x="712" y="225" class="tab-text-v1">3</text>
+
+  <!-- Tempo 2: E5 (espaço 4 Y: 107) -->
+  <ellipse cx="762" cy="107" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="768" y1="107" x2="768" y2="78" class="stem-v1" />
+  <text x="762" y="225" class="tab-text-v1">0</text>
+
+  <!-- Tempo 3: G4 (linha 2 Y: 142) -->
+  <ellipse cx="812" cy="142" rx="6" ry="4.5" class="notehead-v1" />
+  <line x1="818" y1="142" x2="818" y2="85" class="stem-v1" />
+  <text x="812" y="255" class="tab-text-v1">0</text>
+
+  <!-- Voz 2: Pausa no baixo c.4 (semínima pontuada de silêncio) -->
+  <text x="762" y="195" font-family="Times New Roman" font-size="18" fill="#c81e1e" text-anchor="middle" font-style="italic">(pausa no baixo)</text>
+
+  <!-- Rodapé Técnico -->
+  <text x="450" y="340" class="meta" text-anchor="middle">Convenção Sonora do Violão: Alturas reais soam uma oitava abaixo da notação escrita (ex: C4 escrito soa C3 a 130,81 Hz).</text>
+  <text x="450" y="360" class="meta" text-anchor="middle">Fonte Original: arq-0460 ("0. Pequena Valsa", Kaiserplay). Transcrição e calibração autoral para cand-006 (hab-sol-001).</text>
+</svg>

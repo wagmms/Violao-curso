@@ -1,0 +1,399 @@
+{
+  "id_aula": "cand-004",
+  "id_proposta": "aula-prop-017",
+  "modulo_pedagogico": "mod-ped-05",
+  "habilidade_id": "hab-lei-003",
+  "versao": "v02",
+  "data": "2026-09-14",
+  "status": "aguardando_revisao",
+  "canonicidade": {
+    "declaracao": "aula.json é a estrutura de dados canônica do curso integrado; AULA.md é a renderização instrucional mestre dirigida ao estudante. A concordância estrutural e semântica entre ambos é verificada por testes automatizados em validar-aula.cjs.",
+    "papel_json": "canonica_dados",
+    "papel_markdown": "mestre_instrucional"
+  },
+  "contrato_14_pontos": {
+    "1_identidade_e_fontes": {
+      "titulo": "Iniciação à Clave de Sol: Primeiras Notas na 1ª Posição",
+      "obra_aplicacao": "Brilha Brilha Estrelinha (Adaptação pedagógica em 4 compassos regulares)",
+      "id_proposta_etapa1": "aula-prop-017",
+      "modulo_etapa1": "mod-ped-05",
+      "habilidade_etapa1": "hab-lei-003",
+      "fonte_historica": {
+        "curso": "Kaiserplay (Marcos Kaiser)",
+        "entrada_catalogo": 124,
+        "material_impresso_id": "mat-lei-001",
+        "arquivo_fisico_id": "arq-0408",
+        "nome_arquivo": "Kaiser - Partituras 1.pdf",
+        "hash_sha256": "90bfeff1ec2cc40f5082729a43a0166299b8b0e774c86518174f4b2fd8df115a"
+      },
+      "tipo_material": "partitura_adaptada_didatica",
+      "localizacao_codigos_tecnicos": "anexo_tecnico_ao_final"
+    },
+    "2_objetivo_observavel": {
+      "declaracao": "Ler na partitura em Clave de Sol e executar no violão os 4 compassos da melodia adaptada (14 notas) nas cordas 5, 4 e 3, mantendo o andamento contínuo entre 48 e 60 BPM com metrônomo, sem pausas involuntárias entre os compassos, diferenciando semínimas de mínimas e aplicando o amortecimento gradual das cordas soltas.",
+      "criterios_sucesso": [
+        "100% de precisão de notas (14/14) nas cordas e casas corretas",
+        "Diferenciação rítmica clara entre semínimas (1 tempo) e mínimas (2 tempos)",
+        "Pulso métrico estável sem paradas no encadeamento entre compassos",
+        "Andamento contínuo na faixa de 48 a 60 BPM",
+        "Aplicação do amortecimento da 3ª corda solta na transição c.2 para c.3"
+      ]
+    },
+    "3_diagnostico_entrada": [
+      {
+        "id": "D1",
+        "titulo": "Reconhecimento e Numeração das Cordas",
+        "tarefa": "Apontar as cordas 5, 4 e 3 e dizer seus nomes.",
+        "convencao": "Numeradas da 1ª (mais fina/aguda) à 6ª (mais grossa/grave).",
+        "resposta_esperada": "5ª = Lá, 4ª = Ré, 3ª = Sol."
+      },
+      {
+        "id": "D2",
+        "titulo": "Afinação Instrumental",
+        "tarefa": "Tocar cordas 5, 4 e 3 soltas em frente ao afinador.",
+        "frequencias_referencia_hz": {
+          "corda_5": 110,
+          "corda_4": 146.83,
+          "corda_3": 196
+        },
+        "orientacao": "Ajustar cravelhas antes de iniciar o estudo."
+      },
+      {
+        "id": "D3",
+        "titulo": "Produção de Som Limpo nas 6 Notas",
+        "tarefa": "Tocar C4 (5ª c.3), D4 (4ª c.0), E4 (4ª c.2), F4 (4ª c.3), G4 (3ª c.0), A4 (3ª c.2).",
+        "postura": "Curvatura natural dos dedos da mão esquerda, pressão mínima necessária, polegar como apoio equilibrado."
+      },
+      {
+        "id": "D4",
+        "titulo": "Discriminação das Figuras Rítmicas",
+        "tarefa": "Diferenciar semínima de mínima nos compassos 1 e 2.",
+        "figuras": {
+          "seminima": "Cabeça preenchida com haste vertical, sem colchete (1 tempo em 4/4)",
+          "minima": "Cabeça vazada (branca) com haste vertical (2 tempos em 4/4)",
+          "nota_semibreve": "Cabeça vazada sem haste corresponde a semibreve (4 tempos)"
+        }
+      }
+    ],
+    "4_explicacao_conceitual": {
+      "pauta": "5 linhas e 4 espaços contados de baixo para cima.",
+      "clave_sol": {
+        "linha_referencia": 2,
+        "nota_referencia": "Sol 4 (G4)",
+        "descricao": "Espiral central desenhada exatamente ao redor da 2ª linha da pauta."
+      },
+      "convencao_oitava_violao": {
+        "tipo": "transposicao_oitava_abaixo",
+        "justificativa": "Evitar excesso de linhas suplementares inferiores na clave de Sol.",
+        "regra": "Notas escritas na pauta soam uma oitava abaixo no violão (ex: C4 escrito soa C3 a 130,81 Hz)."
+      },
+      "mapa_notas": [
+        {
+          "nota_escrita": "C4",
+          "posicao_pauta": "1ª linha suplementar inferior",
+          "nota_sonora": "C3",
+          "frequencia_hz": 130.81,
+          "corda": 5,
+          "casa": 3,
+          "dedo_mao_esquerda": 3
+        },
+        {
+          "nota_escrita": "D4",
+          "posicao_pauta": "espaço abaixo da 1ª linha",
+          "nota_sonora": "D3",
+          "frequencia_hz": 146.83,
+          "corda": 4,
+          "casa": 0,
+          "dedo_mao_esquerda": null
+        },
+        {
+          "nota_escrita": "E4",
+          "posicao_pauta": "1ª linha",
+          "nota_sonora": "E3",
+          "frequencia_hz": 164.81,
+          "corda": 4,
+          "casa": 2,
+          "dedo_mao_esquerda": 2
+        },
+        {
+          "nota_escrita": "F4",
+          "posicao_pauta": "1º espaço",
+          "nota_sonora": "F3",
+          "frequencia_hz": 174.61,
+          "corda": 4,
+          "casa": 3,
+          "dedo_mao_esquerda": 3
+        },
+        {
+          "nota_escrita": "G4",
+          "posicao_pauta": "2ª linha",
+          "nota_sonora": "G3",
+          "frequencia_hz": 196,
+          "corda": 3,
+          "casa": 0,
+          "dedo_mao_esquerda": null
+        },
+        {
+          "nota_escrita": "A4",
+          "posicao_pauta": "2º espaço",
+          "nota_sonora": "A3",
+          "frequencia_hz": 220,
+          "corda": 3,
+          "casa": 2,
+          "dedo_mao_esquerda": 2
+        }
+      ]
+    },
+    "5_demonstracao_e_referencias": {
+      "audio_sintese": {
+        "arquivo": "recursos/referencia-audio-sintese.wav",
+        "andamento_bpm": 60,
+        "duracao_segundos": 16,
+        "tipo": "síntese auditiva métrico-frequencial pura para calibragem objetiva de alturas e pulso"
+      },
+      "recursos_visuais": {
+        "pauta_limpa": "recursos/pauta-limpa.png",
+        "pauta_limpa_svg": "recursos/pauta-limpa.svg",
+        "pauta_celular": "recursos/pauta-celular.png",
+        "sistema_1_individual": "recursos/sistema-1-c1-c2.png",
+        "sistema_2_individual": "recursos/sistema-2-c3-c4.png",
+        "pauta_anotada": "recursos/pauta-anotada.png",
+        "musicxml": "recursos/pauta-adaptada.musicxml"
+      }
+    },
+    "6_pratica_guiada": {
+      "passos": [
+        {
+          "passo": 1,
+          "titulo": "Leitura e Solfejo Rítmico",
+          "acao": "Solfejo falado com palmas suaves no pulso sobre a pauta anotada."
+        },
+        {
+          "passo": 2,
+          "titulo": "Frase Inicial no Violão a 48 BPM",
+          "acao": "Execução dos compassos 1 e 2 com metrônomo a 48 BPM."
+        },
+        {
+          "passo": 3,
+          "titulo": "Frase Descendente a 48 BPM",
+          "acao": "Execução dos compassos 3 e 4 com metrônomo a 48 BPM."
+        },
+        {
+          "passo": 4,
+          "titulo": "Gradação do Amortecimento",
+          "acao": "Fase de preparação tolera ressonância residual; nível alvo aplica amortecimento da 3ª corda com a mão direita na transição para a 4ª corda."
+        }
+      ]
+    },
+    "7_niveis_execucao": {
+      "preparacao": {
+        "andamento_bpm": "48 a 52 BPM",
+        "recurso": "recursos/pauta-limpa.png",
+        "foco": "100% de precisão de notas e durações em andamento calmo"
+      },
+      "alvo": {
+        "andamento_bpm": "60 BPM",
+        "recurso": "recursos/pauta-limpa.png",
+        "foco": "Fluência rítmica contínua e amortecimento suave na transição c.2 para c.3"
+      },
+      "variacoes": [
+        {
+          "id": "A",
+          "nome": "Inversão Estrutural dos Compassos",
+          "descricao": "Executar compassos 3 e 4 seguidos dos compassos 1 e 2 para quebrar memorização mecânica."
+        },
+        {
+          "id": "B",
+          "nome": "Contraste de Dinâmica em Eco",
+          "descricao": "Executar compassos 1 e 2 em mf e compassos 3 e 4 em p."
+        }
+      ]
+    },
+    "8_exercicio_executavel": {
+      "mao_direita": {
+        "recomendada": "Alternância de indicador e médio (i-m) com toque livre ou apoiado.",
+        "alternativa": "Polegar (p) apoiado suavemente na corda de baixo após o ataque."
+      },
+      "encerramento": "Sustentação da mínima final (Dó) durante os tempos 3 e 4 cheios, repousando a mão apenas no tempo 1 do compasso seguinte."
+    },
+    "9_feedback_e_diagnostico": [
+      {
+        "sintoma": "Confusão entre Mi e Fá no compasso 3",
+        "hipoteses_verificar": "Confusão visual entre nota cortada pela 1ª linha (Mi) e nota no vão do 1º espaço (Fá).",
+        "conduta_corretiva": "Isolar compasso 3; apontar fisicamente na pauta e tocar sequência Mi-Fá 4 vezes a 48 BPM."
+      },
+      {
+        "sintoma": "Corte prematuro da mínima no tempo 4",
+        "hipoteses_verificar": "Hábito motor de interromper o som antes de completar o tempo métrico de 2 tempos.",
+        "conduta_corretiva": "Solfejar em voz alta sustentando a vogal ('trêêê-êês, qua-tro') com metrônomo ligado."
+      },
+      {
+        "sintoma": "Sobreposição sonora entre o Sol (c.2) e o Fá (c.3)",
+        "hipoteses_verificar": "A 3ª corda solta permaneceu vibrando por inércia após o ataque da 4ª corda.",
+        "conduta_corretiva": "Amortecimento suave apoiando a lateral do polegar ou indicador na 3ª corda ao tocar o Fá."
+      },
+      {
+        "sintoma": "Sensação de cansaço ou tensão na mão esquerda",
+        "hipoteses_verificar": "Pressão excessiva do polegar contra o braço do instrumento ou elevação dos ombros.",
+        "conduta_corretiva": "Pausa imediata, soltura dos braços ao longo do tronco e ajuste da força para o mínimo funcional."
+      }
+    ],
+    "10_aplicacao_musical": {
+      "dinamica_mf": "Mezzoforte indica intensidade moderadamente forte (volume intermediário entre suave e vigoroso).",
+      "fraseado": "Compassos 1-2 como proposição aberta ascendente; compassos 3-4 como resolução melódica descendente na tônica."
+    },
+    "11_avaliacao_saida": {
+      "instrucao": "Responder às questões mentalmente ou em folha sem consultar respostas; em seguida conferir no gabarito oficial.",
+      "gabarito_arquivo": "recursos/gabarito-saida.md",
+      "questoes": [
+        {
+          "numero": 1,
+          "tema": "Nota de Partida (Compasso 1, Tempo 1)",
+          "perguntas": [
+            "Nome da nota",
+            "Altura sonora e frequência",
+            "Corda, casa e dedo",
+            "Duração rítmica"
+          ]
+        },
+        {
+          "numero": 2,
+          "tema": "Transição Crítica Compassos 2 e 3",
+          "perguntas": [
+            "Nota final c.2 e inicial c.3",
+            "Durações de cada uma",
+            "Cordas e técnica de passagem"
+          ]
+        },
+        {
+          "numero": 3,
+          "tema": "Fechamento da Melodia (Compasso 4)",
+          "perguntas": [
+            "Notas do compasso 4",
+            "Cordas e casas",
+            "Figura de encerramento e duração"
+          ]
+        }
+      ],
+      "teste_intermediario": "Iniciar a execução diretamente no tempo 1 do compasso 3 a 48 ou 60 BPM para verificar decodificação visual ativa.",
+      "rubrica": [
+        "Precisão de alturas (14/14)",
+        "Precisão rítmica (semínimas vs mínimas)",
+        "Continuidade métrica entre compassos",
+        "Andamento estável entre 48 e 60 BPM"
+      ]
+    },
+    "12_protocolo_recuperacao": {
+      "loop_troca_corda": {
+        "trecho": "Compasso 2 (tempos 3-4) para Compasso 3 (tempo 1)",
+        "notas": "Sol 4 (3ª c. solta) -> Fá 4 (4ª c., casa 3)",
+        "contagem_metronomo": "Tempo 3: 'três' (Sol) | Tempo 4: 'quatro' (sustenta Sol) | Tempo 1: 'um' (ataca Fá)",
+        "criterio_superacao": "3 repetições consecutivas com segurança antes de reintegrar à frase completa"
+      },
+      "recuperacao_confusao_visual": {
+        "acao": "Apontar com o dedo na pauta física: linha 1 (Mi) e espaço 1 (Fá); tocar 4x em andamento calmo."
+      }
+    },
+    "13_retencao_e_transferencia": {
+      "retencao_espacada": {
+        "intervalo_horas": "24 a 48 horas após a aula",
+        "tipo_teste": "Cold recall (tentativa fria diretamente na Pauta Limpa sem aquecimento em pautas anotadas ou áudio)",
+        "regras_decisao": {
+          "sucesso_sem_erros": "Leitura retida na memória de longo prazo; avançar para a próxima partitura do currículo.",
+          "hesitacao_ou_erros": "Realizar ciclo guiado de 5 minutos a 48 BPM com pauta anotada e reagendar checagem fria para o dia seguinte."
+        }
+      },
+      "tarefa_transferencia": {
+        "titulo": "Novo Estudo Melódico na 1ª Posição",
+        "formula": "4/4",
+        "compassos": 2,
+        "eventos_total": 7,
+        "recursos": {
+          "pauta_limpa": "recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+          "pauta_limpa_svg": "recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+          "pauta_gabarito": "recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+          "audio_sintese": "recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+          "gabarito_texto": "recursos/tarefa-transferencia/transferencia-gabarito.md",
+          "eventos_json": "recursos/tarefa-transferencia/transferencia-eventos.json"
+        }
+      }
+    },
+    "14_plano_sessao_e_registro": {
+      "sessao_40_min": [
+        {
+          "minutos": "00:00 - 05:00",
+          "duracao_min": 5,
+          "atividade": "Check-in postural, afinação e Diagnóstico D1-D4"
+        },
+        {
+          "minutos": "05:00 - 09:00",
+          "duracao_min": 4,
+          "atividade": "Leitura da Clave de Sol e solfejo rítmico falado"
+        },
+        {
+          "minutos": "09:00 - 22:00",
+          "duracao_min": 13,
+          "atividade": "Prática instrumental guiada a 48 BPM com amortecimento"
+        },
+        {
+          "minutos": "22:00 - 25:00",
+          "duracao_min": 3,
+          "atividade": "Pausa ativa de relaxamento muscular e visual"
+        },
+        {
+          "minutos": "25:00 - 32:00",
+          "duracao_min": 7,
+          "atividade": "Prática na Pauta Limpa no andamento alvo (48 a 60 BPM)"
+        },
+        {
+          "minutos": "32:00 - 36:00",
+          "duracao_min": 4,
+          "atividade": "Avaliação de Saída (Questões 1-3 e início no c.3)"
+        },
+        {
+          "minutos": "36:00 - 40:00",
+          "duracao_min": 4,
+          "atividade": "Ficha de Registro e agendamento da checagem de retenção"
+        }
+      ],
+      "soma_minutos_sessao_completa": 40,
+      "versao_curta_20_min": {
+        "etapas": [
+          {
+            "minutos": "00:00 - 03:00",
+            "duracao_min": 3,
+            "atividade": "Check-in rápido e afinação"
+          },
+          {
+            "minutos": "03:00 - 06:00",
+            "duracao_min": 3,
+            "atividade": "Leitura teórica rápida e solfejo c.1-c.2"
+          },
+          {
+            "minutos": "06:00 - 14:00",
+            "duracao_min": 8,
+            "atividade": "Prática guiada e execução na Pauta Limpa a 48 BPM"
+          },
+          {
+            "minutos": "14:00 - 16:00",
+            "duracao_min": 2,
+            "atividade": "Pausa breve de relaxamento da mão"
+          },
+          {
+            "minutos": "16:00 - 18:00",
+            "duracao_min": 2,
+            "atividade": "Avaliação de saída rápida (Questões 1 e 2)"
+          },
+          {
+            "minutos": "18:00 - 20:00",
+            "duracao_min": 2,
+            "atividade": "Registro do andamento e agendamento da próxima sessão"
+          }
+        ],
+        "soma_minutos_versao_curta": 20,
+        "conteudo_adiado": "A Tarefa de Transferência inédita, a Variação em Eco (mf/p) e repetições estendidas para atingir 60 BPM são adiadas para a próxima sessão."
+      },
+      "nota_andamento_conclusao": "O andamento de 60 BPM é o alvo de referência; atingir entre 48 e 54 BPM com pulso estável é considerado conclusão com êxito da primeira sessão, ficando a progressão registrada na ficha."
+    }
+  }
+}

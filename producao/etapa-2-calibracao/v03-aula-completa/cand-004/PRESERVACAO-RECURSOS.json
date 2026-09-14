@@ -1,0 +1,23 @@
+{
+  "recursos": [
+    {
+      "arquivo": "recursos/referencia-audio-sintese.wav",
+      "sha256_v02": "37eb3968ab5d88273a190942dab667b9074b15626e54958d2974de3e17eb087a",
+      "sha256_v03": "37eb3968ab5d88273a190942dab667b9074b15626e54958d2974de3e17eb087a",
+      "identico": true
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "sha256_v02": "a6271d2aa4fc7489133e4d151a708b024d54dea1ebdc37f71cb41f1a5dd6e2fc",
+      "sha256_v03": "a6271d2aa4fc7489133e4d151a708b024d54dea1ebdc37f71cb41f1a5dd6e2fc",
+      "identico": true
+    },
+    {
+      "arquivo": "recursos/pauta-adaptada.musicxml",
+      "sha256_v02": "55e26be39fab42e8236bf51197195a9de8705b17baec8b5e7496681d2d896f1b",
+      "sha256_v03": "55e26be39fab42e8236bf51197195a9de8705b17baec8b5e7496681d2d896f1b",
+      "identico": true
+    }
+  ],
+  "limite": "Comparação dos recursos musicais listados; nenhuma escrita em v02, app ou acervo pelos scripts desta rodada."
+}

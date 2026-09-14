@@ -1,0 +1,54 @@
+{
+  "escopo": "Eventos, MusicXML principal e frequências dominantes do WAV; sem escuta humana nem execução instrumental",
+  "exercicios": [
+    {
+      "nome": "principal",
+      "eventos": 14,
+      "tempos": 16,
+      "compassos": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4
+      },
+      "segundosWav": 16.0,
+      "picosHz": [
+        130.0,
+        130.0,
+        196.67,
+        196.67,
+        220.0,
+        220.0,
+        196.67,
+        175.0,
+        175.0,
+        165.0,
+        165.0,
+        146.67,
+        146.67,
+        130.0
+      ],
+      "erros": []
+    },
+    {
+      "nome": "transferencia",
+      "eventos": 7,
+      "tempos": 8,
+      "compassos": {
+        "1": 4,
+        "2": 4
+      },
+      "segundosWav": 8.0,
+      "picosHz": [
+        165.0,
+        174.99,
+        196.67,
+        165.0,
+        146.67,
+        146.67,
+        130.0
+      ],
+      "erros": []
+    }
+  ]
+}

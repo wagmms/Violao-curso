@@ -1,0 +1,116 @@
+{
+  "tarefa_transferencia": {
+    "titulo": "Novo Estudo Melódico na 1ª Posição",
+    "formula_compasso": "4/4",
+    "total_compassos": 2,
+    "total_eventos": 7,
+    "duracao_total_tempos": 8,
+    "duracao_audio_segundos": 8.0,
+    "recursos": {
+      "pauta_limpa": "tarefa-transferencia/transferencia-pauta-limpa.png",
+      "pauta_gabarito": "tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "audio_referencia": "tarefa-transferencia/transferencia-audio-sintese.wav",
+      "gabarito_texto": "tarefa-transferencia/transferencia-gabarito.md"
+    },
+    "eventos": [
+      {
+        "ordem": 1,
+        "compasso": 1,
+        "tempo_compasso": 1.0,
+        "inicio_tempo_global": 0.0,
+        "duracao_tempos": 1.0,
+        "figura": "semínima",
+        "nota_escrita": "E4",
+        "nota_sonora": "E3",
+        "frequencia_hz": 164.81,
+        "violao_corda": 4,
+        "violao_casa": 2,
+        "dedo_mao_esquerda": 2
+      },
+      {
+        "ordem": 2,
+        "compasso": 1,
+        "tempo_compasso": 2.0,
+        "inicio_tempo_global": 1.0,
+        "duracao_tempos": 1.0,
+        "figura": "semínima",
+        "nota_escrita": "F4",
+        "nota_sonora": "F3",
+        "frequencia_hz": 174.61,
+        "violao_corda": 4,
+        "violao_casa": 3,
+        "dedo_mao_esquerda": 3
+      },
+      {
+        "ordem": 3,
+        "compasso": 1,
+        "tempo_compasso": 3.0,
+        "inicio_tempo_global": 2.0,
+        "duracao_tempos": 1.0,
+        "figura": "semínima",
+        "nota_escrita": "G4",
+        "nota_sonora": "G3",
+        "frequencia_hz": 196.0,
+        "violao_corda": 3,
+        "violao_casa": 0,
+        "dedo_mao_esquerda": null
+      },
+      {
+        "ordem": 4,
+        "compasso": 1,
+        "tempo_compasso": 4.0,
+        "inicio_tempo_global": 3.0,
+        "duracao_tempos": 1.0,
+        "figura": "semínima",
+        "nota_escrita": "E4",
+        "nota_sonora": "E3",
+        "frequencia_hz": 164.81,
+        "violao_corda": 4,
+        "violao_casa": 2,
+        "dedo_mao_esquerda": 2
+      },
+      {
+        "ordem": 5,
+        "compasso": 2,
+        "tempo_compasso": 1.0,
+        "inicio_tempo_global": 4.0,
+        "duracao_tempos": 1.0,
+        "figura": "semínima",
+        "nota_escrita": "D4",
+        "nota_sonora": "D3",
+        "frequencia_hz": 146.83,
+        "violao_corda": 4,
+        "violao_casa": 0,
+        "dedo_mao_esquerda": null
+      },
+      {
+        "ordem": 6,
+        "compasso": 2,
+        "tempo_compasso": 2.0,
+        "inicio_tempo_global": 5.0,
+        "duracao_tempos": 1.0,
+        "figura": "semínima",
+        "nota_escrita": "D4",
+        "nota_sonora": "D3",
+        "frequencia_hz": 146.83,
+        "violao_corda": 4,
+        "violao_casa": 0,
+        "dedo_mao_esquerda": null
+      },
+      {
+        "ordem": 7,
+        "compasso": 2,
+        "tempo_compasso": 3.0,
+        "inicio_tempo_global": 6.0,
+        "duracao_tempos": 2.0,
+        "figura": "mínima",
+        "nota_escrita": "C4",
+        "nota_sonora": "C3",
+        "frequencia_hz": 130.81,
+        "violao_corda": 5,
+        "violao_casa": 3,
+        "dedo_mao_esquerda": 3
+      }
+    ]
+  }
+}

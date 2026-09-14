@@ -1,0 +1,126 @@
+{
+  "data": "2026-09-14",
+  "checks": [
+    {
+      "nome": "14 eventos",
+      "ok": true
+    },
+    {
+      "nome": "Evento 1",
+      "ok": true
+    },
+    {
+      "nome": "Evento 2",
+      "ok": true
+    },
+    {
+      "nome": "Evento 3",
+      "ok": true
+    },
+    {
+      "nome": "Evento 4",
+      "ok": true
+    },
+    {
+      "nome": "Evento 5",
+      "ok": true
+    },
+    {
+      "nome": "Evento 6",
+      "ok": true
+    },
+    {
+      "nome": "Evento 7",
+      "ok": true
+    },
+    {
+      "nome": "Evento 8",
+      "ok": true
+    },
+    {
+      "nome": "Evento 9",
+      "ok": true
+    },
+    {
+      "nome": "Evento 10",
+      "ok": true
+    },
+    {
+      "nome": "Evento 11",
+      "ok": true
+    },
+    {
+      "nome": "Evento 12",
+      "ok": true
+    },
+    {
+      "nome": "Evento 13",
+      "ok": true
+    },
+    {
+      "nome": "Evento 14",
+      "ok": true
+    },
+    {
+      "nome": "16 tempos",
+      "ok": true
+    },
+    {
+      "nome": "Fonte real corresponde à base",
+      "ok": true
+    },
+    {
+      "nome": "Identidade e relações",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/pauta-limpa.png",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/pauta-limpa.svg",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/pauta-celular.png",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/sistema-1-c1-c2.png",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/sistema-2-c3-c4.png",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/simulacao-mobile-343px.png",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "ok": true
+    },
+    {
+      "nome": "Hash inspecionado recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "ok": true
+    },
+    {
+      "nome": "Preservado recursos/referencia-audio-sintese.wav",
+      "ok": true
+    },
+    {
+      "nome": "Preservado recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "ok": true
+    },
+    {
+      "nome": "Preservado recursos/pauta-adaptada.musicxml",
+      "ok": true
+    }
+  ],
+  "limites": [
+    "Executor e revisor desta rodada são Codex; não é revisão externa independente.",
+    "Script independente do validador de produção.",
+    "Sem escuta humana nova, teste de aluno ou certificação formal de schemas."
+  ]
+}

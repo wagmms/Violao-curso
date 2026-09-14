@@ -1,0 +1,121 @@
+{
+  "id_pedagogico": "aula-ped-017-leitura-clave-sol",
+  "candidato_id": "cand-004",
+  "versao": "v03",
+  "recursos_principais": [
+    {
+      "arquivo": "recursos/pauta-limpa.png",
+      "tipo": "imagem_png",
+      "proposito": "Pauta de leitura limpa em 1 sistema sem nomes de notas para avaliação autônoma e estudo",
+      "resolucao": "3200x600 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/pauta-limpa.svg",
+      "tipo": "vetor_svg",
+      "proposito": "Pauta vetorial escalável limpa para renderização em qualquer densidade de tela",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/pauta-anotada.png",
+      "tipo": "imagem_png",
+      "proposito": "Pauta de apoio didático com alturas escritas, sons reais, cordas, casas e dedos",
+      "resolucao": "3200x840 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": false
+    },
+    {
+      "arquivo": "recursos/pauta-celular.png",
+      "tipo": "imagem_png",
+      "proposito": "Pauta vertical em 2 sistemas para leitura em smartphones sem nomes de notas",
+      "resolucao": "1600x1120 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/sistema-1-c1-c2.png",
+      "tipo": "imagem_png",
+      "proposito": "Sistema 1 isolado (compassos 1 e 2) limpo sem nomes de notas no cabeçalho para viewport móvel",
+      "resolucao": "1600x520 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/sistema-2-c3-c4.png",
+      "tipo": "imagem_png",
+      "proposito": "Sistema 2 isolado (compassos 3 e 4) limpo sem nomes de notas no cabeçalho para viewport móvel",
+      "resolucao": "1600x520 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/simulacao-mobile-343px.png",
+      "tipo": "imagem_png",
+      "proposito": "Simulação visual real da renderização do Sistema 1 em área útil mobile de 343 px (fator de escala 42,9%)",
+      "resolucao": "375x191 (escala 1x real de tela mobile)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/pauta-adaptada.musicxml",
+      "tipo": "partitura_musicxml",
+      "proposito": "Estrutura notacional padronizada para intercâmbio com softwares de notação"
+    },
+    {
+      "arquivo": "recursos/referencia-audio-sintese.wav",
+      "tipo": "audio_wav",
+      "proposito": "Síntese métrico-frequencial pura de referência (16s a 60 BPM)",
+      "duracao_segundos": 16,
+      "sample_rate": 44100
+    },
+    {
+      "arquivo": "recursos/gabarito-saida.md",
+      "tipo": "documento_markdown",
+      "proposito": "Gabarito independente da avaliação de saída (acesso apenas pós-tentativa)"
+    }
+  ],
+  "recursos_transferencia": [
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "tipo": "imagem_png",
+      "proposito": "Pauta limpa sem nomes de notas para aplicação autônoma em melodia inédita",
+      "resolucao": "2200x600 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "tipo": "vetor_svg",
+      "proposito": "Pauta vetorial limpa da tarefa de transferência",
+      "clave_calibrada": true,
+      "sem_nomes_notas": true
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "tipo": "imagem_png",
+      "proposito": "Pauta anotada de gabarito para conferência pós-tentativa da transferência",
+      "resolucao": "2200x840 (escala 2x)",
+      "clave_calibrada": true,
+      "sem_nomes_notas": false
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "tipo": "audio_wav",
+      "proposito": "Síntese sonora da melodia de transferência (8s a 60 BPM)",
+      "duracao_segundos": 8,
+      "sample_rate": 44100
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-eventos.json",
+      "tipo": "dados_json",
+      "proposito": "Estrutura dos 7 eventos melódicos da tarefa de transferência"
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-gabarito.md",
+      "tipo": "documento_markdown",
+      "proposito": "Gabarito em texto explicativo para a tarefa de transferência"
+    }
+  ]
+}

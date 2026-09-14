@@ -1,0 +1,38 @@
+{
+  "data": "2026-09-14",
+  "metodo": "Inspeção visual dos PNGs e leitura de todos os elementos text dos SVGs. Hash impede alterações silenciosas; não é OCR nem avaliação automática da notação.",
+  "recursos": [
+    {
+      "arquivo": "recursos/pauta-limpa.png",
+      "sha256": "ffa7b5de4f8ed1db9ee3e65210c1fa897d854c437bcb7df6e6d1c8e731379804"
+    },
+    {
+      "arquivo": "recursos/pauta-limpa.svg",
+      "sha256": "a7ef68970908d3e3ccc42e6c532dc603d8cae7becbbdedc01bc096b3337d63b4"
+    },
+    {
+      "arquivo": "recursos/pauta-celular.png",
+      "sha256": "06c3a7945bc89720cc041eb8f8673a1e1a8c14fade508efed40f7eaf8d64a5bc"
+    },
+    {
+      "arquivo": "recursos/sistema-1-c1-c2.png",
+      "sha256": "836349f8a62143dfdefedffd7b2f522cb1f9c4905ccebe3d30b4389cfd299d87"
+    },
+    {
+      "arquivo": "recursos/sistema-2-c3-c4.png",
+      "sha256": "11b1f83c6b87fdc4c82770f58d923d16317909eeda07d357e57e344c45e210a3"
+    },
+    {
+      "arquivo": "recursos/simulacao-mobile-343px.png",
+      "sha256": "52e7e00a1a3af24bcdc4703e98ab81d78766b1717a4401ba13e002ca344e9446"
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "sha256": "23a5809e3ccca82ba6953804bd8a00e236b11db80c33257a492bf4f0db1473f2"
+    },
+    {
+      "arquivo": "recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "sha256": "7361f0ba307e587698a9fdcc21430f728ebceb84ba27b3c9f34066cff47ca1ce"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "status": "aguardando_revisao",
+  "validacao_formal_schema": "pendente_antes_integracao",
+  "oficial": {
+    "success": true,
+    "passes": [
+      "Existência de EVIDENCIAS.csv",
+      "EVIDENCIAS.csv possui registros",
+      "Cabeçalho EVIDENCIAS.csv correto",
+      "Existência de MATRIZ-FONTE-AULA.csv",
+      "aula-prop-017 presente na matriz",
+      "aula-prop-017 vinculada a hab-lei-003",
+      "Existência de AULAS-PROPOSTAS.json",
+      "aula-prop-017 em AULAS-PROPOSTAS.json",
+      "aula-prop-017 no mod-ped-05",
+      "Existência de aula.json",
+      "FINA-02: ID pedagógico estável é aula-ped-017-leitura-clave-sol",
+      "FINA-02: candidato_id separado é cand-004",
+      "Vínculo proposta aula-prop-017",
+      "Vínculo módulo mod-ped-05",
+      "Vínculo habilidade hab-lei-003",
+      "Status é aguardando_revisao",
+      "Contrato de 14 pontos presente",
+      "FINA-01: Arquivo físico é arq-0408",
+      "FINA-01: Nome físico do arquivo no disco é \"0. 1\"",
+      "FINA-01: Tamanho físico é 51.500 bytes",
+      "FINA-01: Hash SHA-256 canônico decfdf2e...",
+      "Soma de 40 min exatos",
+      "Soma de 20 min exatos",
+      "Conteúdo adiado declarado na versão curta",
+      "Existência de AULA.md",
+      "FINA-06: AULA.md no disco é gerado estritamente a partir do JSON canônico",
+      "FINA-03 / AC-02: Ausência de respostas vazadas no texto do estudante em AULA.md",
+      "Referência ao gabarito-saida.md na seção 11",
+      "FINA-04: Conclusão sóbria na seção de retenção (tarefa recuperada com sucesso nesta revisão)",
+      "FINA-04: Pergunta de saída Q1 não exige frequência em Hz como critério de leitura",
+      "Existência de EVENTOS.json",
+      "Total de 14 eventos melódicos",
+      "Soma de tempos dos eventos = 16.0",
+      "Duração de áudio declarada = 16.0s",
+      "Compassos declarados = 4",
+      "Início temporal contínuo e ordenado de todos os eventos",
+      "Existência de RECURSOS.json",
+      "Recurso existe no disco: recursos/pauta-limpa.png",
+      "Recurso não-vazio: recursos/pauta-limpa.png",
+      "Recurso existe no disco: recursos/pauta-limpa.svg",
+      "Recurso não-vazio: recursos/pauta-limpa.svg",
+      "Recurso existe no disco: recursos/pauta-anotada.png",
+      "Recurso não-vazio: recursos/pauta-anotada.png",
+      "Recurso existe no disco: recursos/pauta-celular.png",
+      "Recurso não-vazio: recursos/pauta-celular.png",
+      "Recurso existe no disco: recursos/sistema-1-c1-c2.png",
+      "Recurso não-vazio: recursos/sistema-1-c1-c2.png",
+      "Recurso existe no disco: recursos/sistema-2-c3-c4.png",
+      "Recurso não-vazio: recursos/sistema-2-c3-c4.png",
+      "Recurso existe no disco: recursos/simulacao-mobile-343px.png",
+      "Recurso não-vazio: recursos/simulacao-mobile-343px.png",
+      "Recurso existe no disco: recursos/pauta-adaptada.musicxml",
+      "Recurso não-vazio: recursos/pauta-adaptada.musicxml",
+      "Recurso existe no disco: recursos/referencia-audio-sintese.wav",
+      "Recurso não-vazio: recursos/referencia-audio-sintese.wav",
+      "Recurso existe no disco: recursos/gabarito-saida.md",
+      "Recurso não-vazio: recursos/gabarito-saida.md",
+      "Recurso existe no disco: recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "Recurso não-vazio: recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "Recurso existe no disco: recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "Recurso não-vazio: recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "Recurso existe no disco: recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "Recurso não-vazio: recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "Recurso existe no disco: recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "Recurso não-vazio: recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "Recurso existe no disco: recursos/tarefa-transferencia/transferencia-eventos.json",
+      "Recurso não-vazio: recursos/tarefa-transferencia/transferencia-eventos.json",
+      "Recurso existe no disco: recursos/tarefa-transferencia/transferencia-gabarito.md",
+      "Recurso não-vazio: recursos/tarefa-transferencia/transferencia-gabarito.md",
+      "FINA-03: Recursos de leitura limpa devidamente rotulados com sem_nomes_notas: true",
+      "FINA-01: Proveniência corresponde à base física",
+      "FINA-01: Bytes e hash reais do acervo conferidos em leitura",
+      "FINA-02: ID preservado da v01 e candidato separado",
+      "FINA-06: Quatorze seções presentes",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Seção não vazia",
+      "FINA-06: Link real existe: recursos/pauta-limpa.png",
+      "FINA-06: Link real existe: recursos/pauta-celular.png",
+      "FINA-06: Link real existe: recursos/sistema-1-c1-c2.png",
+      "FINA-06: Link real existe: recursos/sistema-2-c3-c4.png",
+      "FINA-06: Link real existe: recursos/pauta-anotada.png",
+      "FINA-06: Link real existe: recursos/referencia-audio-sintese.wav",
+      "FINA-06: Link real existe: recursos/pauta-limpa.png",
+      "FINA-06: Link real existe: recursos/pauta-celular.png",
+      "FINA-06: Link real existe: recursos/gabarito-saida.md",
+      "FINA-06: Link real existe: recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "FINA-06: Link real existe: recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "FINA-06: Link real existe: recursos/tarefa-transferencia/transferencia-gabarito.md",
+      "FINA-06: Link real existe: recursos/tarefa-transferencia/transferencia-pauta-gabarito.png",
+      "FINA-06: Link real existe: recursos/tarefa-transferencia/transferencia-audio-sintese.wav",
+      "FINA-03: Saída sem nota de partida fornecida",
+      "FINA-04: Sem promessa de memória de longo prazo",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/pauta-limpa.png",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/pauta-limpa.svg",
+      "FINA-03: SVG sem respostas nominais: recursos/pauta-limpa.svg",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/pauta-celular.png",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/sistema-1-c1-c2.png",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/sistema-2-c3-c4.png",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/simulacao-mobile-343px.png",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/tarefa-transferencia/transferencia-pauta-limpa.png",
+      "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "FINA-03: SVG sem respostas nominais: recursos/tarefa-transferencia/transferencia-pauta-limpa.svg",
+      "FINA-06: Música conferida preservada evento a evento",
+      "FINA-06: Compasso 1 soma quatro tempos",
+      "FINA-06: Compasso 2 soma quatro tempos",
+      "FINA-06: Compasso 3 soma quatro tempos",
+      "FINA-06: Compasso 4 soma quatro tempos"
+    ],
+    "errors": []
+  },
+  "mutacoes": [
+    {
+      "teste": "hash errado",
+      "rejeitado": true,
+      "erro_esperado": "Hash SHA-256 canônico",
+      "erros": [
+        {
+          "desc": "FINA-01: Hash SHA-256 canônico decfdf2e...",
+          "detail": "Hash: 0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "desc": "FINA-06: AULA.md no disco é gerado estritamente a partir do JSON canônico",
+          "detail": "AULA.md difere do texto gerado deterministicamente por renderAulaMarkdown(aulaJson)"
+        },
+        {
+          "desc": "FINA-01: Proveniência corresponde à base física"
+        }
+      ]
+    },
+    {
+      "teste": "ID alterado",
+      "rejeitado": true,
+      "erro_esperado": "ID pedagógico estável",
+      "erros": [
+        {
+          "desc": "FINA-02: ID pedagógico estável é aula-ped-017-leitura-clave-sol",
+          "detail": "ID observado: aula-alterada"
+        },
+        {
+          "desc": "FINA-06: AULA.md no disco é gerado estritamente a partir do JSON canônico",
+          "detail": "AULA.md difere do texto gerado deterministicamente por renderAulaMarkdown(aulaJson)"
+        },
+        {
+          "desc": "FINA-02: ID preservado da v01 e candidato separado"
+        }
+      ]
+    },
+    {
+      "teste": "resposta em SVG de saída",
+      "rejeitado": true,
+      "erro_esperado": "SVG sem respostas nominais",
+      "erros": [
+        {
+          "desc": "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/pauta-limpa.svg",
+          "detail": "Recurso alterado após inspeção visual; reinspecionar antes de atualizar hash."
+        },
+        {
+          "desc": "FINA-03: SVG sem respostas nominais: recursos/pauta-limpa.svg"
+        }
+      ]
+    },
+    {
+      "teste": "PNG de saída alterado após inspeção",
+      "rejeitado": true,
+      "erro_esperado": "Recurso gráfico inspecionado permanece íntegro",
+      "erros": [
+        {
+          "desc": "FINA-03: Recurso gráfico inspecionado permanece íntegro: recursos/sistema-1-c1-c2.png",
+          "detail": "Recurso alterado após inspeção visual; reinspecionar antes de atualizar hash."
+        }
+      ]
+    },
+    {
+      "teste": "texto divergente",
+      "rejeitado": true,
+      "erro_esperado": "gerado estritamente",
+      "erros": [
+        {
+          "desc": "FINA-06: AULA.md no disco é gerado estritamente a partir do JSON canônico",
+          "detail": "AULA.md difere do texto gerado deterministicamente por renderAulaMarkdown(aulaJson)"
+        }
+      ]
+    },
+    {
+      "teste": "início incorreto",
+      "rejeitado": true,
+      "erro_esperado": "Início temporal contínuo",
+      "erros": [
+        {
+          "desc": "Início temporal contínuo e ordenado de todos os eventos"
+        },
+        {
+          "desc": "FINA-06: Música conferida preservada evento a evento"
+        }
+      ]
+    },
+    {
+      "teste": "duração incorreta",
+      "rejeitado": true,
+      "erro_esperado": "Soma de tempos",
+      "erros": [
+        {
+          "desc": "Soma de tempos dos eventos = 16.0",
+          "detail": "Soma: 16.5"
+        },
+        {
+          "desc": "Início temporal contínuo e ordenado de todos os eventos"
+        },
+        {
+          "desc": "FINA-06: Música conferida preservada evento a evento"
+        },
+        {
+          "desc": "FINA-06: Compasso 1 soma quatro tempos"
+        }
+      ]
+    },
+    {
+      "teste": "link quebrado no Markdown",
+      "rejeitado": true,
+      "erro_esperado": "Link real existe",
+      "erros": [
+        {
+          "desc": "FINA-06: AULA.md no disco é gerado estritamente a partir do JSON canônico",
+          "detail": "AULA.md difere do texto gerado deterministicamente por renderAulaMarkdown(aulaJson)"
+        },
+        {
+          "desc": "FINA-06: Link real existe: recursos/inexistente.png"
+        }
+      ]
+    },
+    {
+      "teste": "campo contratual ausente",
+      "rejeitado": true,
+      "erro_esperado": "Quatorze seções",
+      "erros": [
+        {
+          "desc": "FINA-06: Quatorze seções presentes",
+          "detail": "Seção obrigatória ausente; renderização interrompida."
+        }
+      ]
+    }
+  ]
+}
