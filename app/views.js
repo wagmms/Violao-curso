@@ -146,7 +146,7 @@ function renderizarTelaHoje() {
           </div>
           <div class="card-alternativa" id="card-alt-dificuldade">
             <h5>Caderno de dificuldades</h5>
-            <p>${difPendentes > 0 ? `<strong style="color:var(--warning);">${difPendentes} ponto(s) de tropeço</strong> registrado(s).` : 'Nenhum gargalo técnico pendente no momento.'}</p>
+            <p>${difPendentes > 0 ? `<strong style="color:var(--warning);">${escapeHTML(difPendentes)} ponto(s) de tropeço</strong> registrado(s).` : 'Nenhum gargalo técnico pendente no momento.'}</p>
           </div>
           <div class="card-alternativa" id="card-alt-biblioteca">
             <h5>Explorar o Método Tríade</h5>
@@ -1832,7 +1832,7 @@ function renderizarFerramentaInterativa(ativ) {
           <div class="metric-card-info">
             <strong>Trechos Críticos</strong>
             <div style="display:flex; align-items:baseline; gap:6px;">
-              <span class="metric-card-num">${difPendentes}</span>
+              <span class="metric-card-num">${escapeHTML(difPendentes)}</span>
               <span style="font-size:0.85rem; color:var(--text-muted);">ativos em foco</span>
             </div>
           </div>
@@ -1843,7 +1843,7 @@ function renderizarFerramentaInterativa(ativ) {
           <div class="metric-card-info">
             <strong>Fila do Dia</strong>
             <div style="display:flex; align-items:baseline; gap:6px;">
-              <span class="metric-card-num" style="color:var(--secondary);">${revHoje}</span>
+              <span class="metric-card-num" style="color:var(--secondary);">${escapeHTML(revHoje)}</span>
               <span style="font-size:0.85rem; color:var(--text-muted);">revisões programadas</span>
             </div>
           </div>
@@ -1854,7 +1854,7 @@ function renderizarFerramentaInterativa(ativ) {
           <div class="metric-card-info">
             <strong>Retenção Estimada</strong>
             <div style="display:flex; align-items:baseline; gap:6px;">
-              <span class="metric-card-num" style="color:var(--text-main); font-family:var(--font-mono);">${retencaoPct}%</span>
+              <span class="metric-card-num" style="color:var(--text-main); font-family:var(--font-mono);">${escapeHTML(retencaoPct)}%</span>
               <span style="font-size:0.85rem; color:var(--text-muted);">taxa de consolidação</span>
             </div>
           </div>
