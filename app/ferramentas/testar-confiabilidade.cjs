@@ -29,6 +29,42 @@ function avaliar(a,nivel,status,bpm='60'){
  a.w.document.getElementById('btn-salvar-resultado').click();
 }
 async function main(){
+
+ await teste('Worker bloqueado inicia timer de fallback',a=>{
+  // Reload the timer.js script in the window context where Worker is overridden
+  a.run(`
+   pausarSessao();
+   timerWorker=null;
+   self.Worker=function(){throw new Error("CSP");};
+  `);
+
+  const timerJs = require('fs').readFileSync(require('path').join(__dirname, '../timer.js'), 'utf8');
+  a.run(timerJs); // This will execute the file contents in context
+
+  a.run(`
+   iniciarSessao();
+  `);
+  assert.equal(a.run('timerWorker'),null);assert.ok(a.run('state.sessao.intervalId')!==null);
+ });
+
+ await teste('Worker emite onerror encerra worker e inicia timer de fallback',a=>{
+  // Reload the timer.js script in the window context where Worker is overridden
+  a.run(`
+   pausarSessao();
+   self.Worker=class{constructor(){this.onmessage=null;this.onerror=null;}postMessage(){}terminate(){}};
+  `);
+
+  const timerJs = require('fs').readFileSync(require('path').join(__dirname, '../timer.js'), 'utf8');
+  a.run(timerJs);
+
+  a.run(`
+   iniciarSessao();
+  `);
+  assert.ok(a.run('timerWorker')!==null);assert.equal(a.run('state.sessao.intervalId'),null);
+  a.run('timerWorker.onerror(new Error("mock"));');
+  assert.equal(a.run('timerWorker'),null);assert.ok(a.run('state.sessao.intervalId')!==null);
+ });
+
  await teste('11 atividades: selecionar, serializar e restaurar',a=>{for(let i=1;i<=11;i++){a.run(`trocarAtividade('ativ-${i}')`);const d=a.run('validarEsquemaBackup(serializarEstado()).dados');assert.equal(d.atividadeAtualId,`ativ-${i}`);assert.equal(d.sessao.nivel,d.nivelExercicioAtual);}});
  await teste('Interrupção ativa sem elapsed consolidado permanece no backup',a=>{a.run(`iniciarSessao();state.sessao.ultimoTimestamp-=60000;trocarAtividade('ativ-2');carregarEstadoInicial()`);assert.equal(a.run('state.tentativas.length'),1);assert.equal(a.run('state.tentativas[0].status'),'interrompida');assert.ok(a.run('state.tentativas[0].duracaoMs')>=60000);});
  await teste('Rascunhos não iniciam; timer tolera roteiro vazio',a=>{for(let i=7;i<=11;i++){a.run(`trocarAtividade('ativ-${i}');atualizarTimer()`);assert.equal(a.run('iniciarSessao()'),false);assert.equal(a.run('state.sessao.ativa'),false);}a.run(`navegarPara('praticar')`);assert.equal(a.w.document.querySelectorAll('.btn-iniciar-ativ:disabled').length,5);});
