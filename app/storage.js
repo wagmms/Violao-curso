@@ -469,7 +469,18 @@ function recuperarRegistrosValidos(original) {
   tentar(base);
   for (const campo of ['perfil', 'sessao', 'legado', 'treinoOuvido']) if (original[campo]) tentar({ ...seguro, [campo]: original[campo] });
   for (const campo of ['tentativas', 'dificuldades', 'revisoes']) {
-    for (const registro of Array.isArray(original[campo]) ? original[campo] : []) tentar({ ...seguro, [campo]: [...seguro[campo], registro] });
+    const listaOriginal = Array.isArray(original[campo]) ? original[campo] : [];
+    if (listaOriginal.length > 0) {
+      const atual = [...seguro[campo]];
+      for (const registro of listaOriginal) {
+        atual.push(registro);
+        const anterior = seguro;
+        tentar({ ...seguro, [campo]: atual });
+        if (seguro === anterior) {
+          atual.pop();
+        }
+      }
+    }
   }
   if (original.habilidades && typeof original.habilidades === 'object') {
     for (const [id, hab] of Object.entries(original.habilidades)) tentar({ ...seguro, habilidades: { ...seguro.habilidades, [id]: hab } });
