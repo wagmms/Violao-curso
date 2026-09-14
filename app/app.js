@@ -52,13 +52,78 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    const active = document.activeElement;
+    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.tagName === 'SELECT' || active.isContentEditable)) {
+      return;
+    }
 
-    if (e.key.toLowerCase() === 'f') {
+    const key = e.key;
+
+    if (key.toLowerCase() === 'f') {
       toggleModoEstante();
-    } else if (e.key === 'Escape') {
+      mostrarToastAtalho(document.body.classList.contains('modo-estante') ? 'Modo Estante Ativado (F)' : 'Modo Normal');
+    } else if (key === 'Escape') {
       if (document.body.classList.contains('modo-estante')) {
         toggleModoEstante();
+        mostrarToastAtalho('Modo Normal');
+      }
+    } else if (key === ' ' || key === 'Spacebar') {
+      if (active && active.tagName === 'BUTTON') return;
+      e.preventDefault();
+      iniciarOuRetomarSessao();
+      mostrarToastAtalho(state.sessao.ativa ? 'Timer Retomado [Espaço]' : 'Timer Pausado [Espaço]');
+    } else if (key === 'ArrowRight' || key.toLowerCase() === 'n') {
+      e.preventDefault();
+      if (!state.sessao.ativa && state.sessao.elapsedMs === 0) return;
+      const ativ = atividadesDados.find(a => a.id === state.sessao.atividadeId);
+      if (!ativ || !ativ.sessao40min) return;
+
+      let acumulado = 0;
+      for (let i = 0; i <= state.sessao.passoIndex; i++) {
+        acumulado += ativ.sessao40min[i].minutos * 60000;
+      }
+
+      if (state.sessao.passoIndex < ativ.sessao40min.length - 1) {
+        state.sessao.elapsedMs = acumulado;
+        if (state.sessao.ativa) state.sessao.ultimoTimestamp = Date.now();
+        atualizarTimer();
+        mostrarToastAtalho(`Passo Avançado (${key === 'ArrowRight' ? 'Seta Direita' : 'N'})`);
+      }
+    } else if (key === 'ArrowLeft' || key.toLowerCase() === 'p') {
+      e.preventDefault();
+      if (!state.sessao.ativa && state.sessao.elapsedMs === 0) return;
+      const ativ = atividadesDados.find(a => a.id === state.sessao.atividadeId);
+      if (!ativ || !ativ.sessao40min) return;
+
+      if (state.sessao.passoIndex > 0) {
+        let acumulado = 0;
+        for (let i = 0; i < state.sessao.passoIndex - 1; i++) {
+          acumulado += ativ.sessao40min[i].minutos * 60000;
+        }
+        state.sessao.elapsedMs = acumulado;
+        if (state.sessao.ativa) state.sessao.ultimoTimestamp = Date.now();
+        atualizarTimer();
+        mostrarToastAtalho(`Passo Anterior (${key === 'ArrowLeft' ? 'Seta Esquerda' : 'P'})`);
+      }
+    } else if (key === '1' || key === '2' || key === '3') {
+      const modal = $('modal-resultado');
+      if (modal && modal.open) return;
+      const niveis = ['preparacao', 'alvo', 'variacao'];
+      const index = parseInt(key) - 1;
+      const aba = document.querySelector(`.nivel-tab[data-nivel="${niveis[index]}"]`);
+      if (aba) {
+        aba.click();
+        const labels = ['Preparação', 'Alvo', 'Variação'];
+        mostrarToastAtalho(`Nível: ${labels[index]} [${key}]`);
+      }
+    } else if (key === '4' || key === '5') {
+      const modal = $('modal-resultado');
+      if (modal && modal.open) {
+        const select = $('select-res-status');
+        if (select) {
+          select.value = key === '4' ? 'consegui' : 'repetir';
+          mostrarToastAtalho(`Resultado: ${key === '4' ? 'Consegui [4]' : 'Repetir [5]'}`);
+        }
       }
     }
   });
@@ -95,6 +160,38 @@ function toggleModoEstante() {
       });
     }
   }
+}
+
+function mostrarToastAtalho(mensagem) {
+  let toast = document.getElementById('atalho-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'atalho-toast';
+    toast.style.position = 'fixed';
+    toast.style.bottom = '24px';
+    toast.style.left = '50%';
+    toast.style.transform = 'translateX(-50%)';
+    toast.style.backgroundColor = 'var(--accent, #d97736)';
+    toast.style.color = '#fff';
+    toast.style.padding = '8px 18px';
+    toast.style.borderRadius = '20px';
+    toast.style.fontSize = '0.88rem';
+    toast.style.fontWeight = 'bold';
+    toast.style.zIndex = '99999';
+    toast.style.boxShadow = '0 4px 14px rgba(0,0,0,0.5)';
+    toast.style.opacity = '0';
+    toast.style.transition = 'opacity 0.25s ease';
+    toast.style.pointerEvents = 'none';
+    document.body.appendChild(toast);
+  }
+
+  toast.textContent = mensagem;
+  toast.style.opacity = '1';
+
+  if (toast.timeoutId) clearTimeout(toast.timeoutId);
+  toast.timeoutId = setTimeout(() => {
+    toast.style.opacity = '0';
+  }, 1800);
 }
 
 // API para testes automatizados e auditoria do Codex
