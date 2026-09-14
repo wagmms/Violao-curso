@@ -27,9 +27,11 @@ const path = require('path');
 const { PNG } = require('pngjs');
 const pixelmatch = require('pixelmatch');
 
+const { pathToFileURL } = require('url');
+
 const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const edgePath = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const htmlUrl = 'file:///c:/Users/wmors/Documents/ChatGPT/Violão/interface-v2/index.html';
+const htmlUrl = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
 
 const { CDPClient } = require('./cdp-runner.cjs');
 
@@ -55,7 +57,7 @@ async function executarTestes() {
     process.exit(1);
   }
 
-  const revisadoDir = path.resolve(__dirname, '../../entregas-gemini/redesign-1/revisado');
+  const revisadoDir = path.resolve(__dirname, 'screenshots');
   fs.mkdirSync(revisadoDir, { recursive: true });
 
   console.log(`Usando navegador: ${browserExe}`);
