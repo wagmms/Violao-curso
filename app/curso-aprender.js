@@ -45,6 +45,18 @@ function materialLocalURL(mat) {
   return 'file:///' + partes.map((p,i) => i === 0 ? p : encodeURIComponent(p)).join('/');
 }
 
+function formatarTempoCheckpoint(tempoStr) {
+  if (!tempoStr) return '00:00';
+  const partes = tempoStr.split(':');
+  if (partes.length === 3) {
+    const min = partes[1];
+    const seg = partes[2].split('.')[0];
+    const horas = parseInt(partes[0], 10);
+    return horas > 0 ? `${horas}:${min}:${seg}` : `${min}:${seg}`;
+  }
+  return tempoStr.split('.')[0];
+}
+
 function renderizarMaterialCurso(mat) {
   const label = escapeHTML(`${mat.tipo.toUpperCase()}: ${mat.titulo}`);
   if (urlDriveValida(mat.url) && mat.utilizavel) return `<a href="${escapeHTML(mat.url)}" target="_blank" rel="noopener noreferrer">↗ ${label}</a>`;
@@ -52,6 +64,18 @@ function renderizarMaterialCurso(mat) {
   const local = conhecidos.has(mat.caminhoLocal) ? materialLocalURL(mat) : '';
   if (local) return `<a href="${escapeHTML(local)}" target="_blank" rel="noopener noreferrer">📁 ${label}</a>`;
   return `<span>${label}${mat.caminhoLocal ? (conhecidos.has(mat.caminhoLocal) ? ' — configure a pasta do acervo local' : ' — arquivo não encontrado no índice local') : ' — sem arquivo acessível'}</span>`;
+}
+
+function copiarCaminhoArquivo(caminho) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(caminho).then(() => {
+      mostrarAlerta('Caminho do arquivo copiado para a área de transferência!');
+    }).catch(() => {
+      mostrarAlerta('Caminho: ' + caminho);
+    });
+  } else {
+    mostrarAlerta('Caminho: ' + caminho);
+  }
 }
 
 function renderizarAulaCurso() {
@@ -67,33 +91,449 @@ function renderizarAulaCurso() {
   const relacionadas = atividadesDados.filter(t => t.fontes?.some(f => f.aulaId === aula.id));
   const sequencia = mods.flatMap(m => m.aulas);
   const indice = sequencia.findIndex(a => a.id === aula.id);
+
+  // Classificar materiais reais (excluindo legendas .vtt de exibição como anexo)
+  const todosMateriais = [...(aula.materiais || []), ...(guia.fontes || [])];
+  const vistos = new Set();
+  const materiaisValidos = [];
+  for (const m of todosMateriais) {
+    const chave = m.caminhoLocal || m.url || m.titulo;
+    if (!chave || vistos.has(chave)) continue;
+    vistos.add(chave);
+    // Filtrar fora legendas (.vtt) para não poluir a interface do estudante
+    const ehLegenda = m.tipo === 'legenda' || (m.titulo && m.titulo.toLowerCase().endsWith('.vtt')) || (m.caminhoLocal && m.caminhoLocal.toLowerCase().endsWith('.vtt'));
+    if (!ehLegenda) {
+      materiaisValidos.push(m);
+    }
+  }
+
+  const videoPrincipal = materiaisValidos.find(m => m.tipo === 'video' || (m.titulo && m.titulo.toLowerCase().endsWith('.mp4')));
+  const pdfsApoio = materiaisValidos.filter(m => m.tipo === 'pdf' || (m.titulo && m.titulo.toLowerCase().endsWith('.pdf')));
+  const outrosMateriais = materiaisValidos.filter(m => m !== videoPrincipal && !pdfsApoio.includes(m));
+
+  const urlVideo = videoPrincipal ? (videoPrincipal.url && urlDriveValida(videoPrincipal.url) ? videoPrincipal.url : materialLocalURL(videoPrincipal)) : '';
+  const caminhoVideoLocal = videoPrincipal?.caminhoLocal || '';
+
+  // Indicador de status da aula
+  const statusAulaTexto = p.praticada ? '✓ Praticada no violão' : (p.consultada ? '✓ Conteúdo assistido' : '○ Em estudo');
+  const statusAulaClass = (p.praticada || p.consultada) ? 'color: var(--success); font-weight: 600;' : 'color: var(--secondary);';
+
   $('aprender-conteudo').innerHTML = `
-    <div class="view-header"><h2>${escapeHTML(mod.nome)}</h2><p>${escapeHTML(aula.grupo_aula)} · ${escapeHTML(aula.cursoOrigem)}</p></div>
-    <div class="biblioteca-toolbar"><label>Módulo <select id="curso-modulo">${mods.map(m => `<option value="${m.id}" ${m.id===mod.id?'selected':''}>${escapeHTML(m.nome)}</option>`).join('')}</select></label>
-    <label>Aula <select id="curso-aula">${mod.aulas.map(a => `<option value="${escapeHTML(a.id)}" ${a.id===aula.id?'selected':''}>${escapeHTML(a.grupo_aula)}</option>`).join('')}</select></label></div>
-    <div class="aprender-layout"><div>
-    <section class="bloco-card"><h4>Materiais desta aula</h4>${!aula.temArquivos?'<p>Esta entrada não tem arquivo de aula no catálogo. Pode ser um quiz ou item de plataforma; classificação pendente.</p>':''}<ul>${aula.materiais.map(m => `<li>${renderizarMaterialCurso(m)}</li>`).join('')}</ul>
-    <h5>Arquivos conferidos no acervo local</h5><ul>${guia.fontes.map(m => `<li>${renderizarMaterialCurso(m)}</li>`).join('') || '<li>Nenhum material local encontrado para esta entrada.</li>'}</ul>
-    <label>Pasta raiz do acervo local <input id="curso-pasta" placeholder="C:\\Acervo" value="${escapeHTML(storageGet('metodo_triade_acervo_local')||window.ACERVO_LOCAL_PADRAO||'')}"></label><button id="curso-salvar-pasta" class="btn btn-secondary">Salvar pasta</button><p>Use a pasta que contém os dois cursos. Links locais funcionam ao abrir o aplicativo por arquivo. A existência foi conferida na geração do índice.</p></section>
-    <section class="bloco-card"><h4>Meu estudo desta aula</h4><label><input type="checkbox" id="curso-consultada" ${p.consultada?'checked':''}> Consultei o material</label><br><label><input type="checkbox" id="curso-praticada" ${p.praticada?'checked':''}> Pratiquei o trecho</label><textarea id="curso-nota" placeholder="Trecho estudado, resultado e dúvida" style="width:100%;min-height:100px">${escapeHTML(p.nota||'')}</textarea><p>Este registro é independente da avaliação das atividades de 40 minutos.</p></section>
-    </div><div><section class="bloco-card"><h4>Roteiro desta aula</h4><p>${escapeHTML(guia.autoria)}. Em revisão.</p>
-    <p><strong>Objetivo:</strong> ${escapeHTML(guia.objetivo)}</p><p><strong>Pré-requisito:</strong> ${escapeHTML(guia.prerequisito)}</p><p>${escapeHTML(guia.explicacao)}</p><p><strong>Exercício:</strong> ${escapeHTML(guia.exercicio)}</p><p><strong>Erro observável:</strong> ${escapeHTML(guia.erro)}</p><p><strong>Correção:</strong> ${escapeHTML(guia.correcao)}</p><p><strong>Critério:</strong> ${escapeHTML(guia.criterio)}</p>
-    ${guia.tipo==='aula'?`<details><summary>Sugestão de sessão de 40 minutos</summary><ol>${guia.sessao40min.map(s=>`<li><strong>${escapeHTML(s.fase)} — ${s.minutos} min:</strong> ${escapeHTML(s.instrucao)}</li>`).join('')}</ol><p>Registre o estudo desta aula nos campos à esquerda.</p></details>`:''}</section>
-    <section class="bloco-card"><h4>Pontos de consulta à fonte</h4>${guia.checkpoints.length?guia.checkpoints.map(c=>`<p><strong>${escapeHTML(c.tempo)}</strong> — ${escapeHTML(c.texto)}</p>`).join(''):'<p>Sem pontos de consulta extraídos de legenda. Consulte o vídeo ou PDF original.</p>'}
-    ${guia.legendas.map(l=>`<details><summary>${escapeHTML(l.caminhoLocal.split(/[\\/]/).at(-1))} — transcrição automática</summary><div class="curso-transcricao">${l.trechos.map(c=>`<p><strong>${escapeHTML(c.tempo)}</strong> ${escapeHTML(c.texto)}</p>`).join('')}</div></details>`).join('')}</section>
-    <details class="bloco-card"><summary>Orientação do módulo: ${escapeHTML(guiaModulo.titulo)}</summary><p>${escapeHTML(guiaModulo.objetivo)}</p><p>${escapeHTML(guiaModulo.explicacao)}</p><p>${escapeHTML(guiaModulo.exercicio)}</p></details>
-    <section class="bloco-card"><h4>Atividades complementares vinculadas à aula</h4>${relacionadas.length ? relacionadas.map(t => `<button class="btn btn-secondary curso-atividade" data-id="${t.id}">${escapeHTML(t.titulo)} · em revisão</button>`).join('') : '<p>Sem atividade complementar vinculada. Use o roteiro desta aula e seus materiais.</p>'}<p>Vínculos por referência de fonte; não indicam homologação do conteúdo.</p></section></div></div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap"><button id="curso-anterior" class="btn btn-secondary" ${indice===0?'disabled':''}>Aula anterior</button><button id="curso-proxima" class="btn btn-primary" ${indice===sequencia.length-1?'disabled':''}>Próxima aula</button><button id="curso-biblioteca" class="btn btn-secondary">Biblioteca</button><button id="curso-pratica" class="btn btn-secondary">Prática de 40 minutos</button></div>`;
-  $('curso-modulo').onchange = e => abrirAulaCurso(mods.find(m => m.id===e.target.value).aulas[0].id);
+    <div class="curso-study-room">
+      <!-- Banner de Cabeçalho e Contexto da Aula -->
+      <header class="curso-header-banner">
+        <div class="curso-context-row">
+          <div class="curso-breadcrumbs">
+            <span class="curso-badge-modulo">${escapeHTML(mod.nome.split('.')[0] || 'MÓDULO')}</span>
+            <span class="curso-badge-origem">${escapeHTML(aula.cursoOrigem || 'Método Tríade')}</span>
+            <span style="font-size: 0.8rem; ${statusAulaClass}" id="curso-status-tag">${statusAulaTexto}</span>
+          </div>
+          <div class="curso-nav-controls">
+            <button id="curso-anterior" class="btn btn-secondary btn-sm" ${indice === 0 ? 'disabled' : ''}>← Aula anterior</button>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">${indice + 1} de ${sequencia.length}</span>
+            <button id="curso-proxima" class="btn btn-primary btn-sm" ${indice === sequencia.length - 1 ? 'disabled' : ''}>Próxima aula →</button>
+          </div>
+        </div>
+
+        <div class="curso-title-row">
+          <h2>${escapeHTML(aula.grupo_aula)}</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 4px;">${escapeHTML(mod.nome)}</p>
+        </div>
+
+        <!-- Barra Seletora de Módulo e Aula -->
+        <div class="curso-selectors-grid">
+          <div class="curso-selector-group">
+            <label for="curso-modulo">Selecionar Módulo</label>
+            <select id="curso-modulo">
+              ${mods.map(m => `<option value="${m.id}" ${m.id === mod.id ? 'selected' : ''}>${escapeHTML(m.nome)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="curso-selector-group">
+            <label for="curso-aula">Selecionar Aula</label>
+            <select id="curso-aula">
+              ${mod.aulas.map(a => `<option value="${escapeHTML(a.id)}" ${a.id === aula.id ? 'selected' : ''}>${escapeHTML(a.grupo_aula)}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <!-- Layout de Duas Colunas da Sala de Estudo -->
+      <div class="curso-study-grid">
+        <!-- Coluna Esquerda: Mídia, Materiais & Diário de Estudo -->
+        <div class="curso-col-esquerda">
+          <!-- Card de Vídeo da Aula -->
+          <section class="curso-video-card">
+            <div class="curso-video-header">
+              <h3>🎬 Vídeo e Materiais da Aula</h3>
+              ${guia.tipo === 'aula' ? '<span class="status-badge status-sucesso">Aula Prática</span>' : '<span class="status-badge">Conceitual</span>'}
+            </div>
+
+            ${videoPrincipal ? `
+              <div class="curso-video-hero-box">
+                <div class="curso-video-icon">▶</div>
+                <div class="curso-video-title">${escapeHTML(aula.grupo_aula)}</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Gravação da aula com demonstração no instrumento.</p>
+                <div class="curso-video-actions">
+                  ${urlVideo ? `
+                    <a href="${escapeHTML(urlVideo)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration:none;">
+                      ▶ Assistir Aula em Vídeo
+                    </a>
+                  ` : `
+                    <button class="btn btn-primary" id="btn-abrir-video-fallback" type="button">
+                      ▶ Assistir Aula
+                    </button>
+                  `}
+                  ${caminhoVideoLocal ? `
+                    <button class="btn btn-secondary btn-sm" id="btn-copiar-caminho-video" type="button" title="Copiar caminho local do vídeo para abrir no seu reprodutor (VLC, etc.)">
+                      📋 Copiar Local do Vídeo
+                    </button>
+                  ` : ''}
+                </div>
+              </div>
+            ` : `
+              <div class="curso-video-hero-box" style="padding: 16px;">
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Esta entrada foca em diretrizes e fundamentos. Utilize o roteiro pedagógico ao lado para orientar sua prática.</p>
+              </div>
+            `}
+
+            <!-- Materiais de Apoio (PDFs / Partituras) -->
+            ${pdfsApoio.length > 0 ? `
+              <div>
+                <h4 style="font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px;">📄 Apostilas & Materiais Complementares</h4>
+                <div class="curso-materiais-list">
+                  ${pdfsApoio.map(pdf => {
+                    const url = pdf.url && urlDriveValida(pdf.url) ? pdf.url : materialLocalURL(pdf);
+                    return `
+                      <div class="curso-material-item">
+                        <div class="curso-material-info">
+                          <span class="curso-material-icon">📄</span>
+                          <span style="font-weight: 500;">${escapeHTML(pdf.titulo.replace(/^[0-9_ -]+/, ''))}</span>
+                        </div>
+                        ${url ? `
+                          <a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="text-decoration:none;">Abrir PDF</a>
+                        ` : `
+                          <span style="font-size: 0.78rem; color: var(--text-dim);">Consulte no acervo local</span>
+                        `}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${outrosMateriais.length > 0 ? `
+              <div>
+                <h4 style="font-size: 0.9rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px;">📎 Outros Arquivos da Aula</h4>
+                <div class="curso-materiais-list">
+                  ${outrosMateriais.map(m => `
+                    <div class="curso-material-item">
+                      <div class="curso-material-info">
+                        <span class="curso-material-icon">📁</span>
+                        <span>${escapeHTML(m.titulo.replace(/^[0-9_ -]+/, ''))}</span>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </section>
+
+          <!-- Card: Meu Estudo e Diário de Prática -->
+          <section class="curso-diario-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <h4 style="margin: 0;">📝 Meu Registro Desta Aula</h4>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-curso-marcar-dificuldade" style="font-size: 0.8rem; color: var(--danger); border-color: rgba(239, 68, 68, 0.3);">
+                🚩 Marcar Dificuldade (Caderno SRS)
+              </button>
+            </div>
+            <div class="curso-check-options">
+              <label class="curso-check-label">
+                <input type="checkbox" id="curso-consultada" ${p.consultada ? 'checked' : ''}>
+                <span>Assisti à aula e consultei os materiais</span>
+              </label>
+              <label class="curso-check-label">
+                <input type="checkbox" id="curso-praticada" ${p.praticada ? 'checked' : ''}>
+                <span>Pratiquei o trecho e os exercícios no violão</span>
+              </label>
+            </div>
+
+            <div>
+              <label for="curso-nota" style="display: block; font-size: 0.8rem; font-weight: 600; color: var(--tertiary); margin-bottom: 6px;">
+                Minhas Anotações & Dúvidas
+              </label>
+              <textarea id="curso-nota" placeholder="Anote aqui suas observações, afinação usada, dúvidas de digitação ou pontos para revisar na próxima sessão...">${escapeHTML(p.nota || '')}</textarea>
+              <span style="display: block; font-size: 0.75rem; color: var(--text-dim); margin-top: 4px;" id="curso-salvamento-feedback">
+                ✓ Sincronizado automaticamente com o seu progresso local.
+              </span>
+            </div>
+          </section>
+
+          <!-- Atividades Práticas Vinculadas ao Módulo -->
+          ${relacionadas.length > 0 ? `
+            <section class="curso-diario-card">
+              <h4>🎯 Treinos Práticos no Laboratório</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
+                Exercícios com tablatura, metrônomo interativo e áudio vinculados a esta aula:
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                ${relacionadas.map(t => `
+                  <button class="btn btn-secondary curso-atividade" data-id="${t.id}" style="text-align: left; padding: 10px 14px; font-size: 0.88rem;">
+                    🎸 <strong>${escapeHTML(t.titulo)}</strong>
+                  </button>
+                `).join('')}
+              </div>
+            </section>
+          ` : ''}
+
+          <!-- Gaveta Discreta: Configuração da Pasta Local do Acervo -->
+          <details class="curso-drawer">
+            <summary>⚙ Configurações de Mídia Local (opcional)</summary>
+            <div class="curso-drawer-content">
+              <p style="margin-bottom: 8px;">
+                Se você possui os vídeos baixados no computador, indique a pasta raiz para que os atalhos locais funcionem ao usar por arquivo:
+              </p>
+              <label style="display: block; margin-bottom: 4px; font-weight: 600;">Pasta do Acervo:</label>
+              <input id="curso-pasta" placeholder="C:\\Acervo" value="${escapeHTML(storageGet('metodo_triade_acervo_local') || window.ACERVO_LOCAL_PADRAO || '')}">
+              <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                <button id="curso-salvar-pasta" class="btn btn-secondary btn-sm">Salvar Pasta</button>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- Coluna Direita: Roteiro Pedagógico, Tópicos & Rotina 40 Min -->
+        <div class="curso-col-direita">
+          <!-- Card de Roteiro Pedagógico da Aula -->
+          <section class="curso-roteiro-card">
+            <div class="curso-roteiro-header">
+              <h4>Roteiro desta aula</h4>
+              <span class="curso-badge-origem">Método Tríade</span>
+            </div>
+
+            <!-- 1. Objetivo de Aprendizagem -->
+            <div class="curso-objetivo-box">
+              <strong>🎯 O que você vai dominar</strong>
+              <p>${escapeHTML(guia.objetivo)}</p>
+            </div>
+
+            <!-- 2. Pré-requisito & Preparação -->
+            <div class="curso-passo-box">
+              <strong>📌 Pré-requisito & Preparação</strong>
+              <p>${escapeHTML(guia.prerequisito)}</p>
+            </div>
+
+            <!-- 3. Instrução e Exercício Prático -->
+            <div class="curso-passo-box">
+              <strong>🎸 O que Praticar (Passo a Passo)</strong>
+              <p>${escapeHTML(guia.explicacao)}</p>
+              <div style="margin-top: 10px; padding: 10px 12px; background-color: var(--bg-surface-subtle); border-radius: var(--radius-sm); border-left: 3px solid var(--secondary);">
+                <strong style="color: var(--secondary); font-size: 0.78rem;">EXERCÍCIO RECOMENDADO:</strong>
+                <p style="margin-top: 2px; font-weight: 600; color: var(--text-main); font-size: 0.92rem;">${escapeHTML(guia.exercicio)}</p>
+              </div>
+            </div>
+
+            <!-- 4. Caixa de Erro Comum vs Correção -->
+            <div class="curso-erro-correcao-grid">
+              <div class="curso-erro-box">
+                <strong>⚠️ Falha / Erro Comum</strong>
+                <p>${escapeHTML(guia.erro)}</p>
+              </div>
+              <div class="curso-correcao-box">
+                <strong> Como Ajustar</strong>
+                <p>${escapeHTML(guia.correcao)}</p>
+              </div>
+            </div>
+
+            <!-- 5. Critério de Sucesso -->
+            <div class="curso-criterio-box">
+              <span style="font-size: 1.2rem;">🏆</span>
+              <div>
+                <strong>Critério de Domínio (Quando avançar):</strong>
+                <p style="margin-top: 2px; color: var(--text-main);">${escapeHTML(guia.criterio)}</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Momentos-Chave da Aula (Checkpoints de Estudo) -->
+          ${guia.checkpoints && guia.checkpoints.length > 0 ? `
+            <section class="curso-checkpoints-card">
+              <h4>📍 Momentos-Chave & Tópicos da Aula</h4>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                ${guia.checkpoints.map(c => `
+                  <div class="curso-checkpoint-item">
+                    <span class="curso-checkpoint-time">${formatarTempoCheckpoint(c.tempo)}</span>
+                    <span style="color: var(--text-main);">${escapeHTML(c.texto)}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </section>
+          ` : ''}
+
+          <!-- Sugestão de Sessão de Prática de 40 Minutos -->
+          ${guia.tipo === 'aula' && guia.sessao40min ? `
+            <section class="curso-rotina-card">
+              <div class="curso-rotina-header">
+                <h4>⏱ Sugestão de Sessão Guiada (40 min)</h4>
+                <span class="curso-badge-modulo">6 Blocos</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">
+                Distribuição ideal do tempo para assimilar o conteúdo desta lição com eficiência:
+              </p>
+              <div class="curso-rotina-timeline">
+                ${guia.sessao40min.map((s, idx) => `
+                  <div class="curso-rotina-step">
+                    <div class="curso-rotina-step-info">
+                      <span style="font-weight: 700; color: var(--accent); font-family: var(--font-mono);">${idx + 1}.</span>
+                      <div>
+                        <span class="curso-rotina-step-fase">${escapeHTML(s.fase)}:</span>
+                        <span class="curso-rotina-step-desc">${escapeHTML(s.instrucao)}</span>
+                      </div>
+                    </div>
+                    <span class="curso-rotina-step-min">${s.minutos} min</span>
+                  </div>
+                `).join('')}
+              </div>
+              <div style="margin-top: 6px;">
+                <button id="curso-pratica" class="btn btn-primary" style="width: 100%;">
+                  🎸 Abrir Rotina de Prática no Instrumento
+                </button>
+              </div>
+            </section>
+          ` : `
+            <div style="margin-top: 6px;">
+              <button id="curso-pratica" class="btn btn-secondary" style="width: 100%;">
+                🎸 Abrir Prática no Instrumento
+              </button>
+            </div>
+          `}
+
+          <!-- Orientação Geral do Módulo -->
+          ${guiaModulo ? `
+            <details class="curso-drawer">
+              <summary>📖 Visão Geral do Módulo: ${escapeHTML(guiaModulo.titulo)}</summary>
+              <div class="curso-drawer-content">
+                <p><strong>Objetivo do Módulo:</strong> ${escapeHTML(guiaModulo.objetivo)}</p>
+                <p style="margin-top: 6px;"><strong>Fundamentação:</strong> ${escapeHTML(guiaModulo.explicacao)}</p>
+                <p style="margin-top: 6px; color: var(--secondary);"><strong>Diretriz de Prática:</strong> ${escapeHTML(guiaModulo.exercicio)}</p>
+              </div>
+            </details>
+          ` : ''}
+
+          <!-- Transcrição das Falas do Professor (Recolhida) -->
+          ${guia.legendas && guia.legendas.length > 0 ? `
+            <details class="curso-drawer">
+              <summary>💬 Transcrição das Orientações em Texto</summary>
+              <div class="curso-drawer-content curso-transcricao" style="max-height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px;">
+                ${guia.legendas.flatMap(l => l.trechos).map(c => `
+                  <p style="font-size: 0.84rem; line-height: 1.5;">
+                    <strong style="color: var(--secondary); font-family: var(--font-mono);">${formatarTempoCheckpoint(c.tempo)}</strong>:
+                    <span style="color: var(--text-main);">${escapeHTML(c.texto)}</span>
+                  </p>
+                `).join('')}
+              </div>
+            </details>
+          ` : ''}
+        </div>
+      </div>
+
+      <!-- Barra Inferior de Navegação e Atalhos Rápidos -->
+      <footer style="display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 16px 20px; background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); margin-top: 10px;">
+        <div style="display: flex; gap: 10px;">
+          <button id="curso-anterior-bot" class="btn btn-secondary" ${indice === 0 ? 'disabled' : ''}>← Aula anterior</button>
+          <button id="curso-proxima-bot" class="btn btn-primary" ${indice === sequencia.length - 1 ? 'disabled' : ''}>Próxima aula →</button>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button id="curso-biblioteca" class="btn btn-secondary">Catálogo Completo</button>
+        </div>
+      </footer>
+    </div>
+  `;
+
+  // Event Handlers
+  $('curso-modulo').onchange = e => abrirAulaCurso(mods.find(m => m.id === e.target.value).aulas[0].id);
   $('curso-aula').onchange = e => abrirAulaCurso(e.target.value);
-  const registrar = () => { contexto.progresso[aula.id] = {consultada:$('curso-consultada').checked,praticada:$('curso-praticada').checked,nota:$('curso-nota').value.slice(0,10000)}; salvarEstado(); };
-  $('curso-consultada').onchange = registrar; $('curso-praticada').onchange = registrar; $('curso-nota').oninput = registrar;
-  $('curso-salvar-pasta').onclick = () => { const base=$('curso-pasta').value.trim(); if (base && !/^[a-z]:[\\/]/i.test(base)) { mostrarAlerta('Informe um caminho absoluto, como C:\\Acervo.'); return; } storageSet('metodo_triade_acervo_local',base); renderizarAulaCurso(); };
-  $('curso-anterior').onclick = () => { if(indice>0) abrirAulaCurso(sequencia[indice-1].id); };
-  $('curso-proxima').onclick = () => { if(indice<sequencia.length-1) abrirAulaCurso(sequencia[indice+1].id); };
+
+  const registrar = () => {
+    contexto.progresso[aula.id] = {
+      consultada: $('curso-consultada').checked,
+      praticada: $('curso-praticada').checked,
+      nota: $('curso-nota').value.slice(0, 10000)
+    };
+    salvarEstado();
+
+    const tag = $('curso-status-tag');
+    if (tag) {
+      if (contexto.progresso[aula.id].praticada) {
+        tag.textContent = '✓ Praticada no violão';
+        tag.style.color = 'var(--success)';
+      } else if (contexto.progresso[aula.id].consultada) {
+        tag.textContent = '✓ Conteúdo assistido';
+        tag.style.color = 'var(--success)';
+      } else {
+        tag.textContent = '○ Em estudo';
+        tag.style.color = 'var(--secondary)';
+      }
+    }
+  };
+
+  $('curso-consultada').onchange = registrar;
+  $('curso-praticada').onchange = registrar;
+  $('curso-nota').oninput = registrar;
+
+  const btnMarcarDif = $('btn-curso-marcar-dificuldade');
+  if (btnMarcarDif) {
+    btnMarcarDif.onclick = () => {
+      if (typeof abrirModalDificuldade === 'function') {
+        abrirModalDificuldade(aula);
+      }
+    };
+  }
+
+  $('curso-salvar-pasta').onclick = () => {
+    const base = $('curso-pasta').value.trim();
+    if (base && !/^[a-z]:[\\/]/i.test(base)) {
+      mostrarAlerta('Informe um caminho absoluto, como C:\\Acervo.');
+      return;
+    }
+    storageSet('metodo_triade_acervo_local', base);
+    mostrarAlerta('Pasta do acervo configurada com sucesso!');
+    renderizarAulaCurso();
+  };
+
+  const irAnterior = () => { if (indice > 0) abrirAulaCurso(sequencia[indice - 1].id); };
+  const irProxima = () => { if (indice < sequencia.length - 1) abrirAulaCurso(sequencia[indice + 1].id); };
+
+  $('curso-anterior').onclick = irAnterior;
+  $('curso-proxima').onclick = irProxima;
+
+  const antBot = $('curso-anterior-bot');
+  if (antBot) antBot.onclick = irAnterior;
+  const proxBot = $('curso-proxima-bot');
+  if (proxBot) proxBot.onclick = irProxima;
+
   $('curso-biblioteca').onclick = () => navegarPara('biblioteca');
   $('curso-pratica').onclick = () => navegarPara('praticar');
-  document.querySelectorAll('.curso-atividade').forEach(b => b.onclick = () => navegarPara('aprender', b.dataset.id));
+
+  const btnCopiar = $('btn-copiar-caminho-video');
+  if (btnCopiar && caminhoVideoLocal) {
+    btnCopiar.onclick = () => {
+      const base = storageGet('metodo_triade_acervo_local') || window.ACERVO_LOCAL_PADRAO || '';
+      const caminhoCompleto = base ? `${base}\\${caminhoVideoLocal}` : caminhoVideoLocal;
+      copiarCaminhoArquivo(caminhoCompleto);
+    };
+  }
+
+  const btnVideoFallback = $('btn-abrir-video-fallback');
+  if (btnVideoFallback) {
+    btnVideoFallback.onclick = () => {
+      mostrarAlerta('Abra o vídeo correspondente a esta aula no seu reprodutor ou configure a pasta do acervo nas configurações abaixo.');
+    };
+  }
+
+  document.querySelectorAll('.curso-atividade').forEach(b => {
+    b.onclick = () => navegarPara('aprender', b.dataset.id);
+  });
+
   atualizarTimer();
   return true;
 }

@@ -1,0 +1,10 @@
+{
+  "name": "Método Tríade — Ambiente de Aprendizagem de Violão",
+  "description": "Sistema de estudo e prática de violão com catálogo integrado do Método Tríade, rotinas de 40 minutos, metrônomo e afinador.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

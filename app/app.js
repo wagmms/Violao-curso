@@ -131,6 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement && document.body.classList.contains('modo-estante')) {
       document.body.classList.remove('modo-estante');
+      pararAutoScrollEstante();
+      removerBarraEstante();
     }
   });
 
@@ -145,6 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+let autoScrollAnimId = null;
+let autoScrollAtivo = false;
+let autoScrollVelocidade = 1; // pixels por frame (~60px/s)
+
 function toggleModoEstante() {
   const isEstante = document.body.classList.toggle('modo-estante');
   if (isEstante) {
@@ -153,12 +159,111 @@ function toggleModoEstante() {
         console.warn('Erro ao entrar em tela cheia', err);
       });
     }
+    criarBarraEstante();
+    mostrarToastAtalho('Modo Estante ativado (F ou Esc para sair)');
   } else {
+    pararAutoScrollEstante();
+    removerBarraEstante();
     if (document.fullscreenElement && document.exitFullscreen) {
       document.exitFullscreen().catch(err => {
         console.warn('Erro ao sair da tela cheia', err);
       });
     }
+    mostrarToastAtalho('Modo Estante desativado');
+  }
+}
+
+function criarBarraEstante() {
+  removerBarraEstante();
+  const bar = document.createElement('div');
+  bar.id = 'estante-floating-bar';
+  bar.className = 'estante-autoscroll-bar';
+  bar.innerHTML = `
+    <span style="font-weight: 700; color: var(--accent);">🎼 Estante:</span>
+    <button type="button" class="btn-autoscroll-toggle" id="btn-toggle-scroll">▶ Rolar Partitura</button>
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <span style="font-size: 0.75rem; color: #bbb;">Velocidade:</span>
+      <button type="button" class="tab-metro-btn" id="btn-scroll-slow" title="Mais lento">-</button>
+      <span id="scroll-spd-display" style="font-family: var(--font-mono); font-weight: 700; min-width: 28px; text-align: center;">1x</span>
+      <button type="button" class="tab-metro-btn" id="btn-scroll-fast" title="Mais rápido">+</button>
+    </div>
+    <button type="button" class="tab-metro-btn" id="btn-scroll-top" title="Voltar ao Topo">⬆ Topo</button>
+    <button type="button" class="btn btn-ghost btn-sm" id="btn-fechar-estante" style="color: #fff; padding: 4px 8px;" title="Sair do Modo Estante">✕ Sair</button>
+  `;
+  document.body.appendChild(bar);
+
+  const btnToggle = bar.querySelector('#btn-toggle-scroll');
+  const btnSlow = bar.querySelector('#btn-scroll-slow');
+  const btnFast = bar.querySelector('#btn-scroll-fast');
+  const btnTop = bar.querySelector('#btn-scroll-top');
+  const btnFechar = bar.querySelector('#btn-fechar-estante');
+  const spdDisplay = bar.querySelector('#scroll-spd-display');
+
+  btnToggle.onclick = () => {
+    if (autoScrollAtivo) {
+      pararAutoScrollEstante();
+      btnToggle.textContent = '▶ Rolar Partitura';
+      btnToggle.classList.remove('ativo');
+    } else {
+      iniciarAutoScrollEstante();
+      btnToggle.textContent = '⏸ Pausar';
+      btnToggle.classList.add('ativo');
+    }
+  };
+
+  btnSlow.onclick = () => {
+    autoScrollVelocidade = Math.max(0.25, autoScrollVelocidade - 0.25);
+    spdDisplay.textContent = `${autoScrollVelocidade}x`;
+  };
+
+  btnFast.onclick = () => {
+    autoScrollVelocidade = Math.min(3, autoScrollVelocidade + 0.25);
+    spdDisplay.textContent = `${autoScrollVelocidade}x`;
+  };
+
+  btnTop.onclick = () => {
+    const mainElem = document.querySelector('.main-content') || window;
+    mainElem.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  btnFechar.onclick = () => {
+    toggleModoEstante();
+  };
+}
+
+function removerBarraEstante() {
+  const bar = document.getElementById('estante-floating-bar');
+  if (bar) bar.remove();
+}
+
+function iniciarAutoScrollEstante() {
+  pararAutoScrollEstante();
+  autoScrollAtivo = true;
+  const mainElem = document.querySelector('.main-content') || document.documentElement;
+
+  function passoScroll() {
+    if (!autoScrollAtivo) return;
+    mainElem.scrollTop += autoScrollVelocidade;
+    // Se atingir o fim da página, encerra a rolagem suavemente
+    if (mainElem.scrollTop + mainElem.clientHeight >= mainElem.scrollHeight - 2) {
+      pararAutoScrollEstante();
+      const btnToggle = document.getElementById('btn-toggle-scroll');
+      if (btnToggle) {
+        btnToggle.textContent = '▶ Rolar Partitura';
+        btnToggle.classList.remove('ativo');
+      }
+      return;
+    }
+    autoScrollAnimId = requestAnimationFrame(passoScroll);
+  }
+  autoScrollAnimId = requestAnimationFrame(passoScroll);
+}
+
+function pararAutoScrollEstante() {
+  autoScrollAtivo = false;
+  if (autoScrollAnimId) {
+    cancelAnimationFrame(autoScrollAnimId);
+    autoScrollAnimId = null;
   }
 }
 
