@@ -1,0 +1,53 @@
+{
+  "data": "2026-09-14",
+  "fonte": {
+    "id": "arq-0460",
+    "caminho": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/0. Pequena Valsa",
+    "tamanho": 128104,
+    "sha256": "8a6ab1739f7eec07f758aec998244e82d891b280ba43bf87b003e78328252b32",
+    "confere": true
+  },
+  "wav": {
+    "riff": "RIFF",
+    "sampleRate": 44100,
+    "canais": 1,
+    "bits": 16,
+    "duracao_se_header_pcm_padrao": 6,
+    "limite": "Header PCM padrão; sem escuta humana ou análise espectral nesta rodada."
+  },
+  "lacunas_validador": [
+    {
+      "teste": "link declarado quebrado",
+      "aceito_indevidamente": true,
+      "erros": []
+    },
+    {
+      "teste": "início alterado",
+      "aceito_indevidamente": true,
+      "erros": []
+    },
+    {
+      "teste": "corda incompatível com altura",
+      "aceito_indevidamente": true,
+      "erros": []
+    }
+  ],
+  "observacao_visual": {
+    "fonte_c4_pauta": [
+      "D5",
+      "B4",
+      "G4"
+    ],
+    "fonte_c4_tablatura": [
+      "corda 1 casa 3",
+      "corda 1 casa 0",
+      "corda 3 casa 0"
+    ],
+    "alturas_escritas_implicadas_pela_tab": [
+      "G5",
+      "E5",
+      "G4"
+    ],
+    "limite": "Leitura direta da imagem arq-0460.png e do recorte; causa da divergência desconhecida. Não assumir correção da edição original."
+  }
+}
