@@ -86,3 +86,51 @@ function atividadeTemSessao(ativ) {
 function novoId(prefixo) {
   return prefixo + '-' + (window.crypto?.randomUUID?.() || (Date.now() + '-' + Math.random().toString(36).slice(2)));
 }
+
+function sanitizarAnotacaoPratica(texto) {
+  return escapeHTML((texto ?? '').replace(/\r\n/g, '\n'));
+}
+
+function dessanitizarAnotacaoPratica(texto) {
+  const area = document.createElement('textarea');
+  area.innerHTML = typeof texto === 'string' ? texto : '';
+  return area.value;
+}
+
+function obterAnotacaoPratica(atividadeId) {
+  if (!atividadeId || !state?.anotacoes || typeof state.anotacoes !== 'object') return '';
+  return dessanitizarAnotacaoPratica(state.anotacoes[atividadeId] || '');
+}
+
+function atividadeTemAnotacao(atividadeId) {
+  if (!atividadeId || !state?.anotacoes || typeof state.anotacoes !== 'object') return false;
+  return typeof state.anotacoes[atividadeId] === 'string' && state.anotacoes[atividadeId].trim().length > 0;
+}
+
+function salvarAnotacaoPratica(atividadeId, texto) {
+  if (!atividadeId) return;
+  if (!state.anotacoes || typeof state.anotacoes !== 'object') state.anotacoes = {};
+  const notaSanitizada = sanitizarAnotacaoPratica(texto);
+  if (notaSanitizada.trim().length === 0) delete state.anotacoes[atividadeId];
+  else state.anotacoes[atividadeId] = notaSanitizada;
+  salvarEstado();
+}
+
+function configurarCampoAnotacoesPratica(textarea, atividadeId) {
+  if (!textarea || !atividadeId) return;
+  textarea.value = obterAnotacaoPratica(atividadeId);
+  let debounceId = null;
+  const salvarAgora = () => salvarAnotacaoPratica(atividadeId, textarea.value);
+  textarea.addEventListener('input', () => {
+    if (debounceId) clearTimeout(debounceId);
+    debounceId = setTimeout(() => {
+      debounceId = null;
+      salvarAgora();
+    }, 500);
+  });
+  textarea.addEventListener('blur', () => {
+    if (debounceId) clearTimeout(debounceId);
+    debounceId = null;
+    salvarAgora();
+  });
+}

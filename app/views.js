@@ -168,6 +168,17 @@ function renderizarTelaHoje() {
     $('card-alt-biblioteca').onclick = () => navegarPara('biblioteca');
   }
 
+function obterAulasComAnotacoes() {
+    const aulas = new Set();
+    for (const atividade of atividadesDados) {
+      if (!atividadeTemAnotacao(atividade.id)) continue;
+      for (const fonte of atividade.fontes || []) {
+        if (fonte && typeof fonte.aulaId === 'string' && fonte.aulaId) aulas.add(fonte.aulaId);
+      }
+    }
+    return aulas;
+  }
+
   function gerarDiagramaBracoSVG(nivelAtual, ativ) {
     return `
       <div class="fretboard-card" style="margin-bottom: 16px;">
@@ -330,6 +341,13 @@ function renderizarTelaHoje() {
           </div>
 
           <div class="bloco-card">
+            <details class="anotacoes-pratica-toggle" id="anotacoes-toggle-aprender" ${atividadeTemAnotacao(ativ.id) ? 'open' : ''}>
+              <summary>Minhas Anotações de Prática</summary>
+              <textarea id="input-anotacoes-aprender" rows="5" class="anotacoes-pratica-texto" placeholder="Ex: relaxar o polegar esquerdo no compasso 3..."></textarea>
+            </details>
+          </div>
+
+          <div class="bloco-card">
             <h4>Fundamentação e Termos Técnicos</h4>
             <p style="font-size: 0.9rem; line-height: 1.55; color: var(--text-muted);">${escapeHTML(ativ.explicacao)}</p>
             <div style="margin-top: 12px; font-size: 0.85rem;">
@@ -429,6 +447,7 @@ function renderizarTelaHoje() {
     $('btn-trocar-atividade').onclick = () => navegarPara('praticar');
     $('btn-registrar-dificuldade-rapida').onclick = () => abrirModalDificuldade(ativ);
     $('btn-concluir-sessao').onclick = () => abrirModalResultado(ativ);
+    configurarCampoAnotacoesPratica($('input-anotacoes-aprender'), ativ.id);
 
     renderizarFerramentaInterativa(ativ);
   }
@@ -1641,7 +1660,7 @@ function renderizarFerramentaInterativa(ativ) {
             <div class="card-atividade">
               <div class="card-atividade-topo">
                 <span class="card-area-badge">${escapeHTML(a.area)}</span>
-                <h4>${escapeHTML(a.titulo)}</h4>
+                <h4>${escapeHTML(a.titulo)}${atividadeTemAnotacao(a.id) ? ' <span class="indicador-anotacao" title="Esta atividade possui anotações salvas" aria-label="atividade com anotações">📝</span>' : ''}</h4>
                 <p>${escapeHTML(a.metaObservavel)}</p>
                 <div class="card-tags">
                   ${a.tags.map(t => `<span class="tag-pill">#${escapeHTML(t)}</span>`).join('')}
@@ -1969,6 +1988,7 @@ function filtrarBiblioteca() {
     const query = ($('bib-busca').value || '').trim().toLowerCase();
     const modId = $('bib-filtro-modulo').value;
     const tipo = $('bib-filtro-tipo').value;
+    const aulasComAnotacoes = obterAulasComAnotacoes();
 
     let totalEncontrado = 0;
     listaContainer.innerHTML = '';
@@ -2005,7 +2025,7 @@ function filtrarBiblioteca() {
           ${aulasFiltradas.map(aula => `
             <div class="aula-item">
               <div class="aula-item-info">
-                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}</span>
+                <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}${aulasComAnotacoes.has(aula.id) ? ' <span class="indicador-anotacao" title="Esta atividade possui anotações salvas" aria-label="atividade com anotações">📝</span>' : ''}</span>
                 <div class="aula-item-links">
                   ${aula.materiais.map(mat => {
                     if (mat.utilizavel && mat.url && mat.url.startsWith('https://drive.google.com')) {

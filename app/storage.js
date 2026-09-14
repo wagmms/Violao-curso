@@ -26,6 +26,7 @@ var state = {
   revisoes: [],
   treinoOuvido: null,
   habilidades: {},
+  anotacoes: {},
   legado: { assistidos: [], praticados: [], notas: {} }
 };
 
@@ -192,6 +193,20 @@ function validarEsquemaBackup(obj) {
         if (typeof obj.habilidades !== 'object' || Array.isArray(obj.habilidades) || obj.habilidades === null) {
           throw new Error('Campo "habilidades" deve ser um objeto.');
         }
+
+        // Validação de Anotações por atividade (se fornecidas)
+        let anotacoesValidadas = {};
+        if (obj.anotacoes !== undefined) {
+          if (typeof obj.anotacoes !== 'object' || Array.isArray(obj.anotacoes) || obj.anotacoes === null) {
+            throw new Error('Campo "anotacoes" deve ser um mapa por atividade.');
+          }
+          anotacoesValidadas = Object.fromEntries(
+            Object.entries(obj.anotacoes)
+              .filter(([atividadeId, texto]) => ATIVIDADES_VALIDAS_IDS.has(atividadeId) && typeof texto === 'string')
+              .map(([atividadeId, texto]) => [atividadeId, sanitizarAnotacaoPratica(texto)])
+              .filter(([, texto]) => texto.trim().length > 0)
+          );
+        }
         for (const [slug, hab] of Object.entries(obj.habilidades)) {
           if (!hab || typeof hab !== 'object') throw new Error(`Habilidade inválida para slug: ${slug}`);
           if (!HABILIDADES_STATUS_VALIDOS.has(hab.status)) throw new Error(`Status de habilidade inválido: ${hab.status}`);
@@ -267,6 +282,7 @@ function validarEsquemaBackup(obj) {
           revisoes: obj.revisoes,
           treinoOuvido: validarSerieOuvido(obj.treinoOuvido),
           habilidades: (obj.habilidades && typeof obj.habilidades === 'object') ? obj.habilidades : {},
+          anotacoes: anotacoesValidadas,
           legado: legadoValidado
         }
       };
@@ -427,6 +443,7 @@ async function processarArquivoBackup(event) {
             revisoes: Array.from(revsMap.values()),
             treinoOuvido: state.treinoOuvido || d.treinoOuvido,
             habilidades: { ...d.habilidades, ...state.habilidades }, // local ganha habilidades
+            anotacoes: { ...d.anotacoes, ...state.anotacoes }, // local ganha anotações
             legado: {
               assistidos: [...new Set([...state.legado.assistidos, ...d.legado.assistidos])],
               praticados: [...new Set([...state.legado.praticados, ...d.legado.praticados])],
@@ -467,7 +484,7 @@ function recuperarRegistrosValidos(original) {
     nivelExercicioAtual: NIVEIS_VALIDOS.has(original.nivelExercicioAtual) ? original.nivelExercicioAtual : seguro.nivelExercicioAtual };
   base.sessao = novaSessao(base.atividadeAtualId, base.nivelExercicioAtual);
   tentar(base);
-  for (const campo of ['perfil', 'sessao', 'legado', 'treinoOuvido']) if (original[campo]) tentar({ ...seguro, [campo]: original[campo] });
+  for (const campo of ['perfil', 'sessao', 'legado', 'treinoOuvido', 'anotacoes']) if (original[campo]) tentar({ ...seguro, [campo]: original[campo] });
   for (const campo of ['tentativas', 'dificuldades', 'revisoes']) {
     for (const registro of Array.isArray(original[campo]) ? original[campo] : []) tentar({ ...seguro, [campo]: [...seguro[campo], registro] });
   }
