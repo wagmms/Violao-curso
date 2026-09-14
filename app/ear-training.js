@@ -2,7 +2,7 @@ function criarSerieOuvido(nivel = null) {
   return {id: novoId('serie'), sessaoId: state.sessao.id, atividadeId: state.atividadeAtualId, nivel,
     perguntaAtual:1, totalPerguntas:10, acertos:0, respondido:false, intervaloSorteado:null, serieEncerrada:false, historico:[]};
 }
-var treinoOuvido = null;
+let treinoOuvido = null;
 
 function validarSerieOuvido(serie) {
   if (serie == null) return null;
