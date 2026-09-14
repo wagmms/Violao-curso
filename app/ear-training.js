@@ -8,9 +8,17 @@ function validarSerieOuvido(serie) {
   if (serie == null) return null;
   const ativ = atividadesDados.find(a => a.id === serie.atividadeId);
   const permitidos = ativ?.exercicio.intervalosPorNivel?.[serie.nivel];
-  if (!permitidos || typeof serie.id !== 'string' || typeof serie.sessaoId !== 'string' || serie.totalPerguntas !== 10 ||
-      !Number.isInteger(serie.perguntaAtual) || serie.perguntaAtual < 1 || serie.perguntaAtual > 10 ||
-      typeof serie.respondido !== 'boolean' || typeof serie.serieEncerrada !== 'boolean' || !Array.isArray(serie.historico)) throw new Error('Série auditiva inválida.');
+
+  if (!permitidos) throw new Error('Série auditiva inválida.');
+  if (typeof serie.id !== 'string') throw new Error('Série auditiva inválida.');
+  if (typeof serie.sessaoId !== 'string') throw new Error('Série auditiva inválida.');
+  if (serie.totalPerguntas !== 10) throw new Error('Série auditiva inválida.');
+  if (!Number.isInteger(serie.perguntaAtual)) throw new Error('Série auditiva inválida.');
+  if (serie.perguntaAtual < 1 || serie.perguntaAtual > 10) throw new Error('Série auditiva inválida.');
+  if (typeof serie.respondido !== 'boolean') throw new Error('Série auditiva inválida.');
+  if (typeof serie.serieEncerrada !== 'boolean') throw new Error('Série auditiva inválida.');
+  if (!Array.isArray(serie.historico)) throw new Error('Série auditiva inválida.');
+
   const esperado = serie.perguntaAtual - (serie.respondido ? 0 : 1);
   if (serie.historico.length !== esperado || (serie.serieEncerrada && (esperado !== 10 || !serie.respondido))) throw new Error('Série auditiva incompleta ou inconsistente.');
   for (const [i,h] of serie.historico.entries()) {
