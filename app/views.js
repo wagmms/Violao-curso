@@ -264,6 +264,18 @@ function renderizarTelaHoje() {
               <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2px;">${escapeHTML(nivelAtual.descricao)}</p>
             </div>
 
+            <div class="exercicio-meta-bar">
+              <div><span>⏱ Andamento:</span> <strong>${nivelAtual.bpm || ativ.exercicio.bpmSugerido || 60} BPM</strong></div>
+              <div><span>𝄞 Compasso:</span> <strong>${ativ.exercicio.compasso || '4/4'}</strong></div>
+              ${nivelAtual.repeticoes ? `<div><span>🔁 Meta:</span> <strong>${escapeHTML(nivelAtual.repeticoes)}</strong></div>` : ''}
+              <div class="tab-metro-box" style="margin-left: auto;">
+                <button type="button" class="tab-metro-btn" id="btn-tab-metro-down" title="Diminuir 5 BPM">-5</button>
+                <button type="button" class="tab-metro-btn btn-metro-play" id="btn-tab-metro-play" title="Ligar/Desligar Metrônomo">▶ Metrônomo</button>
+                <button type="button" class="tab-metro-btn" id="btn-tab-metro-up" title="Aumentar 5 BPM">+5</button>
+                <button type="button" class="tab-metro-btn" id="btn-tab-metro-tap" title="Clique no pulso para definir o andamento">Tap Tempo</button>
+              </div>
+            </div>
+
             ${gerarDiagramaExercicio(nivelAtual, ativ)}
 
             ${window.renderizarTablatura(nivelAtual.tablatura, "tab-container-" + ativ.id)}
@@ -337,6 +349,104 @@ function renderizarTelaHoje() {
     $('btn-trocar-atividade').onclick = () => navegarPara('praticar');
     $('btn-registrar-dificuldade-rapida').onclick = () => abrirModalDificuldade(ativ);
     $('btn-concluir-sessao').onclick = () => abrirModalResultado(ativ);
+
+    // Eventos do Mini-Metrônomo Interativo da Tablatura
+    const btnTabPlay = $('btn-tab-metro-play');
+    const btnTabDown = $('btn-tab-metro-down');
+    const btnTabUp = $('btn-tab-metro-up');
+    const btnTabTap = $('btn-tab-metro-tap');
+
+    let tapTimes = [];
+    const nivelBpmBase = nivelAtual.bpm || ativ.exercicio.bpmSugerido || 60;
+    if (AudioMotor && !AudioMotor.isAtivo()) {
+      AudioMotor.setBpm(nivelBpmBase);
+    }
+
+    const atualizarEstadoBtnPlay = () => {
+      if (!btnTabPlay) return;
+      const ativo = AudioMotor && AudioMotor.isAtivo();
+      btnTabPlay.textContent = ativo ? '⏹ Parar' : '▶ Metrônomo';
+      if (!ativo) btnTabPlay.classList.remove('pulsando');
+    };
+
+    if (btnTabPlay) {
+      atualizarEstadoBtnPlay();
+      btnTabPlay.onclick = () => {
+        if (!AudioMotor) return;
+        if (AudioMotor.isAtivo()) {
+          AudioMotor.pararMetronomo();
+          atualizarEstadoBtnPlay();
+          const btnMetroPainel = $('btn-metro-toggle');
+          if (btnMetroPainel) btnMetroPainel.textContent = '▶ Ligar Metrônomo';
+          if (typeof limparDotsMetronomo === 'function') limparDotsMetronomo();
+        } else {
+          const bpmAtual = AudioMotor.getBpm() || nivelBpmBase;
+          AudioMotor.iniciarMetronomo(bpmAtual, 4, false, pulsoInfo => {
+            if (btnTabPlay) {
+              btnTabPlay.classList.toggle('pulsando', pulsoInfo.tempo === 1);
+            }
+            if (typeof atualizarDotsMetronomo === 'function') {
+              atualizarDotsMetronomo(pulsoInfo.tempo, pulsoInfo.isAcento, pulsoInfo.isCountIn);
+            }
+          });
+          atualizarEstadoBtnPlay();
+          const btnMetroPainel = $('btn-metro-toggle');
+          if (btnMetroPainel) btnMetroPainel.textContent = '⏹ Parar Metrônomo';
+        }
+      };
+    }
+
+    if (btnTabDown) {
+      btnTabDown.onclick = () => {
+        if (!AudioMotor) return;
+        const novoBpm = Math.max(30, AudioMotor.getBpm() - 5);
+        AudioMotor.setBpm(novoBpm);
+        const metroReadout = $('metro-bpm-val');
+        if (metroReadout) metroReadout.textContent = novoBpm;
+        const metroSlider = $('metro-slider');
+        if (metroSlider) metroSlider.value = novoBpm;
+        mostrarToastAtalho(`Andamento: ${novoBpm} BPM (-5)`);
+      };
+    }
+
+    if (btnTabUp) {
+      btnTabUp.onclick = () => {
+        if (!AudioMotor) return;
+        const novoBpm = Math.min(240, AudioMotor.getBpm() + 5);
+        AudioMotor.setBpm(novoBpm);
+        const metroReadout = $('metro-bpm-val');
+        if (metroReadout) metroReadout.textContent = novoBpm;
+        const metroSlider = $('metro-slider');
+        if (metroSlider) metroSlider.value = novoBpm;
+        mostrarToastAtalho(`Andamento: ${novoBpm} BPM (+5)`);
+      };
+    }
+
+    if (btnTabTap) {
+      btnTabTap.onclick = () => {
+        const agora = Date.now();
+        tapTimes.push(agora);
+        if (tapTimes.length > 4) tapTimes.shift();
+        if (tapTimes.length >= 2) {
+          const intervalos = [];
+          for (let i = 1; i < tapTimes.length; i++) {
+            intervalos.push(tapTimes[i] - tapTimes[i - 1]);
+          }
+          const mediaMs = intervalos.reduce((a, b) => a + b, 0) / intervalos.length;
+          if (mediaMs > 200 && mediaMs < 2000) {
+            const tapBpm = Math.round(60000 / mediaMs);
+            if (AudioMotor) {
+              AudioMotor.setBpm(tapBpm);
+              const metroReadout = $('metro-bpm-val');
+              if (metroReadout) metroReadout.textContent = tapBpm;
+              const metroSlider = $('metro-slider');
+              if (metroSlider) metroSlider.value = tapBpm;
+            }
+            mostrarToastAtalho(`Tap Tempo: ${tapBpm} BPM`);
+          }
+        }
+      };
+    }
 
     renderizarFerramentaInterativa(ativ);
   }
@@ -1684,47 +1794,195 @@ function renderizarFerramentaInterativa(ativ) {
     if (!container) return;
 
     const abaAtiva = state.praticarAba || 'atividades';
+    const filtroNivel = state.praticarFiltroNivel || 'todos';
+    const moduloAcervoSel = state.praticarModuloAcervo || 'mod-1';
+    const buscaPratica = (state.praticarBusca || '').trim().toLowerCase();
+
+    // Filtra os 11 exercícios principais
+    const atividadesFiltradas = atividadesDados.filter(a => {
+      if (buscaPratica) {
+        const textoBusca = `${a.titulo} ${a.area || ''} ${a.metaObservavel || ''} ${(a.tags || []).join(' ')}`.toLowerCase();
+        if (!textoBusca.includes(buscaPratica)) return false;
+      }
+      if (filtroNivel === 'todos') return true;
+      const niv = (a.nivelDificuldade || '').toLowerCase();
+      if (filtroNivel === 'basico') return niv.includes('básico') || niv.includes('iniciante');
+      if (filtroNivel === 'intermediario') return niv.includes('intermediário');
+      if (filtroNivel === 'avancado') return niv.includes('avançado');
+      return true;
+    });
+
+    // Módulos do catálogo com aulas
+    const modulosCurso = (window.CURSO_DADOS && window.CURSO_DADOS.catalogoOriginal) ? window.CURSO_DADOS.catalogoOriginal : [];
+    const moduloAtualObj = modulosCurso.find(m => m.id === moduloAcervoSel) || modulosCurso[0];
+    let aulasDoModulo = moduloAtualObj ? moduloAtualObj.aulas : [];
+    if (buscaPratica) {
+      aulasDoModulo = aulasDoModulo.filter(aula => {
+        const guia = (window.GUIAS_AULAS && window.GUIAS_AULAS[aula.id]) ? window.GUIAS_AULAS[aula.id] : null;
+        const textoGuia = guia ? `${guia.exercicio || ''} ${guia.objetivo || ''}` : '';
+        const match = `${aula.titulo} ${aula.grupo_aula} ${textoGuia}`.toLowerCase();
+        return match.includes(buscaPratica);
+      });
+    }
 
     container.innerHTML = `
       <div class="laboratorio-header">
         <div>
           <div style="font-size:0.75rem; color:var(--secondary); text-transform:uppercase; font-weight:600; letter-spacing:0.04em;">Laboratório de Prática • Método Tríade</div>
-          <h2 style="margin:4px 0 0 0;">Central de Prática & Laboratório Harmônico</h2>
+          <h2 style="margin:4px 0 0 0;">Central de Prática & Rotinas de Treino</h2>
         </div>
         <div class="lh-tabs" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
-          <button id="tab-praticar-atividades" class="lh-tab-btn ${abaAtiva === 'atividades' ? 'ativo' : ''}" type="button">Atividades Guiadas (11)</button>
+          <button id="tab-praticar-atividades" class="lh-tab-btn ${abaAtiva === 'atividades' ? 'ativo' : ''}" type="button">Rotinas Guiadas (11)</button>
+          <button id="tab-praticar-acervo" class="lh-tab-btn ${abaAtiva === 'acervo' ? 'ativo' : ''}" type="button">Exercícios das Aulas (${modulosCurso.reduce((acc, m) => acc + m.aulas.length, 0)})</button>
           <button id="tab-praticar-laboratorio" class="lh-tab-btn ${abaAtiva === 'laboratorio' ? 'ativo' : ''}" type="button">Laboratório Harmônico (12 Trastes)</button>
-          <button id="tab-praticar-bateria" class="lh-tab-btn ${abaAtiva === 'bateria' ? 'ativo' : ''}" type="button">Bateria e Ritmos</button>
+          <button id="tab-praticar-bateria" class="lh-tab-btn ${abaAtiva === 'bateria' ? 'ativo' : ''}" type="button">Máquina de Ritmos</button>
         </div>
       </div>
 
+      <!-- PAINEL 1: 11 ATIVIDADES GUIADAS COM CARDS MODERNOS E FILTROS -->
       <div id="painel-praticar-atividades" style="display: ${abaAtiva === 'atividades' ? 'block' : 'none'};">
-        <p style="margin-bottom:16px; color:var(--text-muted); font-size:0.9rem;">
-          ${atividadesDados.filter(atividadeTemSessao).length} atividades com roteiro de sessão estruturado de 40 minutos.
-        </p>
-        <div class="praticar-cards-grid">
-          ${atividadesDados.map(a => `
-            <div class="card-atividade">
-              <div class="card-atividade-topo">
-                <span class="card-area-badge">${escapeHTML(a.area)}</span>
-                <h4>${escapeHTML(a.titulo)}${atividadeTemAnotacao(a.id) ? ' 📝' : ''}</h4>
-                <p>${escapeHTML(a.metaObservavel)}</p>
-                <div class="card-tags">
-                  ${a.tags.map(t => `<span class="tag-pill">#${escapeHTML(t)}</span>`).join('')}
+        <div class="praticar-toolbar-box">
+          <div class="search-field" style="margin-bottom: 12px;">
+            <input type="search" id="praticar-busca-input" placeholder="🔍 Buscar por título, técnica, andamento ou palavra-chave..." value="${escapeHTML(state.praticarBusca || '')}" style="width: 100%;">
+          </div>
+          <div class="praticar-filtros-row">
+            <div>
+              <span style="font-size:0.85rem; font-weight:600; color:var(--text-main);">Rotinas Estruturadas (Sessões de 40 min):</span>
+              <span style="font-size:0.8rem; color:var(--text-muted); margin-left:6px;">Metrônomo, tablaturas em 3 níveis e autoavaliação</span>
+            </div>
+            <div class="praticar-pill-group">
+              <span style="font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; font-weight:700; margin-right:4px;">Nível:</span>
+              <button class="filtro-pill btn-filtro-nivel ${filtroNivel === 'todos' ? 'ativo' : ''}" data-nivel="todos">Todos (11)</button>
+              <button class="filtro-pill btn-filtro-nivel ${filtroNivel === 'basico' ? 'ativo' : ''}" data-nivel="basico">Básico</button>
+              <button class="filtro-pill btn-filtro-nivel ${filtroNivel === 'intermediario' ? 'ativo' : ''}" data-nivel="intermediario">Intermediário</button>
+              <button class="filtro-pill btn-filtro-nivel ${filtroNivel === 'avancado' ? 'ativo' : ''}" data-nivel="avancado">Avançado</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="praticar-cards-grid-v2">
+          ${atividadesFiltradas.map(a => {
+            const nivelClass = (a.nivelDificuldade || '').toLowerCase().includes('básico') 
+              ? 'badge-nivel-basico' 
+              : (a.nivelDificuldade || '').toLowerCase().includes('avançado') 
+                ? 'badge-nivel-avancado' 
+                : 'badge-nivel-intermediario';
+
+            const ex = a.exercicio || {};
+            const bpmEx = ex.bpmSugerido ? `${ex.bpmSugerido} BPM` : '60-80 BPM';
+            const compassoEx = ex.compasso || '4/4';
+            const temNota = atividadeTemAnotacao(a.id);
+
+            return `
+              <div class="card-pratica-moderno">
+                <div>
+                  <div class="card-pratica-header">
+                    <span class="badge-nivel ${nivelClass}">${escapeHTML(a.nivelDificuldade || 'Geral')}</span>
+                    <span class="badge-categoria">${escapeHTML(a.area || 'Estudo')}</span>
+                  </div>
+
+                  <h4 class="card-pratica-title">
+                    ${escapeHTML(a.titulo)}
+                    ${temNota ? '<span title="Possui anotação pessoal" style="font-size:0.85rem;"> 📝</span>' : ''}
+                  </h4>
+
+                  <p class="card-pratica-meta">${escapeHTML(a.metaObservavel)}</p>
+
+                  <div class="card-pratica-specs">
+                    <div class="spec-item" title="Andamento Alvo">
+                      <span>⏱</span> <strong>${bpmEx}</strong>
+                    </div>
+                    <div class="spec-item" title="Fórmula de Compasso">
+                      <span>𝄞</span> <strong>${compassoEx}</strong>
+                    </div>
+                    <div class="spec-item" title="Estrutura de Estudo">
+                      <span>⏳</span> <strong>40 min (6 blocos)</strong>
+                    </div>
+                  </div>
+
+                  <div class="card-pratica-tags">
+                    ${(a.tags || []).slice(0, 4).map(t => `<span class="tag-pill">#${escapeHTML(t)}</span>`).join('')}
+                  </div>
+                </div>
+
+                <div class="card-pratica-footer">
+                  <button class="btn btn-primary btn-iniciar-ativ" data-id="${escapeHTML(a.id)}" type="button" style="flex:1;">
+                    🎯 Praticar Sessão Completa
+                  </button>
                 </div>
               </div>
-              <button class="btn btn-primary btn-iniciar-ativ" data-id="${escapeHTML(a.id)}" type="button" style="width: 100%;" ${atividadeTemSessao(a) ? '' : 'disabled'}>
-                ${atividadeTemSessao(a) ? 'Praticar esta atividade' : 'Proposta em elaboração'}
-              </button>
-            </div>
-          `).join('')}
+            `;
+          }).join('')}
         </div>
       </div>
 
+      <!-- PAINEL 2: ACERVO COMPLETO DE PRÁTICA (631 EXERCÍCIOS DAS AULAS) -->
+      <div id="painel-praticar-acervo" style="display: ${abaAtiva === 'acervo' ? 'block' : 'none'};">
+        <div class="acervo-modulo-selector-card">
+          <div style="flex: 1; min-width: 260px;">
+            <label for="select-modulo-pratica" style="display:block; font-size:0.82rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px;">
+              Escolha o Módulo do Método Tríade:
+            </label>
+            <select id="select-modulo-pratica" class="form-select" style="width:100%; padding:10px 14px; font-size:0.95rem; font-weight:600; border-radius:var(--radius-sm);">
+              ${modulosCurso.map(m => `
+                <option value="${m.id}" ${m.id === moduloAcervoSel ? 'selected' : ''}>
+                  ${escapeHTML(m.nome)} (${m.aulas.length} exercícios)
+                </option>
+              `).join('')}
+            </select>
+          </div>
+          <div style="flex: 1; min-width: 220px;">
+            <label for="praticar-busca-acervo-input" style="display:block; font-size:0.82rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px;">
+              Filtrar no Módulo:
+            </label>
+            <input type="search" id="praticar-busca-acervo-input" placeholder="🔍 Ex: batida, escala, arpejo..." value="${escapeHTML(state.praticarBusca || '')}" style="width:100%; padding:10px 14px; font-size:0.9rem; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); background:var(--bg-surface-inset); color:var(--text-main);">
+          </div>
+          <div style="text-align:right;">
+            <span style="font-size:0.85rem; color:var(--text-muted);">Total no acervo:</span>
+            <strong style="font-size:1.1rem; color:var(--accent); display:block; font-family:var(--font-mono);">${modulosCurso.reduce((acc, m) => acc + m.aulas.length, 0)} aulas práticas</strong>
+          </div>
+        </div>
+
+        <div class="acervo-aulas-grid">
+          ${aulasDoModulo.map((aula, idx) => {
+            const guia = (window.GUIAS_AULAS && window.GUIAS_AULAS[aula.id]) ? window.GUIAS_AULAS[aula.id] : null;
+            const textoExercicio = guia && guia.exercicio ? guia.exercicio : 'Pratique os trechos e acordes demonstrados na fonte desta aula.';
+            const objetivoEx = guia && guia.objetivo ? guia.objetivo : 'Estudo prático da aula.';
+            const criterioEx = guia && guia.criterio ? guia.criterio : 'Fluência e precisão técnica.';
+
+            return `
+              <div class="card-aula-pratica">
+                <div class="card-aula-pratica-header">
+                  <div>
+                    <span style="font-size:0.75rem; font-family:var(--font-mono); color:var(--accent); font-weight:700;">#${idx + 1}</span>
+                    <h5>${escapeHTML(aula.titulo)}</h5>
+                  </div>
+                </div>
+
+                <div class="card-aula-pratica-exercicio">
+                  <strong style="font-size:0.75rem; text-transform:uppercase; color:var(--text-main); display:block; margin-bottom:4px;">Roteiro de Prática:</strong>
+                  ${escapeHTML(textoExercicio)}
+                </div>
+
+                <div style="font-size:0.78rem; color:var(--text-muted);">
+                  <strong>Meta:</strong> ${escapeHTML(criterioEx)}
+                </div>
+
+                <button class="btn btn-secondary btn-sm btn-abrir-aula-pratica" data-id="${escapeHTML(aula.id)}" type="button" style="width:100%; margin-top:4px;">
+                  📖 Abrir na Sala de Estudo
+                </button>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- PAINEL 3: LABORATÓRIO HARMÔNICO -->
       <div id="painel-praticar-laboratorio" style="display: ${abaAtiva === 'laboratorio' ? 'block' : 'none'};"><br>
         ${renderizarLaboratorioHarmonicoHTML()}
       </div>
 
+      <!-- PAINEL 4: MÁQUINA DE RITMOS -->
       <div id="painel-praticar-bateria" style="display: ${abaAtiva === 'bateria' ? 'block' : 'none'};">
         <div class="bloco-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
           <h3 style="margin-bottom: 20px;">Máquina de Ritmos</h3>
@@ -1753,8 +2011,13 @@ function renderizarFerramentaInterativa(ativ) {
       </div>
     `;
 
+    // Eventos das Abas
     $('tab-praticar-atividades').onclick = () => {
       state.praticarAba = 'atividades';
+      renderizarTelaPraticar();
+    };
+    $('tab-praticar-acervo').onclick = () => {
+      state.praticarAba = 'acervo';
       renderizarTelaPraticar();
     };
     $('tab-praticar-laboratorio').onclick = () => {
@@ -1766,11 +2029,66 @@ function renderizarFerramentaInterativa(ativ) {
       renderizarTelaPraticar();
     };
 
+    // Eventos de Busca Rápida
+    const inputBuscaAtiv = $('praticar-busca-input');
+    if (inputBuscaAtiv) {
+      inputBuscaAtiv.oninput = (e) => {
+        state.praticarBusca = e.target.value;
+        renderizarTelaPraticar();
+        const inputRecuperado = $('praticar-busca-input');
+        if (inputRecuperado) {
+          inputRecuperado.focus();
+          inputRecuperado.setSelectionRange(inputRecuperado.value.length, inputRecuperado.value.length);
+        }
+      };
+    }
+
+    const inputBuscaAcervo = $('praticar-busca-acervo-input');
+    if (inputBuscaAcervo) {
+      inputBuscaAcervo.oninput = (e) => {
+        state.praticarBusca = e.target.value;
+        renderizarTelaPraticar();
+        const inputRecuperado = $('praticar-busca-acervo-input');
+        if (inputRecuperado) {
+          inputRecuperado.focus();
+          inputRecuperado.setSelectionRange(inputRecuperado.value.length, inputRecuperado.value.length);
+        }
+      };
+    }
+
+    // Eventos dos Filtros de Nível
+    document.querySelectorAll('.btn-filtro-nivel').forEach(btn => {
+      btn.onclick = () => {
+        state.praticarFiltroNivel = btn.dataset.nivel;
+        renderizarTelaPraticar();
+      };
+    });
+
+    // Iniciar Atividade Guiada
     document.querySelectorAll('.btn-iniciar-ativ').forEach(btn => {
       btn.onclick = () => {
         const novaId = btn.dataset.id;
         trocarAtividade(novaId);
         navegarPara('aprender');
+      };
+    });
+
+    // Seletor de Módulo do Acervo
+    const selectMod = $('select-modulo-pratica');
+    if (selectMod) {
+      selectMod.onchange = (e) => {
+        state.praticarModuloAcervo = e.target.value;
+        renderizarTelaPraticar();
+      };
+    }
+
+    // Botões para abrir aula do acervo na Sala de Estudo
+    document.querySelectorAll('.btn-abrir-aula-pratica').forEach(btn => {
+      btn.onclick = () => {
+        const aulaId = btn.dataset.id;
+        if (typeof abrirAulaCurso === 'function') {
+          abrirAulaCurso(aulaId);
+        }
       };
     });
 
@@ -2058,115 +2376,516 @@ function renderizarFerramentaInterativa(ativ) {
     $('btn-migrar-v1-explicito').onclick = () => importarLegadoV1Explicito();
   }
 
+let bibFiltroEstado = {
+  busca: '',
+  modulo: 'todos',
+  origem: 'todos',
+  tipo: 'todos',
+  progresso: 'todos'
+};
+
+function calcularEstatisticasBiblioteca() {
+  const modulos = (catalogoDados && catalogoDados.catalogoOriginal) ? catalogoDados.catalogoOriginal : [];
+  let totalAulas = 0;
+  let totalTriade = 0;
+  let totalKaiser = 0;
+  let totalVideos = 0;
+  let totalPdfs = 0;
+  let totalPraticadas = 0;
+  let totalConsultadas = 0;
+
+  const prog = (state.aprendizagemCurso && state.aprendizagemCurso.progresso) || {};
+
+  modulos.forEach(m => {
+    m.aulas.forEach(a => {
+      totalAulas++;
+      if (a.cursoOrigem === 'Kaiserplay') totalKaiser++;
+      else totalTriade++;
+
+      if (a.materiais.some(mat => mat.tipo === 'video' && mat.utilizavel)) totalVideos++;
+      if (a.materiais.some(mat => mat.tipo === 'pdf' && mat.utilizavel)) totalPdfs++;
+
+      const p = prog[a.id];
+      if (p) {
+        if (p.praticada) totalPraticadas++;
+        if (p.consultada) totalConsultadas++;
+      }
+    });
+  });
+
+  const pct = totalAulas > 0 ? Math.round((totalPraticadas / totalAulas) * 100) : 0;
+
+  return {
+    totalModulos: modulos.length,
+    totalAulas,
+    totalTriade,
+    totalKaiser,
+    totalVideos,
+    totalPdfs,
+    totalPraticadas,
+    totalConsultadas,
+    pct
+  };
+}
+
+function obterProgressoModulo(modulo) {
+  const prog = (state.aprendizagemCurso && state.aprendizagemCurso.progresso) || {};
+  let praticadas = 0;
+  let consultadas = 0;
+  modulo.aulas.forEach(a => {
+    const p = prog[a.id];
+    if (p) {
+      if (p.praticada) praticadas++;
+      if (p.consultada) consultadas++;
+    }
+  });
+  return {
+    total: modulo.aulas.length,
+    praticadas,
+    consultadas,
+    pct: modulo.aulas.length > 0 ? Math.round((praticadas / modulo.aulas.length) * 100) : 0
+  };
+}
+
+function formatarNumeroETituloAula(tituloRaw, index) {
+  const match = (tituloRaw || '').match(/^(\d+)\s*[-–—]\s*(.*)$/);
+  if (match) {
+    return {
+      num: '#' + match[1],
+      titulo: match[2]
+    };
+  }
+  const fallbackNum = (index + 1) < 10 ? '#0' + (index + 1) : '#' + (index + 1);
+  return {
+    num: fallbackNum,
+    titulo: tituloRaw || ''
+  };
+}
+
+function renderizarChipsMateriaisAula(aula) {
+  const chips = [];
+  const videos = aula.materiais.filter(m => m.tipo === 'video' && m.utilizavel);
+  const pdfs = aula.materiais.filter(m => m.tipo === 'pdf' && m.utilizavel);
+  const guia = (window.GUIAS_AULAS && window.GUIAS_AULAS[aula.id]) ? window.GUIAS_AULAS[aula.id] : null;
+
+  if (videos.length > 0) {
+    const v = videos[0];
+    if (urlDriveValida(v.url)) {
+      chips.push(`<a href="${escapeHTML(v.url)}" target="_blank" rel="noopener noreferrer" class="bib-chip bib-chip-video" title="Assistir gravação da aula no Google Drive (nova aba)">🎬 Vídeo Drive ↗</a>`);
+    } else {
+      chips.push(`<span class="bib-chip bib-chip-video" title="Vídeo de aula disponível no acervo">🎬 Vídeo Gravado</span>`);
+    }
+  }
+
+  if (pdfs.length > 0) {
+    const p = pdfs[0];
+    if (urlDriveValida(p.url)) {
+      chips.push(`<a href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" class="bib-chip bib-chip-pdf" title="Abrir apostila/partitura no Google Drive (nova aba)">📄 PDF Apostila ↗</a>`);
+    } else {
+      chips.push(`<span class="bib-chip bib-chip-pdf" title="Material didático em PDF disponível">📄 PDF Apostila</span>`);
+    }
+  }
+
+  if (guia && (guia.objetivo || guia.exercicio)) {
+    chips.push(`<span class="bib-chip bib-chip-guia" title="Roteiro de 40 min estruturado com foco, checkpoints e exercícios">🎯 Roteiro Prático</span>`);
+  }
+
+  return chips.join('');
+}
+
 function renderizarTelaBiblioteca() {
     const container = $('biblioteca-conteudo');
     if (!container) return;
 
+    const stats = calcularEstatisticasBiblioteca();
+    const modulos = (catalogoDados && catalogoDados.catalogoOriginal) ? catalogoDados.catalogoOriginal : [];
+
     container.innerHTML = `
-      <div class="view-header">
-        <h2>Biblioteca e Acervo de Referência</h2>
-        <p>${catalogoDados.meta.totalModulos} módulos e ${catalogoDados.meta.totalAulas} aulas de Tríade e Kaiser. Escolha uma aula para aprender.</p>
+      <!-- Hero de Apresentação e Métricas do Acervo -->
+      <section class="biblioteca-header-hero">
+        <div class="bib-hero-top">
+          <h2>Biblioteca e Acervo Geral de Estudo</h2>
+          <p>
+            Explore o acervo canônico com ${stats.totalAulas} aulas integradas em ${stats.totalModulos} módulos progressivos.
+            Una a precisão analítica do <strong>Método Tríade</strong> (Heitor Castro) à vivência rítmica e de arranjo do <strong>Kaiserplay</strong>.
+          </p>
+        </div>
+
+        <div class="bib-stats-ribbon">
+          <div class="bib-stat-card">
+            <span class="stat-label">Estrutura Curricular</span>
+            <span class="stat-val">${stats.totalModulos} Módulos</span>
+            <span class="stat-sub">Do Nível Básico ao Master</span>
+          </div>
+          <div class="bib-stat-card">
+            <span class="stat-label">Aulas no Acervo</span>
+            <span class="stat-val">${stats.totalAulas} Aulas</span>
+            <span class="stat-sub">${stats.totalTriade} Tríade • ${stats.totalKaiser} Kaiserplay</span>
+          </div>
+          <div class="bib-stat-card">
+            <span class="stat-label">Materiais Multimídia</span>
+            <span class="stat-val">${stats.totalVideos} Vídeos</span>
+            <span class="stat-sub">${stats.totalPdfs} Apostilas e PDFs</span>
+          </div>
+          <div class="bib-stat-card">
+            <span class="stat-label">Meu Progresso</span>
+            <span class="stat-val">${stats.totalPraticadas} / ${stats.totalAulas}</span>
+            <span class="stat-sub">${stats.pct}% do acervo praticado (${stats.totalConsultadas} assistidas)</span>
+            <div class="bib-progress-bar-bg">
+              <div class="bib-progress-bar-fill" style="width: ${Math.max(stats.pct, 3)}%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navegador Rápido de Módulos (Pills) -->
+      <div class="bib-pills-nav-wrapper">
+        <div class="bib-pills-nav" id="bib-modulos-pills">
+          <button type="button" class="bib-pill-btn ${bibFiltroEstado.modulo === 'todos' ? 'ativo' : ''}" data-modulo="todos">
+            Todos os Módulos <span class="bib-pill-count">${stats.totalAulas}</span>
+          </button>
+          ${modulos.map(m => {
+            const pMod = obterProgressoModulo(m);
+            const isAtivo = bibFiltroEstado.modulo === m.id;
+            const shortName = m.nome.replace(/^\d+\.\s*/, '');
+            return `
+              <button type="button" class="bib-pill-btn ${isAtivo ? 'ativo' : ''}" data-modulo="${escapeHTML(m.id)}" title="${escapeHTML(m.nome)}">
+                <span class="bib-pill-num">M${m.ordem < 10 ? '0' + m.ordem : m.ordem}</span>
+                <span>${escapeHTML(shortName)}</span>
+                <span class="bib-pill-count">${pMod.praticadas}/${m.aulas.length}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
       </div>
 
-      <div class="biblioteca-toolbar">
-        <div class="search-field">
-          <input type="search" id="bib-busca" placeholder="Buscar por título de aula, conceito ou módulo...">
+      <!-- Barra de Busca e Filtros Inteligentes -->
+      <section class="biblioteca-toolbar">
+        <div class="bib-search-row">
+          <span class="bib-search-icon">🔍</span>
+          <input type="search" id="bib-busca" class="bib-search-input" value="${escapeHTML(bibFiltroEstado.busca)}" placeholder="Buscar por título de aula, ritmo, conceito, acorde, escala ou técnica...">
+          <button type="button" id="btn-bib-limpar-busca" class="bib-search-clear" title="Limpar busca">✕</button>
         </div>
-        <div class="select-field" style="width: 220px;">
-          <select id="bib-filtro-modulo">
-            <option value="todos">Todos os Módulos</option>
-            ${catalogoDados.catalogoOriginal.map(m => `<option value="${escapeHTML(m.id)}">${escapeHTML(m.nome)}</option>`).join('')}
-          </select>
+
+        <div class="bib-filters-grid">
+          <div class="bib-filter-group">
+            <label for="bib-filtro-modulo">Módulo</label>
+            <select id="bib-filtro-modulo">
+              <option value="todos" ${bibFiltroEstado.modulo === 'todos' ? 'selected' : ''}>Todos os Módulos (${stats.totalModulos})</option>
+              ${modulos.map(m => `<option value="${escapeHTML(m.id)}" ${bibFiltroEstado.modulo === m.id ? 'selected' : ''}>${escapeHTML(m.nome)} (${m.aulas.length})</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="bib-filter-group">
+            <label for="bib-filtro-origem">Método / Origem</label>
+            <select id="bib-filtro-origem">
+              <option value="todos" ${bibFiltroEstado.origem === 'todos' ? 'selected' : ''}>Todas as Origens (${stats.totalAulas})</option>
+              <option value="Método Tríade" ${bibFiltroEstado.origem === 'Método Tríade' ? 'selected' : ''}>Método Tríade — Heitor Castro (${stats.totalTriade})</option>
+              <option value="Kaiserplay" ${bibFiltroEstado.origem === 'Kaiserplay' ? 'selected' : ''}>Kaiserplay — Violão Brasileiro (${stats.totalKaiser})</option>
+            </select>
+          </div>
+
+          <div class="bib-filter-group">
+            <label for="bib-filtro-tipo">Materiais</label>
+            <select id="bib-filtro-tipo">
+              <option value="todos" ${bibFiltroEstado.tipo === 'todos' ? 'selected' : ''}>Todos os Materiais</option>
+              <option value="video" ${bibFiltroEstado.tipo === 'video' ? 'selected' : ''}>🎬 Com Vídeo Gravado (${stats.totalVideos})</option>
+              <option value="pdf" ${bibFiltroEstado.tipo === 'pdf' ? 'selected' : ''}>📄 Com Apostila / PDF (${stats.totalPdfs})</option>
+              <option value="disponivel" ${bibFiltroEstado.tipo === 'disponivel' ? 'selected' : ''}>📁 Com Arquivos Acessíveis</option>
+            </select>
+          </div>
+
+          <div class="bib-filter-group">
+            <label for="bib-filtro-progresso">Meu Progresso</label>
+            <select id="bib-filtro-progresso">
+              <option value="todos" ${bibFiltroEstado.progresso === 'todos' ? 'selected' : ''}>Todos os Status</option>
+              <option value="praticada" ${bibFiltroEstado.progresso === 'praticada' ? 'selected' : ''}>✓ Já Praticadas (${stats.totalPraticadas})</option>
+              <option value="consultada" ${bibFiltroEstado.progresso === 'consultada' ? 'selected' : ''}>👁 Já Assistidas (${stats.totalConsultadas})</option>
+              <option value="pendente" ${bibFiltroEstado.progresso === 'pendente' ? 'selected' : ''}>⏳ Pendentes de Prática</option>
+              <option value="nota" ${bibFiltroEstado.progresso === 'nota' ? 'selected' : ''}>📝 Com Minhas Anotações</option>
+              <option value="dificuldade" ${bibFiltroEstado.progresso === 'dificuldade' ? 'selected' : ''}>🚩 Com Dificuldade Registrada (SRS)</option>
+            </select>
+          </div>
         </div>
-        <div class="select-field" style="width: 200px;">
-          <select id="bib-filtro-tipo">
-            <option value="todos">Todos os Materiais</option>
-            <option value="video">Com Vídeo</option>
-            <option value="pdf">Com PDF</option>
-            <option value="disponivel">Com Arquivos</option>
-            <option value="indisponivel">Sem Arquivos</option>
-          </select>
+      </section>
+
+      <!-- Barra de Ações Rápidas & Contagem -->
+      <div class="bib-actions-bar">
+        <div id="bib-contador" class="bib-results-counter">Carregando acervo...</div>
+        <div class="bib-actions-btns">
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-bib-expandir-todos" title="Expandir todos os módulos visíveis">▼ Expandir Todos</button>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-bib-recolher-todos" title="Recolher todos os módulos visíveis">▲ Recolher Todos</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btn-bib-limpar-filtros" style="display: none;">✕ Limpar Filtros</button>
         </div>
       </div>
 
+      <!-- Lista de Módulos e Aulas -->
       <div id="bib-resultados-lista" class="biblioteca-lista"></div>
     `;
 
-    $('bib-busca').oninput = filtrarBiblioteca;
-    $('bib-filtro-modulo').onchange = filtrarBiblioteca;
-    $('bib-filtro-tipo').onchange = filtrarBiblioteca;
+    // Eventos de Busca e Filtros
+    const campoBusca = $('bib-busca');
+    const btnLimparBusca = $('btn-bib-limpar-busca');
+
+    const atualizarVisibilidadeLimparBusca = () => {
+      if (btnLimparBusca) {
+        btnLimparBusca.style.display = campoBusca.value.trim() ? 'block' : 'none';
+      }
+    };
+
+    campoBusca.oninput = () => {
+      bibFiltroEstado.busca = campoBusca.value;
+      atualizarVisibilidadeLimparBusca();
+      filtrarBiblioteca();
+    };
+
+    if (btnLimparBusca) {
+      btnLimparBusca.onclick = () => {
+        campoBusca.value = '';
+        bibFiltroEstado.busca = '';
+        atualizarVisibilidadeLimparBusca();
+        campoBusca.focus();
+        filtrarBiblioteca();
+      };
+      atualizarVisibilidadeLimparBusca();
+    }
+
+    $('bib-filtro-modulo').onchange = e => {
+      bibFiltroEstado.modulo = e.target.value;
+      sincronizarPillsModulo(bibFiltroEstado.modulo);
+      filtrarBiblioteca();
+    };
+
+    $('bib-filtro-origem').onchange = e => {
+      bibFiltroEstado.origem = e.target.value;
+      filtrarBiblioteca();
+    };
+
+    $('bib-filtro-tipo').onchange = e => {
+      bibFiltroEstado.tipo = e.target.value;
+      filtrarBiblioteca();
+    };
+
+    $('bib-filtro-progresso').onchange = e => {
+      bibFiltroEstado.progresso = e.target.value;
+      filtrarBiblioteca();
+    };
+
+    // Navegador de Pills dos Módulos
+    const containerPills = $('bib-modulos-pills');
+    if (containerPills) {
+      containerPills.querySelectorAll('.bib-pill-btn').forEach(btn => {
+        btn.onclick = () => {
+          const modId = btn.dataset.modulo;
+          bibFiltroEstado.modulo = modId;
+          const selectMod = $('bib-filtro-modulo');
+          if (selectMod) selectMod.value = modId;
+          sincronizarPillsModulo(modId);
+          filtrarBiblioteca();
+        };
+      });
+    }
+
+    // Botões Expandir / Recolher Todos
+    $('btn-bib-expandir-todos').onclick = () => {
+      document.querySelectorAll('#bib-resultados-lista details.modulo-accordion').forEach(det => det.open = true);
+    };
+
+    $('btn-bib-recolher-todos').onclick = () => {
+      document.querySelectorAll('#bib-resultados-lista details.modulo-accordion').forEach(det => det.open = false);
+    };
+
+    // Botão Limpar Filtros
+    $('btn-bib-limpar-filtros').onclick = () => {
+      bibFiltroEstado = {
+        busca: '',
+        modulo: 'todos',
+        origem: 'todos',
+        tipo: 'todos',
+        progresso: 'todos'
+      };
+      campoBusca.value = '';
+      atualizarVisibilidadeLimparBusca();
+      $('bib-filtro-modulo').value = 'todos';
+      $('bib-filtro-origem').value = 'todos';
+      $('bib-filtro-tipo').value = 'todos';
+      $('bib-filtro-progresso').value = 'todos';
+      sincronizarPillsModulo('todos');
+      filtrarBiblioteca();
+    };
 
     filtrarBiblioteca();
   }
+
+function sincronizarPillsModulo(moduloAtivo) {
+  const containerPills = $('bib-modulos-pills');
+  if (!containerPills) return;
+  containerPills.querySelectorAll('.bib-pill-btn').forEach(btn => {
+    btn.classList.toggle('ativo', btn.dataset.modulo === moduloAtivo);
+  });
+}
 
 function filtrarBiblioteca() {
     const listaContainer = $('bib-resultados-lista');
     if (!listaContainer) return;
 
-    const query = ($('bib-busca').value || '').trim().toLowerCase();
-    const modId = $('bib-filtro-modulo').value;
-    const tipo = $('bib-filtro-tipo').value;
+    const query = (bibFiltroEstado.busca || '').trim().toLowerCase();
+    const modId = bibFiltroEstado.modulo || 'todos';
+    const origem = bibFiltroEstado.origem || 'todos';
+    const tipo = bibFiltroEstado.tipo || 'todos';
+    const progFiltro = bibFiltroEstado.progresso || 'todos';
 
-    let totalEncontrado = 0;
+    const temFiltroAtivo = query || modId !== 'todos' || origem !== 'todos' || tipo !== 'todos' || progFiltro !== 'todos';
+    const btnLimpar = $('btn-bib-limpar-filtros');
+    if (btnLimpar) btnLimpar.style.display = temFiltroAtivo ? 'inline-block' : 'none';
+
+    let totalAulasFiltradas = 0;
+    let modulosExibidosCount = 0;
     listaContainer.innerHTML = '';
 
-    for (const mod of catalogoDados.catalogoOriginal) {
+    const modulos = (catalogoDados && catalogoDados.catalogoOriginal) ? catalogoDados.catalogoOriginal : [];
+    const progGlobal = (state.aprendizagemCurso && state.aprendizagemCurso.progresso) || {};
+
+    for (let mIdx = 0; mIdx < modulos.length; mIdx++) {
+      const mod = modulos[mIdx];
       if (modId !== 'todos' && mod.id !== modId) continue;
 
       const modNomeLower = query ? mod.nome.toLowerCase() : '';
 
-      const aulasFiltradas = mod.aulas.filter(aula => {
+      const aulasFiltradas = mod.aulas.filter((aula, aIdx) => {
+        // Filtro por Método / Origem
+        if (origem !== 'todos' && aula.cursoOrigem !== origem) return false;
+
+        // Filtro de Busca Textual
         if (query) {
+          const guia = (window.GUIAS_AULAS && window.GUIAS_AULAS[aula.id]) ? window.GUIAS_AULAS[aula.id] : null;
+          const textoGuia = guia ? `${guia.exercicio || ''} ${guia.objetivo || ''} ${guia.criterio || ''}`.toLowerCase() : '';
           const matchQuery = aula.grupo_aula.toLowerCase().includes(query) ||
             modNomeLower.includes(query) ||
-            aula.materiais.some(m => m.titulo.toLowerCase().includes(query));
+            (aula.titulo && aula.titulo.toLowerCase().includes(query)) ||
+            aula.materiais.some(m => m.titulo.toLowerCase().includes(query)) ||
+            textoGuia.includes(query);
           if (!matchQuery) return false;
         }
 
+        // Filtro por Tipo de Material
         if (tipo === 'video') return aula.materiais.some(m => m.tipo === 'video' && m.utilizavel);
         if (tipo === 'pdf') return aula.materiais.some(m => m.tipo === 'pdf' && m.utilizavel);
         if (tipo === 'disponivel') return aula.temArquivos;
         if (tipo === 'indisponivel') return !aula.temArquivos;
 
+        // Filtro por Progresso Pessoal do Aluno
+        const p = progGlobal[aula.id] || {};
+        const temDif = Array.isArray(state.dificuldades) && state.dificuldades.some(d => d.atividadeId === aula.id && !d.resolvida);
+        const temNota = (typeof p.nota === 'string' && p.nota.trim().length > 0) || (state.anotacoes && !!state.anotacoes[aula.id]);
+
+        if (progFiltro === 'praticada') return !!p.praticada;
+        if (progFiltro === 'consultada') return !!p.consultada;
+        if (progFiltro === 'pendente') return !p.praticada;
+        if (progFiltro === 'nota') return temNota;
+        if (progFiltro === 'dificuldade') return temDif;
+
         return true;
       });
 
       if (!aulasFiltradas.length) continue;
-      totalEncontrado += aulasFiltradas.length;
 
+      totalAulasFiltradas += aulasFiltradas.length;
+      modulosExibidosCount++;
+
+      const pMod = obterProgressoModulo(mod);
       const accordion = document.createElement('details');
       accordion.className = 'modulo-accordion';
-      accordion.open = true;
+      
+      // Abre por padrão se houver busca/filtro de módulo específico, ou se for o 1º módulo na visão geral limpa
+      accordion.open = !!query || modId !== 'todos' || mIdx === 0;
 
       accordion.innerHTML = `
-        <summary>${escapeHTML(mod.nome)} (${aulasFiltradas.length} aulas)</summary>
+        <summary>
+          <div class="modulo-summary-left">
+            <div class="modulo-summary-title-row">
+              <span class="modulo-badge-tag">Módulo ${mod.ordem < 10 ? '0' + mod.ordem : mod.ordem}</span>
+              <h3 class="modulo-summary-title">${escapeHTML(mod.nome.replace(/^\d+\.\s*/, ''))}</h3>
+            </div>
+            ${mod.notaEditorial ? `<p class="modulo-summary-desc">${escapeHTML(mod.notaEditorial)}</p>` : ''}
+          </div>
+          <div class="modulo-summary-right">
+            <span class="modulo-badge-progress ${pMod.praticadas === mod.aulas.length && mod.aulas.length > 0 ? 'concluido' : ''}" title="${pMod.praticadas} de ${mod.aulas.length} aulas praticadas">
+              ${pMod.praticadas}/${mod.aulas.length} praticadas
+            </span>
+            <span class="modulo-badge-aulas">${aulasFiltradas.length} ${aulasFiltradas.length === 1 ? 'aula' : 'aulas'}</span>
+            <span class="modulo-chevron">▼</span>
+          </div>
+        </summary>
         <div class="modulo-aulas-container">
-          ${aulasFiltradas.map(aula => {
-            const hasAnotacao = atividadesDados.some(at => atividadeTemAnotacao(at.id) && at.fontes && at.fontes.some(f => f.aulaId === aula.id));
+          ${aulasFiltradas.map((aula, idx) => {
+            const p = progGlobal[aula.id] || {};
+            const temDif = Array.isArray(state.dificuldades) && state.dificuldades.some(d => d.atividadeId === aula.id && !d.resolvida);
+            const temNota = (typeof p.nota === 'string' && p.nota.trim().length > 0) || (state.anotacoes && !!state.anotacoes[aula.id]);
+            const guia = (window.GUIAS_AULAS && window.GUIAS_AULAS[aula.id]) ? window.GUIAS_AULAS[aula.id] : null;
+            const infoTitulo = formatarNumeroETituloAula(aula.grupo_aula, idx);
+            const pedagogicoTexto = guia ? (guia.objetivo || guia.exercicio || '') : '';
+
             return `
-            <div class="aula-item">
-              <div class="aula-item-info">
-                <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-                  <span class="aula-item-titulo">${escapeHTML(aula.grupo_aula)}${hasAnotacao ? ' 📝' : ''}</span>
-                  ${aula.cursoOrigem === 'Kaiserplay' ? '<span style="background:rgba(217,119,6,0.15); color:var(--warning); font-size:0.65rem; font-weight:600; padding:1px 6px; border-radius:4px;">Kaiserplay</span>' : '<span style="background:rgba(59,130,246,0.15); color:var(--accent); font-size:0.65rem; font-weight:600; padding:1px 6px; border-radius:4px;">Tríade</span>'}
+            <div class="aula-item" id="item-${escapeHTML(aula.id)}">
+              <div class="aula-item-main">
+                <div class="aula-item-header">
+                  <span class="aula-item-num">${escapeHTML(infoTitulo.num)}</span>
+                  <h4 class="aula-item-titulo">${escapeHTML(infoTitulo.titulo)}</h4>
+                  <div class="aula-badges-group">
+                    <span class="bib-badge ${aula.cursoOrigem === 'Kaiserplay' ? 'bib-badge-kaiser' : 'bib-badge-triade'}">
+                      ${escapeHTML(aula.cursoOrigem || 'Método Tríade')}
+                    </span>
+                    ${p.praticada ? '<span class="bib-badge bib-badge-praticada">✓ Praticada</span>' : ''}
+                    ${p.consultada ? '<span class="bib-badge bib-badge-assistida">👁 Assistida</span>' : ''}
+                    ${temNota ? '<span class="bib-badge bib-badge-nota">📝 Anotação</span>' : ''}
+                    ${temDif ? '<span class="bib-badge bib-badge-dif">🚩 Dificuldade</span>' : ''}
+                  </div>
                 </div>
-                <div class="aula-item-links">
-                  ${aula.materiais.map(renderizarMaterialCurso).join(' · ')}
+
+                ${pedagogicoTexto ? `
+                  <p class="aula-pedagogico-resumo">
+                    <span class="aula-pedagogico-prefix">Foco:</span> ${escapeHTML(pedagogicoTexto)}
+                  </p>
+                ` : ''}
+
+                <div class="aula-chips-row">
+                  ${renderizarChipsMateriaisAula(aula)}
                 </div>
               </div>
-              <button class="btn btn-secondary bib-aprender" data-aula="${escapeHTML(aula.id)}">Aprender esta aula</button>
+
+              <div class="aula-item-action">
+                <button type="button" class="btn btn-primary btn-sm bib-aprender" data-aula="${escapeHTML(aula.id)}" title="Abrir sala de estudo e prática desta aula">
+                  Aprender Aula →
+                </button>
+              </div>
             </div>
-          `;
+            `;
           }).join('')}
         </div>
       `;
 
       listaContainer.appendChild(accordion);
-      accordion.querySelectorAll('.bib-aprender').forEach(b => b.onclick = () => abrirAulaCurso(b.dataset.aula));
+      accordion.querySelectorAll('.bib-aprender').forEach(b => {
+        b.onclick = () => abrirAulaCurso(b.dataset.aula);
+      });
     }
 
-    if (totalEncontrado === 0) {
-      listaContainer.innerHTML = '<p style="padding: 20px; color: var(--text-muted); text-align: center;">Nenhuma aula encontrada para os filtros selecionados.</p>';
+    // Atualiza o contador de resultados no cabeçalho
+    const contadorElem = $('bib-contador');
+    if (contadorElem) {
+      const stats = calcularEstatisticasBiblioteca();
+      contadorElem.innerHTML = `Mostrando <strong>${totalAulasFiltradas}</strong> de ${stats.totalAulas} aulas em <strong>${modulosExibidosCount}</strong> ${modulosExibidosCount === 1 ? 'módulo' : 'módulos'}`;
+    }
+
+    if (totalAulasFiltradas === 0) {
+      listaContainer.innerHTML = `
+        <div style="padding: 40px 20px; text-align: center; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+          <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 8px;">Nenhuma aula encontrada para os critérios selecionados.</p>
+          <p style="font-size: 0.86rem; color: var(--text-dim); margin-bottom: 16px;">Experimente buscar por outros termos ou limpar os filtros aplicados.</p>
+          <button type="button" class="btn btn-secondary" onclick="$('btn-bib-limpar-filtros').click();">✕ Limpar Todos os Filtros</button>
+        </div>
+      `;
     }
   }
 

@@ -130,12 +130,18 @@ function abrirModalResultado(ativ) {
   dialog.showModal();
 }
 
-function abrirModalDificuldade(ativ) {
+function abrirModalDificuldade(ativOuAula) {
     const dialog = $('modal-dificuldade');
     if (!dialog) return;
 
-    $('dif-atividade-nome').textContent = ativ.titulo;
-    $('input-dif-trecho').value = ativ.exercicio.niveis[state.nivelExercicioAtual || 'alvo'].nome;
+    const titulo = ativOuAula.titulo || ativOuAula.grupo_aula || 'Trecho de Estudo';
+    const trechoPadrao = ativOuAula.exercicio && ativOuAula.exercicio.niveis 
+      ? ativOuAula.exercicio.niveis[state.nivelExercicioAtual || 'alvo'].nome 
+      : (ativOuAula.titulo || '');
+    const itemId = ativOuAula.id || 'aula-custom';
+
+    $('dif-atividade-nome').textContent = titulo;
+    $('input-dif-trecho').value = trechoPadrao;
     $('input-dif-problema').value = '';
 
     $('btn-salvar-dificuldade').onclick = async () => {
@@ -148,7 +154,7 @@ function abrirModalDificuldade(ativ) {
 
       state.dificuldades.push({
         id: 'dif-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
-        atividadeId: ativ.id,
+        atividadeId: itemId,
         trecho: trecho,
         problema: problema,
         data: obterDataLocal(),
@@ -157,7 +163,7 @@ function abrirModalDificuldade(ativ) {
 
       salvarEstado();
       dialog.close();
-      await mostrarAlerta('Dificuldade registrada no seu Caderno. Você pode revisá-la com o roteiro de recuperação.');
+      await mostrarAlerta('Dificuldade registrada no seu Caderno. Você pode revisá-la com o roteiro de recuperação na aba Progresso.');
     };
 
     $('btn-fechar-dificuldade').onclick = () => dialog.close();
