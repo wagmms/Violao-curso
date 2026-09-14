@@ -23,6 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-timer-toggle').onclick = iniciarOuRetomarSessao;
   document.getElementById('btn-timer-reset').onclick = resetarSessao;
 
+  // Inicializar afinador
+  const btnAbrirAfinador = document.getElementById('btn-abrir-afinador');
+  const btnFecharAfinador = document.getElementById('btn-fechar-afinador');
+  const btnDesligarMicrofone = document.getElementById('btn-desligar-microfone');
+  const modalAfinador = document.getElementById('modal-afinador');
+
+  if (btnAbrirAfinador && modalAfinador) {
+    btnAbrirAfinador.addEventListener('click', () => {
+      modalAfinador.showModal();
+      if (window.Afinador) window.Afinador.iniciar();
+    });
+  }
+
+  const fecharAfinador = () => {
+    if (modalAfinador) modalAfinador.close();
+    if (window.Afinador) window.Afinador.parar();
+  };
+
+  if (btnFecharAfinador) btnFecharAfinador.addEventListener('click', fecharAfinador);
+  if (btnDesligarMicrofone) btnDesligarMicrofone.addEventListener('click', fecharAfinador);
+  if (modalAfinador) modalAfinador.addEventListener('close', fecharAfinador);
+
   // Inicializar timer, modais, diagnóstico...
   navegarPara('hoje');
   atualizarTimer();
