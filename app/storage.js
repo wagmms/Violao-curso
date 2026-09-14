@@ -1,6 +1,6 @@
 
 // Variáveis Globais
-var state = {
+let state = {
   versao: 2,
   perfil: {
     nivel: 'basico',
