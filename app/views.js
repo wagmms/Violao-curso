@@ -1508,7 +1508,7 @@ function renderizarFerramentaInterativa(ativ) {
       shape.muted.forEach(strIdx => {
         const topStr = `${stringYPercents[strIdx]}%`;
         html += `
-          <div class="lh-note-pill muted" style="left:25px; top:${topStr};" title="${LH_STRING_NAMES[strIdx]} • Corda Abafada / Não Tocar (X)">
+          <div class="lh-note-pill muted" style="left:25px; top:${topStr};" title="${escapeHTML(LH_STRING_NAMES[strIdx])} • Corda Abafada / Não Tocar (X)">
             ✕
           </div>
         `;
@@ -1533,8 +1533,8 @@ function renderizarFerramentaInterativa(ativ) {
       const fingerTxt = n.fret === 0 ? 'Corda Solta' : `Dedo ${n.finger}`;
 
       html += `
-        <div class="lh-note-pill ${n.role}${extraClass}" style="left:${leftStr}; top:${topStr};" data-str="${n.str}" data-fret="${n.fret}" title="${LH_STRING_NAMES[n.str]} • Casa ${n.fret} • Nota ${n.note} (${n.degree}) • ${fingerTxt}">
-          ${label}
+        <div class="lh-note-pill ${escapeHTML(n.role)}${extraClass}" style="left:${leftStr}; top:${topStr};" data-str="${escapeHTML(n.str)}" data-fret="${escapeHTML(n.fret)}" title="${escapeHTML(LH_STRING_NAMES[n.str])} • Casa ${escapeHTML(n.fret)} • Nota ${escapeHTML(n.note)} (${escapeHTML(n.degree)}) • ${escapeHTML(fingerTxt)}">
+          ${escapeHTML(label)}
         </div>
       `;
     });
