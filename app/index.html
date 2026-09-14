@@ -55,7 +55,7 @@
 
       <div class="sidebar-status-box">
         <div class="status-telemetry-pill">
-          <div><span class="pulse-dot"></span><span>Afinador E2</span></div>
+          <div id="btn-abrir-afinador" style="cursor: pointer;" title="Abrir Afinador"><span class="pulse-dot"></span><span>Afinador E2</span></div>
           <span class="bpm-tag">86 BPM</span>
         </div>
         <div class="user-profile-card">
@@ -228,6 +228,33 @@
     </div>
   </dialog>
 
+  <!-- Modal 5: Afinador Cromático -->
+  <dialog id="modal-afinador">
+    <div class="modal-content" style="text-align: center; max-width: 400px;">
+      <div class="modal-header">
+        <h3>Afinador Cromático</h3>
+        <button id="btn-fechar-afinador" class="btn btn-ghost btn-sm" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="afinador-nota" style="font-size: 3rem; font-weight: bold; margin: 10px 0; color: var(--text-main); height: 60px;">-</div>
+        <div id="afinador-frequencia" style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 20px;">-- Hz</div>
+
+        <div style="position: relative; height: 30px; margin: 20px 0; border-bottom: 2px solid var(--border-subtle);">
+          <div style="position: absolute; left: 0%; transform: translateX(-50%); font-size: 0.8rem; color: var(--text-muted);"> -50</div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); height: 10px; width: 2px; background: var(--text-muted); bottom: 0;"></div>
+          <div style="position: absolute; left: 100%; transform: translateX(-50%); font-size: 0.8rem; color: var(--text-muted);">+50</div>
+
+          <div id="afinador-ponteiro" style="position: absolute; left: 50%; bottom: 0; width: 4px; height: 20px; background-color: var(--accent); transform: translateX(-50%); transition: left 0.1s ease-out;"></div>
+        </div>
+
+        <div id="afinador-status" style="margin-top: 15px; font-weight: bold; color: var(--text-dim);">Aguardando...</div>
+      </div>
+      <div class="modal-footer" style="justify-content: center;">
+        <button id="btn-desligar-microfone" class="btn btn-danger" type="button">Desligar Microfone</button>
+      </div>
+    </div>
+  </dialog>
+
   <!-- Scripts de Dados e Dependências -->
   <script src="dados-catalogo.js"></script>
   <script src="dados-atividades.js"></script>
@@ -237,6 +264,7 @@
   <script src="srs-engine.js"></script>
   <script src="timer.js"></script>
   <script src="ear-training.js"></script>
+  <script src="afinador.js"></script>
   <script src="views.js"></script>
   <script src="app.js"></script>
 </body>
