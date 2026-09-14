@@ -4,23 +4,32 @@ function obterRecomendacao() {
   if (!state.sessao.concluida && (state.sessao.ativa || tempoDecorrido() > 0) && atividadeTemSessao(atual)) {
     return {atividade: atual, nivel: state.sessao.nivel, motivo: `Continue sua sessão: ${Math.floor(tempoDecorrido()/60000)} minutos registrados.`};
   }
+  // Se o aluno selecionou explicitamente uma atividade específica
+  if (state.atividadeAtualId && prontas.some(a => a.id === state.atividadeAtualId)) {
+    const ativEscolhida = prontas.find(a => a.id === state.atividadeAtualId);
+    if (ativEscolhida && (ativEscolhida.id !== prontas[0].id || state.sessao.passoAtualIndex > 0)) {
+      return {atividade: ativEscolhida, nivel: state.nivelExercicioAtual || 'preparacao', motivo: 'Atividade prioritária selecionada para a prática de hoje.'};
+    }
+  }
   const dif = state.dificuldades.find(d => !d.resolvida && prontas.some(a => a.id === d.atividadeId));
   if (dif) return {atividade: prontas.find(a => a.id === dif.atividadeId), nivel: 'preparacao', motivo: `Recuperação de ${dif.trecho}: pratique a Preparação.`};
-  const rev = state.revisoes.filter(r => !r.concluida && r.dataPrevista <= obterDataLocal() && prontas.some(a => a.id === r.atividadeId)).sort((a,b) => a.dataPrevista.localeCompare(b.dataPrevista))[0];
+  const dataAtual = (typeof window !== 'undefined' && window.obterDataLocal) ? window.obterDataLocal() : obterDataLocal();
+  const rev = state.revisoes.filter(r => !r.concluida && r.dataPrevista <= dataAtual && prontas.some(a => a.id === r.atividadeId)).sort((a,b) => a.dataPrevista.localeCompare(b.dataPrevista))[0];
   if (rev) return {atividade: prontas.find(a => a.id === rev.atividadeId), nivel: 'alvo', motivo: `Revisão prevista para ${rev.dataPrevista}, ciclo ${rev.ciclo}.`};
   const proxima = state.habilidades[atual.slug]?.status !== 'alvo_demonstrado' ? atual : prontas.find(a => state.habilidades[a.slug]?.status !== 'alvo_demonstrado') || atual;
-  return {atividade: proxima, nivel: proxima.id === state.atividadeAtualId ? state.nivelExercicioAtual : 'preparacao', motivo: state.perfil.diagnostico ? 'Atividade sugerida a partir do seu ponto de partida e dos registros.' : 'Comece pelos fundamentos ou ajuste seu ponto de partida no diagnóstico.'};
+  return {atividade: proxima, nivel: proxima.id === state.atividadeAtualId ? state.nivelExercicioAtual : 'preparacao', motivo: 'Sugerida como sequência prioritária dos fundamentos do curso.'};
 }
 
 function trocarAtividade(novaId, nivel) {
   if (!ATIVIDADES_VALIDAS_IDS.has(novaId)) return false;
   if (nivel && !NIVEIS_VALIDOS.has(nivel)) return false;
+  const nivelFinal = nivel || (state.atividadeAtualId === novaId && state.nivelExercicioAtual ? state.nivelExercicioAtual : 'preparacao');
   if (state.atividadeAtualId !== novaId || state.sessao.concluida) {
     registrarInterrupcao('Sessão interrompida para trocar de atividade.');
     pararRelogio();
     state.atividadeAtualId = novaId;
-    state.nivelExercicioAtual = nivel || 'preparacao';
-    state.sessao = novaSessao(novaId, state.nivelExercicioAtual);
+    state.nivelExercicioAtual = nivelFinal;
+    state.sessao = novaSessao(novaId, nivelFinal);
   } else if (nivel) {
     state.nivelExercicioAtual = nivel; state.sessao.nivel = nivel;
   }
@@ -30,7 +39,8 @@ function trocarAtividade(novaId, nivel) {
 function atualizarRevisaoAlvo(ativ, tentativa) {
   if (tentativa.nivel !== 'alvo') return;
   normalizarRevisoes(state.revisoes);
-  const hoje = obterDataLocal();
+  const dataFn = (typeof window !== 'undefined' && window.obterDataLocal) ? window.obterDataLocal : obterDataLocal;
+  const hoje = dataFn();
   const rev = state.revisoes.find(r => r.atividadeId === ativ.id && !r.concluida);
   const sucesso = tentativa.status === 'consegui';
   if (rev && rev.dataPrevista > hoje && sucesso) {
@@ -42,7 +52,7 @@ function atualizarRevisaoAlvo(ativ, tentativa) {
     rev.concluida = true; rev.dataConclusao = hoje; rev.tentativaId = tentativa.id;
     if (sucesso) { intervalo = rev.intervaloDias === 2 ? 7 : 21; ciclo = Math.min(999, rev.ciclo + 1); }
   }
-  state.revisoes.push({id: novoId('rev'), atividadeId: ativ.id, nivel: 'alvo', ciclo, intervaloDias: intervalo, dataPrevista: obterDataLocal(intervalo), concluida: false});
+  state.revisoes.push({id: novoId('rev'), atividadeId: ativ.id, nivel: 'alvo', ciclo, intervaloDias: intervalo, dataPrevista: dataFn(intervalo), concluida: false});
 }
 
 function criterioDoNivel(ativ, nivel) {

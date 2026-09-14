@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-high": "#2c2928",
+          "surface-container-highest": "#373433",
+          "tertiary-fixed-dim": "#d5c3b7",
+          "primary-container": "#d97736",
+          "surface-dim": "#151312",
+          "secondary-fixed": "#ffddb8",
+          "on-tertiary-fixed-variant": "#51443b",
+          "secondary": "#ffb95f",
+          "inverse-primary": "#994703",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-error": "#690005",
+          "on-tertiary-fixed": "#231a12",
+          "primary-fixed-dim": "#ffb68c",
+          "primary": "#ffb68c",
+          "secondary-container": "#ee9800",
+          "on-tertiary": "#392e26",
+          "outline-variant": "#554339",
+          "surface-container": "#211f1e",
+          "inverse-surface": "#e7e1df",
+          "on-tertiary-container": "#332820",
+          "on-primary-fixed-variant": "#753400",
+          "on-primary": "#532200",
+          "on-surface-variant": "#dbc1b4",
+          "error-container": "#93000a",
+          "tertiary-fixed": "#f2dfd2",
+          "background": "#151312",
+          "surface-bright": "#3b3937",
+          "on-secondary": "#472a00",
+          "tertiary-container": "#9e8e83",
+          "on-surface": "#e7e1df",
+          "surface-container-lowest": "#100e0d",
+          "outline": "#a38c80",
+          "on-secondary-fixed": "#2a1700",
+          "error": "#ffb4ab",
+          "on-secondary-container": "#5b3800",
+          "surface-container-low": "#1d1b1a",
+          "surface-variant": "#373433",
+          "surface-tint": "#ffb68c",
+          "tertiary": "#d5c3b7",
+          "on-primary-container": "#491d00",
+          "inverse-on-surface": "#32302f",
+          "on-background": "#e7e1df",
+          "surface": "#151312",
+          "on-primary-fixed": "#321200",
+          "secondary-fixed-dim": "#ffb95f",
+          "on-error-container": "#ffdad6",
+          "primary-fixed": "#ffdbc9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Epilogue"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Epilogue"
+          ],
+          "display-lg": [
+            "Epilogue"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Epilogue"
+          ],
+          "headline-lg": [
+            "Epilogue"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Epilogue"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "34px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex flex-col"><div class="flex items-center gap-space-sm px-space-lg pt-space-lg pb-space-md"><img alt="Logo Método Tríade" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xvv4YOzsHAvwWx5mBBieQNH8OuZbJkkcmx97sdQhdmeVLNqAPGI7YQRsgwVnHnpNoRr86cnqgyVJZJWRJxdhVVY9f9P1cNGlL6swdoIgno_YH1okyStjjesckmppcSX5XObx15zCnIGxv--i3z0LgshUQdFZW23zJLJ1Y7W0ZyDJ5CQhT_Zzwv2HJiOJyK4493TicFguDHJdVvyMM14SaAaO57-YDMM1MGf_vs3TwME7BHp60vKOQ59s3f"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Método Tríade</span><span class="font-label-sm text-label-sm text-tertiary">Ambiente de Estudo</span></div></div><div class="h-px mx-space-lg bg-outline-variant/30 my-space-xs"></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_2px_8px_rgba(217,119,54,0.2)]"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hoje" href="#"><span class="font-label-lg text-label-lg">Hoje</span></a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_2px_8px_rgba(217,119,54,0.2)]" data-path="aprender" href="#"><span class="font-label-lg text-label-lg">Aprender</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="praticar" href="#"><span class="font-label-lg text-label-lg">Praticar</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="progresso" href="#"><span class="font-label-lg text-label-lg">Progresso</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="biblioteca" href="#"><span class="font-label-lg text-label-lg">Biblioteca</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md pb-space-lg"><div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">tune</span><span class="font-label-sm text-label-sm text-on-surface">Afinador E2</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-0.5 rounded"><span class="material-symbols-outlined text-tertiary text-[16px]">speed</span><span class="font-label-sm text-label-sm text-tertiary">86 BPM</span></div></div><div class="bg-surface-container-high p-space-sm rounded-lg flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Arthur Meireles</span><span class="font-label-sm text-label-sm text-secondary truncate">Intermediário • Nível 4</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md"><a class="text-tertiary hover:text-primary transition-colors" data-path="aprender" href="#">Aprender</a><span class="text-outline-variant">›</span><span class="text-on-surface font-semibold">Sessão Guiada: Módulo 3</span></div><div class="hidden lg:flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">Treino Ativo</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">local_fire_department</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">14 dias seguidos</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Atalhos de áudio" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Modo Focado" type="button"><span class="material-symbols-outlined text-[20px]">center_focus_strong</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors relative" title="Notificações" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary-container"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full px-space-lg py-space-md max-w-[1360px] mx-auto gap-space-lg">
+<!-- Top Bar: Context & Harmony Master Controls -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Laboratório de Harmonia Aplicada</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-tertiary">Mapeamento em Escala Real</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Fretboard Analítico de Violão</h1>
+</div>
+<!-- Quick Actions & Status -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Afinação Standard (E A D G B E)</span>
+</div>
+<button class="flex items-center gap-space-xs bg-primary-container hover:bg-primary-container/90 text-on-primary-container px-space-md py-space-sm rounded-lg font-label-lg text-label-lg font-semibold shadow-md transition-all" id="btnArpeggiate" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Tocar Arpejo</span>
+</button>
+<button class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-md py-space-sm rounded-lg font-label-lg text-label-lg font-medium shadow-sm transition-all" id="btnStrum" type="button">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+<span>Dedilhado Harmônico</span>
+</button>
+</div>
+</div>
+<!-- Primary Parameter Console -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<!-- Preset Selection -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Acorde / Estrutura Escalar</label>
+<div class="relative">
+<select class="w-full bg-surface-container text-on-surface font-title-md text-title-md py-space-sm px-space-md rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner" id="chordSelector">
+<option selected="" value="Am7">Am7 • Lá menor com 7ª (Tétrade &amp; Inversões)</option>
+<option value="Cmaj">C Maior (Jônio) • Escala Completa &amp; Tríades</option>
+<option value="Dm79">Dm7(9) • Ré menor com 9ª (Modo Dórico)</option>
+<option value="G7">G7 • Sol Maior Dominante Mixolídio</option>
+<option value="EmPent">Em Pentatônica • Menor Blues com Blue Note</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-tertiary pointer-events-none text-[22px]">unfold_more</span>
+</div>
+</div>
+<!-- Visualization Mode Toggle -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Modo de Exibição das Notas</label>
+<div class="grid grid-cols-3 bg-surface-container p-1 rounded-lg">
+<button class="view-mode-btn active-view py-1.5 text-center font-label-md text-label-md font-semibold rounded transition-all bg-primary-container text-on-primary-container" id="viewDegrees" type="button">
+          Graus (1, b3...)
+        </button>
+<button class="view-mode-btn py-1.5 text-center font-label-md text-label-md text-tertiary font-medium rounded transition-all hover:text-on-surface" id="viewNotes" type="button">
+          Notas (A, C, E...)
+        </button>
+<button class="view-mode-btn py-1.5 text-center font-label-md text-label-md text-tertiary font-medium rounded transition-all hover:text-on-surface" id="viewFingers" type="button">
+          Dedos (1, 2, 3...)
+        </button>
+</div>
+</div>
+<!-- Filter Switches -->
+<div class="lg:col-span-4 flex flex-col justify-between gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Densidade Harmônica</label>
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-1.5 rounded-lg justify-between">
+<span class="font-label-md text-label-md text-on-surface" id="layerFilterLabel">Tríade Básica (1 - 3 - 5)</span>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-tertiary" id="layerStateText">Expandido</span>
+<button class="w-11 h-6 bg-primary-container rounded-full p-0.5 flex items-center transition-colors" id="toggleDensity" type="button">
+<div class="w-5 h-5 rounded-full bg-surface shadow-md transform translate-x-5 transition-transform" id="toggleDensityPill"></div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interval Counter & Chromatic Legend Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-semibold">Legenda Analítica:</span>
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[10px] shadow-sm">1</span>
+<span class="font-label-sm text-label-sm text-on-surface">Fundamental (Tônica)</span>
+<span class="px-1.5 py-0.2 text-[10px] font-mono bg-surface-container-high text-secondary rounded" id="countRoot">04</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-[#38a169] text-surface flex items-center justify-center font-bold text-[10px]">3</span>
+<span class="font-label-sm text-label-sm text-on-surface">Terça (3m / 3M)</span>
+<span class="px-1.5 py-0.2 text-[10px] font-mono bg-surface-container-high text-tertiary rounded" id="countThird">05</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-[#3182ce] text-surface flex items-center justify-center font-bold text-[10px]">5</span>
+<span class="font-label-sm text-label-sm text-on-surface">Quinta Justa (5J)</span>
+<span class="px-1.5 py-0.2 text-[10px] font-mono bg-surface-container-high text-tertiary rounded" id="countFifth">04</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-[#805ad5] text-surface flex items-center justify-center font-bold text-[10px]">7</span>
+<span class="font-label-sm text-label-sm text-on-surface">Sétima (7m / 7M)</span>
+<span class="px-1.5 py-0.2 text-[10px] font-mono bg-surface-container-high text-tertiary rounded" id="countSeventh">03</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-secondary text-surface flex items-center justify-center font-bold text-[10px]">9</span>
+<span class="font-label-sm text-label-sm text-on-surface">Tensões (9ª / 11ª)</span>
+<span class="px-1.5 py-0.2 text-[10px] font-mono bg-surface-container-high text-tertiary rounded" id="countExt">02</span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-2 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">touch_app</span>
+<span>Clique nas casas para acionar corda sintetizada</span>
+</div>
+</div>
+<!-- Fretboard Viewport: Horizontal Scroll Container -->
+<div class="w-full bg-surface-container-lowest p-space-md rounded-2xl shadow-xl overflow-hidden flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs text-on-surface-variant font-label-sm text-label-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">new_window</span>
+<span class="font-semibold text-on-surface">Braço Nylon Acústico (Cedro &amp; Ébano)</span>
+</div>
+<div class="flex items-center gap-space-md text-tertiary text-xs">
+<span>Extensão: 0 a 12ª Casa (1 Oitava Completa)</span>
+</div>
+</div>
+<!-- Interactive Canvas & DOM Fretboard -->
+<div class="relative w-full overflow-x-auto pb-4 select-none">
+<div class="min-w-[1080px] relative bg-[#171514] rounded-xl px-4 py-8 shadow-inner">
+<!-- Fret Numbers Header -->
+<div class="grid grid-cols-[50px_repeat(12,1fr)] mb-3 text-center font-mono text-[11px] font-bold text-tertiary-fixed-dim tracking-wider">
+<div class="text-tertiary opacity-70">NUT</div>
+<div>1</div>
+<div>2</div>
+<div class="text-secondary font-extrabold">3 •</div>
+<div>4</div>
+<div class="text-secondary font-extrabold">5 •</div>
+<div>6</div>
+<div class="text-secondary font-extrabold">7 •</div>
+<div>8</div>
+<div class="text-secondary font-extrabold">9 •</div>
+<div>10</div>
+<div>11</div>
+<div class="text-secondary font-extrabold">12 ••</div>
+</div>
+<!-- Fretboard Board Body -->
+<div class="relative grid grid-cols-[50px_repeat(12,1fr)] h-64 bg-[#141211] rounded-lg overflow-hidden shadow-[inset_0_2px_8px_rgba(0,0,0,0.8)]" id="fretboard">
+<!-- Inlay Dots (Frets 3, 5, 7, 9 single dot; 12 double dot) -->
+<!-- Fret 3 Dot (Col index 4) -->
+<div class="pointer-events-none absolute left-[calc(50px+(100%-50px)/12*2.5)] top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#e8e2d5] opacity-20 shadow-md"></div>
+<!-- Fret 5 Dot (Col index 6) -->
+<div class="pointer-events-none absolute left-[calc(50px+(100%-50px)/12*4.5)] top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#e8e2d5] opacity-20 shadow-md"></div>
+<!-- Fret 7 Dot (Col index 8) -->
+<div class="pointer-events-none absolute left-[calc(50px+(100%-50px)/12*6.5)] top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#e8e2d5] opacity-20 shadow-md"></div>
+<!-- Fret 9 Dot (Col index 10) -->
+<div class="pointer-events-none absolute left-[calc(50px+(100%-50px)/12*8.5)] top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#e8e2d5] opacity-20 shadow-md"></div>
+<!-- Fret 12 Double Dot (Col index 13) -->
+<div class="pointer-events-none absolute left-[calc(50px+(100%-50px)/12*11.5)] top-[32%] -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-[#e8e2d5] opacity-25 shadow-md"></div>
+<div class="pointer-events-none absolute left-[calc(50px+(100%-50px)/12*11.5)] top-[68%] -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-[#e8e2d5] opacity-25 shadow-md"></div>
+<!-- Vertical Frets Dividers -->
+<!-- Nut Bone (Casa 0) -->
+<div class="relative bg-[#1c1a18] flex items-center justify-center">
+<div class="absolute right-0 top-0 bottom-0 w-2.5 bg-[#e8e2d5] rounded-l-sm shadow-[0_0_8px_rgba(232,226,213,0.3)]"></div>
+</div>
+<!-- Frets 1 to 12 vertical bars -->
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1 h-full bg-gradient-to-b from-[#8f857d] via-[#e7ded7] to-[#8f857d] shadow-sm"></div></div>
+<div class="relative flex items-center justify-end"><div class="w-1.5 h-full bg-gradient-to-b from-[#a38c80] via-[#f2dfd2] to-[#a38c80] shadow-md"></div></div>
+<!-- Strings layer (Absolute horizontal lines positioned from top to bottom) -->
+<!-- String 1 (E4 - High E, Thin Nylon) -->
+<div class="pointer-events-none absolute left-0 right-0 top-[12%] h-[1.5px] bg-[#d9c5b2] opacity-85 shadow-[0_1px_2px_rgba(0,0,0,0.6)]"></div>
+<!-- String 2 (B3 - Nylon) -->
+<div class="pointer-events-none absolute left-0 right-0 top-[27%] h-[2px] bg-[#d9c5b2] opacity-90 shadow-[0_1px_2px_rgba(0,0,0,0.6)]"></div>
+<!-- String 3 (G3 - Nylon) -->
+<div class="pointer-events-none absolute left-0 right-0 top-[42%] h-[2.6px] bg-[#cbb49f] opacity-90 shadow-[0_1px_3px_rgba(0,0,0,0.7)]"></div>
+<!-- String 4 (D3 - Wound Silver/Bronze) -->
+<div class="pointer-events-none absolute left-0 right-0 top-[57%] h-[3.4px] bg-gradient-to-r from-[#a38c80] via-[#d5c3b7] to-[#a38c80] shadow-[0_1px_4px_rgba(0,0,0,0.8)]"></div>
+<!-- String 5 (A2 - Wound Silver/Bronze) -->
+<div class="pointer-events-none absolute left-0 right-0 top-[72%] h-[4.2px] bg-gradient-to-r from-[#8f796e] via-[#c4b1a4] to-[#8f796e] shadow-[0_1px_4px_rgba(0,0,0,0.9)]"></div>
+<!-- String 6 (E2 - Low E, Thick Wound) -->
+<div class="pointer-events-none absolute left-0 right-0 top-[87%] h-[5.2px] bg-gradient-to-r from-[#7a665c] via-[#b59f93] to-[#7a665c] shadow-[0_2px_5px_rgba(0,0,0,0.95)]"></div>
+<!-- Dynamic Interactive Note Container (Injected via JS) -->
+<div class="absolute inset-0 z-20" id="notesOverlay">
+<!-- Notes elements are dynamically rendered here -->
+</div>
+</div>
+<!-- Fret Range Guide Bottom -->
+<div class="flex items-center justify-between text-tertiary-fixed-dim text-[11px] pt-3 px-2">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#d97736]"></span>
+<span>Mão Esquerda (Tríades e Digitações Ativas no Braço)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Escala: 650mm Tradicional Clássico</span>
+<span>Madeira: Granulado Escuro 100% Acústico</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Lower Diagnostic Grid: Analytical Harmony Cards & Audio Suite -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Card 1: Interval Structure & CAGED Positioning -->
+<div class="lg:col-span-4 bg-surface-container p-space-md rounded-xl shadow-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Fórmula &amp; Intervalos</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-mono bg-surface-container-high text-primary" id="activeVoicingTag">Tétrade 1-b3-5-b7</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold" id="activeChordName">Lá Menor com Sétima (Am7)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant" id="activeChordDescription">
+          Construção baseada no 6º grau (relativo menor) de Dó Maior. Som aveludado com repouso expressivo, sem tensão de trítono.
+        </p>
+</div>
+<!-- Notes Breakdown Pills -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-tertiary">Constituição Intervalar:</span>
+<div class="grid grid-cols-4 gap-2 text-center" id="intervalNotesGrid">
+<div class="bg-surface-container-high p-2 rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">1 (Tônica)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">A</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded-lg">
+<span class="font-label-sm text-label-sm text-[#38a169] block">b3 (Terça m)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">C</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded-lg">
+<span class="font-label-sm text-label-sm text-[#3182ce] block">5J (Quinta)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">E</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded-lg">
+<span class="font-label-sm text-label-sm text-[#805ad5] block">b7 (Sétima m)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">G</span>
+</div>
+</div>
+</div>
+<!-- Suggested Fingering / CAGED box -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">view_quilt</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Formato Principal (CAGED):</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold" id="activeCagedShape">Formato 'Em' (Casa 5)</span>
+</div>
+</div>
+<!-- Card 2: Voicings & Inversions -->
+<div class="lg:col-span-4 bg-surface-container p-space-md rounded-xl shadow-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Aplicações Harmônicas</span>
+<span class="font-label-sm text-label-sm text-tertiary">3 Formatos</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Distribuição de Vozes (Voicings)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Inversões harmônicas no violão clássico e popular para condução de vozes (Voice Leading).
+        </p>
+</div>
+<!-- Voicing Options Radio-like buttons -->
+<div class="flex flex-col gap-2">
+<div class="bg-surface-container-high hover:bg-surface-container-highest cursor-pointer p-3 rounded-lg flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container font-bold text-xs flex items-center justify-center">01</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Drop 2 (Corda 4 à 1)</span>
+<span class="font-label-sm text-label-sm text-tertiary">Digitação aberta de grande projeção</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">radio_button_checked</span>
+</div>
+<div class="bg-surface-container-high hover:bg-surface-container-highest cursor-pointer p-3 rounded-lg flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-surface-container text-tertiary font-bold text-xs flex items-center justify-center">02</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tríade Estrita Fechada</span>
+<span class="font-label-sm text-label-sm text-tertiary">Ideal para comping e acompanhamento suave</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px]">radio_button_unchecked</span>
+</div>
+<div class="bg-surface-container-high hover:bg-surface-container-highest cursor-pointer p-3 rounded-lg flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-surface-container text-tertiary font-bold text-xs flex items-center justify-center">03</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Posição de Cordas Soltas</span>
+<span class="font-label-sm text-label-sm text-tertiary">Campanella com ressonância máxima</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px]">radio_button_unchecked</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-tertiary">Status da Digitação:</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Recomendado para Iniciante / Intermediário</span>
+</div>
+</div>
+<!-- Card 3: Acoustic Studio Visualizer & Pluck Engine Info -->
+<div class="lg:col-span-4 bg-surface-container p-space-md rounded-xl shadow-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Acoustic Audio Engine</span>
+<span class="flex items-center gap-1 text-[11px] font-mono text-[#38a169]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#38a169]"></span>
+            Web Audio Online
+          </span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Ressonância Natural de Nylon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Simulador com modelo físico de Karplus-Strong simplificado (decaimento exponencial e calor harmônico orgânico).
+        </p>
+</div>
+<!-- Realtime Audio Oscilloscope simulation bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-3">
+<div class="flex items-center justify-between text-xs font-mono text-tertiary">
+<span>SAÍDA ESTÉREO</span>
+<span id="activeNoteDisplay">NENHUMA NOTA TOCADA</span>
+</div>
+<div class="h-12 flex items-center justify-center gap-1">
+<span class="w-1.5 h-4 bg-primary-container rounded-full animate-pulse"></span>
+<span class="w-1.5 h-8 bg-secondary rounded-full"></span>
+<span class="w-1.5 h-10 bg-primary-container rounded-full animate-bounce"></span>
+<span class="w-1.5 h-6 bg-tertiary rounded-full"></span>
+<span class="w-1.5 h-11 bg-secondary rounded-full animate-pulse"></span>
+<span class="w-1.5 h-5 bg-primary-container rounded-full"></span>
+<span class="w-1.5 h-9 bg-secondary rounded-full"></span>
+<span class="w-1.5 h-3 bg-tertiary rounded-full"></span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-tertiary">
+<span>Decaimento: 1.8s</span>
+<span>Amortecimento: 2.4 kHz</span>
+</div>
+</div>
+<!-- Pedagogical Action Button -->
+<button class="w-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface py-space-sm px-space-md rounded-lg font-label-lg text-label-lg font-medium flex items-center justify-center gap-space-xs transition-colors" id="btnStudyLesson" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+<span>Estudar Lição Associada no Método Tríade</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+(() => {
+  // Web Audio Context for Guitar Synthesis
+  let audioCtx = null;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  // Guitar Pluck Synthesizer using Web Audio API
+  function playGuitarTone(freq, duration = 1.4) {
+    try {
+      initAudio();
+      const now = audioCtx.currentTime;
+
+      // Primary oscillator: Warm triangle wave
+      const osc = audioCtx.createOscillator();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, now);
+
+      // Sub harmonic sine oscillator for acoustic body resonance
+      const subOsc = audioCtx.createOscillator();
+      subOsc.type = 'sine';
+      subOsc.frequency.setValueAtTime(freq * 0.5, now);
+
+      // Low pass filter simulating wood resonance
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(1800, now);
+      filter.frequency.exponentialRampToValueAtTime(320, now + duration);
+
+      // Gain Envelope for snappy nylon pluck
+      const gainNode = audioCtx.createGain();
+      gainNode.gain.setValueAtTime(0.001, now);
+      gainNode.gain.linearRampToValueAtTime(0.35, now + 0.015);
+      gainNode.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+      const subGain = audioCtx.createGain();
+      subGain.gain.setValueAtTime(0.12, now);
+      subGain.gain.exponentialRampToValueAtTime(0.0001, now + duration * 0.8);
+
+      // Route Audio
+      osc.connect(filter);
+      filter.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+
+      subOsc.connect(subGain);
+      subGain.connect(audioCtx.destination);
+
+      osc.start(now);
+      subOsc.start(now);
+      osc.stop(now + duration);
+      subOsc.stop(now + duration);
+    } catch (e) {
+      console.warn("Audio Context disabled or not supported:", e);
+    }
+  }
+
+  // Frequency Mapping for standard guitar (Strings 1 to 6)
+  // String 1 (E4 = 329.63), String 2 (B3 = 246.94), String 3 (G3 = 196.00), String 4 (D3 = 146.83), String 5 (A2 = 110.00), String 6 (E2 = 82.41)
+  const openFrequencies = [329.63, 246.94, 196.00, 146.83, 110.00, 82.41];
+
+  function getFretFrequency(stringIndex, fretIndex) {
+    const base = openFrequencies[stringIndex];
+    return base * Math.pow(2, fretIndex / 12);
+  }
+
+  // Database of Chords and Scalic Mappings across 12 Frets
+  // string: 0 = 1st (high E), 5 = 6th (low E)
+  const PRESETS = {
+    Am7: {
+      name: "Lá Menor com Sétima (Am7)",
+      desc: "Construção baseada no 6º grau (relativo menor) de Dó Maior. Som aveludado com repouso expressivo, sem tensão de trítono.",
+      voicingTag: "Tétrade 1-b3-5-b7",
+      caged: "Formato 'Em' (Casa 5)",
+      formula: [
+        { degree: "1 (Tônica)", note: "A", color: "text-secondary" },
+        { degree: "b3 (Terça m)", note: "C", color: "text-[#38a169]" },
+        { degree: "5J (Quinta)", note: "E", color: "text-[#3182ce]" },
+        { degree: "b7 (Sétima m)", note: "G", color: "text-[#805ad5]" }
+      ],
+      notes: [
+        // stringIndex: 0(E4), 1(B3), 2(G3), 3(D3), 4(A2), 5(E2)
+        { str: 0, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
+        { str: 0, fret: 3, note: "G", degree: "b7", finger: "3", role: "seventh" },
+        { str: 0, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
+        { str: 0, fret: 8, note: "C", degree: "b3", finger: "4", role: "third" },
+        { str: 0, fret: 12, note: "E", degree: "5", finger: "1", role: "fifth" },
+
+        { str: 1, fret: 1, note: "C", degree: "b3", finger: "1", role: "third" },
+        { str: 1, fret: 5, note: "E", degree: "5", finger: "1", role: "fifth" },
+        { str: 1, fret: 8, note: "G", degree: "b7", finger: "4", role: "seventh" },
+        { str: 1, fret: 10, note: "A", degree: "1", finger: "2", role: "root" },
+
+        { str: 2, fret: 0, note: "G", degree: "b7", finger: "0", role: "seventh" },
+        { str: 2, fret: 2, note: "A", degree: "1", finger: "2", role: "root" },
+        { str: 2, fret: 5, note: "C", degree: "b3", finger: "1", role: "third" },
+        { str: 2, fret: 9, note: "E", degree: "5", finger: "3", role: "fifth" },
+        { str: 2, fret: 12, note: "G", degree: "b7", finger: "1", role: "seventh" },
+
+        { str: 3, fret: 2, note: "E", degree: "5", finger: "2", role: "fifth" },
+        { str: 3, fret: 5, note: "G", degree: "b7", finger: "1", role: "seventh" },
+        { str: 3, fret: 7, note: "A", degree: "1", finger: "3", role: "root" },
+        { str: 3, fret: 10, note: "C", degree: "b3", finger: "4", role: "third" },
+
+        { str: 4, fret: 0, note: "A", degree: "1", finger: "0", role: "root" },
+        { str: 4, fret: 3, note: "C", degree: "b3", finger: "3", role: "third" },
+        { str: 4, fret: 7, note: "E", degree: "5", finger: "2", role: "fifth" },
+        { str: 4, fret: 10, note: "G", degree: "b7", finger: "4", role: "seventh" },
+        { str: 4, fret: 12, note: "A", degree: "1", finger: "1", role: "root" },
+
+        { str: 5, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
+        { str: 5, fret: 3, note: "G", degree: "b7", finger: "3", role: "seventh" },
+        { str: 5, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
+        { str: 5, fret: 8, note: "C", degree: "b3", finger: "4", role: "third" },
+        { str: 5, fret: 12, note: "E", degree: "5", finger: "1", role: "fifth" }
+      ]
+    },
+    Cmaj: {
+      name: "Dó Maior (C Major / Jônio)",
+      desc: "Escala diatônica maior de referência. Base estrutural de toda a harmonia funcional e do Método Tríade.",
+      voicingTag: "Escala & Tríade Maior",
+      caged: "Formato 'C' e 'A'",
+      formula: [
+        { degree: "1 (Tônica)", note: "C", color: "text-secondary" },
+        { degree: "3M (Terça M)", note: "E", color: "text-[#38a169]" },
+        { degree: "5J (Quinta)", note: "G", color: "text-[#3182ce]" },
+        { degree: "7M (Sétima M)", note: "B", color: "text-[#805ad5]" }
+      ],
+      notes: [
+        { str: 0, fret: 0, note: "E", degree: "3", finger: "0", role: "third" },
+        { str: 0, fret: 1, note: "F", degree: "4", finger: "1", role: "ext" },
+        { str: 0, fret: 3, note: "G", degree: "5", finger: "3", role: "fifth" },
+        { str: 0, fret: 7, note: "B", degree: "7M", finger: "1", role: "seventh" },
+        { str: 0, fret: 8, note: "C", degree: "1", finger: "2", role: "root" },
+        { str: 0, fret: 12, note: "E", degree: "3", finger: "1", role: "third" },
+
+        { str: 1, fret: 0, note: "B", degree: "7M", finger: "0", role: "seventh" },
+        { str: 1, fret: 1, note: "C", degree: "1", finger: "1", role: "root" },
+        { str: 1, fret: 3, note: "D", degree: "9", finger: "3", role: "ext" },
+        { str: 1, fret: 5, note: "E", degree: "3", finger: "1", role: "third" },
+        { str: 1, fret: 8, note: "G", degree: "5", finger: "4", role: "fifth" },
+        { str: 1, fret: 12, note: "B", degree: "7M", finger: "1", role: "seventh" },
+
+        { str: 2, fret: 0, note: "G", degree: "5", finger: "0", role: "fifth" },
+        { str: 2, fret: 2, note: "A", degree: "6", finger: "2", role: "ext" },
+        { str: 2, fret: 5, note: "C", degree: "1", finger: "1", role: "root" },
+        { str: 2, fret: 9, note: "E", degree: "3", finger: "3", role: "third" },
+        { str: 2, fret: 12, note: "G", degree: "5", finger: "1", role: "fifth" },
+
+        { str: 3, fret: 0, note: "D", degree: "9", finger: "0", role: "ext" },
+        { str: 3, fret: 2, note: "E", degree: "3", finger: "2", role: "third" },
+        { str: 3, fret: 3, note: "F", degree: "4", finger: "3", role: "ext" },
+        { str: 3, fret: 5, note: "G", degree: "5", finger: "1", role: "fifth" },
+        { str: 3, fret: 9, note: "B", degree: "7M", finger: "3", role: "seventh" },
+        { str: 3, fret: 10, note: "C", degree: "1", finger: "4", role: "root" },
+
+        { str: 4, fret: 2, note: "E", degree: "3", finger: "2", role: "third" },
+        { str: 4, fret: 3, note: "C", degree: "1", finger: "3", role: "root" },
+        { str: 4, fret: 7, note: "E", degree: "3", finger: "1", role: "third" },
+        { str: 4, fret: 10, note: "G", degree: "5", finger: "3", role: "fifth" },
+
+        { str: 5, fret: 0, note: "E", degree: "3", finger: "0", role: "third" },
+        { str: 5, fret: 1, note: "F", degree: "4", finger: "1", role: "ext" },
+        { str: 5, fret: 3, note: "G", degree: "5", finger: "3", role: "fifth" },
+        { str: 5, fret: 8, note: "C", degree: "1", finger: "1", role: "root" },
+        { str: 5, fret: 12, note: "E", degree: "3", finger: "1", role: "third" }
+      ]
+    },
+    Dm79: {
+      name: "Ré Menor com Nona (Dm7(9))",
+      desc: "Típica harmonia de Bossa Nova e Jazz (acorde II cadencial em Dó Maior). Rico em sobreposição de tríades F/D.",
+      voicingTag: "Tétrade + 9ª Adicionada",
+      caged: "Formato 'Dm' & Drop 3",
+      formula: [
+        { degree: "1 (Tônica)", note: "D", color: "text-secondary" },
+        { degree: "b3 (Terça m)", note: "F", color: "text-[#38a169]" },
+        { degree: "5J (Quinta)", note: "A", color: "text-[#3182ce]" },
+        { degree: "9 (Nona M)", note: "E", color: "text-secondary" }
+      ],
+      notes: [
+        { str: 0, fret: 0, note: "E", degree: "9", finger: "0", role: "ext" },
+        { str: 0, fret: 1, note: "F", degree: "b3", finger: "1", role: "third" },
+        { str: 0, fret: 5, note: "A", degree: "5", finger: "1", role: "fifth" },
+        { str: 0, fret: 8, note: "C", degree: "b7", finger: "3", role: "seventh" },
+        { str: 0, fret: 10, note: "D", degree: "1", finger: "4", role: "root" },
+        { str: 0, fret: 12, note: "E", degree: "9", finger: "1", role: "ext" },
+
+        { str: 1, fret: 1, note: "C", degree: "b7", finger: "1", role: "seventh" },
+        { str: 1, fret: 3, note: "D", degree: "1", finger: "3", role: "root" },
+        { str: 1, fret: 5, note: "E", degree: "9", finger: "4", role: "ext" },
+        { str: 1, fret: 6, note: "F", degree: "b3", finger: "2", role: "third" },
+        { str: 1, fret: 10, note: "A", degree: "5", finger: "3", role: "fifth" },
+
+        { str: 2, fret: 2, note: "A", degree: "5", finger: "2", role: "fifth" },
+        { str: 2, fret: 5, note: "C", degree: "b7", finger: "1", role: "seventh" },
+        { str: 2, fret: 7, note: "D", degree: "1", finger: "3", role: "root" },
+        { str: 2, fret: 9, note: "E", degree: "9", finger: "4", role: "ext" },
+        { str: 2, fret: 10, note: "F", degree: "b3", finger: "2", role: "third" },
+
+        { str: 3, fret: 0, note: "D", degree: "1", finger: "0", role: "root" },
+        { str: 3, fret: 2, note: "E", degree: "9", finger: "2", role: "ext" },
+        { str: 3, fret: 3, note: "F", degree: "b3", finger: "3", role: "third" },
+        { str: 3, fret: 7, note: "A", degree: "5", finger: "1", role: "fifth" },
+        { str: 3, fret: 10, note: "C", degree: "b7", finger: "4", role: "seventh" },
+
+        { str: 4, fret: 0, note: "A", degree: "5", finger: "0", role: "fifth" },
+        { str: 4, fret: 3, note: "C", degree: "b7", finger: "2", role: "seventh" },
+        { str: 4, fret: 5, note: "D", degree: "1", finger: "4", role: "root" },
+        { str: 4, fret: 7, note: "E", degree: "9", finger: "1", role: "ext" },
+        { str: 4, fret: 8, note: "F", degree: "b3", finger: "2", role: "third" },
+
+        { str: 5, fret: 1, note: "F", degree: "b3", finger: "1", role: "third" },
+        { str: 5, fret: 5, note: "A", degree: "5", finger: "1", role: "fifth" },
+        { str: 5, fret: 8, note: "C", degree: "b7", finger: "3", role: "seventh" },
+        { str: 5, fret: 10, note: "D", degree: "1", finger: "4", role: "root" },
+        { str: 5, fret: 12, note: "E", degree: "9", finger: "1", role: "ext" }
+      ]
+    },
+    G7: {
+      name: "Sol Dominante (G7)",
+      desc: "Acorde de tensão com trítono ativo entre a terça maior (B) e a sétima menor (F). Prepara a resolução cadencial em Dó Maior.",
+      voicingTag: "Dominante Primário V7",
+      caged: "Formato 'E' e 'G'",
+      formula: [
+        { degree: "1 (Tônica)", note: "G", color: "text-secondary" },
+        { degree: "3M (Terça M)", note: "B", color: "text-[#38a169]" },
+        { degree: "5J (Quinta)", note: "D", color: "text-[#3182ce]" },
+        { degree: "b7 (Sétima m)", note: "F", color: "text-[#805ad5]" }
+      ],
+      notes: [
+        { str: 0, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
+        { str: 0, fret: 3, note: "G", degree: "1", finger: "3", role: "root" },
+        { str: 0, fret: 7, note: "B", degree: "3", finger: "1", role: "third" },
+        { str: 0, fret: 10, note: "D", degree: "5", finger: "4", role: "fifth" },
+
+        { str: 1, fret: 0, note: "B", degree: "3", finger: "0", role: "third" },
+        { str: 1, fret: 3, note: "D", degree: "5", finger: "3", role: "fifth" },
+        { str: 1, fret: 6, note: "F", degree: "b7", finger: "1", role: "seventh" },
+        { str: 1, fret: 8, note: "G", degree: "1", finger: "3", role: "root" },
+
+        { str: 2, fret: 0, note: "G", degree: "1", finger: "0", role: "root" },
+        { str: 2, fret: 4, note: "B", degree: "3", finger: "2", role: "third" },
+        { str: 2, fret: 7, note: "D", degree: "5", finger: "1", role: "fifth" },
+        { str: 2, fret: 10, note: "F", degree: "b7", finger: "4", role: "seventh" },
+
+        { str: 3, fret: 0, note: "D", degree: "5", finger: "0", role: "fifth" },
+        { str: 3, fret: 3, note: "F", degree: "b7", finger: "1", role: "seventh" },
+        { str: 3, fret: 5, note: "G", degree: "1", finger: "3", role: "root" },
+        { str: 3, fret: 9, note: "B", degree: "3", finger: "4", role: "third" },
+
+        { str: 4, fret: 2, note: "B", degree: "3", finger: "1", role: "third" },
+        { str: 4, fret: 5, note: "D", degree: "5", finger: "3", role: "fifth" },
+        { str: 4, fret: 8, note: "F", degree: "b7", finger: "4", role: "seventh" },
+        { str: 4, fret: 10, note: "G", degree: "1", finger: "1", role: "root" },
+
+        { str: 5, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
+        { str: 5, fret: 3, note: "G", degree: "1", finger: "3", role: "root" },
+        { str: 5, fret: 7, note: "B", degree: "3", finger: "1", role: "third" },
+        { str: 5, fret: 10, note: "D", degree: "5", finger: "4", role: "fifth" }
+      ]
+    },
+    EmPent: {
+      name: "Mi Menor Pentatônica (Em Pent)",
+      desc: "A digitação mais natural e ressonante do violão. Elimina semitons gerando sonoridade aberta e direta.",
+      voicingTag: "Pentatônica Menor",
+      caged: "Shape 1 Clássico",
+      formula: [
+        { degree: "1 (Tônica)", note: "E", color: "text-secondary" },
+        { degree: "b3 (Terça m)", note: "G", color: "text-[#38a169]" },
+        { degree: "4 (Quarta J)", note: "A", color: "text-secondary" },
+        { degree: "5J (Quinta)", note: "B", color: "text-[#3182ce]" }
+      ],
+      notes: [
+        { str: 0, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
+        { str: 0, fret: 3, note: "G", degree: "b3", finger: "3", role: "third" },
+        { str: 0, fret: 5, note: "A", degree: "4", finger: "1", role: "ext" },
+        { str: 0, fret: 7, note: "B", degree: "5", finger: "2", role: "fifth" },
+        { str: 0, fret: 10, note: "D", degree: "b7", finger: "4", role: "seventh" },
+        { str: 0, fret: 12, note: "E", degree: "1", finger: "1", role: "root" },
+
+        { str: 1, fret: 0, note: "B", degree: "5", finger: "0", role: "fifth" },
+        { str: 1, fret: 3, note: "D", degree: "b7", finger: "3", role: "seventh" },
+        { str: 1, fret: 5, note: "E", degree: "1", finger: "1", role: "root" },
+        { str: 1, fret: 8, note: "G", degree: "b3", finger: "4", role: "third" },
+        { str: 1, fret: 10, note: "A", degree: "4", finger: "2", role: "ext" },
+        { str: 1, fret: 12, note: "B", degree: "5", finger: "1", role: "fifth" },
+
+        { str: 2, fret: 0, note: "G", degree: "b3", finger: "0", role: "third" },
+        { str: 2, fret: 2, note: "A", degree: "4", finger: "2", role: "ext" },
+        { str: 2, fret: 4, note: "B", degree: "5", finger: "3", role: "fifth" },
+        { str: 2, fret: 7, note: "D", degree: "b7", finger: "1", role: "seventh" },
+        { str: 2, fret: 9, note: "E", degree: "1", finger: "3", role: "root" },
+        { str: 2, fret: 12, note: "G", degree: "b3", finger: "1", role: "third" },
+
+        { str: 3, fret: 0, note: "D", degree: "b7", finger: "0", role: "seventh" },
+        { str: 3, fret: 2, note: "E", degree: "1", finger: "2", role: "root" },
+        { str: 3, fret: 5, note: "G", degree: "b3", finger: "1", role: "third" },
+        { str: 3, fret: 7, note: "A", degree: "4", finger: "3", role: "ext" },
+        { str: 3, fret: 9, note: "B", degree: "5", finger: "4", role: "fifth" },
+
+        { str: 4, fret: 0, note: "A", degree: "4", finger: "0", role: "ext" },
+        { str: 4, fret: 2, note: "B", degree: "5", finger: "2", role: "fifth" },
+        { str: 4, fret: 5, note: "D", degree: "b7", finger: "1", role: "seventh" },
+        { str: 4, fret: 7, note: "E", degree: "1", finger: "3", role: "root" },
+        { str: 4, fret: 10, note: "G", degree: "b3", finger: "4", role: "third" },
+
+        { str: 5, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
+        { str: 5, fret: 3, note: "G", degree: "b3", finger: "3", role: "third" },
+        { str: 5, fret: 5, note: "A", degree: "4", finger: "1", role: "ext" },
+        { str: 5, fret: 7, note: "B", degree: "5", finger: "2", role: "fifth" },
+        { str: 5, fret: 10, note: "D", degree: "b7", finger: "4", role: "seventh" },
+        { str: 5, fret: 12, note: "E", degree: "1", finger: "1", role: "root" }
+      ]
+    }
+  };
+
+  // State
+  let currentPresetKey = 'Am7';
+  let currentViewMode = 'degrees'; // 'degrees', 'notes', 'fingers'
+  let isTriadOnly = false;
+
+  // DOM elements
+  const fretboardOverlay = document.getElementById('notesOverlay');
+  const chordSelector = document.getElementById('chordSelector');
+  const viewDegreesBtn = document.getElementById('viewDegrees');
+  const viewNotesBtn = document.getElementById('viewNotes');
+  const viewFingersBtn = document.getElementById('viewFingers');
+  const toggleDensityBtn = document.getElementById('toggleDensity');
+  const toggleDensityPill = document.getElementById('toggleDensityPill');
+  const layerStateText = document.getElementById('layerStateText');
+  const layerFilterLabel = document.getElementById('layerFilterLabel');
+
+  const countRoot = document.getElementById('countRoot');
+  const countThird = document.getElementById('countThird');
+  const countFifth = document.getElementById('countFifth');
+  const countSeventh = document.getElementById('countSeventh');
+  const countExt = document.getElementById('countExt');
+
+  const activeChordName = document.getElementById('activeChordName');
+  const activeChordDescription = document.getElementById('activeChordDescription');
+  const activeVoicingTag = document.getElementById('activeVoicingTag');
+  const activeCagedShape = document.getElementById('activeCagedShape');
+  const intervalNotesGrid = document.getElementById('intervalNotesGrid');
+  const activeNoteDisplay = document.getElementById('activeNoteDisplay');
+  const btnArpeggiate = document.getElementById('btnArpeggiate');
+  const btnStrum = document.getElementById('btnStrum');
+
+  // String Y-axis percentages (matches visual lines)
+  const stringYPercents = [12, 27, 42, 57, 72, 87];
+
+  function getNoteBadgeStyle(role) {
+    switch (role) {
+      case 'root':
+        return {
+          bg: 'bg-primary-container',
+          text: 'text-on-primary-container font-extrabold ring-2 ring-primary/40 animate-pulse',
+          colorCode: '#d97736'
+        };
+      case 'third':
+        return {
+          bg: 'bg-[#38a169]',
+          text: 'text-surface font-bold',
+          colorCode: '#38a169'
+        };
+      case 'fifth':
+        return {
+          bg: 'bg-[#3182ce]',
+          text: 'text-surface font-bold',
+          colorCode: '#3182ce'
+        };
+      case 'seventh':
+        return {
+          bg: 'bg-[#805ad5]',
+          text: 'text-surface font-bold',
+          colorCode: '#805ad5'
+        };
+      case 'ext':
+      default:
+        return {
+          bg: 'bg-secondary',
+          text: 'text-surface font-bold',
+          colorCode: '#ffb95f'
+        };
+    }
+  }
+
+  function renderFretboard() {
+    const data = PRESETS[currentPresetKey];
+    if (!data) return;
+
+    // Update Text details
+    activeChordName.textContent = data.name;
+    activeChordDescription.textContent = data.desc;
+    activeVoicingTag.textContent = data.voicingTag;
+    activeCagedShape.textContent = data.caged;
+
+    // Build formula breakdown
+    intervalNotesGrid.innerHTML = '';
+    data.formula.forEach(item => {
+      const col = document.createElement('div');
+      col.className = 'bg-surface-container-high p-2 rounded-lg';
+      col.innerHTML = `
+        <span class="font-label-sm text-label-sm ${item.color} block">${item.degree}</span>
+        <span class="font-title-md text-title-md text-on-surface font-bold">${item.note}</span>
+      `;
+      intervalNotesGrid.appendChild(col);
+    });
+
+    // Clear Overlay
+    fretboardOverlay.innerHTML = '';
+
+    // Counters
+    let cRoot = 0, c3 = 0, c5 = 0, c7 = 0, cExt = 0;
+
+    // Filter notes if Triad Only mode is enabled
+    const visibleNotes = data.notes.filter(n => {
+      if (!isTriadOnly) return true;
+      return n.role === 'root' || n.role === 'third' || n.role === 'fifth';
+    });
+
+    visibleNotes.forEach(item => {
+      if (item.role === 'root') cRoot++;
+      else if (item.role === 'third') c3++;
+      else if (item.role === 'fifth') c5++;
+      else if (item.role === 'seventh') c7++;
+      else cExt++;
+
+      // Compute visual positions
+      const topY = stringYPercents[item.str];
+      let leftPerc = 0;
+
+      if (item.fret === 0) {
+        // Open string indicator (Left side of Nut in col 0)
+        leftPerc = 25; // 25px into the 50px nut column
+      } else {
+        // Fret 1 to 12
+        // Column 0 is 50px fixed. Frets 1..12 share the rest
+        // Left offset for center of fret column:
+        const fretIndex = item.fret - 1;
+        leftPerc = `calc(50px + (100% - 50px) / 12 * ${fretIndex + 0.5})`;
+      }
+
+      const badgeStyle = getNoteBadgeStyle(item.role);
+
+      // Determine badge text according to view mode
+      let displayBadgeText = item.degree;
+      if (currentViewMode === 'notes') displayBadgeText = item.note;
+      if (currentViewMode === 'fingers') displayBadgeText = item.finger;
+
+      // Note interactive bubble
+      const bubble = document.createElement('button');
+      bubble.type = 'button';
+      bubble.className = `absolute -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-[10px] shadow-lg transition-transform hover:scale-125 focus:scale-125 focus:outline-none z-30 cursor-pointer ${badgeStyle.bg} ${badgeStyle.text}`;
+
+      if (typeof leftPerc === 'number') {
+        bubble.style.left = `${leftPerc}px`;
+      } else {
+        bubble.style.left = leftPerc;
+      }
+      bubble.style.top = `${topY}%`;
+
+      // Frequency calculation
+      const freq = getFretFrequency(item.str, item.fret);
+
+      bubble.setAttribute('title', `Nota: ${item.note} • Grau: ${item.degree} • Corda: ${6 - item.str}ª • Casa: ${item.fret} • ${freq.toFixed(1)}Hz`);
+      bubble.innerHTML = `<span>${displayBadgeText}</span>`;
+
+      // Click: Play audio & animate
+      bubble.addEventListener('click', (e) => {
+        e.stopPropagation();
+        playGuitarTone(freq);
+        activeNoteDisplay.textContent = `${item.note} (${item.degree}) • ${freq.toFixed(1)} Hz • Casa ${item.fret}`;
+        
+        // Micro scale animation
+        bubble.classList.add('scale-150');
+        setTimeout(() => bubble.classList.remove('scale-150'), 250);
+      });
+
+      fretboardOverlay.appendChild(bubble);
+    });
+
+    // Update Counter Tags
+    countRoot.textContent = String(cRoot).padStart(2, '0');
+    countThird.textContent = String(c3).padStart(2, '0');
+    countFifth.textContent = String(c5).padStart(2, '0');
+    countSeventh.textContent = String(c7).padStart(2, '0');
+    countExt.textContent = String(cExt).padStart(2, '0');
+  }
+
+  // View Mode Switcher
+  function setViewMode(mode) {
+    currentViewMode = mode;
+    [viewDegreesBtn, viewNotesBtn, viewFingersBtn].forEach(b => {
+      b.className = 'view-mode-btn py-1.5 text-center font-label-md text-label-md text-tertiary font-medium rounded transition-all hover:text-on-surface';
+    });
+
+    if (mode === 'degrees') {
+      viewDegreesBtn.className = 'view-mode-btn active-view py-1.5 text-center font-label-md text-label-md font-semibold rounded transition-all bg-primary-container text-on-primary-container';
+    } else if (mode === 'notes') {
+      viewNotesBtn.className = 'view-mode-btn active-view py-1.5 text-center font-label-md text-label-md font-semibold rounded transition-all bg-primary-container text-on-primary-container';
+    } else {
+      viewFingersBtn.className = 'view-mode-btn active-view py-1.5 text-center font-label-md text-label-md font-semibold rounded transition-all bg-primary-container text-on-primary-container';
+    }
+    renderFretboard();
+  }
+
+  viewDegreesBtn.addEventListener('click', () => setViewMode('degrees'));
+  viewNotesBtn.addEventListener('click', () => setViewMode('notes'));
+  viewFingersBtn.addEventListener('click', () => setViewMode('fingers'));
+
+  // Chord Select Change
+  chordSelector.addEventListener('change', (e) => {
+    currentPresetKey = e.target.value;
+    renderFretboard();
+  });
+
+  // Toggle Triad vs Full Scale
+  toggleDensityBtn.addEventListener('click', () => {
+    isTriadOnly = !isTriadOnly;
+    if (isTriadOnly) {
+      toggleDensityPill.classList.remove('translate-x-5');
+      toggleDensityPill.classList.add('translate-x-0');
+      toggleDensityBtn.classList.remove('bg-primary-container');
+      toggleDensityBtn.classList.add('bg-surface-container-high');
+      layerStateText.textContent = 'Tríade';
+      layerFilterLabel.textContent = 'Foco Estrito na Tríade (1-3-5)';
+    } else {
+      toggleDensityPill.classList.add('translate-x-5');
+      toggleDensityPill.classList.remove('translate-x-0');
+      toggleDensityBtn.classList.add('bg-primary-container');
+      toggleDensityBtn.classList.remove('bg-surface-container-high');
+      layerStateText.textContent = 'Expandido';
+      layerFilterLabel.textContent = 'Tétrade / Escala Completa';
+    }
+    renderFretboard();
+  });
+
+  // Audio Playback: Arpeggio Sequence
+  btnArpeggiate.addEventListener('click', () => {
+    initAudio();
+    const data = PRESETS[currentPresetKey];
+    if (!data || !data.notes.length) return;
+
+    // Pick 5 representative ascending notes across strings
+    const sorted = [...data.notes]
+      .filter(n => n.role === 'root' || n.role === 'third' || n.role === 'fifth' || n.role === 'seventh')
+      .sort((a, b) => getFretFrequency(a.str, a.fret) - getFretFrequency(b.str, b.fret))
+      .slice(0, 6);
+
+    sorted.forEach((n, idx) => {
+      setTimeout(() => {
+        const freq = getFretFrequency(n.str, n.fret);
+        playGuitarTone(freq, 1.6);
+        activeNoteDisplay.textContent = `Arpejando: ${n.note} (${n.degree}) • ${freq.toFixed(1)}Hz`;
+      }, idx * 240);
+    });
+  });
+
+  // Audio Playback: Strum / Dedilhado Acústico
+  btnStrum.addEventListener('click', () => {
+    initAudio();
+    const data = PRESETS[currentPresetKey];
+    if (!data || !data.notes.length) return;
+
+    // Filter unique lowest-to-highest strings
+    const chordShape = [];
+    for (let s = 5; s >= 0; s--) {
+      const candidates = data.notes.filter(n => n.str === s && (n.role === 'root' || n.role === 'third' || n.role === 'fifth' || n.role === 'seventh'));
+      if (candidates.length > 0) {
+        chordShape.push(candidates[0]);
+      }
+    }
+
+    chordShape.forEach((n, idx) => {
+      setTimeout(() => {
+        const freq = getFretFrequency(n.str, n.fret);
+        playGuitarTone(freq, 2.2);
+      }, idx * 55);
+    });
+
+    activeNoteDisplay.textContent = `Dedilhado Harmônico em ${data.name}`;
+  });
+
+  // Initial render
+  renderFretboard();
+})();
+</script></main></div></body></html>

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-high": "#2c2928",
+          "surface-container-highest": "#373433",
+          "tertiary-fixed-dim": "#d5c3b7",
+          "primary-container": "#d97736",
+          "surface-dim": "#151312",
+          "secondary-fixed": "#ffddb8",
+          "on-tertiary-fixed-variant": "#51443b",
+          "secondary": "#ffb95f",
+          "inverse-primary": "#994703",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-error": "#690005",
+          "on-tertiary-fixed": "#231a12",
+          "primary-fixed-dim": "#ffb68c",
+          "primary": "#ffb68c",
+          "secondary-container": "#ee9800",
+          "on-tertiary": "#392e26",
+          "outline-variant": "#554339",
+          "surface-container": "#211f1e",
+          "inverse-surface": "#e7e1df",
+          "on-tertiary-container": "#332820",
+          "on-primary-fixed-variant": "#753400",
+          "on-primary": "#532200",
+          "on-surface-variant": "#dbc1b4",
+          "error-container": "#93000a",
+          "tertiary-fixed": "#f2dfd2",
+          "background": "#151312",
+          "surface-bright": "#3b3937",
+          "on-secondary": "#472a00",
+          "tertiary-container": "#9e8e83",
+          "on-surface": "#e7e1df",
+          "surface-container-lowest": "#100e0d",
+          "outline": "#a38c80",
+          "on-secondary-fixed": "#2a1700",
+          "error": "#ffb4ab",
+          "on-secondary-container": "#5b3800",
+          "surface-container-low": "#1d1b1a",
+          "surface-variant": "#373433",
+          "surface-tint": "#ffb68c",
+          "tertiary": "#d5c3b7",
+          "on-primary-container": "#491d00",
+          "inverse-on-surface": "#32302f",
+          "on-background": "#e7e1df",
+          "surface": "#151312",
+          "on-primary-fixed": "#321200",
+          "secondary-fixed-dim": "#ffb95f",
+          "on-error-container": "#ffdad6",
+          "primary-fixed": "#ffdbc9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Epilogue"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Epilogue"
+          ],
+          "display-lg": [
+            "Epilogue"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Epilogue"
+          ],
+          "headline-lg": [
+            "Epilogue"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Epilogue"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "34px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex flex-col"><div class="flex items-center gap-space-sm px-space-lg pt-space-lg pb-space-md"><img alt="Logo Método Tríade" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xvv4YOzsHAvwWx5mBBieQNH8OuZbJkkcmx97sdQhdmeVLNqAPGI7YQRsgwVnHnpNoRr86cnqgyVJZJWRJxdhVVY9f9P1cNGlL6swdoIgno_YH1okyStjjesckmppcSX5XObx15zCnIGxv--i3z0LgshUQdFZW23zJLJ1Y7W0ZyDJ5CQhT_Zzwv2HJiOJyK4493TicFguDHJdVvyMM14SaAaO57-YDMM1MGf_vs3TwME7BHp60vKOQ59s3f"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Método Tríade</span><span class="font-label-sm text-label-sm text-tertiary">Ambiente de Estudo</span></div></div><div class="h-px mx-space-lg bg-outline-variant/30 my-space-xs"></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_2px_8px_rgba(217,119,54,0.2)]"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hoje" href="#"><span class="font-label-lg text-label-lg">Hoje</span></a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_2px_8px_rgba(217,119,54,0.2)]" data-path="aprender" href="#"><span class="font-label-lg text-label-lg">Aprender</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="praticar" href="#"><span class="font-label-lg text-label-lg">Praticar</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="progresso" href="#"><span class="font-label-lg text-label-lg">Progresso</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="biblioteca" href="#"><span class="font-label-lg text-label-lg">Biblioteca</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md pb-space-lg"><div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">tune</span><span class="font-label-sm text-label-sm text-on-surface">Afinador E2</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-0.5 rounded"><span class="material-symbols-outlined text-tertiary text-[16px]">speed</span><span class="font-label-sm text-label-sm text-tertiary">86 BPM</span></div></div><div class="bg-surface-container-high p-space-sm rounded-lg flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Arthur Meireles</span><span class="font-label-sm text-label-sm text-secondary truncate">Intermediário • Nível 4</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md"><a class="text-tertiary hover:text-primary transition-colors" data-path="aprender" href="#">Aprender</a><span class="text-outline-variant">›</span><span class="text-on-surface font-semibold">Sessão Guiada: Módulo 3</span></div><div class="hidden lg:flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">Treino Ativo</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">local_fire_department</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">14 dias seguidos</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Atalhos de áudio" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Modo Focado" type="button"><span class="material-symbols-outlined text-[20px]">center_focus_strong</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors relative" title="Notificações" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary-container"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Main Workspace Container: 12-column adaptive layout capped for optimal sheet-stand viewing -->
+<div class="w-full max-w-[1360px] mx-auto px-space-md sm:px-space-lg py-space-md">
+<!-- Top Session Ribbon: Module Context & Session Telemetry -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md px-space-md py-space-sm bg-surface-container-low rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="flex h-2.5 w-2.5 rounded-full bg-primary-container animate-ping shrink-0"></span>
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">Módulo 03</span>
+<span class="text-outline-variant">•</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Mecânica do Dedilhado Básico &amp; Fluidez em Am</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded">Sessão Guiada #12</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-space-sm py-1 rounded font-mono">DURAÇÃO TOTAL: 40 MIN</span>
+</div>
+</div>
+<!-- Main Grid: 5 cols Left (Pedagogical Engine & Timer) + 7 cols Right (Technical Interactive Studio) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-gutter items-start">
+<!-- ================================================================= -->
+<!-- COLUNA DA ESQUERDA (40% Desktop - 5 Cols): Roteiro, Metas & Timer -->
+<!-- ================================================================= -->
+<section class="lg:col-span-5 flex flex-col gap-space-md w-full min-w-0">
+<!-- CARD 1: Bloco Superior de Timer e Controle de Rotação -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-36 h-36 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Header & Bloco Status -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">hourglass_top</span>
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">Bloco 4 de 6 • Prática Dirigida</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container px-space-sm py-0.5 rounded font-mono">15:00 previsto</span>
+</div>
+<!-- Countdown Big Typography Display -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-mono tracking-tight font-bold selection:bg-primary-container" id="session-countdown">
+                14:58
+              </span>
+<span class="font-label-md text-label-md text-tertiary font-medium">restantes no bloco</span>
+</div>
+<!-- Warm Amber Progress Bar -->
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary rounded-full transition-all duration-500" id="block-progress-fill" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Micro-Chips Indicator: 6 Session Stages -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Sequência Metodológica Tríade</span>
+<span class="text-secondary font-mono">65% concluído</span>
+</div>
+<div class="grid grid-cols-6 gap-1.5">
+<!-- B1 Concluído -->
+<div class="group relative flex flex-col gap-1 cursor-default" title="1. Aquecimento Digital (5m) - Concluído">
+<div class="h-1.5 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-tertiary text-center">01</span>
+</div>
+<!-- B2 Concluído -->
+<div class="group relative flex flex-col gap-1 cursor-default" title="2. Postura &amp; Apoiado (5m) - Concluído">
+<div class="h-1.5 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-tertiary text-center">02</span>
+</div>
+<!-- B3 Concluído -->
+<div class="group relative flex flex-col gap-1 cursor-default" title="3. Mecânica P-I-M (8m) - Concluído">
+<div class="h-1.5 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-tertiary text-center">03</span>
+</div>
+<!-- B4 Ativo (Pulsing Amber) -->
+<div class="group relative flex flex-col gap-1 cursor-default" title="4. Prática Dirigida (15m) - Em Andamento">
+<div class="h-1.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(217,119,54,0.6)] animate-pulse"></div>
+<span class="font-label-sm text-label-sm text-primary font-bold text-center">04</span>
+</div>
+<!-- B5 Pendente -->
+<div class="group relative flex flex-col gap-1 cursor-default" title="5. Aplicação Repertório (5m)">
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<span class="font-label-sm text-label-sm text-outline-variant text-center">05</span>
+</div>
+<!-- B6 Pendente -->
+<div class="group relative flex flex-col gap-1 cursor-default" title="6. Avaliação &amp; Registro (2m)">
+<div class="h-1.5 rounded-full bg-surface-container-highest"></div>
+<span class="font-label-sm text-label-sm text-outline-variant text-center">06</span>
+</div>
+</div>
+</div>
+<!-- Transport Action Row -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 flex items-center justify-center gap-space-xs py-2.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all shadow-sm active:scale-[0.98]" id="btn-toggle-pause" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary" id="pause-icon">pause</span>
+<span class="font-label-lg text-label-lg font-semibold" id="pause-label">Pausar Sessão</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs py-2.5 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" id="btn-next-block" type="button">
+<span class="font-label-md text-label-md">Pular Bloco</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_right</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: Meta Observável deste Bloco -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md relative overflow-hidden flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">adjust</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-semibold tracking-wide">Meta Observável do Bloco</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface leading-snug font-medium">
+            Executar o dedilhado <span class="text-secondary font-mono">P-I-M</span> no acorde de <span class="text-primary font-bold">Lá Menor (Am)</span> mantendo pulso contínuo a 60 BPM por 2 minutos ininterruptos.
+          </p>
+<!-- Critério de Sucesso Caixa Resumo -->
+<div class="bg-surface-container p-space-sm sm:p-space-md rounded-lg flex items-start gap-space-sm mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Critério Fisiológico de Sucesso</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Polegar relaxado tocando na 5ª corda (Lá), com dedos indicador e médio apoiando naturalmente na 3ª e 2ª cordas sem tensão escapular.
+              </p>
+</div>
+</div>
+</div>
+<!-- CARD 3: Roteiro de Passos Consecutivos (Atividades do Bloco) -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">checklist</span>
+              Roteiro de Treino Gradual
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Passo 2 de 3</span>
+</div>
+<!-- Passo 1: Concluído -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-start gap-space-sm opacity-80 hover:opacity-100 transition-opacity">
+<div class="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary line-through font-mono">01. Posicionamento Estático</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-1.5 rounded">Superado</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant/80 text-xs sm:text-body-md">
+                Posicionamento estático da mão direita sobre as cordas (P na 5ª, I na 3ª, M na 2ª, A na 1ª corda).
+              </p>
+</div>
+</div>
+<!-- Passo 2: Ativo com Destaque Âmbar -->
+<div class="bg-surface-container-high p-space-md rounded-lg flex items-start gap-space-sm shadow-[0_2px_12px_rgba(217,119,54,0.1)] relative">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center shrink-0 font-mono text-xs mt-0.5">
+              2
+            </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">02. Pulso Alternado em Semínimas</span>
+<span class="font-label-sm text-label-sm text-secondary bg-primary-container/20 px-2 py-0.5 rounded-full font-semibold animate-pulse">Ativo</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+                Toque sequencial <strong class="text-secondary font-mono">P - I - M - I</strong> com metrônomo calibrado em 50 BPM (4 ciclos completos com som limpo).
+              </p>
+</div>
+</div>
+<!-- Passo 3: Pendente -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-start gap-space-sm opacity-60">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 font-mono text-xs text-outline-variant mt-0.5">
+              3
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary font-mono">03. Rampa de Velocidade Alvo</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs sm:text-body-md">
+                Aceleração gradual de 50 para 60 BPM mantendo relaxamento do antebraço e simetria de ataque sonoro.
+              </p>
+</div>
+</div>
+</div>
+<!-- CARD 4: Erros Comuns & Correções Rápidas de Postura -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology_alt</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Checklist de Ajuste Postural</span>
+</div>
+<div class="space-y-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="text-lg leading-none mt-0.5">⚠️</span>
+<div class="flex flex-col min-w-0 text-xs sm:text-body-md">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Polegar abafando a 3ª corda?</span>
+<p class="text-on-surface-variant font-body-md">
+                  Ajuste a curvatura do punho, mantendo a ponta do polegar projetada ligeiramente à frente dos dedos indicador e médio.
+                </p>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="text-lg leading-none mt-0.5">💡</span>
+<div class="flex flex-col min-w-0 text-xs sm:text-body-md">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Tensão nos ombros ou pescoço?</span>
+<p class="text-on-surface-variant font-body-md">
+                  Inspire fundo a cada 4 compassos e deixe a gravidade acomodar o peso do braço no bojo superior do violão.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================================================================= -->
+<!-- COLUNA DA DIREITA (60% Desktop - 7 Cols): Material Técnico Studio -->
+<!-- ================================================================= -->
+<section class="lg:col-span-7 flex flex-col gap-space-md w-full min-w-0">
+<!-- SELETOR DE NÍVEL EM TABS TÁTEIS -->
+<div class="bg-surface-container-low p-1.5 rounded-xl shadow-sm flex items-center justify-between gap-1.5 overflow-x-auto">
+<button class="flex-1 py-2 px-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors text-center whitespace-nowrap" type="button">
+            Preparação (Facilitado)
+          </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-sm transition-transform active:scale-[0.99] text-center whitespace-nowrap flex items-center justify-center gap-1.5" type="button">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+            Alvo (Oficial)
+          </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors text-center whitespace-nowrap" type="button">
+            Variação (Desafio)
+          </button>
+</div>
+<!-- DIAGRAMA VETORIAL PRECISO: BRAÇO DO VIOLÃO & ACORDE DE Am -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<!-- Topo do Diagrama: Cifra e Notas -->
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="px-3 py-1 bg-surface-container-highest rounded-lg font-headline-sm text-headline-sm text-primary font-bold font-mono">
+                Am
+              </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Lá Menor (A Minor)</span>
+<span class="font-label-sm text-label-sm text-tertiary">Formato Fundamental • Posição Aberta</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded-lg">
+<span class="text-secondary font-mono font-bold">Fórmula:</span>
+<span>1 - b3 - 5 (A - C - E)</span>
+</div>
+</div>
+<!-- Canvas Braço de Violão Renderizado com SVG e Camadas Semânticas -->
+<div class="bg-surface-container-lowest p-space-md sm:p-space-lg rounded-xl shadow-inner flex flex-col gap-space-md overflow-x-auto">
+<!-- SVG do Braço Técnico (Fretboard) -->
+<div class="w-full min-w-[520px] relative py-2">
+<svg class="w-full h-auto select-none" viewbox="0 0 640 220" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="fretWireGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#554339"></stop>
+<stop offset="50%" stop-color="#a38c80"></stop>
+<stop offset="100%" stop-color="#373433"></stop>
+</lineargradient>
+<lineargradient id="bronzeString" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ee9800"></stop>
+<stop offset="50%" stop-color="#ffb68c"></stop>
+<stop offset="100%" stop-color="#994703"></stop>
+</lineargradient>
+</defs>
+<!-- Madeira do Braço (Rosewood escuro) -->
+<rect fill="#1b1816" height="150" rx="4" width="540" x="80" y="30"></rect>
+<!-- Pestana de Marfim (Nut) -->
+<rect fill="#e7e1df" height="158" opacity="0.95" rx="2" width="10" x="74" y="26"></rect>
+<text fill="#d5c3b7" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="middle" x="79" y="22">NUT</text>
+<!-- Trastes Verticais (Frets 1 a 5) -->
+<!-- Traste 1 -->
+<line stroke="url(#fretWireGrad)" stroke-width="3" x1="190" x2="190" y1="30" y2="180"></line>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="11" text-anchor="middle" x="135" y="200">Casa 1</text>
+<!-- Traste 2 -->
+<line stroke="url(#fretWireGrad)" stroke-width="3" x1="300" x2="300" y1="30" y2="180"></line>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="11" text-anchor="middle" x="245" y="200">Casa 2</text>
+<!-- Traste 3 (Com Marcador de Posição Dot) -->
+<line stroke="url(#fretWireGrad)" stroke-width="3" x1="410" x2="410" y1="30" y2="180"></line>
+<circle cx="355" cy="105" fill="#373433" r="5"></circle>
+<circle cx="355" cy="105" fill="#d5c3b7" opacity="0.6" r="3.5"></circle>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="11" text-anchor="middle" x="355" y="200">Casa 3 •</text>
+<!-- Traste 4 -->
+<line stroke="url(#fretWireGrad)" stroke-width="3" x1="515" x2="515" y1="30" y2="180"></line>
+<text fill="#554339" font-family="Plus Jakarta Sans" font-size="11" text-anchor="middle" x="462" y="200">Casa 4</text>
+<!-- Traste 5 (Com Marcador de Posição Dot) -->
+<line stroke="url(#fretWireGrad)" stroke-width="3" x1="615" x2="615" y1="30" y2="180"></line>
+<circle cx="565" cy="105" fill="#373433" r="5"></circle>
+<circle cx="565" cy="105" fill="#d5c3b7" opacity="0.6" r="3.5"></circle>
+<text fill="#554339" font-family="Plus Jakarta Sans" font-size="11" text-anchor="middle" x="565" y="200">Casa 5 •</text>
+<!-- As 6 Cordas do Violão (com espessuras físicas reais) -->
+<!-- 6ª corda: Mi Grave (E2) - 2.8px -->
+<line stroke="#756960" stroke-width="3.2" x1="80" x2="620" y1="40" y2="40"></line>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="50" y="44">6 (E)</text>
+<!-- Indicador X na 6ª corda (não tocada) -->
+<circle cx="20" cy="40" fill="#2c2928" r="9"></circle>
+<text fill="#ffb4ab" font-family="Plus Jakarta Sans" font-size="13" font-weight="700" text-anchor="middle" x="20" y="44">✕</text>
+<!-- 5ª corda: Lá (A2) - Baixo Fundamental - 2.4px -->
+<line stroke="#9e8e83" stroke-width="2.6" x1="80" x2="620" y1="66" y2="66"></line>
+<text fill="#ffb68c" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" text-anchor="middle" x="50" y="70">5 (A)</text>
+<!-- Indicador Corda Solta e Polegar Mão Direita -->
+<circle cx="20" cy="66" fill="#d97736" r="10" stroke="#ffb68c" stroke-width="1.5"></circle>
+<text fill="#532200" font-family="Plus Jakarta Sans" font-size="11" font-weight="800" text-anchor="middle" x="20" y="70">P</text>
+<!-- 4ª corda: Ré (D3) - 2.0px -->
+<line stroke="#a38c80" stroke-width="2.0" x1="80" x2="620" y1="92" y2="92"></line>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="50" y="96">4 (D)</text>
+<!-- Dedo 2 na Casa 2 (Traste 2) -->
+<circle cx="245" cy="92" fill="#d97736" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))" r="13"></circle>
+<circle cx="245" cy="92" fill="#d97736" r="12"></circle>
+<text fill="#151312" font-family="Plus Jakarta Sans" font-size="12" font-weight="800" text-anchor="middle" x="245" y="96">2</text>
+<!-- 3ª corda: Sol (G3) - 1.5px -->
+<line stroke="#dbc1b4" stroke-width="1.6" x1="80" x2="620" y1="118" y2="118"></line>
+<text fill="#ffddb8" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="50" y="122">3 (G)</text>
+<!-- Dedo 3 na Casa 2 (Traste 2) + MD Indicador (I) -->
+<circle cx="245" cy="118" fill="#ee9800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))" r="13"></circle>
+<text fill="#151312" font-family="Plus Jakarta Sans" font-size="12" font-weight="800" text-anchor="middle" x="245" y="122">3</text>
+<!-- Badge lateral indicando dedo I da mão direita tocando nesta corda -->
+<rect fill="#2c2928" height="16" rx="3" stroke="#ee9800" stroke-width="1" width="16" x="14" y="109"></rect>
+<text fill="#ffddb8" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" text-anchor="middle" x="22" y="121">I</text>
+<!-- 2ª corda: Si (B3) - 1.0px -->
+<line stroke="#e7e1df" stroke-width="1.2" x1="80" x2="620" y1="144" y2="144"></line>
+<text fill="#ffddb8" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="50" y="148">2 (B)</text>
+<!-- Dedo 1 na Casa 1 (Traste 1) + MD Médio (M) -->
+<circle cx="135" cy="144" fill="#ffb68c" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.4))" r="13"></circle>
+<text fill="#532200" font-family="Plus Jakarta Sans" font-size="12" font-weight="800" text-anchor="middle" x="135" y="148">1</text>
+<!-- Badge lateral indicando dedo M da mão direita tocando nesta corda -->
+<rect fill="#2c2928" height="16" rx="3" stroke="#ffb68c" stroke-width="1" width="16" x="14" y="135"></rect>
+<text fill="#ffdbc9" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" text-anchor="middle" x="22" y="147">M</text>
+<!-- 1ª corda: Mi Agudo (E4) - 0.8px -->
+<line stroke="#e7e1df" stroke-width="0.9" x1="80" x2="620" y1="170" y2="170"></line>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" text-anchor="middle" x="50" y="174">1 (e)</text>
+<!-- Círculo corda solta O -->
+<circle cx="20" cy="170" fill="none" r="8" stroke="#a38c80" stroke-width="1.8"></circle>
+<text fill="#a38c80" font-family="Plus Jakarta Sans" font-size="9" font-weight="600" text-anchor="middle" x="20" y="173.5">O</text>
+</svg>
+</div>
+<!-- Legenda Didática Ergonômica -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs border-t border-surface-container-high/50 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="text-tertiary font-semibold uppercase">Mão Esquerda (Digitação):</span>
+<span class="flex items-center gap-1"><strong class="text-primary font-mono">1</strong> = Indicador</span>
+<span class="flex items-center gap-1"><strong class="text-secondary font-mono">2</strong> = Médio</span>
+<span class="flex items-center gap-1"><strong class="text-secondary-container font-mono">3</strong> = Anelar</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-tertiary font-semibold uppercase">Mão Direita (Ataque):</span>
+<span class="flex items-center gap-1"><strong class="text-primary-container font-mono">P</strong> = Polegar</span>
+<span class="flex items-center gap-1"><strong class="text-secondary font-mono">I</strong> = Indicador</span>
+<span class="flex items-center gap-1"><strong class="text-primary font-mono">M</strong> = Médio</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TABLATURA & CIFRA SINCRONIZADA EM ALTO CONTRASTE -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">music_note</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Partitura &amp; Tablatura de Estudo</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary">Compasso:</span>
+<span class="font-label-sm text-label-sm text-primary font-mono bg-surface-container px-2 py-0.5 rounded">4/4 • 2 Compassos em Loop</span>
+</div>
+</div>
+<!-- Tab Box com Cursor de Andamento Dinâmico -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl overflow-x-auto relative">
+<!-- Tablature Lines Container -->
+<div class="min-w-[560px] font-mono select-none text-xs sm:text-sm">
+<!-- Cifra Top Guide -->
+<div class="grid grid-cols-8 gap-0 text-center pb-2 text-primary font-bold">
+<div class="col-span-4 flex items-center justify-start pl-6 gap-2">
+<span class="px-2 py-0.5 bg-surface-container rounded text-xs">Am (Compasso 1)</span>
+</div>
+<div class="col-span-4 flex items-center justify-start pl-6 gap-2">
+<span class="px-2 py-0.5 bg-surface-container rounded text-xs text-on-surface-variant">Am (Compasso 2)</span>
+</div>
+</div>
+<!-- Tab Strings -->
+<div class="relative flex flex-col gap-1 text-tertiary">
+<!-- String e -->
+<div class="flex items-center tracking-widest text-outline">
+<span class="w-6 text-on-surface-variant font-bold">e|</span>
+<span class="flex-1 border-b border-surface-container-highest flex justify-around py-0.5">
+<span>---</span><span>---</span><span>---</span><span>---</span>
+<span>---</span><span>---</span><span>---</span><span>---</span>
+</span>
+<span class="w-4 text-right">|</span>
+</div>
+<!-- String B -->
+<div class="flex items-center tracking-widest text-outline">
+<span class="w-6 text-on-surface-variant font-bold">B|</span>
+<span class="flex-1 border-b border-surface-container-highest flex justify-around py-0.5">
+<span>---</span><span>---</span><span class="text-primary font-bold bg-primary-container/20 px-1 rounded">1</span><span>---</span>
+<span>---</span><span>---</span><span class="text-primary font-bold">1</span><span>---</span>
+</span>
+<span class="w-4 text-right">|</span>
+</div>
+<!-- String G -->
+<div class="flex items-center tracking-widest text-outline">
+<span class="w-6 text-on-surface-variant font-bold">G|</span>
+<span class="flex-1 border-b border-surface-container-highest flex justify-around py-0.5">
+<span>---</span><span class="text-secondary font-bold bg-secondary/20 px-1 rounded">2</span><span>---</span><span class="text-secondary font-bold">2</span>
+<span>---</span><span class="text-secondary font-bold">2</span><span>---</span><span class="text-secondary font-bold">2</span>
+</span>
+<span class="w-4 text-right">|</span>
+</div>
+<!-- String D -->
+<div class="flex items-center tracking-widest text-outline">
+<span class="w-6 text-on-surface-variant font-bold">D|</span>
+<span class="flex-1 border-b border-surface-container-highest flex justify-around py-0.5">
+<span>---</span><span>---</span><span>---</span><span>---</span>
+<span>---</span><span>---</span><span>---</span><span>---</span>
+</span>
+<span class="w-4 text-right">|</span>
+</div>
+<!-- String A (Bass) -->
+<div class="flex items-center tracking-widest text-outline">
+<span class="w-6 text-primary-container font-bold">A|</span>
+<span class="flex-1 border-b border-surface-container-highest flex justify-around py-0.5">
+<span class="text-primary-container font-bold bg-primary-container/30 px-1 rounded">0</span><span>---</span><span>---</span><span>---</span>
+<span class="text-primary-container font-bold">0</span><span>---</span><span>---</span><span>---</span>
+</span>
+<span class="w-4 text-right">|</span>
+</div>
+<!-- String E -->
+<div class="flex items-center tracking-widest text-outline">
+<span class="w-6 text-outline-variant font-bold">E|</span>
+<span class="flex-1 border-b border-surface-container-highest flex justify-around py-0.5">
+<span>---</span><span>---</span><span>---</span><span>---</span>
+<span>---</span><span>---</span><span>---</span><span>---</span>
+</span>
+<span class="w-4 text-right">|</span>
+</div>
+</div>
+<!-- Rhythmic Count Alignment (1 e 2 e 3 e 4 e) -->
+<div class="pt-3 pl-6 pr-4 flex justify-around font-mono text-xs font-semibold text-on-surface-variant">
+<div class="text-center w-8 text-secondary">1<br/><span class="text-[10px] text-primary-container font-normal">P</span></div>
+<div class="text-center w-8 text-tertiary">e</div>
+<div class="text-center w-8 text-secondary">2<br/><span class="text-[10px] text-secondary font-normal">I</span></div>
+<div class="text-center w-8 text-tertiary">e</div>
+<div class="text-center w-8 text-primary bg-primary-container/20 rounded py-0.5">3<br/><span class="text-[10px] text-primary font-normal">M</span></div>
+<div class="text-center w-8 text-tertiary">e</div>
+<div class="text-center w-8 text-secondary">4<br/><span class="text-[10px] text-secondary font-normal">I</span></div>
+<div class="text-center w-8 text-tertiary">e</div>
+</div>
+</div>
+</div>
+</div>
+<!-- METRÔNOMO DE ESTÚDIO COMPACTO INTEGRADO -->
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<!-- Metronome Controls Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Tempo Numeric & Adjustment Buttons -->
+<div class="flex items-center gap-space-sm">
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" id="btn-bpm-minus" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="flex flex-col items-center min-w-[96px]">
+<span class="font-headline-md text-headline-md text-on-surface font-mono font-bold leading-none" id="bpm-display">
+                  60
+                </span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold mt-1">
+                  BPM • Larghetto
+                </span>
+</div>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" id="btn-bpm-plus" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<!-- Time Signature Selector Pills -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-lg">
+<button class="px-2.5 py-1 rounded text-xs font-mono font-semibold text-on-surface-variant hover:text-on-surface" type="button">2/4</button>
+<button class="px-2.5 py-1 rounded text-xs font-mono font-semibold text-on-surface-variant hover:text-on-surface" type="button">3/4</button>
+<button class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-primary-container text-on-primary shadow-sm" type="button">4/4</button>
+<button class="px-2.5 py-1 rounded text-xs font-mono font-semibold text-on-surface-variant hover:text-on-surface" type="button">6/8</button>
+</div>
+<!-- Tap Tempo & Mute -->
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold transition-colors active:scale-95" id="btn-tap-tempo" type="button">
+                Tap Tempo
+              </button>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary flex items-center justify-center transition-colors" id="btn-metro-sound" title="Silenciar / Ativar Som" type="button">
+<span class="material-symbols-outlined text-[20px]" id="metro-sound-icon">volume_up</span>
+</button>
+</div>
+</div>
+<!-- Slider de BPM Contínuo (40 a 140) -->
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">40</span>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="bpm-slider" max="140" min="40" type="range" value="60"/>
+<span class="font-label-sm text-label-sm text-outline-variant font-mono">140</span>
+</div>
+<!-- Visualizador Rítmico de 4 Tempos (LED Pulses) -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between px-space-lg">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-mono tracking-wider">PULSO RÍTMICO</span>
+<div class="flex items-center gap-space-lg">
+<!-- Tempo 1: Downbeat Forte (Âmbar Vivo) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-5 h-5 rounded-full bg-secondary shadow-[0_0_12px_rgba(255,185,95,0.9)] transition-all" id="beat-led-1"></div>
+<span class="font-mono text-[10px] text-secondary font-bold">1</span>
+</div>
+<!-- Tempo 2: Fraco -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest transition-all" id="beat-led-2"></div>
+<span class="font-mono text-[10px] text-tertiary">2</span>
+</div>
+<!-- Tempo 3: Meio-forte -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest transition-all" id="beat-led-3"></div>
+<span class="font-mono text-[10px] text-tertiary">3</span>
+</div>
+<!-- Tempo 4: Fraco -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest transition-all" id="beat-led-4"></div>
+<span class="font-mono text-[10px] text-tertiary">4</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold font-mono">TEMPO 1 ATIVO</span>
+</div>
+</div>
+<!-- AÇÃO PRIMÁRIA: FINALIZAÇÃO E REGISTRO DO BLOCO -->
+<div class="pt-space-xs">
+<button class="w-full group py-space-md px-space-lg rounded-xl bg-primary-container hover:bg-secondary-container text-on-primary font-headline-sm text-headline-sm font-semibold transition-all shadow-lg flex items-center justify-center gap-space-sm active:scale-[0.99]" id="btn-complete-block" type="button">
+<span>Registrar Desempenho e Avançar para Aplicação (Bloco 5)</span>
+<span class="material-symbols-outlined text-[24px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center font-label-sm text-label-sm text-tertiary mt-2">
+            A gravação ou autoavaliação do pulso será computada no seu diário de bordo semanal.
+          </p>
+</div>
+</section>
+</div>
+</div>
+<!-- Interactive Studio Script for Metronome & Timer Simulation -->
+<script>
+    (function() {
+      // Countdown Timer State
+      let totalSeconds = 14 * 60 + 58;
+      let isPaused = false;
+      const countdownEl = document.getElementById('session-countdown');
+      const pauseBtn = document.getElementById('btn-toggle-pause');
+      const pauseIcon = document.getElementById('pause-icon');
+      const pauseLabel = document.getElementById('pause-label');
+
+      setInterval(function() {
+        if (!isPaused && totalSeconds > 0) {
+          totalSeconds--;
+          const m = Math.floor(totalSeconds / 60);
+          const s = totalSeconds % 60;
+          if (countdownEl) {
+            countdownEl.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+          }
+        }
+      }, 1000);
+
+      if (pauseBtn) {
+        pauseBtn.addEventListener('click', function() {
+          isPaused = !isPaused;
+          if (isPaused) {
+            pauseIcon.textContent = 'play_arrow';
+            pauseLabel.textContent = 'Retomar Sessão';
+          } else {
+            pauseIcon.textContent = 'pause';
+            pauseLabel.textContent = 'Pausar Sessão';
+          }
+        });
+      }
+
+      // Metronome BPM State & Visual Simulation
+      let currentBpm = 60;
+      const bpmDisplay = document.getElementById('bpm-display');
+      const bpmSlider = document.getElementById('bpm-slider');
+      const btnBpmPlus = document.getElementById('btn-bpm-plus');
+      const btnBpmMinus = document.getElementById('btn-bpm-minus');
+      const beatLeds = [
+        document.getElementById('beat-led-1'),
+        document.getElementById('beat-led-2'),
+        document.getElementById('beat-led-3'),
+        document.getElementById('beat-led-4')
+      ];
+
+      function updateBpm(newVal) {
+        currentBpm = Math.max(40, Math.min(140, newVal));
+        if (bpmDisplay) bpmDisplay.textContent = currentBpm;
+        if (bpmSlider) bpmSlider.value = currentBpm;
+      }
+
+      if (bpmSlider) {
+        bpmSlider.addEventListener('input', function(e) {
+          updateBpm(parseInt(e.target.value, 10));
+        });
+      }
+
+      if (btnBpmPlus) {
+        btnBpmPlus.addEventListener('click', function() {
+          updateBpm(currentBpm + 2);
+        });
+      }
+
+      if (btnBpmMinus) {
+        btnBpmMinus.addEventListener('click', function() {
+          updateBpm(currentBpm - 2);
+        });
+      }
+
+      // Metronome Beats Visual Cycling
+      let currentBeat = 0;
+      let metroInterval = null;
+
+      function startMetronomePulse() {
+        if (metroInterval) clearInterval(metroInterval);
+        const ms = (60 / currentBpm) * 1000;
+        metroInterval = setInterval(function() {
+          currentBeat = (currentBeat + 1) % 4;
+          beatLeds.forEach((led, idx) => {
+            if (!led) return;
+            if (idx === currentBeat) {
+              if (idx === 0) {
+                led.className = "w-5 h-5 rounded-full bg-secondary shadow-[0_0_14px_rgba(255,185,95,1)] scale-110 transition-all";
+              } else {
+                led.className = "w-4 h-4 rounded-full bg-primary shadow-[0_0_8px_rgba(217,119,54,0.7)] scale-105 transition-all";
+              }
+            } else {
+              led.className = "w-4 h-4 rounded-full bg-surface-container-highest transition-all";
+            }
+          });
+        }, ms);
+      }
+
+      startMetronomePulse();
+
+      // Tap Tempo micro-interaction
+      let lastTapTime = 0;
+      const btnTap = document.getElementById('btn-tap-tempo');
+      if (btnTap) {
+        btnTap.addEventListener('click', function() {
+          const now = Date.now();
+          if (lastTapTime !== 0) {
+            const diff = (now - lastTapTime) / 1000;
+            if (diff > 0.3 && diff < 2.0) {
+              const calcBpm = Math.round(60 / diff);
+              updateBpm(calcBpm);
+              startMetronomePulse();
+            }
+          }
+          lastTapTime = now;
+        });
+      }
+
+      // Mute Toggle Button
+      const btnSound = document.getElementById('btn-metro-sound');
+      const soundIcon = document.getElementById('metro-sound-icon');
+      let isMuted = false;
+      if (btnSound) {
+        btnSound.addEventListener('click', function() {
+          isMuted = !isMuted;
+          soundIcon.textContent = isMuted ? 'volume_off' : 'volume_up';
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

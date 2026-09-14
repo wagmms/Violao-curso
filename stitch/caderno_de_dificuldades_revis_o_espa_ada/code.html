@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-high": "#2c2928",
+          "surface-container-highest": "#373433",
+          "tertiary-fixed-dim": "#d5c3b7",
+          "primary-container": "#d97736",
+          "surface-dim": "#151312",
+          "secondary-fixed": "#ffddb8",
+          "on-tertiary-fixed-variant": "#51443b",
+          "secondary": "#ffb95f",
+          "inverse-primary": "#994703",
+          "on-secondary-fixed-variant": "#653e00",
+          "on-error": "#690005",
+          "on-tertiary-fixed": "#231a12",
+          "primary-fixed-dim": "#ffb68c",
+          "primary": "#ffb68c",
+          "secondary-container": "#ee9800",
+          "on-tertiary": "#392e26",
+          "outline-variant": "#554339",
+          "surface-container": "#211f1e",
+          "inverse-surface": "#e7e1df",
+          "on-tertiary-container": "#332820",
+          "on-primary-fixed-variant": "#753400",
+          "on-primary": "#532200",
+          "on-surface-variant": "#dbc1b4",
+          "error-container": "#93000a",
+          "tertiary-fixed": "#f2dfd2",
+          "background": "#151312",
+          "surface-bright": "#3b3937",
+          "on-secondary": "#472a00",
+          "tertiary-container": "#9e8e83",
+          "on-surface": "#e7e1df",
+          "surface-container-lowest": "#100e0d",
+          "outline": "#a38c80",
+          "on-secondary-fixed": "#2a1700",
+          "error": "#ffb4ab",
+          "on-secondary-container": "#5b3800",
+          "surface-container-low": "#1d1b1a",
+          "surface-variant": "#373433",
+          "surface-tint": "#ffb68c",
+          "tertiary": "#d5c3b7",
+          "on-primary-container": "#491d00",
+          "inverse-on-surface": "#32302f",
+          "on-background": "#e7e1df",
+          "surface": "#151312",
+          "on-primary-fixed": "#321200",
+          "secondary-fixed-dim": "#ffb95f",
+          "on-error-container": "#ffdad6",
+          "primary-fixed": "#ffdbc9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "1rem",
+          "margin": "2rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Epilogue"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Epilogue"
+          ],
+          "display-lg": [
+            "Epilogue"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Epilogue"
+          ],
+          "headline-lg": [
+            "Epilogue"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Epilogue"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "34px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex flex-col"><div class="flex items-center gap-space-sm px-space-lg pt-space-lg pb-space-md"><img alt="Logo Método Tríade" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xvv4YOzsHAvwWx5mBBieQNH8OuZbJkkcmx97sdQhdmeVLNqAPGI7YQRsgwVnHnpNoRr86cnqgyVJZJWRJxdhVVY9f9P1cNGlL6swdoIgno_YH1okyStjjesckmppcSX5XObx15zCnIGxv--i3z0LgshUQdFZW23zJLJ1Y7W0ZyDJ5CQhT_Zzwv2HJiOJyK4493TicFguDHJdVvyMM14SaAaO57-YDMM1MGf_vs3TwME7BHp60vKOQ59s3f"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Método Tríade</span><span class="font-label-sm text-label-sm text-tertiary">Ambiente de Estudo</span></div></div><div class="h-px mx-space-lg bg-outline-variant/30 my-space-xs"></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_2px_8px_rgba(217,119,54,0.2)]"><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="hoje" href="#"><span class="font-label-lg text-label-lg">Hoje</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="aprender" href="#"><span class="font-label-lg text-label-lg">Aprender</span></a><a aria-current="page" class="flex items-center px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg shadow-[0_2px_8px_rgba(217,119,54,0.2)]" data-path="praticar" href="#"><span class="font-label-lg text-label-lg">Praticar</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="progresso" href="#"><span class="font-label-lg text-label-lg">Progresso</span></a><a class="flex items-center px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="biblioteca" href="#"><span class="font-label-lg text-label-lg">Biblioteca</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md pb-space-lg"><div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">tune</span><span class="font-label-sm text-label-sm text-on-surface">Afinador E2</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-0.5 rounded"><span class="material-symbols-outlined text-tertiary text-[16px]">speed</span><span class="font-label-sm text-label-sm text-tertiary">86 BPM</span></div></div><div class="bg-surface-container-high p-space-sm rounded-lg flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Arthur Meireles</span><span class="font-label-sm text-label-sm text-secondary truncate">Intermediário • Nível 4</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md"><a class="text-tertiary hover:text-primary transition-colors" data-path="praticar" href="#">Praticar</a><span class="text-outline-variant">›</span><span class="text-on-surface font-semibold">Caderno de Dificuldades &amp; Revisão Espaçada</span></div><div class="hidden lg:flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium">Treino Ativo</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">local_fire_department</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">14 dias seguidos</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Atalhos de áudio" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Modo Focado" type="button"><span class="material-symbols-outlined text-[20px]">center_focus_strong</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors relative" title="Notificações" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary-container"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full px-space-lg lg:px-margin py-space-xl gap-space-xl">
+<!-- TOPO: Título, Contexto e Métricas Rápidas -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="hover:text-primary transition-colors cursor-pointer">Praticar</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-semibold">Caderno de Dificuldades &amp; Revisão Espaçada</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+          Caderno de Dificuldades &amp; SRS
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+          Prática deliberada orientada a gargalos técnicos e consolidação neuromuscular de longo prazo no violão.
+        </p>
+</div>
+<!-- Quick Action / Status Badge -->
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="flex items-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container font-label-lg text-label-lg px-space-md py-space-sm rounded-lg shadow-md transition-all" id="btnNovaDificuldadeTop">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Registrar Dificuldade</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Trechos Críticos</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-headline-md text-headline-md text-primary font-bold">3</span>
+<span class="font-body-md text-body-md text-on-surface">ativos em foco</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">priority_high</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Fila do Dia</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-headline-md text-headline-md text-secondary font-bold">2</span>
+<span class="font-body-md text-body-md text-on-surface">revisões programadas</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Retenção Estimada</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold font-mono">89%</span>
+<span class="font-body-md text-body-md text-tertiary">média últimos 30 dias</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">insights</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 1: Diagnóstico Observado (Domínio Técnico) -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">analytics</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Visão Geral de Domínio Técnico
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Métricas de precisão mecânica, estabilidade rítmica e velocidade captadas nas sessões de estudo
+          </p>
+</div>
+</div>
+<!-- Badge de Síntese -->
+<div class="flex items-center gap-space-xs bg-surface-container-highest px-space-md py-space-xs rounded-full self-start md:self-auto shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">crisis_alert</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">
+          Gargalo prioritário: <strong class="text-primary font-semibold">Transição postural na troca C → F</strong>
+</span>
+</div>
+</div>
+<!-- Lista de Habilidades com Barras Analíticas -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Coluna 1 -->
+<div class="flex flex-col gap-space-md">
+<!-- Habilidade A: Ritmo e Pulso -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Ritmo &amp; Pulso</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-space-sm py-0.5 rounded">Em desenvolvimento</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Desvio médio: <code class="text-primary font-mono font-medium">12ms</code> a 72 BPM</span>
+<span class="font-mono text-on-surface font-semibold">74%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 74%;"></div>
+</div>
+</div>
+<!-- Habilidade B: Troca de Acordes -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Troca de Acordes</span>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-highest px-space-sm py-0.5 rounded">Atenção necessária</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Gargalo: <code class="text-primary font-mono">C → F</code> e <code class="text-primary font-mono">G/B → Cadd9</code></span>
+<span class="font-mono text-on-surface font-semibold">68%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-500" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Habilidade C: Reconhecimento Auditivo -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Reconhecimento Auditivo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-space-sm py-0.5 rounded">Em desenvolvimento</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Discriminação: <span class="text-on-surface">3ªs maiores e 5ªs justas</span></span>
+<span class="font-mono text-on-surface font-semibold">62%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 62%;"></div>
+</div>
+</div>
+</div>
+<!-- Coluna 2 -->
+<div class="flex flex-col gap-space-md">
+<!-- Habilidade D: Dedilhados & Independência -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Dedilhados &amp; Independência Motora</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed bg-surface-container-highest px-space-sm py-0.5 rounded">Consolidado</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Ataque P-I-M-A a 64 BPM</span>
+<span class="font-mono text-on-surface font-semibold">88%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full transition-all duration-500" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Habilidade E: Leitura (Partitura / Tablatura) -->
+<div class="flex flex-col gap-space-xs bg-surface-container p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Leitura à Primeira Vista</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed bg-surface-container-highest px-space-sm py-0.5 rounded">Consolidado</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Compassos binários e quaternários simples</span>
+<span class="font-mono text-on-surface font-semibold">81%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 81%;"></div>
+</div>
+</div>
+<!-- Card Resumo de Prática Consciente -->
+<div class="bg-surface-container-highest/60 p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">lightbulb</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dica de Estudo Lento:</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Ao praticar trocas com pestana (C → F), execute 4 repetições a 40 BPM mantendo o polegar relaxado atrás da casa 1 antes de acelerar.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 2: O Caderno de Dificuldades (Central de Superação de Trechos Isolados) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">menu_book</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Caderno de Dificuldades
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Microtrechos isolados para desconstrução de vícios de digitação e postura
+          </p>
+</div>
+</div>
+<!-- Filtros de Navegação -->
+<div class="flex flex-wrap items-center gap-space-xs" id="diffFilters">
+<button class="filter-btn active bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-sm py-1 rounded transition-colors" data-filter="all">
+          Todos (4)
+        </button>
+<button class="filter-btn bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-colors" data-filter="troca">
+          Mudança de Acorde (2)
+        </button>
+<button class="filter-btn bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-colors" data-filter="pestana">
+          Ritmo / Pestana (1)
+        </button>
+<button class="filter-btn bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded transition-colors" data-filter="dedilhado">
+          Dedilhado Rápido (1)
+        </button>
+</div>
+</div>
+<!-- Tabela / Lista Estruturada de Dificuldades -->
+<div class="flex flex-col gap-space-sm" id="difficultiesList">
+<!-- Linha 1 -->
+<div class="difficulty-item bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-colors shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-category="troca">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              Compassos 14–16 (Troca G/B → Cadd9)
+            </span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-space-sm py-0.5 rounded">
+              Módulo 2 • Aula 8 (Sons do Brasil)
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Dedo 4 atrasa ao apoiar na 1ª corda, causando corte prematuro da ressonância do baixo.
+          </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+              Último: <code class="font-mono text-primary font-semibold">54 BPM</code>
+</span>
+<span class="text-outline-variant">•</span>
+<span>Meta: <code class="font-mono text-on-surface">72 BPM</code></span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-medium">Repetições: 38</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="train-snippet-btn flex items-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md px-space-md py-space-sm rounded-lg shadow-sm transition-all" data-snippet="Compassos 14–16">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Treinar Trecho Isolado</span>
+</button>
+</div>
+</div>
+<!-- Linha 2 -->
+<div class="difficulty-item bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-colors shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-category="troca pestana">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              Transição Acorde C → F (Pestana de 1ª casa)
+            </span>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-highest px-space-sm py-0.5 rounded">
+              Módulo 3 • Harmonia Fundamental
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Dificuldade em mudar de C para F sem parar o compasso (pausa perceptível de ~0.8s antes de firmar a pestana).
+          </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+              Último: <code class="font-mono text-primary font-semibold">48 BPM</code>
+</span>
+<span class="text-outline-variant">•</span>
+<span>Meta: <code class="font-mono text-on-surface">60 BPM</code></span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-medium">Repetições: 62</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="train-snippet-btn flex items-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md px-space-md py-space-sm rounded-lg shadow-sm transition-all" data-snippet="Transição C -&gt; F">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Treinar Trecho Isolado</span>
+</button>
+</div>
+</div>
+<!-- Linha 3 -->
+<div class="difficulty-item bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-colors shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-category="dedilhado">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              Dedilhado P-I-M-A em 6/8 com acento no polegar
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed bg-surface-container-highest px-space-sm py-0.5 rounded">
+              Módulo 3 • Aula 4 (Arpejos Compostos)
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Polegar abafando involuntariamente a 3ª corda ao retornar ao baixo principal nos tempos 1 e 4.
+          </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+              Último: <code class="font-mono text-secondary font-semibold">60 BPM</code>
+</span>
+<span class="text-outline-variant">•</span>
+<span>Meta: <code class="font-mono text-on-surface">68 BPM</code></span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary font-medium">Repetições: 24</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="train-snippet-btn flex items-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md px-space-md py-space-sm rounded-lg shadow-sm transition-all" data-snippet="Dedilhado 6/8 P-I-M-A">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Treinar Trecho Isolado</span>
+</button>
+</div>
+</div>
+<!-- Linha 4 -->
+<div class="difficulty-item bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-colors shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md" data-category="troca">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-semibold">
+              Compasso 7 de Garota de Ipanema (F#m7 → B7b9)
+            </span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-space-sm py-0.5 rounded">
+              Repertório Livre • Bossa Nova
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Inversão de vozes com abertura esticada trava o balanço da levada e perde o contratempo do violão.
+          </p>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+              Último: <code class="font-mono text-primary font-semibold">50 BPM</code>
+</span>
+<span class="text-outline-variant">•</span>
+<span>Meta: <code class="font-mono text-on-surface">64 BPM</code></span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-medium">Repetições: 45</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="train-snippet-btn flex items-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md px-space-md py-space-sm rounded-lg shadow-sm transition-all" data-snippet="Garota de Ipanema Comp 7">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Treinar Trecho Isolado</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 3: Fila de Revisão Espaçada (SRS) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">history_edu</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Fila de Revisão Espaçada (SRS)
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Algoritmo de intervalos ótimos para retenção motora e neuromuscular.
+          </p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary self-start md:self-auto bg-surface-container px-space-sm py-1 rounded">
+        Baseado no modelo SuperMemo / Ebbinghaus Adaptado ao Violão
+      </span>
+</div>
+<!-- Cards de Revisão com Contagem e Autoavaliação -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Card A: Revisar Hoje (Urgente) -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-md" id="cardSrsA">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold bg-surface-container-highest px-space-sm py-0.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+              Revisar hoje
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ciclo: 4 dias</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-space-xs">
+            Garota de Ipanema — Compassos 5 a 8
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Batida Bossa sincopada + transição cromática com acorde F#m7.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span>Última revisão: <strong class="text-on-surface">Há 4 dias</strong></span>
+<span>Retenção: <code class="font-mono text-primary font-bold">78%</code></span>
+</div>
+</div>
+<!-- Painel de Autoavaliação Interativo -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">
+            Autoavaliação pós-treino:
+          </span>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="srs-eval-btn bg-surface-container-high hover:bg-surface-bright text-on-surface p-space-xs rounded flex flex-col items-center justify-center text-center transition-all" data-card="cardSrsA" data-feedback="repeat">
+<span class="material-symbols-outlined text-primary text-[18px]">replay</span>
+<span class="font-label-sm text-label-sm font-medium mt-1">Preciso Repetir</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Amanhã</span>
+</button>
+<button class="srs-eval-btn bg-surface-container-high hover:bg-surface-bright text-on-surface p-space-xs rounded flex flex-col items-center justify-center text-center transition-all" data-card="cardSrsA" data-feedback="comfort">
+<span class="material-symbols-outlined text-secondary text-[18px]">sentiment_satisfied</span>
+<span class="font-label-sm text-label-sm font-medium mt-1">Confortável</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+7 dias</span>
+</button>
+<button class="srs-eval-btn bg-surface-container-high hover:bg-surface-bright text-on-surface p-space-xs rounded flex flex-col items-center justify-center text-center transition-all" data-card="cardSrsA" data-feedback="master">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-medium mt-1">Dominei</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+18 dias</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card B: Revisar em 2 dias -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm" id="cardSrsB">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium bg-surface-container-highest px-space-sm py-0.5 rounded-full">
+              Revisar em 2 dias
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ciclo: 7 dias</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-space-xs">
+            Estudo nº 1 em Mi menor (Villa-Lobos)
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Arpejo contínuo com digitação P-I-M-A-M-I e igualdade de dinâmicas.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span>Última revisão: <strong class="text-on-surface">Há 5 dias</strong></span>
+<span>Retenção: <code class="font-mono text-secondary font-bold">91%</code></span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+<span>Aguardando janela de fixação</span>
+</div>
+<button class="text-secondary hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+            Adiantar
+          </button>
+</div>
+</div>
+<!-- Card C: Revisar em 21 dias (Consolidado) -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm" id="cardSrsC">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary-fixed font-medium bg-surface-container-highest px-space-sm py-0.5 rounded-full">
+              Revisar em 21 dias
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Nível: Mestre</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mt-space-xs">
+            Tríades Fechadas em Lá Menor
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Posições Fundamental, 1ª e 2ª inversão nos conjuntos de cordas 1-2-3 e 2-3-4.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-space-xs">
+<span>Última revisão: <strong class="text-on-surface">Ontem</strong></span>
+<span>Retenção: <code class="font-mono text-tertiary-fixed font-bold">98%</code></span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">task_alt</span>
+<span class="text-on-surface">Memória consolidada</span>
+</div>
+<span class="font-mono font-label-sm text-label-sm text-tertiary">Ciclo longo</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 4: Backup & Soberania dos Dados -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md max-w-2xl">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">lock</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">
+            Soberania dos Seus Dados
+          </h3>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-highest px-space-xs py-0.5 rounded">
+            Privacidade Local
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Seu histórico de dificuldades, BPMs e intervalos SRS ficam 100% salvos no seu computador. Sem telemetria, sem trackers e sem dependência de nuvem externa.
+        </p>
+<a class="font-label-sm text-label-sm text-primary hover:underline mt-1 inline-flex items-center gap-1" href="javascript:void(0)" id="btnVerSchema">
+<span>Ver esquema JSON dos dados exportados</span>
+<span class="material-symbols-outlined text-[14px]">code</span>
+</a>
+</div>
+</div>
+<!-- Ações de Backup -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full md:w-auto">
+<button class="w-full sm:w-auto flex items-center justify-center gap-space-xs bg-primary-container hover:bg-primary text-on-primary-container font-label-md text-label-md px-space-md py-space-sm rounded-lg shadow-sm transition-all" id="btnExportJson">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar Progresso (JSON)</span>
+</button>
+<label class="w-full sm:w-auto flex items-center justify-center gap-space-xs bg-surface-container hover:bg-surface-bright text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg cursor-pointer transition-colors shadow-sm" for="importJsonInput">
+<span class="material-symbols-outlined text-[18px]">upload</span>
+<span>Restaurar Backup</span>
+<input accept=".json" class="hidden" id="importJsonInput" type="file"/>
+</label>
+</div>
+</section>
+<!-- Modal / Painel de Registro de Dificuldade (Oculto por padrão) -->
+<div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-space-md" id="modalNovaDificuldade">
+<div class="bg-surface-container-high rounded-xl max-w-lg w-full p-space-lg flex flex-col gap-space-md shadow-2xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">add_task</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Nova Dificuldade Técnica
+          </h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="fecharModalDificuldade">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Trecho ou Troca Crítica</label>
+<input class="bg-surface-container text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="inputTrecho" placeholder="Ex: Compasso 12 — Mudança Bm7 → E7(9)" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Origem (Módulo / Aula / Música)</label>
+<input class="bg-surface-container text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="inputOrigem" placeholder="Ex: Módulo 4 • Ritmos Brasileiros" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">BPM Atual Limpo</label>
+<input class="bg-surface-container text-on-surface px-space-md py-space-sm rounded-lg font-mono text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="inputBpmAtual" placeholder="52" type="number"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">BPM Meta</label>
+<input class="bg-surface-container text-on-surface px-space-md py-space-sm rounded-lg font-mono text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="inputBpmMeta" placeholder="72" type="number"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Descrição do Vício / Ponto de Travamento</label>
+<textarea class="bg-surface-container text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="inputDescricao" placeholder="Descreva exatamente o que ocorre na mão esquerda ou direita..." rows="3"></textarea>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md" id="cancelarModalDificuldade">
+          Cancelar
+        </button>
+<button class="bg-primary-container hover:bg-primary text-on-primary-container px-space-md py-space-sm rounded-lg font-label-md text-label-md shadow-sm transition-all" id="salvarDificuldade">
+          Salvar no Caderno
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal / Diálogo para Visualização do Schema JSON -->
+<div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-space-md" id="modalSchema">
+<div class="bg-surface-container-high rounded-xl max-w-2xl w-full p-space-lg flex flex-col gap-space-md shadow-2xl">
+<div class="flex items-center justify-between pb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+          Esquema de Dados (JSON Local)
+        </h3>
+<button class="text-on-surface-variant hover:text-on-surface" id="fecharModalSchema">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<pre class="bg-surface-container-lowest text-tertiary-fixed font-mono p-space-md rounded-lg text-label-sm overflow-x-auto max-h-72"><code>{
+  "versao": "1.0.0",
+  "usuario": "Arthur Meireles",
+  "data_exportacao": "2025-05-18T10:30:00Z",
+  "metricas_globais": {
+    "retencao_media_30d": 0.89,
+    "total_trechos_ativos": 4,
+    "revisoes_concluidas": 128
+  },
+  "dificuldades": [
+    {
+      "id": "dif_01",
+      "trecho": "Compassos 14–16 (Troca G/B -&gt; Cadd9)",
+      "origem": "Módulo 2 • Aula 8",
+      "bpm_atual": 54,
+      "bpm_alvo": 72,
+      "repeticoes": 38,
+      "srs_intervalo_dias": 4,
+      "proxima_revisao": "2025-05-18"
+    }
+  ]
+}</code></pre>
+<div class="flex justify-end">
+<button class="bg-surface-container text-on-surface px-space-md py-space-sm rounded-lg font-label-md text-label-md" id="fecharModalSchemaBtn">
+          Entendido
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline JavaScript para Micro-interações táteis e funcionais -->
+<script>
+  (function() {
+    // 1. Filtros da Lista de Dificuldades
+    const filterButtons = document.querySelectorAll('#diffFilters .filter-btn');
+    const items = document.querySelectorAll('#difficultiesList .difficulty-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-primary-container', 'text-on-primary-container');
+          b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+
+        btn.classList.add('active', 'bg-primary-container', 'text-on-primary-container');
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+        const filter = btn.getAttribute('data-filter');
+
+        items.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'flex';
+          } else {
+            const cat = item.getAttribute('data-category') || '';
+            if (cat.includes(filter)) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    // 2. Feedback interativo de SRS
+    const srsButtons = document.querySelectorAll('.srs-eval-btn');
+    srsButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const cardId = this.getAttribute('data-card');
+        const feedback = this.getAttribute('data-feedback');
+        const card = document.getElementById(cardId);
+
+        if (card) {
+          card.classList.add('opacity-40', 'pointer-events-none');
+          setTimeout(() => {
+            card.innerHTML = `
+              <div class="flex flex-col items-center justify-center p-space-lg text-center gap-space-sm h-full">
+                <span class="material-symbols-outlined text-secondary text-[32px]">task_alt</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Revisão Gravada!</span>
+                <span class="font-body-md text-body-md text-on-surface-variant">Próxima data calculada com sucesso pelo algoritmo SRS.</span>
+              </div>
+            `;
+            card.classList.remove('opacity-40', 'pointer-events-none');
+          }, 350);
+        }
+      });
+    });
+
+    // 3. Ação Treinar Trecho Isolado
+    const trainButtons = document.querySelectorAll('.train-snippet-btn');
+    trainButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const snippetName = this.getAttribute('data-snippet');
+        const originalText = this.innerHTML;
+        this.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Iniciando Metrônomo...</span>`;
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          alert(`Iniciando estúdio de loop para: "${snippetName}" em 48 BPM com metrônomo adaptativo.`);
+        }, 600);
+      });
+    });
+
+    // 4. Modais (Nova Dificuldade e Schema)
+    const modalNovaDif = document.getElementById('modalNovaDificuldade');
+    const btnAbrirModalTop = document.getElementById('btnNovaDificuldadeTop');
+    const btnFecharModal = document.getElementById('fecharModalDificuldade');
+    const btnCancelarModal = document.getElementById('cancelarModalDificuldade');
+    const btnSalvarDif = document.getElementById('salvarDificuldade');
+
+    function openModal() {
+      modalNovaDif.classList.remove('hidden');
+      modalNovaDif.classList.add('flex');
+    }
+    function closeModal() {
+      modalNovaDif.classList.add('hidden');
+      modalNovaDif.classList.remove('flex');
+    }
+
+    if (btnAbrirModalTop) btnAbrirModalTop.addEventListener('click', openModal);
+    if (btnFecharModal) btnFecharModal.addEventListener('click', closeModal);
+    if (btnCancelarModal) btnCancelarModal.addEventListener('click', closeModal);
+
+    if (btnSalvarDif) {
+      btnSalvarDif.addEventListener('click', () => {
+        const trecho = document.getElementById('inputTrecho').value.trim();
+        if (!trecho) {
+          alert('Por favor, informe ao menos o trecho crítico.');
+          return;
+        }
+        alert(`Dificuldade "${trecho}" registrada e adicionada à fila de estudo!`);
+        closeModal();
+      });
+    }
+
+    // Modal Schema
+    const modalSchema = document.getElementById('modalSchema');
+    const btnVerSchema = document.getElementById('btnVerSchema');
+    const fecharModalSchema = document.getElementById('fecharModalSchema');
+    const fecharModalSchemaBtn = document.getElementById('fecharModalSchemaBtn');
+
+    function toggleSchema(show) {
+      if (show) {
+        modalSchema.classList.remove('hidden');
+        modalSchema.classList.add('flex');
+      } else {
+        modalSchema.classList.add('hidden');
+        modalSchema.classList.remove('flex');
+      }
+    }
+
+    if (btnVerSchema) btnVerSchema.addEventListener('click', () => toggleSchema(true));
+    if (fecharModalSchema) fecharModalSchema.addEventListener('click', () => toggleSchema(false));
+    if (fecharModalSchemaBtn) fecharModalSchemaBtn.addEventListener('click', () => toggleSchema(false));
+
+    // 5. Exportação JSON Real Local
+    const btnExport = document.getElementById('btnExportJson');
+    if (btnExport) {
+      btnExport.addEventListener('click', () => {
+        const dados = {
+          app: "Método Tríade - Violão Acústico",
+          modulo: "Caderno de Dificuldades & SRS",
+          aluno: "Arthur Meireles",
+          data: new Date().toISOString(),
+          dificuldades: [
+            { trecho: "Compassos 14–16 (Troca G/B -> Cadd9)", bpm_atual: 54, meta: 72, repeticoes: 38 },
+            { trecho: "Transição Acorde C -> F", bpm_atual: 48, meta: 60, repeticoes: 62 },
+            { trecho: "Dedilhado P-I-M-A em 6/8", bpm_atual: 60, meta: 68, repeticoes: 24 },
+            { trecho: "Garota de Ipanema Compasso 7", bpm_atual: 50, meta: 64, repeticoes: 45 }
+          ],
+          srs_revisoes: {
+            hoje: ["Garota de Ipanema (Compassos 5 a 8)"],
+            proximos: ["Estudo nº 1 Villa-Lobos", "Tríades Fechadas Lá Menor"]
+          }
+        };
+
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dados, null, 2));
+        const dlAnchor = document.createElement('a');
+        dlAnchor.setAttribute("href", dataStr);
+        dlAnchor.setAttribute("download", `triade_caderno_dificuldades_${new Date().toISOString().slice(0, 10)}.json`);
+        document.body.appendChild(dlAnchor);
+        dlAnchor.click();
+        dlAnchor.remove();
+      });
+    }
+
+    // 6. Importação Simples de Arquivo JSON
+    const importInput = document.getElementById('importJsonInput');
+    if (importInput) {
+      importInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            try {
+              const parsed = JSON.parse(evt.target.result);
+              alert(`Backup de "${parsed.aluno || 'Estudante'}" carregado com sucesso! Dados locais sincronizados.`);
+            } catch (err) {
+              alert('Erro ao ler o arquivo JSON de backup.');
+            }
+          };
+          reader.readAsText(file);
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -463,7 +463,7 @@ async function executarTestes() {
 
   // Teste 14: Captura Real de Evidências Visuais (Screenshots locais em PNG)
   await test('14. Captura e gravação de screenshots reais em alta resolução para revisão do Codex', async () => {
-    const views = ['hoje', 'aprender', 'progresso', 'biblioteca'];
+    const views = ['hoje', 'aprender', 'praticar', 'progresso', 'biblioteca'];
 
     // Desktop 1366px
     await client.setViewport(1366, 768);
@@ -472,6 +472,12 @@ async function executarTestes() {
       await new Promise(r => setTimeout(r, 200));
       await client.captureScreenshot(path.join(revisadoDir, `screenshot-${v}-1366.png`));
     }
+    // Screenshot especial do Laboratório Harmônico
+    await client.evaluate(`window.__APP_TEST_API.navegarPara('praticar')`);
+    await new Promise(r => setTimeout(r, 200));
+    await client.evaluate(`document.getElementById('tab-praticar-laboratorio')?.click()`);
+    await new Promise(r => setTimeout(r, 300));
+    await client.captureScreenshot(path.join(revisadoDir, `screenshot-praticar-laboratorio-1366.png`));
 
     // Mobile 375px
     await client.setViewport(375, 667);

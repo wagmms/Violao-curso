@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-fixed-dim": "#ffb68c",
+          "on-secondary-container": "#5b3800",
+          "primary-container": "#d97736",
+          "tertiary-container": "#9e8e83",
+          "on-secondary-fixed": "#2a1700",
+          "primary-fixed": "#ffdbc9",
+          "surface-container-high": "#2c2928",
+          "surface-container-low": "#1d1b1a",
+          "on-surface": "#e7e1df",
+          "on-tertiary-container": "#332820",
+          "surface-bright": "#3b3937",
+          "on-error": "#690005",
+          "background": "#151312",
+          "secondary": "#ffb95f",
+          "surface-container": "#211f1e",
+          "on-background": "#e7e1df",
+          "on-surface-variant": "#dbc1b4",
+          "error": "#ffb4ab",
+          "on-primary-container": "#491d00",
+          "tertiary-fixed-dim": "#d5c3b7",
+          "outline": "#a38c80",
+          "primary": "#ffb68c",
+          "outline-variant": "#554339",
+          "on-tertiary-fixed": "#231a12",
+          "inverse-on-surface": "#32302f",
+          "surface-container-lowest": "#100e0d",
+          "on-tertiary": "#392e26",
+          "on-primary": "#532200",
+          "surface-dim": "#151312",
+          "secondary-fixed-dim": "#ffb95f",
+          "surface": "#151312",
+          "surface-container-highest": "#373433",
+          "secondary-fixed": "#ffddb8",
+          "inverse-surface": "#e7e1df",
+          "on-secondary": "#472a00",
+          "on-error-container": "#ffdad6",
+          "secondary-container": "#ee9800",
+          "inverse-primary": "#994703",
+          "on-tertiary-fixed-variant": "#51443b",
+          "surface-variant": "#373433",
+          "tertiary-fixed": "#f2dfd2",
+          "error-container": "#93000a",
+          "tertiary": "#d5c3b7",
+          "on-primary-fixed-variant": "#753400",
+          "surface-tint": "#ffb68c",
+          "on-primary-fixed": "#321200",
+          "on-secondary-fixed-variant": "#653e00"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem",
+          "space-md": "1rem",
+          "gutter-mobile": "0.75rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.5rem",
+          "space-lg": "1.5rem",
+          "margin": "2rem"
+        },
+        "fontFamily": {
+          "headline-lg-mobile": [
+            "Epilogue"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Epilogue"
+          ],
+          "headline-sm": [
+            "Epilogue"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Epilogue"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "title-md": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-lg-mobile": [
+            "Epilogue"
+          ],
+          "display-lg": [
+            "Epilogue"
+          ]
+        },
+        "fontSize": {
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "title-md": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg-mobile": [
+            "34px",
+            {
+              "lineHeight": "42px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="flex flex-col"><div class="flex items-center gap-space-sm px-space-lg pt-space-lg pb-space-md"><img alt="Logo Método Tríade" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xvv4YOzsHAvwWx5mBBieQNH8OuZbJkkcmx97sdQhdmeVLNqAPGI7YQRsgwVnHnpNoRr86cnqgyVJZJWRJxdhVVY9f9P1cNGlL6swdoIgno_YH1okyStjjesckmppcSX5XObx15zCnIGxv--i3z0LgshUQdFZW23zJLJ1Y7W0ZyDJ5CQhT_Zzwv2HJiOJyK4493TicFguDHJdVvyMM14SaAaO57-YDMM1MGf_vs3TwME7BHp60vKOQ59s3f"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Método Tríade</span><span class="font-label-sm text-label-sm text-tertiary">Ambiente de Estudo</span></div></div><div class="h-px mx-space-lg bg-outline-variant/30 my-space-xs"></div><nav class="flex flex-col gap-space-xs px-space-md mt-space-md" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg" data-path="hoje" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span class="font-label-lg text-label-lg">Hoje</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="aprender" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-lg text-label-lg">Aprender</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="praticar" href="#"><span class="material-symbols-outlined text-[20px]">music_note</span><span class="font-label-lg text-label-lg">Praticar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="progresso" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-label-lg text-label-lg">Progresso</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="biblioteca" href="#"><span class="material-symbols-outlined text-[20px]">local_library</span><span class="font-label-lg text-label-lg">Biblioteca</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md pb-space-lg"><div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">tune</span><span class="font-label-sm text-label-sm text-on-surface">Afinador E2</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-0.5 rounded"><span class="material-symbols-outlined text-tertiary text-[16px]">speed</span><span class="font-label-sm text-label-sm text-tertiary">86 BPM</span></div></div><div class="bg-surface-container-high p-space-sm rounded-lg flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Arthur Meireles</span><span class="font-label-sm text-label-sm text-secondary truncate">Intermediário • Nível 4</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">more_vert</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Logo Método Tríade" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xvv4YOzsHAvwWx5mBBieQNH8OuZbJkkcmx97sdQhdmeVLNqAPGI7YQRsgwVnHnpNoRr86cnqgyVJZJWRJxdhVVY9f9P1cNGlL6swdoIgno_YH1okyStjjesckmppcSX5XObx15zCnIGxv--i3z0LgshUQdFZW23zJLJ1Y7W0ZyDJ5CQhT_Zzwv2HJiOJyK4493TicFguDHJdVvyMM14SaAaO57-YDMM1MGf_vs3TwME7BHp60vKOQ59s3f"/><span class="font-title-md text-title-md text-on-surface font-semibold">Minha Prática</span></div><span class="hidden md:inline-block font-label-md text-label-md text-tertiary">•</span><span class="hidden md:inline-block font-label-md text-label-md text-tertiary">Quinta-feira, 24 de Outubro</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">local_fire_department</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">14 dias seguidos</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Atalhos de áudio" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Modo Focado" type="button"><span class="material-symbols-outlined text-[20px]">center_focus_strong</span></button><button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-colors relative" title="Notificações" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary-container"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Container Master com espaçamento e grid rigoroso -->
+<div class="max-w-[1320px] w-full mx-auto px-space-md md:px-space-lg lg:px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- 1. Cabeçalho / Sub-header de Boas-vindas -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Sessão Personalizada do Dia</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Bom dia, Rodrigo. Pronto para o treino de hoje?
+        </h1>
+</div>
+<!-- Indicador de Meta Semanal -->
+<div class="bg-surface-container-low px-space-md py-space-sm rounded-xl flex items-center gap-space-md shadow-sm shrink-0">
+<div class="relative w-11 h-11 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-label-sm font-bold text-primary">80%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold leading-tight">4 de 5 sessões</span>
+<span class="font-label-sm text-label-sm text-tertiary">Meta: 200 min • 160 min alcançados</span>
+</div>
+</div>
+</header>
+<!-- 2. Card Hero Principal (Destaque Central de Alto Impacto) -->
+<section class="relative bg-surface-container-low rounded-xl p-space-md md:p-space-lg overflow-hidden shadow-xl">
+<!-- Glow ambiente acústico suave de fundo -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col gap-space-md">
+<!-- Topo do Hero: Justificativa & Duração -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">lightbulb</span>
+<span>Sugerido porque você concluiu o aquecimento básico há 2 dias</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Sessão de 40 minutos (6 blocos guiados)</span>
+</div>
+</div>
+<!-- Conteúdo Central e Visual de Apoio -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Plano Principal de Foco</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-semibold tracking-tight">
+              Módulo 3: Independência de Polegar e Dedilhado P-I-M-A
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              Domínio do ritmo arpejado em 6/8, estabilização do apoio no baixo e dinâmica expressiva com palheta natural de dedos.
+            </p>
+<!-- Ações Principais -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="inline-flex items-center gap-space-sm bg-primary-container hover:bg-primary text-on-primary-container font-label-lg text-label-lg px-space-lg py-space-sm rounded-xl transition-all shadow-md active:scale-95 cursor-pointer" id="btn-iniciar-sessao" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Iniciar meus 40 minutos</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg px-space-md py-space-sm rounded-xl transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px]">library_books</span>
+<span>Ver partitura / tablatura prévia</span>
+</button>
+</div>
+</div>
+<!-- Mini Imagem Temática / Estúdio de Madeira -->
+<div class="lg:col-span-4 relative rounded-xl overflow-hidden h-44 lg:h-52 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close-up macro of acoustic classical guitar soundhole with warm cedar wood grain, polished nylon and phosphor bronze strings illuminated by warm amber tungsten lamp in a sound-treated recording studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL1iUhq7HgGvyGTmmPjiNRvgv4Nh_y45Lc1nFXyt5_ZkKs3lk-ITL2kq-w7DeYGxGQ3N29eqFE1u1qEqtT05ScVcR4OvvyvUr4XJJhF3zQyF-ujP8OChZh9z02NmN3FTZmrW06LD-wgkFhKxBnTYuz_Jnre9r98_fbUaFhDw76LDx0tHDBsmmyKs8tiPH9py7pRZRd4i9o6L__J-TsfzrecBr6LZ6D5NiIehhrKpXRFnCNEFhRG6l5mQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Afinação Standard (E A D G B E)
+              </span>
+<span class="text-tertiary">Compasso: 6/8</span>
+</div>
+</div>
+</div>
+<!-- Divisor Sutil Estilo Corda de Violão -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-surface-container-highest to-transparent my-space-xs"></div>
+<!-- Linha do Tempo dos 6 Blocos Guiados -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Estrutura Sequencial de Estudo</span>
+<span class="font-label-sm text-label-sm text-secondary">Tempo estimado: 40 min</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-xs">
+<!-- Bloco 1 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-primary font-bold">1</span>
+<span class="font-label-sm text-label-sm text-tertiary">3m</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Preparação</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Aquecimento articular e postura de mão direita.</p>
+</div>
+</div>
+<!-- Bloco 2 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-primary font-bold">2</span>
+<span class="font-label-sm text-label-sm text-tertiary">5m</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Recuperação</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Relembrar padrão básico P-I-M sem pestana.</p>
+</div>
+</div>
+<!-- Bloco 3 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-primary font-bold">3</span>
+<span class="font-label-sm text-label-sm text-tertiary">7m</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Demonstração</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Análise de vídeo com foco no polegar livre.</p>
+</div>
+</div>
+<!-- Bloco 4 (Mais longo / Núcleo) -->
+<div class="bg-surface-container-high p-space-sm rounded-lg flex flex-col justify-between gap-space-xs shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-bold">4</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">15m</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary font-semibold">Prática Núcleo</h3>
+<p class="font-label-sm text-label-sm text-on-surface leading-snug">Loop com metrônomo adaptativo a 64 BPM.</p>
+</div>
+</div>
+<!-- Bloco 5 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-primary font-bold">5</span>
+<span class="font-label-sm text-label-sm text-tertiary">7m</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Aplicação</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Villa-Lobos Estudo nº 1 (simplificado).</p>
+</div>
+</div>
+<!-- Bloco 6 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between gap-space-xs hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-primary font-bold">6</span>
+<span class="font-label-sm text-label-sm text-tertiary">3m</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Registro</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Gravação rápida e autoavaliação guiada.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Linha secundária de cards rápidos (Grid 3 colunas) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Caderno de Dificuldades -->
+<article class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-secondary font-semibold">
+              Prioridade Alta
+            </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Caderno de Dificuldades</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">1 trecho pendente de superação</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Troca rápida de <strong class="text-on-surface font-medium">G/B para Cadd9</strong> nos Compassos 14–16.
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">Taxa de precisão atual</span>
+<div class="flex items-center gap-space-xs">
+<div class="w-20 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-[72%] rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">72%</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">timer</span>
+<span>Praticar 5 min</span>
+</button>
+</article>
+<!-- Card 2: Revisão Espaçada -->
+<article class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hourglass_empty</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-semibold">
+              Hoje
+            </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Memória de Longo Prazo</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">1 revisão programada</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-on-surface font-medium">Garota de Ipanema</strong> — Compassos 5 a 8 (Harmonia Bossa Nova &amp; batida sincopada).
+          </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span>Última prática: há 4 dias</span>
+<span class="text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Retenção Ótima
+            </span>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">play_circle</span>
+<span>Revisar agora (7 min)</span>
+</button>
+</article>
+<!-- Card 3: Estudo Livre / Biblioteca -->
+<article class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-tertiary font-medium">
+              Livre
+            </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Estudo Livre</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Catálogo &amp; Repertório Completo</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            +300 aulas gravadas, dicionário de mais de 1.200 acordes e tablaturas interativas com áudio sincronizado.
+          </p>
+<!-- Atalhos em Pílulas -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm hover:text-on-surface transition-colors cursor-pointer">Bossa Nova</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm hover:text-on-surface transition-colors cursor-pointer">Fingerstyle</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-label-sm hover:text-on-surface transition-colors cursor-pointer">Teoria Aplicada</span>
+</div>
+</div>
+<a class="w-full py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors" href="#">
+<span>Explorar biblioteca</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</article>
+</section>
+<!-- 4. Mini régua de ferramentas de apoio rápido no rodapé -->
+<footer class="bg-surface-container-low p-space-md rounded-xl flex flex-col lg:flex-row items-center justify-between gap-space-md shadow-md">
+<!-- Metrônomo Rápido -->
+<div class="flex items-center gap-space-md w-full lg:w-auto justify-between lg:justify-start">
+<div class="flex items-center gap-space-xs">
+<button class="w-9 h-9 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface flex items-center justify-center transition-all cursor-pointer" id="metronome-toggle" title="Iniciar / Pausar Metrônomo" type="button">
+<span class="material-symbols-outlined text-[20px]" id="metronome-icon">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Metrônomo</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold tabular-nums" id="bpm-display">72 BPM</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center cursor-pointer font-bold" id="bpm-decrease" type="button">-</button>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center cursor-pointer font-bold" id="bpm-increase" type="button">+</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-tertiary hover:text-on-surface font-label-sm text-label-sm font-semibold transition-colors cursor-pointer" id="bpm-tap" type="button">TAP</button>
+</div>
+</div>
+<!-- Divisor vertical decorativo em telas grandes -->
+<div class="hidden lg:block h-8 w-px bg-surface-container-highest"></div>
+<!-- Afinador Rápido -->
+<div class="flex items-center gap-space-sm w-full lg:w-auto">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Afinador Rápido</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Corda 6: Mi (E2)</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Afinada</span>
+</div>
+</div>
+</div>
+<!-- Divisor vertical decorativo em telas grandes -->
+<div class="hidden lg:block h-8 w-px bg-surface-container-highest"></div>
+<!-- Dica do Dia -->
+<div class="flex items-center gap-space-xs w-full lg:w-auto bg-surface-container px-space-md py-space-xs rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">tips_and_updates</span>
+<span class="font-label-sm text-label-sm line-clamp-1">
+<strong>Dica do dia:</strong> Mantenha o pulso reto e relaxado ao dedilhar P-I-M-A para evitar fadiga muscular.
+        </span>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  (function() {
+    let bpm = 72;
+    let isPlaying = false;
+    const bpmDisplay = document.getElementById('bpm-display');
+    const btnDecrease = document.getElementById('bpm-decrease');
+    const btnIncrease = document.getElementById('bpm-increase');
+    const btnToggle = document.getElementById('metronome-toggle');
+    const iconToggle = document.getElementById('metronome-icon');
+    const btnTap = document.getElementById('bpm-tap');
+    let tapTimes = [];
+
+    if (btnDecrease && btnIncrease && bpmDisplay) {
+      btnDecrease.addEventListener('click', () => {
+        if (bpm > 40) {
+          bpm -= 2;
+          bpmDisplay.textContent = bpm + ' BPM';
+        }
+      });
+
+      btnIncrease.addEventListener('click', () => {
+        if (bpm < 220) {
+          bpm += 2;
+          bpmDisplay.textContent = bpm + ' BPM';
+        }
+      });
+    }
+
+    if (btnToggle && iconToggle) {
+      btnToggle.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          iconToggle.textContent = 'pause';
+          btnToggle.classList.add('bg-primary-container', 'text-on-primary-container');
+        } else {
+          iconToggle.textContent = 'play_arrow';
+          btnToggle.classList.remove('bg-primary-container', 'text-on-primary-container');
+        }
+      });
+    }
+
+    if (btnTap && bpmDisplay) {
+      btnTap.addEventListener('click', () => {
+        const now = performance.now();
+        tapTimes.push(now);
+        if (tapTimes.length > 4) tapTimes.shift();
+        if (tapTimes.length > 1) {
+          const intervals = [];
+          for (let i = 1; i < tapTimes.length; i++) {
+            intervals.push(tapTimes[i] - tapTimes[i - 1]);
+          }
+          const avgInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+          const calculatedBpm = Math.round(60000 / avgInterval);
+          if (calculatedBpm >= 40 && calculatedBpm <= 220) {
+            bpm = calculatedBpm;
+            bpmDisplay.textContent = bpm + ' BPM';
+          }
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>
