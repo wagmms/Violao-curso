@@ -45,6 +45,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnDesligarMicrofone) btnDesligarMicrofone.addEventListener('click', fecharAfinador);
   if (modalAfinador) modalAfinador.addEventListener('close', fecharAfinador);
 
+  // Modo Estante
+  const btnEstante = document.getElementById('btn-modo-estante');
+  if (btnEstante) {
+    btnEstante.addEventListener('click', toggleModoEstante);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    if (e.key.toLowerCase() === 'f') {
+      toggleModoEstante();
+    } else if (e.key === 'Escape') {
+      if (document.body.classList.contains('modo-estante')) {
+        toggleModoEstante();
+      }
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement && document.body.classList.contains('modo-estante')) {
+      document.body.classList.remove('modo-estante');
+    }
+  });
+
   // Inicializar timer, modais, diagnóstico...
   navegarPara('hoje');
   atualizarTimer();
@@ -55,6 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.hidden) salvarEstado();
   });
 });
+
+function toggleModoEstante() {
+  const isEstante = document.body.classList.toggle('modo-estante');
+  if (isEstante) {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.warn('Erro ao entrar em tela cheia', err);
+      });
+    }
+  } else {
+    if (document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(err => {
+        console.warn('Erro ao sair da tela cheia', err);
+      });
+    }
+  }
+}
 
 // API para testes automatizados e auditoria do Codex
 window.__APP_TEST_API = {
