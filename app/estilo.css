@@ -1596,6 +1596,28 @@ dialog::backdrop {
   color: #100e0d;
 }
 
+.lh-note-pill.open {
+  background: #1c1815;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 8px rgba(217, 119, 54, 0.4);
+}
+
+.lh-note-pill.muted {
+  background: #221e1c;
+  color: #8c786e;
+  border: 1px dashed #554339;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: default;
+  box-shadow: none;
+}
+
+.lh-note-pill.muted:hover {
+  transform: translate(-50%, -50%);
+  filter: none;
+}
+
 .lh-chord-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

@@ -711,238 +711,595 @@ function renderizarFerramentaInterativa(ativ) {
     }
   }
 
+  const LH_STRING_NAMES = [
+    '1ª Corda (Mi prima)',
+    '2ª Corda (Si)',
+    '3ª Corda (Sol)',
+    '4ª Corda (Ré)',
+    '5ª Corda (Lá)',
+    '6ª Corda (Mi bordão)'
+  ];
+
   const LH_PRESETS = {
     Am7: {
-      name: "Lá Menor com Sétima (Am7)",
-      desc: "Construção baseada no 6º grau (relativo menor) de Dó Maior. Som aveludado com repouso expressivo, sem tensão de trítono.",
-      voicingTag: "Tétrade 1-b3-5-b7",
-      caged: "Formato 'Am' e 'Em'",
+      name: "Lá Menor com 7ª (Am7)",
+      desc: "Tétrade menor límpida e expressiva (A - C - E - G), sem trítono. Base fundamental da MPB, Bossa Nova e harmonia modal.",
       formula: [
         { degree: "1 (Tônica)", note: "A", color: "#d97736" },
         { degree: "b3 (Terça m)", note: "C", color: "#38a169" },
         { degree: "5J (Quinta)", note: "E", color: "#3182ce" },
         { degree: "b7 (Sétima m)", note: "G", color: "#805ad5" }
       ],
-      notes: [
-        { str: 0, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
-        { str: 0, fret: 3, note: "G", degree: "b7", finger: "3", role: "seventh" },
-        { str: 0, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
-        { str: 0, fret: 8, note: "C", degree: "b3", finger: "4", role: "third" },
-        { str: 0, fret: 12, note: "E", degree: "5", finger: "1", role: "fifth" },
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Aberta Fundamental (1ª casa)",
+          tab: "X - 0 - 2 - 0 - 1 - 0",
+          tag: "1ª Posição / Aberta",
+          caged: "Modelo Am (Lá Menor)",
+          desc: "Baixo na 5ª corda solta (Lá), dedo 2 na 4ª corda casa 2 (Mi), dedo 1 na 2ª corda casa 1 (Dó). As cordas 3 e 1 soam soltas gerando rica ressonância acústica.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
+            { str: 1, fret: 1, note: "C", degree: "b3", finger: "1", role: "third" },
+            { str: 2, fret: 0, note: "G", degree: "b7", finger: "0", role: "seventh" },
+            { str: 3, fret: 2, note: "E", degree: "5", finger: "2", role: "fifth" },
+            { str: 4, fret: 0, note: "A", degree: "1", finger: "0", role: "root" }
+          ],
+          muted: [5]
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Pestana na 5ª casa (Modelo Em7 - Bossa Nova)",
+          tab: "5 - 7 - 5 - 5 - 5 - 5 (ou 5 - X - 5 - 5 - 5 - X)",
+          tag: "Pestana / Bossa Nova",
+          caged: "Modelo Em7",
+          desc: "Pestana com dedo 1 no 5º traste cobrindo todas as cordas, com dedo 3 na 5ª corda casa 7. Na Bossa Nova, o polegar toca a 6ª corda e dedos I, M, A puxam as cordas 4, 3 e 2.",
+          notes: [
+            { str: 0, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
+            { str: 1, fret: 5, note: "E", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 5, note: "C", degree: "b3", finger: "1", role: "third" },
+            { str: 3, fret: 5, note: "G", degree: "b7", finger: "1", role: "seventh" },
+            { str: 4, fret: 7, note: "E", degree: "5", finger: "3", role: "fifth" },
+            { str: 5, fret: 5, note: "A", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: []
+        },
+        pos3: {
+          id: "pos3",
+          name: "Posição 3: Drop 2 na 7ª casa (Condução de Vozes)",
+          tab: "X - X - 7 - 9 - 8 - 8",
+          tag: "Drop 2 Agudo",
+          caged: "Modelo Dm / Condução",
+          desc: "Voicing de 4 vozes agudas nas cordas 4, 3, 2 e 1. Dedo 1 na casa 7 (Lá), dedo 3 na casa 9 (Mi), dedos 2 e 4 nas casas 8 (Sol e Dó). Essencial em arranjos de violão solo.",
+          notes: [
+            { str: 0, fret: 8, note: "C", degree: "b3", finger: "3", role: "third" },
+            { str: 1, fret: 8, note: "G", degree: "b7", finger: "2", role: "seventh" },
+            { str: 2, fret: 9, note: "E", degree: "5", finger: "4", role: "fifth" },
+            { str: 3, fret: 7, note: "A", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [4, 5]
+        },
+        pos4: {
+          id: "pos4",
+          name: "Posição 4: Voicing Intermediário na 10ª casa",
+          tab: "X - 10 - 10 - 9 - 10 - X",
+          tag: "Casa 10 / Bossa",
+          caged: "Modelo Dm / Inversão",
+          desc: "Baixo na 5ª corda casa 10 (Sol/b7) ou tônica na 2ª corda casa 10 (Lá). Timbre aveludado e sofisticado para rearmonizações.",
+          notes: [
+            { str: 1, fret: 10, note: "A", degree: "1", finger: "3", role: "root" },
+            { str: 2, fret: 9, note: "E", degree: "5", finger: "1", role: "fifth" },
+            { str: 3, fret: 10, note: "C", degree: "b3", finger: "2", role: "third" },
+            { str: 4, fret: 10, note: "G", degree: "b7", finger: "2", role: "seventh" }
+          ],
+          muted: [0, 5]
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (Todas as 12 Casas)",
+          tab: "Visão Panorâmica",
+          tag: "Mapa Completo",
+          caged: "Todas as Posições Simultâneas",
+          desc: "Mapeamento integral de todas as ocorrências de Lá, Dó, Mi e Sol nos 12 trastes. Ideal para visualização escalar e frases de improviso.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
+            { str: 0, fret: 3, note: "G", degree: "b7", finger: "3", role: "seventh" },
+            { str: 0, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
+            { str: 0, fret: 8, note: "C", degree: "b3", finger: "4", role: "third" },
+            { str: 0, fret: 12, note: "E", degree: "5", finger: "1", role: "fifth" },
 
-        { str: 1, fret: 1, note: "C", degree: "b3", finger: "1", role: "third" },
-        { str: 1, fret: 5, note: "E", degree: "5", finger: "1", role: "fifth" },
-        { str: 1, fret: 8, note: "G", degree: "b7", finger: "4", role: "seventh" },
-        { str: 1, fret: 10, note: "A", degree: "1", finger: "1", role: "root" },
+            { str: 1, fret: 1, note: "C", degree: "b3", finger: "1", role: "third" },
+            { str: 1, fret: 5, note: "E", degree: "5", finger: "1", role: "fifth" },
+            { str: 1, fret: 8, note: "G", degree: "b7", finger: "4", role: "seventh" },
+            { str: 1, fret: 10, note: "A", degree: "1", finger: "1", role: "root" },
 
-        { str: 2, fret: 0, note: "G", degree: "b7", finger: "0", role: "seventh" },
-        { str: 2, fret: 2, note: "A", degree: "1", finger: "2", role: "root" },
-        { str: 2, fret: 5, note: "C", degree: "b3", finger: "1", role: "third" },
-        { str: 2, fret: 9, note: "E", degree: "5", finger: "3", role: "fifth" },
-        { str: 2, fret: 12, note: "G", degree: "b7", finger: "1", role: "seventh" },
+            { str: 2, fret: 0, note: "G", degree: "b7", finger: "0", role: "seventh" },
+            { str: 2, fret: 2, note: "A", degree: "1", finger: "2", role: "root" },
+            { str: 2, fret: 5, note: "C", degree: "b3", finger: "1", role: "third" },
+            { str: 2, fret: 9, note: "E", degree: "5", finger: "3", role: "fifth" },
+            { str: 2, fret: 12, note: "G", degree: "b7", finger: "1", role: "seventh" },
 
-        { str: 3, fret: 2, note: "E", degree: "5", finger: "2", role: "fifth" },
-        { str: 3, fret: 5, note: "G", degree: "b7", finger: "4", role: "seventh" },
-        { str: 3, fret: 7, note: "A", degree: "1", finger: "1", role: "root" },
-        { str: 3, fret: 10, note: "C", degree: "b3", finger: "4", role: "third" },
+            { str: 3, fret: 2, note: "E", degree: "5", finger: "2", role: "fifth" },
+            { str: 3, fret: 5, note: "G", degree: "b7", finger: "4", role: "seventh" },
+            { str: 3, fret: 7, note: "A", degree: "1", finger: "1", role: "root" },
+            { str: 3, fret: 10, note: "C", degree: "b3", finger: "4", role: "third" },
 
-        { str: 4, fret: 0, note: "A", degree: "1", finger: "0", role: "root" },
-        { str: 4, fret: 3, note: "C", degree: "b3", finger: "3", role: "third" },
-        { str: 4, fret: 7, note: "E", degree: "5", finger: "1", role: "fifth" },
-        { str: 4, fret: 10, note: "G", degree: "b7", finger: "4", role: "seventh" },
-        { str: 4, fret: 12, note: "A", degree: "1", finger: "1", role: "root" },
+            { str: 4, fret: 0, note: "A", degree: "1", finger: "0", role: "root" },
+            { str: 4, fret: 3, note: "C", degree: "b3", finger: "3", role: "third" },
+            { str: 4, fret: 7, note: "E", degree: "5", finger: "1", role: "fifth" },
+            { str: 4, fret: 10, note: "G", degree: "b7", finger: "4", role: "seventh" },
+            { str: 4, fret: 12, note: "A", degree: "1", finger: "1", role: "root" },
 
-        { str: 5, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
-        { str: 5, fret: 3, note: "G", degree: "b7", finger: "3", role: "seventh" },
-        { str: 5, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
-        { str: 5, fret: 8, note: "C", degree: "b3", finger: "4", role: "third" },
-        { str: 5, fret: 12, note: "E", degree: "5", finger: "1", role: "fifth" }
-      ]
+            { str: 5, fret: 0, note: "E", degree: "5", finger: "0", role: "fifth" },
+            { str: 5, fret: 3, note: "G", degree: "b7", finger: "3", role: "seventh" },
+            { str: 5, fret: 5, note: "A", degree: "1", finger: "1", role: "root" },
+            { str: 5, fret: 8, note: "C", degree: "b3", finger: "4", role: "third" },
+            { str: 5, fret: 12, note: "E", degree: "5", finger: "1", role: "fifth" }
+          ],
+          muted: []
+        }
+      }
     },
     Cmaj: {
-      name: "Dó Maior Jônio (Cmaj)",
-      desc: "A tonalidade matriz do sistema ocidental. Tríade maior límpida e brilhante com ressonância aberta.",
-      voicingTag: "Escala & Tríade Maior",
-      caged: "Formato 'C' e 'A'",
+      name: "Dó Maior com 7ª Maior (C7M)",
+      desc: "Harmonia límpida de repouso e luminosidade (C - E - G - B). Pilar tonal do repertório de Bossa Nova e Choro.",
       formula: [
         { degree: "1 (Tônica)", note: "C", color: "#d97736" },
         { degree: "3M (Terça M)", note: "E", color: "#38a169" },
         { degree: "5J (Quinta)", note: "G", color: "#3182ce" },
         { degree: "7M (Sétima M)", note: "B", color: "#805ad5" }
       ],
-      notes: [
-        { str: 0, fret: 0, note: "E", degree: "3", finger: "0", role: "third" },
-        { str: 0, fret: 3, note: "G", degree: "5", finger: "3", role: "fifth" },
-        { str: 0, fret: 7, note: "B", degree: "7M", finger: "1", role: "seventh" },
-        { str: 0, fret: 8, note: "C", degree: "1", finger: "2", role: "root" },
-        { str: 0, fret: 12, note: "E", degree: "3", finger: "1", role: "third" },
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Aberta Fundamental (1ª-3ª casa)",
+          tab: "X - 3 - 2 - 0 - 0 - 0",
+          tag: "1ª Posição Aberta",
+          caged: "Modelo C",
+          desc: "Dedo 3 na 5ª corda casa 3 (Dó) e dedo 2 na 4ª corda casa 2 (Mi). Cordas 3 (Sol), 2 (Si/7M) e 1 (Mi/3M) soam soltas gerando timbre aveludado.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "3M", finger: "0", role: "third" },
+            { str: 1, fret: 0, note: "B", degree: "7M", finger: "0", role: "seventh" },
+            { str: 2, fret: 0, note: "G", degree: "5", finger: "0", role: "fifth" },
+            { str: 3, fret: 2, note: "E", degree: "3M", finger: "2", role: "third" },
+            { str: 4, fret: 3, note: "C", degree: "1", finger: "3", role: "root" }
+          ],
+          muted: [5]
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Pestana na 3ª casa (Modelo A7M)",
+          tab: "X - 3 - 5 - 4 - 5 - 3",
+          tag: "Pestana Casa 3",
+          caged: "Modelo A",
+          desc: "Pestana na casa 3 com dedo 1, dedo 3 na 4ª corda casa 5, dedo 2 na 3ª corda casa 4 e dedo 4 na 2ª corda casa 5.",
+          notes: [
+            { str: 0, fret: 3, note: "G", degree: "5", finger: "1", role: "fifth" },
+            { str: 1, fret: 5, note: "E", degree: "3M", finger: "4", role: "third" },
+            { str: 2, fret: 4, note: "B", degree: "7M", finger: "2", role: "seventh" },
+            { str: 3, fret: 5, note: "G", degree: "5", finger: "3", role: "fifth" },
+            { str: 4, fret: 3, note: "C", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [5]
+        },
+        pos3: {
+          id: "pos3",
+          name: "Posição 3: Bossa Nova na 8ª casa (Modelo E7M / Tom Jobim)",
+          tab: "8 - X - 9 - 9 - 8 - X",
+          tag: "Bossa Nova Clássica",
+          caged: "Modelo E / Jobim",
+          desc: "O voicing definitivo de Tom Jobim. Dedo 1 no baixo casa 8 (Dó), dedo 2 na 4ª corda casa 9 (Si/7M), dedo 3 na 3ª corda casa 9 (Mi) e dedo 1 na 2ª corda casa 8 (Sol).",
+          notes: [
+            { str: 1, fret: 8, note: "G", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 9, note: "E", degree: "3M", finger: "3", role: "third" },
+            { str: 3, fret: 9, note: "B", degree: "7M", finger: "2", role: "seventh" },
+            { str: 5, fret: 8, note: "C", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [0, 4]
+        },
+        pos4: {
+          id: "pos4",
+          name: "Posição 4: Drop 2 na 10ª casa (Agudo)",
+          tab: "X - X - 10 - 12 - 12 - 12",
+          tag: "Drop 2 Casa 10",
+          caged: "Modelo D / Drop 2",
+          desc: "Baixo em Dó na 4ª corda casa 10 com dedo 1, e mini-pestana do dedo 3 cobrindo as cordas 3, 2 e 1 na casa 12.",
+          notes: [
+            { str: 0, fret: 12, note: "E", degree: "3M", finger: "3", role: "third" },
+            { str: 1, fret: 12, note: "B", degree: "7M", finger: "3", role: "seventh" },
+            { str: 2, fret: 12, note: "G", degree: "5", finger: "3", role: "fifth" },
+            { str: 3, fret: 10, note: "C", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [4, 5]
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (Todas as 12 Casas)",
+          tab: "Visão Panorâmica",
+          tag: "Mapa Completo",
+          caged: "Todas as Posições Simultâneas",
+          desc: "Todas as ocorrências de Dó, Mi, Sol e Si no braço.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "3M", finger: "0", role: "third" },
+            { str: 0, fret: 3, note: "G", degree: "5", finger: "2", role: "fifth" },
+            { str: 0, fret: 7, note: "B", degree: "7M", finger: "1", role: "seventh" },
+            { str: 0, fret: 8, note: "C", degree: "1", finger: "2", role: "root" },
+            { str: 0, fret: 12, note: "E", degree: "3M", finger: "1", role: "third" },
 
-        { str: 1, fret: 1, note: "C", degree: "1", finger: "1", role: "root" },
-        { str: 1, fret: 5, note: "E", degree: "3", finger: "4", role: "third" },
-        { str: 1, fret: 8, note: "G", degree: "5", finger: "4", role: "fifth" },
-        { str: 1, fret: 12, note: "B", degree: "7M", finger: "1", role: "seventh" },
+            { str: 1, fret: 0, note: "B", degree: "7M", finger: "0", role: "seventh" },
+            { str: 1, fret: 1, note: "C", degree: "1", finger: "1", role: "root" },
+            { str: 1, fret: 5, note: "E", degree: "3M", finger: "3", role: "third" },
+            { str: 1, fret: 8, note: "G", degree: "5", finger: "1", role: "fifth" },
+            { str: 1, fret: 12, note: "B", degree: "7M", finger: "1", role: "seventh" },
 
-        { str: 2, fret: 0, note: "G", degree: "5", finger: "0", role: "fifth" },
-        { str: 2, fret: 5, note: "C", degree: "1", finger: "1", role: "root" },
-        { str: 2, fret: 9, note: "E", degree: "3", finger: "3", role: "third" },
-        { str: 2, fret: 12, note: "G", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 0, note: "G", degree: "5", finger: "0", role: "fifth" },
+            { str: 2, fret: 4, note: "B", degree: "7M", finger: "2", role: "seventh" },
+            { str: 2, fret: 5, note: "C", degree: "1", finger: "3", role: "root" },
+            { str: 2, fret: 9, note: "E", degree: "3M", finger: "2", role: "third" },
+            { str: 2, fret: 12, note: "G", degree: "5", finger: "1", role: "fifth" },
 
-        { str: 3, fret: 2, note: "E", degree: "3", finger: "2", role: "third" },
-        { str: 3, fret: 5, note: "G", degree: "5", finger: "1", role: "fifth" },
-        { str: 3, fret: 9, note: "B", degree: "7M", finger: "3", role: "seventh" },
-        { str: 3, fret: 10, note: "C", degree: "1", finger: "4", role: "root" },
+            { str: 3, fret: 2, note: "E", degree: "3M", finger: "1", role: "third" },
+            { str: 3, fret: 5, note: "G", degree: "5", finger: "3", role: "fifth" },
+            { str: 3, fret: 9, note: "B", degree: "7M", finger: "2", role: "seventh" },
+            { str: 3, fret: 10, note: "C", degree: "1", finger: "3", role: "root" },
 
-        { str: 4, fret: 3, note: "C", degree: "1", finger: "3", role: "root" },
-        { str: 4, fret: 7, note: "E", degree: "3", finger: "1", role: "third" },
-        { str: 4, fret: 10, note: "G", degree: "5", finger: "3", role: "fifth" },
+            { str: 4, fret: 2, note: "B", degree: "7M", finger: "1", role: "seventh" },
+            { str: 4, fret: 3, note: "C", degree: "1", finger: "2", role: "root" },
+            { str: 4, fret: 7, note: "E", degree: "3M", finger: "1", role: "third" },
+            { str: 4, fret: 10, note: "G", degree: "5", finger: "3", role: "fifth" },
 
-        { str: 5, fret: 0, note: "E", degree: "3", finger: "0", role: "third" },
-        { str: 5, fret: 3, note: "G", degree: "5", finger: "3", role: "fifth" },
-        { str: 5, fret: 8, note: "C", degree: "1", finger: "1", role: "root" },
-        { str: 5, fret: 12, note: "E", degree: "3", finger: "1", role: "third" }
-      ]
+            { str: 5, fret: 0, note: "E", degree: "3M", finger: "0", role: "third" },
+            { str: 5, fret: 3, note: "G", degree: "5", finger: "2", role: "fifth" },
+            { str: 5, fret: 7, note: "B", degree: "7M", finger: "1", role: "seventh" },
+            { str: 5, fret: 8, note: "C", degree: "1", finger: "2", role: "root" },
+            { str: 5, fret: 12, note: "E", degree: "3M", finger: "1", role: "third" }
+          ],
+          muted: []
+        }
+      }
     },
     Dm79: {
-      name: "Ré Menor com Nona (Dm7(9))",
-      desc: "Típica harmonia de Bossa Nova e MPB (acorde II cadencial em Dó Maior). Som sofisticado e poético.",
-      voicingTag: "Tétrade + 9ª Adicionada",
-      caged: "Formato 'Dm' & Drop 3",
+      name: "Ré Menor com 9ª (Dm7(9))",
+      desc: "Acorde emblemático de abertura e sofisticação harmônica da Bossa Nova (D - F - A - C - E). Conduz com doçura cadências ii-V-I.",
       formula: [
         { degree: "1 (Tônica)", note: "D", color: "#d97736" },
         { degree: "b3 (Terça m)", note: "F", color: "#38a169" },
         { degree: "5J (Quinta)", note: "A", color: "#3182ce" },
+        { degree: "b7 (Sétima m)", note: "C", color: "#805ad5" },
         { degree: "9 (Nona M)", note: "E", color: "#ffb95f" }
       ],
-      notes: [
-        { str: 0, fret: 0, note: "E", degree: "9", finger: "0", role: "ext" },
-        { str: 0, fret: 1, note: "F", degree: "b3", finger: "1", role: "third" },
-        { str: 0, fret: 5, note: "A", degree: "5", finger: "1", role: "fifth" },
-        { str: 0, fret: 8, note: "C", degree: "b7", finger: "3", role: "seventh" },
-        { str: 0, fret: 10, note: "D", degree: "1", finger: "4", role: "root" },
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Bossa Nova João Gilberto na 5ª casa",
+          tab: "X - 5 - 3 - 5 - 5 - X",
+          tag: "Padrão Bossa Nova",
+          caged: "Modelo Am9",
+          desc: "O acorde assinatura da batida de João Gilberto. Baixo em Ré na 5ª corda casa 5, dedo 1 na 4ª corda casa 3 (Fá), dedo 2 na 3ª corda casa 5 (Dó) e dedo 3 na 2ª corda casa 5 (Mi/9ª).",
+          notes: [
+            { str: 1, fret: 5, note: "E", degree: "9", finger: "3", role: "ext" },
+            { str: 2, fret: 5, note: "C", degree: "b7", finger: "2", role: "seventh" },
+            { str: 3, fret: 3, note: "F", degree: "b3", finger: "1", role: "third" },
+            { str: 4, fret: 5, note: "D", degree: "1", finger: "4", role: "root" }
+          ],
+          muted: [0, 5]
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Aberta com 9ª (1ª-2ª casa)",
+          tab: "X - X - 0 - 2 - 1 - 0",
+          tag: "1ª Posição Aberta",
+          caged: "Modelo Dm",
+          desc: "Baixo na 4ª corda solta (Ré), dedo 2 na 3ª corda casa 2 (Lá), dedo 1 na 2ª corda casa 1 (Dó) e 1ª corda solta (Mi/9ª). Resolução suave e nostálgica.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "9", finger: "0", role: "ext" },
+            { str: 1, fret: 1, note: "C", degree: "b7", finger: "1", role: "seventh" },
+            { str: 2, fret: 2, note: "A", degree: "5", finger: "2", role: "fifth" },
+            { str: 3, fret: 0, note: "D", degree: "1", finger: "0", role: "root" }
+          ],
+          muted: [4, 5]
+        },
+        pos3: {
+          id: "pos3",
+          name: "Posição 3: Bossa na 10ª casa (Modelo Em9)",
+          tab: "10 - X - 10 - 10 - 10 - X",
+          tag: "Casa 10 / Bossa",
+          caged: "Modelo Em9",
+          desc: "Baixo na 6ª corda casa 10 (Ré) tocado com o polegar, pestana na casa 10 cobrindo cordas 4 (Dó), 3 (Fá) e 2 (Lá).",
+          notes: [
+            { str: 1, fret: 10, note: "A", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 10, note: "F", degree: "b3", finger: "1", role: "third" },
+            { str: 3, fret: 10, note: "C", degree: "b7", finger: "1", role: "seventh" },
+            { str: 5, fret: 10, note: "D", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [0, 4]
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (Todas as 12 Casas)",
+          tab: "Visão Panorâmica",
+          tag: "Mapa Completo",
+          caged: "Todas as Posições Simultâneas",
+          desc: "Distribuição completa de Ré, Fá, Lá, Dó e Mi no braço.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "9", finger: "0", role: "ext" },
+            { str: 0, fret: 1, note: "F", degree: "b3", finger: "1", role: "third" },
+            { str: 0, fret: 5, note: "A", degree: "5", finger: "1", role: "fifth" },
+            { str: 0, fret: 10, note: "D", degree: "1", finger: "4", role: "root" },
+            { str: 0, fret: 12, note: "E", degree: "9", finger: "1", role: "ext" },
 
-        { str: 1, fret: 1, note: "C", degree: "b7", finger: "1", role: "seventh" },
-        { str: 1, fret: 3, note: "D", degree: "1", finger: "3", role: "root" },
-        { str: 1, fret: 5, note: "E", degree: "9", finger: "4", role: "ext" },
-        { str: 1, fret: 6, note: "F", degree: "b3", finger: "2", role: "third" },
-        { str: 1, fret: 10, note: "A", degree: "5", finger: "3", role: "fifth" },
+            { str: 1, fret: 1, note: "C", degree: "b7", finger: "1", role: "seventh" },
+            { str: 1, fret: 3, note: "D", degree: "1", finger: "2", role: "root" },
+            { str: 1, fret: 5, note: "E", degree: "9", finger: "3", role: "ext" },
+            { str: 1, fret: 6, note: "F", degree: "b3", finger: "4", role: "third" },
+            { str: 1, fret: 10, note: "A", degree: "5", finger: "1", role: "fifth" },
 
-        { str: 2, fret: 2, note: "A", degree: "5", finger: "2", role: "fifth" },
-        { str: 2, fret: 5, note: "C", degree: "b7", finger: "1", role: "seventh" },
-        { str: 2, fret: 7, note: "D", degree: "1", finger: "3", role: "root" },
-        { str: 2, fret: 9, note: "E", degree: "9", finger: "4", role: "ext" },
-        { str: 2, fret: 10, note: "F", degree: "b3", finger: "2", role: "third" },
+            { str: 2, fret: 2, note: "A", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 5, note: "C", degree: "b7", finger: "3", role: "seventh" },
+            { str: 2, fret: 7, note: "D", degree: "1", finger: "4", role: "root" },
+            { str: 2, fret: 9, note: "E", degree: "9", finger: "2", role: "ext" },
+            { str: 2, fret: 10, note: "F", degree: "b3", finger: "3", role: "third" },
 
-        { str: 3, fret: 0, note: "D", degree: "1", finger: "0", role: "root" },
-        { str: 3, fret: 3, note: "F", degree: "b3", finger: "3", role: "third" },
-        { str: 3, fret: 7, note: "A", degree: "5", finger: "1", role: "fifth" },
-        { str: 3, fret: 10, note: "C", degree: "b7", finger: "4", role: "seventh" },
+            { str: 3, fret: 0, note: "D", degree: "1", finger: "0", role: "root" },
+            { str: 3, fret: 2, note: "E", degree: "9", finger: "1", role: "ext" },
+            { str: 3, fret: 3, note: "F", degree: "b3", finger: "2", role: "third" },
+            { str: 3, fret: 7, note: "A", degree: "5", finger: "4", role: "fifth" },
+            { str: 3, fret: 10, note: "C", degree: "b7", finger: "1", role: "seventh" },
 
-        { str: 4, fret: 0, note: "A", degree: "5", finger: "0", role: "fifth" },
-        { str: 4, fret: 3, note: "C", degree: "b7", finger: "2", role: "seventh" },
-        { str: 4, fret: 5, note: "D", degree: "1", finger: "4", role: "root" },
-        { str: 4, fret: 7, note: "E", degree: "9", finger: "1", role: "ext" },
-        { str: 4, fret: 8, note: "F", degree: "b3", finger: "2", role: "third" },
+            { str: 4, fret: 0, note: "A", degree: "5", finger: "0", role: "fifth" },
+            { str: 4, fret: 3, note: "C", degree: "b7", finger: "2", role: "seventh" },
+            { str: 4, fret: 5, note: "D", degree: "1", finger: "4", role: "root" },
+            { str: 4, fret: 7, note: "E", degree: "9", finger: "1", role: "ext" },
+            { str: 4, fret: 8, note: "F", degree: "b3", finger: "2", role: "third" },
 
-        { str: 5, fret: 1, note: "F", degree: "b3", finger: "1", role: "third" },
-        { str: 5, fret: 5, note: "A", degree: "5", finger: "1", role: "fifth" },
-        { str: 5, fret: 10, note: "D", degree: "1", finger: "4", role: "root" },
-        { str: 5, fret: 12, note: "E", degree: "9", finger: "1", role: "ext" }
-      ]
+            { str: 5, fret: 1, note: "F", degree: "b3", finger: "1", role: "third" },
+            { str: 5, fret: 5, note: "A", degree: "5", finger: "1", role: "fifth" },
+            { str: 5, fret: 10, note: "D", degree: "1", finger: "4", role: "root" },
+            { str: 5, fret: 12, note: "E", degree: "9", finger: "1", role: "ext" }
+          ],
+          muted: []
+        }
+      }
     },
     G7: {
       name: "Sol Dominante (G7)",
-      desc: "Acorde de máxima tensão harmônica com trítono ativo entre a terça maior (B) e a sétima menor (F). Prepara resolução cadencial.",
-      voicingTag: "Dominante Primário V7",
-      caged: "Formato 'E' e 'G'",
+      desc: "Acorde de máxima tensão harmônica (G - B - D - F) com trítono ativo entre B e F. Motor gerador de movimento cadencial na MPB.",
       formula: [
         { degree: "1 (Tônica)", note: "G", color: "#d97736" },
         { degree: "3M (Terça M)", note: "B", color: "#38a169" },
         { degree: "5J (Quinta)", note: "D", color: "#3182ce" },
         { degree: "b7 (Sétima m)", note: "F", color: "#805ad5" }
       ],
-      notes: [
-        { str: 0, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
-        { str: 0, fret: 3, note: "G", degree: "1", finger: "3", role: "root" },
-        { str: 0, fret: 7, note: "B", degree: "3", finger: "1", role: "third" },
-        { str: 0, fret: 10, note: "D", degree: "5", finger: "4", role: "fifth" },
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Aberta Fundamental (1ª-3ª casa)",
+          tab: "3 - 2 - 0 - 0 - 0 - 1",
+          tag: "1ª Posição Aberta",
+          caged: "Modelo G",
+          desc: "Dedo 3 na 6ª corda casa 3 (Sol), dedo 2 na 5ª corda casa 2 (Si) e dedo 1 na 1ª corda casa 1 (Fá/7ª). Cordas 4, 3 e 2 soam soltas gerando rica ressonância acústica.",
+          notes: [
+            { str: 0, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
+            { str: 1, fret: 0, note: "B", degree: "3M", finger: "0", role: "third" },
+            { str: 2, fret: 0, note: "G", degree: "1", finger: "0", role: "root" },
+            { str: 3, fret: 0, note: "D", degree: "5", finger: "0", role: "fifth" },
+            { str: 4, fret: 2, note: "B", degree: "3M", finger: "2", role: "third" },
+            { str: 5, fret: 3, note: "G", degree: "1", finger: "3", role: "root" }
+          ],
+          muted: []
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Bossa Nova na 3ª casa (Modelo E7)",
+          tab: "3 - X - 3 - 4 - 3 - X",
+          tag: "Bossa / Samba",
+          caged: "Modelo E7",
+          desc: "Baixo na 6ª corda casa 3 (Sol) tocado com o polegar, pestana na casa 3 com dedo 1 e dedo 2 na 3ª corda casa 4 (Si). Som clássico do violão de samba e bossa.",
+          notes: [
+            { str: 1, fret: 3, note: "D", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 4, note: "B", degree: "3M", finger: "2", role: "third" },
+            { str: 3, fret: 3, note: "F", degree: "b7", finger: "1", role: "seventh" },
+            { str: 5, fret: 3, note: "G", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [0, 4]
+        },
+        pos3: {
+          id: "pos3",
+          name: "Posição 3: Drop 2 na 5ª casa (Condução de Vozes)",
+          tab: "X - X - 5 - 7 - 6 - 7",
+          tag: "Drop 2 Agudo",
+          caged: "Modelo D / Drop 2",
+          desc: "Dedo 1 na 4ª corda casa 5 (Sol), dedo 3 na 3ª corda casa 7 (Ré), dedo 2 na 2ª corda casa 6 (Fá) e dedo 4 na 1ª corda casa 7 (Si). Conduz melodias no soprano.",
+          notes: [
+            { str: 0, fret: 7, note: "B", degree: "3M", finger: "4", role: "third" },
+            { str: 1, fret: 6, note: "F", degree: "b7", finger: "2", role: "seventh" },
+            { str: 2, fret: 7, note: "D", degree: "5", finger: "3", role: "fifth" },
+            { str: 3, fret: 5, note: "G", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [4, 5]
+        },
+        pos4: {
+          id: "pos4",
+          name: "Posição 4: Modelo C7 na 10ª casa (Baixo na 5ª corda)",
+          tab: "X - 10 - 9 - 10 - 8 - X",
+          tag: "Casa 10 / MPB",
+          caged: "Modelo C7",
+          desc: "Baixo na 5ª corda casa 10 (Sol), dedo 2 na 4ª corda casa 9 (Si), dedo 3 na 3ª corda casa 10 (Fá) e dedo 1 na 2ª corda casa 8 (Ré).",
+          notes: [
+            { str: 1, fret: 8, note: "D", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 10, note: "F", degree: "b7", finger: "3", role: "seventh" },
+            { str: 3, fret: 9, note: "B", degree: "3M", finger: "2", role: "third" },
+            { str: 4, fret: 10, note: "G", degree: "1", finger: "4", role: "root" }
+          ],
+          muted: [0, 5]
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (Todas as 12 Casas)",
+          tab: "Visão Panorâmica",
+          tag: "Mapa Completo",
+          caged: "Todas as Posições Simultâneas",
+          desc: "Todas as ocorrências de Sol, Si, Ré e Fá no braço.",
+          notes: [
+            { str: 0, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
+            { str: 0, fret: 3, note: "G", degree: "1", finger: "3", role: "root" },
+            { str: 0, fret: 7, note: "B", degree: "3M", finger: "1", role: "third" },
+            { str: 0, fret: 10, note: "D", degree: "5", finger: "4", role: "fifth" },
 
-        { str: 1, fret: 0, note: "B", degree: "3", finger: "0", role: "third" },
-        { str: 1, fret: 3, note: "D", degree: "5", finger: "3", role: "fifth" },
-        { str: 1, fret: 6, note: "F", degree: "b7", finger: "1", role: "seventh" },
-        { str: 1, fret: 8, note: "G", degree: "1", finger: "3", role: "root" },
+            { str: 1, fret: 0, note: "B", degree: "3M", finger: "0", role: "third" },
+            { str: 1, fret: 3, note: "D", degree: "5", finger: "3", role: "fifth" },
+            { str: 1, fret: 6, note: "F", degree: "b7", finger: "1", role: "seventh" },
+            { str: 1, fret: 8, note: "G", degree: "1", finger: "3", role: "root" },
 
-        { str: 2, fret: 0, note: "G", degree: "1", finger: "0", role: "root" },
-        { str: 2, fret: 4, note: "B", degree: "3", finger: "2", role: "third" },
-        { str: 2, fret: 7, note: "D", degree: "5", finger: "1", role: "fifth" },
-        { str: 2, fret: 10, note: "F", degree: "b7", finger: "4", role: "seventh" },
+            { str: 2, fret: 0, note: "G", degree: "1", finger: "0", role: "root" },
+            { str: 2, fret: 4, note: "B", degree: "3M", finger: "2", role: "third" },
+            { str: 2, fret: 7, note: "D", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 10, note: "F", degree: "b7", finger: "4", role: "seventh" },
 
-        { str: 3, fret: 0, note: "D", degree: "5", finger: "0", role: "fifth" },
-        { str: 3, fret: 3, note: "F", degree: "b7", finger: "1", role: "seventh" },
-        { str: 3, fret: 5, note: "G", degree: "1", finger: "3", role: "root" },
-        { str: 3, fret: 9, note: "B", degree: "3", finger: "4", role: "third" },
+            { str: 3, fret: 0, note: "D", degree: "5", finger: "0", role: "fifth" },
+            { str: 3, fret: 3, note: "F", degree: "b7", finger: "1", role: "seventh" },
+            { str: 3, fret: 5, note: "G", degree: "1", finger: "3", role: "root" },
+            { str: 3, fret: 9, note: "B", degree: "3M", finger: "4", role: "third" },
 
-        { str: 4, fret: 2, note: "B", degree: "3", finger: "1", role: "third" },
-        { str: 4, fret: 5, note: "D", degree: "5", finger: "3", role: "fifth" },
-        { str: 4, fret: 8, note: "F", degree: "b7", finger: "4", role: "seventh" },
-        { str: 4, fret: 10, note: "G", degree: "1", finger: "1", role: "root" },
+            { str: 4, fret: 2, note: "B", degree: "3M", finger: "1", role: "third" },
+            { str: 4, fret: 5, note: "D", degree: "5", finger: "3", role: "fifth" },
+            { str: 4, fret: 8, note: "F", degree: "b7", finger: "4", role: "seventh" },
+            { str: 4, fret: 10, note: "G", degree: "1", finger: "1", role: "root" },
 
-        { str: 5, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
-        { str: 5, fret: 3, note: "G", degree: "1", finger: "3", role: "root" },
-        { str: 5, fret: 7, note: "B", degree: "3", finger: "1", role: "third" },
-        { str: 5, fret: 10, note: "D", degree: "5", finger: "4", role: "fifth" }
-      ]
+            { str: 5, fret: 1, note: "F", degree: "b7", finger: "1", role: "seventh" },
+            { str: 5, fret: 3, note: "G", degree: "1", finger: "3", role: "root" },
+            { str: 5, fret: 7, note: "B", degree: "3M", finger: "1", role: "third" },
+            { str: 5, fret: 10, note: "D", degree: "5", finger: "4", role: "fifth" }
+          ],
+          muted: []
+        }
+      }
     },
     EmPent: {
-      name: "Mi Menor Pentatônica (Em Pent)",
-      desc: "A digitação mais natural e ressonante do violão. Elimina semitons gerando sonoridade aberta e direta.",
-      voicingTag: "Pentatônica Menor",
-      caged: "Shape 1 Clássico",
+      name: "Mi Menor com 7ª (Em7)",
+      desc: "A digitação mais natural e ressonante do instrumento (E - G - B - D). Abre espaço para toda a família pentatônica menor.",
       formula: [
         { degree: "1 (Tônica)", note: "E", color: "#d97736" },
         { degree: "b3 (Terça m)", note: "G", color: "#38a169" },
-        { degree: "4 (Quarta J)", note: "A", color: "#ffb95f" },
-        { degree: "5J (Quinta)", note: "B", color: "#3182ce" }
+        { degree: "5J (Quinta)", note: "B", color: "#3182ce" },
+        { degree: "b7 (Sétima m)", note: "D", color: "#805ad5" }
       ],
-      notes: [
-        { str: 0, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
-        { str: 0, fret: 3, note: "G", degree: "b3", finger: "3", role: "third" },
-        { str: 0, fret: 5, note: "A", degree: "4", finger: "1", role: "ext" },
-        { str: 0, fret: 7, note: "B", degree: "5", finger: "2", role: "fifth" },
-        { str: 0, fret: 10, note: "D", degree: "b7", finger: "4", role: "seventh" },
-        { str: 0, fret: 12, note: "E", degree: "1", finger: "1", role: "root" },
+      shapes: {
+        pos1: {
+          id: "pos1",
+          name: "Posição 1: Aberta Fundamental (1 dedo apenas!)",
+          tab: "0 - 2 - 0 - 0 - 0 - 0",
+          tag: "1ª Posição Aberta",
+          caged: "Modelo Em7",
+          desc: "Apenas 1 dedo na mão esquerda! Dedo 2 na 5ª corda casa 2 (Si). Todas as outras 5 cordas vibram soltas gerando imenso sustain natural.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
+            { str: 1, fret: 0, note: "B", degree: "5", finger: "0", role: "fifth" },
+            { str: 2, fret: 0, note: "G", degree: "b3", finger: "0", role: "third" },
+            { str: 3, fret: 0, note: "D", degree: "b7", finger: "0", role: "seventh" },
+            { str: 4, fret: 2, note: "B", degree: "5", finger: "2", role: "fifth" },
+            { str: 5, fret: 0, note: "E", degree: "1", finger: "0", role: "root" }
+          ],
+          muted: []
+        },
+        pos2: {
+          id: "pos2",
+          name: "Posição 2: Pestana na 7ª casa (Modelo Am7)",
+          tab: "X - 7 - 9 - 7 - 8 - 7",
+          tag: "Pestana Casa 7",
+          caged: "Modelo Am7",
+          desc: "Baixo na 5ª corda casa 7 (Mi), pestana com dedo 1 no 7º traste, dedo 3 na 4ª corda casa 9 e dedo 2 na 2ª corda casa 8.",
+          notes: [
+            { str: 0, fret: 7, note: "B", degree: "5", finger: "1", role: "fifth" },
+            { str: 1, fret: 8, note: "G", degree: "b3", finger: "2", role: "third" },
+            { str: 2, fret: 7, note: "D", degree: "b7", finger: "1", role: "seventh" },
+            { str: 3, fret: 9, note: "B", degree: "5", finger: "3", role: "fifth" },
+            { str: 4, fret: 7, note: "E", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: [5]
+        },
+        pos3: {
+          id: "pos3",
+          name: "Posição 3: Bossa Nova na 7ª casa (Baixo na 6ª corda)",
+          tab: "7 - X - 7 - 7 - 8 - X",
+          tag: "Voicing Bossa Nova",
+          caged: "Modelo Em / Bossa",
+          desc: "Baixo na 6ª corda casa 7 (Si/5ª) com o polegar, dedos 1 e 2 montando o bloco harmônico nas cordas 4, 3 e 2.",
+          notes: [
+            { str: 1, fret: 8, note: "G", degree: "b3", finger: "2", role: "third" },
+            { str: 2, fret: 7, note: "D", degree: "b7", finger: "1", role: "seventh" },
+            { str: 3, fret: 7, note: "B", degree: "5", finger: "1", role: "fifth" },
+            { str: 5, fret: 7, note: "B", degree: "5", finger: "1", role: "fifth" }
+          ],
+          muted: [0, 4]
+        },
+        pos4: {
+          id: "pos4",
+          name: "Posição 4: Oitavada na 12ª casa",
+          tab: "12 - 14 - 12 - 12 - 12 - 12",
+          tag: "Casa 12 Oitavada",
+          caged: "Modelo Em Oitavado",
+          desc: "Pestana com dedo 1 cobrindo a 12ª casa e dedo 3 na 5ª corda casa 14. Timbre brilhante no registro dos harmônicos.",
+          notes: [
+            { str: 0, fret: 12, note: "E", degree: "1", finger: "1", role: "root" },
+            { str: 1, fret: 12, note: "B", degree: "5", finger: "1", role: "fifth" },
+            { str: 2, fret: 12, note: "G", degree: "b3", finger: "1", role: "third" },
+            { str: 3, fret: 12, note: "D", degree: "b7", finger: "1", role: "seventh" },
+            { str: 4, fret: 14, note: "B", degree: "5", finger: "3", role: "fifth" },
+            { str: 5, fret: 12, note: "E", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: []
+        },
+        all: {
+          id: "all",
+          name: "Mapa Teórico Geral (Pentatônica Menor)",
+          tab: "Visão Panorâmica",
+          tag: "Escala / Arpejo",
+          caged: "Todas as Posições Simultâneas",
+          desc: "Todas as notas de Mi Menor Pentatônica ao longo dos 12 trastes.",
+          notes: [
+            { str: 0, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
+            { str: 0, fret: 3, note: "G", degree: "b3", finger: "3", role: "third" },
+            { str: 0, fret: 5, note: "A", degree: "4", finger: "1", role: "ext" },
+            { str: 0, fret: 7, note: "B", degree: "5", finger: "2", role: "fifth" },
+            { str: 0, fret: 10, note: "D", degree: "b7", finger: "4", role: "seventh" },
+            { str: 0, fret: 12, note: "E", degree: "1", finger: "1", role: "root" },
 
-        { str: 1, fret: 0, note: "B", degree: "5", finger: "0", role: "fifth" },
-        { str: 1, fret: 3, note: "D", degree: "b7", finger: "3", role: "seventh" },
-        { str: 1, fret: 5, note: "E", degree: "1", finger: "1", role: "root" },
-        { str: 1, fret: 8, note: "G", degree: "b3", finger: "4", role: "third" },
-        { str: 1, fret: 12, note: "B", degree: "5", finger: "1", role: "fifth" },
+            { str: 1, fret: 0, note: "B", degree: "5", finger: "0", role: "fifth" },
+            { str: 1, fret: 3, note: "D", degree: "b7", finger: "3", role: "seventh" },
+            { str: 1, fret: 5, note: "E", degree: "1", finger: "1", role: "root" },
+            { str: 1, fret: 8, note: "G", degree: "b3", finger: "4", role: "third" },
+            { str: 1, fret: 12, note: "B", degree: "5", finger: "1", role: "fifth" },
 
-        { str: 2, fret: 0, note: "G", degree: "b3", finger: "0", role: "third" },
-        { str: 2, fret: 2, note: "A", degree: "4", finger: "2", role: "ext" },
-        { str: 2, fret: 4, note: "B", degree: "5", finger: "3", role: "fifth" },
-        { str: 2, fret: 7, note: "D", degree: "b7", finger: "1", role: "seventh" },
-        { str: 2, fret: 9, note: "E", degree: "1", finger: "3", role: "root" },
-        { str: 2, fret: 12, note: "G", degree: "b3", finger: "1", role: "third" },
+            { str: 2, fret: 0, note: "G", degree: "b3", finger: "0", role: "third" },
+            { str: 2, fret: 2, note: "A", degree: "4", finger: "2", role: "ext" },
+            { str: 2, fret: 4, note: "B", degree: "5", finger: "3", role: "fifth" },
+            { str: 2, fret: 7, note: "D", degree: "b7", finger: "1", role: "seventh" },
+            { str: 2, fret: 9, note: "E", degree: "1", finger: "3", role: "root" },
+            { str: 2, fret: 12, note: "G", degree: "b3", finger: "1", role: "third" },
 
-        { str: 3, fret: 0, note: "D", degree: "b7", finger: "0", role: "seventh" },
-        { str: 3, fret: 2, note: "E", degree: "1", finger: "2", role: "root" },
-        { str: 3, fret: 5, note: "G", degree: "b3", finger: "1", role: "third" },
-        { str: 3, fret: 7, note: "A", degree: "4", finger: "3", role: "ext" },
-        { str: 3, fret: 9, note: "B", degree: "5", finger: "4", role: "fifth" },
+            { str: 3, fret: 0, note: "D", degree: "b7", finger: "0", role: "seventh" },
+            { str: 3, fret: 2, note: "E", degree: "1", finger: "2", role: "root" },
+            { str: 3, fret: 5, note: "G", degree: "b3", finger: "1", role: "third" },
+            { str: 3, fret: 7, note: "A", degree: "4", finger: "3", role: "ext" },
+            { str: 3, fret: 9, note: "B", degree: "5", finger: "4", role: "fifth" },
 
-        { str: 4, fret: 0, note: "A", degree: "4", finger: "0", role: "ext" },
-        { str: 4, fret: 2, note: "B", degree: "5", finger: "2", role: "fifth" },
-        { str: 4, fret: 5, note: "D", degree: "b7", finger: "1", role: "seventh" },
-        { str: 4, fret: 7, note: "E", degree: "1", finger: "3", role: "root" },
-        { str: 4, fret: 10, note: "G", degree: "b3", finger: "4", role: "third" },
+            { str: 4, fret: 0, note: "A", degree: "4", finger: "0", role: "ext" },
+            { str: 4, fret: 2, note: "B", degree: "5", finger: "2", role: "fifth" },
+            { str: 4, fret: 5, note: "D", degree: "b7", finger: "1", role: "seventh" },
+            { str: 4, fret: 7, note: "E", degree: "1", finger: "3", role: "root" },
+            { str: 4, fret: 10, note: "G", degree: "b3", finger: "4", role: "third" },
 
-        { str: 5, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
-        { str: 5, fret: 3, note: "G", degree: "b3", finger: "3", role: "third" },
-        { str: 5, fret: 5, note: "A", degree: "4", finger: "1", role: "ext" },
-        { str: 5, fret: 7, note: "B", degree: "5", finger: "2", role: "fifth" },
-        { str: 5, fret: 10, note: "D", degree: "b7", finger: "4", role: "seventh" },
-        { str: 5, fret: 12, note: "E", degree: "1", finger: "1", role: "root" }
-      ]
+            { str: 5, fret: 0, note: "E", degree: "1", finger: "0", role: "root" },
+            { str: 5, fret: 3, note: "G", degree: "b3", finger: "3", role: "third" },
+            { str: 5, fret: 5, note: "A", degree: "4", finger: "1", role: "ext" },
+            { str: 5, fret: 7, note: "B", degree: "5", finger: "2", role: "fifth" },
+            { str: 5, fret: 10, note: "D", degree: "b7", finger: "4", role: "seventh" },
+            { str: 5, fret: 12, note: "E", degree: "1", finger: "1", role: "root" }
+          ],
+          muted: []
+        }
+      }
     }
   };
 
@@ -952,29 +1309,36 @@ function renderizarFerramentaInterativa(ativ) {
   }
 
   let lhPresetKey = 'Am7';
+  let lhShapeKey = 'pos1';
   let lhViewMode = 'degrees'; // 'degrees', 'notes', 'fingers'
-  let lhTriadOnly = false;
 
   function renderizarLaboratorioHarmonicoHTML() {
     return `
       <div class="lh-console">
         <div>
-          <label style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:6px;">Acorde / Estrutura Escalar</label>
+          <label style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:6px;">Acorde / Harmonia</label>
           <select id="lh-select-chord" class="lh-select">
-            <option value="Am7" ${lhPresetKey === 'Am7' ? 'selected' : ''}>Am7 • Lá Menor com 7ª (Tétrade & Inversões)</option>
-            <option value="Cmaj" ${lhPresetKey === 'Cmaj' ? 'selected' : ''}>C Maior (Jônio) • Escala Completa & Tríades</option>
-            <option value="Dm79" ${lhPresetKey === 'Dm79' ? 'selected' : ''}>Dm7(9) • Ré Menor com 9ª (Modo Dórico)</option>
+            <option value="Am7" ${lhPresetKey === 'Am7' ? 'selected' : ''}>Am7 • Lá Menor com 7ª</option>
+            <option value="Cmaj" ${lhPresetKey === 'Cmaj' ? 'selected' : ''}>C7M • Dó Maior com 7ª Maior</option>
+            <option value="Dm79" ${lhPresetKey === 'Dm79' ? 'selected' : ''}>Dm7(9) • Ré Menor com 9ª (Bossa Nova)</option>
             <option value="G7" ${lhPresetKey === 'G7' ? 'selected' : ''}>G7 • Sol Dominante (Mixolídio)</option>
-            <option value="EmPent" ${lhPresetKey === 'EmPent' ? 'selected' : ''}>Em Pentatônica • Menor Blues</option>
+            <option value="EmPent" ${lhPresetKey === 'EmPent' ? 'selected' : ''}>Em7 • Mi Menor com 7ª</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:6px;">Posição / Formato no Braço</label>
+          <select id="lh-select-shape" class="lh-select">
+            <!-- Preenchido dinamicamente -->
           </select>
         </div>
 
         <div>
           <label style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:6px;">Modo de Visualização</label>
           <div class="lh-view-toggle">
-            <button id="lh-mode-degrees" class="lh-toggle-btn ${lhViewMode === 'degrees' ? 'ativo' : ''}" type="button">Graus (1, b3)</button>
-            <button id="lh-mode-notes" class="lh-toggle-btn ${lhViewMode === 'notes' ? 'ativo' : ''}" type="button">Notas (A, C)</button>
-            <button id="lh-mode-fingers" class="lh-toggle-btn ${lhViewMode === 'fingers' ? 'ativo' : ''}" type="button">Dedos (1, 2)</button>
+            <button id="lh-mode-degrees" class="lh-toggle-btn ${lhViewMode === 'degrees' ? 'ativo' : ''}" type="button">Graus</button>
+            <button id="lh-mode-notes" class="lh-toggle-btn ${lhViewMode === 'notes' ? 'ativo' : ''}" type="button">Notas</button>
+            <button id="lh-mode-fingers" class="lh-toggle-btn ${lhViewMode === 'fingers' ? 'ativo' : ''}" type="button">Dedos</button>
           </div>
         </div>
 
@@ -982,7 +1346,7 @@ function renderizarFerramentaInterativa(ativ) {
           <label style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:6px;">Execução com Som Real</label>
           <div style="display:flex; gap:8px;">
             <button id="lh-btn-arpejo" class="btn btn-primary btn-sm" type="button" style="flex:1;">▶ Tocar Arpejo</button>
-            <button id="lh-btn-strum" class="btn btn-secondary btn-sm" type="button" style="flex:1;">🎵 Dedilhado</button>
+            <button id="lh-btn-strum" class="btn btn-secondary btn-sm" type="button" style="flex:1;">🎵 Tocar Acorde</button>
           </div>
         </div>
       </div>
@@ -1029,7 +1393,7 @@ function renderizarFerramentaInterativa(ativ) {
             <div class="lh-fret-wire"></div>
             <div class="lh-fret-wire double"></div>
 
-            <!-- Strings -->
+            <!-- Strings (0: 1ª Mi aguda no topo, 5: 6ª Mi grave na base) -->
             <div class="lh-string-line" style="top:12%; height:1.5px; opacity:0.85;"></div>
             <div class="lh-string-line" style="top:27%; height:2.0px; opacity:0.9;"></div>
             <div class="lh-string-line" style="top:42%; height:2.6px; opacity:0.9;"></div>
@@ -1049,12 +1413,34 @@ function renderizarFerramentaInterativa(ativ) {
 
   function inicializarLaboratorioHarmonico() {
     const chordSelect = $('lh-select-chord');
-    if (!chordSelect) return;
+    const shapeSelect = $('lh-select-shape');
+    if (!chordSelect || !shapeSelect) return;
+
+    function atualizarOpcoesShape() {
+      const chord = LH_PRESETS[lhPresetKey];
+      if (!chord) return;
+      const shapes = chord.shapes;
+      const keys = Object.keys(shapes);
+      if (!shapes[lhShapeKey]) lhShapeKey = keys[0];
+
+      shapeSelect.innerHTML = keys.map(k => `
+        <option value="${k}" ${lhShapeKey === k ? 'selected' : ''}>${escapeHTML(shapes[k].name)}</option>
+      `).join('');
+    }
 
     chordSelect.onchange = () => {
       lhPresetKey = chordSelect.value;
+      lhShapeKey = 'pos1';
+      atualizarOpcoesShape();
       desenharNotasLaboratorio();
     };
+
+    shapeSelect.onchange = () => {
+      lhShapeKey = shapeSelect.value;
+      desenharNotasLaboratorio();
+    };
+
+    atualizarOpcoesShape();
 
     $('lh-mode-degrees').onclick = () => {
       lhViewMode = 'degrees';
@@ -1072,8 +1458,8 @@ function renderizarFerramentaInterativa(ativ) {
       desenharNotasLaboratorio();
     };
 
-    $('lh-btn-arpejo').onclick = () => tocarArpejoLaboratorio(lhPresetKey);
-    $('lh-btn-strum').onclick = () => tocarDedilhadoLaboratorio(lhPresetKey);
+    $('lh-btn-arpejo').onclick = () => tocarArpejoLaboratorio(lhPresetKey, lhShapeKey);
+    $('lh-btn-strum').onclick = () => tocarDedilhadoLaboratorio(lhPresetKey, lhShapeKey);
 
     desenharNotasLaboratorio();
   }
@@ -1090,12 +1476,29 @@ function renderizarFerramentaInterativa(ativ) {
     const infoSec = $('lh-info-section');
     if (!overlay || !infoSec) return;
 
-    const p = LH_PRESETS[lhPresetKey];
-    if (!p) return;
+    const chord = LH_PRESETS[lhPresetKey];
+    if (!chord) return;
+    const shape = chord.shapes[lhShapeKey] || chord.shapes.pos1 || Object.values(chord.shapes)[0];
+    if (!shape) return;
 
     const stringYPercents = [12, 27, 42, 57, 72, 87];
 
-    overlay.innerHTML = p.notes.map(n => {
+    let html = '';
+
+    // Renderiza indicadores de corda abafada ('✕') no nut
+    if (shape.muted && shape.muted.length > 0) {
+      shape.muted.forEach(strIdx => {
+        const topStr = `${stringYPercents[strIdx]}%`;
+        html += `
+          <div class="lh-note-pill muted" style="left:25px; top:${topStr};" title="${LH_STRING_NAMES[strIdx]} • Corda Abafada / Não Tocar (X)">
+            ✕
+          </div>
+        `;
+      });
+    }
+
+    // Renderiza notas ativas no braço
+    shape.notes.forEach(n => {
       const leftStr = n.fret === 0
         ? '25px'
         : `calc(50px + (100% - 50px) / 12 * ${n.fret - 0.5})`;
@@ -1103,17 +1506,25 @@ function renderizarFerramentaInterativa(ativ) {
 
       let label = n.degree;
       if (lhViewMode === 'notes') label = n.note;
-      else if (lhViewMode === 'fingers') label = n.finger === '0' ? 'O' : n.finger;
+      else if (lhViewMode === 'fingers') {
+        if (n.fret === 0) label = '○';
+        else label = n.finger;
+      }
 
-      return `
-        <div class="lh-note-pill ${n.role}" style="left:${leftStr}; top:${topStr};" data-str="${n.str}" data-fret="${n.fret}" title="Corda ${6 - n.str} • Casa ${n.fret} • Nota ${n.note} (${n.degree})">
+      const extraClass = n.fret === 0 ? ' open' : '';
+      const fingerTxt = n.fret === 0 ? 'Corda Solta' : `Dedo ${n.finger}`;
+
+      html += `
+        <div class="lh-note-pill ${n.role}${extraClass}" style="left:${leftStr}; top:${topStr};" data-str="${n.str}" data-fret="${n.fret}" title="${LH_STRING_NAMES[n.str]} • Casa ${n.fret} • Nota ${n.note} (${n.degree}) • ${fingerTxt}">
           ${label}
         </div>
       `;
-    }).join('');
+    });
 
-    // Click on notes to play audio
-    overlay.querySelectorAll('.lh-note-pill').forEach(el => {
+    overlay.innerHTML = html;
+
+    // Clique em qualquer nota no braço para ouvir seu timbre isolado
+    overlay.querySelectorAll('.lh-note-pill:not(.muted)').forEach(el => {
       el.onclick = () => {
         const s = Number(el.dataset.str);
         const f = Number(el.dataset.fret);
@@ -1121,35 +1532,49 @@ function renderizarFerramentaInterativa(ativ) {
       };
     });
 
+    // Seção informativa do shape e fórmula intervalar
     infoSec.innerHTML = `
       <div class="bloco-card">
-        <div style="font-size:0.75rem; color:var(--secondary); text-transform:uppercase; font-weight:700;">${p.voicingTag}</div>
-        <h4 style="margin:4px 0 8px 0;">${escapeHTML(p.name)}</h4>
-        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">${escapeHTML(p.desc)}</p>
-        <div style="margin-top:12px; font-size:0.8rem; color:var(--text-dim);">
-          <strong>Mapeamento CAGED:</strong> <span style="color:var(--text-main); font-weight:600;">${escapeHTML(p.caged)}</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <div style="font-size:0.75rem; color:var(--secondary); text-transform:uppercase; font-weight:700;">${escapeHTML(shape.tag)}</div>
+          <span style="font-size:0.8rem; background:var(--bg-surface-subtle); padding:2px 8px; border-radius:12px; font-family:var(--font-mono); color:var(--accent); border:1px solid var(--border-subtle);">
+            ${escapeHTML(shape.tab)}
+          </span>
+        </div>
+        <h4 style="margin:6px 0 8px 0;">${escapeHTML(shape.name)}</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5;">${escapeHTML(shape.desc)}</p>
+        <div style="margin-top:12px; font-size:0.82rem; color:var(--text-dim); display:flex; gap:16px; flex-wrap:wrap;">
+          <div><strong>Sistema CAGED:</strong> <span style="color:var(--text-main); font-weight:600;">${escapeHTML(shape.caged)}</span></div>
+          <div><strong>Harmonia:</strong> <span style="color:var(--text-main); font-weight:600;">${escapeHTML(chord.name)}</span></div>
         </div>
       </div>
 
       <div class="bloco-card">
         <h5 style="margin-bottom:12px; font-size:0.9rem;">Fórmula Intervalar do Acorde</h5>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(60px, 1fr)); gap:8px;">
-          ${p.formula.map(f => `
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(64px, 1fr)); gap:8px;">
+          ${chord.formula.map(f => `
             <div style="background:var(--bg-surface-subtle); padding:8px; border-radius:var(--radius-sm); text-align:center;">
               <span style="font-size:0.72rem; color:${f.color}; font-weight:600; display:block;">${escapeHTML(f.degree)}</span>
               <strong style="font-size:1.1rem; color:var(--text-main); font-family:var(--font-mono);">${escapeHTML(f.note)}</strong>
             </div>
           `).join('')}
         </div>
+        <div style="margin-top:12px; font-size:0.8rem; color:var(--text-muted); line-height:1.4;">
+          💡 <em>Toque no arpejo ou acorde acima para ouvir o voicing montado, ou clique em qualquer casa para soar notas individuais.</em>
+        </div>
       </div>
     `;
   }
 
-  function tocarArpejoLaboratorio(presetKey) {
+  function tocarArpejoLaboratorio(presetKey, shapeKey) {
     if (!AudioMotor) return;
-    const p = LH_PRESETS[presetKey];
-    if (!p) return;
-    const sortedNotes = [...p.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
+    const chord = LH_PRESETS[presetKey];
+    if (!chord) return;
+    const shape = chord.shapes[shapeKey] || chord.shapes.pos1 || Object.values(chord.shapes)[0];
+    if (!shape) return;
+
+    // Ordena do grave (6ª corda = str 5) para o agudo (1ª corda = str 0)
+    const sortedNotes = [...shape.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
     const picked = [];
     const visited = new Set();
     for (const n of sortedNotes) {
@@ -1160,16 +1585,20 @@ function renderizarFerramentaInterativa(ativ) {
     }
     picked.forEach((n, idx) => {
       setTimeout(() => {
-        AudioMotor.tocarFrequencia(lhCalcularFreq(n.str, n.fret), 0.8, 0, 'triangle');
-      }, idx * 160);
+        AudioMotor.tocarFrequencia(lhCalcularFreq(n.str, n.fret), 0.85, 0, 'triangle');
+      }, idx * 180);
     });
   }
 
-  function tocarDedilhadoLaboratorio(presetKey) {
+  function tocarDedilhadoLaboratorio(presetKey, shapeKey) {
     if (!AudioMotor) return;
-    const p = LH_PRESETS[presetKey];
-    if (!p) return;
-    const sortedNotes = [...p.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
+    const chord = LH_PRESETS[presetKey];
+    if (!chord) return;
+    const shape = chord.shapes[shapeKey] || chord.shapes.pos1 || Object.values(chord.shapes)[0];
+    if (!shape) return;
+
+    // Toca o acorde em dedilhado rápido (strum acústico)
+    const sortedNotes = [...shape.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
     const picked = [];
     const visited = new Set();
     for (const n of sortedNotes) {
@@ -1181,7 +1610,7 @@ function renderizarFerramentaInterativa(ativ) {
     picked.forEach((n, idx) => {
       setTimeout(() => {
         AudioMotor.tocarFrequencia(lhCalcularFreq(n.str, n.fret), 1.0, 0, 'triangle');
-      }, idx * 45);
+      }, idx * 35);
     });
   }
 
