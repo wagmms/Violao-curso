@@ -1,9 +1,17 @@
 {
-  "data": "2026-09-14T04:20:02.835Z",
+  "data": "2026-09-14T05:22:42.465Z",
   "tipo": "JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte",
-  "total": 31,
-  "aprovados": 31,
+  "total": 33,
+  "aprovados": 33,
   "resultados": [
+    {
+      "nome": "Worker bloqueado inicia timer de fallback",
+      "ok": true
+    },
+    {
+      "nome": "Worker emite onerror encerra worker e inicia timer de fallback",
+      "ok": true
+    },
     {
       "nome": "11 atividades: selecionar, serializar e restaurar",
       "ok": true
