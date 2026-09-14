@@ -756,7 +756,7 @@ window.PILOTO_ATIVIDADES = [
 
   {
     "id": "ativ-7",
-    "statusOperacional": "em_revisao",
+    "statusOperacional": "rascunho",
     "slug": "bossa-nova-basica",
     "titulo": "Bossa Nova Básica: Baixo Antecipado e Acordes em Bloco",
     "area": "Rítmica e Coordenação",
@@ -772,13 +772,7 @@ window.PILOTO_ATIVIDADES = [
     "metaObservavel": "Tocar 8 compassos do padrão de Bossa Nova a 70 BPM em 2/4, cravando a antecipação do baixo.",
     "prerequisito": "Domínio de acordes com sétima (ex: C7M, Dm7) e independência básica do polegar.",
     "explicacao": "Na Bossa Nova, o ritmo é construído pela interação entre um baixo constante em semínimas (ou colcheias, no 2/4) e acordes tocados de forma sincopada pelos dedos indicador, médio e anelar (i, m, a). A característica principal é o baixo antecipado ou a síncope nos acordes, criando o balanço típico.",
-    "fontes": [
-      {
-        "aulaId": "aula-mod-1-2",
-        "observacao": "Referência teórica",
-        "autoria": "Método Tríade (acervo)"
-      }
-    ],
+    "fontes": [],
     "exercicio": {
       "bpmSugerido": 70,
       "bpmMinimo": 50,
@@ -826,19 +820,12 @@ window.PILOTO_ATIVIDADES = [
     "aplicacaoMusical": "Acompanhamento padrão para repertório de Bossa Nova e MPB.",
     "criterioSaida": "Tocar 8 compassos a 70 BPM de forma relaxada, sem perder a antecipação.",
     "recuperacao": "Se embolar o ritmo, toque apenas o baixo primeiro, depois cante os acordes por cima, antes de tentar tudo junto.",
-    "sessao40min": [
-      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e afinação", "instrucao": "Verifique a afinação e postura." },
-      { "fase": "Recuperar", "minutos": 5, "objetivo": "Revisão mecânica", "instrucao": "Revisite o padrão base da atividade." },
-      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Compreensão rítmica", "instrucao": "Ouça o metrônomo e visualize a execução." },
-      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Execução progressiva", "instrucao": "Pratique os três níveis progressivamente." },
-      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Contexto musical", "instrucao": "Aplique a técnica na levada correspondente." },
-      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote as dificuldades e o BPM alcançado." }
-    ],
+    "sessao40min": [],
     "ferramentaSugerida": "metronomo"
   },
   {
     "id": "ativ-8",
-    "statusOperacional": "em_revisao",
+    "statusOperacional": "rascunho",
     "slug": "independencia-ritmica-samba",
     "titulo": "Independência Rítmica: Baixo em 2/4 com Melodia Sincopada",
     "area": "Rítmica e Coordenação",
@@ -853,13 +840,7 @@ window.PILOTO_ATIVIDADES = [
     "metaObservavel": "Tocar uma variação rítmica onde o baixo marca o tempo e a melodia ocorre apenas nas colcheias fracas.",
     "prerequisito": "Atividade de Bossa Nova básica consolidada.",
     "explicacao": "No Samba e no Choro, a independência entre o polegar e os outros dedos precisa ser ainda maior. O baixo age como o surdo marcando o 1 e 2 (frequentemente com acento no 2), enquanto a melodia brinca pelas semicolcheias e síncopes.",
-    "fontes": [
-      {
-        "aulaId": "aula-mod-1-2",
-        "observacao": "Referência teórica",
-        "autoria": "Método Tríade (acervo)"
-      }
-    ],
+    "fontes": [],
     "exercicio": {
       "bpmSugerido": 65,
       "bpmMinimo": 50,
@@ -907,19 +888,12 @@ window.PILOTO_ATIVIDADES = [
     "aplicacaoMusical": "Base para violão solo em estilos brasileiros.",
     "criterioSaida": "Executar o alvo a 65 BPM com independência cristalina.",
     "recuperacao": "Se falhar, volte à atividade de Bossa Nova preparatória.",
-    "sessao40min": [
-      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e afinação", "instrucao": "Verifique a afinação e postura." },
-      { "fase": "Recuperar", "minutos": 5, "objetivo": "Revisão mecânica", "instrucao": "Revisite o padrão base da atividade." },
-      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Compreensão rítmica", "instrucao": "Ouça o metrônomo e visualize a execução." },
-      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Execução progressiva", "instrucao": "Pratique os três níveis progressivamente." },
-      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Contexto musical", "instrucao": "Aplique a técnica na levada correspondente." },
-      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote as dificuldades e o BPM alcançado." }
-    ],
+    "sessao40min": [],
     "ferramentaSugerida": "metronomo"
   },
   {
     "id": "ativ-9",
-    "statusOperacional": "em_revisao",
+    "statusOperacional": "rascunho",
     "slug": "melodia-acompanhada-2-vozes",
     "titulo": "Melodia Acompanhada: Composição Original em 2 Vozes",
     "area": "Violão Solo",
@@ -935,13 +909,7 @@ window.PILOTO_ATIVIDADES = [
     "metaObservavel": "Tocar a peça didática original de 8 compassos com equilíbrio dinâmico e legato.",
     "prerequisito": "Atividade 6 (Melodia e Acompanhamento Integrados).",
     "explicacao": "No violão clássico e fingerstyle, a ilusão de múltiplas guitarras é criada controlando a intensidade (dinâmica) de cada dedo. A melodia (nas primas) deve cantar mais alto que o arpejo de acompanhamento.",
-    "fontes": [
-      {
-        "aulaId": "aula-mod-1-2",
-        "observacao": "Referência teórica",
-        "autoria": "Método Tríade (acervo)"
-      }
-    ],
+    "fontes": [],
     "exercicio": {
       "bpmSugerido": 80,
       "bpmMinimo": 60,
@@ -989,19 +957,12 @@ window.PILOTO_ATIVIDADES = [
     "aplicacaoMusical": "Desenvolvimento de técnica para peças instrumentais.",
     "criterioSaida": "Executar com distinção clara de volumes entre a melodia e o acompanhamento.",
     "recuperacao": "Pratique apenas a mão direita nas cordas soltas focando na diferença de força.",
-    "sessao40min": [
-      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e afinação", "instrucao": "Verifique a afinação e postura." },
-      { "fase": "Recuperar", "minutos": 5, "objetivo": "Revisão mecânica", "instrucao": "Revisite o padrão base da atividade." },
-      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Compreensão rítmica", "instrucao": "Ouça o metrônomo e visualize a execução." },
-      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Execução progressiva", "instrucao": "Pratique os três níveis progressivamente." },
-      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Contexto musical", "instrucao": "Aplique a técnica na levada correspondente." },
-      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote as dificuldades e o BPM alcançado." }
-    ],
+    "sessao40min": [],
     "ferramentaSugerida": "gravador"
   },
   {
     "id": "ativ-10",
-    "statusOperacional": "em_revisao",
+    "statusOperacional": "rascunho",
     "slug": "baixo-caminhante-melodia-fixa",
     "titulo": "Baixo Caminhante com Melodia Fixa",
     "area": "Harmonia e Violão Solo",
@@ -1016,13 +977,7 @@ window.PILOTO_ATIVIDADES = [
     "metaObservavel": "Tocar uma linha de walking bass (4 semínimas) sob um acorde fixo ou melodia sustentada no tempo 1.",
     "prerequisito": "Fluência em escalas no registro grave (cordas 6, 5 e 4).",
     "explicacao": "O \"Walking Bass\" é uma técnica oriunda do Jazz e Blues onde o baixo \"caminha\" em semínimas (1-2-3-4), desenhando a harmonia e o ritmo. O desafio mecânico no violão é manter os dedos que tocam os acordes agudos travados enquanto os outros dedos da mão esquerda realizam a caminhada do baixo.",
-    "fontes": [
-      {
-        "aulaId": "aula-mod-1-2",
-        "observacao": "Referência teórica",
-        "autoria": "Método Tríade (acervo)"
-      }
-    ],
+    "fontes": [],
     "exercicio": {
       "bpmSugerido": 70,
       "bpmMinimo": 60,
@@ -1070,19 +1025,12 @@ window.PILOTO_ATIVIDADES = [
     "aplicacaoMusical": "Base para Blues, Jazz, e Bossa Nova complexa.",
     "criterioSaida": "Fluidez e continuidade ininterrupta do baixo a 70 BPM.",
     "recuperacao": "Isole a linha do baixo até poder tocá-la de olhos fechados.",
-    "sessao40min": [
-      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e afinação", "instrucao": "Verifique a afinação e postura." },
-      { "fase": "Recuperar", "minutos": 5, "objetivo": "Revisão mecânica", "instrucao": "Revisite o padrão base da atividade." },
-      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Compreensão rítmica", "instrucao": "Ouça o metrônomo e visualize a execução." },
-      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Execução progressiva", "instrucao": "Pratique os três níveis progressivamente." },
-      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Contexto musical", "instrucao": "Aplique a técnica na levada correspondente." },
-      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote as dificuldades e o BPM alcançado." }
-    ],
+    "sessao40min": [],
     "ferramentaSugerida": "metronomo"
   },
   {
     "id": "ativ-11",
-    "statusOperacional": "em_revisao",
+    "statusOperacional": "rascunho",
     "slug": "voice-leading-basico",
     "titulo": "Voice Leading Básico: Condução de Vozes entre I-IV-V",
     "area": "Harmonia Avançada",
@@ -1098,13 +1046,7 @@ window.PILOTO_ATIVIDADES = [
     "metaObservavel": "Tocar uma cadência I-IV-V-I nas três primeiras cordas movendo os dedos no máximo um tom em cada troca.",
     "prerequisito": "Atividade 5 (Montagem de Tríades) consolidada.",
     "explicacao": "\"Voice Leading\" (condução de vozes) é o princípio de encadear acordes com o mínimo de movimento possível. Em vez de saltar pelo braço inteiro, usamos inversões das tríades para que as notas comuns sejam mantidas e as outras se movam por grau conjunto (semitom ou tom), gerando uma harmonia densa, fluida e orquestral.",
-    "fontes": [
-      {
-        "aulaId": "aula-mod-1-2",
-        "observacao": "Referência teórica",
-        "autoria": "Método Tríade (acervo)"
-      }
-    ],
+    "fontes": [],
     "exercicio": {
       "bpmSugerido": 60,
       "bpmMinimo": 50,
@@ -1152,14 +1094,7 @@ window.PILOTO_ATIVIDADES = [
     "aplicacaoMusical": "Arranjos elaborados, Chord Melody e harmonia para violão.",
     "criterioSaida": "Movimentação fluida sem ruído excessivo dos dedos deslizando.",
     "recuperacao": "Pratique a transição de um par de acordes (ex: C para F) repetidamente sem a mão direita.",
-    "sessao40min": [
-      { "fase": "Preparar", "minutos": 3, "objetivo": "Postura e afinação", "instrucao": "Verifique a afinação e postura." },
-      { "fase": "Recuperar", "minutos": 5, "objetivo": "Revisão mecânica", "instrucao": "Revisite o padrão base da atividade." },
-      { "fase": "Explicar e Ouvir", "minutos": 7, "objetivo": "Compreensão rítmica", "instrucao": "Ouça o metrônomo e visualize a execução." },
-      { "fase": "Prática Dirigida", "minutos": 15, "objetivo": "Execução progressiva", "instrucao": "Pratique os três níveis progressivamente." },
-      { "fase": "Aplicação Musical", "minutos": 7, "objetivo": "Contexto musical", "instrucao": "Aplique a técnica na levada correspondente." },
-      { "fase": "Registro", "minutos": 3, "objetivo": "Autoavaliação", "instrucao": "Anote as dificuldades e o BPM alcançado." }
-    ],
+    "sessao40min": [],
     "ferramentaSugerida": "metronomo"
   }
 
