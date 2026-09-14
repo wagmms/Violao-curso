@@ -1,0 +1,1145 @@
+/* ==========================================================================
+   Método Tríade v2 — Estilos do Ambiente de Aprendizagem de Violão
+   Design sóbrio, foco pedagógico, responsivo (375px - 1366px) e impressão limpa
+   ========================================================================== */
+
+:root {
+  --bg-app: #f6f8fa;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f1f4f8;
+  --bg-surface-inset: #e8edf3;
+  --border-subtle: #d0d7de;
+  --border-strong: #8c959f;
+  --text-main: #1f2328;
+  --text-muted: #59636e;
+  --text-dim: #6e7781;
+  --accent: #0969da;
+  --accent-hover: #0854ad;
+  --accent-light: #ddf4ff;
+  --accent-border: #54aeff;
+  --success: #1a7f37;
+  --success-bg: #dafbe1;
+  --warning: #9a6700;
+  --warning-bg: #fff8c5;
+  --danger: #cf222e;
+  --danger-bg: #ffebe9;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(31,35,40,0.08);
+  --shadow-md: 0 3px 6px rgba(31,35,40,0.12);
+  --shadow-lg: 0 8px 24px rgba(31,35,40,0.14);
+}
+
+/* Reset básico e box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-main);
+  background-color: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Estrutura de Layout do App: Sidebar no Desktop, Bottom Nav no Mobile */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* overflow-x: hidden removido — P1-14: não ocultar scroll global; tablatura usa overflow-x: auto próprio */
+}
+
+/* Sidebar Desktop */
+.app-sidebar {
+  width: 250px;
+  background-color: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 24px 16px;
+  z-index: 20;
+}
+
+.brand-header {
+  margin-bottom: 28px;
+}
+
+.brand-header h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.brand-header p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.nav-btn:hover {
+  background-color: var(--bg-surface-subtle);
+  color: var(--text-main);
+}
+
+.nav-btn.ativo {
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border-color: var(--accent-border);
+  font-weight: 600;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-status-box {
+  margin-top: auto;
+  padding: 12px;
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.sidebar-status-box strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+/* Área Principal de Conteúdo */
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px 36px 60px;
+}
+
+/* Barra Superior de Sessão Rápida */
+.top-session-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.session-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.session-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border-radius: 20px;
+}
+
+.timer-display {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.session-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.session-progress-container {
+  flex-grow: 1;
+  height: 8px;
+  background-color: var(--bg-surface-inset);
+  border-radius: 4px;
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.session-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--accent);
+  transition: width 1s linear;
+}
+
+/* Botões Genéricos */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+.btn-secondary:hover {
+  background-color: var(--bg-surface-subtle);
+  border-color: var(--border-strong);
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: #ffffff;
+}
+.btn-success:hover {
+  background-color: #146c2e;
+}
+
+.btn-ghost {
+  background: none;
+  color: var(--text-muted);
+}
+.btn-ghost:hover {
+  background-color: var(--bg-surface-subtle);
+  color: var(--text-main);
+}
+
+/* Painéis de Telas */
+.view-panel {
+  display: none;
+  animation: fadeIn 0.18s ease;
+}
+
+.view-panel.view-ativa {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cabeçalho da Tela */
+.view-header {
+  margin-bottom: 24px;
+}
+
+.view-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.view-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* --- TELA: HOJE --- */
+.hoje-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f8fc 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-recommendation-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.hoje-hero h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hoje-hero .justificativa {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  max-width: 720px;
+}
+
+.hero-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 22px;
+}
+
+.hero-meta-item strong {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.hero-meta-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.hoje-alternativas {
+  margin-top: 24px;
+}
+
+.hoje-alternativas h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.alternativas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card-alternativa {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.card-alternativa:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-alternativa h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-alternativa p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --- TELA: APRENDER (Sessão Guiada) --- */
+.aprender-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.aprender-painel-esquerda, .aprender-painel-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloco-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.bloco-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Fita de Passos dos 40 Minutos */
+.stepper-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.step-item:hover {
+  background-color: var(--bg-surface-inset);
+}
+
+.step-item.step-ativo {
+  background-color: var(--accent-light);
+  border-color: var(--accent-border);
+}
+
+.step-item.step-concluido {
+  opacity: 0.7;
+}
+
+.step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-ativo .step-badge {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.step-detalhes {
+  flex-grow: 1;
+  min-width: 0; /* P1-14: evita transbordamento da viewport a 375px */
+  overflow: hidden;
+}
+
+.step-titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* P1-14: título e minutos quebram a linha em viewport estreita */
+  gap: 4px;
+}
+
+.step-minutos {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.step-instrucao {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Visualizador de Tablaturas e Exercício */
+.exercicio-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.niveis-switcher {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  background-color: var(--bg-surface-subtle);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.nivel-tab {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.nivel-tab:hover {
+  color: var(--text-main);
+}
+
+.nivel-tab.nivel-ativo {
+  background-color: var(--bg-surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.tablatura-container {
+  background-color: #1a1e23;
+  color: #e5e7eb;
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  overflow-x: auto;
+  white-space: pre;
+  margin-bottom: 0;
+  border: 1px solid #374151;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.instrucoes-rodape {
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-top: none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  white-space: pre-wrap;
+}
+
+.dica-execucao {
+  background-color: var(--warning-bg);
+  border-left: 4px solid var(--warning);
+  padding: 10px 14px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.85rem;
+  color: #4d3800;
+}
+
+/* Metrônomo Integrado */
+.metronomo-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px;
+}
+
+.metronomo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.metronomo-header h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.metronomo-bpm-readout {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.metronomo-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bpm-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bpm-slider {
+  flex-grow: 1;
+  accent-color: var(--accent);
+}
+
+.pulsos-visual-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.pulso-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--border-subtle);
+  transition: all 0.08s ease;
+}
+
+.pulso-dot.pulso-ativo {
+  background-color: var(--accent);
+  transform: scale(1.35);
+}
+
+.pulso-dot.pulso-acento {
+  background-color: #d9383a;
+  transform: scale(1.45);
+}
+
+/* Treinador de Ouvido (Atividade 4) */
+.ear-trainer-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.ear-trainer-prompts {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.ear-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ear-feedback-box {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  display: none;
+}
+
+.ear-feedback-box.feedback-correto {
+  display: block;
+  background-color: var(--success-bg);
+  border: 1px solid #7ee787;
+  color: #0e4429;
+}
+
+.ear-feedback-box.feedback-incorreto {
+  display: block;
+  background-color: var(--danger-bg);
+  border: 1px solid #ff8182;
+  color: #67060c;
+}
+
+/* --- TELA: PRATICAR (Central de Exercícios) --- */
+.praticar-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card-atividade {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.card-atividade:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+}
+
+.card-atividade-topo {
+  margin-bottom: 16px;
+}
+
+.card-area-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.card-atividade h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 4px 0 8px;
+}
+
+.card-atividade p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.tag-pill {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  background-color: var(--bg-surface-subtle);
+  border-radius: 12px;
+  color: var(--text-dim);
+}
+
+/* --- TELA: PROGRESSO --- */
+.progresso-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.caderno-dificuldades-card, .revisao-espacada-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.dificuldade-item, .revisao-item {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dificuldade-item:last-child, .revisao-item:last-child {
+  border-bottom: none;
+}
+
+.dificuldade-texto strong {
+  font-size: 0.95rem;
+  display: block;
+}
+
+.dificuldade-texto p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.revisao-data {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+}
+
+/* --- TELA: BIBLIOTECA (Catálogo Geral) --- */
+.biblioteca-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.search-field {
+  flex-grow: 1;
+  min-width: 220px;
+}
+
+.search-field input, .select-field select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  font-family: inherit;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.biblioteca-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modulo-accordion {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.modulo-accordion summary {
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--bg-surface-subtle);
+  user-select: none;
+}
+
+.modulo-aulas-container {
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aula-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-subtle);
+}
+
+.aula-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.aula-item-titulo {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.aula-item-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.aula-item-links a {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+.aula-item-links a:hover {
+  text-decoration: underline;
+}
+
+/* Modais e Dialogs */
+dialog {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 0;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  background-color: var(--bg-surface);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  padding: 24px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.modal-body {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Alerta de Armazenamento / Aviso Geral */
+.storage-notice {
+  background-color: var(--warning-bg);
+  border: 1px solid #d4a72c;
+  color: #573a00;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  display: none;
+}
+
+/* ==========================================================================
+   Responsividade: Mobile (<= 768px e 375px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    border-right: none;
+    border-top: 1px solid var(--border-subtle);
+    padding: 8px 12px;
+    background-color: var(--bg-surface);
+    z-index: 100;
+  }
+
+  .brand-header, .sidebar-status-box {
+    display: none;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 4px;
+  }
+
+  .nav-btn {
+    flex-direction: column;
+    gap: 2px;
+    padding: 6px 8px;
+    font-size: 0.72rem;
+    align-items: center;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+
+  .app-main {
+    padding: 16px 16px 90px;
+  }
+
+  .aprender-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .progresso-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-session-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .top-session-bar .session-controls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* ==========================================================================
+   Estilos de Impressão (@media print)
+   Conforme BRIEF-ANTIGRAVITY.md: aula/exercício legível, sem botões ou menus
+   ========================================================================== */
+@media print {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 12pt;
+  }
+
+  .app-sidebar,
+  .top-session-bar,
+  .nav-menu,
+  .hero-actions,
+  .metronomo-box,
+  .btn,
+  .modal-footer,
+  .storage-notice {
+    display: none !important;
+  }
+
+  .app-main {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .view-panel {
+    display: block !important;
+  }
+
+  .tablatura-container {
+    background: none !important;
+    color: #000000 !important;
+    border: 1px solid #666 !important;
+    font-size: 10pt;
+  }
+
+  .bloco-card, .exercicio-box, .card-atividade {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-app: #0d1117;
+    --bg-surface: #161b22;
+    --bg-surface-subtle: #1c2128;
+    --bg-surface-inset: #21262d;
+    --border-subtle: #30363d;
+    --border-strong: #484f58;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --text-dim: #6e7681;
+    --accent: #58a6ff;
+    --accent-hover: #79c0ff;
+    --accent-light: #0d1117;
+    --accent-border: #1f6feb;
+    --success: #3fb950;
+    --success-bg: #0d1117;
+    --warning: #d29922;
+    --warning-bg: #1c1505;
+    --danger: #f85149;
+    --danger-bg: #1c0506;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 3px 6px rgba(0,0,0,0.4);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-first: < 640px */
+@media (max-width: 639px) {
+  .app-layout { flex-direction: column; }
+  .sidebar { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--border-subtle); }
+  .nav-btn { font-size: 0.85rem; padding: 8px 12px; }
+  .top-session-bar { flex-wrap: wrap; gap: 8px; }
+  .tablatura-container { overflow-x: auto; white-space: pre; font-size: 0.75rem; }
+  .modal-content { width: 95vw; max-height: 85vh; }
+}
+
+/* Tablet: 640-1024px */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .tablatura-container { font-size: 0.85rem; }
+}

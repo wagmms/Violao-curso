@@ -1,0 +1,223 @@
+function obterRecomendacao() {
+  const prontas = atividadesDados.filter(atividadeTemSessao);
+  const atual = prontas.find(a => a.id === state.atividadeAtualId) || prontas[0];
+  if (!state.sessao.concluida && (state.sessao.ativa || tempoDecorrido() > 0) && atividadeTemSessao(atual)) {
+    return {atividade: atual, nivel: state.sessao.nivel, motivo: `Continue sua sessão: ${Math.floor(tempoDecorrido()/60000)} minutos registrados.`};
+  }
+  const dif = state.dificuldades.find(d => !d.resolvida && prontas.some(a => a.id === d.atividadeId));
+  if (dif) return {atividade: prontas.find(a => a.id === dif.atividadeId), nivel: 'preparacao', motivo: `Recuperação de ${dif.trecho}: pratique a Preparação.`};
+  const rev = state.revisoes.filter(r => !r.concluida && r.dataPrevista <= obterDataLocal() && prontas.some(a => a.id === r.atividadeId)).sort((a,b) => a.dataPrevista.localeCompare(b.dataPrevista))[0];
+  if (rev) return {atividade: prontas.find(a => a.id === rev.atividadeId), nivel: 'alvo', motivo: `Revisão prevista para ${rev.dataPrevista}, ciclo ${rev.ciclo}.`};
+  const proxima = state.habilidades[atual.slug]?.status !== 'alvo_demonstrado' ? atual : prontas.find(a => state.habilidades[a.slug]?.status !== 'alvo_demonstrado') || atual;
+  return {atividade: proxima, nivel: proxima.id === state.atividadeAtualId ? state.nivelExercicioAtual : 'preparacao', motivo: state.perfil.diagnostico ? 'Atividade sugerida a partir do seu ponto de partida e dos registros.' : 'Comece pelos fundamentos ou ajuste seu ponto de partida no diagnóstico.'};
+}
+
+function trocarAtividade(novaId, nivel) {
+  if (!ATIVIDADES_VALIDAS_IDS.has(novaId)) return false;
+  if (nivel && !NIVEIS_VALIDOS.has(nivel)) return false;
+  if (state.atividadeAtualId !== novaId || state.sessao.concluida) {
+    registrarInterrupcao('Sessão interrompida para trocar de atividade.');
+    pararRelogio();
+    state.atividadeAtualId = novaId;
+    state.nivelExercicioAtual = nivel || 'preparacao';
+    state.sessao = novaSessao(novaId, state.nivelExercicioAtual);
+  } else if (nivel) {
+    state.nivelExercicioAtual = nivel; state.sessao.nivel = nivel;
+  }
+  salvarEstado(); atualizarTimer(); return true;
+}
+
+function atualizarRevisaoAlvo(ativ, tentativa) {
+  if (tentativa.nivel !== 'alvo') return;
+  normalizarRevisoes(state.revisoes);
+  const hoje = obterDataLocal();
+  const rev = state.revisoes.find(r => r.atividadeId === ativ.id && !r.concluida);
+  const sucesso = tentativa.status === 'consegui';
+  if (rev && rev.dataPrevista > hoje && sucesso) {
+    rev.tentativasAntecipadas = [...(rev.tentativasAntecipadas || []), {data: hoje, status: tentativa.status, tentativaId: tentativa.id}];
+    return;
+  }
+  let intervalo = 2, ciclo = 1;
+  if (rev) {
+    rev.concluida = true; rev.dataConclusao = hoje; rev.tentativaId = tentativa.id;
+    if (sucesso) { intervalo = rev.intervaloDias === 2 ? 7 : 21; ciclo = Math.min(999, rev.ciclo + 1); }
+  }
+  state.revisoes.push({id: novoId('rev'), atividadeId: ativ.id, nivel: 'alvo', ciclo, intervaloDias: intervalo, dataPrevista: obterDataLocal(intervalo), concluida: false});
+}
+
+function criterioDoNivel(ativ, nivel) {
+  const n = ativ.exercicio.niveis[nivel];
+  if (n.criterioSaida) return n.criterioSaida;
+  if (nivel === 'alvo') return ativ.criterioSaida;
+  return `${n.nome}: execute a tarefa descrita${n.repeticoes ? ', completando ' + n.repeticoes : ''}. ${n.descricao} Este registro não aprova o Alvo nem altera sua revisão.`;
+}
+
+function abrirModalResultado(ativ) {
+  const dialog = $('modal-resultado');
+  if (!dialog || !atividadeTemSessao(ativ)) return;
+  if (state.sessao.concluida) { mostrarAlerta('Resultado já registrado. Inicie uma nova sessão para registrar outra tentativa.'); return; }
+  const nivel = state.sessao.nivel;
+  const sessaoId = state.sessao.id;
+  const auditivo = ativ.ferramentaSugerida === 'treinador-ouvido';
+  $('res-atividade-nome').textContent = `${ativ.titulo} — ${ativ.exercicio.niveis[nivel].nome}`;
+  $('select-res-status').value = '';
+  $('input-res-bpm').value = '';
+  $('input-res-obs').value = '';
+  $('res-compassos').value = '';
+  $('res-tentativas').value = '';
+  for (const id of ['chk-pulso','chk-notas','chk-encerramento']) $(id).checked = false;
+  $('input-res-bpm').parentElement.hidden = auditivo;
+  $('res-compassos').parentElement.parentElement.hidden = auditivo;
+  $('chk-pulso').closest('fieldset').hidden = auditivo;
+  let criterio = $('div-criterio-modal');
+  if (!criterio) { criterio = document.createElement('div'); criterio.id = 'div-criterio-modal'; dialog.querySelector('.modal-body').prepend(criterio); }
+  criterio.innerHTML = `<label><input type="checkbox" class="criterio-check"> ${escapeHTML(criterioDoNivel(ativ, nivel))}</label>`;
+  let erro = $('resultado-erro');
+  if (!erro) { erro = document.createElement('p'); erro.id = 'resultado-erro'; erro.setAttribute('role','alert'); dialog.querySelector('.modal-body').append(erro); }
+  erro.textContent = '';
+  $('btn-salvar-resultado').disabled = false;
+  $('btn-salvar-resultado').onclick = () => {
+    try {
+      if (state.sessao.id !== sessaoId || state.sessao.concluida || state.sessao.nivel !== nivel) throw new Error('A sessão mudou. Feche esta avaliação e abra novamente.');
+      const status = $('select-res-status').value;
+      if (!['consegui','repetir','dificuldade'].includes(status)) throw new Error('Selecione como foi seu desempenho.');
+      const lerNumero = (id, min, max) => {
+        const el = $(id), raw = el.value.trim();
+        if (el.validity?.badInput) throw new Error('Informe um número válido.');
+        if (!raw) return null;
+        const num = Number(raw);
+        if (!Number.isInteger(num) || num < min || num > max) throw new Error(`Informe ${id === 'input-res-bpm' ? 'BPM' : id === 'res-compassos' ? 'compassos' : 'tentativas'} entre ${min} e ${max}.`);
+        return num;
+      };
+      const bpm = auditivo ? 0 : lerNumero('input-res-bpm',30,240);
+      const compassos = auditivo ? null : lerNumero('res-compassos',0,32);
+      const repeticoes = auditivo ? null : lerNumero('res-tentativas',1,50);
+      if (status === 'consegui' && !criterio.querySelector('input').checked) throw new Error('Confirme o critério do nível praticado.');
+      if (status === 'consegui' && !auditivo && bpm === null) throw new Error('Informe o BPM alcançado antes de registrar sucesso.');
+      const serie = auditivo ? state.treinoOuvido : null;
+      if (auditivo && status === 'consegui' && (!serie || serie.sessaoId !== sessaoId || serie.nivel !== nivel || !serie.serieEncerrada || (nivel === 'alvo' && serie.acertos < 8))) {
+        throw new Error('Conclua a série deste nível. Para o Alvo, são necessários pelo menos 8 acertos em 10.');
+      }
+      const tentativa = {id: novoId('tent'), sessaoId, atividadeId: ativ.id, nivel, data: obterDataLocal(), status, bpm: bpm ?? 0,
+        duracaoMs: tempoDecorrido(), compassosSemErro: compassos, tentativasAteAcertar: repeticoes,
+        checklistExecutado: {pulso: $('chk-pulso').checked, notas: $('chk-notas').checked, encerramento: $('chk-encerramento').checked},
+        criterioConfirmado: criterio.querySelector('input').checked, observacoes: $('input-res-obs').value.trim()};
+      if (serie) tentativa.serieOuvido = JSON.parse(JSON.stringify(serie));
+      // Todas as validações precedem a primeira mutação do histórico.
+      state.tentativas.push(tentativa);
+      if (status === 'consegui' && nivel === 'alvo') state.habilidades[ativ.slug] = {status:'alvo_demonstrado',data:obterDataLocal(),tentativaId:tentativa.id};
+      else if (status === 'consegui' && nivel === 'preparacao' && state.habilidades[ativ.slug]?.status !== 'alvo_demonstrado') state.habilidades[ativ.slug] = {status:'em_pratica',data:obterDataLocal()};
+      atualizarRevisaoAlvo(ativ, tentativa);
+      state.sessao.elapsedMs = tentativa.duracaoMs;
+      state.sessao.ativa = false; state.sessao.ultimoTimestamp = null; state.sessao.concluida = true;
+      pararRelogio(); salvarEstado(); atualizarTimer();
+      $('btn-salvar-resultado').disabled = true;
+      dialog.close(); navegarPara('progresso');
+    } catch (e) { erro.textContent = e.message; }
+  };
+  $('btn-fechar-resultado').onclick = () => dialog.close();
+  dialog.showModal();
+}
+
+function abrirModalDificuldade(ativ) {
+    const dialog = $('modal-dificuldade');
+    if (!dialog) return;
+
+    $('dif-atividade-nome').textContent = ativ.titulo;
+    $('input-dif-trecho').value = ativ.exercicio.niveis[state.nivelExercicioAtual || 'alvo'].nome;
+    $('input-dif-problema').value = '';
+
+    $('btn-salvar-dificuldade').onclick = async () => {
+      const trecho = ($('input-dif-trecho').value || '').trim();
+      const problema = ($('input-dif-problema').value || '').trim();
+      if (!problema) {
+        await mostrarAlerta('Por favor, descreva a dificuldade observada.');
+        return;
+      }
+
+      state.dificuldades.push({
+        id: 'dif-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+        atividadeId: ativ.id,
+        trecho: trecho,
+        problema: problema,
+        data: obterDataLocal(),
+        resolvida: false
+      });
+
+      salvarEstado();
+      dialog.close();
+      await mostrarAlerta('Dificuldade registrada no seu Caderno. Você pode revisá-la com o roteiro de recuperação.');
+    };
+
+    $('btn-fechar-dificuldade').onclick = () => dialog.close();
+    dialog.showModal();
+  }
+
+function abrirModalDiagnostico() {
+    const dialog = $('modal-diagnostico');
+    if (!dialog) return;
+
+    $('corpo-diagnostico').innerHTML = `
+      <p>Ajuste seu ponto de partida pedagógico. Suas respostas definem a recomendação prioritária sem atribuir conclusÁµes fictícias ao catálogo.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 12px;">
+        <div>
+          <label><strong>1. Rítmica e Pulso:</strong></label>
+          <select id="diag-ritmo" style="width: 100%; padding: 8px; margin-top: 4px;">
+            <option value="iniciante">Iniciante: sinto dificuldade em manter o tempo ou nunca usei metrÁ´nomo</option>
+            <option value="basico">Básico: mantenho pulso estável em 4/4 com subdivisão em colcheias</option>
+          </select>
+        </div>
+
+        <div>
+          <label><strong>2. Troca de Acordes:</strong></label>
+          <select id="diag-acordes" style="width: 100%; padding: 8px; margin-top: 4px;">
+            <option value="iniciante">Iniciante: movo um dedo por vez e pauso a batida na troca</option>
+            <option value="basico">Básico: troco acordes fundamentais em bloco sem parar o ritmo</option>
+          </select>
+        </div>
+
+        <div>
+          <label><strong>3. Percepção Auditiva de Intervalos:</strong></label>
+          <select id="diag-ouvido" style="width: 100%; padding: 8px; margin-top: 4px;">
+            <option value="iniciante">Iniciante: não identifico intervalos de ouvido</option>
+            <option value="intermediario">Intermediário inicial: distingo terça maior, quarta e quinta justa</option>
+          </select>
+        </div>
+      </div>
+    `;
+
+    $('btn-salvar-diagnostico').onclick = () => {
+      const nivelRitmo = $('diag-ritmo').value;
+      const nivelAcordes = $('diag-acordes').value;
+      const nivelOuvido = $('diag-ouvido').value;
+
+      state.perfil.diagnostico = {
+        ritmo: nivelRitmo,
+        acordes: nivelAcordes,
+        ouvido: nivelOuvido,
+        data: obterDataLocal()
+      };
+
+      if (nivelRitmo === 'iniciante') {
+        state.perfil.nivel = 'basico';
+        trocarAtividade('ativ-1');
+      } else if (nivelAcordes === 'iniciante') {
+        state.perfil.nivel = 'basico';
+        trocarAtividade('ativ-2');
+      } else if (nivelOuvido === 'intermediario') {
+        state.perfil.nivel = 'intermediario';
+        trocarAtividade('ativ-4');
+      } else {
+        state.perfil.nivel = 'basico';
+        trocarAtividade('ativ-3');
+      }
+
+      salvarEstado();
+      dialog.close();
+      renderizarTelaHoje();
+    };
+
+    $('btn-fechar-diagnostico').onclick = () => dialog.close();
+    dialog.showModal();
+  }

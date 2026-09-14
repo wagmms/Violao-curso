@@ -1,0 +1,79 @@
+[
+  {
+    "modulo": "1. Módulo 1",
+    "aulas": 46,
+    "video": 46,
+    "text": 0,
+    "com_arquivos": 46
+  },
+  {
+    "modulo": "2. Módulo 2",
+    "aulas": 38,
+    "video": 37,
+    "text": 1,
+    "com_arquivos": 37
+  },
+  {
+    "modulo": "3. Módulo 3",
+    "aulas": 44,
+    "video": 42,
+    "text": 2,
+    "com_arquivos": 42
+  },
+  {
+    "modulo": "4. Módulo 4",
+    "aulas": 37,
+    "video": 11,
+    "text": 26,
+    "com_arquivos": 12
+  },
+  {
+    "modulo": "5. Módulo 5",
+    "aulas": 35,
+    "video": 13,
+    "text": 22,
+    "com_arquivos": 13
+  },
+  {
+    "modulo": "6. Módulo 6",
+    "aulas": 30,
+    "video": 4,
+    "text": 26,
+    "com_arquivos": 4
+  },
+  {
+    "modulo": "7. Mês 7",
+    "aulas": 19,
+    "video": 6,
+    "text": 13,
+    "com_arquivos": 6
+  },
+  {
+    "modulo": "8. Mês 8",
+    "aulas": 19,
+    "video": 11,
+    "text": 8,
+    "com_arquivos": 11
+  },
+  {
+    "modulo": "9. Mês 9",
+    "aulas": 19,
+    "video": 13,
+    "text": 6,
+    "com_arquivos": 13
+  },
+  {
+    "modulo": "10. _UPGRADE 5.0_ Escala Maior Definitiva",
+    "aulas": 11,
+    "video": 11,
+    "text": 0,
+    "com_arquivos": 11
+  },
+  {
+    "modulo": "11. Links da AULA MENSAL e SORTEIO",
+    "aulas": 2,
+    "video": 1,
+    "text": 1,
+    "com_arquivos": 2
+  }
+]

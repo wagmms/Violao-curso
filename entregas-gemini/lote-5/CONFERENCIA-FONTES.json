@@ -1,0 +1,145 @@
+{
+  "catalogo_equivalente_ao_inventario": true,
+  "por_modulo": [
+    {
+      "modulo": "01. Módulo 1",
+      "aulas": 46,
+      "com_arquivo": 46,
+      "sem_arquivo": 0,
+      "videos": 78,
+      "pdfs": 7
+    },
+    {
+      "modulo": "02. Módulo 2",
+      "aulas": 38,
+      "com_arquivo": 37,
+      "sem_arquivo": 1,
+      "videos": 52,
+      "pdfs": 9
+    },
+    {
+      "modulo": "03. Módulo 3",
+      "aulas": 44,
+      "com_arquivo": 42,
+      "sem_arquivo": 2,
+      "videos": 62,
+      "pdfs": 5
+    },
+    {
+      "modulo": "04. Módulo 4",
+      "aulas": 37,
+      "com_arquivo": 12,
+      "sem_arquivo": 25,
+      "videos": 16,
+      "pdfs": 0
+    },
+    {
+      "modulo": "05. Módulo 5",
+      "aulas": 35,
+      "com_arquivo": 13,
+      "sem_arquivo": 22,
+      "videos": 18,
+      "pdfs": 5
+    },
+    {
+      "modulo": "06. Módulo 6",
+      "aulas": 30,
+      "com_arquivo": 4,
+      "sem_arquivo": 26,
+      "videos": 5,
+      "pdfs": 0
+    },
+    {
+      "modulo": "07. Mês 7",
+      "aulas": 19,
+      "com_arquivo": 6,
+      "sem_arquivo": 13,
+      "videos": 8,
+      "pdfs": 1
+    },
+    {
+      "modulo": "08. Mês 8",
+      "aulas": 19,
+      "com_arquivo": 11,
+      "sem_arquivo": 8,
+      "videos": 14,
+      "pdfs": 3
+    },
+    {
+      "modulo": "09. Mês 9",
+      "aulas": 19,
+      "com_arquivo": 13,
+      "sem_arquivo": 6,
+      "videos": 18,
+      "pdfs": 3
+    },
+    {
+      "modulo": "10. UPGRADE 5.0 Escala Maior Definitiva",
+      "aulas": 11,
+      "com_arquivo": 11,
+      "sem_arquivo": 0,
+      "videos": 11,
+      "pdfs": 0
+    },
+    {
+      "modulo": "11. Links da AULA MENSAL e SORTEIO",
+      "aulas": 2,
+      "com_arquivo": 2,
+      "sem_arquivo": 0,
+      "videos": 3,
+      "pdfs": 0
+    }
+  ],
+  "titulos_divergentes_guia": [
+    {
+      "id": "aula-mod-1-1",
+      "titulo_guia": "01 - Apresentação e Caderno de Estudos",
+      "titulo_catalogado": "01 - APOSTILAS e Apresentação"
+    },
+    {
+      "id": "aula-mod-1-21",
+      "titulo_guia": "21 - UPGRADE 8.0 Violão - 3.5 - Acordes E A D - Born this way",
+      "titulo_catalogado": "21 - UPGRADE 8.0 Violão - 3.5 - Acordes E A D - Born this w"
+    },
+    {
+      "id": "aula-mod-1-25",
+      "titulo_guia": "25 - Violão - 3.9 - Fluência - Born This Way (Praticando C e D)",
+      "titulo_catalogado": "25 - Violão - 3.9 - Fluência - Born This Way (Praticando C e"
+    },
+    {
+      "id": "aula-mod-1-27",
+      "titulo_guia": "27 - Violão - 4.1 - Aplicando o G e C - Patience e Ovelha Negra",
+      "titulo_catalogado": "27 - Violão - 4.1 - Aplicando o G e C - Patience e Ovelha Neg"
+    },
+    {
+      "id": "aula-mod-1-33",
+      "titulo_guia": "33 - Violão - 4.7 - TOCA que eu CANTO - POP Básica (Wicked Game)",
+      "titulo_catalogado": "33 - Violão - 4.7 - TOCA que eu CANTO - POP Básica (Wicked Ga"
+    },
+    {
+      "id": "aula-mod-1-36",
+      "titulo_guia": "36 - Violão - 4.10 - Bônus - Knocking on Heavens Door (Pág 05)",
+      "titulo_catalogado": "36 - Violão - 4.10 - Bônus - Knocking on Heavens Door (Pág 05"
+    },
+    {
+      "id": "aula-mod-1-41",
+      "titulo_guia": "41 - BÔNUS versão AO VIVO H P - Aula 1 Noções Básicas de Ritmo",
+      "titulo_catalogado": "41 - BÔNUS versão AO VIVO H P - Aula 1 Noções Básicas de Ri"
+    },
+    {
+      "id": "aula-mod-1-43",
+      "titulo_guia": "43 - BÔNUS versão AO VIVO H P - Aula 3.1 Intervalos Diatônicos",
+      "titulo_catalogado": "43 - BÔNUS versão AO VIVO H P - Aula 3.1 Intervalos Diatôni"
+    },
+    {
+      "id": "aula-mod-1-44",
+      "titulo_guia": "44 - BÔNUS versão AO VIVO H P - Aula 4 As Notas Musicais (Pág 08)",
+      "titulo_catalogado": "44 - BÔNUS versão AO VIVO H P - Aula 4 As Notas Musicais (P"
+    },
+    {
+      "id": "aula-mod-1-45",
+      "titulo_guia": "45 - Você é CANHOTO Qual a forma CERTA de aprender (UPGRADE)",
+      "titulo_catalogado": "45 - Você é CANHOTO Qual a forma CERTA de aprender (UPGRADE"
+    }
+  ]
+}

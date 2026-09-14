@@ -1,0 +1,36 @@
+{
+  "erros": [],
+  "eventos_por_versao": {
+    "ex1": 27,
+    "ex1-s": 14,
+    "ex2": 37,
+    "ex2-s": 23,
+    "ex3": 52,
+    "ex3-s": 34,
+    "ex4": 14,
+    "ex4-s": 12,
+    "ex5": 12,
+    "ex5-s": 12,
+    "ex6": 26,
+    "ex6-s": 13,
+    "tabela-1": 27,
+    "tabela-2": 14,
+    "tabela-3": 37,
+    "tabela-4": 23,
+    "tabela-5": 52,
+    "tabela-6": 34,
+    "tabela-7": 14,
+    "tabela-8": 12,
+    "tabela-9": 12,
+    "tabela-10": 12,
+    "tabela-11": 26,
+    "tabela-12": 13
+  },
+  "tabelas": 12,
+  "sessoes": 32,
+  "duracao_16_compassos_50_56_bpm": [
+    68.57142857142857,
+    76.8
+  ],
+  "limites": "Validação simbólica: não certifica conforto físico nem intenção harmônica."
+}

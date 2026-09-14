@@ -1,0 +1,1296 @@
+{
+  "data_auditoria": "2026-09-13T18:37:13.391Z",
+  "lote": 7,
+  "total_erros": 0,
+  "total_avisos": 0,
+  "erros": [],
+  "avisos": [],
+  "estatisticas": {
+    "total_aulas_auditadas": 72,
+    "modulo_4": {
+      "total": 37,
+      "com_arquivo": 12,
+      "sem_arquivo": 25
+    },
+    "modulo_5": {
+      "total": 35,
+      "com_arquivo": 13,
+      "sem_arquivo": 22
+    },
+    "por_tipo_sessao": {
+      "padrao_individual_40min": 10,
+      "agrupada_principal": 7,
+      "agrupada_parceira": 7,
+      "institucional_sem_pratica": 1,
+      "item_documental_sem_sessao": 47
+    },
+    "por_status_objetivo": {
+      "confirmado": 20,
+      "provisorio": 5,
+      "nao_verificado": 47
+    },
+    "isolamento_interface": {
+      "guias_ativos_interface": 128,
+      "modulos_1_a_3_ativos": true,
+      "modulos_4_e_5_em_revisao_isolados": true
+    }
+  },
+  "aulas": [
+    {
+      "modulo": 4,
+      "aula": 1,
+      "id": "aula-mod-4-13",
+      "titulo": "Quiz para ir para o Mês 4",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 2,
+      "id": "aula-mod-4-14",
+      "titulo": "APOSTILA de H_P e de Violão (Meses 4 ao 9)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 3,
+      "id": "aula-mod-4-15",
+      "titulo": "Mega-Bônus_ 38.235 Cifras!",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 4,
+      "id": "aula-mod-4-1",
+      "titulo": "04 - 13 - Colcheia I UPGRADE 8.0 (Pág 36)",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo e leitura rítmica",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática com metrônomo no violão",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro e anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 5,
+      "id": "aula-mod-4-16",
+      "titulo": "_UPGRADE 7.0_ Violão - 13.1 - Revisão",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 6,
+      "id": "aula-mod-4-17",
+      "titulo": "_UPGRADE 7.0_ Violão - 13.2 - Acorde X7M na Prática (Pág",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 7,
+      "id": "aula-mod-4-18",
+      "titulo": "Violão - 13.3 -  Batida Bossanova (Pág 40)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 8,
+      "id": "aula-mod-4-19",
+      "titulo": "Violão - 13.4 TOCA que eu CANTO - Faz Parte do meu Show",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 9,
+      "id": "aula-mod-4-2",
+      "titulo": "09 - UPGRADE 7.0 H P - 14 - Form de Acordes II (Pág 37)",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 10,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo dos vídeos e assimilação da regra de tétrades",
+          "minutos": 15
+        },
+        {
+          "atividade": "Prática de montagem no braço e comparação intervalar",
+          "minutos": 15
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 10,
+      "id": "aula-mod-4-3",
+      "titulo": "10 - UPGRADE 7.0 H P - 14 - Form de Acordes II - Trabalho d",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 9
+    },
+    {
+      "modulo": 4,
+      "aula": 11,
+      "id": "aula-mod-4-20",
+      "titulo": "Violão - 14.1 - Tablatura",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 12,
+      "id": "aula-mod-4-21",
+      "titulo": "Violão - 14.2 - Seu primeiro FINGERSTYLE - Águas de Març",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 13,
+      "id": "aula-mod-4-22",
+      "titulo": "Violão - 14.3 - BÔNUS_ FINGERSTYLE FÁCIL!  TOCANDO EM FR",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 14,
+      "id": "aula-mod-4-23",
+      "titulo": "H_P - 15 - Colchêia 2 (Pág 41)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 15,
+      "id": "aula-mod-4-24",
+      "titulo": "Violão - 15.2 _UPGRADE 5.0_ Batida de Guarânia",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 16,
+      "id": "aula-mod-4-25",
+      "titulo": "Violão - 15.3 _UPGRADE 5.0_ Chama o Flautista - Guarânia",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 17,
+      "id": "aula-mod-4-26",
+      "titulo": "_UPGRADE 6.0_ 15.4  - Upgrade na harmonia de Encosta sua",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 18,
+      "id": "aula-mod-4-27",
+      "titulo": "15.5 _UPGRADE 6.0_ Dedilhado Wake me up",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 19,
+      "id": "aula-mod-4-28",
+      "titulo": "15.6 _UPGRADE 6.0_ Dedilhado Wake me up - Parte B e Fluê",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 20,
+      "id": "aula-mod-4-4",
+      "titulo": "20 - UPGRADE 7.0 H P - 16.1 CAMPO HARMÔNICO - Preparação",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 21,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do conceito de campo harmônico e regras de formação",
+          "minutos": 15
+        },
+        {
+          "atividade": "Prática de montagem dos graus I a VII no braço",
+          "minutos": 15
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 21,
+      "id": "aula-mod-4-5",
+      "titulo": "21 - UPGRADE 7.0 H P - 16.2 A Aula + importante da sua VID",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 20
+    },
+    {
+      "modulo": 4,
+      "aula": 22,
+      "id": "aula-mod-4-6",
+      "titulo": "22 - UPGRADE 7.0 Violão - 16.1 - Batida Balada ECM (Pág 41)",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo e diagrama de setas da batida",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática motora da levada com metrônomo",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 23,
+      "id": "aula-mod-4-7",
+      "titulo": "23 - UPGRADE 7.0 Violão - 16.2 - Balada ECM FLUÊNCIA! Acim",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo de fluência",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática deliberada com metrônomo (60 a 80 bpm)",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 24,
+      "id": "aula-mod-4-8",
+      "titulo": "24 - UPGRADE 7.0 Violão - 16.3 - Como DIVIDIR a Balada ECM",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 25,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do corte rítmico no vídeo",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática deliberada de divisão e aplicação no repertório",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 25,
+      "id": "aula-mod-4-9",
+      "titulo": "25 - UPGRADE 7.0 Violão - 16.4 - Balada ECM - Meu Eu em Voc",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 24
+    },
+    {
+      "modulo": 4,
+      "aula": 26,
+      "id": "aula-mod-4-10",
+      "titulo": "26 - UPGRADE 7.0 Violão - 16.5 - Balada ECM - A Estrada",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo dos vídeos e harmonia",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática do repertório com metrônomo",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro e anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 27,
+      "id": "aula-mod-4-29",
+      "titulo": "Violão - 16.6 - Balada ECM Exemplos",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 28,
+      "id": "aula-mod-4-30",
+      "titulo": "Violão - 16.7 - Na Rua, Na chuva (pág 59) .. e Intensivo",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 29,
+      "id": "aula-mod-4-11",
+      "titulo": "29 - Violão - 16.8 - BÔNUS - ERRE assim para tocar MELHOR",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo analítico do vídeo bônus",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática deliberada com autodiagnóstico de passagens críticas",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 4,
+      "aula": 30,
+      "id": "aula-mod-4-31",
+      "titulo": "Violão - 16.9 - Top 10 músicas que todo iniciante no vio",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 31,
+      "id": "aula-mod-4-32",
+      "titulo": "Violão - 16.10 - Técnica do DEDO ÂNCORA",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 32,
+      "id": "aula-mod-4-33",
+      "titulo": "Violão - 16.11 - De janeiro a Janeiro (Balada ECM)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 33,
+      "id": "aula-mod-4-34",
+      "titulo": "Violão - 16.12 Janeiro - TOCA que eu CANTO",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 34,
+      "id": "aula-mod-4-12",
+      "titulo": "34 - Você pode me ajudar São só 3 perguntinhas!",
+      "tem_arquivo": true,
+      "tipo_sessao": "institucional_sem_pratica",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 35,
+      "id": "aula-mod-4-35",
+      "titulo": "BÔNUS H_P - 13 - Colchêia 1 (Ao VIVO)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 36,
+      "id": "aula-mod-4-36",
+      "titulo": "BÔNUS_ H_P - 14 - Form de Acordes II (Pág 37) AO VIVO",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 4,
+      "aula": 37,
+      "id": "aula-mod-4-37",
+      "titulo": "BÔNUS H_P - 16 - Campo Harmônico I (AO VIVO)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 1,
+      "id": "aula-mod-5-14",
+      "titulo": "H_P - 17 - Intervalos Não Diatônicos (Pág 45)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 2,
+      "id": "aula-mod-5-15",
+      "titulo": "Violão - 17.1 - Leitura C D E (pág 45)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 3,
+      "id": "aula-mod-5-16",
+      "titulo": "Violão - 17.2 - Leitura C D E F e G",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 4,
+      "id": "aula-mod-5-17",
+      "titulo": "Violão - 17.3 - Leitura Região Média (ág 46)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 5,
+      "id": "aula-mod-5-18",
+      "titulo": "Violão - 17.4 - Região Aguda",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 6,
+      "id": "aula-mod-5-19",
+      "titulo": "Violão - 17.5 - Aceleração de Leitura de Partituras",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 7,
+      "id": "aula-mod-5-1",
+      "titulo": "07 - Violão - 17.6 - A OITAVA",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo analítico dos vídeos de oitava",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática deliberada de localização geométrica de oitavas no braço",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 8,
+      "id": "aula-mod-5-20",
+      "titulo": "H_P - 18.1 - Campo Harmônico II (Pág 46)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 9,
+      "id": "aula-mod-5-21",
+      "titulo": "H_P - 18.2 BÔNUS_ Teste seu Ouvido!",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 10,
+      "id": "aula-mod-5-22",
+      "titulo": "Violão - 18.1 - Dedilhado Vai e Vem (Pág 47) (batida)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 11,
+      "id": "aula-mod-5-23",
+      "titulo": "Violão - 18.2 - Dedilhado vai e vem - Você (Pág 47)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 12,
+      "id": "aula-mod-5-24",
+      "titulo": "Violão - 18.3 -  Acorde X7  (pág 48)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 13,
+      "id": "aula-mod-5-2",
+      "titulo": "13 - Violão - 18.4 - A Notação mais FÁCIL do mundo",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 14,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo dos vídeos de notação e simplificação",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática de leitura e posicionamento rápido no instrumento",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 14,
+      "id": "aula-mod-5-3",
+      "titulo": "14 - Violão - 18.5 - UPGRADE 6.0 simplificando acordes",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 13
+    },
+    {
+      "modulo": 5,
+      "aula": 15,
+      "id": "aula-mod-5-4",
+      "titulo": "15 - UPGRADE 7.0 Violão - 18.6 Quais cordas dedilhar",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática de arpejos com seleção correta de baixos",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 16,
+      "id": "aula-mod-5-5",
+      "titulo": "16 - UPGRADE 7.0 Violão 18.7 Momento GOSPEL - Aleluia",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 17,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo e leitura da cifra PDF",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática do dedilhado e sincronia com playback/I.A",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 17,
+      "id": "aula-mod-5-6",
+      "titulo": "17 - UPGRADE 7.0 Violão 18.8 Aleluia com I.A",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 16
+    },
+    {
+      "modulo": 5,
+      "aula": 18,
+      "id": "aula-mod-5-25",
+      "titulo": "H_P - 19.1 - Colchêia 3",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 19,
+      "id": "aula-mod-5-7",
+      "titulo": "19 - Violão - 19.1 - VILAREJO",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 20,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo e da partitura PDF",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática da harmonia de MPB e voz guia",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 20,
+      "id": "aula-mod-5-8",
+      "titulo": "20 - Violão - 19.2 - TOCA que EU CANTO! - VILAREJO",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 19
+    },
+    {
+      "modulo": 5,
+      "aula": 21,
+      "id": "aula-mod-5-26",
+      "titulo": "Violão - 19.3 - Exemplos X7 (Depois, Guita, Me Chama)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 22,
+      "id": "aula-mod-5-27",
+      "titulo": "Violão - 19.4 - Leitura Oitava Completa (Pág 51)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 23,
+      "id": "aula-mod-5-28",
+      "titulo": "Violão - 19.5 - Trenzinho C. Villa Lobos  (Pág 51)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 24,
+      "id": "aula-mod-5-9",
+      "titulo": "24 - 19.6 UPGRADE 6.0 Revisão DOMINE o BRAÇO - Onde está a",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo de mapeamento",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática de localização imediata de notas no braço",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 25,
+      "id": "aula-mod-5-10",
+      "titulo": "25 - UPGRADE 5.0 19.6 - MOMENTO GOSPEL Lindo és (+Variaçã",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo e leitura da cifra PDF",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática deliberada do dedilhado e dinâmica",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro e anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 26,
+      "id": "aula-mod-5-29",
+      "titulo": "H_P - 20 - Campo Harm. III (Pág 50 na apostila de H_P))",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 27,
+      "id": "aula-mod-5-30",
+      "titulo": "Violão - 20.1 - Batida Bossa Variação (Pag 52)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 28,
+      "id": "aula-mod-5-31",
+      "titulo": "Violão - 20.2 - FINGERSTYLE (Natalina)",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 29,
+      "id": "aula-mod-5-32",
+      "titulo": "Violão - 20.3 - O que é o sistema CAGED_",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 30,
+      "id": "aula-mod-5-33",
+      "titulo": "Violão - 20.4 - BÔNUS Toque MAIS no Acorde X7",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 31,
+      "id": "aula-mod-5-34",
+      "titulo": "Violão - 20.5 - BÔNUS! Fingerstyle de _LINDA_ (Roupa Nov",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 32,
+      "id": "aula-mod-5-35",
+      "titulo": "20.6 - HIPER DETALHAMENTO- Me Chama",
+      "tem_arquivo": false,
+      "tipo_sessao": "item_documental_sem_sessao",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 5,
+      "aula": 33,
+      "id": "aula-mod-5-11",
+      "titulo": "33 - UPGRADE 7.0 20.7 - VIOLÃO - Como DECORAR",
+      "tem_arquivo": true,
+      "tipo_sessao": "padrao_individual_40min",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "blocos": [
+        {
+          "atividade": "Preparação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo do vídeo de memorização",
+          "minutos": 10
+        },
+        {
+          "atividade": "Treino de memorização de uma progressão de olhos fechados",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 34,
+      "id": "aula-mod-5-12",
+      "titulo": "34 - UPGRADE 8.0 Pra Melhorar - Marisa monte",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_principal",
+      "orcamento_minutos": 40,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 35,
+      "blocos": [
+        {
+          "atividade": "Preparação e afinação",
+          "minutos": 5
+        },
+        {
+          "atividade": "Estudo dos vídeos e da partitura PDF",
+          "minutos": 10
+        },
+        {
+          "atividade": "Prática da harmonia e voz guia",
+          "minutos": 20
+        },
+        {
+          "atividade": "Registro de anotações",
+          "minutos": 5
+        }
+      ]
+    },
+    {
+      "modulo": 5,
+      "aula": 35,
+      "id": "aula-mod-5-13",
+      "titulo": "35 - UPGRADE 8.0 TOCA QUE EU CANTO - Pra Melhorar",
+      "tem_arquivo": true,
+      "tipo_sessao": "agrupada_parceira",
+      "orcamento_minutos": 0,
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "status_identidade": "ok",
+      "erros": [],
+      "aula_parceira": 34
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+const fs=require('fs'),path=require('path');
+const dir=__dirname;
+for(const f of ['GUIA-MODULO-01.md','MAPA-ESTUDO-CURSO-GERAL.md']){
+ const p=path.join(dir,f);let text=fs.readFileSync(p,'utf8');
+ const backup=path.join(dir,f.replace('.md','.antes-codex.md'));if(!fs.existsSync(backup))fs.copyFileSync(p,backup);
+ text=text.replace('Submetido para homologação do Codex conforme diretrizes de `CORRECOES-GEMINI.md`.','Aprovado como guia complementar, com os ajustes e limites registrados em REVISAO-CODEX.md desta pasta.');
+ text=text.replace('Submetido para homologação do Codex conforme diretrizes de `CORRECOES-GEMINI.md`.','Aprovado como guia complementar, com os ajustes e limites registrados em REVISAO-CODEX.md desta pasta.');
+ text=text.replace('3 a 5 minutos (postura biomecânica relaxada e conferência das cordas com afinador).','5 minutos (postura confortável e conferência das cordas com afinador).').replace('3 a 5 minutos (postura, respiração e checagem da afinação das cordas).','5 minutos (postura, respiração e checagem da afinação das cordas).');
+ text=text.replace('10 a 15 minutos (assistir ao vídeo com foco analítico, observando digitações e postura).','10 minutos (orçamento sugerido, observando as demonstrações pertinentes).').replace('10 a 15 minutos (escuta atenta, observação biomecânica das mãos sem tocar simultaneamente).','10 minutos (orçamento sugerido de escuta atenta e observação).');
+ text=text.replace('18 a 22 minutos (execução em andamento lento e confortável com metrônomo, priorizando som limpo e ausência de tensão).','20 minutos (execução em andamento confortável, priorizando som limpo).').replace('18 a 22 minutos (repetição controlada com metrônomo em andamento lento e confortável, focando em som limpo e relaxamento).','20 minutos (prática em andamento confortável, focando em som limpo).');
+ text=text.replace('3 a 5 minutos (anotar sensações musculares, dúvidas e salvar progresso local).','5 minutos (anotar dificuldades, dúvidas e salvar progresso local).').replace('3 a 5 minutos (anotação de dificuldades, registro de marcações e salvamento do progresso na interface).','5 minutos (anotação de dificuldades e salvamento do progresso).');
+ text=text.replace('consegue afinar','consegue afinar').replace('em menos de 2 minutos','sem limite de tempo obrigatório');
+ text=text.replace('Consegue afinar de ouvido ou por aplicativo em menos de 2 minutos','Consegue afinar de ouvido ou por aplicativo, sem limite de tempo obrigatório');
+ text=text.replace('o aluno pode registrar a aula como assistida/praticada e direcionar seus 40 minutos','o aluno pode registrar o diagnóstico nas anotações e direcionar seus 40 minutos');
+ text=text.replace('As lacunas documentais nos questionários e itens de plataforma (103 aulas sem arquivo) não paralisam a progressão instrumental, pois os tópicos essenciais de execução e harmonia dispõem de gravações em vídeo e materiais de apoio.','Há 103 itens de plataforma sem arquivo associado no backup. Isso não comprova que sejam dispensáveis nem que todos os pré-requisitos estejam disponíveis; avaliar o conteúdo e as necessidades de cada aula antes de prosseguir.');
+ text=text.replace('Diante de uma aula sem arquivo, o estudante prossegue diretamente para a aula seguinte com mídia ativa, utilizando os tópicos catalogados como referência temática para anotações e autoestudo.','Diante de uma aula sem arquivo, verificar se a próxima exige um conteúdo ainda não dominado. Se exigir, registrar a lacuna e localizar a fonte ou uma explicação complementar identificada; se não exigir, continuar com a próxima aula disponível.');
+ if(f==='GUIA-MODULO-01.md')text=text.replace('## 1. Diretrizes','**Limite da evidência:** as sínteses de legendas/descrições foram fornecidas pelo executor; não foram relidas integralmente pelo Codex. [Confirmado] significa documentado conforme relato do executor, e não inspeção visual independente ou validação de todas as afirmações. Propostas de prática são complementares.\n\n## 1. Diretrizes');
+ fs.writeFileSync(p,text);
+}
+console.log('Ajustados orçamento padrão, diagnóstico e tratamento de lacunas; originais preservados.');

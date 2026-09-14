@@ -1,0 +1,1219 @@
+/**
+ * styles.css — Folha de Estilos do Curso de Violão Solo MPB
+ * 
+ * Design: Estilo editorial/papel neutro, tipografia nítida,
+ * suporte responsivo (375px a 1366px), rolagem para tablaturas
+ * e regras completas de impressão (@media print).
+ */
+
+/* ==========================================================================
+   1. VARIÁVEIS E RESET
+   ========================================================================== */
+:root {
+  --bg-app: #f7f6f2;
+  --bg-surface: #ffffff;
+  --bg-surface-soft: #fcfbfa;
+  --bg-code: #f3f0ea;
+  --text-main: #242220;
+  --text-muted: #6a6763;
+  --text-light: #8e8a84;
+  --border-color: #e3dfd7;
+  --border-focus: #2d5a88;
+  
+  --primary: #1f3a52;
+  --primary-hover: #152737;
+  --primary-light: #e8eef3;
+  --accent: #9c4126;
+  --accent-light: #fbeee9;
+  --success: #2e6930;
+  --success-light: #edf7ee;
+  --warning: #855302;
+  --warning-light: #fef7e6;
+  --danger: #9c2828;
+  --danger-light: #fbeeee;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Consolas", "Courier New", Courier, monospace;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+.app-header {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-branding .course-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+
+.header-branding .course-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Dock do Temporizador */
+.timer-dock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+}
+
+.timer-display-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timer-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.timer-digits {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.timer-status-badge {
+  font-size: 0.68rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: var(--border-color);
+  color: var(--text-main);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.timer-dock.timer-running .timer-status-badge {
+  background: var(--success);
+  color: #fff;
+}
+
+.timer-dock.timer-finished .timer-digits {
+  color: var(--accent);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.timer-controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Abas de Navegação */
+.app-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.nav-tab:hover {
+  color: var(--primary);
+}
+
+.nav-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--accent);
+}
+
+/* ==========================================================================
+   3. ESTRUTURA PRINCIPAL E VIEWS
+   ========================================================================== */
+.app-main {
+  flex: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.app-view {
+  display: none;
+}
+
+.app-view.active {
+  display: block;
+}
+
+.view-header {
+  margin-bottom: 24px;
+}
+
+.view-header h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+.text-sm {
+  font-size: 0.85rem;
+}
+
+/* Alerta de Storage */
+.storage-alert {
+  background: var(--warning-light);
+  color: var(--warning);
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   4. COMPONENTES: BOTÕES, CARDS, BADGES, TABELAS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: #395267;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #2a3d4d;
+}
+
+.btn-outline {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+.btn-outline:hover {
+  background: var(--bg-surface-soft);
+  border-color: var(--text-muted);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+.btn-ghost:hover {
+  background: var(--border-color);
+  color: var(--text-main);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #7a1f1f;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+.btn-lg {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-surface-soft);
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #e2ded4;
+  color: var(--text-main);
+}
+
+.badge-accent {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+.badge-info {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.badge-success {
+  background: var(--success-light);
+  color: var(--success);
+}
+.badge-planned {
+  background: #ede9e0;
+  color: #726c62;
+  border: 1px dashed #b8b1a3;
+}
+
+/* Tabelas */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+}
+
+.table th {
+  background: var(--bg-surface-soft);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.table tbody tr:nth-child(even) {
+  background: var(--bg-app);
+}
+
+/* Formulários */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.col-4 { flex: 1 1 calc(33.333% - 16px); min-width: 220px; }
+.col-8 { flex: 2 1 calc(66.666% - 16px); min-width: 320px; }
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-main);
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px rgba(45, 90, 136, 0.15);
+}
+
+/* Alertas */
+.alert {
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  margin-bottom: 18px;
+  border: 1px solid transparent;
+}
+.alert-warning {
+  background: var(--warning-light);
+  border-color: #f3dfae;
+  color: var(--warning);
+}
+.alert-info {
+  background: var(--primary-light);
+  border-color: #c9dbe9;
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   5. TELAS ESPECÍFICAS
+   ========================================================================== */
+
+/* Tela Início */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card-hero {
+  border-left: 5px solid var(--accent);
+}
+
+.routine-summary-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.92rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.stat-item {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.units-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.unit-prog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+}
+
+/* Tela Catálogo do Método Tríade */
+.catalog-filters-bar {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.filter-group-main {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.search-input-box {
+  flex: 2 1 300px;
+}
+
+.module-select-box {
+  flex: 1 1 240px;
+}
+
+.filter-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.catalog-module-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.catalog-module-header {
+  padding: 16px 20px;
+  background: var(--bg-surface-soft);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.catalog-module-header h3 {
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.catalog-module-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.catalog-lessons-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-lesson-row {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background 0.1s;
+}
+
+.catalog-lesson-row:last-child {
+  border-bottom: none;
+}
+
+.catalog-lesson-row:hover {
+  background: #fdfbf7;
+}
+
+.catalog-lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.catalog-lesson-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.catalog-lesson-tracking {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tracking-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tracking-checkbox-label input {
+  cursor: pointer;
+}
+
+.catalog-materials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.catalog-material-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid #edeae2;
+}
+
+.mat-type-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #e2ded4;
+}
+
+.mat-type-video { background: #e3edf7; color: #1c4b78; }
+.mat-type-pdf { background: #faede8; color: #9c3b1e; }
+.mat-type-frag { background: #f0f0f0; color: #777; text-decoration: line-through; }
+
+/* Eixos da Formação Geral */
+.eixos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  font-size: 0.88rem;
+}
+
+.eixo-item {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+}
+
+/* Tela Curso */
+.course-units-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.unit-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.unit-card.unit-available {
+  border-left: 4px solid var(--primary);
+}
+
+.unit-card.unit-planned {
+  border-left: 4px solid #b8b1a3;
+  background: #fbfaf8;
+}
+
+.unit-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.unit-card-title {
+  font-size: 1.15rem;
+  color: var(--primary);
+}
+
+.unit-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 0.88rem;
+  margin: 12px 0;
+}
+
+.unit-weeks-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.week-pill-btn {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.week-pill-btn:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+}
+
+/* Tela Sessão de Estudo */
+.session-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  background: var(--bg-surface);
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.select-session-main {
+  font-weight: 600;
+  max-width: 500px;
+}
+
+.session-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.session-meta-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.session-display-title {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.session-meta-box {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+}
+
+.meta-row {
+  margin-bottom: 8px;
+}
+.meta-row:last-child {
+  margin-bottom: 0;
+}
+
+.session-grid-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.box {
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface-soft);
+}
+.box h4 {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.box-instruction { border-left: 4px solid var(--primary); }
+.box-difficulty { border-left: 4px solid var(--warning); }
+.box-simplification { border-left: 4px solid var(--accent); }
+.box-criterion { border-left: 4px solid var(--success); }
+
+.session-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-surface-soft);
+  padding: 14px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.session-card-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+/* Tela Exercícios */
+.exercise-selector-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  background: var(--bg-surface);
+  padding: 16px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.btn-group {
+  display: inline-flex;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.exercise-display-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.exercise-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tab-scroller {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fdfcf9;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin: 14px 0 24px;
+}
+
+.tab-ascii {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #1a1918;
+  white-space: pre;
+}
+
+.table-events {
+  font-size: 0.85rem;
+}
+.table-events th {
+  padding: 8px 10px;
+}
+.table-events td {
+  padding: 6px 10px;
+}
+
+.exercise-execution-notes {
+  margin-top: 24px;
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+}
+
+.exercise-execution-notes ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+/* Tela Fontes */
+.sources-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 18px;
+}
+
+.source-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.source-card-title {
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.source-card-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 10px 0;
+}
+
+/* Tela Diário & Avaliação */
+.diario-tabs-subnav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.subtab-panel {
+  display: none;
+}
+.subtab-panel.active {
+  display: block;
+}
+
+.rubric-dimensions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.rubric-dimension-box {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dim-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dim-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.backup-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.backup-card {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
+
+.import-preview-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  margin-top: 12px;
+}
+
+.import-action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.history-entry-card {
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+/* Rodapé */
+.app-footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 24px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (MOBILE A DESKTOP)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .timer-dock {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .session-grid-boxes {
+    grid-template-columns: 1fr;
+  }
+  .unit-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .backup-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   7. REGRAS DE IMPRESSÃO (@media print)
+   ========================================================================== */
+@media print {
+  /* Ocultar elementos interativos */
+  .app-header,
+  .app-nav,
+  .timer-dock,
+  .session-nav-bar,
+  .exercise-selector-bar,
+  .session-card-footer,
+  .btn,
+  .storage-alert,
+  .app-footer,
+  .diario-tabs-subnav {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  .app-main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .app-view {
+    display: block !important;
+  }
+  .app-view:not(.active) {
+    display: none !important;
+  }
+
+  .session-card,
+  .exercise-display-card,
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 20pt !important;
+  }
+
+  /* Tratamento de tabelas longas e blocos curtos na impressão */
+  table {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .table-time-blocks,
+  .box,
+  .exercise-execution-notes,
+  .exercise-specific-notes {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .tab-scroller {
+    background: transparent !important;
+    border: 1px solid #999 !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .tab-ascii {
+    font-size: 9.5pt !important;
+    color: #000000 !important;
+    white-space: pre !important;
+  }
+
+  .table th {
+    background: #f0f0f0 !important;
+    color: #000000 !important;
+  }
+
+  .table td, .table th {
+    border: 1px solid #777 !important;
+  }
+}
+
+/* Links externos renderizados de forma segura */
+.link-externo-seguro {
+  color: var(--cor-destaque, #0969da);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.link-externo-seguro:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}

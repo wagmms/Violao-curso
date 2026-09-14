@@ -1,0 +1,41 @@
+{
+  "ambiente": "Node VM; DOM mínimo simulado; sem navegador e sem avaliação acústica",
+  "achados": [
+    {
+      "id": "backup-sem-validacao-profunda",
+      "observado": true
+    },
+    {
+      "id": "sessao-excluida-da-restauracao",
+      "observado": true
+    },
+    {
+      "id": "escolha-inicial-nao-priorizada",
+      "observado": "ativ-1"
+    },
+    {
+      "id": "preparacao-aprova-habilidade",
+      "observado": {
+        "status": "demonstrado",
+        "data": "2026-09-13"
+      }
+    },
+    {
+      "id": "tres-sucessos-revisoes-pendentes",
+      "observado": [
+        {
+          "intervalo": 2,
+          "concluida": false
+        },
+        {
+          "intervalo": 7,
+          "concluida": false
+        },
+        {
+          "intervalo": 7,
+          "concluida": false
+        }
+      ]
+    }
+  ]
+}

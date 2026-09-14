@@ -1,0 +1,67 @@
+{
+  "navegador": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "data": "2026-09-13T18:21:37.225Z",
+  "passou": true,
+  "passos": [
+    {
+      "step": "1. Carregamento da página",
+      "ok": true,
+      "details": "Curso de Violão — Método Tríade"
+    },
+    {
+      "step": "2. Renderização de aulas iniciais",
+      "ok": true,
+      "details": "300 aulas no catálogo"
+    },
+    {
+      "step": "3. Abertura do Modal de Mapa de Estudo",
+      "ok": true,
+      "details": "Curso de Violão — Método TríadeMapa Geral de Estudo e Arquitetura Curricular (Re"
+    },
+    {
+      "step": "4. Fechamento do Modal de Mapa de Estudo",
+      "ok": true,
+      "details": "Modal fechado com sucesso"
+    },
+    {
+      "step": "5. Presença do Guia Homologado na Aula 1",
+      "ok": true,
+      "details": "Elemento .guia-estudo encontrado"
+    },
+    {
+      "step": "6. Inspeção dos campos obrigatórios do Guia",
+      "ok": true,
+      "details": "Apresentação Geral e Orientações para o Caderno de Estudos"
+    },
+    {
+      "step": "7. Ausência de guias fantasmas no Módulo 2",
+      "ok": true,
+      "details": "Total guias renderizados no Módulo 2: 0 (zero fantasma)"
+    },
+    {
+      "step": "8. Filtro \"Com guia de estudo\"",
+      "ok": true,
+      "details": "46 aulas exibidas (exatamente as 46 do Módulo 1)"
+    },
+    {
+      "step": "9. Busca textual por \"pestana\"",
+      "ok": true,
+      "details": "5 aulas encontradas"
+    },
+    {
+      "step": "10. Gravação em localStorage (persistência real)",
+      "ok": true,
+      "details": "Anotação de teste do Lote 6: afinação perfeita e postura conferida."
+    },
+    {
+      "step": "11. Reload preservando anotações e marcações",
+      "ok": true,
+      "details": "Preservado: assistida=true, praticada=true, nota=\"Anotação de teste do Lote 6: afinação perfeita e postura conferida.\""
+    },
+    {
+      "step": "12. Estilos de impressão (@media print)",
+      "ok": true,
+      "details": "Timer e Toolbar ocultados corretamente para impressão"
+    }
+  ]
+}

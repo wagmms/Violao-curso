@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Violão — Método Tríade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="app-header" role="banner">
+    <div class="header-container">
+      <div class="header-branding">
+        <h1 class="course-title">Curso de Violão — Método Tríade</h1>
+        <p class="course-subtitle">Catálogo Original & Meu Plano de Estudo (48 Semanas)</p>
+      </div>
+      
+      <!-- Dock do Temporizador Global (40 min) -->
+      <div class="timer-dock" id="timerDock" role="region" aria-label="Temporizador de Estudo">
+        <div class="timer-display-group">
+          <span class="timer-label">Temporizador (40 min)</span>
+          <span class="timer-digits" id="timerDigits" aria-live="off">40:00</span>
+          <span class="timer-status-badge" id="timerStatusBadge">Pausado</span>
+        </div>
+        <div class="timer-controls">
+          <button type="button" class="btn btn-sm btn-primary" id="btnTimerStart" aria-label="Iniciar temporizador">Iniciar</button>
+          <button type="button" class="btn btn-sm btn-secondary" id="btnTimerPause" aria-label="Pausar temporizador" disabled>Pausar</button>
+          <button type="button" class="btn btn-sm btn-outline" id="btnTimerReset" aria-label="Reiniciar temporizador">Zerar</button>
+          <button type="button" class="btn btn-sm btn-ghost" id="btnTimerToDiary" title="Transferir minutos praticados para o diário">⏱ Registrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegação Principal -->
+    <nav class="app-nav" role="navigation" aria-label="Navegação Principal do Curso">
+      <ul class="nav-tabs" role="tablist">
+        <li role="presentation">
+          <button class="nav-tab active" role="tab" id="tab-inicio" aria-controls="view-inicio" aria-selected="true" data-view="inicio">Início</button>
+        </li>
+        <li role="presentation">
+          <button class="nav-tab" role="tab" id="tab-catalogo" aria-controls="view-catalogo" aria-selected="false" data-view="catalogo">Curso Original (Método Tríade)</button>
+        </li>
+        <li role="presentation">
+          <button class="nav-tab" role="tab" id="tab-plano" aria-controls="view-plano" aria-selected="false" data-view="plano">Meu Plano de Estudo</button>
+        </li>
+        <li role="presentation">
+          <button class="nav-tab" role="tab" id="tab-sessao" aria-controls="view-sessao" aria-selected="false" data-view="sessao">Sessão de Prática</button>
+        </li>
+        <li role="presentation">
+          <button class="nav-tab" role="tab" id="tab-exercicios" aria-controls="view-exercicios" aria-selected="false" data-view="exercicios">Exercícios</button>
+        </li>
+        <li role="presentation">
+          <button class="nav-tab" role="tab" id="tab-fontes" aria-controls="view-fontes" aria-selected="false" data-view="fontes">Fontes & Acervo</button>
+        </li>
+        <li role="presentation">
+          <button class="nav-tab" role="tab" id="tab-diario" aria-controls="view-diario" aria-selected="false" data-view="diario">Diário & Avaliação</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner de Notificação / Persistência -->
+  <div class="storage-alert" id="storageAlert" style="display: none;" role="alert">
+    <span>Atenção: O armazenamento local (localStorage) não está disponível neste navegador. O progresso será mantido apenas durante esta sessão.</span>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main class="app-main" id="mainContent" role="main">
+    
+    <!-- ==================== TELA 1: INÍCIO ==================== -->
+    <section class="app-view active" id="view-inicio" role="tabpanel" aria-labelledby="tab-inicio">
+      <div class="view-header">
+        <h2>Painel Geral de Estudos</h2>
+        <p class="text-muted">Acesso unificado à biblioteca integral do Método Tríade e ao seu plano personalizado de estudos.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Card 1: Próxima Ação no Plano -->
+        <div class="card card-hero">
+          <div class="card-body">
+            <span class="badge badge-accent">Meu Plano de Estudo (Personalizado)</span>
+            <h3 id="dashLastSessionTitle">Semana 1 · Sessão A</h3>
+            <p id="dashLastSessionDesc">Diagnóstico de Entrada no Violão Solo (40 min)</p>
+            <div class="card-actions">
+              <button type="button" class="btn btn-primary" id="btnContinueSession">Abrir Sessão Atual (40 min)</button>
+              <button type="button" class="btn btn-outline" id="btnGoToPlanOverview">Ver Plano de 48 Semanas</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Biblioteca Método Tríade -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Curso Original (Método Tríade)</h3>
+          </div>
+          <div class="card-body">
+            <p class="text-sm">Acervo completo do curso no Google Drive. Todas as 300 aulas catalogadas em 11 módulos, com vídeos, materiais em PDF e marcação de estudo independente.</p>
+            <div class="stats-mini-row" style="margin: 14px 0;">
+              <span class="badge badge-info" id="statCatalogoAulasComArquivo">197 aulas disponíveis</span>
+              <span class="badge badge-planned" id="statCatalogoAulasSemArquivo">103 indisponíveis no backup</span>
+            </div>
+            <div class="card-actions">
+              <button type="button" class="btn btn-secondary" id="btnGoToCatalogo">Explorar Catálogo do Método</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Disponibilidade Semanal e Regras -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Rotina e Disponibilidade</h3>
+          </div>
+          <div class="card-body">
+            <ul class="routine-summary-list">
+              <li><strong>Sessões Obrigatórias:</strong> 3 sessões de 40 minutos (A, B, C) = 120 min/semana.</li>
+              <li><strong>Sessão Opcional:</strong> 1 sessão de 40 minutos (D) = relaxamento e repertório livre.</li>
+              <li><strong>Orçamento de Tempo:</strong> Vídeos e teoria cabem dentro dos 40 minutos.</li>
+              <li><strong>Autonomia:</strong> Sem bloqueio de calendário; navegação livre por todo o conteúdo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 4: Resumo de Progresso -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Resumo do Progresso Registrado</h3>
+          </div>
+          <div class="card-body">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-value" id="statSessionsCount">0</span>
+                <span class="stat-label">Sessões Praticadas</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="statMinutesCount">0</span>
+                <span class="stat-label">Minutos no Plano</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="statCatalogoAssistidasCount">0 / 300</span>
+                <span class="stat-label">Aulas Assistidas</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="statCompletedUnitsCount">0 / 3</span>
+                <span class="stat-label">Unidades Homologadas</span>
+              </div>
+            </div>
+            <div class="units-progress-list" id="dashUnitsProgressList"></div>
+            <div class="persistence-disclaimer">
+              <small class="text-muted">ℹ Seus dados residem localmente neste dispositivo/navegador via <code>localStorage</code>. Utilize a opção de <strong>Exportar Backup JSON</strong> na aba Diário para não perder seus registros.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TELA 2: CURSO ORIGINAL (MÉTODO TRÍADE) ==================== -->
+    <section class="app-view" id="view-catalogo" role="tabpanel" aria-labelledby="tab-catalogo">
+      <div class="view-header">
+        <h2>Catálogo do Curso Original — Método Tríade</h2>
+        <p class="text-muted">Biblioteca integral com a sequência catalogada do Método Tríade presente no Drive (Módulos 1 a 9, Complemento de Escalas 10 e Lives/Sorteios 11). Materiais agrupados por aula real.</p>
+      </div>
+
+      <!-- Barra de Filtros e Busca do Catálogo -->
+      <div class="catalog-filters-bar">
+        <div class="filter-group-main">
+          <div class="search-input-box">
+            <label for="catalogSearchInput" class="sr-only">Pesquisar aulas:</label>
+            <input type="search" id="catalogSearchInput" class="form-control" placeholder="🔍 Pesquisar por título, música, acorde ou módulo...">
+          </div>
+          <div class="module-select-box">
+            <label for="catalogModuleSelect" class="sr-only">Filtrar por Módulo:</label>
+            <select id="catalogModuleSelect" class="form-control">
+              <option value="all">Todos os Módulos (1 a 11)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-pills-row">
+          <span class="filter-label">Filtrar por:</span>
+          <button type="button" class="btn btn-sm btn-outline active" data-cat-filter="all">Todas as Aulas (300)</button>
+          <button type="button" class="btn btn-sm btn-outline" data-cat-filter="video">Com Vídeo (195)</button>
+          <button type="button" class="btn btn-sm btn-outline" data-cat-filter="pdf">Com PDF / Material (33)</button>
+          <button type="button" class="btn btn-sm btn-outline" data-cat-filter="disponivel">Disponíveis no Backup (197)</button>
+          <button type="button" class="btn btn-sm btn-outline" data-cat-filter="indisponivel">Indisponíveis no Backup (103)</button>
+        </div>
+      </div>
+
+      <!-- Alerta Informativo do Catálogo -->
+      <div class="alert alert-info">
+        <strong>Aviso de Catalogação:</strong> As 300 aulas representam o manifesto cadastrado. Aulas com arquivos físicos no backup estão marcadas como disponíveis com links diretos do Drive. Aulas sem arquivo (103 textos/quizzes originais da plataforma) estão registradas como indisponíveis no backup; fragmentos .part-Frag foram catalogados mas excluídos de uso didático. Marcar como assistido/praticado aqui é independente das avaliações do seu plano de estudo.
+      </div>
+
+      <!-- Lista de Módulos e Aulas -->
+      <div class="catalog-modules-list" id="catalogModulesList">
+        <!-- Renderizado dinamicamente pelo app.js -->
+      </div>
+    </section>
+
+    <!-- ==================== TELA 3: MEU PLANO DE ESTUDO (48 SEMANAS) ==================== -->
+    <section class="app-view" id="view-plano" role="tabpanel" aria-labelledby="tab-plano">
+      <div class="view-header">
+        <h2>Meu Plano de Estudo — 48 Semanas (Arquitetura v1.3)</h2>
+        <p class="text-muted">Rota personalizada complementar ao Método Tríade, estruturada para violão de nylon com preferência por MPB e formação geral ampla (técnica, ritmo, harmonia, leitura, percepção, improvisação, solo e acompanhamento).</p>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>Estrutura de Produção:</strong> As <strong>Unidades 1 a 3 (Semanas 1 a 12)</strong> possuem material detalhado e executável com sessões de 40 minutos e exercícios próprios homologados. As <strong>Unidades 4 a 12 (Semanas 13 a 48)</strong> constituem o planejamento arquitetural e não contêm aulas fictícias.
+      </div>
+
+      <!-- 8 Eixos de Formação Musical Geral -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <h3>Eixos de Formação Abrangente (Primeiro Ciclo)</h3>
+        </div>
+        <div class="card-body">
+          <div class="eixos-grid">
+            <div class="eixo-item"><strong>Instrumento e Técnica:</strong> postura, toque livre/apoiado, alternância i-m, polegar, ligados, pestanas.</div>
+            <div class="eixo-item"><strong>Ritmo e Acompanhamento:</strong> pulso, subdivisão, compassos, batidas e arpejos, síncopes brasileiras.</div>
+            <div class="eixo-item"><strong>Leitura e Braço:</strong> tablatura rítmica, alturas reais soantes SPN, notas no braço e transposição.</div>
+            <div class="eixo-item"><strong>Harmonia:</strong> tríades, inversões em 3 cordas, notas comuns, campo harmônico maior e tétrades.</div>
+            <div class="eixo-item"><strong>Ouvido e Percepção:</strong> cantar frases antes de tocar, localizar notas e reconhecer funções.</div>
+            <div class="eixo-item"><strong>Repertório e Interpretação:</strong> MPB cantada/instrumental, estudos tradicionais e contato entre estilos.</div>
+            <div class="eixo-item"><strong>Improvisação e Criação:</strong> variações rítmicas, pergunta/resposta, notas de acorde e pequenos arranjos.</div>
+            <div class="eixo-item"><strong>Solo e Conjunto:</strong> sustentação de melodia e baixo no mesmo instrumento e escuta polifônica.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- As 12 Unidades -->
+      <div class="course-units-container" id="planUnitsContainer">
+        <!-- Renderizado dinamicamente pelo app.js -->
+      </div>
+    </section>
+
+    <!-- ==================== TELA 4: SESSÃO DE ESTUDO (40 MIN) ==================== -->
+    <section class="app-view" id="view-sessao" role="tabpanel" aria-labelledby="tab-sessao">
+      <div class="session-nav-bar">
+        <button type="button" class="btn btn-sm btn-outline" id="btnPrevSession">← Sessão Anterior</button>
+        <div class="session-selector-inline">
+          <label for="currentSessionSelect" class="sr-only">Escolher sessão:</label>
+          <select id="currentSessionSelect" class="form-control select-session-main"></select>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline" id="btnNextSession">Próxima Sessão →</button>
+      </div>
+
+      <article class="session-card" id="sessionDetailsCard">
+        <header class="session-card-header">
+          <div class="session-meta-tags">
+            <span class="badge" id="sessionUnitBadge">Unidade 1</span>
+            <span class="badge" id="sessionWeekBadge">Semana 1</span>
+            <span class="badge" id="sessionTypeBadge">Obrigatória</span>
+          </div>
+          <h2 class="session-display-title" id="sessionDisplayTitle">Título da Sessão</h2>
+        </header>
+
+        <div class="session-card-body">
+          <!-- Objetivo e Pré-requisito -->
+          <div class="session-meta-box">
+            <div class="meta-row">
+              <strong>Objetivo da Sessão:</strong>
+              <p id="sessionObjetivoText"></p>
+            </div>
+            <div class="meta-row" id="sessionPrereqRow">
+              <strong>Pré-requisito:</strong>
+              <p id="sessionPrereqText"></p>
+            </div>
+          </div>
+
+          <!-- Distribuição dos 40 Minutos -->
+          <div class="session-section">
+            <div class="section-title-with-badge">
+              <h3>Distribuição de Tempo (Total Rigoroso: 40 minutos)</h3>
+              <span class="badge badge-info" id="sessionTotalMinBadge">40 min</span>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-time-blocks" id="sessionBlocksTable">
+                <thead>
+                  <tr>
+                    <th style="width: 130px;">Bloco</th>
+                    <th style="width: 90px;">Duração</th>
+                    <th>Atividade Específica no Instrumento / Acervo</th>
+                  </tr>
+                </thead>
+                <tbody id="sessionBlocksTbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Orientações Pedagógicas -->
+          <div class="session-grid-boxes">
+            <div class="box box-instruction">
+              <h4>Instrução Executável</h4>
+              <p id="sessionInstrucaoText"></p>
+            </div>
+            <div class="box box-difficulty">
+              <h4>Dificuldade Possível</h4>
+              <p id="sessionDificuldadeText"></p>
+            </div>
+            <div class="box box-simplification">
+              <h4>Simplificação Imediata</h4>
+              <p id="sessionSimplificacaoText"></p>
+            </div>
+            <div class="box box-criterion">
+              <h4>Critério de Saída</h4>
+              <p id="sessionCriterioText"></p>
+            </div>
+          </div>
+
+          <!-- Exercício Vinculado e Andamento -->
+          <div class="session-footer-actions">
+            <div class="tempo-control-box">
+              <label for="inputPersonalBpm">Andamento Sugerido: <strong id="sessionBpmSuggested">50–56 BPM</strong> | Meu BPM hoje:</label>
+              <input type="number" id="inputPersonalBpm" class="form-control input-sm" min="40" max="140" placeholder="Ex: 50">
+            </div>
+            <div class="linked-exercise-box" id="linkedExerciseBox">
+              <span id="linkedExerciseLabel">Exercício Associado:</span>
+              <button type="button" class="btn btn-secondary btn-sm" id="btnGoToExercise">Ver Tablatura e Notas</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="session-card-footer">
+          <button type="button" class="btn btn-primary" id="btnStartStudyFromSession">▶ Iniciar Timer para Esta Sessão</button>
+          <button type="button" class="btn btn-outline" id="btnLogThisSession">Registrar Prática no Diário</button>
+          <button type="button" class="btn btn-outline btn-print" onclick="window.print()">🖨 Imprimir Folha de Estudo</button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ==================== TELA 5: EXERCÍCIOS ==================== -->
+    <section class="app-view" id="view-exercicios" role="tabpanel" aria-labelledby="tab-exercicios">
+      <div class="view-header">
+        <h2>Caderno de Exercícios e Tablaturas (Homologados)</h2>
+        <p class="text-muted">Notação completa com alturas reais soantes (SPN), tablatura monoespaçada rigorosa, eventos por camada polifônica e regras de amortecimento ativo.</p>
+      </div>
+
+      <div class="exercise-selector-bar">
+        <div class="form-group">
+          <label for="exerciseSelect">Selecionar Exercício / Peça:</label>
+          <select id="exerciseSelect" class="form-control select-lg"></select>
+        </div>
+
+        <div class="exercise-version-toggle" id="exerciseVersionToggle">
+          <span class="toggle-label">Versão:</span>
+          <div class="btn-group" role="group" aria-label="Alternar versão">
+            <button type="button" class="btn btn-sm btn-primary active" id="btnVersionPrincipal">Principal</button>
+            <button type="button" class="btn btn-sm btn-outline" id="btnVersionSimplificada">Simplificada</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alerta de Entrega Parcial (Ex 6-S) -->
+      <div class="alert alert-warning" id="exercisePartialAlert" style="display: none;">
+        <strong>Aviso de Entrega:</strong> <span id="exercisePartialAlertText"></span>
+      </div>
+
+      <!-- Detalhes do Exercício -->
+      <article class="exercise-display-card" id="exerciseDisplayCard">
+        <header class="exercise-header">
+          <div class="exercise-tags">
+            <span class="badge badge-accent" id="exerciseUnitTag">Unidade 2</span>
+            <span class="badge" id="exerciseCompassosTag">8 Compassos</span>
+            <span class="badge" id="exerciseBpmTag">50–56 BPM</span>
+          </div>
+          <h3 id="exerciseDisplayTitle">Título do Exercício</h3>
+          <p class="text-muted" id="exerciseDescText"></p>
+        </header>
+
+        <!-- Tablatura Rítmica Monoespaçada -->
+        <div class="exercise-tab-section">
+          <div class="tab-header-controls">
+            <h4>Tablatura Rítmica Alinhada</h4>
+            <span class="tab-note">Cada coluna = 1 pulso (4/4). Número = casa atacada; = = sustentação; . = silêncio / amortecimento.</span>
+          </div>
+          <div class="tab-scroller">
+            <pre class="tab-ascii" id="exerciseTabAscii"></pre>
+          </div>
+        </div>
+
+        <!-- Tabela de Eventos Detalhados -->
+        <div class="exercise-events-section" id="exerciseEventsSection">
+          <h4>Tabela de Eventos por Camada (Alturas Reais SPN)</h4>
+          <p class="text-muted text-sm">O violão soa uma oitava abaixo da pauta tradicional. Alturas em notação científica real (C4 = Dó central 2ª corda c.1; E2 = 6ª solta).</p>
+          <div class="table-responsive">
+            <table class="table table-events" id="exerciseEventsTable">
+              <thead>
+                <tr>
+                  <th>Comp.</th>
+                  <th>Voz</th>
+                  <th>Pulso</th>
+                  <th>Duração</th>
+                  <th>Nota (SPN)</th>
+                  <th>Corda/Casa</th>
+                  <th>ME / MD</th>
+                  <th>Término</th>
+                  <th>Articulação / Função</th>
+                </tr>
+              </thead>
+              <tbody id="exerciseEventsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Diretrizes de Execução e Amortecimento -->
+        <div class="exercise-execution-notes">
+          <h4>Diretrizes de Sustentação e Amortecimento Ativo</h4>
+          <ul>
+            <li><strong>Sustentação:</strong> O som é mantido pela pressão do dedo da mão esquerda na casa sem tensão. O polegar da mão direita ataca o baixo e se afasta livremente; a sustentação do baixo não decorre de apoiar o polegar na corda.</li>
+            <li><strong>Amortecimento Ativo:</strong> Interrompa o som no término indicado aliviando suavemente a pressão na mão esquerda sem retirar o contato, ou recostando a polpa de um dedo da mão direita na corda.</li>
+            <li><strong>Pausa Melódica:</strong> A pausa na melodia não silencia o baixo. No compasso 8 de Ex. 2 e Ex. 3, o encerramento conjunto exige pausa tanto na melodia quanto no baixo no pulso 4.0.</li>
+          </ul>
+        </div>
+
+        <!-- Orientações Musicais Específicas do Exercício -->
+        <div class="exercise-specific-notes" id="exerciseSpecificNotesBox" style="margin-top: 18px; padding: 14px; background: var(--cor-superficie-destaque); border-radius: 6px; border-left: 4px solid var(--cor-destaque);">
+          <h4 id="exerciseSpecificNotesTitle">Orientações Musicais e Harmônicas da Versão</h4>
+          <div id="exerciseSpecificNotesContent" class="text-sm"></div>
+        </div>
+
+        <!-- Seção de Diretrizes Pedagógicas e Execução Dinâmica -->
+        <div id="exercisePedagogicalNotesSection" style="margin-top: 16px; display: none;"></div>
+      </article>
+    </section>
+
+    <!-- ==================== TELA 6: FONTES & ACERVO ==================== -->
+    <section class="app-view" id="view-fontes" role="tabpanel" aria-labelledby="tab-fontes">
+      <div class="view-header">
+        <h2>Fontes de Referência & Acervo Selecionado</h2>
+        <p class="text-muted">Vídeos e referências bibliográficas do curso com links externos diretos para o Google Drive.</p>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>Aviso Pedagógico Fundamental:</strong> Assistir a vídeos de acompanhamento ou tutoriais pertence ao orçamento de 40 minutos da sessão e <em>não comprova execução solo</em>. As aulas do acervo servem para observar postura, ataque e ritmo; a habilidade real é desenvolvida no instrumento.
+      </div>
+
+      <div class="sources-container" id="sourcesContainer"></div>
+    </section>
+
+    <!-- ==================== TELA 7: DIÁRIO & AVALIAÇÃO ==================== -->
+    <section class="app-view" id="view-diario" role="tabpanel" aria-labelledby="tab-diario">
+      <div class="view-header">
+        <h2>Diário de Bordo & Avaliação de Avanço</h2>
+        <p class="text-muted">Acompanhamento contínuo da prática diária e validação formal de entrega segundo a rubrica pedagógica do Codex.</p>
+      </div>
+
+      <div class="diario-tabs-subnav">
+        <button type="button" class="btn btn-sm btn-outline active" data-subtab="registro">Registrar Sessão Praticada</button>
+        <button type="button" class="btn btn-sm btn-outline" data-subtab="avaliacao">Avaliação de Entrega (Rubrica)</button>
+        <button type="button" class="btn btn-sm btn-outline" data-subtab="status">Status de Avanço Oficial</button>
+        <button type="button" class="btn btn-sm btn-outline" data-subtab="historico">Histórico Completo</button>
+        <button type="button" class="btn btn-sm btn-outline" data-subtab="backup">Backup & Restauração</button>
+      </div>
+
+      <!-- Subaba 1: Registrar Sessão Praticada -->
+      <div class="subtab-panel active" id="subtab-registro">
+        <div class="card">
+          <div class="card-header">
+            <h3>Novo Registro de Prática</h3>
+          </div>
+          <div class="card-body">
+            <form id="formLogSession">
+              <div class="form-row">
+                <div class="form-group col-4">
+                  <label for="logDate">Data da Prática:</label>
+                  <input type="date" id="logDate" class="form-control" required>
+                </div>
+                <div class="form-group col-4">
+                  <label for="logSessionSelect">Sessão Realizada:</label>
+                  <select id="logSessionSelect" class="form-control" required></select>
+                </div>
+                <div class="form-group col-4">
+                  <label for="logMinutes">Minutos Efetivos Praticados:</label>
+                  <input type="number" id="logMinutes" class="form-control" min="1" max="180" value="40" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-4">
+                  <label for="logBpm">BPM Pessoal Atingido:</label>
+                  <input type="number" id="logBpm" class="form-control" min="40" max="160" placeholder="Ex: 52">
+                </div>
+                <div class="form-group col-8">
+                  <label for="logTrecho">Trecho Prioritário Estudado:</label>
+                  <input type="text" id="logTrecho" class="form-control" placeholder="Ex: Compassos 1 a 4, transição melodia-baixo" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="logMelhoria">O que funcionou bem hoje:</label>
+                <input type="text" id="logMelhoria" class="form-control" placeholder="Ex: Baixo sustentado sem interromper na troca de corda">
+              </div>
+
+              <div class="form-group">
+                <label for="logDificuldade">Dificuldade principal observada (onde perdi uma voz ou travei):</label>
+                <input type="text" id="logDificuldade" class="form-control" placeholder="Ex: Pequena hesitação no pulso 1 do c.3 ao descer para o D4" required>
+              </div>
+
+              <div class="form-group">
+                <label for="logProximaAcao">Próxima ação concreta para a sessão seguinte:</label>
+                <input type="text" id="logProximaAcao" class="form-control" placeholder="Ex: Isolar apenas a transição c.2–c.3 a 48 BPM por 10 minutos" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Salvar Registro no Diário</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subaba 2: Avaliação de Entrega (Rubrica) -->
+      <div class="subtab-panel" id="subtab-avaliacao">
+        <div class="card">
+          <div class="card-header">
+            <h3>Avaliação Formal de Entrega (Rubrica Oficial 0 a 3)</h3>
+            <p class="text-muted text-sm">Registre a audição de uma tomada gravada da entrega da unidade. Lembre-se: o avanço requer nota mínima 2 em todas as 4 dimensões em duas sessões/datas distintas.</p>
+          </div>
+          <div class="card-body">
+            <form id="formRubricEvaluation">
+              <div class="form-row">
+                <div class="form-group col-4">
+                  <label for="rubricDate">Data da Tomada Gravada:</label>
+                  <input type="date" id="rubricDate" class="form-control" required>
+                </div>
+                <div class="form-group col-4">
+                  <label for="rubricUnitSelect">Unidade Avaliada:</label>
+                  <select id="rubricUnitSelect" class="form-control" required>
+                    <option value="u1">Unidade 1 — Estudo de 8 Compassos</option>
+                    <option value="u2">Unidade 2 — Peça "Primeiro Canto" (Ex. 3)</option>
+                    <option value="u3">Unidade 3 — Estudo Polifônico (Ex. 6)</option>
+                  </select>
+                </div>
+                <div class="form-group col-4">
+                  <label for="rubricVersionSelect">Versão Executada:</label>
+                  <select id="rubricVersionSelect" class="form-control" required></select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="rubricAudioRef">Referência / Nome do Arquivo de Áudio Gravado:</label>
+                <input type="text" id="rubricAudioRef" class="form-control" placeholder="Ex: gravacao_unidade2_sessao8c_take2.m4a (o arquivo não é enviado, apenas anotado)">
+              </div>
+
+              <!-- Confirmação Explícita de Execução Integral para Unidade 2 (16 Compassos) -->
+              <div id="u2ConfirmationContainer" style="display: none; margin: 14px 0; padding: 12px 14px; background: var(--cor-superficie-destaque, #f6f8fa); border-radius: 6px; border: 1px solid var(--cor-borda, #d0d7de);">
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-weight: 600;">
+                  <input type="checkbox" id="rubricConfirmU2Full" name="rubricConfirmU2Integral" style="margin-top: 3px;">
+                  <span>Confirmo que a gravação/execução cobriu a totalidade dos 16 compassos da peça (8 compassos com repetição completa AABB).</span>
+                </label>
+                <p class="text-muted text-sm" style="margin: 4px 0 0 24px;">Esta confirmação explícita é requisito pedagógico obrigatório para liberação do avanço curricular da Unidade 2.</p>
+              </div>
+
+              <div class="rubric-dimensions-group">
+                <!-- 1. Continuidade Rítmica -->
+                <div class="rubric-dimension-box">
+                  <div class="dim-info">
+                    <h4>1. Continuidade Rítmica</h4>
+                    <p class="text-sm text-muted">Manter o pulso constante sem pausas involuntárias nos pontos de transição.</p>
+                  </div>
+                  <div class="dim-options">
+                    <label><input type="radio" name="score_continuidade" value="0" required> 0: Não executo</label>
+                    <label><input type="radio" name="score_continuidade" value="1"> 1: Quebras e pausas</label>
+                    <label><input type="radio" name="score_continuidade" value="2"> 2: Lento e contínuo (Meta)</label>
+                    <label><input type="radio" name="score_continuidade" value="3"> 3: Fluente e expressivo</label>
+                  </div>
+                </div>
+
+                <!-- 2. Clareza Sonora -->
+                <div class="rubric-dimension-box">
+                  <div class="dim-info">
+                    <h4>2. Clareza Sonora</h4>
+                    <p class="text-sm text-muted">Notas limpas, sem trastejamentos, com sustain controlado e término nítido.</p>
+                  </div>
+                  <div class="dim-options">
+                    <label><input type="radio" name="score_clareza" value="0" required> 0: Não executo</label>
+                    <label><input type="radio" name="score_clareza" value="1"> 1: Ruídos/abafamentos involuntários</label>
+                    <label><input type="radio" name="score_clareza" value="2"> 2: Som limpo (Meta)</label>
+                    <label><input type="radio" name="score_clareza" value="3"> 3: Timbre refinado e redondo</label>
+                  </div>
+                </div>
+
+                <!-- 3. Equilíbrio entre Vozes -->
+                <div class="rubric-dimension-box">
+                  <div class="dim-info">
+                    <h4>3. Equilíbrio entre Vozes</h4>
+                    <p class="text-sm text-muted">Melodia cantábile nítida à frente do baixo e das vozes internas de acompanhamento.</p>
+                  </div>
+                  <div class="dim-options">
+                    <label><input type="radio" name="score_equilibrio" value="0" required> 0: Não executo</label>
+                    <label><input type="radio" name="score_equilibrio" value="1"> 1: Melodia sumindo ou encoberta</label>
+                    <label><input type="radio" name="score_equilibrio" value="2"> 2: Melodia bem destacada (Meta)</label>
+                    <label><input type="radio" name="score_equilibrio" value="3"> 3: Três vozes equilibradas</label>
+                  </div>
+                </div>
+
+                <!-- 4. Compreensão e Autonomia -->
+                <div class="rubric-dimension-box">
+                  <div class="dim-info">
+                    <h4>4. Compreensão e Autonomia</h4>
+                    <p class="text-sm text-muted">Conhecimento da forma, saber onde estão as tônicas e recuperar erros sem parar.</p>
+                  </div>
+                  <div class="dim-options">
+                    <label><input type="radio" name="score_autonomia" value="0" required> 0: Não executo</label>
+                    <label><input type="radio" name="score_autonomia" value="1"> 1: Travamento sem retorno</label>
+                    <label><input type="radio" name="score_autonomia" value="2"> 2: Recupera sem voltar ao início (Meta)</label>
+                    <label><input type="radio" name="score_autonomia" value="3"> 3: Domínio total da peça</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <label for="rubricObservacoes">Observações da Escuta:</label>
+                <textarea id="rubricObservacoes" class="form-control" rows="3" placeholder="Anotações pessoais sobre a gravação..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Registrar Avaliação Formal</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subaba 3: Status de Avanço Oficial -->
+      <div class="subtab-panel" id="subtab-status">
+        <div class="card">
+          <div class="card-header">
+            <h3>Parecer do Motor de Avanço Pedagógico</h3>
+            <p class="text-muted text-sm">O sistema audita automaticamente seus registros e verifica se a regra de avanço do Codex (nota ≥ 2 em todas as 4 dimensões em duas datas distintas) foi atendida.</p>
+          </div>
+          <div class="card-body" id="advancementStatusBody"></div>
+        </div>
+      </div>
+
+      <!-- Subaba 4: Histórico Completo -->
+      <div class="subtab-panel" id="subtab-historico">
+        <div class="card">
+          <div class="card-header flex-between">
+            <h3>Histórico de Registros e Avaliações</h3>
+            <div class="history-filters">
+              <label for="filterHistoryUnit" class="sr-only">Filtrar por unidade:</label>
+              <select id="filterHistoryUnit" class="form-control select-sm">
+                <option value="all">Todas as Unidades</option>
+                <option value="u1">Unidade 1</option>
+                <option value="u2">Unidade 2</option>
+                <option value="u3">Unidade 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="historyEntriesContainer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subaba 5: Backup & Restauração -->
+      <div class="subtab-panel" id="subtab-backup">
+        <div class="card">
+          <div class="card-header">
+            <h3>Backup e Restauração de Dados</h3>
+            <p class="text-muted text-sm">Como o curso funciona sem servidor sob o protocolo local <code>file://</code>, seus dados residem no navegador. Exporte regularmente o backup em JSON para manter seu diário seguro.</p>
+          </div>
+          <div class="card-body">
+            <div class="backup-actions-grid">
+              <div class="backup-card">
+                <h4>Exportar Backup</h4>
+                <p>Gere um arquivo JSON com todas as suas sessões praticadas, aulas assistidas no catálogo, notas da rubrica e anotações do diário.</p>
+                <button type="button" class="btn btn-primary" id="btnExportJson">Baixar Arquivo JSON de Backup</button>
+              </div>
+
+              <div class="backup-card">
+                <h4>Importar Backup</h4>
+                <p>Recupere seus dados a partir de um arquivo JSON exportado anteriormente.</p>
+                <input type="file" id="importJsonFile" accept=".json" class="form-control" style="margin-bottom: 12px;">
+                <div id="importPreviewBox" style="display: none;" class="import-preview-box">
+                  <p id="importPreviewText"></p>
+                  <div class="import-action-buttons">
+                    <button type="button" class="btn btn-secondary" id="btnConfirmMerge">Mesclar com Dados Atuais</button>
+                    <button type="button" class="btn btn-danger" id="btnConfirmReplace">Substituir Tudo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé da Aplicação -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-container">
+      <p>Curso de Violão — Método Tríade (Versão 1.3 Revisada) • Execução estritamente local e offline</p>
+      <p class="text-muted text-sm">Design pedagógico: Codex • Implementação: Antigravity / Gemini</p>
+    </div>
+  </footer>
+
+  <!-- Scripts locais carregados sem fetch ou ES modules para total suporte file:// -->
+  <script src="conteudo.js"></script>
+  <script src="nucleo-regras.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

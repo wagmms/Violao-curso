@@ -1,0 +1,34 @@
+{
+  "erros": [
+    "ex3 c8: dedo MD i em dois ataques",
+    "Tabelas 12 / versões JSON 6",
+    "tabela-5 c8: dedo MD i em dois ataques"
+  ],
+  "eventos_por_versao": {
+    "ex1": 27,
+    "ex2": 36,
+    "ex3": 51,
+    "ex4": 14,
+    "ex5": 13,
+    "ex6": 26,
+    "tabela-1": 27,
+    "tabela-2": 14,
+    "tabela-3": 36,
+    "tabela-4": 23,
+    "tabela-5": 51,
+    "tabela-6": 34,
+    "tabela-7": 14,
+    "tabela-8": 12,
+    "tabela-9": 13,
+    "tabela-10": 12,
+    "tabela-11": 26,
+    "tabela-12": 13
+  },
+  "tabelas": 12,
+  "sessoes": 32,
+  "duracao_16_compassos_50_56_bpm": [
+    68.57142857142857,
+    76.8
+  ],
+  "limites": "Validação simbólica: não certifica conforto físico nem intenção harmônica."
+}

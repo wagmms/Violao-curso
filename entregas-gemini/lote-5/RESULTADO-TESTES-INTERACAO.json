@@ -1,0 +1,240 @@
+{
+  "data": "2026-09-13T17:38:37.975Z",
+  "chrome": {
+    "browser": "Google Chrome",
+    "passed": true,
+    "results": [
+      {
+        "desc": "Título da página correto",
+        "pass": true
+      },
+      {
+        "desc": "300 aulas renderizadas inicialmente em <details>",
+        "pass": true
+      },
+      {
+        "desc": "11 módulos renderizados como seções",
+        "pass": true
+      },
+      {
+        "desc": "Timer exibe 40:00 no início",
+        "pass": true
+      },
+      {
+        "desc": "Busca por 'balada' filtra catálogo (9 aulas encontradas)",
+        "pass": true
+      },
+      {
+        "desc": "Filtro por módulo 'mod-1' exibe exatamente 46 aulas",
+        "pass": true
+      },
+      {
+        "desc": "Filtro por 'pdf' exibe apenas aulas com PDF (30 aulas)",
+        "pass": true
+      },
+      {
+        "desc": "Filtro 'indisponível' exibe exatamente 103 aulas sem arquivos",
+        "pass": true
+      },
+      {
+        "desc": "Restauração de filtros reexibe 300 aulas",
+        "pass": true
+      },
+      {
+        "desc": "Links de estudo utilizáveis apontam para drive.google.com com target=_blank e rel=noopener noreferrer",
+        "pass": true
+      },
+      {
+        "desc": "Progresso atualizado com '1 assistidas · 1 praticadas'",
+        "pass": true
+      },
+      {
+        "desc": "Persistência após reload: estatísticas preservam '1 assistidas · 1 praticadas'",
+        "pass": true
+      },
+      {
+        "desc": "Persistência após reload: anotação preservada no textarea",
+        "pass": true
+      },
+      {
+        "desc": "Timer iniciado: botão altera rótulo para 'Pausar'",
+        "pass": true
+      },
+      {
+        "desc": "Timer em contagem regressiva decrementou tempo (39:59)",
+        "pass": true
+      },
+      {
+        "desc": "Timer pausado: botão altera rótulo para 'Retomar'",
+        "pass": true
+      },
+      {
+        "desc": "Timer permanece congelado enquanto pausado",
+        "pass": true
+      },
+      {
+        "desc": "Timer reiniciado: volta para 'Iniciar' e '40:00'",
+        "pass": true
+      },
+      {
+        "desc": "Backup com aula desconhecida rejeitado com mensagem descritiva",
+        "pass": true
+      },
+      {
+        "desc": "Botões de mesclar/substituir desabilitados após tentativa inválida",
+        "pass": true
+      },
+      {
+        "desc": "Mesclagem de backup unificou assistidas e praticadas ('2 assistidas · 2 praticadas')",
+        "pass": true
+      },
+      {
+        "desc": "Mesclagem preservou nota local da aula 1 sem ser sobrescrita pelo backup",
+        "pass": true
+      },
+      {
+        "desc": "Mesclagem incorporou anotação da aula 2",
+        "pass": true
+      },
+      {
+        "desc": "Conteúdo importado não executa script nem cria elementos HTML no DOM (tratado como texto puro no textarea)",
+        "pass": true
+      },
+      {
+        "desc": "Layout responsivo em 375px: sem overflow horizontal, elementos contidos na tela",
+        "pass": true
+      },
+      {
+        "desc": "Layout responsivo em 1366px: área principal centrada com max-width de 1050px",
+        "pass": true
+      },
+      {
+        "desc": "Impressão (@media print): toolbar e timer ocultados; somente aulas abertas (<details open>) são visíveis",
+        "pass": true
+      },
+      {
+        "desc": "Simulação de localStorage bloqueado tratada com resiliência: catálogo segue operacional com 300 aulas",
+        "pass": true
+      }
+    ]
+  },
+  "edge": {
+    "browser": "Microsoft Edge",
+    "passed": true,
+    "results": [
+      {
+        "desc": "Título da página correto",
+        "pass": true
+      },
+      {
+        "desc": "300 aulas renderizadas inicialmente em <details>",
+        "pass": true
+      },
+      {
+        "desc": "11 módulos renderizados como seções",
+        "pass": true
+      },
+      {
+        "desc": "Timer exibe 40:00 no início",
+        "pass": true
+      },
+      {
+        "desc": "Busca por 'balada' filtra catálogo (9 aulas encontradas)",
+        "pass": true
+      },
+      {
+        "desc": "Filtro por módulo 'mod-1' exibe exatamente 46 aulas",
+        "pass": true
+      },
+      {
+        "desc": "Filtro por 'pdf' exibe apenas aulas com PDF (30 aulas)",
+        "pass": true
+      },
+      {
+        "desc": "Filtro 'indisponível' exibe exatamente 103 aulas sem arquivos",
+        "pass": true
+      },
+      {
+        "desc": "Restauração de filtros reexibe 300 aulas",
+        "pass": true
+      },
+      {
+        "desc": "Links de estudo utilizáveis apontam para drive.google.com com target=_blank e rel=noopener noreferrer",
+        "pass": true
+      },
+      {
+        "desc": "Progresso atualizado com '1 assistidas · 1 praticadas'",
+        "pass": true
+      },
+      {
+        "desc": "Persistência após reload: estatísticas preservam '1 assistidas · 1 praticadas'",
+        "pass": true
+      },
+      {
+        "desc": "Persistência após reload: anotação preservada no textarea",
+        "pass": true
+      },
+      {
+        "desc": "Timer iniciado: botão altera rótulo para 'Pausar'",
+        "pass": true
+      },
+      {
+        "desc": "Timer em contagem regressiva decrementou tempo (39:59)",
+        "pass": true
+      },
+      {
+        "desc": "Timer pausado: botão altera rótulo para 'Retomar'",
+        "pass": true
+      },
+      {
+        "desc": "Timer permanece congelado enquanto pausado",
+        "pass": true
+      },
+      {
+        "desc": "Timer reiniciado: volta para 'Iniciar' e '40:00'",
+        "pass": true
+      },
+      {
+        "desc": "Backup com aula desconhecida rejeitado com mensagem descritiva",
+        "pass": true
+      },
+      {
+        "desc": "Botões de mesclar/substituir desabilitados após tentativa inválida",
+        "pass": true
+      },
+      {
+        "desc": "Mesclagem de backup unificou assistidas e praticadas ('2 assistidas · 2 praticadas')",
+        "pass": true
+      },
+      {
+        "desc": "Mesclagem preservou nota local da aula 1 sem ser sobrescrita pelo backup",
+        "pass": true
+      },
+      {
+        "desc": "Mesclagem incorporou anotação da aula 2",
+        "pass": true
+      },
+      {
+        "desc": "Conteúdo importado não executa script nem cria elementos HTML no DOM (tratado como texto puro no textarea)",
+        "pass": true
+      },
+      {
+        "desc": "Layout responsivo em 375px: sem overflow horizontal, elementos contidos na tela",
+        "pass": true
+      },
+      {
+        "desc": "Layout responsivo em 1366px: área principal centrada com max-width de 1050px",
+        "pass": true
+      },
+      {
+        "desc": "Impressão (@media print): toolbar e timer ocultados; somente aulas abertas (<details open>) são visíveis",
+        "pass": true
+      },
+      {
+        "desc": "Simulação de localStorage bloqueado tratada com resiliência: catálogo segue operacional com 300 aulas",
+        "pass": true
+      }
+    ]
+  },
+  "geralAprovado": true
+}

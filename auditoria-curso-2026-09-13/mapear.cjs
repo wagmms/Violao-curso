@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),crypto=require('crypto');
+const root=path.resolve(__dirname,'..'),s={window:{}};vm.createContext(s);
+for(const p of ['interface-v2/dados-catalogo.js','interface-v2/dados-atividades.js','interface/guias-dados.js'])vm.runInContext(fs.readFileSync(path.join(root,p),'utf8'),s);
+const linhas=['# Cobertura das 300 entradas do curso','', 'Inventário estrutural de 13/09/2026. “Com arquivo” reproduz o catálogo local; não verifica acesso atual ao Drive. Guia v1 indica presença no JavaScript da interface anterior. Todas as aulas continuam pendentes de conferência audiovisual integral nesta revisão. Referência no piloto não significa equivalência curricular nem link funcional.','', '| Módulo | ID | Título catalogado | Arquivo | Guia v1 | Referenciada no piloto | Próxima verificação |','|---|---|---|---|---|---|---|'];
+for(const m of s.window.CURSO_DADOS.catalogoOriginal)for(const a of m.aulas){const refs=s.window.PILOTO_ATIVIDADES.filter(x=>x.fontes.some(f=>f.aulaId===a.id)).map(x=>x.id);const guia=!!s.window.CURSO_GUIAS[a.id];linhas.push('| '+[m.id,a.id,a.grupo_aula,a.temArquivos?'Sim':'Não',guia?'Sim':'Não',refs.join(', ')||'—',!a.temArquivos?'Classificar lacuna e dependências':guia?'Conferir fonte e adaptar guia':m.id==='mod-4'||m.id==='mod-5'?'Revisar proposta do lote 7':m.tipo==='administrativo_lives'?'Separar extras e conferir acesso':'Inspecionar fonte e definir objetivo'].map(x=>String(x).replaceAll('|','/').replaceAll('\n',' ')).join(' | ')+' |');}
+fs.writeFileSync(path.join(__dirname,'COBERTURA-300-AULAS.md'),linhas.join('\n'));
+const manifest={data:new Date().toISOString(),arquivos:{}};
+for(const dir of ['interface-v2','interface'])for(const f of fs.readdirSync(path.join(root,dir))){const p=path.join(root,dir,f);if(fs.statSync(p).isFile())manifest.arquivos[`${dir}/${f}`]=crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');}
+fs.writeFileSync(path.join(__dirname,'snapshot-sha256.json'),JSON.stringify(manifest,null,2));
+console.log('Cobertura: 300 entradas. Snapshot registrado.');

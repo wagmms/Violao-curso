@@ -1,0 +1,36 @@
+{
+  "aulas": 46,
+  "erros": [],
+  "amostra_fontes": [
+    {
+      "titulo": "01 - APOSTILAS e Apresentação [Descrição].md",
+      "caminho": "01. Módulo 1/01 - APOSTILAS e Apresentação [Descrição].md",
+      "existe": false
+    },
+    {
+      "titulo": "01 - APOSTILAS e Apresentação.pt-BR.vtt",
+      "caminho": "01. Módulo 1/01 - APOSTILAS e Apresentação.pt-BR.vtt",
+      "existe": false
+    },
+    {
+      "titulo": "01 - APOSTILAS e Apresentação.pt-BR_6.vtt",
+      "caminho": "01. Módulo 1/01 - APOSTILAS e Apresentação.pt-BR_6.vtt",
+      "existe": false
+    },
+    {
+      "titulo": "02 - H P - 1.1 Noções Básicas de Ritmo [Descrição].md",
+      "caminho": "01. Módulo 1/02 - H P - 1.1 Noções Básicas de Ritmo [Descrição].md",
+      "existe": false
+    },
+    {
+      "titulo": "02 - H P - 1.1 Noções Básicas de Ritmo.pt-BR.vtt",
+      "caminho": "01. Módulo 1/02 - H P - 1.1 Noções Básicas de Ritmo.pt-BR.vtt",
+      "existe": false
+    },
+    {
+      "titulo": "02 - H P - 1.1 Noções Básicas de Ritmo.pt-BR_11.vtt",
+      "caminho": "01. Módulo 1/02 - H P - 1.1 Noções Básicas de Ritmo.pt-BR_11.vtt",
+      "existe": false
+    }
+  ]
+}

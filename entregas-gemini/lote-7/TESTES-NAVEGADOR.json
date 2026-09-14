@@ -1,0 +1,69 @@
+{
+  "data_execucao": "2026-09-13T18:37:20.099Z",
+  "motor_navegador": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "todas_etapas_passaram": true,
+  "total_etapas": 12,
+  "etapas_com_sucesso": 12,
+  "etapas": [
+    {
+      "step": "1. Carregamento da página",
+      "ok": true,
+      "details": "Curso de Violão — Método Tríade"
+    },
+    {
+      "step": "2. Renderização do catálogo completo",
+      "ok": true,
+      "details": "300 aulas no catálogo"
+    },
+    {
+      "step": "3. Abertura do Modal do Mapa de Estudo",
+      "ok": true,
+      "details": "Curso de Violão — Método TríadeMapa Geral de Estudo e Arquitetura Curricular (Re"
+    },
+    {
+      "step": "4. Fechamento do Modal do Mapa de Estudo",
+      "ok": true,
+      "details": "Modal fechado com sucesso"
+    },
+    {
+      "step": "5. Presença de Guia Homologado no Módulo 1",
+      "ok": true,
+      "details": "Apresentação Geral e Orientações para o Caderno de Estudos"
+    },
+    {
+      "step": "6. Isolamento estrito do Módulo 4",
+      "ok": true,
+      "details": "Guias renderizados no Módulo 4: 0 (zero guias na interface)"
+    },
+    {
+      "step": "7. Isolamento estrito do Módulo 5",
+      "ok": true,
+      "details": "Guias renderizados no Módulo 5: 0 (zero guias na interface)"
+    },
+    {
+      "step": "8. Filtro \"Com guia de estudo\"",
+      "ok": true,
+      "details": "128 aulas exibidas (exatamente 128 dos Módulos 1 a 3 homologados)"
+    },
+    {
+      "step": "9. Busca textual por termo do curso (\"balada\")",
+      "ok": true,
+      "details": "9 aulas encontradas"
+    },
+    {
+      "step": "10. Gravação em localStorage",
+      "ok": true,
+      "details": "Teste automatizado de persistência Lote 7: acordes e postura OK."
+    },
+    {
+      "step": "11. Restauração de dados após reload",
+      "ok": true,
+      "details": "Marcado e restaurado: Teste automatizado de persistência Lote 7: acordes e postura OK."
+    },
+    {
+      "step": "12. Integridade do esquema de backup",
+      "ok": true,
+      "details": "Versão do esquema: 1, aulas assistidas: 1"
+    }
+  ]
+}

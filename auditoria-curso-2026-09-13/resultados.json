@@ -1,0 +1,594 @@
+{
+  "data": "2026-09-13T22:59:24.611Z",
+  "escopo": "Perfil isolado; dados simulados; sem acessar Drive ou microfone",
+  "testes": [
+    {
+      "nome": "Fontes hidratadas",
+      "resultado": {
+        "fontes": [
+          {
+            "aulaId": "aula-mod-1-2",
+            "observacao": "Referência teórica primária do acervo sobre pulso e métrica básica.",
+            "autoria": "Método Tríade (acervo) / Roteiro didático e exercícios por Antigravity (em revisão)"
+          },
+          {
+            "aulaId": "aula-mod-1-8",
+            "observacao": "Fundamentos de compasso binário e quaternário.",
+            "autoria": "Método Tríade (acervo)"
+          }
+        ],
+        "links": [
+          "",
+          ""
+        ],
+        "alphaTab": false
+      }
+    },
+    {
+      "nome": "Atividade 7: contrato de backup",
+      "resultado": "Atividade atual inválida ou desconhecida: \"ativ-7\"."
+    },
+    {
+      "nome": "Atividade 7: timer",
+      "resultado": "Cannot read properties of undefined (reading 'fase')"
+    },
+    {
+      "nome": "Troca com progresso: contrato de backup",
+      "resultado": {
+        "erro": "Status de tentativa inválido: interrompida",
+        "tentativa": {
+          "id": "tent-1789340369531",
+          "data": "2026-09-13",
+          "atividadeId": "ativ-1",
+          "nivel": "alvo",
+          "status": "interrompida",
+          "bpm": 0,
+          "observacoes": "Sessão interrompida aos 1 min para troca."
+        }
+      }
+    },
+    {
+      "nome": "Reabertura após interrupção",
+      "resultado": {
+        "atividade": "ativ-1",
+        "tentativas": 0
+      }
+    },
+    {
+      "nome": "Preparação com repetir altera revisão do Alvo",
+      "resultado": [
+        {
+          "id": "rev-audit",
+          "atividadeId": "ativ-1",
+          "intervaloDias": 2,
+          "ciclo": 1,
+          "dataPrevista": "2026-09-12",
+          "concluida": true,
+          "dataConclusao": "2026-09-13"
+        },
+        {
+          "id": "rev-1789340369663-411",
+          "atividadeId": "ativ-1",
+          "ciclo": 1,
+          "intervaloDias": 2,
+          "dataPrevista": "2026-09-15",
+          "concluida": false
+        }
+      ]
+    },
+    {
+      "nome": "Conclusão: BPM inválido, sessão e histórico",
+      "resultado": {
+        "ativa": true,
+        "tentativa": {
+          "id": "tent-1789340369676-957",
+          "data": "2026-09-13",
+          "atividadeId": "ativ-1",
+          "nivel": "alvo",
+          "status": "consegui",
+          "bpm": -9,
+          "compassosSemErro": 0,
+          "tentativasAteAcertar": 0,
+          "checklistExecutado": {
+            "pulso": false,
+            "notas": false,
+            "encerramento": false
+          },
+          "observacoes": ""
+        },
+        "habilidades": {
+          "pulso-subdivisao": {
+            "status": "alvo_demonstrado",
+            "data": "2026-09-13"
+          }
+        }
+      }
+    },
+    {
+      "nome": "Exportação durante sessão",
+      "resultado": {
+        "exportado": 0,
+        "salvo": 600000
+      }
+    },
+    {
+      "nome": "Recarregar após dez minutos sem outra ação",
+      "resultado": 0
+    },
+    {
+      "nome": "Nível após trocar atividade",
+      "resultado": {
+        "tela": "variacao",
+        "sessao": "preparacao"
+      }
+    },
+    {
+      "nome": "Hoje: recuperação realmente abre preparação",
+      "resultado": {
+        "nivel": "alvo",
+        "ativa": true
+      }
+    },
+    {
+      "nome": "Hoje: botão Começar durante sessão ativa",
+      "resultado": {
+        "ativa": false
+      }
+    },
+    {
+      "nome": "Valores herdados em nova avaliação",
+      "resultado": {
+        "compassos": "8",
+        "pulso": true,
+        "criterio": "Critérios de saída â€” confirme antes de registrar sucesso:\nExecutar 16 compassos alternados (A e D) a 60 BPM no nível Alvo sem perder o tempo 1."
+      }
+    },
+    {
+      "nome": "Ouvido: retomada após responder",
+      "resultado": {
+        "respondido": true,
+        "proximaVisivel": "none",
+        "historicoPersistido": false
+      }
+    },
+    {
+      "nome": "Busca sem acentos",
+      "resultado": "Nenhuma aula encontrada para os filtros selecionados."
+    },
+    {
+      "nome": "Impressão inclui telas já visitadas",
+      "resultado": [
+        "view-hoje",
+        "view-aprender",
+        "view-praticar",
+        "view-progresso",
+        "view-biblioteca"
+      ]
+    }
+  ],
+  "telas": [
+    {
+      "view": "hoje",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "cortados": [],
+      "texto": "Sua Prática de Hoje\n\nUma atividade central planejada para sua sessão de 40 minutos com objetivo observável.\n\nðŸŽ¯ Recomendação Pedagógica\nPulso e Subdivisão Rítmica no Nylon\n\nRecomendação prioritária baseada no seu diagn"
+    },
+    {
+      "view": "aprender",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "exercicioY": 252.25,
+      "cortados": [
+        {
+          "classe": "exercicio-box",
+          "direita": 1368.65625
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 1368.65625
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 1368.65625
+        }
+      ],
+      "texto": "Pulso e Subdivisão Rítmica no Nylon\n\nMeta Observável: Tocar 8 compassos contínuos em 4/4 a 60-70 BPM sem acelerar, atrasar ou engolir o contratempo, mantendo apoio firme e relaxado, com encerramento formal no tempo 1 do "
+    },
+    {
+      "view": "praticar",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "exercicioY": 0,
+      "cortados": [],
+      "texto": "Central de Prática\n\nSelecione uma das seis atividades fundamentais estruturadas com preparação, alvo e variação.\n\nRÍTMICA E COORDENAÇÃO\nPulso e Subdivisão Rítmica no Nylon\n\nTocar 8 compassos contínuos em 4/4 a 60-70 BPM "
+    },
+    {
+      "view": "progresso",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "exercicioY": 0,
+      "cortados": [],
+      "texto": "Meu Progresso\n\nAcompanhamento pedagógico fundamentado em demonstração de habilidades e caderno de recuperação.\n\nCaderno de Dificuldades (Pontos de Atenção)\n\nTrechos onde você observou falha motora ou chiado. Clicar em \"R"
+    },
+    {
+      "view": "biblioteca",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "exercicioY": 0,
+      "cortados": [],
+      "texto": "Biblioteca e Acervo de Referência\n\nOs 11 módulos e 300 aulas originais do Método Tríade catalogados no Google Drive.\n\nTodos os Módulos\n01. Módulo 1\n02. Módulo 2\n03. Módulo 3\n04. Módulo 4\n05. Módulo 5\n06. Módulo 6\n07. Mês"
+    },
+    {
+      "view": "hoje",
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 395.453125
+        }
+      ],
+      "texto": "Sua Prática de Hoje\n\nUma atividade central planejada para sua sessão de 40 minutos com objetivo observável.\n\nðŸŽ¯ Recomendação Pedagógica\nPulso e Subdivisão Rítmica no Nylon\n\nRecomendação prioritária baseada no seu diagn"
+    },
+    {
+      "view": "aprender",
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "exercicioY": 1390.6875,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 398.28125
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 687.0625
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 687.0625
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 687.0625
+        }
+      ],
+      "texto": "Pulso e Subdivisão Rítmica no Nylon\n\nMeta Observável: Tocar 8 compassos contínuos em 4/4 a 60-70 BPM sem acelerar, atrasar ou engolir o contratempo, mantendo apoio firme e relaxado, com encerramento formal no tempo 1 do "
+    },
+    {
+      "view": "praticar",
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 397.609375
+        }
+      ],
+      "texto": "Central de Prática\n\nSelecione uma das seis atividades fundamentais estruturadas com preparação, alvo e variação.\n\nRÍTMICA E COORDENAÇÃO\nPulso e Subdivisão Rítmica no Nylon\n\nTocar 8 compassos contínuos em 4/4 a 60-70 BPM "
+    },
+    {
+      "view": "progresso",
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 399
+        }
+      ],
+      "texto": "Meu Progresso\n\nAcompanhamento pedagógico fundamentado em demonstração de habilidades e caderno de recuperação.\n\nCaderno de Dificuldades (Pontos de Atenção)\n\nTrechos onde você observou falha motora ou chiado. Clicar em \"R"
+    },
+    {
+      "view": "biblioteca",
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn ativo",
+          "direita": 399.6875
+        }
+      ],
+      "texto": "Biblioteca e Acervo de Referência\n\nOs 11 módulos e 300 aulas originais do Método Tríade catalogados no Google Drive.\n\nTodos os Módulos\n01. Módulo 1\n02. Módulo 2\n03. Módulo 3\n04. Módulo 4\n05. Módulo 5\n06. Módulo 6\n07. Mês"
+    },
+    {
+      "view": "hoje",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 395.453125
+        }
+      ],
+      "texto": "Sua Prática de Hoje\n\nUma atividade central planejada para sua sessão de 40 minutos com objetivo observável.\n\nðŸŽ¯ Recomendação Pedagógica\nPulso e Subdivisão Rítmica no Nylon\n\nRecomendação prioritária baseada no seu diagn"
+    },
+    {
+      "view": "aprender",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "exercicioY": 1412.0625,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 398.28125
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 687.0625
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 687.0625
+        },
+        {
+          "classe": "bloco-card",
+          "direita": 687.0625
+        }
+      ],
+      "texto": "Pulso e Subdivisão Rítmica no Nylon\n\nMeta Observável: Tocar 8 compassos contínuos em 4/4 a 60-70 BPM sem acelerar, atrasar ou engolir o contratempo, mantendo apoio firme e relaxado, com encerramento formal no tempo 1 do "
+    },
+    {
+      "view": "praticar",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 397.609375
+        }
+      ],
+      "texto": "Central de Prática\n\nSelecione uma das seis atividades fundamentais estruturadas com preparação, alvo e variação.\n\nRÍTMICA E COORDENAÇÃO\nPulso e Subdivisão Rítmica no Nylon\n\nTocar 8 compassos contínuos em 4/4 a 60-70 BPM "
+    },
+    {
+      "view": "progresso",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn",
+          "direita": 399
+        }
+      ],
+      "texto": "Meu Progresso\n\nAcompanhamento pedagógico fundamentado em demonstração de habilidades e caderno de recuperação.\n\nCaderno de Dificuldades (Pontos de Atenção)\n\nTrechos onde você observou falha motora ou chiado. Clicar em \"R"
+    },
+    {
+      "view": "biblioteca",
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "exercicioY": 0,
+      "cortados": [
+        {
+          "classe": "nav-btn ativo",
+          "direita": 399.6875
+        }
+      ],
+      "texto": "Biblioteca e Acervo de Referência\n\nOs 11 módulos e 300 aulas originais do Método Tríade catalogados no Google Drive.\n\nTodos os Módulos\n01. Módulo 1\n02. Módulo 2\n03. Módulo 3\n04. Módulo 4\n05. Módulo 5\n06. Módulo 6\n07. Mês"
+    }
+  ],
+  "modulos": [
+    {
+      "id": "mod-1",
+      "nome": "01. Módulo 1",
+      "tipo": "pedagogico",
+      "aulas": 46,
+      "comArquivos": 46,
+      "guias": 46
+    },
+    {
+      "id": "mod-2",
+      "nome": "02. Módulo 2",
+      "tipo": "pedagogico",
+      "aulas": 38,
+      "comArquivos": 37,
+      "guias": 38
+    },
+    {
+      "id": "mod-3",
+      "nome": "03. Módulo 3",
+      "tipo": "pedagogico",
+      "aulas": 44,
+      "comArquivos": 42,
+      "guias": 44
+    },
+    {
+      "id": "mod-4",
+      "nome": "04. Módulo 4",
+      "tipo": "pedagogico",
+      "aulas": 37,
+      "comArquivos": 12,
+      "guias": 0
+    },
+    {
+      "id": "mod-5",
+      "nome": "05. Módulo 5",
+      "tipo": "pedagogico",
+      "aulas": 35,
+      "comArquivos": 13,
+      "guias": 0
+    },
+    {
+      "id": "mod-6",
+      "nome": "06. Módulo 6",
+      "tipo": "pedagogico",
+      "aulas": 30,
+      "comArquivos": 4,
+      "guias": 0
+    },
+    {
+      "id": "mod-7",
+      "nome": "07. Mês 7",
+      "tipo": "pedagogico",
+      "aulas": 19,
+      "comArquivos": 6,
+      "guias": 0
+    },
+    {
+      "id": "mod-8",
+      "nome": "08. Mês 8",
+      "tipo": "pedagogico",
+      "aulas": 19,
+      "comArquivos": 11,
+      "guias": 0
+    },
+    {
+      "id": "mod-9",
+      "nome": "09. Mês 9",
+      "tipo": "pedagogico",
+      "aulas": 19,
+      "comArquivos": 13,
+      "guias": 0
+    },
+    {
+      "id": "mod-10",
+      "nome": "10. UPGRADE 5.0 Escala Maior Definitiva",
+      "tipo": "complemento_escalas",
+      "aulas": 11,
+      "comArquivos": 11,
+      "guias": 0
+    },
+    {
+      "id": "mod-11",
+      "nome": "11. Links da AULA MENSAL e SORTEIO",
+      "tipo": "administrativo_lives",
+      "aulas": 2,
+      "comArquivos": 2,
+      "guias": 0
+    }
+  ],
+  "atividades": [
+    {
+      "id": "ativ-1",
+      "titulo": "Pulso e Subdivisão Rítmica no Nylon",
+      "status": "em_revisao",
+      "fontes": 2,
+      "blocos": 6,
+      "minutos": 40,
+      "meta": "Tocar 8 compassos contínuos em 4/4 a 60-70 BPM sem acelerar, atrasar ou engolir o contratempo, mantendo apoio firme e relaxado, com encerramento formal no tempo 1 do 9º compasso.",
+      "criterio": "Executar os 8 compassos do nível Alvo a 60 BPM sem oscilação perceptível de pulso e com encerramento formal."
+    },
+    {
+      "id": "ativ-2",
+      "titulo": "Troca de Acordes com Continuidade (Lá Maior e Ré Maior)",
+      "status": "em_revisao",
+      "fontes": 3,
+      "blocos": 6,
+      "minutos": 40,
+      "meta": "Realizar 16 trocas consecutivas entre Lá Maior (A) e Ré Maior (D) a 60 BPM em compasso 4/4 sem pausar o movimento da mão direita.",
+      "criterio": "Executar 16 compassos alternados (A e D) a 60 BPM no nível Alvo sem perder o tempo 1."
+    },
+    {
+      "id": "ativ-3",
+      "titulo": "Leitura Rítmica Simples (Semínima, Colcheia e Pausa em 4/4)",
+      "status": "em_revisao",
+      "fontes": 2,
+      "blocos": 6,
+      "minutos": 40,
+      "meta": "Ler à primeira vista e executar no violão 4 compassos de leitura rítmica a 60 BPM sem hesitar em pausas ou subdivisões, com abafamento nítido.",
+      "criterio": "Executar os 4 compassos do nível Alvo a 60 BPM com pausas devidamente abafadas e alternância regular de i-m."
+    },
+    {
+      "id": "ativ-4",
+      "titulo": "Reconhecimento Auditivo de Intervalos Diatônicos",
+      "status": "em_revisao",
+      "fontes": 2,
+      "blocos": 6,
+      "minutos": 40,
+      "meta": "Completar uma série de 10 perguntas e acertar pelo menos 8 no nível Alvo com registro da primeira resposta.",
+      "criterio": "Atingir pelo menos 8 acertos em 10 perguntas na série do nível Alvo (registrando a primeira resposta)."
+    },
+    {
+      "id": "ativ-5",
+      "titulo": "Montagem e Compreensão de Tríades Maiores e Menores",
+      "status": "em_revisao",
+      "fontes": 2,
+      "blocos": 6,
+      "minutos": 40,
+      "meta": "Arpejar e nomear oralmente Tônica, Terça e Quinta em Dó Maior e Lá Menor em estado fundamental sem hesitação motora.",
+      "criterio": "Arpejar C e Am no nível Alvo identificando oralmente Tônica, Terça e Quinta a 50 BPM sem hesitação."
+    },
+    {
+      "id": "ativ-6",
+      "titulo": "Aplicação Curta: Melodia e Acompanhamento Integrados",
+      "status": "em_revisao",
+      "fontes": 2,
+      "blocos": 6,
+      "minutos": 40,
+      "meta": "Tocar frase musical autoral de 4 compassos completos em 4/4 a 55 BPM com melodia expressiva nas cordas agudas e baixos fundamentais nos tempos 1 e 3.",
+      "criterio": "Executar os 4 compassos do nível Alvo a 55 BPM em 4/4 com baixos sustentados e melodia límpida."
+    },
+    {
+      "id": "ativ-7",
+      "titulo": "Bossa Nova Básica: Baixo Antecipado e Acordes em Bloco",
+      "status": "em_revisao",
+      "fontes": 0,
+      "blocos": 0,
+      "minutos": 0,
+      "meta": "Tocar 8 compassos do padrão de Bossa Nova a 70 BPM em 2/4, cravando a antecipação do baixo.",
+      "criterio": "Tocar 8 compassos a 70 BPM de forma relaxada, sem perder a antecipação."
+    },
+    {
+      "id": "ativ-8",
+      "titulo": "Independência Rítmica: Baixo em 2/4 com Melodia Sincopada",
+      "status": "em_revisao",
+      "fontes": 0,
+      "blocos": 0,
+      "minutos": 0,
+      "meta": "Tocar uma variação rítmica onde o baixo marca o tempo e a melodia ocorre apenas nas colcheias fracas.",
+      "criterio": "Executar o alvo a 65 BPM com independência cristalina."
+    },
+    {
+      "id": "ativ-9",
+      "titulo": "Melodia Acompanhada: Composição Original em 2 Vozes",
+      "status": "em_revisao",
+      "fontes": 0,
+      "blocos": 0,
+      "minutos": 0,
+      "meta": "Tocar a peça didática original de 8 compassos com equilíbrio dinâmico e legato.",
+      "criterio": "Executar com distinção clara de volumes entre a melodia e o acompanhamento."
+    },
+    {
+      "id": "ativ-10",
+      "titulo": "Baixo Caminhante com Melodia Fixa",
+      "status": "em_revisao",
+      "fontes": 0,
+      "blocos": 0,
+      "minutos": 0,
+      "meta": "Tocar uma linha de walking bass (4 semínimas) sob um acorde fixo ou melodia sustentada no tempo 1.",
+      "criterio": "Fluidez e continuidade ininterrupta do baixo a 70 BPM."
+    },
+    {
+      "id": "ativ-11",
+      "titulo": "Voice Leading Básico: Condução de Vozes entre I-IV-V",
+      "status": "em_revisao",
+      "fontes": 0,
+      "blocos": 0,
+      "minutos": 0,
+      "meta": "Tocar uma cadência I-IV-V-I nas três primeiras cordas movendo os dedos no máximo um tom em cada troca.",
+      "criterio": "Movimentação fluida sem ruído excessivo dos dedos deslizando."
+    }
+  ]
+}

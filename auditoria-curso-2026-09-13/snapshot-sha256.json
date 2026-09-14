@@ -1,0 +1,25 @@
+{
+  "data": "2026-09-13T23:04:46.844Z",
+  "arquivos": {
+    "interface-v2/app.js": "d77d929717e1afe80b06ce90e4c7504d7c56f63ce78568111603aa43265ab59d",
+    "interface-v2/app_old.js": "19da9c57f8da5cfec6fd0352ebe743a1e20d358d41071b15bc6ccedf7afd025e",
+    "interface-v2/audio-motor.js": "70922aed24fc8196917140f72bef3f29da345a97ddc95cf01a901f761806b25a",
+    "interface-v2/dados-atividades.js": "b5ad9f363cca48a37e5cf8bee49909322b8c1a45787a4962999c99927fd463d0",
+    "interface-v2/dados-catalogo.js": "f347602e2fe9186f7b9a259881615c665bf15218528bcd1032640ad6f300ec51",
+    "interface-v2/ear-training.js": "3fe45624683f006324f3fa4f21ff9411910f030faa58094b2876df5482375f44",
+    "interface-v2/estilo.css": "09a3d97345893e0c2baa198cbb89f483847580910837791961bbd788ecf7f97e",
+    "interface-v2/index.html": "32f802bc4cfdedd6dfcd637bcc0ca510876a8c196dc6985ebed462efc4ec9afe",
+    "interface-v2/README.md": "70d3fa411b6a848f3f18be2f8db94d9b9d53b2586f186a3aab066814685f8837",
+    "interface-v2/srs-engine.js": "bd1aa614834b5262e456eceb84743e58a0048e10ef1625c014811a76ea3075da",
+    "interface-v2/storage.js": "447683733762d6de66cfc1e866592b1d5e658c06eb2eb736b0f0e5c620436503",
+    "interface-v2/timer-worker.js": "22c91a97d7686242fa7b7ed88c4cdc165e27c64ec4e57e2d256877980feefcb9",
+    "interface-v2/timer.js": "02125ee01e529e0311da1efedef5efe35b056919422c14aeeac59f020e7b8c8e",
+    "interface-v2/utils.js": "b39b2c6077602a466000cdc25e8bce52cdbe12a33500b28fa4d65a7f9a02958f",
+    "interface-v2/views.js": "ec203e9d7cf59dd886438324875ee782c5baa6918a3f812e9b48c7599db63ce3",
+    "interface/conteudo-geral.js": "db99dbcb759fd6bf9b77da9fde6cd33cf2146c2c0bed10cd6055f66e12426296",
+    "interface/geral.css": "b895e1a4d2175734f75eeec2c4ffa6262421e9b86951decd57d1cc9a50f9b718",
+    "interface/geral.js": "dbffb79bedcf87967a2801776e8b90ab01b6d47b439804f7feab7f91d38ef641",
+    "interface/guias-dados.js": "2ed27217dd145964a2ebc535397fd49429c3b1c75a8db7ed15f655f81d7cc960",
+    "interface/index.html": "8ec9cfc1962a88a6858421bceb1be59754f2988581902d512ca604ebfe662d1c"
+  }
+}

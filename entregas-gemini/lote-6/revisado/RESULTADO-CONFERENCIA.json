@@ -1,0 +1,2826 @@
+{
+  "data_auditoria": "2026-09-13T18:22:36.321Z",
+  "total_erros": 0,
+  "erros": [],
+  "estatisticas": {
+    "total_aulas_auditadas": 82,
+    "por_tipo_sessao": {
+      "padrao_individual": 49,
+      "agrupada_principal": 12,
+      "agrupada_parceira": 12,
+      "aula_extensa_2_sessoes": 9
+    },
+    "por_status_objetivo": {
+      "confirmado": 77,
+      "provisorio": 5
+    }
+  },
+  "aulas": [
+    {
+      "modulo": 2,
+      "aula": 1,
+      "id": "aula-mod-2-38",
+      "titulo": "Quiz Para ir ao Mês 2",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Autoavaliação diagnóstica no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Revisão pontual de trocas",
+              "minutos": 10
+            },
+            {
+              "atividade": "Registro e anotações",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 2,
+      "id": "aula-mod-2-1",
+      "titulo": "02 - H P - 5 - Intervalos Diatônicos Parte 2 (pág 13)",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura da pág. 13 da apostila",
+              "minutos": 10
+            },
+            {
+              "atividade": "Mapeamento auditivo e teórico dos intervalos no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro de anotações",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 3,
+      "id": "aula-mod-2-2",
+      "titulo": "03 - Violão - 5.1 - Entendimento de Tríades e Acorde Xm",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Montagem anatômica corda por corda de Em e Am",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro na interface",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 4,
+      "id": "aula-mod-2-3",
+      "titulo": "04 - Violão - 5.2 - Fluência no Acorde Xm",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de trocas com metrônomo em andamento lento (50-60 bpm)",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 5,
+      "id": "aula-mod-2-4",
+      "titulo": "05 - 5.3 UPGRADE 8.0 2025 - UM dedo - Momento GOSPEL - ALGO",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de conformação e descida em bloco no ar",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 6,
+      "id": "aula-mod-2-5",
+      "titulo": "06 - 5.4 UPGRADE 8.0 2025 - UM dedo - WITH or WITHOUT YOU",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de arco e pressão perpendicular no Dm",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 7,
+      "id": "aula-mod-2-6",
+      "titulo": "07 - H P - 6.1 - Intervalos (parte 1 Harmonia- Pág 14) - Upgr",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 8,
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 07 e 08",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática comparativa das digitações de Dm",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e anotações",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 8,
+      "id": "aula-mod-2-7",
+      "titulo": "08 - H P - 6.2 - Intervalos (Correção - Pág 15) - Upgrade 202",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 7,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 9,
+      "id": "aula-mod-2-8",
+      "titulo": "09 - Violão - 6.1 - As Partes do Violão",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática contínua da progressão com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 10,
+      "id": "aula-mod-2-9",
+      "titulo": "10 - Violão - 6.2 - Batida 6 8 Simplificada",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Execução da canção compasso a compasso",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 11,
+      "id": "aula-mod-2-10",
+      "titulo": "11 - Violão - 6.3 Chama o flautista! - Velha Infância",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Leitura da pág. 14 e vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Resolução de intervalos no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 12,
+      "id": "aula-mod-2-11",
+      "titulo": "12 - Violão - 6.4 - ATENÇÃO Erro Comum",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e pág. 15",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de solfejo intervalar",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 13,
+      "id": "aula-mod-2-12",
+      "titulo": "13 - Violão - 6.5 - Sincronizando o 'TOCAR e CANTAR'",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática das músicas com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 14,
+      "id": "aula-mod-2-13",
+      "titulo": "14 - H P - 7.1 - Id. Acordes Maiores e Menores (Pág 18) UPGRA",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 15,
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e ditado na pág. 18",
+              "minutos": 15
+            },
+            {
+              "atividade": "Conferência dos testes na Aula 15",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro de acertos",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 15,
+      "id": "aula-mod-2-14",
+      "titulo": "15 - H P - 7.2 - Id. Acordes Maiores e Menores (Correção) UPG",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 14,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 16,
+      "id": "aula-mod-2-15",
+      "titulo": "16 - Violão - 7.1 - Que País é Esse - Como eu Quero",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática das canções com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 17,
+      "id": "aula-mod-2-16",
+      "titulo": "17 - Violão - 7.2 Chama o flautista! - Como eu Quero",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo do tema",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da frase melódica em andamento lento",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 18,
+      "id": "aula-mod-2-17",
+      "titulo": "18 - UPGRADE 7.0 Violão - 7.3 Principais Elementos de Inte",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de dinâmica e controle de toque em canção escolhida",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 19,
+      "id": "aula-mod-2-18",
+      "titulo": "19 - H P - 8 - Intervalos (Parte 2 - Página 20) UPGRADE 2023",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura da pág. 20",
+              "minutos": 10
+            },
+            {
+              "atividade": "Aplicação prática na escala no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 20,
+      "id": "aula-mod-2-19",
+      "titulo": "20 - Violão - 8.1 - Batida Rock Inglês",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Treino com cordas abafadas e com acordes",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 21,
+      "id": "aula-mod-2-20",
+      "titulo": "21 - Violão - 8.2 - O Sol - Rock Inglês",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Execução contínua da canção",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 22,
+      "id": "aula-mod-2-21",
+      "titulo": "22 - Violão - 8.3 TOCA que eu CANTO - O SOl",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Play-along com o vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática independente com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 23,
+      "id": "aula-mod-2-22",
+      "titulo": "23 - UPGRADE 7.0 Violão - 8.4 - Fluência no ROCK INGLÊS ou",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo analítico",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática do truque de transição com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 24,
+      "id": "aula-mod-2-23",
+      "titulo": "24 - Violão - 8.5 Como encordoar NYLON",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 25,
+          "blocos": [
+            {
+              "atividade": "Preparação e inspeção do instrumento",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos procedimentos nas Aulas 24 e 25",
+              "minutos": 15
+            },
+            {
+              "atividade": "Prática de conferência e afinação fina das amarrações",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro de manutenção",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 25,
+      "id": "aula-mod-2-24",
+      "titulo": "25 - Violão - 8.6 Como encordoar AÇO",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 24,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 26,
+      "id": "aula-mod-2-25",
+      "titulo": "26 - Violão - 8.7 - Bônus - 10 Músicas com apenas E, A e D",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática contínua do medley de canções",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 27,
+      "id": "aula-mod-2-26",
+      "titulo": "27 - Violão - 8.8 - Bônus 4 solos fáceis",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática frase por frase com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 28,
+      "id": "aula-mod-2-27",
+      "titulo": "28 - Violão - 8.9.2 - Bônus Como Eu Quero",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 29,
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 28 e 29",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática das duas canções",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 29,
+      "id": "aula-mod-2-28",
+      "titulo": "29 - Violão - 8.9.2 - Bônus Menina Veneno",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 28,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 30,
+      "id": "aula-mod-2-29",
+      "titulo": "30 - Violão - 8.9.3 - Bônus Natasha",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da música completa",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 31,
+      "id": "aula-mod-2-30",
+      "titulo": "31 - Violão - 8.9.4 - Bônus Que País é esse",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática acelerada com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 32,
+      "id": "aula-mod-2-31",
+      "titulo": "32 - 08.10 - Hiper detalhamento - Batida Rock Inglês - Mais u",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do hiper detalhamento",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática em câmera lenta",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 33,
+      "id": "aula-mod-2-32",
+      "titulo": "33 - BÔNUS versão AO VIVO H P - Aula 5 Intervalos Diatônico",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo da primeira parte da live",
+              "minutos": 15
+            },
+            {
+              "atividade": "Prática de identificação auditiva",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo das dúvidas avançadas da live",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de mapeamento no braço",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e autoavaliação",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 34,
+      "id": "aula-mod-2-33",
+      "titulo": "34 - BÔNUS versão AO VIVO H P - 6.1 - Intervalos (Pág 14)",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 35,
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo da live e resolução dos exercícios",
+              "minutos": 15
+            },
+            {
+              "atividade": "Correção com a Aula 35",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 35,
+      "id": "aula-mod-2-34",
+      "titulo": "35 - BÔNUS correção H P - 6.2 - Intervalos (Pág 15)",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 34,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 36,
+      "id": "aula-mod-2-35",
+      "titulo": "36 - BÔNUS versão AO VIVO H P - 7 - Id. Acordes Maiores e Men",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do ditado ao vivo",
+              "minutos": 15
+            },
+            {
+              "atividade": "Testes de identificação no violão",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro de pontos fracos",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Segunda rodada da live com acordes invertidos",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática perceptiva deliberada",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro final",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 37,
+      "id": "aula-mod-2-36",
+      "titulo": "37 - BÔNUS versão AO VIVO H P - 8 - Intervalos (Parte 2 - Pág",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo da live sobre sétimas",
+              "minutos": 15
+            },
+            {
+              "atividade": "Exercícios práticos no violão",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Análise de intervalos compostos",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática deliberada de cálculo mental",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 2,
+      "aula": 38,
+      "id": "aula-mod-2-37",
+      "titulo": "38 - UPGRADE 6.0 Parabéns pra Você em 3 Níveis de Complexid",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do Nível 1 e 2 no vídeo",
+              "minutos": 15
+            },
+            {
+              "atividade": "Prática dos Níveis 1 e 2 no nylon",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do Nível 3",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática do arranjo com baixo e harmonia",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e avaliação",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 1,
+      "id": "aula-mod-3-43",
+      "titulo": "Quiz para ir ao mês 3",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Autoavaliação diagnóstica no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Revisão pontual de acordes menores e levadas",
+              "minutos": 10
+            },
+            {
+              "atividade": "Registro e anotações",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 2,
+      "id": "aula-mod-3-1",
+      "titulo": "02 - Violão - 9.1 - O que veremos no mês 3",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo panorâmico",
+              "minutos": 10
+            },
+            {
+              "atividade": "Mapeamento do cronograma pessoal na interface",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro de metas",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 3,
+      "id": "aula-mod-3-2",
+      "titulo": "03 - H P - 9.1 - Revisão id. Acordes Maiores e Menores",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Testes auditivos e montagem no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 4,
+      "id": "aula-mod-3-3",
+      "titulo": "04 - H P - 9.2 - Figuras Rítmicas (todas) Pág 23",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura da pág. 23 da apostila",
+              "minutos": 10
+            },
+            {
+              "atividade": "Solfejo rítmico palmas/metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 5,
+      "id": "aula-mod-3-4",
+      "titulo": "05 - Violão - 9.2 - Aplicando a Batida Rock Inglês",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 6,
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 05 e 06",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática rítmica da levada e aplicação na canção",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e anotações",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 6,
+      "id": "aula-mod-3-5",
+      "titulo": "06 - Violão - 9.3 TOCA que eu CANTO Mais uma de Amor",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 5,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 7,
+      "id": "aula-mod-3-6",
+      "titulo": "07 - Violão - 9.4 Batida Rock Inglês Variação",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de dinâmica e controle de ataque",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 8,
+      "id": "aula-mod-3-7",
+      "titulo": "08 - Violão - 9.5 - VOCÊ SABIA -",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de extração de harmônicos naturais na casa 12",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 9,
+      "id": "aula-mod-3-8",
+      "titulo": "09 - Violão 9.6 BÔNUS Solinho Aonde quer que eu vá (Letra na",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo demonstrativo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática frase a frase em andamento lento",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 10,
+      "id": "aula-mod-3-9",
+      "titulo": "10 - H P - 10 - UPGRADE 5.0 Escala Maior - Pág 26",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura da pág. 26 da apostila",
+              "minutos": 10
+            },
+            {
+              "atividade": "Construção teórica e no violão da escala maior",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 11,
+      "id": "aula-mod-3-10",
+      "titulo": "11 - Violão - 10.1 - Leitura C D E",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e partitura",
+              "minutos": 10
+            },
+            {
+              "atividade": "Leitura à primeira vista e exercícios de fixação",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 12,
+      "id": "aula-mod-3-11",
+      "titulo": "12 - Violão -10.2 - Pestana!",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 13,
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 12 e 13",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática biomecânica da pestana e deslocamento no braço",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e anotações",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 13,
+      "id": "aula-mod-3-12",
+      "titulo": "13 - Violão -10.3 - A Pestana e o Paralelismo",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 12,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 14,
+      "id": "aula-mod-3-13",
+      "titulo": "14 - Violão -10.4 - PRATICANDO Bm com Wicked Game - Apresenta",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 15,
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 14 e 15",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da transição A -> E -> Bm com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 15,
+      "id": "aula-mod-3-14",
+      "titulo": "15 - Violão -10.5 - wicked game PRATICANDO PESTANA - violao",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 14,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 16,
+      "id": "aula-mod-3-15",
+      "titulo": "16 - Violão - 10.6 TOCA que eu CANTO - Wonderwall",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo da música",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da levada com dedos âncora",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 17,
+      "id": "aula-mod-3-16",
+      "titulo": "17 - 10.7 - Pra que serve o capotraste",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Teste prático do capotraste em várias casas",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 18,
+      "id": "aula-mod-3-17",
+      "titulo": "18 - H P -11 - Semínima, Pausa e Colchêia - Pág 29",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Leitura da pág. 29 da apostila e vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Treino de solfejo com palmas e metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 19,
+      "id": "aula-mod-3-18",
+      "titulo": "19 - Violão -11.1 - Eu Sei (Pág 30)",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e partitura da pág. 30",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da música compasso a compasso",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 20,
+      "id": "aula-mod-3-19",
+      "titulo": "20 - Violão - 11.2 - Leitura C D E F G",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 21,
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 20 e 21",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de leitura do pentacorde e levada Tchac",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 21,
+      "id": "aula-mod-3-20",
+      "titulo": "21 - Violão - 11.3 - Batida POP Básica Variação (TCHAC)",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 20,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 22,
+      "id": "aula-mod-3-21",
+      "titulo": "22 - Violão - 11.4 - Revisão de Notas no Braço",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo explicativo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Exercício de localização aleatória de notas no braço",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 23,
+      "id": "aula-mod-3-22",
+      "titulo": "23 - Violão - 11.5 - Intensivão Pestana!",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 24,
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 23 e 24",
+              "minutos": 10
+            },
+            {
+              "atividade": "Série de exercícios intervalados de pestana e Tchac",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e auto-observação",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 24,
+      "id": "aula-mod-3-23",
+      "titulo": "24 - UPGRADE 7.0 Violão - 11.6 - Ajuda EXTRA na POP TCHAC",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 23,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 25,
+      "id": "aula-mod-3-24",
+      "titulo": "25 - UPGRADE 7.0 Violão - 11.7 - NUNCA faça isso",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo diagnóstico de erros",
+              "minutos": 10
+            },
+            {
+              "atividade": "Auditoria da própria postura com espelho",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 26,
+      "id": "aula-mod-3-25",
+      "titulo": "26 - H P - 12 - Formação de Acordes - Pág 31 (UPGRADE 2023)",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura da pág. 31 da apostila",
+              "minutos": 10
+            },
+            {
+              "atividade": "Cálculo de notas de tríades fundamentais",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 27,
+      "id": "aula-mod-3-26",
+      "titulo": "27 - Violão - 12.1 - Seus PRIMEIROS Dedilhados I (batida)",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 28,
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 27 e 28",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de dedilhado P-i-m-a e arpejos com metrônomo",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 28,
+      "id": "aula-mod-3-27",
+      "titulo": "28 - Violão - 12.2 - Seus PRIMEIROS Dedilhados II (batida)",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 27,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 29,
+      "id": "aula-mod-3-28",
+      "titulo": "29 - Violão - 12.3 - Dedilhado Direto (batida)",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e PDF",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática do dedilhado direto em progressão diatônica",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 30,
+      "id": "aula-mod-3-29",
+      "titulo": "30 - UPGRADE 7.0 Violão - 12.4 - Acorde X7M (entendimento)",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo explicativo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Comparação C vs C7M e aplicação no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 31,
+      "id": "aula-mod-3-30",
+      "titulo": "31 - Violão - 12.5 - BÔNUS O Solinho de 'O SOL'",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo demonstrativo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática melódica frase a frase",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 32,
+      "id": "aula-mod-3-31",
+      "titulo": "32 - Violão - 12.6 - BÔNUS Técnica da ELIPSE na Palheta",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo técnico",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática com palheta da trajetória elíptica em cordas soltas",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 33,
+      "id": "aula-mod-3-32",
+      "titulo": "33 - Violão - 12.7 - BÔNUS Introdução DEVOLVA-ME",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e tablatura da introdução",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática compasso por compasso no nylon",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 34,
+      "id": "aula-mod-3-33",
+      "titulo": "34 - Violão - 12.8 UPGRADE 5.0 Batida Baião",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura do PDF",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da célula rítmica com cordas abafadas e acordes",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 35,
+      "id": "aula-mod-3-34",
+      "titulo": "35 - Violão - 12.9 UPGRADE 5.0 TOCA que eu CANTO - WICKED G",
+      "tipo_sessao": "agrupada_principal",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta Única",
+          "parceira_aula": 36,
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos das Aulas 35 e 36",
+              "minutos": 10
+            },
+            {
+              "atividade": "Execução contínua do acompanhamento e solo de Wicked Game",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 36,
+      "id": "aula-mod-3-35",
+      "titulo": "36 - Violão - 12.10 UPGRADE 5.0 SOLO - WICKED GAME",
+      "tipo_sessao": "agrupada_parceira",
+      "sessoes": [
+        {
+          "nome": "Sessão Conjunta (Compartilhada)",
+          "aponta_para_aula": 35,
+          "soma_minutos": 40,
+          "nota": "Orçamento não duplicado; contabilizado na aula principal parceira."
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 37,
+      "id": "aula-mod-3-36",
+      "titulo": "37 - Violão - 12.11 UPGRADE 5.0 Altura das cordas",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo",
+              "minutos": 10
+            },
+            {
+              "atividade": "Medição e inspeção da escala e altura das cordas no instrumento",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 38,
+      "id": "aula-mod-3-37",
+      "titulo": "38 - BÔNUS H P - 9.2 - Figuras Rítmicas (ao VIVO!)",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo da primeira parte da live",
+              "minutos": 15
+            },
+            {
+              "atividade": "Prática de leitura rítmica básica",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos exercícios avançados da live",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática deliberada de solfejo sincopado",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 39,
+      "id": "aula-mod-3-38",
+      "titulo": "39 - BÔNUS SHOW de fim de ano!!",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo harmônico do PDF e vídeo principal",
+              "minutos": 15
+            },
+            {
+              "atividade": "Prática da progressão no violão",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo dos vídeos complementares",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática da levada festiva contínua",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro e avaliação",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 40,
+      "id": "aula-mod-3-39",
+      "titulo": "40 - BÔNUS H P - 10 - Escala Maior - Pág 26 (AO VIVO)",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo da primeira parte da live",
+              "minutos": 15
+            },
+            {
+              "atividade": "Construção teórica das escalas",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo complementar",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de dedução dos graus harmônicos no braço",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 41,
+      "id": "aula-mod-3-40",
+      "titulo": "41 - BÔNUS H P -11 - Semínima, Pausa e Colchêia - Pág 29 (AO",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Percepção de pulso e figuras na live",
+              "minutos": 15
+            },
+            {
+              "atividade": "Exercícios práticos de palmas",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Exercícios avançados de ditado rítmico",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática de resposta rítmica no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 42,
+      "id": "aula-mod-3-41",
+      "titulo": "42 - BÔNUS H P - 12 - Formação de Acordes - Pág 31 (AO VIVO",
+      "tipo_sessao": "aula_extensa_2_sessoes",
+      "sessoes": [
+        {
+          "nome": "Sessão 1",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Construção de tríades e inversões na live",
+              "minutos": 15
+            },
+            {
+              "atividade": "Mapeamento no violão",
+              "minutos": 15
+            },
+            {
+              "atividade": "Registro",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        },
+        {
+          "nome": "Sessão 2",
+          "blocos": [
+            {
+              "atividade": "* Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Introdução das tétrades e tipos de sétima",
+              "minutos": 10
+            },
+            {
+              "atividade": "Prática dedilhada de tétrades",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro final",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 43,
+      "id": "aula-mod-3-42",
+      "titulo": "43 - BÔNUS Sugestão de TABELA de ESTUDO",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Estudo do vídeo e leitura da tabela PDF",
+              "minutos": 10
+            },
+            {
+              "atividade": "Preenchimento e calibração da rotina na interface",
+              "minutos": 20
+            },
+            {
+              "atividade": "Registro de metas",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    },
+    {
+      "modulo": 3,
+      "aula": 44,
+      "id": "aula-mod-3-44",
+      "titulo": "VIOLÃO - ACONTECEU ALGUMA COISA_",
+      "tipo_sessao": "padrao_individual",
+      "sessoes": [
+        {
+          "nome": "Sessão Padrão",
+          "blocos": [
+            {
+              "atividade": "Preparação e afinação",
+              "minutos": 5
+            },
+            {
+              "atividade": "Revisão diagnóstica dos quatro pilares do Mês 3 no violão",
+              "minutos": 20
+            },
+            {
+              "atividade": "Auditoria de anotações e dúvidas na interface",
+              "minutos": 10
+            },
+            {
+              "atividade": "Registro final do módulo",
+              "minutos": 5
+            }
+          ],
+          "soma_minutos": 40
+        }
+      ],
+      "status_tempo": "ok",
+      "status_evidencia": "ok",
+      "erros": []
+    }
+  ]
+}

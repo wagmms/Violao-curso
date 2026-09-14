@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <script>window.onerror = function(msg, url, line, col, err) { document.body.innerHTML += "<div id=\"fatal-error\">" + msg + " - " + (err ? err.stack : "") + "</div>"; };</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Método Tríade — Ambiente de Aprendizagem de Violão</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="layout-container">
+    <!-- Barra Lateral de Navegação (Desktop) / Inferior (Mobile) -->
+    <aside class="app-sidebar">
+      <div class="brand-header">
+        <h1>Método Tríade</h1>
+        <p>Ambiente de Aprendizagem Musical</p>
+      </div>
+
+      <nav class="nav-menu">
+        <button id="nav-hoje" class="nav-btn ativo" type="button" data-view="hoje" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">📅</span>
+          <span>Hoje</span>
+        </button>
+        <button id="nav-aprender" class="nav-btn" type="button" data-view="aprender">
+          <span class="nav-icon" aria-hidden="true">📖</span>
+          <span>Aprender</span>
+        </button>
+        <button id="nav-praticar" class="nav-btn" type="button" data-view="praticar">
+          <span class="nav-icon" aria-hidden="true">🎸</span>
+          <span>Praticar</span>
+        </button>
+        <button id="nav-progresso" class="nav-btn" type="button" data-view="progresso">
+          <span class="nav-icon" aria-hidden="true">📈</span>
+          <span>Progresso</span>
+        </button>
+        <button id="nav-biblioteca" class="nav-btn" type="button" data-view="biblioteca">
+          <span class="nav-icon" aria-hidden="true">📚</span>
+          <span>Biblioteca</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-status-box">
+        <strong>Violão de Nylon</strong>
+        <span>Rotina recomendada: 3 sessões de 40 min por semana.</span>
+      </div>
+    </aside>
+
+    <!-- Área de Conteúdo Principal -->
+    <main class="app-main" aria-live="polite">
+      <!-- Aviso de Falha de Armazenamento Local (se aplicável) -->
+      <div id="aviso-armazenamento" class="storage-notice"></div>
+
+      <!-- Barra Superior de Controle de Sessão de Estudo -->
+      <header class="top-session-bar">
+        <div class="session-info">
+          <span class="session-badge">Sessão do Dia</span>
+          <span id="timer-regressivo" class="timer-display">40:00</span>
+        </div>
+        
+        <!-- NOVA BARRA DE PROGRESSO VISUAL -->
+        <div class="session-progress-container">
+          <div id="session-progress-bar" class="session-progress-bar"></div>
+        </div>
+
+        <div class="session-controls">
+          <button id="btn-timer-toggle" class="btn btn-primary btn-sm" type="button">Iniciar 40 min</button>
+          <button id="btn-timer-reset" class="btn btn-secondary btn-sm" type="button">Reiniciar</button>
+        </div>
+      </header>
+
+      <!-- Telas do Ambiente de Aprendizagem -->
+
+      <!-- 1. TELA HOJE -->
+      <section id="view-hoje" class="view-panel view-ativa">
+        <div class="view-header">
+          <h2>Sua Prática de Hoje</h2>
+          <p>Uma atividade central planejada para sua sessão de 40 minutos com objetivo observável.</p>
+        </div>
+        <div id="hoje-conteudo"></div>
+      </section>
+
+      <!-- 2. TELA APRENDER -->
+      <section id="view-aprender" class="view-panel">
+        <div id="aprender-conteudo"></div>
+      </section>
+
+      <!-- 3. TELA PRATICAR -->
+      <section id="view-praticar" class="view-panel">
+        <div id="praticar-conteudo"></div>
+      </section>
+
+      <!-- 4. TELA PROGRESSO -->
+      <section id="view-progresso" class="view-panel">
+        <div id="progresso-conteudo"></div>
+      </section>
+
+      <!-- 5. TELA BIBLIOTECA -->
+      <section id="view-biblioteca" class="view-panel">
+        <div id="biblioteca-conteudo"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modais do Aplicativo -->
+
+  <!-- Modal 1: Diagnóstico de Nível -->
+  <dialog id="modal-diagnostico">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Diagnóstico Rápido de Ponto de Partida</h3>
+        <button id="btn-fechar-diagnostico" class="btn btn-ghost btn-sm" type="button">✕</button>
+      </div>
+      <div id="corpo-diagnostico" class="modal-body"></div>
+      <div class="modal-footer">
+        <button id="btn-salvar-diagnostico" class="btn btn-primary" type="button">Atualizar Meu Ponto Inicial</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Registro de Dificuldade -->
+  <dialog id="modal-dificuldade">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Anotar Ponto de Dificuldade</h3>
+        <button id="btn-fechar-dificuldade" class="btn btn-ghost btn-sm" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Atividade: <strong id="dif-atividade-nome"></strong></p>
+        <div>
+          <label for="input-dif-trecho"><strong>Trecho ou Versão:</strong></label>
+          <input type="text" id="input-dif-trecho" style="width: 100%; padding: 8px; margin-top: 4px;" placeholder="Ex: Troca de A para D, tempo 4">
+        </div>
+        <div>
+          <label for="input-dif-problema"><strong>O que aconteceu (problema observado):</strong></label>
+          <textarea id="input-dif-problema" rows="3" style="width: 100%; padding: 8px; margin-top: 4px;" placeholder="Ex: O dedo 3 chiou ao aproximar do traste ou houve atraso no pulso."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-salvar-dificuldade" class="btn btn-primary" type="button">Salvar no Caderno</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 3: Conclusão e Avaliação da Sessão -->
+  <dialog id="modal-resultado">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Avaliação e Conclusão da Sessão</h3>
+        <button id="btn-fechar-resultado" class="btn btn-ghost btn-sm" type="button">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Atividade concluída: <strong id="res-atividade-nome"></strong></p>
+        <div>
+          <label for="select-res-status"><strong>Como foi seu desempenho no objetivo?</strong></label>
+          <select id="select-res-status" style="width: 100%; padding: 8px; margin-top: 4px;">
+            <option value="consegui">Consegui com estabilidade e fluência no tempo</option>
+            <option value="repetir">Preciso repetir mais uma sessão neste mesmo nível</option>
+            <option value="dificuldade">Senti desconforto ou muita hesitação (recuperar)</option>
+          </select>
+        </div>
+        <div>
+          <label for="input-res-bpm"><strong>BPM confortável alcançado:</strong></label>
+          <input type="number" id="input-res-bpm" style="width: 100%; padding: 8px; margin-top: 4px;" min="30" max="240">
+        </div>
+        <div style="display: flex; gap: 15px; margin-top: 10px;">
+          <div style="flex: 1;">
+            <label for="res-compassos"><strong>Compassos s/ erro:</strong></label>
+            <input type="number" id="res-compassos" min="0" max="32" style="width: 100%; padding: 8px; margin-top: 4px;" placeholder="Ex: 8">
+          </div>
+          <div style="flex: 1;">
+            <label for="res-tentativas"><strong>Tentativas:</strong></label>
+            <input type="number" id="res-tentativas" min="1" max="50" style="width: 100%; padding: 8px; margin-top: 4px;" placeholder="Ex: 3">
+          </div>
+        </div>
+        <fieldset style="border: 1px solid var(--border-subtle); padding: 10px; margin-top: 10px; border-radius: var(--radius-sm);">
+          <legend style="font-weight: bold; font-size: 0.9em; padding: 0 5px;">Checklist de execução</legend>
+          <label style="display: block; margin-top: 5px;"><input type="checkbox" id="chk-pulso" class="criterio-check-meta"> Pulso mantido sem oscilação</label>
+          <label style="display: block; margin-top: 5px;"><input type="checkbox" id="chk-notas" class="criterio-check-meta"> Todas as notas soaram limpas</label>
+          <label style="display: block; margin-top: 5px;"><input type="checkbox" id="chk-encerramento" class="criterio-check-meta"> Encerramento deliberado</label>
+        </fieldset>
+        <div>
+          <label for="input-res-obs"><strong>Anotações / Próximo passo pessoal:</strong></label>
+          <textarea id="input-res-obs" rows="2" style="width: 100%; padding: 8px; margin-top: 4px;" placeholder="Ex: Sentir o peso do braço e antecipar o dedo-guia."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-salvar-resultado" class="btn btn-success" type="button">Salvar Resultado</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal 4: Alerta Não-Bloqueante -->
+  <dialog id="modal-alerta">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="alerta-titulo">Aviso</h3>
+        <button id="btn-fechar-alerta" class="btn btn-ghost btn-sm" type="button">✕</button>
+      </div>
+      <div id="alerta-corpo" class="modal-body"></div>
+      <div class="modal-footer">
+        <button id="btn-alerta-cancelar" class="btn btn-ghost" type="button" style="display:none">Cancelar</button>
+        <button id="btn-alerta-ok" class="btn btn-primary" type="button">OK</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts de Dados e Dependências -->
+  <script src="lib/alphatab.min.js"></script>
+  <script src="dados-catalogo.js"></script>
+  <script src="dados-atividades.js"></script>
+  <script src="audio-motor.js"></script>
+  <script src="utils.js"></script>
+  <script src="storage.js"></script>
+  <script src="srs-engine.js"></script>
+  <script src="timer.js"></script>
+  <script src="ear-training.js"></script>
+  <script src="views.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

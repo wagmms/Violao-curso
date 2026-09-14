@@ -1,0 +1,19 @@
+{
+  "data": "2026-09-13T18:11:00.896Z",
+  "total_erros": 0,
+  "erros": [],
+  "modulos": {
+    "modulo_2": {
+      "aulas": 38,
+      "status": "Auditado com 0 divergências"
+    },
+    "modulo_3": {
+      "aulas": 44,
+      "status": "Auditado com 0 divergências"
+    },
+    "modulo_1_interface": {
+      "aulas_homologadas": 46,
+      "status": "Integrado 100% offline"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Curso de Violão — Método Tríade</title>
+  <link rel="stylesheet" href="geral.css">
+</head>
+<body>
+<header>
+  <h1>Curso de Violão — Método Tríade</h1>
+  <p>Seu curso geral organizado por módulos e aulas, na sequência catalogada do Drive.</p>
+</header>
+<main>
+  <p class="notice">O catálogo funciona offline. Vídeos e PDFs no Drive exigem internet e acesso à sua conta. Há aulas sem arquivos no backup; o catálogo não comprova recuperação integral ou domínio do conteúdo.</p>
+  <p id="progresso"></p>
+  <div class="timer">
+    <strong>Sessão de estudo</strong>
+    <span id="tempo">40:00</span>
+    <button id="iniciar">Iniciar</button>
+    <button id="reiniciar">Reiniciar</button>
+  </div>
+  <div class="toolbar">
+    <label>Buscar aula<input id="busca" type="search" placeholder="Título, conteúdo ou módulo"></label>
+    <label>Módulo<select id="modulo"><option value="todos">Todos os módulos</option></select></label>
+    <label>Mostrar<select id="tipo">
+      <option value="todos">Todas as aulas</option>
+      <option value="video">Com vídeo</option>
+      <option value="pdf">Com PDF</option>
+      <option value="disponivel">Com arquivos</option>
+      <option value="indisponivel">Sem arquivos</option>
+      <option value="assistidos">Assistidas</option>
+      <option value="praticados">Praticadas</option>
+      <option value="com_guia">Com guia de estudo</option>
+    </select></label>
+    <button id="btn-mapa" type="button" class="btn-secundario">Mapa de Estudo do Curso</button>
+    <button id="imprimir">Imprimir aulas abertas</button>
+  </div>
+  <p id="resultado" role="status"></p>
+  <div id="catalogo"></div>
+  <h2>Seu backup</h2>
+  <p>Marcações e anotações ficam neste navegador. Exporte para guardar uma cópia. Ao migrar da interface anterior, as marcações do catálogo são preservadas; o plano personalizado não é exibido.</p>
+  <div class="backup">
+    <button id="exportar">Exportar backup</button>
+    <label>Importar backup do curso geral<input id="importar" type="file" accept=".json,application/json"></label>
+    <button id="aplicar" disabled>Mesclar</button>
+    <button id="substituir" disabled>Substituir</button>
+  </div>
+  <p id="aviso" role="status" class="notice"></p>
+</main>
+<dialog id="modal-mapa" class="modal-mapa">
+  <div class="modal-conteudo">
+    <div class="modal-header">
+      <h2>Mapa Geral de Estudo e Arquitetura Curricular</h2>
+      <button id="fechar-mapa" type="button" class="btn-fechar">✕ Fechar</button>
+    </div>
+    <div id="corpo-mapa" class="modal-body"></div>
+  </div>
+</dialog>
+<footer>Rotina sugerida: três sessões de 40 minutos por semana; uma quarta opcional. Abra uma aula, estude e pratique o conteúdo, anote sua dificuldade e retome na próxima sessão. Assistir e praticar são registros separados.</footer>
+<script src="conteudo-geral.js"></script>
+<script src="guias-dados.js"></script>
+<script src="geral.js"></script>
+</body>
+</html>
