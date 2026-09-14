@@ -1,0 +1,16 @@
+# Atendimento aos Critérios de Inspeção (Itens I-01 a I-10 do Parecer Codex) — cand-006
+
+Data: 14/09/2026. Produtor: Antigravity. Revisor: Codex.  
+Referência: `producao/etapa-2-calibracao/REVISAO-CODEX-v01-inspecao.md` e `BRIEF-ETAPA-2A-RESTANTES-v03.md`.
+
+---
+
+| Item | Apontamento do Parecer Codex | Ação Executada na Entrega cand-006 v03-inspecao | Localização e Evidência |
+|---|---|---|---|
+| **I-01** | Origem por arquivo a partir da base; usar fontesOrigem[] como array; corrigir IDs e mapa na matriz. | Metadados físicos de `arq-0460` extraídos de `ARQUIVOS-FISICOS.json`: nome `0. Pequena Valsa`, 128.104 bytes, SHA-256 `8a6ab173...`, entrada `aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol`. Vínculo conferido na mesma linha da `MATRIZ-FONTE-AULA.csv` para `aula-prop-029`, `mod-ped-12` e `hab-sol-001`. | `RECURSOS.json`<br>`DOSSIE-FONTES.md`<br>`validar-cand006.cjs` |
+| **I-04** | Dossiê ensinava 3/4; partitura mostra **3/8**. Baixo inicial é semínima pontuada sustentada; agudos são colcheias. Somar 3 colcheias por compasso em cada voz. Conferir tonalidade (Dó Maior). | Transcrição integral dos compassos 1 a 4 em **3/8** com duas vozes completas. O baixo inicial é semínima pontuada sustentada por 3 colcheias no tempo 1. Os bicordes nos tempos 2 e 3 completam o compasso nos agudos. Ambas as vozes somam exatamente 3 colcheias por compasso ($12{,}0$ colcheias no total). Tonalidade confirmada em Dó Maior (C-G7-C). | `EVENTOS.json`<br>`REVISAO-MUSICAL.md`<br>`recursos/partitura-trecho-3-8.png` |
+| **I-05** | Metadados herdados incompatíveis (ffprobe para PDF). Vídeo não observado = não observado. | Removidos blocos indevidos de vídeo em arquivos de texto. O vídeo `arq-0461` foi formalmente declarado como `pendente_inspecao_audiovisual`, sem atribuição de dados não observados. | `DOSSIE-FONTES.md`<br>`PENDENCIAS.md`<br>`RECURSOS.json` |
+| **I-06** | Separar evidência física e musical. PDF usa página/sistema/compasso, não timestamp de vídeo. | Em `EVIDENCIAS.csv`, a evidência física (`arq-0460`) está separada da evidência musical, que aponta unicamente para `p.1, sis.1, c.1-3` e `p.1, sis.2, c.4`, com zero timestamps de vídeo atribuídos a partituras. | `EVIDENCIAS.csv` |
+| **I-07** | Áudio sintético deve ser rotulado como referência acústica de alturas/tempo, não técnica de violão. | O áudio gerado (`recursos/referencia-audio-sintese.wav`) traz aviso explícito de que constitui síntese matemática pura para calibragem de alturas e pulso regular, não representando timbre de violão de nylon ou dinâmica de mão. | `DOSSIE-FONTES.md`<br>`RECURSOS.json`<br>`VERIFICACOES.md` |
+| **I-08** | Plano específico de solo com vozes, diagnóstico, prática separada e recuperação concreta. | Elaborado `PLANO-AULA.md` específico para a habilidade `hab-sol-001` (polifonia a duas vozes), contendo diagnóstico executável (baixo isolado e bicordes isolados), reconhecimento das vozes, prática separada, combinação compasso a compasso e recuperação específica para o sintoma de abafamento acidental do baixo. | `PLANO-AULA.md` |
+| **I-10** | Status final e limitação de aprovação. | O pacote encerra-se formalmente com status **`aguardando_revisao`**, sem declaração de homologação prematura ou extensão para outros candidatos. | `RECURSOS.json`<br>`DOSSIE-FONTES.md`<br>`PENDENCIAS.md` |

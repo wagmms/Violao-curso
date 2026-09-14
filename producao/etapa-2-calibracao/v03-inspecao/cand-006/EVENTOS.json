@@ -1,0 +1,598 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "candidato_id": "cand-006",
+  "proposta_id": "aula-prop-029",
+  "modulo_pedagogico_id": "mod-ped-12",
+  "habilidade_principal_id": "hab-sol-001",
+  "obra": {
+    "titulo": "Valsa",
+    "subtitulo": "Pequena Valsa para Violão Clássico",
+    "compositor": "Ferdinando Carulli",
+    "afinacão": "Padrão (EADGBE)",
+    "armadura_clave": "Dó Maior (sem acidentes)",
+    "formula_compasso": "3/8",
+    "unidade_tempo": "colcheia",
+    "total_compassos_trecho": 4,
+    "colcheias_por_compasso": 3,
+    "total_colcheias_trecho_por_voz": 12,
+    "andamento_referencia_colcheia_bpm": 120,
+    "duracao_segundo_por_colcheia": 0.5,
+    "duracao_total_segundos": 6
+  },
+  "vozes": {
+    "voz_1_agudos": {
+      "descricao": "Melodia superior e bicordes de acompanhamento nos tempos 2 e 3 (hastes para cima na notação tradicional).",
+      "total_eventos": 12,
+      "soma_duracao_colcheias": 12
+    },
+    "voz_2_baixo": {
+      "descricao": "Bordões com polegar sustentados como semínima pontuada no tempo 1 (hastes para baixo na notação tradicional).",
+      "total_eventos": 4,
+      "soma_duracao_colcheias": 12
+    }
+  },
+  "eventos": [
+    {
+      "id_evento": "ev-c1-v2-01",
+      "compasso": 1,
+      "voz": "voz_2_baixo",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 3,
+      "tempo_inicio_absoluto_colcheias": 0,
+      "tempo_fim_absoluto_colcheias": 3,
+      "tempo_inicio_segundos": 0,
+      "duracao_segundos": 1.5,
+      "figura_ritmica": "seminima_pontuada",
+      "tipo": "nota",
+      "nota_escrita": "C4",
+      "nota_sonora": "C3",
+      "midi_escrito": 60,
+      "midi_sonoro": 48,
+      "frequencia_hz_ref": 130.81,
+      "corda": 5,
+      "casa": 3,
+      "dedo_mao_esquerda": "3",
+      "dedo_mao_direita": "p",
+      "relacao_tablatura": "Número 3 com ponto na 5ª linha da tablatura (5ª corda)",
+      "funcao_harmonica": "Tônica (fundamental de Dó Maior)",
+      "observacao": "Baixo atacado no tempo 1 com o polegar e sustentado ao longo de todo o compasso 3/8."
+    },
+    {
+      "id_evento": "ev-c1-v1-01",
+      "compasso": 1,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 0,
+      "tempo_fim_absoluto_colcheias": 1,
+      "tempo_inicio_segundos": 0,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "pausa_colcheia",
+      "tipo": "pausa",
+      "nota_escrita": "pausa",
+      "nota_sonora": "silêncio",
+      "midi_escrito": null,
+      "midi_sonoro": null,
+      "frequencia_hz_ref": null,
+      "corda": null,
+      "casa": null,
+      "dedo_mao_esquerda": null,
+      "dedo_mao_direita": null,
+      "relacao_tablatura": "Espaço sem ataque nos agudos no tempo 1",
+      "funcao_harmonica": "Espaço para ressonância isolada do baixo",
+      "observacao": "Silêncio da voz superior no tempo 1 para destacar o ataque do bordão."
+    },
+    {
+      "id_evento": "ev-c1-v1-02",
+      "compasso": 1,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 1,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 1,
+      "tempo_fim_absoluto_colcheias": 2,
+      "tempo_inicio_segundos": 0.5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "bicorde",
+      "notas_escritas": [
+        "C5",
+        "E5"
+      ],
+      "notas_sonoras": [
+        "C4",
+        "E4"
+      ],
+      "midi_escrito": [
+        72,
+        76
+      ],
+      "midi_sonoro": [
+        60,
+        64
+      ],
+      "frequencia_hz_ref": [
+        261.63,
+        329.63
+      ],
+      "cordas": [
+        2,
+        1
+      ],
+      "casas": [
+        1,
+        0
+      ],
+      "dedos_mao_esquerda": [
+        "1",
+        "—"
+      ],
+      "dedos_mao_direita": [
+        "i",
+        "m"
+      ],
+      "relacao_tablatura": "1 na 2ª corda e 0 na 1ª corda",
+      "funcao_harmonica": "Terça maior e oitava da tríade de C",
+      "observacao": "Bicorde atacado simultaneamente pelos dedos i e m enquanto o baixo C3 ressoa."
+    },
+    {
+      "id_evento": "ev-c1-v1-03",
+      "compasso": 1,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 2,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 2,
+      "tempo_fim_absoluto_colcheias": 3,
+      "tempo_inicio_segundos": 1,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "bicorde",
+      "notas_escritas": [
+        "C5",
+        "E5"
+      ],
+      "notas_sonoras": [
+        "C4",
+        "E4"
+      ],
+      "midi_escrito": [
+        72,
+        76
+      ],
+      "midi_sonoro": [
+        60,
+        64
+      ],
+      "frequencia_hz_ref": [
+        261.63,
+        329.63
+      ],
+      "cordas": [
+        2,
+        1
+      ],
+      "casas": [
+        1,
+        0
+      ],
+      "dedos_mao_esquerda": [
+        "1",
+        "—"
+      ],
+      "dedos_mao_direita": [
+        "i",
+        "m"
+      ],
+      "relacao_tablatura": "1 na 2ª corda e 0 na 1ª corda",
+      "funcao_harmonica": "Terça maior e oitava da tríade de C",
+      "observacao": "Segundo bicorde completando o compasso 1."
+    },
+    {
+      "id_evento": "ev-c2-v2-01",
+      "compasso": 2,
+      "voz": "voz_2_baixo",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 3,
+      "tempo_inicio_absoluto_colcheias": 3,
+      "tempo_fim_absoluto_colcheias": 6,
+      "tempo_inicio_segundos": 1.5,
+      "duracao_segundos": 1.5,
+      "figura_ritmica": "seminima_pontuada",
+      "tipo": "nota",
+      "nota_escrita": "D4",
+      "nota_sonora": "D3",
+      "midi_escrito": 62,
+      "midi_sonoro": 50,
+      "frequencia_hz_ref": 146.83,
+      "corda": 4,
+      "casa": 0,
+      "dedo_mao_esquerda": "—",
+      "dedo_mao_direita": "p",
+      "relacao_tablatura": "Número 0 com ponto na 4ª linha da tablatura (4ª corda)",
+      "funcao_harmonica": "Quinta de G7 (baixo no acorde de dominante invertido G7/D)",
+      "observacao": "Baixo na 4ª corda solta atacado no tempo 1 e sustentado por todo o compasso 2."
+    },
+    {
+      "id_evento": "ev-c2-v1-01",
+      "compasso": 2,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 3,
+      "tempo_fim_absoluto_colcheias": 4,
+      "tempo_inicio_segundos": 1.5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "pausa_colcheia",
+      "tipo": "pausa",
+      "nota_escrita": "pausa",
+      "nota_sonora": "silêncio",
+      "midi_escrito": null,
+      "midi_sonoro": null,
+      "frequencia_hz_ref": null,
+      "corda": null,
+      "casa": null,
+      "dedo_mao_esquerda": null,
+      "dedo_mao_direita": null,
+      "relacao_tablatura": "Espaço sem ataque nos agudos no tempo 1",
+      "funcao_harmonica": "Espaço para ressonância isolada do baixo D3",
+      "observacao": "Silêncio da voz superior no tempo 1."
+    },
+    {
+      "id_evento": "ev-c2-v1-02",
+      "compasso": 2,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 1,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 4,
+      "tempo_fim_absoluto_colcheias": 5,
+      "tempo_inicio_segundos": 2,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "bicorde",
+      "notas_escritas": [
+        "B4",
+        "F5"
+      ],
+      "notas_sonoras": [
+        "B3",
+        "F4"
+      ],
+      "midi_escrito": [
+        71,
+        77
+      ],
+      "midi_sonoro": [
+        59,
+        65
+      ],
+      "frequencia_hz_ref": [
+        246.94,
+        349.23
+      ],
+      "cordas": [
+        2,
+        1
+      ],
+      "casas": [
+        0,
+        1
+      ],
+      "dedos_mao_esquerda": [
+        "—",
+        "1"
+      ],
+      "dedos_mao_direita": [
+        "i",
+        "m"
+      ],
+      "relacao_tablatura": "0 na 2ª corda e 1 na 1ª corda",
+      "funcao_harmonica": "Trítono característico do dominante G7 (sensível B e sétima F)",
+      "observacao": "Bicorde de tensão harmônica atacado nos agudos."
+    },
+    {
+      "id_evento": "ev-c2-v1-03",
+      "compasso": 2,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 2,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 5,
+      "tempo_fim_absoluto_colcheias": 6,
+      "tempo_inicio_segundos": 2.5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "bicorde",
+      "notas_escritas": [
+        "B4",
+        "F5"
+      ],
+      "notas_sonoras": [
+        "B3",
+        "F4"
+      ],
+      "midi_escrito": [
+        71,
+        77
+      ],
+      "midi_sonoro": [
+        59,
+        65
+      ],
+      "frequencia_hz_ref": [
+        246.94,
+        349.23
+      ],
+      "cordas": [
+        2,
+        1
+      ],
+      "casas": [
+        0,
+        1
+      ],
+      "dedos_mao_esquerda": [
+        "—",
+        "1"
+      ],
+      "dedos_mao_direita": [
+        "i",
+        "m"
+      ],
+      "relacao_tablatura": "0 na 2ª corda e 1 na 1ª corda",
+      "funcao_harmonica": "Trítono de G7",
+      "observacao": "Segundo bicorde completando o compasso 2."
+    },
+    {
+      "id_evento": "ev-c3-v2-01",
+      "compasso": 3,
+      "voz": "voz_2_baixo",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 3,
+      "tempo_inicio_absoluto_colcheias": 6,
+      "tempo_fim_absoluto_colcheias": 9,
+      "tempo_inicio_segundos": 3,
+      "duracao_segundos": 1.5,
+      "figura_ritmica": "seminima_pontuada",
+      "tipo": "nota",
+      "nota_escrita": "C4",
+      "nota_sonora": "C3",
+      "midi_escrito": 60,
+      "midi_sonoro": 48,
+      "frequencia_hz_ref": 130.81,
+      "corda": 5,
+      "casa": 3,
+      "dedo_mao_esquerda": "3",
+      "dedo_mao_direita": "p",
+      "relacao_tablatura": "Número 3 com ponto na 5ª corda",
+      "funcao_harmonica": "Tônica (resolução de C)",
+      "observacao": "Baixo de Dó3 atacado no tempo 1 e sustentado por todo o compasso 3."
+    },
+    {
+      "id_evento": "ev-c3-v1-01",
+      "compasso": 3,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 6,
+      "tempo_fim_absoluto_colcheias": 7,
+      "tempo_inicio_segundos": 3,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "pausa_colcheia",
+      "tipo": "pausa",
+      "nota_escrita": "pausa",
+      "nota_sonora": "silêncio",
+      "midi_escrito": null,
+      "midi_sonoro": null,
+      "frequencia_hz_ref": null,
+      "corda": null,
+      "casa": null,
+      "dedo_mao_esquerda": null,
+      "dedo_mao_direita": null,
+      "relacao_tablatura": "Espaço sem ataque nos agudos no tempo 1",
+      "funcao_harmonica": "Espaço para ressonância isolada do baixo C3",
+      "observacao": "Silêncio da voz superior no tempo 1."
+    },
+    {
+      "id_evento": "ev-c3-v1-02",
+      "compasso": 3,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 1,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 7,
+      "tempo_fim_absoluto_colcheias": 8,
+      "tempo_inicio_segundos": 3.5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "bicorde",
+      "notas_escritas": [
+        "C5",
+        "E5"
+      ],
+      "notas_sonoras": [
+        "C4",
+        "E4"
+      ],
+      "midi_escrito": [
+        72,
+        76
+      ],
+      "midi_sonoro": [
+        60,
+        64
+      ],
+      "frequencia_hz_ref": [
+        261.63,
+        329.63
+      ],
+      "cordas": [
+        2,
+        1
+      ],
+      "casas": [
+        1,
+        0
+      ],
+      "dedos_mao_esquerda": [
+        "1",
+        "—"
+      ],
+      "dedos_mao_direita": [
+        "i",
+        "m"
+      ],
+      "relacao_tablatura": "1 na 2ª corda e 0 na 1ª corda",
+      "funcao_harmonica": "Resolução consonante na tríade de C",
+      "observacao": "Bicorde atacado simultaneamente enquanto o baixo ressoa."
+    },
+    {
+      "id_evento": "ev-c3-v1-03",
+      "compasso": 3,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 2,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 8,
+      "tempo_fim_absoluto_colcheias": 9,
+      "tempo_inicio_segundos": 4,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "bicorde",
+      "notas_escritas": [
+        "C5",
+        "E5"
+      ],
+      "notas_sonoras": [
+        "C4",
+        "E4"
+      ],
+      "midi_escrito": [
+        72,
+        76
+      ],
+      "midi_sonoro": [
+        60,
+        64
+      ],
+      "frequencia_hz_ref": [
+        261.63,
+        329.63
+      ],
+      "cordas": [
+        2,
+        1
+      ],
+      "casas": [
+        1,
+        0
+      ],
+      "dedos_mao_esquerda": [
+        "1",
+        "—"
+      ],
+      "dedos_mao_direita": [
+        "i",
+        "m"
+      ],
+      "relacao_tablatura": "1 na 2ª corda e 0 na 1ª corda",
+      "funcao_harmonica": "Consonância de C",
+      "observacao": "Segundo bicorde completando o compasso 3."
+    },
+    {
+      "id_evento": "ev-c4-v1-01",
+      "compasso": 4,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 9,
+      "tempo_fim_absoluto_colcheias": 10,
+      "tempo_inicio_segundos": 4.5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "nota",
+      "nota_escrita": "G5",
+      "nota_sonora": "G4",
+      "midi_escrito": 79,
+      "midi_sonoro": 67,
+      "frequencia_hz_ref": 392,
+      "corda": 1,
+      "casa": 3,
+      "dedo_mao_esquerda": "3",
+      "dedo_mao_direita": "m",
+      "relacao_tablatura": "Número 3 na 1ª linha da tablatura (1ª corda)",
+      "funcao_harmonica": "Quinta da tríade de C (ponto melódico mais agudo da semifrase)",
+      "observacao": "Início da frase melódica que fecha o semifraseado."
+    },
+    {
+      "id_evento": "ev-c4-v1-02",
+      "compasso": 4,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 1,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 10,
+      "tempo_fim_absoluto_colcheias": 11,
+      "tempo_inicio_segundos": 5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "nota",
+      "nota_escrita": "E5",
+      "nota_sonora": "E4",
+      "midi_escrito": 76,
+      "midi_sonoro": 64,
+      "frequencia_hz_ref": 329.63,
+      "corda": 1,
+      "casa": 0,
+      "dedo_mao_esquerda": "—",
+      "dedo_mao_direita": "i",
+      "relacao_tablatura": "Número 0 na 1ª corda",
+      "funcao_harmonica": "Terça maior de C",
+      "observacao": "Passagem melódica descendente na 1ª corda solta."
+    },
+    {
+      "id_evento": "ev-c4-v1-03",
+      "compasso": 4,
+      "voz": "voz_1_agudos",
+      "posicao_compasso_colcheias": 2,
+      "duracao_colcheias": 1,
+      "tempo_inicio_absoluto_colcheias": 11,
+      "tempo_fim_absoluto_colcheias": 12,
+      "tempo_inicio_segundos": 5.5,
+      "duracao_segundos": 0.5,
+      "figura_ritmica": "colcheia",
+      "tipo": "nota",
+      "nota_escrita": "G4",
+      "nota_sonora": "G3",
+      "midi_escrito": 67,
+      "midi_sonoro": 55,
+      "frequencia_hz_ref": 196,
+      "corda": 3,
+      "casa": 0,
+      "dedo_mao_esquerda": "—",
+      "dedo_mao_direita": "p",
+      "relacao_tablatura": "Número 0 na 3ª corda",
+      "funcao_harmonica": "Quinta de C (repouso melódico na 3ª corda solta)",
+      "observacao": "Fechamento melódico da semifrase na 3ª corda."
+    },
+    {
+      "id_evento": "ev-c4-v2-01",
+      "compasso": 4,
+      "voz": "voz_2_baixo",
+      "posicao_compasso_colcheias": 0,
+      "duracao_colcheias": 3,
+      "tempo_inicio_absoluto_colcheias": 9,
+      "tempo_fim_absoluto_colcheias": 12,
+      "tempo_inicio_segundos": 4.5,
+      "duracao_segundos": 1.5,
+      "figura_ritmica": "pausa_seminima_pontuada",
+      "tipo": "pausa",
+      "nota_escrita": "pausa",
+      "nota_sonora": "silêncio",
+      "midi_escrito": null,
+      "midi_sonoro": null,
+      "frequencia_hz_ref": null,
+      "corda": null,
+      "casa": null,
+      "dedo_mao_esquerda": null,
+      "dedo_mao_direita": null,
+      "relacao_tablatura": "Sem ataque de bordão no compasso 4 (frase melódica conduzida na voz superior)",
+      "funcao_harmonica": "Silêncio no baixo",
+      "observacao": "Pausa completa de 3 colcheias na voz do baixo enquanto a melodia executa o desenho de colcheias."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "candidato_id": "cand-006",
+  "versao": "v03-inspecao",
+  "status": "aguardando_revisao",
+  "data_geracao": "2026-09-14",
+  "produtor": "Antigravity",
+  "revisor": "Codex",
+  "titulo": "Inspeção Analítica e Calibração Musical: Pequena Valsa de Ferdinando Carulli",
+  "mapeamento_curricular": {
+    "proposta_id": "aula-prop-029",
+    "titulo_proposta": "Polifonia a Duas Vozes: Pequena Valsa de Carulli",
+    "modulo_pedagogico_id": "mod-ped-12",
+    "modulo_nome": "12. Violão Solo e Arranjo Fingerstyle",
+    "habilidade_principal_id": "hab-sol-001",
+    "habilidade_nome": "Melodia com Baixo Simultâneo (Textura Polifônica a Duas Vozes)",
+    "habilidade_secundaria_id": "hab-tec-004",
+    "decisao_editorial": "manter_aula_individual"
+  },
+  "fontes_historicas": [
+    {
+      "id_arquivo": "arq-0460",
+      "nome_arquivo": "0. Pequena Valsa",
+      "caminho_relativo": "Curso Kaiser/Repertório Nível 1/1. Repertório Nível 1/10. Pequena Valsa (Ferdinando Carulli) - Violão Clássico/0. Pequena Valsa",
+      "tamanho_bytes": 128104,
+      "sha256": "8a6ab1739f7eec07f758aec998244e82d891b280ba43bf87b003e78328252b32",
+      "origem_acervo": "Kaiserplay",
+      "tipo_detectado": "pdf",
+      "entrada_origem_id": "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol",
+      "status_inspecao": "inspecionado_visualmente_pagina_1",
+      "observacoes": "Partitura com tablatura de Ferdinando Carulli em 3/8, afinação padrão, tonalidade Dó Maior."
+    }
+  ],
+  "fontesOrigem": [
+    "aula-kaiser-137-10-pequena-valsa-ferdinando-carulli-viol"
+  ],
+  "fontes_correlatas_pendentes_audiovisual": [
+    {
+      "id_arquivo": "arq-0461",
+      "nome_arquivo": "1. Aula.mp4",
+      "tamanho_bytes": 90448442,
+      "tipo_detectado": "video",
+      "status_inspecao": "pendente_inspecao_audiovisual",
+      "motivo": "Inspeção restrita à partitura na Etapa 2A; conteúdo didático em vídeo não examinado."
+    },
+    {
+      "id_arquivo": "arq-0462",
+      "nome_arquivo": "descricao.md",
+      "tamanho_bytes": 322,
+      "tipo_detectado": "descricao",
+      "status_inspecao": "documental_consultado"
+    }
+  ],
+  "recursos_gerados": {
+    "recorte_fonte_c1_c6": "recursos/recorte-fonte-c1-c6.png",
+    "recorte_fonte_c1_c3": "recursos/recorte-fonte-c1-c3.png",
+    "recorte_fonte_c4": "recursos/recorte-fonte-c4.png",
+    "partitura_trecho_png": "recursos/partitura-trecho-3-8.png",
+    "partitura_trecho_svg": "recursos/partitura-trecho-3-8.svg",
+    "audio_sintese": "recursos/referencia-audio-sintese.wav",
+    "eventos_json": "EVENTOS.json",
+    "evidencias_csv": "EVIDENCIAS.csv"
+  }
+}
