@@ -127,6 +127,42 @@ async function main(){
   a.w.document.getElementById('btn-salvar-resultado').click();assert.equal(a.run('state.tentativas.length'),0);
  });
  await teste('Fontes canônicas nunca produzem link vazio',a=>{a.run(`navegarPara('aprender')`);for(const link of a.w.document.querySelectorAll('#aprender-conteudo a'))assert.ok(link.href.startsWith('https://drive.google.com/'));});
+ await teste('obterDataLocal: formatação, offsets, virada de mês/ano, ano bissexto e padding',a=>{
+  const hoje = a.run('obterDataLocal()');
+  assert.match(hoje, /^\d{4}-\d{2}-\d{2}$/);
+
+  const { obterDataLocal } = require('../utils.js');
+  assert.equal(typeof obterDataLocal, 'function');
+  assert.match(obterDataLocal(), /^\d{4}-\d{2}-\d{2}$/);
+
+  a.run(`
+    function testarObterDataComDataFixa(ano, mesIndex, dia, offset) {
+      const RealDate = Date;
+      try {
+        globalThis.Date = class extends RealDate {
+          constructor(...args) {
+            if (args.length === 0) return new RealDate(ano, mesIndex, dia, 12, 0, 0);
+            return new RealDate(...args);
+          }
+        };
+        return obterDataLocal(offset);
+      } finally {
+        globalThis.Date = RealDate;
+      }
+    }
+  `);
+
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 2, 15, 0)'), '2026-03-15');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 2, 15, 5)'), '2026-03-20');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 2, 15, -10)'), '2026-03-05');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 0, 31, 1)'), '2026-02-01');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 2, 1, -1)'), '2026-02-28');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 11, 31, 1)'), '2027-01-01');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 0, 1, -1)'), '2025-12-31');
+  assert.equal(a.run('testarObterDataComDataFixa(2024, 1, 28, 1)'), '2024-02-29');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 1, 28, 1)'), '2026-03-01');
+  assert.equal(a.run('testarObterDataComDataFixa(2026, 4, 4, 0)'), '2026-05-04');
+ });
  const report={data:new Date().toISOString(),tipo:'JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte',total:results.length,aprovados:results.filter(t=>t.ok).length,resultados:results};
  fs.writeFileSync(path.resolve(dir,'../revisao-bloco-a-2026-09-13/testes-confiabilidade.json'),JSON.stringify(report,null,2));
  console.log(`${report.aprovados}/${report.total} aprovados`);for(const r of results.filter(t=>!t.ok))console.error(r.nome,r.erro);
