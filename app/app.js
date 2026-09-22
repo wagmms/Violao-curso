@@ -11,19 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
   carregarEstadoInicial();
   Object.defineProperty(window, '_appState', { configurable: true, get: () => state });
 
+  initAudioMotor();
+  initNavigation();
+  initTimerControls();
+  initAfinadorModal();
+  initStandModeControls();
+  initKeyboardShortcuts();
+  initPageLifecycle();
+
+  navegarPara('hoje');
+  atualizarTimer();
+});
+
+function initAudioMotor() {
   document.body.addEventListener('click', () => {
     if (AudioMotor) AudioMotor.init();
   }, { once: true });
+}
 
-  // Inicializar navegação
+function initNavigation() {
   document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.addEventListener('click', () => navegarPara(btn.dataset.view));
   });
+}
 
-  document.getElementById('btn-timer-toggle').onclick = iniciarOuRetomarSessao;
-  document.getElementById('btn-timer-reset').onclick = resetarSessao;
+function initTimerControls() {
+  const btnToggle = document.getElementById('btn-timer-toggle');
+  const btnReset = document.getElementById('btn-timer-reset');
+  if (btnToggle) btnToggle.onclick = iniciarOuRetomarSessao;
+  if (btnReset) btnReset.onclick = resetarSessao;
+}
 
-  // Inicializar afinador
+function initAfinadorModal() {
   const btnAbrirAfinador = document.getElementById('btn-abrir-afinador');
   const btnFecharAfinador = document.getElementById('btn-fechar-afinador');
   const btnDesligarMicrofone = document.getElementById('btn-desligar-microfone');
@@ -44,13 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnFecharAfinador) btnFecharAfinador.addEventListener('click', fecharAfinador);
   if (btnDesligarMicrofone) btnDesligarMicrofone.addEventListener('click', fecharAfinador);
   if (modalAfinador) modalAfinador.addEventListener('close', fecharAfinador);
+}
 
-  // Modo Estante
+function initStandModeControls() {
   const btnEstante = document.getElementById('btn-modo-estante');
   if (btnEstante) {
     btnEstante.addEventListener('click', toggleModoEstante);
   }
+}
 
+function initKeyboardShortcuts() {
   document.addEventListener('keydown', (e) => {
     const active = document.activeElement;
     if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.tagName === 'SELECT' || active.isContentEditable)) {
@@ -127,7 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+}
 
+function initPageLifecycle() {
   document.addEventListener('fullscreenchange', () => {
     if (!document.fullscreenElement && document.body.classList.contains('modo-estante')) {
       document.body.classList.remove('modo-estante');
@@ -136,16 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Inicializar timer, modais, diagnóstico...
-  navegarPara('hoje');
-  atualizarTimer();
-  // Em uma saída normal, consolida até o último instante. Fechamentos abruptos
-  // recuperam o último checkpoint (a cada cinco segundos enquanto há ticks).
   window.addEventListener('pagehide', () => pausarSessao());
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) salvarEstado();
   });
-});
+}
 
 let autoScrollAnimId = null;
 let autoScrollAtivo = false;
