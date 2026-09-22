@@ -127,6 +127,67 @@ async function main(){
   a.w.document.getElementById('btn-salvar-resultado').click();assert.equal(a.run('state.tentativas.length'),0);
  });
  await teste('Fontes canônicas nunca produzem link vazio',a=>{a.run(`navegarPara('aprender')`);for(const link of a.w.document.querySelectorAll('#aprender-conteudo a'))assert.ok(link.href.startsWith('https://drive.google.com/'));});
+ await teste('normalizarRevisoes: trata lista vazia e item único', a => {
+  const v1 = a.run('normalizarRevisoes([])');
+  assert.equal(v1.length, 0);
+
+  const revs = [{ id: 'rev-1', atividadeId: 'ativ-1', dataPrevista: '2026-09-15', concluida: false }];
+  const res = a.run(`normalizarRevisoes(${JSON.stringify(revs)})`);
+  assert.equal(res.length, 1);
+  assert.equal(res[0].concluida, false);
+ });
+ await teste('normalizarRevisoes: mescla pendências da mesma atividade mantendo a mais antiga e resolvendo empate por ID', a => {
+  const input = [
+   { id: 'rev-c', atividadeId: 'ativ-1', dataPrevista: '2026-09-20', concluida: false },
+   { id: 'rev-b', atividadeId: 'ativ-1', dataPrevista: '2026-09-15', concluida: false },
+   { id: 'rev-a', atividadeId: 'ativ-1', dataPrevista: '2026-09-15', concluida: false },
+   { id: 'rev-ja-concluida', atividadeId: 'ativ-1', dataPrevista: '2026-09-10', concluida: true }
+  ];
+
+  const res = a.run(`
+   const revs = ${JSON.stringify(input)};
+   normalizarRevisoes(revs);
+  `);
+
+  const revA = res.find(r => r.id === 'rev-a');
+  assert.equal(revA.concluida, false);
+
+  const revB = res.find(r => r.id === 'rev-b');
+  assert.equal(revB.concluida, true);
+  assert.equal(revB.substituidaPor, 'rev-a');
+  assert.equal(revB.motivoEncerramento, 'mescla-de-pendencias');
+
+  const revC = res.find(r => r.id === 'rev-c');
+  assert.equal(revC.concluida, true);
+  assert.equal(revC.substituidaPor, 'rev-a');
+  assert.equal(revC.motivoEncerramento, 'mescla-de-pendencias');
+
+  const revJaConcluida = res.find(r => r.id === 'rev-ja-concluida');
+  assert.equal(revJaConcluida.concluida, true);
+  assert.equal(revJaConcluida.substituidaPor, undefined);
+ });
+ await teste('normalizarRevisoes: isola deduplicação por atividade e preserva referência do array', a => {
+  const res = a.run(`
+   const list = [
+    { id: 'rev-ativ1-2', atividadeId: 'ativ-1', dataPrevista: '2026-09-18', concluida: false },
+    { id: 'rev-ativ1-1', atividadeId: 'ativ-1', dataPrevista: '2026-09-15', concluida: false },
+    { id: 'rev-ativ2-2', atividadeId: 'ativ-2', dataPrevista: '2026-09-22', concluida: false },
+    { id: 'rev-ativ2-1', atividadeId: 'ativ-2', dataPrevista: '2026-09-10', concluida: false }
+   ];
+   const ret = normalizarRevisoes(list);
+   ({ sameRef: ret === list, list: ret });
+  `);
+
+  assert.ok(res.sameRef);
+
+  assert.equal(res.list.find(r => r.id === 'rev-ativ1-1').concluida, false);
+  assert.equal(res.list.find(r => r.id === 'rev-ativ1-2').concluida, true);
+  assert.equal(res.list.find(r => r.id === 'rev-ativ1-2').substituidaPor, 'rev-ativ1-1');
+
+  assert.equal(res.list.find(r => r.id === 'rev-ativ2-1').concluida, false);
+  assert.equal(res.list.find(r => r.id === 'rev-ativ2-2').concluida, true);
+  assert.equal(res.list.find(r => r.id === 'rev-ativ2-2').substituidaPor, 'rev-ativ2-1');
+ });
  const report={data:new Date().toISOString(),tipo:'JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte',total:results.length,aprovados:results.filter(t=>t.ok).length,resultados:results};
  fs.writeFileSync(path.resolve(dir,'../revisao-bloco-a-2026-09-13/testes-confiabilidade.json'),JSON.stringify(report,null,2));
  console.log(`${report.aprovados}/${report.total} aprovados`);for(const r of results.filter(t=>!t.ok))console.error(r.nome,r.erro);
