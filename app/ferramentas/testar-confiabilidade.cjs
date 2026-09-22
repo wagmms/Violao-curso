@@ -127,6 +127,74 @@ async function main(){
   a.w.document.getElementById('btn-salvar-resultado').click();assert.equal(a.run('state.tentativas.length'),0);
  });
  await teste('Fontes canônicas nunca produzem link vazio',a=>{a.run(`navegarPara('aprender')`);for(const link of a.w.document.querySelectorAll('#aprender-conteudo a'))assert.ok(link.href.startsWith('https://drive.google.com/'));});
+ await teste('obterDataLocal: formato YYYY-MM-DD, deslocamentos, viradas de mês/ano e ano bissexto',a=>{
+  // Require direto via CJS export
+  const { obterDataLocal } = require('../utils.js');
+  assert.equal(typeof obterDataLocal, 'function');
+
+  // 1. Padrão sem parâmetros e com 0
+  const hojeReg = /^\d{4}-\d{2}-\d{2}$/;
+  const hoje = a.run('obterDataLocal()');
+  const hojeZero = a.run('obterDataLocal(0)');
+  assert.ok(hojeReg.test(hoje), 'Deve retornar formato YYYY-MM-DD');
+  assert.equal(hoje, hojeZero, 'obterDataLocal() e obterDataLocal(0) devem ser idênticos');
+  assert.equal(obterDataLocal(), hoje, 'Exported obterDataLocal deve equivaler ao ambiente');
+
+  // 2. Testar cálculo relativo em relação à data atual
+  const dRef = new Date();
+  const pad = n => String(n).padStart(2, '0');
+
+  const dPlus5 = new Date(dRef);
+  dPlus5.setDate(dPlus5.getDate() + 5);
+  const espPlus5 = `${dPlus5.getFullYear()}-${pad(dPlus5.getMonth() + 1)}-${pad(dPlus5.getDate())}`;
+  assert.equal(a.run('obterDataLocal(5)'), espPlus5);
+
+  const dMinus5 = new Date(dRef);
+  dMinus5.setDate(dMinus5.getDate() - 5);
+  const espMinus5 = `${dMinus5.getFullYear()}-${pad(dMinus5.getMonth() + 1)}-${pad(dMinus5.getDate())}`;
+  assert.equal(a.run('obterDataLocal(-5)'), espMinus5);
+
+  // 3. Mockar Date para testar cenários de borda
+  a.run(`
+    const _RealDate = Date;
+    function mockData(ano, mesZeroBased, dia) {
+      function CustomDate(...args) {
+        if (args.length) return new _RealDate(...args);
+        return new _RealDate(ano, mesZeroBased, dia, 12, 0, 0);
+      }
+      CustomDate.prototype = _RealDate.prototype;
+      CustomDate.now = () => new _RealDate(ano, mesZeroBased, dia, 12, 0, 0).getTime();
+      return CustomDate;
+    }
+  `);
+
+  // 3a. Virada de ano (31/12/2026 + 1 dia => 2027-01-01)
+  a.run('Date = mockData(2026, 11, 31);');
+  assert.equal(a.run('obterDataLocal()'), '2026-12-31');
+  assert.equal(a.run('obterDataLocal(1)'), '2027-01-01');
+
+  // 3b. Virada de ano inversa (01/01/2026 - 1 dia => 2025-12-31)
+  a.run('Date = mockData(2026, 0, 1);');
+  assert.equal(a.run('obterDataLocal()'), '2026-01-01');
+  assert.equal(a.run('obterDataLocal(-1)'), '2025-12-31');
+
+  // 3c. Ano Bissexto (28/02/2024 + 1 dia => 2024-02-29)
+  a.run('Date = mockData(2024, 1, 28);');
+  assert.equal(a.run('obterDataLocal()'), '2024-02-28');
+  assert.equal(a.run('obterDataLocal(1)'), '2024-02-29');
+
+  // 3d. Ano Não-Bissexto (28/02/2025 + 1 dia => 2025-03-01)
+  a.run('Date = mockData(2025, 1, 28);');
+  assert.equal(a.run('obterDataLocal()'), '2025-02-28');
+  assert.equal(a.run('obterDataLocal(1)'), '2025-03-01');
+
+  // 3e. Preenchimento de zeros para dia e mês de 1 dígito (05/03/2026)
+  a.run('Date = mockData(2026, 2, 5);');
+  assert.equal(a.run('obterDataLocal()'), '2026-03-05');
+
+  // Restaurar Date original
+  a.run('Date = _RealDate;');
+ });
  const report={data:new Date().toISOString(),tipo:'JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte',total:results.length,aprovados:results.filter(t=>t.ok).length,resultados:results};
  fs.writeFileSync(path.resolve(dir,'../revisao-bloco-a-2026-09-13/testes-confiabilidade.json'),JSON.stringify(report,null,2));
  console.log(`${report.aprovados}/${report.total} aprovados`);for(const r of results.filter(t=>!t.ok))console.error(r.nome,r.erro);

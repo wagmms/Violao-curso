@@ -105,3 +105,20 @@ function salvarAnotacaoPratica(atividadeId, texto) {
 function atividadeTemAnotacao(atividadeId) {
   return state.anotacoes && typeof state.anotacoes[atividadeId] === 'string' && state.anotacoes[atividadeId].trim().length > 0;
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    escapeHTML,
+    mostrarAlerta,
+    mostrarConfirmacao,
+    obterDataLocal,
+    hidratarFonte,
+    hidratarFontes,
+    urlDriveValida,
+    atividadeTemSessao,
+    novoId,
+    sanitizarAnotacaoPratica,
+    salvarAnotacaoPratica,
+    atividadeTemAnotacao
+  };
+}
