@@ -30,6 +30,7 @@ const arquivosObrigatorios = [
   'estilo.css',
   'dados-catalogo.js',
   'dados-atividades.js',
+  'dados-ritmos.js',
   'audio-motor.js',
   'app.js', 'utils.js', 'storage.js', 'srs-engine.js', 'timer.js', 'ear-training.js', 'views.js', 'timer-worker.js'
 ];
