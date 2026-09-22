@@ -84,7 +84,7 @@ function atividadeTemSessao(ativ) {
 }
 
 function novoId(prefixo) {
-  return prefixo + '-' + (window.crypto?.randomUUID?.() || (Date.now() + '-' + Math.random().toString(36).slice(2)));
+  return prefixo + '-' + ((typeof window !== 'undefined' && window.crypto?.randomUUID?.()) || (Date.now() + '-' + Math.random().toString(36).slice(2)));
 }
 
 function sanitizarAnotacaoPratica(texto) {
@@ -104,4 +104,22 @@ function salvarAnotacaoPratica(atividadeId, texto) {
 
 function atividadeTemAnotacao(atividadeId) {
   return state.anotacoes && typeof state.anotacoes[atividadeId] === 'string' && state.anotacoes[atividadeId].trim().length > 0;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    $,
+    escapeHTML,
+    mostrarAlerta,
+    mostrarConfirmacao,
+    obterDataLocal,
+    hidratarFonte,
+    hidratarFontes,
+    urlDriveValida,
+    atividadeTemSessao,
+    novoId,
+    sanitizarAnotacaoPratica,
+    salvarAnotacaoPratica,
+    atividadeTemAnotacao
+  };
 }
