@@ -82,15 +82,29 @@ function renderizarAulaCurso() {
   state.aprendizagemCurso = validarAprendizagemCurso(state.aprendizagemCurso);
   const contexto = state.aprendizagemCurso;
   const mods = window.CURSO_DADOS.catalogoOriginal;
-  const mod = mods.find(m => m.aulas.some(a => a.id === contexto.aulaAtualId));
-  if (!mod) return false;
-  const aula = mod.aulas.find(a => a.id === contexto.aulaAtualId);
+  let mod = null;
+  let aula = null;
+  let indice = -1;
+  const sequencia = [];
+
+  for (let i = 0; i < mods.length; i++) {
+    const m = mods[i];
+    for (let j = 0; j < m.aulas.length; j++) {
+      const a = m.aulas[j];
+      if (a.id === contexto.aulaAtualId) {
+        mod = m;
+        aula = a;
+        indice = sequencia.length;
+      }
+      sequencia.push(a);
+    }
+  }
+
+  if (!mod || !aula) return false;
   const guiaModulo = window.GUIAS_MODULOS.find(g => g.moduloId === mod.id);
   const guia = window.GUIAS_AULAS[aula.id];
   const p = contexto.progresso[aula.id] || {};
   const relacionadas = atividadesDados.filter(t => t.fontes?.some(f => f.aulaId === aula.id));
-  const sequencia = mods.flatMap(m => m.aulas);
-  const indice = sequencia.findIndex(a => a.id === aula.id);
 
   // Classificar materiais reais (excluindo legendas .vtt de exibição como anexo)
   const todosMateriais = [...(aula.materiais || []), ...(guia.fontes || [])];
