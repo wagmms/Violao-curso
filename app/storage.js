@@ -412,9 +412,13 @@ async function processarArquivoBackup(event) {
         });
 
         // Resumo das diferenças
-        const novasTentativas = d.tentativas.filter(x => !state.tentativas.find(t => t.id === x.id)).length;
-        const novasDifs = d.dificuldades.filter(x => !state.dificuldades.find(t => t.id === x.id)).length;
-        const novasRevs = d.revisoes.filter(x => !state.revisoes.find(t => t.id === x.id)).length;
+        const idsTentativasLocais = new Set(state.tentativas.map(t => t.id));
+        const idsDifsLocais = new Set(state.dificuldades.map(t => t.id));
+        const idsRevsLocais = new Set(state.revisoes.map(r => r.id));
+
+        const novasTentativas = d.tentativas.filter(x => !idsTentativasLocais.has(x.id)).length;
+        const novasDifs = d.dificuldades.filter(x => !idsDifsLocais.has(x.id)).length;
+        const novasRevs = d.revisoes.filter(x => !idsRevsLocais.has(x.id)).length;
 
         const confirmar = await mostrarConfirmacao(
           `Resumo do backup:\n` +
