@@ -1,4 +1,20 @@
 
+function gerarStepItemSessaoHTML(step, idx, passoIndex) {
+  const isAtivo = idx === passoIndex ? 'step-ativo' : '';
+  return `
+    <div class="step-item ${isAtivo}" data-step="${idx}">
+      <span class="step-badge">${idx + 1}</span>
+      <div class="step-detalhes">
+        <div class="step-titulo">
+          <span>${escapeHTML(step.fase)}: ${escapeHTML(step.objetivo)}</span>
+          <span class="step-minutos">${step.minutos} min</span>
+        </div>
+        <div class="step-instrucao">${escapeHTML(step.instrucao)}</div>
+      </div>
+    </div>
+  `;
+}
+
 window.renderizarTablatura = function(textoTab, containerId) {
   if (window.alphaTab && textoTab.startsWith('\\title')) {
     setTimeout(() => {
@@ -218,18 +234,7 @@ function renderizarTelaHoje() {
           <div class="bloco-card">
             <h4>Roteiro da Sessão de 40 Minutos</h4>
             <div class="stepper-timeline" id="stepper-sessao">
-              ${ativ.sessao40min.map((s, idx) => `
-                <div class="step-item ${idx === state.sessao.passoIndex ? 'step-ativo' : ''}" data-step="${idx}">
-                  <span class="step-badge">${idx + 1}</span>
-                  <div class="step-detalhes">
-                    <div class="step-titulo">
-                      <span>${escapeHTML(s.fase)}: ${escapeHTML(s.objetivo)}</span>
-                      <span class="step-minutos">${s.minutos} min</span>
-                    </div>
-                    <div class="step-instrucao">${escapeHTML(s.instrucao)}</div>
-                  </div>
-                </div>
-              `).join('')}
+              ${ativ.sessao40min.map((s, idx) => gerarStepItemSessaoHTML(s, idx, state.sessao.passoIndex)).join('')}
             </div>
           </div>
 
