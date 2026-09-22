@@ -127,6 +127,19 @@ async function main(){
   a.w.document.getElementById('btn-salvar-resultado').click();assert.equal(a.run('state.tentativas.length'),0);
  });
  await teste('Fontes canônicas nunca produzem link vazio',a=>{a.run(`navegarPara('aprender')`);for(const link of a.w.document.querySelectorAll('#aprender-conteudo a'))assert.ok(link.href.startsWith('https://drive.google.com/'));});
+ await teste('Validação de URL do Google Drive (urlDriveValida)',a=>{
+  assert.equal(a.run('urlDriveValida("https://drive.google.com/file/d/123/view")'), true);
+  assert.equal(a.run('urlDriveValida("https://drive.google.com/drive/folders/abc")'), true);
+  assert.equal(a.run('urlDriveValida("http://drive.google.com/file/d/123/view")'), false);
+  assert.equal(a.run('urlDriveValida("https://google.com/file/d/123/view")'), false);
+  assert.equal(a.run('urlDriveValida("https://drive.google.com.attacker.com/file")'), false);
+  assert.equal(a.run('urlDriveValida("https://fake-drive.google.com/file")'), false);
+  assert.equal(a.run('urlDriveValida("not a url")'), false);
+  assert.equal(a.run('urlDriveValida("")'), false);
+  assert.equal(a.run('urlDriveValida(null)'), false);
+  assert.equal(a.run('urlDriveValida(undefined)'), false);
+  assert.equal(a.run('urlDriveValida(12345)'), false);
+ });
  const report={data:new Date().toISOString(),tipo:'JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte',total:results.length,aprovados:results.filter(t=>t.ok).length,resultados:results};
  fs.writeFileSync(path.resolve(dir,'../revisao-bloco-a-2026-09-13/testes-confiabilidade.json'),JSON.stringify(report,null,2));
  console.log(`${report.aprovados}/${report.total} aprovados`);for(const r of results.filter(t=>!t.ok))console.error(r.nome,r.erro);

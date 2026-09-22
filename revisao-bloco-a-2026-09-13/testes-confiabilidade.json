@@ -1,8 +1,8 @@
 {
-  "data": "2026-09-14T21:30:46.154Z",
+  "data": "2026-09-22T00:34:06.829Z",
   "tipo": "JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte",
-  "total": 33,
-  "aprovados": 33,
+  "total": 34,
+  "aprovados": 34,
   "resultados": [
     {
       "nome": "Worker bloqueado inicia timer de fallback",
@@ -134,6 +134,10 @@
     },
     {
       "nome": "Fontes canônicas nunca produzem link vazio",
+      "ok": true
+    },
+    {
+      "nome": "Validação de URL do Google Drive (urlDriveValida)",
       "ok": true
     }
   ]
