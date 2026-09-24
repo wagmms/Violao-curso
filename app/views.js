@@ -327,11 +327,12 @@ function renderizarTelaHoje() {
     `;
 
     // Eventos dos passos da sessão
-    document.querySelectorAll('.step-item').forEach(el => {
+    const stepItems = document.querySelectorAll('.step-item');
+    stepItems.forEach(el => {
       el.onclick = () => {
         const step = Number(el.dataset.step);
         state.sessao.passoIndex = step;
-        document.querySelectorAll('.step-item').forEach(item => item.classList.remove('step-ativo'));
+        stepItems.forEach(item => item.classList.remove('step-ativo'));
         el.classList.add('step-ativo');
       };
     });
