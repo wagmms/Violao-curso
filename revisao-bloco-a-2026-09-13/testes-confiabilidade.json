@@ -1,8 +1,8 @@
 {
-  "data": "2026-09-22T00:34:06.829Z",
+  "data": "2026-09-22T00:33:58.192Z",
   "tipo": "JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte",
-  "total": 34,
-  "aprovados": 34,
+  "total": 36,
+  "aprovados": 36,
   "resultados": [
     {
       "nome": "Worker bloqueado inicia timer de fallback",
@@ -137,7 +137,15 @@
       "ok": true
     },
     {
-      "nome": "Validação de URL do Google Drive (urlDriveValida)",
+      "nome": "normalizarRevisoes: trata lista vazia e item único",
+      "ok": true
+    },
+    {
+      "nome": "normalizarRevisoes: mescla pendências da mesma atividade mantendo a mais antiga e resolvendo empate por ID",
+      "ok": true
+    },
+    {
+      "nome": "normalizarRevisoes: isola deduplicação por atividade e preserva referência do array",
       "ok": true
     }
   ]
