@@ -1,5 +1,5 @@
 {
-  "data": "2026-09-22T00:33:42.789Z",
+  "data": "2026-09-22T00:34:06.829Z",
   "tipo": "JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte",
   "total": 34,
   "aprovados": 34,
@@ -113,10 +113,6 @@
       "ok": true
     },
     {
-      "nome": "dataValida: validação de datas, tipos e formatos",
-      "ok": true
-    },
-    {
       "nome": "Datas impossíveis rejeitadas",
       "ok": true
     },
@@ -138,6 +134,10 @@
     },
     {
       "nome": "Fontes canônicas nunca produzem link vazio",
+      "ok": true
+    },
+    {
+      "nome": "Validação de URL do Google Drive (urlDriveValida)",
       "ok": true
     }
   ]
