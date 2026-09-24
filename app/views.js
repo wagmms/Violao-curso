@@ -200,137 +200,119 @@ function renderizarTelaHoje() {
     $('card-alt-biblioteca').onclick = () => navegarPara('biblioteca');
   }
 
-  function renderizarTelaAprender() {
-    if (renderizarAulaCurso()) return;
-    const ativ = atividadesDados.find(a => a.id === state.atividadeAtualId) || atividadesDados[0];
-    const container = $('aprender-conteudo');
-    if (!container) return;
-
-    const nivelKey = state.nivelExercicioAtual || 'alvo';
-    const nivelAtual = ativ.exercicio.niveis[nivelKey] || ativ.exercicio.niveis.alvo;
-
-    if (!atividadeTemSessao(ativ)) {
-      container.innerHTML = `<div class="bloco-card"><h2>${escapeHTML(ativ.titulo)}</h2><p>Proposta em elaboração. O roteiro desta sessão ainda não está disponível.</p><button id="btn-voltar-praticar" class="btn btn-primary">Escolher outra atividade</button></div>`;
-      $('btn-voltar-praticar').onclick = () => navegarPara('praticar');
-      atualizarTimer();
-      return;
-    }
-
-    container.innerHTML = `
-      <div class="view-header">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
-          <div>
-            <h2>${escapeHTML(ativ.titulo)}</h2>
-            <p><strong>Meta Observável:</strong> ${escapeHTML(ativ.metaObservavel)}</p>
+  function renderizarAprenderPainelEsquerda(ativ) {
+    return `
+      <div class="aprender-painel-esquerda">
+        <div class="bloco-card">
+          <h4>Roteiro da Sessão de 40 Minutos</h4>
+          <div class="stepper-timeline" id="stepper-sessao">
+            ${ativ.sessao40min.map((s, idx) => gerarStepItemSessaoHTML(s, idx, state.sessao.passoIndex)).join('')}
           </div>
-          <button id="btn-trocar-atividade" class="btn btn-secondary btn-sm">Trocar Atividade</button>
-          <button id="btn-aprender-curso" class="btn btn-primary btn-sm">Escolher aula do curso</button>
-        </div>
-      </div>
-
-      <div class="aprender-layout">
-        <!-- Coluna Esquerda: Instrução, Roteiro dos 40 min e Fontes -->
-        <div class="aprender-painel-esquerda">
-          <div class="bloco-card">
-            <h4>Roteiro da Sessão de 40 Minutos</h4>
-            <div class="stepper-timeline" id="stepper-sessao">
-              ${ativ.sessao40min.map((s, idx) => gerarStepItemSessaoHTML(s, idx, state.sessao.passoIndex)).join('')}
-            </div>
-          </div>
-
-          <div class="bloco-card">
-            <h4>Fundamentação e Termos Técnicos</h4>
-            <p style="font-size: 0.9rem; line-height: 1.55; color: var(--text-muted);">${escapeHTML(ativ.explicacao)}</p>
-            <div style="margin-top: 12px; font-size: 0.85rem;">
-              <strong>Pré-requisito testável:</strong> ${escapeHTML(ativ.prerequisito)}
-            </div>
-          </div>
-
-          <div class="bloco-card">
-            <h4>Fontes do Acervo e Autoria de Complementos</h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
-              ${hidratarFontes(ativ).fontes.map(f => `
-                <li style="padding: 8px; background: var(--bg-surface-subtle); border-radius: var(--radius-sm);">
-                  <div><strong>${escapeHTML(f.modulo)}</strong> — ${escapeHTML(f.tituloAula)}</div>
-                  <div style="color: var(--text-dim); margin-top: 2px;">
-                    Verificação: <em>${escapeHTML(f.statusVerificacao)}</em> · Autoria: ${escapeHTML(f.autoria)}
-                  </div>
-                  ${urlDriveValida(f.url) ? `<a href="${escapeHTML(f.url)}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-size: 0.8rem; display: inline-block; margin-top: 4px;">
-                    ↗ Abrir arquivo original no Google Drive
-                  </a>` : '<span>Fonte sem arquivo acessível no catálogo; referência pendente de revisão.</span>'}
-                </li>
-              `).join('')}
-            </ul>
-          </div>
-
-          <details class="bloco-card" ${atividadeTemAnotacao(ativ.id) ? 'open' : ''}>
-            <summary style="font-weight: 600; cursor: pointer; color: var(--text-main); margin-bottom: 8px;">Minhas Anotações de Prática</summary>
-            <textarea id="textarea-anotacoes-${ativ.id}" style="width: 100%; height: 120px; padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); resize: vertical; background: var(--bg-surface); color: var(--text-main); font-family: inherit; font-size: 0.9rem; margin-top: 8px;" placeholder="Ex: Relaxar o polegar esquerdo no compasso 3; usar unha com ângulo de 45° no indicador.">${state.anotacoes && state.anotacoes[ativ.id] ? state.anotacoes[ativ.id] : ''}</textarea>
-          </details>
         </div>
 
-        <!-- Coluna Direita: Exercício Visual e Ferramentas -->
-        <div class="aprender-painel-direita">
-          <div class="exercicio-box">
-            <h4>Exercício Prático</h4>
-            <div class="niveis-switcher">
-              <button class="nivel-tab ${nivelKey === 'preparacao' ? 'nivel-ativo' : ''}" data-nivel="preparacao">1. Preparação (Fácil)</button>
-              <button class="nivel-tab ${nivelKey === 'alvo' ? 'nivel-ativo' : ''}" data-nivel="alvo">2. Alvo Principal</button>
-              <button class="nivel-tab ${nivelKey === 'variacao' ? 'nivel-ativo' : ''}" data-nivel="variacao">3. Variação (Desafio Opcional)</button>
-            </div>
-
-            <div style="margin-bottom: 12px;">
-              <h5 style="font-size: 1rem; font-weight: 600;">${escapeHTML(nivelAtual.nome)}</h5>
-              <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2px;">${escapeHTML(nivelAtual.descricao)}</p>
-            </div>
-
-            <div class="exercicio-meta-bar">
-              <div><span>⏱ Andamento:</span> <strong>${nivelAtual.bpm || ativ.exercicio.bpmSugerido || 60} BPM</strong></div>
-              <div><span>𝄞 Compasso:</span> <strong>${ativ.exercicio.compasso || '4/4'}</strong></div>
-              ${nivelAtual.repeticoes ? `<div><span>🔁 Meta:</span> <strong>${escapeHTML(nivelAtual.repeticoes)}</strong></div>` : ''}
-              <div class="tab-metro-box" style="margin-left: auto;">
-                <button type="button" class="tab-metro-btn" id="btn-tab-metro-down" title="Diminuir 5 BPM">-5</button>
-                <button type="button" class="tab-metro-btn btn-metro-play" id="btn-tab-metro-play" title="Ligar/Desligar Metrônomo">▶ Metrônomo</button>
-                <button type="button" class="tab-metro-btn" id="btn-tab-metro-up" title="Aumentar 5 BPM">+5</button>
-                <button type="button" class="tab-metro-btn" id="btn-tab-metro-tap" title="Clique no pulso para definir o andamento">Tap Tempo</button>
-              </div>
-            </div>
-
-            ${gerarDiagramaExercicio(nivelAtual, ativ)}
-
-            ${window.renderizarTablatura(nivelAtual.tablatura, "tab-container-" + ativ.id)}
-            ${nivelAtual.instrucoesRodape ? `<div class="instrucoes-rodape">${escapeHTML(nivelAtual.instrucoesRodape)}</div>` : ''}
-
-            <div class="dica-execucao">
-              <strong>Foco de Atenção:</strong> ${escapeHTML(nivelAtual.dica)}
-            </div>
+        <div class="bloco-card">
+          <h4>Fundamentação e Termos Técnicos</h4>
+          <p style="font-size: 0.9rem; line-height: 1.55; color: var(--text-muted);">${escapeHTML(ativ.explicacao)}</p>
+          <div style="margin-top: 12px; font-size: 0.85rem;">
+            <strong>Pré-requisito testável:</strong> ${escapeHTML(ativ.prerequisito)}
           </div>
+        </div>
 
-          <!-- Painel Interativo: Metrônomo ou Treinador de Ouvido -->
-          <div id="painel-ferramenta-interativa"></div>
-
-          <!-- Erros Observáveis e Correções Proativas -->
-          <div class="bloco-card">
-            <h4>Erros Observáveis e Correção Proativa</h4>
-            <div style="display: flex; flex-direction: column; gap: 10px;">
-              ${ativ.errosComuns.map(e => `
-                <div style="padding: 10px; background: var(--bg-surface-subtle); border-left: 3px solid var(--danger); border-radius: var(--radius-sm); font-size: 0.85rem;">
-                  <strong style="color: var(--danger);">Falha típica:</strong> ${escapeHTML(e.erro)}<br>
-                  <strong style="color: var(--success); margin-top: 4px; display: inline-block;">Ação corretiva:</strong> ${escapeHTML(e.correcao)}
+        <div class="bloco-card">
+          <h4>Fontes do Acervo e Autoria de Complementos</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+            ${hidratarFontes(ativ).fontes.map(f => `
+              <li style="padding: 8px; background: var(--bg-surface-subtle); border-radius: var(--radius-sm);">
+                <div><strong>${escapeHTML(f.modulo)}</strong> — ${escapeHTML(f.tituloAula)}</div>
+                <div style="color: var(--text-dim); margin-top: 2px;">
+                  Verificação: <em>${escapeHTML(f.statusVerificacao)}</em> · Autoria: ${escapeHTML(f.autoria)}
                 </div>
-              `).join('')}
-            </div>
-          </div>
+                ${urlDriveValida(f.url) ? `<a href="${escapeHTML(f.url)}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-size: 0.8rem; display: inline-block; margin-top: 4px;">
+                  ↗ Abrir arquivo original no Google Drive
+                </a>` : '<span>Fonte sem arquivo acessível no catálogo; referência pendente de revisão.</span>'}
+              </li>
+            `).join('')}
+          </ul>
+        </div>
 
-          <!-- Ações da Sessão -->
-          <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px;">
-            <button id="btn-registrar-dificuldade-rapida" class="btn btn-secondary">⚠️ Anotar Dificuldade</button>
-            <button id="btn-concluir-sessao" class="btn btn-success">✓ Concluir e Avaliar Nível</button>
+        <details class="bloco-card" ${atividadeTemAnotacao(ativ.id) ? 'open' : ''}>
+          <summary style="font-weight: 600; cursor: pointer; color: var(--text-main); margin-bottom: 8px;">Minhas Anotações de Prática</summary>
+          <textarea id="textarea-anotacoes-${ativ.id}" style="width: 100%; height: 120px; padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); resize: vertical; background: var(--bg-surface); color: var(--text-main); font-family: inherit; font-size: 0.9rem; margin-top: 8px;" placeholder="Ex: Relaxar o polegar esquerdo no compasso 3; usar unha com ângulo de 45° no indicador.">${state.anotacoes && state.anotacoes[ativ.id] ? state.anotacoes[ativ.id] : ''}</textarea>
+        </details>
+      </div>
+    `;
+  }
+
+  function renderizarAprenderExercicioBox(ativ, nivelKey, nivelAtual) {
+    return `
+      <div class="exercicio-box">
+        <h4>Exercício Prático</h4>
+        <div class="niveis-switcher">
+          <button class="nivel-tab ${nivelKey === 'preparacao' ? 'nivel-ativo' : ''}" data-nivel="preparacao">1. Preparação (Fácil)</button>
+          <button class="nivel-tab ${nivelKey === 'alvo' ? 'nivel-ativo' : ''}" data-nivel="alvo">2. Alvo Principal</button>
+          <button class="nivel-tab ${nivelKey === 'variacao' ? 'nivel-ativo' : ''}" data-nivel="variacao">3. Variação (Desafio Opcional)</button>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <h5 style="font-size: 1rem; font-weight: 600;">${escapeHTML(nivelAtual.nome)}</h5>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2px;">${escapeHTML(nivelAtual.descricao)}</p>
+        </div>
+
+        <div class="exercicio-meta-bar">
+          <div><span>⏱ Andamento:</span> <strong>${nivelAtual.bpm || ativ.exercicio.bpmSugerido || 60} BPM</strong></div>
+          <div><span>𝄞 Compasso:</span> <strong>${ativ.exercicio.compasso || '4/4'}</strong></div>
+          ${nivelAtual.repeticoes ? `<div><span>🔁 Meta:</span> <strong>${escapeHTML(nivelAtual.repeticoes)}</strong></div>` : ''}
+          <div class="tab-metro-box" style="margin-left: auto;">
+            <button type="button" class="tab-metro-btn" id="btn-tab-metro-down" title="Diminuir 5 BPM">-5</button>
+            <button type="button" class="tab-metro-btn btn-metro-play" id="btn-tab-metro-play" title="Ligar/Desligar Metrônomo">▶ Metrônomo</button>
+            <button type="button" class="tab-metro-btn" id="btn-tab-metro-up" title="Aumentar 5 BPM">+5</button>
+            <button type="button" class="tab-metro-btn" id="btn-tab-metro-tap" title="Clique no pulso para definir o andamento">Tap Tempo</button>
           </div>
+        </div>
+
+        ${gerarDiagramaExercicio(nivelAtual, ativ)}
+
+        ${window.renderizarTablatura(nivelAtual.tablatura, "tab-container-" + ativ.id)}
+        ${nivelAtual.instrucoesRodape ? `<div class="instrucoes-rodape">${escapeHTML(nivelAtual.instrucoesRodape)}</div>` : ''}
+
+        <div class="dica-execucao">
+          <strong>Foco de Atenção:</strong> ${escapeHTML(nivelAtual.dica)}
         </div>
       </div>
     `;
+  }
 
+  function renderizarAprenderPainelDireita(ativ, nivelKey, nivelAtual) {
+    return `
+      <div class="aprender-painel-direita">
+        ${renderizarAprenderExercicioBox(ativ, nivelKey, nivelAtual)}
+
+        <!-- Painel Interativo: Metrônomo ou Treinador de Ouvido -->
+        <div id="painel-ferramenta-interativa"></div>
+
+        <!-- Erros Observáveis e Correções Proativas -->
+        <div class="bloco-card">
+          <h4>Erros Observáveis e Correção Proativa</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            ${ativ.errosComuns.map(e => `
+              <div style="padding: 10px; background: var(--bg-surface-subtle); border-left: 3px solid var(--danger); border-radius: var(--radius-sm); font-size: 0.85rem;">
+                <strong style="color: var(--danger);">Falha típica:</strong> ${escapeHTML(e.erro)}<br>
+                <strong style="color: var(--success); margin-top: 4px; display: inline-block;">Ação corretiva:</strong> ${escapeHTML(e.correcao)}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Ações da Sessão -->
+        <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px;">
+          <button id="btn-registrar-dificuldade-rapida" class="btn btn-secondary">⚠️ Anotar Dificuldade</button>
+          <button id="btn-concluir-sessao" class="btn btn-success">✓ Concluir e Avaliar Nível</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function configurarEventosAprender(ativ, nivelAtual) {
     // Eventos dos passos da sessão
     const stepItems = document.querySelectorAll('.step-item');
     stepItems.forEach(el => {
@@ -468,7 +450,43 @@ function renderizarTelaHoje() {
         }
       };
     }
+  }
 
+  function renderizarTelaAprender() {
+    if (renderizarAulaCurso()) return;
+    const ativ = atividadesDados.find(a => a.id === state.atividadeAtualId) || atividadesDados[0];
+    const container = $('aprender-conteudo');
+    if (!container) return;
+
+    const nivelKey = state.nivelExercicioAtual || 'alvo';
+    const nivelAtual = ativ.exercicio.niveis[nivelKey] || ativ.exercicio.niveis.alvo;
+
+    if (!atividadeTemSessao(ativ)) {
+      container.innerHTML = `<div class="bloco-card"><h2>${escapeHTML(ativ.titulo)}</h2><p>Proposta em elaboração. O roteiro desta sessão ainda não está disponível.</p><button id="btn-voltar-praticar" class="btn btn-primary">Escolher outra atividade</button></div>`;
+      $('btn-voltar-praticar').onclick = () => navegarPara('praticar');
+      atualizarTimer();
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="view-header">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h2>${escapeHTML(ativ.titulo)}</h2>
+            <p><strong>Meta Observável:</strong> ${escapeHTML(ativ.metaObservavel)}</p>
+          </div>
+          <button id="btn-trocar-atividade" class="btn btn-secondary btn-sm">Trocar Atividade</button>
+          <button id="btn-aprender-curso" class="btn btn-primary btn-sm">Escolher aula do curso</button>
+        </div>
+      </div>
+
+      <div class="aprender-layout">
+        ${renderizarAprenderPainelEsquerda(ativ)}
+        ${renderizarAprenderPainelDireita(ativ, nivelKey, nivelAtual)}
+      </div>
+    `;
+
+    configurarEventosAprender(ativ, nivelAtual);
     renderizarFerramentaInterativa(ativ);
   }
 
