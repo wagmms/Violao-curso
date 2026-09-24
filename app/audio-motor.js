@@ -170,17 +170,18 @@
   let ritmoAtualId = 'bossa';
   let ritmoBpm = 80;
 
-  function agendarPassoRitmo(time, passoId) {
-    const ritmo = PADROES_RITMICOS[ritmoAtualId];
-    if (ritmo.surdo[passoId]) {
-      AudioMotor.tocarSurdo(time, ritmo.surdo[passoId]);
-    }
-    if (ritmo.tamborim[passoId]) {
-      AudioMotor.tocarTamborim(time, ritmo.tamborim[passoId]);
-    }
-    if (ritmo.vassourinha[passoId]) {
-      AudioMotor.tocarVassourinha(time, ritmo.vassourinha[passoId]);
-    }
+  function agendarPassoRitmo(time, passoId, padrao) {
+    const ritmo = padrao || PADROES_RITMICOS[ritmoAtualId];
+    if (!ritmo) return;
+
+    const volSurdo = ritmo.surdo?.[passoId];
+    if (volSurdo) AudioMotor.tocarSurdo(time, volSurdo);
+
+    const volTamborim = ritmo.tamborim?.[passoId];
+    if (volTamborim) AudioMotor.tocarTamborim(time, volTamborim);
+
+    const volVassourinha = ritmo.vassourinha?.[passoId];
+    if (volVassourinha) AudioMotor.tocarVassourinha(time, volVassourinha);
   }
 
   const LOOKAHEAD_MS_RITMO = 25.0;
@@ -189,11 +190,15 @@
     const ctx = getAudioContext();
     if (!ctx || !isRitmoAtivo) return;
 
+    const padrao = PADROES_RITMICOS[ritmoAtualId];
+    if (!padrao) return;
+
+    const duracaoPasso = (60.0 / ritmoBpm) * padrao.stepBeatLength;
+
     while (proximoPassoRitmoTime < ctx.currentTime + SCHEDULE_AHEAD_TIME) {
-      agendarPassoRitmo(proximoPassoRitmoTime, passoRitmoAtual);
-      const duracaoPasso = (60.0 / ritmoBpm) * PADROES_RITMICOS[ritmoAtualId].stepBeatLength;
+      agendarPassoRitmo(proximoPassoRitmoTime, passoRitmoAtual, padrao);
       proximoPassoRitmoTime += duracaoPasso;
-      passoRitmoAtual = (passoRitmoAtual + 1) % PADROES_RITMICOS[ritmoAtualId].steps;
+      passoRitmoAtual = (passoRitmoAtual + 1) % padrao.steps;
     }
   }
 
