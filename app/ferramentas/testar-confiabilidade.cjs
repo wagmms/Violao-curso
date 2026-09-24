@@ -166,7 +166,6 @@ async function main(){
   a.w.document.getElementById('btn-salvar-resultado').click();assert.equal(a.run('state.tentativas.length'),0);
  });
  await teste('Fontes canônicas nunca produzem link vazio',a=>{a.run(`navegarPara('aprender')`);for(const link of a.w.document.querySelectorAll('#aprender-conteudo a'))assert.ok(link.href.startsWith('https://drive.google.com/'));});
-<<<<<<< HEAD
  await teste('Validação de URL do Google Drive (urlDriveValida)',a=>{
   assert.equal(a.run('urlDriveValida("https://drive.google.com/file/d/123/view")'), true);
   assert.equal(a.run('urlDriveValida("https://drive.google.com/drive/folders/abc")'), true);
