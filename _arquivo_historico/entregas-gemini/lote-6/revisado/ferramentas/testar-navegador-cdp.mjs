@@ -165,8 +165,10 @@ async function runTests() {
     // Resetar filtro de tipo antes de buscar texto no catálogo todo
     await client.eval(`(() => {
       const sel = document.getElementById('tipo');
-      sel.value = 'todos';
-      sel.dispatchEvent(new Event('change'));
+      if (sel) {
+        sel.value = 'todos';
+        sel.dispatchEvent(new Event('change'));
+      }
     })()`);
 
     // 8. Testar busca textual
