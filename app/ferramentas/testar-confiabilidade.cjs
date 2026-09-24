@@ -114,6 +114,34 @@ async function main(){
  await teste('Hoje recupera em Preparação e continuar não pausa sessão ativa',a=>{a.run(`state.dificuldades=[{id:'d',atividadeId:'ativ-1',trecho:'troca',problema:'hesitação',data:obterDataLocal(),resolvida:false}];navegarPara('hoje')`);a.w.document.getElementById('btn-comecar-40').click();assert.equal(a.run('state.sessao.nivel'),'preparacao');a.run(`navegarPara('hoje')`);a.w.document.getElementById('btn-comecar-40').click();assert.equal(a.run('state.sessao.ativa'),true);});
  await teste('Histórico parcialmente inválido recupera registros válidos e preserva original',a=>{avaliar(a,'alvo','consegui');const orig=a.run('serializarEstado()');orig.tentativas.push({...orig.tentativas[0],id:'ruim',bpm:-9});const raw=JSON.stringify(orig);a.w.localStorage.setItem('metodo_triade_v2',raw);a.run(`state.tentativas=[];state.habilidades={};carregarEstadoInicial()`);assert.equal(a.run('state.tentativas.length'),1);assert.equal(a.w.localStorage.getItem('metodo_triade_v2_recuperacao'),raw);assert.ok(a.w.document.getElementById('aviso-recuperacao'));a.run('salvarEstado()');assert.equal(a.w.localStorage.getItem('metodo_triade_v2_recuperacao'),raw);});
  await teste('Sem espaço para cópia de recuperação, escrita não sobrescreve original',a=>{a.w.localStorage.setItem('metodo_triade_v2','{quebrado');a.run(`storageSet=()=>false;carregarEstadoInicial();salvarEstado()`);assert.equal(a.w.localStorage.getItem('metodo_triade_v2'),'{quebrado');assert.equal(a.run('bloquearGravacao'),true);assert.ok(a.w.document.querySelector('#aviso-recuperacao button'));});
+ await teste('dataValida: validação de datas, tipos e formatos',a=>{
+  assert.equal(a.run("dataValida('2026-09-13')"), true);
+  assert.equal(a.run("dataValida('2024-02-29')"), true);
+  assert.equal(a.run("dataValida('2025-12-31')"), true);
+  assert.equal(a.run("dataValida('2025-01-01')"), true);
+
+  assert.equal(a.run("dataValida(null)"), false);
+  assert.equal(a.run("dataValida(undefined)"), false);
+  assert.equal(a.run("dataValida(12345)"), false);
+  assert.equal(a.run("dataValida({})"), false);
+  assert.equal(a.run("dataValida([])"), false);
+  assert.equal(a.run("dataValida(true)"), false);
+
+  assert.equal(a.run("dataValida('2026/09/13')"), false);
+  assert.equal(a.run("dataValida('13-09-2026')"), false);
+  assert.equal(a.run("dataValida('2026-9-13')"), false);
+  assert.equal(a.run("dataValida('2026-09-1')"), false);
+  assert.equal(a.run("dataValida('2026-09-13T00:00:00Z')"), false);
+  assert.equal(a.run("dataValida('')"), false);
+  assert.equal(a.run("dataValida('2026-09-13 extra')"), false);
+
+  assert.equal(a.run("dataValida('2025-02-29')"), false);
+  assert.equal(a.run("dataValida('2026-00-10')"), false);
+  assert.equal(a.run("dataValida('2026-13-10')"), false);
+  assert.equal(a.run("dataValida('2026-04-31')"), false);
+  assert.equal(a.run("dataValida('2026-09-00')"), false);
+  assert.equal(a.run("dataValida('2026-01-32')"), false);
+ });
  await teste('Datas impossíveis rejeitadas',a=>{a.run(`state.revisoes=[{id:'r',atividadeId:'ativ-1',ciclo:1,intervaloDias:2,dataPrevista:'2026-02-30',concluida:false}]`);assert.throws(()=>a.run('validarEsquemaBackup(serializarEstado())'));});
  await teste('Merge preserva sessão ativa, notas e uma revisão pendente; idempotência',async a=>{
   a.run(`state.legado.notas.a='local';state.revisoes=[{id:'r1',atividadeId:'ativ-1',ciclo:1,intervaloDias:2,dataPrevista:obterDataLocal(2),concluida:false}];iniciarSessao();state.sessao.ultimoTimestamp-=60000`);

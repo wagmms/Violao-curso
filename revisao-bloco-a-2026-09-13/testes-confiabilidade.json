@@ -1,8 +1,8 @@
 {
-  "data": "2026-09-22T00:34:56.366Z",
+  "data": "2026-09-22T00:33:42.789Z",
   "tipo": "JSDOM com DOM e estado reais; áudio e dialog nativo não homologados por esta suíte",
-  "total": 33,
-  "aprovados": 33,
+  "total": 34,
+  "aprovados": 34,
   "resultados": [
     {
       "nome": "Worker bloqueado inicia timer de fallback",
@@ -110,6 +110,10 @@
     },
     {
       "nome": "Sem espaço para cópia de recuperação, escrita não sobrescreve original",
+      "ok": true
+    },
+    {
+      "nome": "dataValida: validação de datas, tipos e formatos",
       "ok": true
     },
     {
