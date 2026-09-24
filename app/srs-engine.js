@@ -1,20 +1,21 @@
 function obterRecomendacao() {
   const prontas = atividadesDados.filter(atividadeTemSessao);
+  const prontasIds = new Set(prontas.map(a => a.id));
   const atual = prontas.find(a => a.id === state.atividadeAtualId) || prontas[0];
   if (!state.sessao.concluida && (state.sessao.ativa || tempoDecorrido() > 0) && atividadeTemSessao(atual)) {
     return {atividade: atual, nivel: state.sessao.nivel, motivo: `Continue sua sessão: ${Math.floor(tempoDecorrido()/60000)} minutos registrados.`};
   }
   // Se o aluno selecionou explicitamente uma atividade específica
-  if (state.atividadeAtualId && prontas.some(a => a.id === state.atividadeAtualId)) {
+  if (state.atividadeAtualId && prontasIds.has(state.atividadeAtualId)) {
     const ativEscolhida = prontas.find(a => a.id === state.atividadeAtualId);
     if (ativEscolhida && (ativEscolhida.id !== prontas[0].id || state.sessao.passoAtualIndex > 0)) {
       return {atividade: ativEscolhida, nivel: state.nivelExercicioAtual || 'preparacao', motivo: 'Atividade prioritária selecionada para a prática de hoje.'};
     }
   }
-  const dif = state.dificuldades.find(d => !d.resolvida && prontas.some(a => a.id === d.atividadeId));
+  const dif = state.dificuldades.find(d => !d.resolvida && prontasIds.has(d.atividadeId));
   if (dif) return {atividade: prontas.find(a => a.id === dif.atividadeId), nivel: 'preparacao', motivo: `Recuperação de ${dif.trecho}: pratique a Preparação.`};
   const dataAtual = (typeof window !== 'undefined' && window.obterDataLocal) ? window.obterDataLocal() : obterDataLocal();
-  const rev = state.revisoes.filter(r => !r.concluida && r.dataPrevista <= dataAtual && prontas.some(a => a.id === r.atividadeId)).sort((a,b) => a.dataPrevista.localeCompare(b.dataPrevista))[0];
+  const rev = state.revisoes.filter(r => !r.concluida && r.dataPrevista <= dataAtual && prontasIds.has(r.atividadeId)).sort((a,b) => a.dataPrevista.localeCompare(b.dataPrevista))[0];
   if (rev) return {atividade: prontas.find(a => a.id === rev.atividadeId), nivel: 'alvo', motivo: `Revisão prevista para ${rev.dataPrevista}, ciclo ${rev.ciclo}.`};
 
   // Se houver ponto de partida diagnosticado e ainda não superado
