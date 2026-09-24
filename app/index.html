@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <script>window.onerror = function(msg, url, line, col, err) { document.body.innerHTML += "<div id=\"fatal-error\">" + msg + " - " + (err ? err.stack : "") + "</div>"; };</script>
+  <script>window.onerror = function(msg, url, line, col, err) { var div = document.createElement("div"); div.id = "fatal-error"; div.textContent = msg + " - " + (err ? err.stack : ""); (document.body || document.documentElement).appendChild(div); };</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Método Tríade — Ambiente de Aprendizagem de Violão</title>

@@ -30,6 +30,17 @@ function avaliar(a,nivel,status,bpm='60'){
 }
 async function main(){
 
+ await teste('window.onerror manipula erros com segurança sem XSS', a => {
+  const indexHtml = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
+  const inlineScript = indexHtml.match(/<script>(window\.onerror[\s\S]*?)<\/script>/)[1];
+  a.run(inlineScript);
+  a.run(`window.onerror("<img src=x onerror=alert(1)>", "app.js", 10, 5, new Error("<script>alert(1)</script>"));`);
+  const errElem = a.w.document.getElementById('fatal-error');
+  assert.ok(errElem !== null);
+  assert.equal(a.w.document.getElementsByTagName('img').length, 0);
+  assert.ok(errElem.textContent.includes('<img src=x onerror=alert(1)>'));
+ });
+
  await teste('Worker bloqueado inicia timer de fallback',a=>{
   // Reload the timer.js script in the window context where Worker is overridden
   a.run(`
