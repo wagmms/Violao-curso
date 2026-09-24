@@ -1756,6 +1756,24 @@ function renderizarFerramentaInterativa(ativ) {
     `;
   }
 
+  function obterNotasShapeProcessadas(shape) {
+    if (!shape) return [];
+    if (!shape._pickedNotes) {
+      // Ordena do grave (6ª corda = str 5) para o agudo (1ª corda = str 0) e seleciona uma nota por corda
+      const sortedNotes = [...shape.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
+      const picked = [];
+      const visited = new Set();
+      for (const n of sortedNotes) {
+        if (!visited.has(n.str)) {
+          visited.add(n.str);
+          picked.push(n);
+        }
+      }
+      shape._pickedNotes = picked;
+    }
+    return shape._pickedNotes;
+  }
+
   function tocarArpejoLaboratorio(presetKey, shapeKey) {
     if (!AudioMotor) return;
     const chord = LH_PRESETS[presetKey];
@@ -1763,16 +1781,7 @@ function renderizarFerramentaInterativa(ativ) {
     const shape = chord.shapes[shapeKey] || chord.shapes.pos1 || Object.values(chord.shapes)[0];
     if (!shape) return;
 
-    // Ordena do grave (6ª corda = str 5) para o agudo (1ª corda = str 0)
-    const sortedNotes = [...shape.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
-    const picked = [];
-    const visited = new Set();
-    for (const n of sortedNotes) {
-      if (!visited.has(n.str)) {
-        visited.add(n.str);
-        picked.push(n);
-      }
-    }
+    const picked = obterNotasShapeProcessadas(shape);
     picked.forEach((n, idx) => {
       setTimeout(() => {
         AudioMotor.tocarFrequencia(lhCalcularFreq(n.str, n.fret), 0.85, 0, 'triangle');
@@ -1788,15 +1797,7 @@ function renderizarFerramentaInterativa(ativ) {
     if (!shape) return;
 
     // Toca o acorde em dedilhado rápido (strum acústico)
-    const sortedNotes = [...shape.notes].sort((a, b) => b.str - a.str || a.fret - b.fret);
-    const picked = [];
-    const visited = new Set();
-    for (const n of sortedNotes) {
-      if (!visited.has(n.str)) {
-        visited.add(n.str);
-        picked.push(n);
-      }
-    }
+    const picked = obterNotasShapeProcessadas(shape);
     picked.forEach((n, idx) => {
       setTimeout(() => {
         AudioMotor.tocarFrequencia(lhCalcularFreq(n.str, n.fret), 1.0, 0, 'triangle');
